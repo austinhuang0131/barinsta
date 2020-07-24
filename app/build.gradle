@@ -12,10 +12,8 @@ android {
         // REMEMBER TO CHANGE versionCode as well
         // 16.7 is 32
 
-        // next version: fixed natgeotravel mention text problem
-
-        versionCode 32
-        versionName '16.7'
+        versionCode 33
+        versionName '16.8'
 
         multiDexEnabled true
 

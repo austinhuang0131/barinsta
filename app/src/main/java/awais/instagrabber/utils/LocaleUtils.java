@@ -57,7 +57,6 @@ public final class LocaleUtils {
 
         final int appLanguageIndex = Utils.settingsHelper.getInteger(Constants.APP_LANGUAGE);
 
-        // todo keep adding languages till i die...... or find a big tiddy goth gf ;-;
         if (appLanguageIndex == 1) return "en";
         if (appLanguageIndex == 2) return "fr";
         if (appLanguageIndex == 3) return "es";
