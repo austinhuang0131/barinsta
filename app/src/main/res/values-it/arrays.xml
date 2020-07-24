@@ -9,20 +9,67 @@
         <item>Indonesiano [Grazie a @Galang23 (GitLab)]</item>
         <item>Italiano [Grazie a @RAR_Ramar (Telegram)]</item>
     </string-array>
-
     <string-array name="theme_presets">
         <item>Automatico / In base al sistema</item>
-        <item>Automatico / In base al batteria</item>
+        <item>Automatico / In base alla batteria</item>
         <item>Scuro</item>
         <item>Chiaro</item>
     </string-array>
-
     <string-array name="separator_presets">
         <item>Niente</item>
         <item>\@</item>
-        <item>al</item>
-        <item>su</item>
+        <item>a</item>
+        <item>del</item>
         <item>\|</item>
         <item>-</item>
+    </string-array>
+    <string-array name="profile_fetch_modes">
+        <item>Instadp</item>
+        <item>Insta-Stalker</item>
+        <item>Instafullsize</item>
+    </string-array>
+    <string-array name="date_presets">
+        <item>dd-MM-yyyy</item>
+        <item>dd/MM/yyyy</item>
+        <item>dd.MM.yyyy</item>
+        <item>dd-MM-yy</item>
+        <item>dd/MM/yy</item>
+        <item>dd.MM.yy</item>
+        <item>dd-MMM-yyyy</item>
+        <item>dd/MMM/yyyy</item>
+        <item>dd.MMM.yyyy</item>
+        <item>dd-MMM-yy</item>
+        <item>dd/MMM/yy</item>
+        <item>dd.MMM.yy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MM/dd/yyyy</item>
+        <item>MM.dd.yyyy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy/MM/dd</item>
+        <item>yyyy.MM.dd</item>
+        <item>MM-dd-yy</item>
+        <item>MM/dd/yy</item>
+        <item>MM.dd.yy</item>
+        <item>yy-MM-dd</item>
+        <item>yy/MM/dd</item>
+        <item>yy.MM.dd</item>
+        <item>MMM-dd-yyyy</item>
+        <item>MMM/dd/yyyy</item>
+        <item>MMM.dd.yyyy</item>
+        <item>yyyy-MMM-dd</item>
+        <item>yyyy/MMM/dd</item>
+        <item>yyyy.MMM.dd</item>
+        <item>MMM-dd-yy</item>
+        <item>MMM/dd/yy</item>
+        <item>MMM.dd.yy</item>
+        <item>yy-MMM-dd</item>
+        <item>yy/MMM/dd</item>
+        <item>yy.MMM.dd</item>
+    </string-array>
+    <string-array name="time_presets">
+        <item>hh:mm:ss a</item>
+        <item>h:mm:ss a</item>
+        <item>HH:mm:ss</item>
+        <item>H:mm:ss</item>
     </string-array>
 </resources>
