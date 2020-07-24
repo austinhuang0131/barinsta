@@ -1,0 +1,3 @@
+files:
+  - source: '/app/src/main/res/values/[arrays][strings][!styles]'
+    translation: /app/src/main/res/values-%two_letters_code%/%original_file_name%

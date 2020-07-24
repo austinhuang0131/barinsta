@@ -11,15 +11,15 @@
     </string-array>
     <string-array name="theme_presets">
         <item>Automatico / In base al sistema</item>
-        <item>Automatico / In base al batteria</item>
+        <item>Automatico / In base alla batteria</item>
         <item>Scuro</item>
         <item>Chiaro</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Niente</item>
         <item>\@</item>
-        <item>al</item>
-        <item>su</item>
+        <item>a</item>
+        <item>del</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
