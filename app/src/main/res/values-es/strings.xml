@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="description">The original maintainer, AWAiS, made InstaGrabber as a small and basic little personal app with intentions of [steali-]downloading posts off Instagram. Very unfortunately, this was abandoned and me, Austin Huang, took over the ship. [Let\'s hope that\'s at least a lil\' bit cash money.] After all, this app is fully open source, ad-less, and tracking-less [aside from what Instagram knows]. Even if you don\'t care about downloading stuff [like me], it\'s still a great Instagram client to use!\n\nGot questions [or just wanna talk]? Contact instagrabber@austinhuang.me or click one of the buttons below.</string>
     <string name="action_quickaccess">Acceso rápido</string>
     <string name="action_about">Sobre</string>
     <string name="action_dms">Mensajes Directos</string>
+    <string name="action_setting">Ajustes (v%s)</string>
     <string name="action_settings">Ajustes</string>
     <string name="action_download">Descarga</string>
     <string name="action_search">Buscar usuario…</string>
     <string name="action_compare">Comparar</string>
-
     <string name="single_like">me gusta</string>
     <string name="multiple_likes">me gustas</string>
-
     <string name="clipboard_error">Error al copiar texto</string>
     <string name="clipboard_copied">¡Copiar al portapapeles!</string>
     <string name="report">Reportar</string>
@@ -24,7 +23,6 @@
     <string name="nav_up">Subir</string>
     <string name="dont_show_again">No mostrar de nuevo</string>
     <string name="selected_folder_label">Seleccionar carpeta:</string>
-
     <string name="title_favorites">Favoritos</string>
     <string name="title_discover">Explorar</string>
     <string name="title_comments">Comentarios</string>
@@ -32,7 +30,6 @@
     <string name="title_highlight">Resaltado: %s</string>
     <string name="title_user_story">Historia de usuario</string>
     <string name="title_changelog">Lista de cambios</string>
-
     <string name="bottom_toolbar">Mostrar barra de herramientas inferior</string>
     <string name="download_user_folder">Descargar mensajes a la carpeta de usuario en Downloads</string>
     <string name="autoload_posts">Cargar automáticamente todos los mensajes de usuario</string>
@@ -45,11 +42,9 @@
     <string name="import_export">Importación/Exportación</string>
     <string name="select_language">Seleccione el idioma</string>
     <string name="what_to_do_dialog">¿Qué quieres hacer?</string>
-
     <string name="main_posts_count">%s\nPublicaciones</string>
     <string name="main_posts_followers">%s\nSeguidores</string>
     <string name="main_posts_following">%s\nSiguiendo</string>
-
     <string name="post_viewer_video_post">Publicación de vídeo</string>
     <string name="post_viewer_image_post">Publicación de imagen</string>
     <string name="post_viewer_autoplay_video">Autoreproducir videos</string>
@@ -60,20 +55,30 @@
     <string name="post_viewer_download_session">Actual [Sesión]</string>
     <string name="post_viewer_download_current">Actual</string>
     <string name="post_viewer_download_album">Todo el álbum</string>
-
     <string name="show_stories">Mostrar historias</string>
+    <string name="no_more_stories">No more stories!</string>
     <string name="view_story_post">Ver publicación de la historia</string>
     <string name="priv_acc">Esta cuenta es privada</string>
-
+    <string name="empty_acc">This Account has No Posts</string>
     <string name="curr_version">Versión actual: v%s</string>
     <string name="read_more">leer más…</string>
-
     <string name="login">Acceder</string>
+    <string name="logout">Logout</string>
     <string name="send_logs">Enviar registros [si algo no funciona]</string>
     <string name="time_settings">Ajustes de fecha de publicación</string>
     <string name="project_link">Visitar página del proyecto</string>
     <string name="telegram_link">Unirse al grupo de Telegram</string>
-
+    <string name="matrix_link">Join Matrix Room</string>
+    <string name="like">Like</string>
+    <string name="unlike">Unlike</string>
+    <string name="bookmark">Bookmark</string>
+    <string name="unbookmark">Unbookmark</string>
+    <string name="follow">Follow</string>
+    <string name="unfollow">Unfollow</string>
+    <string name="block">Block</string>
+    <string name="unblock">Unblock</string>
+    <string name="restrict">Restrict</string>
+    <string name="unrestrict">Unrestrict</string>
     <string name="dialog_export_btn_export">Exportar</string>
     <string name="dialog_export_btn_import">Importar</string>
     <string name="dialog_export_logins">Exportar Logins</string>
@@ -87,59 +92,70 @@
     <string name="dialog_export_success">¡Exportado con éxito!</string>
     <string name="dialog_export_failed">¡Falló la exportación!</string>
     <string name="dialog_export_err_password_empty">¡La contraseña está vacía! La contraseña no puede estar vacía, ¡tonto!</string>
-
     <string name="refresh">Actualizar</string>
     <string name="get_cookies">Obtener cookies</string>
     <string name="desktop_2fa">Modo escritorio\npara 2FA</string>
-
     <string name="time_settings_title_custom">Formato Personalizado</string>
     <string name="time_settings_title_separator">Separador</string>
     <string name="time_settings_title_time_format">Formato de tiempo</string>
     <string name="time_settings_title_date_format">Formato de fecha</string>
     <string name="time_settings_title_preview">Previsualizar</string>
     <string name="time_settings_swap_time">Intercambiar posiciones de fecha y hora</string>
-
-    <string name="quick_access_info_dialog">El panel de favoritos es para añadir tus hashtags y/o nombres de usuario favoritos.\n\nY el panel de acceso rápido es para cambiar rápidamente entre cuentas. \n\nNota 1: Asegúrate de acceder a cada cuenta [Ajustes > Ingreso] para añadir una cuenta a la lista. \n\nNota 2: Sal de la cuenta actual y luego accede a la otra cuenta. Si varias cuentas no funcionan para ti, no hay nada que podamos hacer con los dos.</string>
+    <string name="quick_access_info_dialog">El panel de favoritos es para añadir tus hashtags y/o nombres de usuario favoritos.\n\nY el panel de acceso rápido es para cambiar rápidamente entre cuentas. \n\nNota 1: Asegúrate de acceder a cada cuenta [Ajustes &gt; Ingreso] para añadir una cuenta a la lista. \n\nNota 2: Sal de la cuenta actual y luego accede a la otra cuenta. Si varias cuentas no funcionan para ti, no hay nada que podamos hacer con los dos.</string>
     <string name="quick_access_cannot_delete_curr">No se puede borrar la cuenta actualmente en uso account</string>
     <string name="quick_access_confirm_delete">¿Estás seguro de que quieres borrar %s?</string>
-
     <string name="profile_viewer_imageinfo">Ancho: %d\nAlto: %d</string>
     <string name="profile_viewer_colordepth_prefix">\nProfundidad de color:</string>
     <string name="profile_endpoint">Seleccione el servidor de fotos del perfil</string>
     <string name="open_profile">Abrir perfil</string>
     <string name="view_pfp">Ver foto de perfil</string>
-
+    <string name="direct_messages_you">You</string>
+    <string name="direct_messages_sent_link">Shared a link</string>
+    <string name="direct_messages_sent_media">Shared a media</string>
+    <string name="direct_messages_sent_raven">Shared a timed message</string>
+    <string name="direct_messages_replied_story">Replied to a story</string>
+    <string name="direct_messages_reacted_story">Reacted on a story</string>
+    <string name="direct_messages_mention_story">Mentioned in a story</string>
+    <string name="dms_inbox_raven_message_unknown"><i>Unsupported message type</i></string>
+    <string name="dms_inbox_media_shared_from">Post shared from %s</string>
+    <string name="dms_inbox_raven_media_unknown"><i>Unknown media type</i></string>
+    <string name="dms_inbox_raven_media_expired">Media expired!</string>
+    <string name="dms_inbox_raven_media_delivered">Delivered</string>
+    <string name="dms_inbox_raven_media_sent">Sent</string>
+    <string name="dms_inbox_raven_media_opened">Opened</string>
+    <string name="dms_inbox_raven_media_replayed">Replayed</string>
+    <string name="dms_inbox_raven_media_sending">Sending…</string>
+    <string name="dms_inbox_raven_media_blocked">Blocked</string>
+    <string name="dms_inbox_raven_media_suggested">Suggested</string>
+    <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot delivered</string>
     <string name="direct_download">Descargar directamente</string>
     <string name="direct_download_desc">¡Descarga los mensajes directamente al teléfono!</string>
     <string name="direct_download_loading">Capturando publicaciones</string>
     <string name="direct_download_perms_ask">Por favor, conceda los permisos e intente descargar de nuevo!</string>
-
     <string name="downloader_started">Descarga iniciada</string>
     <string name="downloader_complete">Descarga completada</string>
     <string name="downloader_downloading_post">Descargar publicaciones</string>
+    <string name="downloader_downloading_media">Downloading media</string>
     <string name="downloader_downloading_pfp">Descargar foto de perfil</string>
-
     <string name="downloader_downloaded_in_folder">¡Archivo descargado en la carpeta de descargas!</string>
     <string name="downloader_unknown_error">¡Ha ocurrido un error desconocido!</string>
     <string name="downloader_error_creating_folder">¡Error al crear carpeta!</string>
     <string name="downloader_error_download_file">¡Error al descargar archivo!</string>
-
     <string name="comment_viewer_copy_user">Copiar nombre de usuario</string>
     <string name="comment_viewer_copy_comment">Copiar comentario</string>
     <string name="comment_view_mention_user_search">¿Quieres buscar el nombre de usuario?</string>
     <string name="comment_view_mention_hash_search">¿Quieres buscar el hashtag?</string>
-
     <string name="followers_type_followers">Seguidores</string>
     <string name="followers_type_following">Siguiendo</string>
     <string name="followers_compare">Comparar seguidores &amp; siguiendo</string>
     <string name="followers_both_following">Ambos se siguen mutuamente</string>
     <string name="followers_not_following">no está siguiendo %s</string>
     <string name="followers_not_follower">%s no está siguiendo</string>
-
     <string name="login_error_loading_cookies">Error al cargar cookies</string>
     <string name="login_success_loading_cookies">¡Cookies cargadas con éxito!\nSi aún no puedes abrir páginas/publicaciones privadas, ¡vuelve a ingresar!</string>
-
+    <string name="update_available">An update is available!</string>
+    <string name="updated">Thank you for updating InstaGrabber!</string>
     <string name="crash_title">App atascada</string>
     <string name="crash_descr">Vaya.. la aplicación dejó de funcionar, pero no te preocupes por un enviar un reporte de error al desarrollador para solucionar este problema. (:</string>
-    <string name="action_setting">Ajustes (v%s)</string>
 </resources>
