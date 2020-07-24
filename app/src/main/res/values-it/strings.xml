@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="description">Il manutentore originale, AWAiS, ha reso InstaGrabber una piccola e semplice app personale con le intenzioni di [rub-] scaricare post da Instagram. Sfortunatamente, questo è stato abbandonato e io, Austin Huang, ho preso il timone. [Speriamo che sia almeno un po \'di denaro contante.] Dopotutto, questa app è completamente open source, senza pubblicità e senza tracciamento [a parte ciò che Instagram sa]. Anche se non ti importa di scaricare roba [come me], è comunque un ottimo client Instagram da usare! \ N \ nFai domande [o vuoi solo parlare]? Contatta instagrabber@austinhuang.me o fai clic su uno dei pulsanti di seguito.</string>
     <string name="action_quickaccess">Accesso rapido</string>
     <string name="action_about">Riguardo</string>
     <string name="action_dms">Direct Messaggi</string>
+    <string name="action_setting">Impostazioni (v%s)</string>
     <string name="action_settings">Impostazioni</string>
     <string name="action_download">Download</string>
     <string name="action_search">Cerca utente…</string>
     <string name="action_compare">Compara</string>
-
     <string name="single_like">like</string>
     <string name="multiple_likes">likes</string>
-
     <string name="clipboard_error">Errore durante la copia del testo</string>
     <string name="clipboard_copied">Copiato negli appunti!</string>
     <string name="report">Report</string>
@@ -24,7 +23,6 @@
     <string name="nav_up">Su</string>
     <string name="dont_show_again">Non mostrare di nuovo</string>
     <string name="selected_folder_label">Seleziona cartella:</string>
-
     <string name="title_favorites">Favoriti</string>
     <string name="title_discover">Scopri</string>
     <string name="title_comments">Commenti</string>
@@ -32,7 +30,6 @@
     <string name="title_highlight">Contenuto in evidenza: %s</string>
     <string name="title_user_story">Storia Utente</string>
     <string name="title_changelog">Changelog</string>
-
     <string name="bottom_toolbar">Mostra barra degli strumenti in basso</string>
     <string name="download_user_folder">Scarica i post nella cartella nome utente in Download</string>
     <string name="autoload_posts">Carica automaticamente tutti i post dall\'utente</string>
@@ -45,11 +42,9 @@
     <string name="import_export">Importa/Esporta</string>
     <string name="select_language">Seleziona lingua</string>
     <string name="what_to_do_dialog">Cosa fare?</string>
-
     <string name="main_posts_count">%s\nPost</string>
-    <string name="main_posts_followers">%s\nFollowers</string>
-    <string name="main_posts_following">%s\nFollowing</string>
-
+    <string name="main_posts_followers">%s\nFollower</string>
+    <string name="main_posts_following">%s\nProfili seguiti</string>
     <string name="post_viewer_video_post">Video post</string>
     <string name="post_viewer_image_post">Immagine post</string>
     <string name="post_viewer_autoplay_video">Auto-avvia video</string>
@@ -60,20 +55,30 @@
     <string name="post_viewer_download_session">Corrente [Session]</string>
     <string name="post_viewer_download_current">Corrente</string>
     <string name="post_viewer_download_album">Intero Album</string>
-
-    <string name="show_stories">Mostra storiee</string>
-    <string name="view_story_post">Vedi Post nella Storia</string>
-    <string name="priv_acc">Questo Profilo è Privato</string>
-
+    <string name="show_stories">Mostra storie</string>
+    <string name="no_more_stories">Niente più storie!</string>
+    <string name="view_story_post">Vedi post nella storia</string>
+    <string name="priv_acc">Questo profilo è privato</string>
+    <string name="empty_acc">Questo profilo non ha post</string>
     <string name="curr_version">Versione corrente: v%s</string>
     <string name="read_more">leggi di più…</string>
-
     <string name="login">Accedi</string>
-    <string name="send_logs">Invia registri [se qualcosa non funziona]</string>
+    <string name="logout">Disconetti</string>
+    <string name="send_logs">Invia registri di debug</string>
     <string name="time_settings">Impostazioni tempo post</string>
     <string name="project_link">Visita la pagina del progetto</string>
     <string name="telegram_link">Unisciti al gruppo Telegram</string>
-
+    <string name="matrix_link">Unisciti alla stanza Matrix</string>
+    <string name="like">Like</string>
+    <string name="unlike">Unlike</string>
+    <string name="bookmark">Salva segnalibro</string>
+    <string name="unbookmark">Elimina segnalibro</string>
+    <string name="follow">Segui</string>
+    <string name="unfollow">Non seguire</string>
+    <string name="block">Blocca</string>
+    <string name="unblock">Sblocca</string>
+    <string name="restrict">Limita</string>
+    <string name="unrestrict">Togli limiti</string>
     <string name="dialog_export_btn_export">Esporta</string>
     <string name="dialog_export_btn_import">Importa</string>
     <string name="dialog_export_logins">Esporta Accessi</string>
@@ -87,59 +92,70 @@
     <string name="dialog_export_success">Esportato con successo!</string>
     <string name="dialog_export_failed">Esportazione non riuscita!</string>
     <string name="dialog_export_err_password_empty">La password è vuota! La password non può essere vuota, idiota!</string>
-
     <string name="refresh">Ricarica</string>
-    <string name="get_cookies">Ottini cookies</string>
-    <string name="desktop_2fa">Modalità desktop \nper 2FA</string>
-
+    <string name="get_cookies">Ottieni cookies</string>
+    <string name="desktop_2fa">Modalità desktop</string>
     <string name="time_settings_title_custom">Formato personalizzato</string>
     <string name="time_settings_title_separator">Separatore</string>
     <string name="time_settings_title_time_format">Formato orario</string>
     <string name="time_settings_title_date_format">Formato data</string>
     <string name="time_settings_title_preview">Anteprima</string>
     <string name="time_settings_swap_time">Scambia posizioni \nOrario e Data </string>
-
-    <string name="quick_access_info_dialog">Il pannello Preferiti consente di aggiungere hashtag e / o nomi utente preferiti. \n\nIl pannello Accesso rapido consente di passare rapidamente da un account all\'altro. \n\nNota 1: assicurati di accedere a ciascun profilo [Impostazioni> Accedi] per aggiungere il profilo all\'elenco! \n\nNota 2: disconnettiti dal profilo corrente e quindi accedi all\'altro profilo. \nSe più profili non funzionano per te, non possiamo fare nulla!</string>
+    <string name="quick_access_info_dialog">Il pannello Preferiti consente di aggiungere hashtag e / o nomi utente preferiti. \n\nIl pannello Accesso rapido consente di passare rapidamente da un account all\'altro. \n\nNota 1: assicurati di accedere a ciascun profilo [Impostazioni&gt; Accedi] per aggiungere il profilo all\'elenco! \n\nNota 2: disconnettiti dal profilo corrente e quindi accedi all\'altro profilo. \nSe più profili non funzionano per te, non possiamo fare nulla!</string>
     <string name="quick_access_cannot_delete_curr">Impossibile eliminare l\'account attualmente in uso</string>
     <string name="quick_access_confirm_delete">Sei sicuro di voler eliminare %s?</string>
-
     <string name="profile_viewer_imageinfo">Larghezza: %d\nAltezza: %d</string>
     <string name="profile_viewer_colordepth_prefix">\nProfondità colore:</string>
-    <string name="profile_endpoint">Seleziona l\'estrimità dell\'immagine del profilo</string>
+    <string name="profile_endpoint">Seleziona l\'endpoint dell\'immagine del profilo</string>
     <string name="open_profile">Apri profilo</string>
     <string name="view_pfp">Vedi foto profilo</string>
-
+    <string name="direct_messages_you">Tu</string>
+    <string name="direct_messages_sent_link">Hai condiviso un collegamento</string>
+    <string name="direct_messages_sent_media">Hai condiviso un media</string>
+    <string name="direct_messages_sent_raven">Hai condiviso un messaggio a tempo</string>
+    <string name="direct_messages_replied_story">Hai risposto a una storia</string>
+    <string name="direct_messages_reacted_story">Hai reagito a una storia</string>
+    <string name="direct_messages_mention_story">Sei stato menzionato in una storia</string>
+    <string name="dms_inbox_raven_message_unknown"><i>Tipo di messaggio non supportato</i></string>
+    <string name="dms_inbox_media_shared_from">Post condiviso da %s</string>
+    <string name="dms_inbox_raven_media_unknown"><i>Tipo di media sconosciuto</i></string>
+    <string name="dms_inbox_raven_media_expired">Media scaduto!</string>
+    <string name="dms_inbox_raven_media_delivered">Consegnato</string>
+    <string name="dms_inbox_raven_media_sent">Inviato</string>
+    <string name="dms_inbox_raven_media_opened">Aperto</string>
+    <string name="dms_inbox_raven_media_replayed">Riprodotto</string>
+    <string name="dms_inbox_raven_media_sending">Invio...</string>
+    <string name="dms_inbox_raven_media_blocked">Bloccato</string>
+    <string name="dms_inbox_raven_media_suggested">Consigliato</string>
+    <string name="dms_inbox_raven_media_screenshot">Effettuato screenshot</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Non consegnato</string>
     <string name="direct_download">Scarica direttamente</string>
     <string name="direct_download_desc">Scarica i post direttamente sul telefono!</string>
     <string name="direct_download_loading">Recupero post</string>
     <string name="direct_download_perms_ask">Concedi le autorizzazioni e prova a scaricare di nuovo!</string>
-
     <string name="downloader_started">Download avviato</string>
     <string name="downloader_complete">Download completato</string>
     <string name="downloader_downloading_post">Download del post</string>
+    <string name="downloader_downloading_media">Download del media</string>
     <string name="downloader_downloading_pfp">Download della foto profilo</string>
-
     <string name="downloader_downloaded_in_folder">File scaricato nella cartella Download!</string>
     <string name="downloader_unknown_error">Si è verificato un errore sconosciuto!!!</string>
     <string name="downloader_error_creating_folder">Errore durante la creazione della cartella!</string>
     <string name="downloader_error_download_file">Errore durante il download del file</string>
-
     <string name="comment_viewer_copy_user">Copia nome utente</string>
     <string name="comment_viewer_copy_comment">Copia commento</string>
     <string name="comment_view_mention_user_search">Vuoi cercare il nome utente?</string>
     <string name="comment_view_mention_hash_search">Vuoi cercare l\'hashtag?</string>
-
     <string name="followers_type_followers">Followers</string>
-    <string name="followers_type_following">Following</string>
-    <string name="followers_compare">Confronto followers &amp; following</string>
+    <string name="followers_type_following">Profili seguiti</string>
+    <string name="followers_compare">Confronto followers &amp; profili seguiti</string>
     <string name="followers_both_following">Si seguono a vicenda</string>
     <string name="followers_not_following">Non segue %s</string>
     <string name="followers_not_follower">%s non segue</string>
-
     <string name="login_error_loading_cookies"> Errore durante il caricamento dei cookie</string>
     <string name="login_success_loading_cookies">Cookie caricati correttamente! \nSe non riesci ancora ad aprire pagine / post privati, accedi nuovamente!</string>
-
+    <string name="update_available">Un aggiornamento è disponibile!</string>
+    <string name="updated">Grazie per aver aggiornato InstaGrabber!</string>
     <string name="crash_title">L\'app si è arrestata in modo anomalo</string>
     <string name="crash_descr">Oops… L\'app si è arrestata in modo anomalo, ma non preoccuparti, puoi inviare una segnalazione di errore allo sviluppatore per aiutarlo a risolvere il problema. (:</string>
-    <string name="action_setting">Impostazioni (v%s)</string>
 </resources>
