@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
-        <item>French [Thanks to @kernoeb (Telegram)]</item>
-        <item>Spanish [Thanks to @sguinetti (GitLab)]</item>
-        <item>Chinese Simplified</item>
-        <item>Indonesian [Thanks to @Galang23 (GitLab)]</item>
-        <item>Italian [Thanks to @RAR_Ramar (Telegram)]</item>
+        <item>Predifinito da sistema</item>
+        <item>Inglese</item>
+        <item>Francese [Grazie a @kernoeb (Telegram)]</item>
+        <item>Spagnolo [Grazie a @sguinetti (GitLab)]</item>
+        <item>Cinese Semplificato</item>
+        <item>Indonesiano [Grazie a @Galang23 (GitLab)]</item>
+        <item>Italiano [Grazie a @RAR_Ramar (Telegram)]</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Automatico / In base al sistema</item>
+        <item>Automatico / In base al batteria</item>
+        <item>Scuro</item>
+        <item>Chiaro</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Niente</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>al</item>
+        <item>su</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
