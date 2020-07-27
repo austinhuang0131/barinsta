@@ -93,7 +93,7 @@
     <string name="dialog_import_success">Importé avec succès!</string>
     <string name="dialog_import_failed">Erreur d\'importation!</string>
     <string name="dialog_export_success">Exporté avec succès!</string>
-    <string name="dialog_export_failed">Failed to export!</string>
+    <string name="dialog_export_failed">Erreur d\'exportation!</string>
     <string name="dialog_export_err_password_empty">Le mot de passe est vide ! Il ne doit pas l\'être, abruti!</string>
     <string name="refresh">Actualiser</string>
     <string name="get_cookies">Récupérer les cookies</string>
