@@ -19,27 +19,17 @@ public abstract class BasePostModel implements Serializable {
     protected long timestamp;
     protected int position;
     boolean liked, bookmarked;
-    long likes;
 
     public boolean getLike() {
         return liked;
     }
-    public long getLikes() {
-        return likes;
-    }
+
     public boolean getBookmark() {
         return bookmarked;
     }
 
     public boolean setLike(final boolean like) {
         liked = like; return liked;
-    }
-
-    // setManualLike means user liked from InstaGrabber
-    public boolean setManualLike(final boolean like) {
-        liked = like;
-        likes = (like) ? (likes + 1) : (likes - 1);
-        return liked;
     }
 
     public boolean setBookmark(final boolean bookmark) {

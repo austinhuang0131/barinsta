@@ -98,6 +98,7 @@ public final class FeedFetcher extends AsyncTask<Void, Void, FeedModel[]> {
                     if (feedItem.has("owner")) {
                         final JSONObject owner = feedItem.getJSONObject("owner");
                         profileModel = new ProfileModel(owner.optBoolean("is_private"),
+                                false, // if you can see it then you def follow
                                 owner.optBoolean("is_verified"),
                                 owner.getString(Constants.EXTRAS_ID),
                                 owner.getString(Constants.EXTRAS_USERNAME),
@@ -153,7 +154,8 @@ public final class FeedFetcher extends AsyncTask<Void, Void, FeedModel[]> {
                                             node.getString(Constants.EXTRAS_ID),
                                             isChildVideo ? node.getString("video_url") : Utils.getHighQualityImage(node),
                                             null, null, null,
-                                            node.optLong("video_view_count", -1), -1, false, false);
+                                            node.optLong("video_view_count", -1), -1, false, false,
+                                            feedItem.getJSONObject("edge_media_preview_like").getLong("count"));
 
                                     sliderItems[j].setSliderDisplayUrl(node.getString("display_url"));
                                 }

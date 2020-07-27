@@ -870,7 +870,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                 main.mainBinding.mainFullName.setSelected(true);
                 main.mainBinding.mainBiography.setEnabled(true);
 
-                if (!profileModel.isPrivate()) {
+                if (!profileModel.isReallyPrivate()) {
                     main.mainBinding.mainFollowing.setClickable(true);
                     main.mainBinding.mainFollowers.setClickable(true);
                     main.mainBinding.privatePage.setVisibility(View.GONE);

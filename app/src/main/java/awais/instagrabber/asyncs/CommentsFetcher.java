@@ -109,8 +109,7 @@ public final class CommentsFetcher extends AsyncTask<Void, Void, CommentModel[]>
 
                             if (childComment != null) {
                                 final JSONObject owner = childComment.getJSONObject("owner");
-                                final ProfileModel profileModel = new ProfileModel(false,
-                                        false,
+                                final ProfileModel profileModel = new ProfileModel(false, false, false,
                                         owner.getString(Constants.EXTRAS_ID),
                                         owner.getString(Constants.EXTRAS_USERNAME),
                                         null, null, null,
@@ -188,7 +187,7 @@ public final class CommentsFetcher extends AsyncTask<Void, Void, CommentModel[]>
                         final JSONObject comment = comments.getJSONObject(i).getJSONObject("node");
 
                         final JSONObject owner = comment.getJSONObject("owner");
-                        final ProfileModel profileModel = new ProfileModel(false,
+                        final ProfileModel profileModel = new ProfileModel(false, false,
                                 owner.optBoolean("is_verified"),
                                 owner.getString(Constants.EXTRAS_ID),
                                 owner.getString(Constants.EXTRAS_USERNAME),
@@ -229,6 +228,7 @@ public final class CommentsFetcher extends AsyncTask<Void, Void, CommentModel[]>
 
                                 tempJsonObject = childComment.getJSONObject("owner");
                                 final ProfileModel childProfileModel = new ProfileModel(false, false,
+                                        tempJsonObject.optBoolean("is_verified"),
                                         tempJsonObject.getString(Constants.EXTRAS_ID),
                                         tempJsonObject.getString(Constants.EXTRAS_USERNAME),
                                         null, null, null,

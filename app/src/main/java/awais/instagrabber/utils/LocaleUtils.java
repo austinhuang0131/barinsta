@@ -63,6 +63,8 @@ public final class LocaleUtils {
         if (appLanguageIndex == 4) return "zh";
         if (appLanguageIndex == 5) return "in";
         if (appLanguageIndex == 6) return "it";
+        if (appLanguageIndex == 7) return "de";
+        if (appLanguageIndex == 8) return "pl";
 
         return null;
     }

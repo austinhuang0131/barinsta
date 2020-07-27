@@ -81,7 +81,6 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
                     endCursor = commentObject.optString("end_cursor");
 
                 if (mediaItemType != MediaItemType.MEDIA_TYPE_SLIDER) {
-                    Log.d("austin_debug", "m: "+media);
                     final ViewerPostModel postModel = new ViewerPostModel(mediaItemType,
                             media.getString(Constants.EXTRAS_ID),
                             isVideo ? media.getString("video_url") : Utils.getHighQualityImage(media),
@@ -89,7 +88,8 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
                             Utils.isEmpty(postCaption) ? null : postCaption,
                             username,
                             isVideo && media.has("video_view_count") ? media.getLong("video_view_count") : -1,
-                            timestamp, media.getBoolean("viewer_has_liked"), media.getBoolean("viewer_has_saved"));
+                            timestamp, media.getBoolean("viewer_has_liked"), media.getBoolean("viewer_has_saved"),
+                            media.getJSONObject("edge_media_preview_like").getLong("count"));
 
                     postModel.setCommentsCount(commentsCount);
                     postModel.setCommentsEndCursor(endCursor);
@@ -107,13 +107,14 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
                         final boolean isChildVideo = node.getBoolean("is_video");
 
                         postModels[i] = new ViewerPostModel(isChildVideo ? MediaItemType.MEDIA_TYPE_VIDEO : MediaItemType.MEDIA_TYPE_IMAGE,
-                                node.getString(Constants.EXTRAS_ID),
+                                media.getString(Constants.EXTRAS_ID),
                                 isChildVideo ? node.getString("video_url") : Utils.getHighQualityImage(node),
                                 node.getString(Constants.EXTRAS_SHORTCODE),
                                 postCaption,
                                 username,
                                 isChildVideo && node.has("video_view_count") ? node.getLong("video_view_count") : -1,
-                                timestamp, media.getBoolean("viewer_has_liked"), media.getBoolean("viewer_has_saved"));
+                                timestamp, media.getBoolean("viewer_has_liked"), media.getBoolean("viewer_has_saved"),
+                                media.getJSONObject("edge_media_preview_like").getLong("count"));
                         postModels[i].setSliderDisplayUrl(node.getString("display_url"));
 
                         Utils.checkExistence(downloadDir, customDir, username, true, i, postModels[i]);

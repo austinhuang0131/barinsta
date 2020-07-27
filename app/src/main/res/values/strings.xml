@@ -97,7 +97,7 @@
     <string name="dialog_import_success">Successfully imported!</string>
     <string name="dialog_import_failed">Failed to import!</string>
     <string name="dialog_export_success">Successfully exported!</string>
-    <string name="dialog_export_failed">Failed to  export!</string>
+    <string name="dialog_export_failed">Failed to export!</string>
     <string name="dialog_export_err_password_empty">Password is empty! Password cannot be empt, dumbass!</string>
     <string name="refresh">Refresh</string>
     <string name="get_cookies">Get cookies</string>
@@ -168,6 +168,9 @@
     <string name="login_success_loading_cookies">Successfully loaded cookies!\nIf you still can\'t open private pages/posts, re-login!</string>
 
     <string name="comment_hint">Write a new comment...</string>
+
+    <string name="share_public_post">Share this public post to...</string>
+    <string name="share_private_post">This is a private post! Share to those who can view them!</string>
 
     <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>

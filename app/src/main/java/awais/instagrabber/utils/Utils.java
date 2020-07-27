@@ -382,6 +382,7 @@ public final class Utils {
             if (userObj != null) {
                 user = new ProfileModel(
                         userObj.getBoolean("is_private"),
+                        false, // temporary
                         userObj.optBoolean("is_verified"),
                         String.valueOf(userObj.get("pk")),
                         userObj.getString("username"),
@@ -459,6 +460,7 @@ public final class Utils {
         for (int j = 0; j < usersLen; ++j) {
             final JSONObject userObject = users.getJSONObject(j);
             userModels[j] = new ProfileModel(userObject.getBoolean("is_private"),
+                    false,
                     userObject.optBoolean("is_verified"),
                     String.valueOf(userObject.get("pk")),
                     userObject.getString("username"),
@@ -608,6 +610,7 @@ public final class Utils {
                 case PROFILE: {
                     final JSONObject profile = itemObject.getJSONObject("profile");
                     profileModel = new ProfileModel(profile.getBoolean("is_private"),
+                            false,
                             profile.getBoolean("is_verified"),
                             Long.toString(profile.getLong("pk")),
                             profile.getString("username"),

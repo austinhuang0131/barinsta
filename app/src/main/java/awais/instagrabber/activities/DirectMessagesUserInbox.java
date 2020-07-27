@@ -42,7 +42,7 @@ import awais.instagrabber.utils.Utils;
 public final class DirectMessagesUserInbox extends AppCompatActivity {
     private DirectItemModel directItemModel;
     private final ProfileModel myProfileHolder =
-            new ProfileModel(false, false, null, null, null, null, null, null, null, 0, 0, 0, false, false, false, false);
+            new ProfileModel(false, false, false, null, null, null, null, null, null, null, 0, 0, 0, false, false, false, false);
     private final ArrayList<ProfileModel> users = new ArrayList<>();
     private final ArrayList<DirectItemModel> directItemModels = new ArrayList<>();
     private final FetchListener<InboxThreadModel> fetchListener = new FetchListener<InboxThreadModel>() {

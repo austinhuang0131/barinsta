@@ -1,6 +1,8 @@
 * You can now write comments, and reply/like/delete comments through the menu (by clicking the comment)
-  * You're actually
 * Liked comments are shown with a pink background
-* Post like counts are now displayed (The button texts are slightly reduced to accomodate @world_record_egg)
+* You can now share posts in the post viewer
+* Search field is now empty if you're viewing your own profile while logged in
+* Post like counts are now displayed (The button texts are slightly reduced to accomodate @world_record_egg) (logged in only)
 * Mute buttons are changed to display the current status (i.e. muted icon when muted, sound icon when not muted)
 * Fixed a bug relating to viewing feed stories
+* Fixed a bug where scrolling in full screen causes it to quit full screen

@@ -139,11 +139,14 @@ public final class PostViewer extends BaseLanguageActivity {
                     iconRes = R.drawable.ic_fullscreen_exit;
                     topPanelRoot.setVisibility(View.GONE);
                     viewerBinding.btnDownload.setVisibility(View.VISIBLE);
+                    viewerBinding.bottomPanel.tvPostDate.setVisibility(View.GONE);
                 } else {
                     containerLayoutParams.weight = (viewerBinding.mediaList.getVisibility() == View.VISIBLE) ? 1.35f : 1.9f;
+                    containerLayoutParams.weight += (Utils.isEmpty(settingsHelper.getString(Constants.COOKIE))) ? 0.3f : 0;
                     iconRes = R.drawable.ic_fullscreen;
                     topPanelRoot.setVisibility(View.VISIBLE);
                     viewerBinding.btnDownload.setVisibility(View.GONE);
+                    viewerBinding.bottomPanel.tvPostDate.setVisibility(View.VISIBLE);
                 }
 
                 viewerBinding.ivToggleFullScreen.setImageResource(iconRes);
@@ -203,7 +206,19 @@ public final class PostViewer extends BaseLanguageActivity {
         resources = getResources();
 
         final View viewStoryPost = findViewById(R.id.viewStoryPost);
-        if (viewStoryPost != null) viewStoryPost.setVisibility(View.GONE);
+        if (viewStoryPost != null) {
+            viewStoryPost.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (profileModel.isPrivate())
+                        Toast.makeText(getApplicationContext(), R.string.share_private_post, Toast.LENGTH_LONG).show();
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+postShortCode);
+                    startActivity(Intent.createChooser(sharingIntent,
+                            (profileModel.isPrivate()) ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
+                }
+            });
+        }
 
         viewerBinding.topPanel.title.setMovementMethod(new LinkMovementMethod());
         viewerBinding.topPanel.title.setMentionClickListener((view, text, isHashtag) ->
@@ -218,7 +233,7 @@ public final class PostViewer extends BaseLanguageActivity {
             viewerBinding.postActions.setLayoutParams(new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.MATCH_PARENT, 0, 0
             ));
-            containerLayoutParams.weight = 2.2f;
+            containerLayoutParams.weight = (containerLayoutParams.weight == 3.3f) ? 3.3f : 2.2f;
             viewerBinding.container.setLayoutParams(containerLayoutParams);
         }
         else {
@@ -337,6 +352,21 @@ public final class PostViewer extends BaseLanguageActivity {
                 containerLayoutParams.weight += (Utils.isEmpty(settingsHelper.getString(Constants.COOKIE))) ? 0.3f : 0;
                 viewerBinding.container.setLayoutParams(containerLayoutParams);
                 viewerBinding.mediaList.setVisibility(View.VISIBLE);
+            }
+
+            final View viewStoryPost = findViewById(R.id.viewStoryPost);
+            if (viewStoryPost != null) {
+                viewStoryPost.setOnClickListener(new View.OnClickListener() {
+                    public void onClick(View v) {
+                        if (profileModel.isPrivate())
+                            Toast.makeText(getApplicationContext(), R.string.share_private_post, Toast.LENGTH_LONG).show();
+                        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                        sharingIntent.setType("text/plain");
+                        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+postModel.getShortCode());
+                        startActivity(Intent.createChooser(sharingIntent,
+                                (profileModel.isPrivate()) ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
+                    }
+                });
             }
 
             viewerCaptionParent.setOnTouchListener(gestureTouchListener);
@@ -560,10 +590,6 @@ public final class PostViewer extends BaseLanguageActivity {
         }
         lastSlidePos = slidePos;
 
-        containerLayoutParams.weight = (viewerBinding.mediaList.getVisibility() == View.VISIBLE) ? 1.35f : 1.9f;
-        containerLayoutParams.weight += (Utils.isEmpty(settingsHelper.getString(Constants.COOKIE))) ? 0.3f : 0;
-        viewerBinding.container.setLayoutParams(containerLayoutParams);
-
         postCaption = viewerPostModel.getPostCaption();
 
         if (Utils.hasMentions(postCaption)) {
@@ -588,12 +614,12 @@ public final class PostViewer extends BaseLanguageActivity {
             postModel.setLike(viewerPostModel.getLike());
             postModel.setBookmark(viewerPostModel.getBookmark());
             if (viewerPostModel.getLike() == true) {
-                viewerBinding.btnLike.setText(resources.getString(R.string.unlike, postModel.getLikes()));
+                viewerBinding.btnLike.setText(resources.getString(R.string.unlike, viewerPostModel.getLikes()));
                 viewerBinding.btnLike.setBackgroundTintList(ColorStateList.valueOf(resources.getColor(
                         R.color.btn_pink_background, null)));
             }
             else {
-                viewerBinding.btnLike.setText(resources.getString(R.string.like, postModel.getLikes()));
+                viewerBinding.btnLike.setText(resources.getString(R.string.like, viewerPostModel.getLikes()));
                 viewerBinding.btnLike.setBackgroundTintList(ColorStateList.valueOf(resources.getColor(
                         R.color.btn_lightpink_background, null)));
             }
@@ -610,7 +636,7 @@ public final class PostViewer extends BaseLanguageActivity {
         }
 
         viewerBinding.bottomPanel.tvPostDate.setText(viewerPostModel.getPostDate());
-        viewerBinding.bottomPanel.tvPostDate.setVisibility(View.VISIBLE);
+        viewerBinding.bottomPanel.tvPostDate.setVisibility(containerLayoutParams.weight != 3.3f ? View.VISIBLE : View.GONE);
         viewerBinding.bottomPanel.tvPostDate.setSelected(true);
 
         url = viewerPostModel.getDisplayUrl();
@@ -718,7 +744,7 @@ public final class PostViewer extends BaseLanguageActivity {
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     ok = true;
                 }
-                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT);
+                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", action+": " + ex);
@@ -729,8 +755,8 @@ public final class PostViewer extends BaseLanguageActivity {
         @Override
         protected void onPostExecute(Void result) {
             if (ok == true && action == "likes") {
-                viewerPostModel.setLike(!postModel.getLike());
-                postModel.setManualLike(!postModel.getLike());
+                postModel.setLike(!postModel.getLike());
+                viewerPostModel.setManualLike(!postModel.getLike());
                 refreshPost();
             }
             else if (ok == true && action == "save") {

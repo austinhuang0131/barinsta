@@ -56,7 +56,7 @@ public final class FeedStoriesFetcher extends AsyncTask<Void, Void, FeedStoryMod
                     final JSONObject node = feedStoriesReel.getJSONObject(i).getJSONObject("node");
 
                     final JSONObject user = node.getJSONObject(node.has("user") ? "user" : "owner");
-                    final ProfileModel profileModel = new ProfileModel(false, false,
+                    final ProfileModel profileModel = new ProfileModel(false, false, false,
                             user.getString("id"),
                             user.getString("username"),
                             null, null, null,

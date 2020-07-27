@@ -3,15 +3,17 @@ package awais.instagrabber.models;
 import java.io.Serializable;
 
 public final class ProfileModel implements Serializable {
-    private final boolean isPrivate, isVerified, following, restricted, blocked, requested;
+    private final boolean isPrivate, reallyPrivate, isVerified, following, restricted, blocked, requested;
     private final long postCount, followersCount, followingCount;
     private final String id, username, name, biography, url, sdProfilePic, hdProfilePic;
 
-    public ProfileModel(final boolean isPrivate, final boolean isVerified, final String id, final String username,
-                        final String name, final String biography, final String url, final String sdProfilePic, final String hdProfilePic,
-                        final long postCount, final long followersCount, final long followingCount, final boolean following,
-                        final boolean restricted, final boolean blocked, final boolean requested) {
+    public ProfileModel(final boolean isPrivate, final boolean reallyPrivate,
+                        final boolean isVerified, final String id, final String username, final String name, final String biography,
+                        final String url, final String sdProfilePic, final String hdProfilePic, final long postCount,
+                        final long followersCount, final long followingCount, final boolean following, final boolean restricted,
+                        final boolean blocked, final boolean requested) {
         this.isPrivate = isPrivate;
+        this.reallyPrivate = reallyPrivate;
         this.isVerified = isVerified;
         this.id = id;
         this.url = url;
@@ -31,6 +33,10 @@ public final class ProfileModel implements Serializable {
 
     public boolean isPrivate() {
         return isPrivate;
+    }
+
+    public boolean isReallyPrivate() {
+        return reallyPrivate;
     }
 
     public boolean isVerified() {

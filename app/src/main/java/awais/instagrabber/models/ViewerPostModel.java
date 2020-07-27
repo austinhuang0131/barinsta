@@ -6,12 +6,12 @@ public final class ViewerPostModel extends BasePostModel {
     protected final String username;
     protected final long videoViews;
     protected String sliderDisplayUrl, commentsEndCursor;
-    protected long commentsCount;
+    protected long commentsCount, likes;
     private boolean isCurrentSlide = false;
 
     public ViewerPostModel(final MediaItemType itemType, final String postId, final String displayUrl, final String shortCode,
                            final String postCaption, final String username, final long videoViews, final long timestamp,
-                           boolean liked, boolean bookmarked) {
+                           boolean liked, boolean bookmarked, long likes) {
         this.itemType = itemType;
         this.postId = postId;
         this.displayUrl = displayUrl;
@@ -21,6 +21,7 @@ public final class ViewerPostModel extends BasePostModel {
         this.videoViews = videoViews;
         this.timestamp = timestamp;
         this.liked = liked;
+        this.likes = likes;
         this.bookmarked = bookmarked;
     }
 
@@ -42,6 +43,17 @@ public final class ViewerPostModel extends BasePostModel {
 
     public final long getVideoViews() {
         return videoViews;
+    }
+
+    public long getLikes() {
+        return likes;
+    }
+
+    // setManualLike means user liked from InstaGrabber
+    public boolean setManualLike(final boolean like) {
+        liked = like;
+        likes = (like) ? (likes + 1) : (likes - 1);
+        return liked;
     }
 
     public void setSliderDisplayUrl(final String sliderDisplayUrl) {

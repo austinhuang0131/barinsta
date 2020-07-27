@@ -23,7 +23,6 @@ public class PostModel extends BasePostModel {
         this.postCaption = postCaption;
         this.timestamp = timestamp;
         this.liked = liked;
-        this.likes = likes;
         this.bookmarked = bookmarked;
     }
 
@@ -33,10 +32,6 @@ public class PostModel extends BasePostModel {
 
     public String getEndCursor() {
         return endCursor;
-    }
-
-    public long getLikes() {
-        return likes;
     }
 
     public boolean hasNextPage() {
