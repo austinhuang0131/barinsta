@@ -93,7 +93,7 @@
     <string name="dialog_import_success">成功导入!</string>
     <string name="dialog_import_failed">导入失败!</string>
     <string name="dialog_export_success">成功导出!</string>
-    <string name="dialog_export_failed">导出失败!</string>
+    <string name="dialog_export_failed">Failed to export!</string>
     <string name="dialog_export_err_password_empty">密码为空! 密码不能是空的，笨蛋!</string>
     <string name="refresh">刷新</string>
     <string name="get_cookies">获取 cookies</string>
@@ -162,8 +162,10 @@
     <string name="followers_not_follower">%s 未关注</string>
     <string name="login_error_loading_cookies">载入 cookies 时出错</string>
     <string name="login_success_loading_cookies">成功载入 cookies!\n若你仍不能查看私密页面/帖子，重新登录!</string>
-    <string name="comment_hint">撰写新评论...</string>
-    <string name="update_available">检测到有新版本！ (%s)</string>
+    <string name="comment_hint">Write a new comment...</string>
+    <string name="share_public_post">Share this public post to...</string>
+    <string name="share_private_post">This is a private post! Share to those who can view them!</string>
+    <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
     <string name="updated">感谢阁下更新InstaGrabber！</string>
     <string name="crash_title">应用崩溃了</string>
