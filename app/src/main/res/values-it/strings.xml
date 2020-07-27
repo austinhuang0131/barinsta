@@ -93,7 +93,7 @@
     <string name="dialog_import_success">Importato con successo!</string>
     <string name="dialog_import_failed">Importazione non riuscita!</string>
     <string name="dialog_export_success">Esportato con successo!</string>
-    <string name="dialog_export_failed">Esportazione non riuscita!</string>
+    <string name="dialog_export_failed">Failed to export!</string>
     <string name="dialog_export_err_password_empty">La password è vuota! La password non può essere vuota, idiota!</string>
     <string name="refresh">Ricarica</string>
     <string name="get_cookies">Ottieni cookies</string>
@@ -163,7 +163,9 @@
     <string name="login_error_loading_cookies"> Errore durante il caricamento dei cookie</string>
     <string name="login_success_loading_cookies">Cookie caricati correttamente! \nSe non riesci ancora ad aprire pagine / post privati, accedi nuovamente!</string>
     <string name="comment_hint">Write a new comment...</string>
-    <string name="update_available">Un aggiornamento è disponibile! (%s)</string>
+    <string name="share_public_post">Share this public post to...</string>
+    <string name="share_private_post">This is a private post! Share to those who can view them!</string>
+    <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
     <string name="updated">Grazie per aver aggiornato InstaGrabber!</string>
     <string name="crash_title">L\'app si è arrestata in modo anomalo</string>
