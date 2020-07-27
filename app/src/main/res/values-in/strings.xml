@@ -93,7 +93,7 @@
     <string name="dialog_import_success">Berhasil diimpor!</string>
     <string name="dialog_import_failed">Gagal mengimpor!</string>
     <string name="dialog_export_success">Berhasil diekspor!</string>
-    <string name="dialog_export_failed">Failed to export!</string>
+    <string name="dialog_export_failed">Gagal mengekspor!</string>
     <string name="dialog_export_err_password_empty">Kata sandi kosong! Kata sandi gak boleh kosong!</string>
     <string name="refresh">Muat ulang</string>
     <string name="get_cookies">Dapatkan cookies</string>
