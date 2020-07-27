@@ -93,7 +93,7 @@
     <string name="dialog_import_success">Berhasil diimpor!</string>
     <string name="dialog_import_failed">Gagal mengimpor!</string>
     <string name="dialog_export_success">Berhasil diekspor!</string>
-    <string name="dialog_export_failed">Gagal mengekspor!</string>
+    <string name="dialog_export_failed">Failed to export!</string>
     <string name="dialog_export_err_password_empty">Kata sandi kosong! Kata sandi gak boleh kosong!</string>
     <string name="refresh">Muat ulang</string>
     <string name="get_cookies">Dapatkan cookies</string>
@@ -163,6 +163,8 @@
     <string name="login_error_loading_cookies">Galat memuat cookies</string>
     <string name="login_success_loading_cookies">Berhasil memuat cookies!\nJika anda tetap tidak dapat membuka laman/kiriman pribadi, coba masuk lagi!</string>
     <string name="comment_hint">Write a new comment...</string>
+    <string name="share_public_post">Share this public post to...</string>
+    <string name="share_private_post">This is a private post! Share to those who can view them!</string>
     <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
     <string name="updated">Thank you for updating InstaGrabber!</string>
