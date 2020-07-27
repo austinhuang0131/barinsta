@@ -93,7 +93,7 @@
     <string name="dialog_import_success">¡Importado con éxito!</string>
     <string name="dialog_import_failed">¡Falló la importación!</string>
     <string name="dialog_export_success">¡Exportado con éxito!</string>
-    <string name="dialog_export_failed">Failed to export!</string>
+    <string name="dialog_export_failed">¡Falló la exportación!</string>
     <string name="dialog_export_err_password_empty">¡La contraseña está vacía! La contraseña no puede estar vacía, ¡tonto!</string>
     <string name="refresh">Actualizar</string>
     <string name="get_cookies">Obtener cookies</string>
