@@ -65,8 +65,8 @@
     <string name="votef_story_poll">Vote réussi !</string>
     <string name="voted_story_poll">Vous avez déjà voté !</string>
     <string name="priv_acc">Compte privé</string>
-    <string name="no_acc">You can log in via Settings on the bottom-right corner. Or, you can view public accounts without login!</string>
-    <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
+    <string name="no_acc">Vous pouvez vous connecter dans les paramètres situés dans le coin inférieur droit. Vous pouvez visualiser les comptes publics sans vous connecter!</string>
+    <string name="no_acc_logged_in">Vous pouvez glisser vers la gauche/droite pour changer de catégorie, ou rechercher quelque chose ci-dessous!</string>
     <string name="empty_acc">Ce compte ne contient pas de posts</string>
     <string name="empty_list">Aucun post de ce genre !</string>
     <string name="curr_version">Version actuelle : v%s</string>
