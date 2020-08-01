@@ -44,8 +44,8 @@
     <string name="select_language">Wybierz język</string>
     <string name="what_to_do_dialog">Co zrobić?</string>
     <string name="main_posts_count">%s\nPosty</string>
-    <string name="main_posts_followers">%s\nFollowers</string>
-    <string name="main_posts_following">%s\nFollowing</string>
+    <string name="main_posts_followers">%s\nObserwujący</string>
+    <string name="main_posts_following">%s\nObserwuje</string>
     <string name="post_viewer_video_post">Post wideo</string>
     <string name="post_viewer_image_post">Image post</string>
     <string name="post_viewer_autoplay_video">Automatyczne odtwarzanie filmów</string>
@@ -65,7 +65,7 @@
     <string name="votef_story_poll">Vote successful!</string>
     <string name="voted_story_poll">You have already voted!</string>
     <string name="priv_acc">To konto jest prywatne</string>
-    <string name="no_acc">You can log in via Settings on the bottom-right corner. Or, you can view public accounts without login!</string>
+    <string name="no_acc">Możesz zalogować się w ustawieniach w prawym dolnym rogu. Możesz też przeglądać konta publiczne bez logowania!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
     <string name="empty_acc">To konto nie zawiera postów</string>
     <string name="empty_list">No Such Posts!</string>
@@ -85,8 +85,8 @@
     <string name="unlike">Unlike (%s)</string>
     <string name="bookmark">Bookmark</string>
     <string name="unbookmark">Unbookmark</string>
-    <string name="follow">Follow</string>
-    <string name="unfollow">Unfollow</string>
+    <string name="follow">Obserwuj</string>
+    <string name="unfollow">Przestań obserwować</string>
     <string name="favorite_short">Ulubiony</string>
     <string name="unfavorite_short">Unfavorite</string>
     <string name="block">Zablokuj</string>
@@ -168,7 +168,7 @@
     <string name="comment_view_mention_hash_search">Czy chcesz wyszukać przy pomocy hashtag\'a?</string>
     <string name="comment_view_mention_location_search">Czy chcesz przeszukiwać lokalizację?</string>
     <string name="followers_type_followers">Obserwujący</string>
-    <string name="followers_type_following">Following</string>
+    <string name="followers_type_following">Obserwuje</string>
     <string name="followers_compare">Comparing followers &amp; following</string>
     <string name="followers_both_following">Both following each other</string>
     <string name="followers_not_following">not following %s</string>
