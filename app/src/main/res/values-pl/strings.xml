@@ -65,6 +65,8 @@
     <string name="votef_story_poll">Vote successful!</string>
     <string name="voted_story_poll">You have already voted!</string>
     <string name="priv_acc">To konto jest prywatne</string>
+    <string name="no_acc">You can log in via Settings on the bottom-right corner. Or, you can view public accounts without login!</string>
+    <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
     <string name="empty_acc">To konto nie zawiera postów</string>
     <string name="empty_list">No Such Posts!</string>
     <string name="curr_version">Aktualna wersja: v%s</string>
