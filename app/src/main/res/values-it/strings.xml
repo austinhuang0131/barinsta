@@ -65,8 +65,8 @@
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
     <string name="priv_acc">Questo profilo è privato</string>
-    <string name="no_acc">You can log in via Settings on the bottom-right corner. Or, you can view public accounts without login!</string>
-    <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
+    <string name="no_acc">Puoi accedere tramite Impostazioni nell\'angolo in basso a destra. Oppure, puoi visualizzare gli account pubblici senza effettuare il login!</string>
+    <string name="no_acc_logged_in">È possibile scorrere a sinistra/destra per esplorare/feed, o cercare qualcosa qui sotto!</string>
     <string name="empty_acc">Questo profilo non ha post</string>
     <string name="empty_list">Nessun Post Simile!</string>
     <string name="curr_version">Versione corrente: v%s</string>
@@ -79,12 +79,12 @@
     <string name="telegram_link">Unisciti al gruppo Telegram</string>
     <string name="matrix_link">Unisciti alla stanza Matrix</string>
     <string name="liked">Ha messo Like</string>
-    <string name="saved">Salvato</string>
+    <string name="saved">Elementi salvati</string>
     <string name="tagged">Taggato</string>
     <string name="like">Like (%s)</string>
     <string name="unlike">Unlike (%s)</string>
-    <string name="bookmark">Salva segnalibro</string>
-    <string name="unbookmark">Elimina segnalibro</string>
+    <string name="bookmark">Salva elemento</string>
+    <string name="unbookmark">Elimina elemento</string>
     <string name="follow">Segui</string>
     <string name="unfollow">Non seguire</string>
     <string name="favorite_short">Preferito</string>
