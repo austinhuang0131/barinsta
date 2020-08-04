@@ -64,6 +64,10 @@
     <string name="vote_story_poll">Vota</string>
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
+    <string name="answer_story">Answer</string>
+    <string name="answer_hint">Answer...</string>
+    <string name="answered_story">Answer successful!</string>
+    <string name="story_mentions">Mentions</string>
     <string name="priv_acc">Questo profilo è privato</string>
     <string name="no_acc">Puoi accedere tramite Impostazioni nell\'angolo in basso a destra. Oppure, puoi visualizzare gli account pubblici senza effettuare il login!</string>
     <string name="no_acc_logged_in">È possibile scorrere a sinistra/destra per esplorare/feed, o cercare qualcosa qui sotto!</string>
