@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
-        <item>French [Thanks to @kernoeb (Telegram)]</item>
-        <item>Spanish [Thanks to @sguinetti (GitLab)]</item>
-        <item>Chinese Simplified</item>
-        <item>Indonesian [Thanks to @Galang23 (GitLab)]</item>
-        <item>Italian [Thanks to @RAR_Ramar (Telegram)]</item>
-        <item>German [Thanks to @peterge1998 (GitHub)]</item>
-        <item>Polish [Thanks to @Lego8486 (GitHub)]</item>
+        <item>Sistem Varsayılanı</item>
+        <item>İngilizce</item>
+        <item>Fransızca [@kernoeb (Telegram) sayesinde]</item>
+        <item>İspanyolca [@sguinetti (GitLab) sayesinde]</item>
+        <item>Basitleştirilmiş Çince</item>
+        <item>Endonezyaca [@Galang23 (GitLab) sayesinde]</item>
+        <item>İtalyaca [@RAR_Ramar (Telegram) sayesinde]</item>
+        <item>Almanca [@peterge1998 (GitHub) sayesinde]</item>
+        <item>Lehçe [@Lego8486 (GitHub) sayesinde]</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Otomatik / Sistemi Takip Et</item>
+        <item>Otomatik / Bataryayı Takip Et</item>
+        <item>Koyu</item>
+        <item>Açık</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Hiçbiri</item>
         <item>\@</item>
         <item>at</item>
         <item>on</item>
