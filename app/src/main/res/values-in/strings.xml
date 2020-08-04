@@ -70,7 +70,7 @@
     <string name="story_mentions">Sebutan</string>
     <string name="priv_acc">Akun Ini Bersifat Pribadi</string>
     <string name="no_acc">Anda bisa masuk melalui Pengaturan di pojok kanan bawah. Atau anda dapat melihat akun publik tanpa masuk!</string>
-    <string name="no_acc_logged_in">Anda dapat usap ke kiri/kanan untuk jelajah/beranda, atau cari sesuatu di bawah!</string>
+    <string name="no_acc_logged_in">Anda dapat mengusap ke kiri/kanan untuk jelajah/beranda, atau cari sesuatu di bawah!</string>
     <string name="empty_acc">Akun ini tidak memiliki kiriman</string>
     <string name="empty_list">Kiriman tidak ditemukan!</string>
     <string name="curr_version">Versi saat ini: v%s</string>
