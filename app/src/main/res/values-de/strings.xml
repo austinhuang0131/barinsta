@@ -64,8 +64,11 @@
     <string name="vote_story_poll">Abstimmung</string>
     <string name="votef_story_poll">Abstimmung erfolgreich!</string>
     <string name="voted_story_poll">Du hast bereits abgestimmt!</string>
+    <string name="respond_story">Respond</string>
     <string name="answer_hint">Antwort...</string>
     <string name="answered_story">Antwort erfolgreich!</string>
+    <string name="story_quiz">Quiz</string>
+    <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Erwähnungen</string>
     <string name="priv_acc">Dieser Account ist privat</string>
     <string name="no_acc">Du kannst dich über die Einstellungen unten rechts einloggen, oder öffentliche Konten ohne Anmeldung ansehen!</string>
