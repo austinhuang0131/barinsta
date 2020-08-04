@@ -64,8 +64,11 @@
     <string name="vote_story_poll">Pilih</string>
     <string name="votef_story_poll">Berhasil memilih!</string>
     <string name="voted_story_poll">Anda sudah memilih!</string>
+    <string name="respond_story">Respond</string>
     <string name="answer_hint">Jawaban...</string>
     <string name="answered_story">Berhasil menjawab!</string>
+    <string name="story_quiz">Quiz</string>
+    <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Sebutan</string>
     <string name="priv_acc">Akun Ini Bersifat Pribadi</string>
     <string name="no_acc">Anda bisa masuk melalui Pengaturan di pojok kanan bawah. Atau anda dapat melihat akun publik tanpa masuk!</string>
