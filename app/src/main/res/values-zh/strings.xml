@@ -67,7 +67,7 @@
     <string name="respond_story">回复</string>
     <string name="answer_hint">撰写回答…</string>
     <string name="answered_story">回答成功！</string>
-    <string name="story_quiz">测验	#</string>
+    <string name="story_quiz">测验</string>
     <string name="story_quizzed">您已回答过了！</string>
     <string name="story_mentions">提及</string>
     <string name="priv_acc">私密账户</string>
