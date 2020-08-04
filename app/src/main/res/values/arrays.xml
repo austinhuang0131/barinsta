@@ -8,17 +8,15 @@
         <item>Chinese Simplified</item>
         <item>Indonesian [Thanks to @Galang23 (GitLab)]</item>
         <item>Italian [Thanks to @RAR_Ramar (Telegram)]</item>
-        <item>German [Thanks to @MoaufmKlo (GitHub)]</item>
+        <item>German [Thanks to @peterge1998 (GitHub)]</item>
         <item>Polish [Thanks to @Lego8486 (GitHub)]</item>
     </string-array>
-
     <string-array name="theme_presets">
         <item>Auto / Follow System</item>
         <item>Auto / Follow Battery</item>
         <item>Dark</item>
         <item>Light</item>
     </string-array>
-
     <string-array name="separator_presets">
         <item>None</item>
         <item>\@</item>
@@ -27,57 +25,44 @@
         <item>\|</item>
         <item>-</item>
     </string-array>
-
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
         <item>dd/MM/yyyy</item>
         <item>dd.MM.yyyy</item>
-
         <item>dd-MM-yy</item>
         <item>dd/MM/yy</item>
         <item>dd.MM.yy</item>
-
         <item>dd-MMM-yyyy</item>
         <item>dd/MMM/yyyy</item>
         <item>dd.MMM.yyyy</item>
-
         <item>dd-MMM-yy</item>
         <item>dd/MMM/yy</item>
         <item>dd.MMM.yy</item>
-
         <item>MM-dd-yyyy</item>
         <item>MM/dd/yyyy</item>
         <item>MM.dd.yyyy</item>
-
         <item>yyyy-MM-dd</item>
         <item>yyyy/MM/dd</item>
         <item>yyyy.MM.dd</item>
-
         <item>MM-dd-yy</item>
         <item>MM/dd/yy</item>
         <item>MM.dd.yy</item>
-
         <item>yy-MM-dd</item>
         <item>yy/MM/dd</item>
         <item>yy.MM.dd</item>
-
         <item>MMM-dd-yyyy</item>
         <item>MMM/dd/yyyy</item>
         <item>MMM.dd.yyyy</item>
-
         <item>yyyy-MMM-dd</item>
         <item>yyyy/MMM/dd</item>
         <item>yyyy.MMM.dd</item>
-
         <item>MMM-dd-yy</item>
         <item>MMM/dd/yy</item>
         <item>MMM.dd.yy</item>
-
         <item>yy-MMM-dd</item>
         <item>yy/MMM/dd</item>
         <item>yy.MMM.dd</item>
     </string-array>
-
     <string-array name="time_presets">
         <item>hh:mm:ss a</item>
         <item>h:mm:ss a</item>
