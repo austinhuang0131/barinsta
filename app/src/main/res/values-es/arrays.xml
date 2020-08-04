@@ -20,8 +20,8 @@
     <string-array name="separator_presets">
         <item>Ninguno</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>en</item>
+        <item>en</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
