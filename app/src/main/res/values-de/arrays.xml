@@ -3,13 +3,13 @@
     <string-array name="languages">
         <item>Systemstandard</item>
         <item>Englisch</item>
-        <item>Französisch [Dank an @kernoeb (Telegram)]</item>
-        <item>Spanisch [Dank an @sguinetti (GitLab)]</item>
+        <item>Französisch [Danke an @kernoeb (Telegram)]</item>
+        <item>Spanisch [Danke an @sguinetti (GitLab)]</item>
         <item>Chinesisch (Vereinfacht)</item>
-        <item>Indonesisch [Dank an @Galang23 (GitLab)]</item>
-        <item>Italienisch [Dank an @RAR_Ramar (Telegram)]</item>
-        <item>German [Thanks to @MoaufmKlo (GitHub)]</item>
-        <item>Polish [Thanks to @Lego8486 (GitHub)]</item>
+        <item>Indonesisch [Danke an @Galang23 (GitLab)]</item>
+        <item>Italienisch [Danke an @RAR_Ramar (Telegram)]</item>
+        <item>Deutsch [Danke an @MoaufmKlo (GitHub)]</item>
+        <item>Polnisch [Danke an @Lego8486 (GitHub)]</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Folge System</item>
