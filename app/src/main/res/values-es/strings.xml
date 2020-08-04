@@ -119,7 +119,7 @@
     <string name="time_settings_title_time_format">Formato de tiempo</string>
     <string name="time_settings_title_date_format">Formato de fecha</string>
     <string name="time_settings_title_preview">Previsualizar</string>
-    <string name="time_settings_swap_time">Intercambiar posiciones de fecha y hora</string>
+    <string name="time_settings_swap_time">Intercambiar posiciones\nde fecha y hora</string>
     <string name="quick_access_info_dialog">El panel de favoritos es para añadir tus hashtags y/o nombres de usuario favoritos.\n\nY el panel de acceso rápido es para cambiar rápidamente entre cuentas. \n\nNota 1: Asegúrate de acceder a cada cuenta [Ajustes &gt; Ingreso] para añadir una cuenta a la lista. \n\nNota 2: Sal de la cuenta actual y luego accede a la otra cuenta. Si varias cuentas no funcionan para ti, no hay nada que podamos hacer con los dos.</string>
     <string name="quick_access_cannot_delete_curr">No se puede borrar la cuenta actualmente en uso account</string>
     <string name="quick_access_confirm_delete">¿Estás seguro de que quieres borrar %s?</string>
