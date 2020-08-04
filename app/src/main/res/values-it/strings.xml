@@ -64,8 +64,8 @@
     <string name="vote_story_poll">Vota</string>
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
-    <string name="answer_story">Answer</string>
-    <string name="answer_hint">Answer...</string>
+    <string name="answer_story">Rispondi</string>
+    <string name="answer_hint">Rispondi...</string>
     <string name="answered_story">Answer successful!</string>
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">Questo profilo è privato</string>
