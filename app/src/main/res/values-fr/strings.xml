@@ -64,8 +64,11 @@
     <string name="vote_story_poll">Vote</string>
     <string name="votef_story_poll">Vote réussi !</string>
     <string name="voted_story_poll">Vous avez déjà voté !</string>
+    <string name="respond_story">Répondre</string>
     <string name="answer_hint">Réponse...</string>
     <string name="answered_story">Réponse envoyée !</string>
+    <string name="story_quiz">Quiz</string>
+    <string name="story_quizzed">Vous avez déjà répondu !</string>
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">Compte privé</string>
     <string name="no_acc">Vous pouvez vous connecter dans les paramètres situés dans le coin inférieur droit. Vous pouvez visualiser les comptes publics sans vous connecter!</string>
