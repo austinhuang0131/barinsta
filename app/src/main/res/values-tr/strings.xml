@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="description">The original maintainer, AWAiS, made InstaGrabber as a small and basic little personal app with intentions of [steali-]downloading posts off Instagram. Very unfortunately, this was abandoned and me, Austin Huang, took over the ship. [Let\'s hope that\'s at least a lil\' bit cash money.] After all, this app is fully open source, ad-less, and tracking-less [aside from what Instagram knows]. Even if you don\'t care about downloading stuff [like me], it\'s still a great Instagram client to use!\n\nGot questions [or just wanna talk]? Contact instagrabber@austinhuang.me or click one of the buttons below.</string>
-    <string name="action_quickaccess">Quick Access</string>
+    <string name="action_quickaccess">Hızlı Erişim</string>
     <string name="action_about">Hakkında</string>
     <string name="action_notif">Bildirimler</string>
     <string name="action_dms">Direkt Mesajlar</string>
@@ -28,10 +28,10 @@
     <string name="title_discover">Keşfet</string>
     <string name="title_comments">Yorumlar</string>
     <string name="title_notifications">Bildirimler</string>
-    <string name="title_highlight">Highlight: %s</string>
-    <string name="title_user_story">User Story</string>
+    <string name="title_highlight">Öne çıkarılanlar: %s</string>
+    <string name="title_user_story">Kullanıcı Hikayesi</string>
     <string name="title_changelog">Güncelleme Notları</string>
-    <string name="bottom_toolbar">Show toolbar at bottom</string>
+    <string name="bottom_toolbar">Araç çubuğunu aşağıda göster</string>
     <string name="download_user_folder">Download posts to username folder in Downloads</string>
     <string name="autoload_posts">Auto-load all posts from user</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
@@ -46,13 +46,13 @@
     <string name="main_posts_count">%s\nGönderi</string>
     <string name="main_posts_followers">%s\nTakipçi</string>
     <string name="main_posts_following">%s\nTakip</string>
-    <string name="post_viewer_video_post">Video post</string>
-    <string name="post_viewer_image_post">Image post</string>
+    <string name="post_viewer_video_post">Videolu gönderi</string>
+    <string name="post_viewer_image_post">Resimli gönderi</string>
     <string name="post_viewer_autoplay_video">Videoları otomatik oynat</string>
     <string name="post_viewer_muted_autoplay">Videoları her zaman sustur</string>
     <string name="post_viewer_post_from">%s - %s</string>
     <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Note: Current [Session] won\'t show this dialog until you\'re here, and will always download shown post slide.</string>
-    <string name="post_viewer_download_dialog_title">Select what to download</string>
+    <string name="post_viewer_download_dialog_title">İndirmek için seçin</string>
     <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Current [Session]</string>
     <string name="post_viewer_download_current">Current</string>
     <string name="post_viewer_download_album">Whole Album</string>
@@ -61,16 +61,16 @@
     <string name="view_story_post">View Post</string>
     <string name="view_post">View Post</string>
     <string name="spotify">Spotify</string>
-    <string name="vote_story_poll">Vote</string>
-    <string name="votef_story_poll">Vote successful!</string>
-    <string name="voted_story_poll">You have already voted!</string>
-    <string name="respond_story">Respond</string>
-    <string name="answer_hint">Answer...</string>
-    <string name="answered_story">Answer successful!</string>
+    <string name="vote_story_poll">Oyla</string>
+    <string name="votef_story_poll">Oylama başarılı!</string>
+    <string name="voted_story_poll">Zaten oy verdiniz!</string>
+    <string name="respond_story">Yanıt ver</string>
+    <string name="answer_hint">Cevapla...</string>
+    <string name="answered_story">Cevaplama başarılı!</string>
     <string name="story_quiz">Quiz</string>
-    <string name="story_quizzed">You have already answered!</string>
-    <string name="story_mentions">Mentions</string>
-    <string name="priv_acc">This Account is Private</string>
+    <string name="story_quizzed">Zaten cevapladınız!</string>
+    <string name="story_mentions">Etiketlenenler</string>
+    <string name="priv_acc">Bu Hesap Gizlidir</string>
     <string name="no_acc">You can log in via Settings on the bottom-right corner. Or, you can view public accounts without login!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
     <string name="empty_acc">This Account has No Posts</string>
