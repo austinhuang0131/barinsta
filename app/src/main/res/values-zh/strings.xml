@@ -64,11 +64,11 @@
     <string name="vote_story_poll">投票</string>
     <string name="votef_story_poll">投票成功！</string>
     <string name="voted_story_poll">您已投票过了！</string>
-    <string name="respond_story">Respond</string>
+    <string name="respond_story">回复</string>
     <string name="answer_hint">撰写回答…</string>
     <string name="answered_story">回答成功！</string>
-    <string name="story_quiz">Quiz</string>
-    <string name="story_quizzed">You have already answered!</string>
+    <string name="story_quiz">测验	#</string>
+    <string name="story_quizzed">您已回答过了！</string>
     <string name="story_mentions">提及</string>
     <string name="priv_acc">私密账户</string>
     <string name="no_acc">您可以通过右下角的设定来登录。注意，您无需登录即可查看公开账户！</string>
