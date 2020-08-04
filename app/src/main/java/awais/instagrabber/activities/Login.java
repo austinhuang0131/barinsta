@@ -33,7 +33,7 @@ public final class Login extends BaseLanguageActivity implements View.OnClickLis
         public void onPageFinished(final WebView view, final String url) {
             webViewUrl = url;
             final String mainCookie = Utils.getCookie(url);
-            if (!mainCookie.contains("; ds_user_id=")) ready = true;
+            if (Utils.isEmpty(mainCookie) || !mainCookie.contains("; ds_user_id=")) ready = true;
             else if (mainCookie.contains("; ds_user_id=") && ready) {
                 Utils.setupCookies(mainCookie);
                 settingsHelper.putString(Constants.COOKIE, mainCookie);

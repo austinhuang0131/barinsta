@@ -50,6 +50,7 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
     private final String cookie = Utils.settingsHelper.getString(Constants.COOKIE);
     private Resources resources;
     private InputMethodManager imm;
+    private View focus;
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -122,7 +123,8 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
         } else if (which == 3) {
             Utils.copyText(this, commentModel.getText().toString());
         } else if (which == 4) {
-            commentsBinding.rvComments.findViewWithTag(commentModel).setBackgroundColor(0x80888888);
+            focus = commentsBinding.rvComments.findViewWithTag(commentModel);
+            focus.setBackgroundColor(0x80888888);
             commentsBinding.commentCancelParent.setVisibility(View.VISIBLE);
             String mention = "@"+profileModel.getUsername()+" ";
             commentsBinding.commentText.setText(mention);
@@ -200,10 +202,11 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
             Toast.makeText(getApplicationContext(), R.string.comment_send_empty_comment, Toast.LENGTH_SHORT).show();
         else if (v == commentsBinding.commentSend) new CommentAction().execute("add");
         else if (v == commentsBinding.commentCancelParent) {
-            commentsBinding.rvComments.findViewWithTag(commentModel).setBackgroundColor(commentModel.getLiked() ? 0x40FF69B4 : 0x00000000);
+            focus.setBackgroundColor(commentModel.getLiked() ? 0x40FF69B4 : 0x00000000);
             commentsBinding.commentCancelParent.setVisibility(View.GONE);
             commentsBinding.commentText.setText("");
             commentModel = null;
+            focus = null;
         }
     };
 
@@ -287,9 +290,11 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
         @Override
         protected void onPostExecute(Void result) {
             if (ok == true) {
-                if (commentModel != null) {
-                    commentsBinding.rvComments.findViewWithTag(commentModel).setBackgroundColor(commentModel.getLiked() ? 0x40FF69B4 : 0x00000000);
+                if (focus != null) {
+                    focus.setBackgroundColor(commentModel.getLiked() ? 0x40FF69B4 : 0x00000000);
                     commentsBinding.commentCancelParent.setVisibility(View.GONE);
+                    commentModel = null;
+                    focus = null;
                 }
 
                 //imm.hideSoftInputFromWindow(commentsBinding.getView().getRootView().getWindowToken(), 0);

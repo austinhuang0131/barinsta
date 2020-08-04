@@ -1,4 +1,4 @@
-package awais.instagrabber.models;
+package awais.instagrabber.models.stickers;
 
 import java.io.Serializable;
 

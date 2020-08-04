@@ -3,13 +3,19 @@ package awais.instagrabber.models;
 import java.io.Serializable;
 
 import awais.instagrabber.models.enums.MediaItemType;
+import awais.instagrabber.models.stickers.PollModel;
+import awais.instagrabber.models.stickers.QuestionModel;
+import awais.instagrabber.models.stickers.QuizModel;
 
 public final class StoryModel implements Serializable {
     private final String storyMediaId, storyUrl, username;
     private final MediaItemType itemType;
     private final long timestamp;
-    private String videoUrl, tappableShortCode, spotify;
+    private String videoUrl, tappableShortCode, tappableId, spotify;
     private PollModel poll;
+    private QuestionModel question;
+    private QuizModel quiz;
+    private String[] mentions;
     private int position;
     private boolean isCurrentSlide = false;
 
@@ -49,6 +55,18 @@ public final class StoryModel implements Serializable {
         return poll;
     }
 
+    public QuestionModel getQuestion() {
+        return question;
+    }
+
+    public QuizModel getQuiz() {
+        return quiz;
+    }
+
+    public String[] getMentions() {
+        return mentions;
+    }
+
     public int getPosition() {
         return position;
     }
@@ -71,6 +89,18 @@ public final class StoryModel implements Serializable {
 
     public void setPoll(final PollModel poll) {
         this.poll = poll;
+    }
+
+    public void setQuestion(final QuestionModel question) {
+        this.question = question;
+    }
+
+    public void setQuiz(final QuizModel quiz) {
+        this.quiz = quiz;
+    }
+
+    public void setMentions(final String[] mentions) {
+        this.mentions = mentions;
     }
 
     public void setPosition(final int position) {

@@ -93,7 +93,7 @@ public final class FeedAdapter extends RecyclerView.Adapter<FeedItemViewHolder> 
                         case R.id.viewStoryPost:
                             activity.startActivity(new Intent(activity, PostViewer.class)
                                     .putExtra(Constants.EXTRAS_INDEX, feedModel.getPosition())
-                                    .putExtra(Constants.EXTRAS_POST, new PostModel(feedModel.getShortCode()))
+                                    .putExtra(Constants.EXTRAS_POST, new PostModel(feedModel.getShortCode(), false))
                                     .putExtra(Constants.EXTRAS_TYPE, ItemGetType.FEED_ITEMS));
                             break;
 
@@ -210,15 +210,9 @@ public final class FeedAdapter extends RecyclerView.Adapter<FeedItemViewHolder> 
             final long commentsCount = feedModel.getCommentsCount();
             viewHolder.commentsCount.setText(String.valueOf(commentsCount));
 
-            if (commentsCount <= 0) {
-                viewHolder.btnComments.setTag(null);
-                viewHolder.btnComments.setOnClickListener(null);
-                viewHolder.btnComments.setEnabled(false);
-            } else {
-                viewHolder.btnComments.setTag(feedModel);
-                viewHolder.btnComments.setOnClickListener(clickListener);
-                viewHolder.btnComments.setEnabled(true);
-            }
+            viewHolder.btnComments.setTag(feedModel);
+            viewHolder.btnComments.setOnClickListener(clickListener);
+            viewHolder.btnComments.setEnabled(true);
 
             final JSONObject location = feedModel.getLocation();
 
@@ -234,6 +228,12 @@ public final class FeedAdapter extends RecyclerView.Adapter<FeedItemViewHolder> 
                 viewHolder.username.setLayoutParams(new RelativeLayout.LayoutParams(
                         RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT
                 ));
+                viewHolder.location.setOnClickListener(v ->
+                        new AlertDialog.Builder(v.getContext()).setTitle(location.optString("name"))
+                                .setMessage(R.string.comment_view_mention_location_search)
+                                .setNegativeButton(R.string.cancel, null).setPositiveButton(R.string.ok,
+                                (dialog, which) -> mentionClickListener.onClick(null, location.optString("id")+"/"+location.optString("slug"), false)).show()
+                );
             }
 
             final String thumbnailUrl = feedModel.getThumbnailUrl();

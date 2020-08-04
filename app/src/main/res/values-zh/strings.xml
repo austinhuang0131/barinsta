@@ -191,4 +191,10 @@
     <string name="updated">感谢阁下更新InstaGrabber！</string>
     <string name="crash_title">应用崩溃了</string>
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
+    <string name="respond_story">回答</string>
+    <string name="answer_hint">在此回答...</string>
+    <string name="answered_story">回答完成！</string>
+    <string name="story_mentions">提及</string>
+    <string name="story_quiz">测验</string>
+    <string name="story_quizzed">您已回答！</string>
 </resources>

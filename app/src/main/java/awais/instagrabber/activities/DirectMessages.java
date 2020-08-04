@@ -48,7 +48,7 @@ public final class DirectMessages extends BaseLanguageActivity implements SwipeR
                 // todo get request / unseen count from inboxModel
 
                 final InboxThreadModel[] threads = inboxModel.getThreads();
-                if (threads != null) {
+                if (threads != null && threads.length > 0) {
                     final int oldSize = inboxThreadModelList.size();
                     inboxThreadModelList.addAll(Arrays.asList(threads));
 

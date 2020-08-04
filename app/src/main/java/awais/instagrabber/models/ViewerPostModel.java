@@ -7,7 +7,7 @@ public final class ViewerPostModel extends BasePostModel {
     protected final String username;
     protected final JSONObject location;
     protected final long videoViews;
-    protected String sliderDisplayUrl, commentsEndCursor;
+    protected String sliderDisplayUrl;
     protected long commentsCount, likes;
     private boolean isCurrentSlide = false;
 
@@ -44,10 +44,6 @@ public final class ViewerPostModel extends BasePostModel {
         return location;
     }
 
-    public String getCommentsEndCursor() {
-        return commentsEndCursor;
-    }
-
     public final long getVideoViews() {
         return videoViews;
     }
@@ -69,10 +65,6 @@ public final class ViewerPostModel extends BasePostModel {
 
     public void setCommentsCount(final long commentsCount) {
         this.commentsCount = commentsCount;
-    }
-
-    public void setCommentsEndCursor(final String commentsEndCursor) {
-        this.commentsEndCursor = commentsEndCursor;
     }
 
     public void setCurrentSlide(final boolean currentSlide) {

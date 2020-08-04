@@ -47,7 +47,7 @@ public final class ProfileFetcher extends AsyncTask<Void, Void, ProfileModel> {
                 final JSONObject timelineMedia = user.getJSONObject("edge_owner_to_timeline_media");
                 if (timelineMedia.has("edges")) {
                     final JSONArray edges = timelineMedia.getJSONArray("edges");
-                    if (edges.length() > 0) reallyPrivate = false;
+                    if (edges.length() > 0 || timelineMedia.getLong("count") == 0L) reallyPrivate = false;
                 }
 
                 String url = user.optString("external_url");

@@ -7,8 +7,9 @@ public class PostModel extends BasePostModel {
     protected String endCursor;
     protected boolean hasNextPage;
 
-    public PostModel(final String shortCode) {
-        this.shortCode = shortCode;
+    public PostModel(final String shortCode, final boolean isid) {
+        if (!isid) this.shortCode = shortCode;
+        else this.postId = shortCode;
         this.thumbnailUrl = null;
     }
 

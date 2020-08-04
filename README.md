@@ -6,6 +6,7 @@ InstaGrabber is an app that allows...
 
 * Viewing **and downloading** Instagram posts (including tagged, and your own saved posts\*), stories (including highlights)\*, DM\*, and profile pictures, **without** letting people know you viewed it<sup>1</sup>! Works for followed private accounts\*!
 * Like/bookmark posts\*!
+* Interact with stories\*!
 * Downloading multiple posts at once (hold & select)!
 * (Un)follow/restrict/block people\*, and (un)follow hashtags\*! (Or you can add shortcuts to them, without logging in!)
 * **View, copy, like\*, reply\*, & delete\*** comments!
@@ -28,13 +29,9 @@ This app is originally made by [@AwaisKing](https://github.com/AwaisKing) who po
 
 ### Download
 
-Download [here](https://github.com/austinhuang0131/instagrabber/releases). Under each release is an `app-release.apk` for installation.
-
-Not compatible with pre-16.6 versions (including alpha).
+Download [here](https://github.com/austinhuang0131/instagrabber/releases). ALWAYS download the latest version.
 
 [F-droid pending.](https://gitlab.com/fdroid/rfp/-/issues/1432)
-
-Remember to read the [wiki](https://github.com/austinhuang0131/instagrabber/wiki) for more info!
 
 [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
@@ -44,20 +41,7 @@ Remember to read the [wiki](https://github.com/austinhuang0131/instagrabber/wiki
 [![LGTM Grade](https://img.shields.io/lgtm/grade/java/github/austinhuang0131/instagrabber)](https://lgtm.com/projects/g/austinhuang0131/instagrabber)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/f87cac1fbf674888b00bd91bc5eccce0)](https://app.codacy.com/manual/austinhuang0131/instagrabber)
 [![Crowdin](https://badges.crowdin.net/instagrabber/localized.svg)](https://github.com/austinhuang0131/instagrabber/wiki/Contribute)
-[![GitHub stars](https://img.shields.io/github/stars/austinhuang0131/instagrabber.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/austinhuang0131/instagrabber/stargazers/)
-
-### How to log in
-
-By logging in, you can access posts/stories from private accounts, as well as your direct messages.
-
-The relevant source code is [here](https://github.com/austinhuang0131/instagrabber/blob/master/app/src/main/java/awais/instagrabber/activities/Login.java) should you be concerned.
-
-1. Click the 3 dots on the bottom right corner.
-2. Click "Settings".
-3. Scroll down, click the green button called "Login".
-4. Login as usual. Use "Refresh" when needed.
-5. When you see your feed page, click "Get cookies".
-6. Test it by checking your direct messages. If it loads, it works!
+[![GitHub stars](https://img.shields.io/github/stars/austinhuang0131/instagrabber.svg?style=social&label=Star)](https://GitHub.com/austinhuang0131/instagrabber/stargazers/)
 
 ### Contact us
 

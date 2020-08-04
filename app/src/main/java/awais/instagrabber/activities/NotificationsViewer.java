@@ -92,7 +92,7 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
             searchUsername(notificationModel.getUsername());
         else if (which == 1)
             startActivity(new Intent(getApplicationContext(), PostViewer.class)
-                    .putExtra(Constants.EXTRAS_POST, new PostModel(notificationModel.getShortcode())));
+                    .putExtra(Constants.EXTRAS_POST, new PostModel(notificationModel.getShortcode(), false)));
     };
 
     private final View.OnClickListener clickListener = v -> {

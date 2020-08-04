@@ -10,12 +10,15 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
+import android.text.InputType;
 import android.util.Log;
 import android.util.Pair;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -43,16 +46,23 @@ import java.io.File;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.net.URLEncoder;
+import java.util.UUID;
+
+import org.json.JSONObject;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
 import awais.instagrabber.adapters.StoriesAdapter;
 import awais.instagrabber.asyncs.DownloadAsync;
+import awais.instagrabber.asyncs.i.iStoryStatusFetcher;
 import awais.instagrabber.customviews.helpers.SwipeGestureListener;
 import awais.instagrabber.databinding.ActivityStoryViewerBinding;
 import awais.instagrabber.interfaces.SwipeEvent;
 import awais.instagrabber.models.FeedStoryModel;
-import awais.instagrabber.models.PollModel;
+import awais.instagrabber.models.stickers.PollModel;
+import awais.instagrabber.models.stickers.QuestionModel;
+import awais.instagrabber.models.stickers.QuizModel;
 import awais.instagrabber.models.PostModel;
 import awais.instagrabber.models.StoryModel;
 import awais.instagrabber.models.enums.MediaItemType;
@@ -86,6 +96,9 @@ public final class StoryViewer extends BaseLanguageActivity {
     private SwipeEvent swipeEvent;
     private MenuItem menuDownload;
     private PollModel poll;
+    private QuestionModel question;
+    private String[] mentions;
+    private QuizModel quiz;
     private StoryModel currentStory;
     private String url, username;
     private int slidePos = 0, lastSlidePos = 0;
@@ -140,14 +153,18 @@ public final class StoryViewer extends BaseLanguageActivity {
                                     (index == 0 ? null : storyFeed[index - 1]) :
                                     (storyFeed.length == index + 1 ? null : storyFeed[index + 1]);
                             if (feedStoryModel != null) {
-                                final StoryModel[] nextStoryModels = feedStoryModel.getStoryModels();
-                                final Intent newIntent = new Intent(getApplicationContext(), StoryViewer.class)
-                                        .putExtra(Constants.EXTRAS_STORIES, nextStoryModels)
-                                        .putExtra(Constants.EXTRAS_USERNAME, feedStoryModel.getProfileModel().getUsername())
-                                        .putExtra(Constants.FEED, storyFeed)
-                                        .putExtra(Constants.FEED_ORDER, isRightSwipe ? (index - 1) : (index + 1));
-                                newIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                                startActivity(newIntent);
+                                new iStoryStatusFetcher(feedStoryModel.getStoryMediaId(), null, false, false, result -> {
+                                    if (result != null && result.length > 0) {
+                                        final Intent newIntent = new Intent(getApplicationContext(), StoryViewer.class)
+                                                .putExtra(Constants.EXTRAS_STORIES, result)
+                                                .putExtra(Constants.EXTRAS_USERNAME, feedStoryModel.getProfileModel().getUsername())
+                                                .putExtra(Constants.FEED, storyFeed)
+                                                .putExtra(Constants.FEED_ORDER, isRightSwipe ? (index - 1) : (index + 1));
+                                        newIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                                        startActivity(newIntent);
+                                    }
+                                    else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+                                }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                             }
                         }
                     }
@@ -206,10 +223,10 @@ public final class StoryViewer extends BaseLanguageActivity {
         storyViewerBinding.viewStoryPost.setOnClickListener(v -> {
             final Object tag = v.getTag();
             if (tag instanceof CharSequence) startActivity(new Intent(this, PostViewer.class)
-                    .putExtra(Constants.EXTRAS_POST, new PostModel(tag.toString())));
+                    .putExtra(Constants.EXTRAS_POST, new PostModel(tag.toString(), tag.toString().matches("^[\\d]+$"))));
         });
 
-        storyViewerBinding.interactStory.setOnClickListener(v -> {
+        final View.OnClickListener storyActionListener = v -> {
             final Object tag = v.getTag();
             if (tag instanceof PollModel) {
                 poll = (PollModel) tag;
@@ -231,7 +248,46 @@ public final class StoryViewer extends BaseLanguageActivity {
                         .setPositiveButton(R.string.cancel, null)
                         .show();
             }
-        });
+            else if (tag instanceof QuestionModel) {
+                question = (QuestionModel) tag;
+                final EditText input = new EditText(this);
+                input.setHint(R.string.answer_hint);
+                new AlertDialog.Builder(this).setTitle(question.getQuestion())
+                        .setView(input)
+                        .setPositiveButton(R.string.ok, (d,w) -> {
+                            new RespondAction().execute(input.getText().toString());
+                        })
+                        .setNegativeButton(R.string.cancel, null)
+                        .show();
+            }
+            else if (tag instanceof String[]) {
+                mentions = (String[]) tag;
+                new AlertDialog.Builder(this).setTitle(R.string.story_mentions)
+                        .setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, mentions), (d,w) -> {
+                            searchUsername(mentions[w]);
+                        })
+                        .setPositiveButton(R.string.cancel, null)
+                        .show();
+            }
+            else if (tag instanceof QuizModel) {
+                quiz = (QuizModel) quiz;
+                String[] choices = new String[quiz.getChoices().length];
+                for (int q = 0; q < choices.length; ++q) {
+                    choices[q] = (quiz.getMyChoice() == q ? "√ " :"") + quiz.getChoices()[q]+ " (" + String.valueOf(quiz.getCounts()[q]) + ")";
+                }
+                new AlertDialog.Builder(this).setTitle(quiz.getMyChoice() > -1 ? getString(R.string.story_quizzed) : quiz.getQuestion())
+                        .setAdapter(new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, choices), (d,w) -> {
+                            if (quiz.getMyChoice() == -1) new QuizAction().execute(w);
+                        })
+                        .setPositiveButton(R.string.cancel, null)
+                        .show();
+            }
+        };
+
+        storyViewerBinding.poll.setOnClickListener(storyActionListener);
+        storyViewerBinding.answer.setOnClickListener(storyActionListener);
+        storyViewerBinding.mention.setOnClickListener(storyActionListener);
+        storyViewerBinding.quiz.setOnClickListener(storyActionListener);
 
         storiesAdapter.setData(storyModels);
         if (storyModels.length > 1) storyViewerBinding.storiesList.setVisibility(View.VISIBLE);
@@ -410,10 +466,21 @@ public final class StoryViewer extends BaseLanguageActivity {
         storyViewerBinding.spotify.setVisibility(spotify != null ? View.VISIBLE : View.GONE);
         storyViewerBinding.spotify.setTag(spotify);
 
-        final PollModel poll = currentStory.getPoll();
-        storyViewerBinding.interactStory.setVisibility(poll != null ? View.VISIBLE : View.GONE);
-        storyViewerBinding.interactStory.setText(R.string.vote_story_poll);
-        storyViewerBinding.interactStory.setTag(poll);
+        poll = currentStory.getPoll();
+        storyViewerBinding.poll.setVisibility(poll != null ? View.VISIBLE : View.GONE);
+        storyViewerBinding.poll.setTag(poll);
+
+        question = currentStory.getQuestion();
+        storyViewerBinding.answer.setVisibility(question != null ? View.VISIBLE : View.GONE);
+        storyViewerBinding.answer.setTag(question);
+
+        mentions = currentStory.getMentions();
+        storyViewerBinding.mention.setVisibility((mentions != null && mentions.length > 0) ? View.VISIBLE : View.GONE);
+        storyViewerBinding.mention.setTag(mentions);
+
+        quiz = currentStory.getQuiz();
+        storyViewerBinding.quiz.setVisibility((quiz != null && mentions.length > 0) ? View.VISIBLE : View.GONE);
+        storyViewerBinding.quiz.setTag(quiz);
 
         releasePlayer();
         final Intent intent = getIntent();
@@ -494,6 +561,105 @@ public final class StoryViewer extends BaseLanguageActivity {
             if (ok > -1) {
                 poll.setMyChoice(ok);
                 Toast.makeText(getApplicationContext(), R.string.votef_story_poll, Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    class QuizAction extends AsyncTask<Integer, Void, Void> {
+        int ok = -1;
+        String action;
+
+        protected Void doInBackground(Integer... rawchoice) {
+            int choice = rawchoice[0];
+            final String cookie = settingsHelper.getString(Constants.COOKIE);
+            final String url = "https://i.instagram.com/api/v1/media/"+currentStory.getStoryMediaId()+"/"+quiz.getId()+"/story_quiz_answer/";
+            try {
+                JSONObject ogbody = new JSONObject("{\"client_context\":\"" + UUID.randomUUID().toString()
+                        +"\",\"mutation_token\":\"" + UUID.randomUUID().toString()
+                        +"\",\"_csrftoken\":\"" + cookie.split("csrftoken=")[1].split(";")[0]
+                        +"\",\"_uid\":\"" + Utils.getUserIdFromCookie(cookie)
+                        +"\",\"__uuid\":\"" + settingsHelper.getString(Constants.DEVICE_UUID)
+                        +"\"}");
+                ogbody.put("answer", String.valueOf(choice));
+                String urlParameters = Utils.sign(ogbody.toString());
+                final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setUseCaches(false);
+                urlConnection.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
+                urlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                urlConnection.setRequestProperty("Content-Length", Integer.toString(urlParameters.getBytes().length));
+                urlConnection.setDoOutput(true);
+                DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+                wr.writeBytes(urlParameters);
+                wr.flush();
+                wr.close();
+                Log.d("austin_debug", "quiz: "+url+" "+cookie+" "+urlParameters);
+                urlConnection.connect();
+                if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                    ok = choice;
+                }
+                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+                urlConnection.disconnect();
+            } catch (Throwable ex) {
+                Log.e("austin_debug", "quiz: " + ex);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            if (ok > -1) {
+                quiz.setMyChoice(ok);
+                Toast.makeText(getApplicationContext(), R.string.answered_story, Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    class RespondAction extends AsyncTask<String, Void, Void> {
+        boolean ok = false;
+        String action;
+
+        protected Void doInBackground(String... rawchoice) {
+            final String cookie = settingsHelper.getString(Constants.COOKIE);
+            final String url = "https://i.instagram.com/api/v1/media/"
+                    +currentStory.getStoryMediaId()+"/"+question.getId()+"/story_question_response/";
+            try {
+                JSONObject ogbody = new JSONObject("{\"client_context\":\"" + UUID.randomUUID().toString()
+                        +"\",\"mutation_token\":\"" + UUID.randomUUID().toString()
+                        +"\",\"_csrftoken\":\"" + cookie.split("csrftoken=")[1].split(";")[0]
+                        +"\",\"_uid\":\"" + Utils.getUserIdFromCookie(cookie)
+                        +"\",\"__uuid\":\"" + settingsHelper.getString(Constants.DEVICE_UUID)
+                        +"\"}");
+                String choice = rawchoice[0].replaceAll("\"", ("\\\""));
+                ogbody.put("response", choice);
+                String urlParameters = Utils.sign(ogbody.toString());
+                final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setUseCaches(false);
+                urlConnection.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
+                urlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                urlConnection.setRequestProperty("Content-Length", Integer.toString(urlParameters.getBytes().length));
+                urlConnection.setDoOutput(true);
+                DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+                wr.writeBytes(urlParameters);
+                wr.flush();
+                wr.close();
+                urlConnection.connect();
+                if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                    ok = true;
+                }
+                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+                urlConnection.disconnect();
+            } catch (Throwable ex) {
+                Log.e("austin_debug", "respond: " + ex);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            if (ok) {
+                Toast.makeText(getApplicationContext(), R.string.answered_story, Toast.LENGTH_SHORT).show();
             }
         }
     }

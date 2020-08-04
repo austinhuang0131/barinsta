@@ -110,7 +110,7 @@ public final class DirectMessagesUserInbox extends AppCompatActivity {
                 switch (itemType) {
                     case MEDIA_SHARE:
                         startActivity(new Intent(this, PostViewer.class)
-                                .putExtra(Constants.EXTRAS_POST, new PostModel(directItemModel.getMediaModel().getCode())));
+                                .putExtra(Constants.EXTRAS_POST, new PostModel(directItemModel.getMediaModel().getCode(), false)));
                         break;
                     case LINK:
                         Intent linkIntent = new Intent(Intent.ACTION_VIEW);

@@ -12,8 +12,8 @@ android {
         // REMEMBER TO CHANGE versionCode AS WELL
         // 16.7 is 32, 16.9 is 35 (34 is public beta)
 
-        versionCode 36
-        versionName '17.0'
+        versionCode 38
+        versionName '17.2'
 
         multiDexEnabled true
 

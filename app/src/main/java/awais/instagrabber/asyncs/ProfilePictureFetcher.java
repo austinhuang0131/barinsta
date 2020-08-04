@@ -5,6 +5,10 @@ import android.util.Log;
 import android.util.Pair;
 
 import org.json.JSONObject;
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -33,11 +37,11 @@ public final class ProfilePictureFetcher extends AsyncTask<Void, Void, String> {
 
     @Override
     protected String doInBackground(final Void... voids) {
-        String out = picUrl;
-        if (!isHashtag) try {
-            final String url = "https://i.instagram.com/api/v1/users/"+userId+"/info/";
-
-            final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
+        String out = null;
+        if (isHashtag) out = picUrl;
+        else try {
+            final HttpURLConnection conn =
+                    (HttpURLConnection) new URL("https://i.instagram.com/api/v1/users/"+userId+"/info/").openConnection();
             conn.setUseCaches(false);
             conn.setRequestMethod("GET");
             conn.setRequestProperty("User-Agent", Constants.USER_AGENT);
@@ -50,13 +54,45 @@ public final class ProfilePictureFetcher extends AsyncTask<Void, Void, String> {
                 if (data.has("hd_profile_pic_url_info"))
                     out = data.getJSONObject("hd_profile_pic_url_info").optString("url");
             }
+
+            if (Utils.isEmpty(out)) {
+                final HttpURLConnection backup =
+                        (HttpURLConnection) new URL("https://instadp.com/fullsize/" + userName).openConnection();
+                backup.setUseCaches(false);
+                backup.setRequestMethod("GET");
+
+                final String instadp = backup.getResponseCode() == HttpURLConnection.HTTP_OK ? Utils.readFromConnection(backup) : null;
+                backup.disconnect();
+
+                if (!Utils.isEmpty(instadp)) {
+                    final Document doc = Jsoup.parse(instadp);
+                    boolean fallback = false;
+
+                    final int imgIndex = instadp.indexOf("preloadImg('"), lastIndex;
+
+                    Element element = doc.selectFirst(".instadp");
+                    if (element != null && (element = element.selectFirst(".picture")) != null)
+                        out = element.attr("src");
+                    else if ((element = doc.selectFirst(".download-btn")) != null)
+                        out = element.attr("href");
+                    else if (imgIndex != -1 && (lastIndex = instadp.indexOf("')", imgIndex)) != -1)
+                        out = instadp.substring(imgIndex + 12, lastIndex);
+                    else {
+                        final Elements imgs = doc.getElementsByTag("img");
+                        for (final Element img : imgs) {
+                            final String imgStr = img.toString();
+                            if (imgStr.contains("cdninstagram.com")) out = img.attr("src");
+                        }
+                    }
+                }
+                if (out == null) out = picUrl;
+            }
         } catch (final Exception e) {
             if (logCollector != null)
                 logCollector.appendException(e, LogCollector.LogFile.ASYNC_PROFILE_PICTURE_FETCHER, "doInBackground");
             if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
         }
 
-        if (out == null) out = picUrl;
         return out;
     }
 

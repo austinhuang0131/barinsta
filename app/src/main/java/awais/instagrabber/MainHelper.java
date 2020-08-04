@@ -60,7 +60,7 @@ import awais.instagrabber.asyncs.HighlightsFetcher;
 import awais.instagrabber.asyncs.LocationFetcher;
 import awais.instagrabber.asyncs.PostsFetcher;
 import awais.instagrabber.asyncs.ProfileFetcher;
-import awais.instagrabber.asyncs.StoryStatusFetcher;
+import awais.instagrabber.asyncs.i.iStoryStatusFetcher;
 import awais.instagrabber.customviews.MouseDrawer;
 import awais.instagrabber.customviews.RamboTextView;
 import awais.instagrabber.customviews.helpers.GridAutofitLayoutManager;
@@ -238,21 +238,25 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
             final Object tag = v.getTag();
             if (tag instanceof FeedStoryModel) {
                 final FeedStoryModel feedStoryModel = (FeedStoryModel) tag;
-                StoryModel[] storyModels = feedStoryModel.getStoryModels();
                 final int index = indexOfIntArray(stories, feedStoryModel);
+                new iStoryStatusFetcher(feedStoryModel.getStoryMediaId(), null, false, false, result -> {
+                    if (result != null && result.length > 0)
+                        main.startActivity(new Intent(main, StoryViewer.class)
+                            .putExtra(Constants.EXTRAS_STORIES, result)
+                            .putExtra(Constants.EXTRAS_USERNAME, feedStoryModel.getProfileModel().getUsername())
+                            .putExtra(Constants.FEED, stories)
+                            .putExtra(Constants.FEED_ORDER, index)
+                        );
+                    else Toast.makeText(main, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+                }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
 
-                main.startActivity(new Intent(main, StoryViewer.class)
-                        .putExtra(Constants.EXTRAS_STORIES, storyModels)
-                        .putExtra(Constants.EXTRAS_USERNAME, feedStoryModel.getProfileModel().getUsername())
-                        .putExtra(Constants.FEED, stories)
-                        .putExtra(Constants.FEED_ORDER, index)
-                );
+
             }
         }
     });
     @NonNull
     private final Main main;
-    private final Resources resources;
+    private Resources resources;
     private final View collapsingToolbar;
     private final RecyclerLazyLoader lazyLoader;
     private boolean isHashtag, isUser, isLocation;
@@ -543,7 +547,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                 else main.startActivity(new Intent(main, PostViewer.class)
                         .putExtra(Constants.EXTRAS_INDEX, itemModel.getPosition())
                         .putExtra(Constants.EXTRAS_TYPE, ItemGetType.DISCOVER_ITEMS)
-                        .putExtra(Constants.EXTRAS_POST, new PostModel(itemModel.getShortCode())));
+                        .putExtra(Constants.EXTRAS_POST, new PostModel(itemModel.getShortCode(), false)));
             }
         }, v -> {
             final Object tag = v.getTag();
@@ -599,7 +603,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                         if (modelType == IntentModelType.POST) {
                             main.startActivityForResult(new Intent(main, PostViewer.class)
                                     .putExtra(Constants.EXTRAS_USER, main.userQuery)
-                                    .putExtra(Constants.EXTRAS_POST, new PostModel(modelText)), 9629);
+                                    .putExtra(Constants.EXTRAS_POST, new PostModel(modelText, false)), 9629);
                         } else {
                             main.addToStack();
                             main.userQuery = modelType == IntentModelType.HASHTAG ? '#' + modelText : ("@"+modelText);
@@ -700,8 +704,6 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                     return;
                 }
 
-                final String profileId = hashtagModel.getId();
-
                 final String cookie = Utils.settingsHelper.getString(Constants.COOKIE);
                 final boolean isLoggedIn = !Utils.isEmpty(cookie);
 
@@ -711,7 +713,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                 main.mainBinding.btnFollowTag.setVisibility(View.VISIBLE);
 
                 if (isLoggedIn) {
-                    new StoryStatusFetcher(profileId, hashtagModel.getName(), false, result -> {
+                    new iStoryStatusFetcher(hashtagModel.getName(), null, false, true, result -> {
                         main.storyModels = result;
                         if (result != null && result.length > 0) main.mainBinding.mainHashtagImage.setStoriesBorder();
                     }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -774,7 +776,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                 final String cookie = Utils.settingsHelper.getString(Constants.COOKIE);
                 final boolean isLoggedIn = !Utils.isEmpty(cookie);
                 if (isLoggedIn) {
-                    new StoryStatusFetcher(profileId, "", false, result -> {
+                    new iStoryStatusFetcher(profileId, profileModel.getUsername(), false, false, result -> {
                         main.storyModels = result;
                         if (result != null && result.length > 0) main.mainBinding.mainProfileImage.setStoriesBorder();
                     }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -971,7 +973,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
             main.mainBinding.toolbar.toolbar.setTitle(main.userQuery);
             main.mainBinding.locInfoContainer.setVisibility(View.VISIBLE);
 
-            currentlyExecuting = new LocationFetcher(main.userQuery, locationModel -> {
+            currentlyExecuting = new LocationFetcher(main.userQuery.split("/")[0], locationModel -> {
                 main.locationModel = locationModel;
 
                 main.mainBinding.toolbar.toolbar.setTitle(locationModel.getName());
@@ -988,7 +990,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                 final String cookie = Utils.settingsHelper.getString(Constants.COOKIE);
                 final boolean isLoggedIn = !Utils.isEmpty(cookie);
                 if (isLoggedIn) {
-                    new StoryStatusFetcher(profileId, "", true, result -> {
+                    new iStoryStatusFetcher(profileId.split("/")[0], null, true, false, result -> {
                         main.storyModels = result;
                         if (result != null && result.length > 0) main.mainBinding.mainLocationImage.setStoriesBorder();
                     }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
@@ -1199,17 +1201,17 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
     private final View.OnClickListener profileActionListener = new View.OnClickListener() {
         @Override
         public void onClick(final View v) {
-            final boolean iamme = isLoggedIn
+            final boolean iamme = (isLoggedIn && main.profileModel != null)
                     ? Utils.getUserIdFromCookie(Utils.settingsHelper.getString(Constants.COOKIE)).equals(main.profileModel.getId())
                     : false;
             if (!isLoggedIn && Utils.dataBox.getFavorite(main.userQuery) != null && v == main.mainBinding.btnFollow) {
                 Utils.dataBox.delFavorite(new DataBox.FavoriteModel(main.userQuery,
                         Long.parseLong(Utils.dataBox.getFavorite(main.userQuery).split("/")[1]),
-                        main.locationModel != null ? main.locationModel.getName() : main.userQuery));
+                        main.locationModel != null ? main.locationModel.getName() : main.userQuery.replaceAll("^@", "")));
                 onRefresh();
             } else if (!isLoggedIn && v == main.mainBinding.btnFollow) {
                 Utils.dataBox.addFavorite(new DataBox.FavoriteModel(main.userQuery, System.currentTimeMillis(),
-                        main.locationModel != null ? main.locationModel.getName() : main.userQuery));
+                        main.locationModel != null ? main.locationModel.getName() : main.userQuery.replaceAll("^@", "")));
                 onRefresh();
             } else if (v == main.mainBinding.btnFollow) {
                 new ProfileAction().execute("follow");

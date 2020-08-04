@@ -13,6 +13,7 @@ import awais.instagrabber.BuildConfig;
 import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.NotificationModel;
 import awais.instagrabber.utils.Constants;
+import awais.instagrabber.utils.LocaleUtils;
 import awais.instagrabber.utils.Utils;
 import awaisomereport.LogCollector;
 
@@ -34,6 +35,7 @@ public final class NotificationsFetcher extends AsyncTask<Void, Void, Notificati
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
             conn.setInstanceFollowRedirects(false);
             conn.setUseCaches(false);
+            conn.setRequestProperty("Accept-Language", LocaleUtils.getCurrentLocale().getLanguage() + ",en-US;q=0.8");
             conn.connect();
 
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {

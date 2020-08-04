@@ -59,6 +59,9 @@ import java.util.List;
 import java.util.Locale;
 import java.util.regex.Pattern;
 
+import javax.crypto.Mac;
+import javax.crypto.spec.SecretKeySpec;
+
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
 import awais.instagrabber.activities.Main;
@@ -71,7 +74,7 @@ import awais.instagrabber.models.BasePostModel;
 import awais.instagrabber.models.FeedStoryModel;
 import awais.instagrabber.models.HighlightModel;
 import awais.instagrabber.models.IntentModel;
-import awais.instagrabber.models.PollModel;
+import awais.instagrabber.models.stickers.PollModel;
 import awais.instagrabber.models.ProfileModel;
 import awais.instagrabber.models.StoryModel;
 import awais.instagrabber.models.direct_messages.DirectItemModel;
@@ -85,6 +88,7 @@ import awais.instagrabber.models.enums.MediaItemType;
 import awais.instagrabber.models.enums.NotificationType;
 import awais.instagrabber.models.enums.RavenExpiringMediaType;
 import awais.instagrabber.models.enums.RavenMediaViewType;
+import awais.instagrabber.models.stickers.QuestionModel;
 import awaisomereport.LogCollector;
 
 import static awais.instagrabber.models.direct_messages.DirectItemModel.DirectItemActionLogModel;
@@ -113,7 +117,6 @@ public final class Utils {
     public static final String CHANNEL_ID = "InstaGrabber", CHANNEL_NAME = "Instagrabber",
             NOTIF_GROUP_NAME = "awais.instagrabber.InstaNotif";
     public static boolean isChannelCreated = false;
-    public static boolean isInstagramInstalled = false;
     public static String telegramPackage;
     public static ClipboardManager clipboardManager;
     public static DisplayMetrics displayMetrics = Resources.getSystem().getDisplayMetrics();
@@ -257,8 +260,9 @@ public final class Utils {
         return stringBuilder;
     }
 
+    // isI: true if the content was requested from i.instagram.com instead of graphql
     @Nullable
-    public static String getHighQualityPost(final JSONArray resources, final boolean isVideo) {
+    public static String getHighQualityPost(final JSONArray resources, final boolean isVideo, final boolean isI) {
         try {
             final int resourcesLen = resources.length();
 
@@ -267,18 +271,18 @@ public final class Utils {
             int lastResBase = 0, lastIndexBase = -1;
             for (int i = 0; i < resourcesLen; ++i) {
                 final JSONObject item = resources.getJSONObject(i);
-                if (item != null && (!isVideo || item.has(Constants.EXTRAS_PROFILE))) {
-                    sources[i] = item.getString("src");
-                    final int currRes = item.getInt("config_width") * item.getInt("config_height");
+                if (item != null && (!isVideo || item.has(Constants.EXTRAS_PROFILE) || isI)) {
+                    sources[i] = item.getString(isI ? "url" : "src");
+                    final int currRes = item.getInt(isI ? "width" : "config_width") * item.getInt(isI ? "height" : "config_height");
 
-                    final String profile = isVideo ? item.getString(Constants.EXTRAS_PROFILE) : null;
+                    final String profile = isVideo ? item.optString(Constants.EXTRAS_PROFILE) : null;
 
                     if (!isVideo || "MAIN".equals(profile)) {
                         if (currRes > lastResMain) {
                             lastResMain = currRes;
                             lastIndexMain = i;
                         }
-                    } else if ("BASELINE".equals(profile)) {
+                    } else {
                         if (currRes > lastResBase) {
                             lastResBase = currRes;
                             lastIndexBase = i;
@@ -302,7 +306,9 @@ public final class Utils {
     public static String getHighQualityImage(final JSONObject resources) {
         String src = null;
         try {
-            if (resources.has("display_resources")) src = getHighQualityPost(resources.getJSONArray("display_resources"), false);
+            if (resources.has("display_resources")) src = getHighQualityPost(resources.getJSONArray("display_resources"), false, false);
+            else if (resources.has("image_versions2"))
+                src = getHighQualityPost(resources.getJSONObject("image_versions2").getJSONArray("candidates"), false, true);
             if (src == null) return resources.getString("display_url");
         } catch (final Exception e) {
             if (logCollector != null)
@@ -844,7 +850,7 @@ public final class Utils {
 
         if (itemsToDownload == null || itemsToDownload.size() < 1) return;
 
-        if (username.charAt(0) == '@') username = username.substring(1);
+        if (username != null && username.charAt(0) == '@') username = username.substring(1);
 
         if (ContextCompat.checkSelfPermission(context, Utils.PERMS[0]) == PackageManager.PERMISSION_GRANTED)
             batchDownloadImpl(context, username, method, itemsToDownload);
@@ -1189,7 +1195,7 @@ public final class Utils {
                             data.getLong("taken_at_timestamp"), data.getJSONObject("owner").getString("username"));
 
                     if (isVideo && data.has("video_resources"))
-                        storyModels[j].setVideoUrl(Utils.getHighQualityPost(data.getJSONArray("video_resources"), true));
+                        storyModels[j].setVideoUrl(Utils.getHighQualityPost(data.getJSONArray("video_resources"), true, false));
 
                     if (!data.isNull("story_app_attribution"))
                         storyModels[j].setSpotify(data.getJSONObject("story_app_attribution").optString("content_url").split("\\?")[0]);
@@ -1220,6 +1226,25 @@ public final class Utils {
                 else
                     ((FeedStoryModel[]) model)[i].setStoryModels(storyModels);
             }
+        }
+    }
+
+    public static String sign(final String message) {
+        try {
+            Mac hasher = Mac.getInstance("HmacSHA256");
+            hasher.init(new SecretKeySpec(Constants.SIGNATURE_KEY.getBytes(), "HmacSHA256"));
+            byte[] hash = hasher.doFinal(message.getBytes());
+            StringBuffer hexString = new StringBuffer();
+            for (int i = 0; i < hash.length; i++) {
+                String hex = Integer.toHexString(0xff & hash[i]);
+                if (hex.length() == 1) hexString.append('0');
+                hexString.append(hex);
+            }
+            return "ig_sig_key_version="+Constants.SIGNATURE_VERSION+"&signed_body=" + hexString.toString() + "." + message;
+        }
+        catch (Throwable e) {
+            Log.e("austin_debug", "sign: ", e);
+            return null;
         }
     }
 
@@ -1351,20 +1376,6 @@ public final class Utils {
     public static void errorFinish(@NonNull final Activity activity) {
         Toast.makeText(activity, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         activity.finish();
-    }
-
-    public static boolean isInstaInstalled(@NonNull final Context context) {
-        final PackageManager packageManager = context.getPackageManager();
-        try {
-            packageManager.getPackageInfo("com.instagram.android", 0);
-            return true;
-        } catch (final Exception e) {
-            try {
-                return packageManager.getApplicationInfo("com.instagram.android", 0).enabled;
-            } catch (final Exception e1) {
-                return false;
-            }
-        }
     }
 
     @Nullable

@@ -67,17 +67,6 @@ public final class FeedStoriesFetcher extends AsyncTask<Void, Void, FeedStoryMod
                     feedStoryIDs[i] = id;
                     feedStoryModels[i] = new FeedStoryModel(id, profileModel);
                 }
-
-                url = "https://www.instagram.com/graphql/query/?query_hash=0a85e6ea60a4c99edc58ab2f3d17cfdf&variables=" +
-                        "{\"reel_ids\":" + Utils.highlightIdsMerger(feedStoryIDs) + ",\"precomposed_overlay\":false}";
-                conn = (HttpURLConnection) new URL(url).openConnection();
-                conn.setInstanceFollowRedirects(false);
-                conn.setUseCaches(false);
-                conn.connect();
-                if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                    Utils.putHighlightModels(conn, feedStoryModels);
-                }
-
                 result = feedStoryModels;
             }
 

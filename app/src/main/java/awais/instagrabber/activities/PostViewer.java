@@ -57,9 +57,11 @@ import awais.instagrabber.R;
 import awais.instagrabber.adapters.PostsMediaAdapter;
 import awais.instagrabber.asyncs.PostFetcher;
 import awais.instagrabber.asyncs.ProfileFetcher;
+import awais.instagrabber.asyncs.i.iPostFetcher;
 import awais.instagrabber.customviews.CommentMentionClickSpan;
 import awais.instagrabber.customviews.helpers.SwipeGestureListener;
 import awais.instagrabber.databinding.ActivityViewerBinding;
+import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.interfaces.SwipeEvent;
 import awais.instagrabber.models.BasePostModel;
 import awais.instagrabber.models.PostModel;
@@ -185,6 +187,83 @@ public final class PostViewer extends BaseLanguageActivity {
     private final PostsMediaAdapter mediaAdapter = new PostsMediaAdapter(null, onClickListener);
     private RequestManager glideRequestManager;
     private LinearLayout.LayoutParams containerLayoutParams;
+    private final FetchListener<ViewerPostModel[]> pfl = result -> {
+        if (result == null || result.length < 1) {
+            Toast.makeText(this, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        viewerPostModel = result[0];
+
+        mediaAdapter.setData(result);
+        if (result.length > 1) {
+            viewerBinding.mediaList.setLayoutParams(new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT, 0, 0.55f
+            ));
+            containerLayoutParams.weight = 1.35f;
+            containerLayoutParams.weight += (Utils.isEmpty(settingsHelper.getString(Constants.COOKIE))) ? 0.3f : 0;
+            viewerBinding.container.setLayoutParams(containerLayoutParams);
+            viewerBinding.mediaList.setVisibility(View.VISIBLE);
+        }
+
+        final View viewStoryPost = findViewById(R.id.viewStoryPost);
+        if (viewStoryPost != null) {
+            viewStoryPost.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    if (profileModel.isPrivate())
+                        Toast.makeText(getApplicationContext(), R.string.share_private_post, Toast.LENGTH_LONG).show();
+                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                    sharingIntent.setType("text/plain");
+                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+postModel.getShortCode());
+                    startActivity(Intent.createChooser(sharingIntent,
+                            (profileModel.isPrivate()) ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
+                }
+            });
+        }
+
+        viewerCaptionParent.setOnTouchListener(gestureTouchListener);
+        viewerBinding.playerView.setOnTouchListener(gestureTouchListener);
+        viewerBinding.imageViewer.setOnSingleFlingListener((e1, e2, velocityX, velocityY) -> {
+            final float diffX = e2.getX() - e1.getX();
+            if (Math.abs(diffX) > Math.abs(e2.getY() - e1.getY()) && Math.abs(diffX) > SwipeGestureListener.SWIPE_THRESHOLD
+                    && Math.abs(velocityX) > SwipeGestureListener.SWIPE_VELOCITY_THRESHOLD) {
+                swipeEvent.onSwipe(diffX > 0);
+                return true;
+            }
+            return false;
+        });
+
+        final long commentsCount = viewerPostModel.getCommentsCount();
+        viewerBinding.bottomPanel.commentsCount.setText(String.valueOf(commentsCount));
+        viewerBinding.bottomPanel.btnComments.setVisibility(View.VISIBLE);
+
+        viewerBinding.bottomPanel.btnComments.setOnClickListener(v ->
+                startActivityForResult(new Intent(this, CommentsViewer.class)
+                        .putExtra(Constants.EXTRAS_SHORTCODE, postShortCode)
+                        .putExtra(Constants.EXTRAS_POST, viewerPostModel.getPostId())
+                        .putExtra(Constants.EXTRAS_USER, postUserId), 6969));
+        viewerBinding.bottomPanel.btnComments.setClickable(true);
+        viewerBinding.bottomPanel.btnComments.setEnabled(true);
+
+        if (postModel instanceof PostModel) {
+            final PostModel postModel = (PostModel) this.postModel;
+            postModel.setPostId(viewerPostModel.getPostId());
+            postModel.setTimestamp(viewerPostModel.getTimestamp());
+            postModel.setPostCaption(viewerPostModel.getPostCaption());
+            postModel.setLike(viewerPostModel.getLike());
+            postModel.setBookmark(viewerPostModel.getBookmark());
+        }
+
+        setupPostInfoBar("@"+viewerPostModel.getUsername(), viewerPostModel.getItemType(),
+                viewerPostModel.getLocation() == null ? null : viewerPostModel.getLocation());
+
+        postCaption = postModel.getPostCaption();
+        viewerCaptionParent.setVisibility(View.VISIBLE);
+
+        viewerBinding.bottomPanel.btnDownload.setOnClickListener(downloadClickListener);
+
+        refreshPost();
+    };
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -341,85 +420,10 @@ public final class PostViewer extends BaseLanguageActivity {
         viewerBinding.imageViewer.setImageResource(0);
         viewerBinding.imageViewer.setImageDrawable(null);
 
-        new PostFetcher(postModel.getShortCode(), result -> {
-            if (result == null || result.length < 1) {
-                Toast.makeText(this, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
-                return;
-            }
-
-            viewerPostModel = result[0];
-            commentsEndCursor = viewerPostModel.getCommentsEndCursor();
-
-            mediaAdapter.setData(result);
-            if (result.length > 1) {
-                viewerBinding.mediaList.setLayoutParams(new LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT, 0, 0.55f
-                ));
-                containerLayoutParams.weight = 1.35f;
-                containerLayoutParams.weight += (Utils.isEmpty(settingsHelper.getString(Constants.COOKIE))) ? 0.3f : 0;
-                viewerBinding.container.setLayoutParams(containerLayoutParams);
-                viewerBinding.mediaList.setVisibility(View.VISIBLE);
-            }
-
-            final View viewStoryPost = findViewById(R.id.viewStoryPost);
-            if (viewStoryPost != null) {
-                viewStoryPost.setOnClickListener(new View.OnClickListener() {
-                    public void onClick(View v) {
-                        if (profileModel.isPrivate())
-                            Toast.makeText(getApplicationContext(), R.string.share_private_post, Toast.LENGTH_LONG).show();
-                        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                        sharingIntent.setType("text/plain");
-                        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+postModel.getShortCode());
-                        startActivity(Intent.createChooser(sharingIntent,
-                                (profileModel.isPrivate()) ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
-                    }
-                });
-            }
-
-            viewerCaptionParent.setOnTouchListener(gestureTouchListener);
-            viewerBinding.playerView.setOnTouchListener(gestureTouchListener);
-            viewerBinding.imageViewer.setOnSingleFlingListener((e1, e2, velocityX, velocityY) -> {
-                final float diffX = e2.getX() - e1.getX();
-                if (Math.abs(diffX) > Math.abs(e2.getY() - e1.getY()) && Math.abs(diffX) > SwipeGestureListener.SWIPE_THRESHOLD
-                        && Math.abs(velocityX) > SwipeGestureListener.SWIPE_VELOCITY_THRESHOLD) {
-                    swipeEvent.onSwipe(diffX > 0);
-                    return true;
-                }
-                return false;
-            });
-
-            final long commentsCount = viewerPostModel.getCommentsCount();
-            viewerBinding.bottomPanel.commentsCount.setText(String.valueOf(commentsCount));
-            viewerBinding.bottomPanel.btnComments.setVisibility(View.VISIBLE);
-
-            viewerBinding.bottomPanel.btnComments.setOnClickListener(v ->
-                    startActivityForResult(new Intent(this, CommentsViewer.class)
-                            .putExtra(Constants.EXTRAS_END_CURSOR, commentsEndCursor)
-                            .putExtra(Constants.EXTRAS_SHORTCODE, postShortCode)
-                            .putExtra(Constants.EXTRAS_POST, viewerPostModel.getPostId())
-                            .putExtra(Constants.EXTRAS_USER, postUserId), 6969));
-            viewerBinding.bottomPanel.btnComments.setClickable(true);
-            viewerBinding.bottomPanel.btnComments.setEnabled(true);
-
-            if (postModel instanceof PostModel) {
-                final PostModel postModel = (PostModel) this.postModel;
-                postModel.setPostId(viewerPostModel.getPostId());
-                postModel.setTimestamp(viewerPostModel.getTimestamp());
-                postModel.setPostCaption(viewerPostModel.getPostCaption());
-                postModel.setLike(viewerPostModel.getLike());
-                postModel.setBookmark(viewerPostModel.getBookmark());
-            }
-
-            setupPostInfoBar("@"+viewerPostModel.getUsername(), viewerPostModel.getItemType(),
-                    viewerPostModel.getLocation() == null ? null : viewerPostModel.getLocation());
-
-            postCaption = postModel.getPostCaption();
-            viewerCaptionParent.setVisibility(View.VISIBLE);
-
-            viewerBinding.bottomPanel.btnDownload.setOnClickListener(downloadClickListener);
-
-            refreshPost();
-        }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        if (postModel.getShortCode() != null)
+            new PostFetcher(postModel.getShortCode(), pfl).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        else if (postModel.getPostId() != null)
+            new iPostFetcher(postModel.getPostId(), pfl).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     private void searchUsername(final String text) {
@@ -673,7 +677,7 @@ public final class PostViewer extends BaseLanguageActivity {
             viewerBinding.topPanel.ivProfilePic.setImageDrawable(null);
             viewerBinding.topPanel.ivProfilePic.setImageResource(0);
 
-            if (from.charAt(0) == '@')
+            if (!Utils.isEmpty(from) && from.charAt(0) == '@')
                 new ProfileFetcher(from.substring(1), result -> {
                     profileModel = result;
 

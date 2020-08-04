@@ -26,7 +26,7 @@ public final class LocationFetcher extends AsyncTask<Void, Void, LocationModel> 
     private final String idSlug;
 
     public LocationFetcher(String idSlug, FetchListener<LocationModel> fetchListener) {
-        // idSlug = id + "/" + slug
+        // idSlug = id + "/" + slug UPDATE: slug can be ignored tbh
         this.idSlug = idSlug;
         this.fetchListener = fetchListener;
     }

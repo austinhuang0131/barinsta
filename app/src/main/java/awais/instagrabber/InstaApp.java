@@ -8,6 +8,7 @@ import androidx.multidex.MultiDexApplication;
 
 import java.net.CookieHandler;
 import java.text.SimpleDateFormat;
+import java.util.UUID;
 
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.DataBox;
@@ -22,8 +23,6 @@ import static awais.instagrabber.utils.Utils.clipboardManager;
 import static awais.instagrabber.utils.Utils.dataBox;
 import static awais.instagrabber.utils.Utils.datetimeParser;
 import static awais.instagrabber.utils.Utils.getInstalledTelegramPackage;
-import static awais.instagrabber.utils.Utils.isInstaInstalled;
-import static awais.instagrabber.utils.Utils.isInstagramInstalled;
 import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.notificationManager;
 import static awais.instagrabber.utils.Utils.settingsHelper;
@@ -41,7 +40,6 @@ public final class InstaApp extends MultiDexApplication {
 
         final Context appContext = getApplicationContext();
 
-        isInstagramInstalled = isInstaInstalled(appContext);
         telegramPackage = getInstalledTelegramPackage(appContext);
 
         if (dataBox == null)
@@ -63,6 +61,8 @@ public final class InstaApp extends MultiDexApplication {
                     settingsHelper.getBoolean(Constants.CUSTOM_DATE_TIME_FORMAT_ENABLED) ?
                             settingsHelper.getString(Constants.CUSTOM_DATE_TIME_FORMAT) :
                             settingsHelper.getString(Constants.DATE_TIME_FORMAT), LocaleUtils.getCurrentLocale());
+
+        settingsHelper.putString(Constants.DEVICE_UUID, UUID.randomUUID().toString());
 
         changeTheme();
     }

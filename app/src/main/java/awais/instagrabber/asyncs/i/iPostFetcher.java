@@ -1,4 +1,4 @@
-package awais.instagrabber.asyncs;
+package awais.instagrabber.asyncs.i;
 
 import android.os.AsyncTask;
 import android.os.Environment;
@@ -13,8 +13,8 @@ import java.net.URL;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.interfaces.FetchListener;
-import awais.instagrabber.models.enums.MediaItemType;
 import awais.instagrabber.models.ViewerPostModel;
+import awais.instagrabber.models.enums.MediaItemType;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.Utils;
 import awaisomereport.LogCollector;
@@ -24,12 +24,12 @@ import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
 import static awais.instagrabber.utils.Utils.logCollector;
 
-public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> {
-    private final String shortCode;
+public final class iPostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> {
+    private final String id;
     private final FetchListener<ViewerPostModel[]> fetchListener;
 
-    public PostFetcher(final String shortCode, final FetchListener<ViewerPostModel[]> fetchListener) {
-        this.shortCode = shortCode;
+    public iPostFetcher(final String id, final FetchListener<ViewerPostModel[]> fetchListener) {
+        this.id = id;
         this.fetchListener = fetchListener;
     }
 
@@ -37,16 +37,16 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
     protected ViewerPostModel[] doInBackground(final Void... voids) {
         ViewerPostModel[] result = null;
         try {
-            final HttpURLConnection conn = (HttpURLConnection) new URL("https://www.instagram.com/p/" + shortCode + "/?__a=1").openConnection();
+            final HttpURLConnection conn = (HttpURLConnection) new URL("https://i.instagram.com/api/v1/media/" + id + "/info").openConnection();
             conn.setUseCaches(false);
+            conn.setRequestProperty("User-Agent", Constants.USER_AGENT);
             conn.connect();
 
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
 
-                final JSONObject media = new JSONObject(Utils.readFromConnection(conn)).getJSONObject("graphql")
-                        .getJSONObject("shortcode_media");
+                final JSONObject media = new JSONObject(Utils.readFromConnection(conn)).getJSONArray("items").getJSONObject(0);
 
-                final String username = media.has("owner") ? media.getJSONObject("owner").getString(Constants.EXTRAS_USERNAME) : null;
+                final String username = media.has("user") ? media.getJSONObject("user").getString(Constants.EXTRAS_USERNAME) : null;
 
                 // to check if file exists
                 final File downloadDir = new File(Environment.getExternalStorageDirectory(), "Download" +
@@ -58,10 +58,10 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
                     if (!Utils.isEmpty(customPath)) customDir = new File(customPath);
                 }
 
-                final long timestamp = media.getLong("taken_at_timestamp");
+                final long timestamp = media.getLong("taken_at");
 
-                final boolean isVideo = media.has("is_video") && media.optBoolean("is_video");
-                final boolean isSlider = media.has("edge_sidecar_to_children");
+                final boolean isVideo = media.has("has_audio") && media.optBoolean("has_audio");
+                final boolean isSlider = !media.isNull("carousel_media_count");
 
                 final MediaItemType mediaItemType;
                 if (isSlider) mediaItemType = MediaItemType.MEDIA_TYPE_SLIDER;
@@ -69,31 +69,24 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
                 else mediaItemType = MediaItemType.MEDIA_TYPE_IMAGE;
 
                 final String postCaption;
-                final JSONObject mediaToCaption = media.optJSONObject("edge_media_to_caption");
+                final JSONObject mediaToCaption = media.optJSONObject("caption");
                 if (mediaToCaption == null) postCaption = null;
-                else {
-                    final JSONArray captions = mediaToCaption.optJSONArray("edges");
-                    postCaption = captions != null && captions.length() > 0 ?
-                            captions.getJSONObject(0).getJSONObject("node").optString("text") : null;
-                }
+                else postCaption = mediaToCaption.optString("text");
 
-                JSONObject commentObject = media.optJSONObject("edge_media_to_parent_comment");
-                final long commentsCount = commentObject != null ? commentObject.optLong("count") : 0;
-
-                String endCursor = null;
-                if (commentObject != null && (commentObject = commentObject.optJSONObject("page_info")) != null)
-                    endCursor = commentObject.optString("end_cursor");
+                final long commentsCount = media.optLong("comment_count");
 
                 if (mediaItemType != MediaItemType.MEDIA_TYPE_SLIDER) {
                     final ViewerPostModel postModel = new ViewerPostModel(mediaItemType,
                             media.getString(Constants.EXTRAS_ID),
-                            isVideo ? media.getString("video_url") : Utils.getHighQualityImage(media),
-                            shortCode,
+                            isVideo
+                                    ? Utils.getHighQualityPost(media.optJSONArray("video_versions"), true, true)
+                                    : Utils.getHighQualityImage(media),
+                            media.getString("code"),
                             Utils.isEmpty(postCaption) ? null : postCaption,
                             username,
-                            isVideo && media.has("video_view_count") ? media.getLong("video_view_count") : -1,
-                            timestamp, media.getBoolean("viewer_has_liked"), media.getBoolean("viewer_has_saved"),
-                            media.getJSONObject("edge_media_preview_like").getLong("count"),
+                            isVideo && media.has("view_count") ? media.getLong("view_count") : -1,
+                            timestamp, media.optBoolean("has_liked"), media.optBoolean("has_viewer_saved"),
+                            media.getLong("like_count"),
                             media.optJSONObject("location"));
 
                     postModel.setCommentsCount(commentsCount);
@@ -103,30 +96,31 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
                     result = new ViewerPostModel[]{postModel};
 
                 } else {
-                    final JSONArray children = media.getJSONObject("edge_sidecar_to_children").getJSONArray("edges");
+                    final JSONArray children = media.getJSONArray("carousel_media");
                     final ViewerPostModel[] postModels = new ViewerPostModel[children.length()];
 
                     for (int i = 0; i < postModels.length; ++i) {
-                        final JSONObject node = children.getJSONObject(i).getJSONObject("node");
-                        final boolean isChildVideo = node.getBoolean("is_video");
+                        final JSONObject node = children.getJSONObject(i);
+                        final boolean isChildVideo = node.has("video_duration");
 
                         postModels[i] = new ViewerPostModel(isChildVideo ? MediaItemType.MEDIA_TYPE_VIDEO : MediaItemType.MEDIA_TYPE_IMAGE,
                                 media.getString(Constants.EXTRAS_ID),
-                                isChildVideo ? node.getString("video_url") : Utils.getHighQualityImage(node),
-                                node.getString(Constants.EXTRAS_SHORTCODE),
+                                isChildVideo
+                                        ? Utils.getHighQualityPost(node.optJSONArray("video_versions"), true, true)
+                                        : Utils.getHighQualityImage(node),
+                                media.getString("code"),
                                 postCaption,
                                 username,
-                                isChildVideo && node.has("video_view_count") ? node.getLong("video_view_count") : -1,
-                                timestamp, media.getBoolean("viewer_has_liked"), media.getBoolean("viewer_has_saved"),
-                                media.getJSONObject("edge_media_preview_like").getLong("count"),
+                                -1,
+                                timestamp, media.optBoolean("has_liked"), media.optBoolean("has_viewer_saved"),
+                                media.getLong("like_count"),
                                 media.optJSONObject("location"));
-                        postModels[i].setSliderDisplayUrl(node.getString("display_url"));
+                        postModels[i].setSliderDisplayUrl(Utils.getHighQualityImage(node));
 
                         Utils.checkExistence(downloadDir, customDir, true, postModels[i]);
                     }
 
                     postModels[0].setCommentsCount(commentsCount);
-
                     result = postModels;
                 }
             }
@@ -134,7 +128,7 @@ public final class PostFetcher extends AsyncTask<Void, Void, ViewerPostModel[]> 
             conn.disconnect();
         } catch (Exception e) {
             if (logCollector != null)
-                logCollector.appendException(e, LogCollector.LogFile.ASYNC_POST_FETCHER, "doInBackground");
+                logCollector.appendException(e, LogCollector.LogFile.ASYNC_POST_FETCHER, "doInBackground (i)");
             if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
         }
         return result;

@@ -18,6 +18,7 @@ import static awais.instagrabber.utils.Constants.CUSTOM_DATE_TIME_FORMAT;
 import static awais.instagrabber.utils.Constants.CUSTOM_DATE_TIME_FORMAT_ENABLED;
 import static awais.instagrabber.utils.Constants.DATE_TIME_FORMAT;
 import static awais.instagrabber.utils.Constants.DATE_TIME_SELECTION;
+import static awais.instagrabber.utils.Constants.DEVICE_UUID;
 import static awais.instagrabber.utils.Constants.DOWNLOAD_USER_FOLDER;
 import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
@@ -101,7 +102,7 @@ public final class SettingsHelper {
         if (sharedPreferences != null) sharedPreferences.edit().putBoolean(key, val).apply();
     }
 
-    @StringDef({COOKIE, FOLDER_PATH, DATE_TIME_FORMAT, DATE_TIME_SELECTION, CUSTOM_DATE_TIME_FORMAT})
+    @StringDef({COOKIE, FOLDER_PATH, DATE_TIME_FORMAT, DATE_TIME_SELECTION, CUSTOM_DATE_TIME_FORMAT, DEVICE_UUID})
     public @interface StringSettings {}
 
     @StringDef({DOWNLOAD_USER_FOLDER, BOTTOM_TOOLBAR, FOLDER_SAVE_TO, AUTOPLAY_VIDEOS, SHOW_QUICK_ACCESS_DIALOG, MUTED_VIDEOS,
