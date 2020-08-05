@@ -201,6 +201,8 @@
     <string name="share_public_post">Share this public post to...</string>
     <string name="share_private_post">This is a private post! Share to those who can view them!</string>
 
+    <string name="discover_empty">This category is somehow empty...</string>
+
     <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
     <string name="updated">Thank you for updating InstaGrabber!</string>
