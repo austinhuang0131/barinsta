@@ -192,6 +192,7 @@
     <string name="request_reject">Refuser la demande</string>
     <string name="share_public_post">Partager ce post public à...</string>
     <string name="share_private_post">C\'est post privé ! Partagez avec ceux qui peuvent le voir !</string>
+    <string name="discover_empty">This category is somehow empty...</string>
     <string name="update_available">Une mise-à-jour est disponible! (%s)</string>
     <string name="update_notice">Rappel : Si vous avez téléchargé l\'application à partir de F-Droid, vous devez la mettre à jour depuis là ! Il en va de même pour GitHub.</string>
     <string name="updated">Merci d\'avoir mis à jour InstaGrabber !</string>
