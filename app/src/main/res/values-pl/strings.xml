@@ -58,6 +58,7 @@
     <string name="post_viewer_download_album">Cały album</string>
     <string name="show_stories">Pokazuj relacje</string>
     <string name="no_more_stories">No more stories!</string>
+    <string name="be_patient">Be patient!</string>
     <string name="view_story_post">View Post</string>
     <string name="view_post">Zobacz post</string>
     <string name="spotify">Spotify</string>
@@ -186,6 +187,9 @@
     <string name="comment_notif">Skomentowano Twój post:</string>
     <string name="follow_notif">Zaczął Cię obserwować</string>
     <string name="mention_notif">Mentioned you:</string>
+    <string name="request_notif">Requested following you</string>
+    <string name="request_approve">Approve request</string>
+    <string name="request_reject">Reject request</string>
     <string name="share_public_post">Share this public post to...</string>
     <string name="share_private_post">This is a private post! Share to those who can view them!</string>
     <string name="update_available">Aktualizacja jest dostępna! (%s)</string>
