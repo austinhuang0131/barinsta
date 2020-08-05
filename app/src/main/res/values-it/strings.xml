@@ -53,7 +53,7 @@
     <string name="post_viewer_post_from">%s - %s</string>
     <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Nota: l\'attuale [Session] non mostrerà questa finestra di dialogo finché non sarai qui e scaricherai sempre la diapositiva post mostrata.</string>
     <string name="post_viewer_download_dialog_title">Seleziona cosa scaricare</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Corrente [Session]</string>
+    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Corrente [Sessione]</string>
     <string name="post_viewer_download_current">Corrente</string>
     <string name="post_viewer_download_album">Intero Album</string>
     <string name="show_stories">Mostra storie</string>
@@ -85,7 +85,7 @@
     <string name="project_link">Visita la pagina del progetto</string>
     <string name="telegram_link">Unisciti al gruppo Telegram</string>
     <string name="matrix_link">Unisciti alla stanza Matrix</string>
-    <string name="liked">Ha messo Like</string>
+    <string name="liked">Hai messo Like</string>
     <string name="saved">Elementi salvati</string>
     <string name="tagged">Taggato</string>
     <string name="like">Like (%s)</string>
