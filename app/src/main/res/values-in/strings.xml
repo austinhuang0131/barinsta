@@ -58,6 +58,7 @@
     <string name="post_viewer_download_album">Semua foto</string>
     <string name="show_stories">Tampilkan story</string>
     <string name="no_more_stories">Story sampai di sini!</string>
+    <string name="be_patient">Be patient!</string>
     <string name="view_story_post">Lihat Kiriman</string>
     <string name="view_post">Lihat Kiriman</string>
     <string name="spotify">Spotify</string>
@@ -186,6 +187,9 @@
     <string name="comment_notif">Mengomentari kiriman anda:</string>
     <string name="follow_notif">Mulai mengikuti anda</string>
     <string name="mention_notif">Menyebut anda:</string>
+    <string name="request_notif">Requested following you</string>
+    <string name="request_approve">Approve request</string>
+    <string name="request_reject">Reject request</string>
     <string name="share_public_post">Bagikan kiriman publik ini ke...</string>
     <string name="share_private_post">Kiriman privat! Bagikan kepada orang yang bisa melihatnya!</string>
     <string name="update_available">Ada pembaruan! (%s)</string>
