@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Il manutentore originale, AWAiS, ha reso InstaGrabber una piccola e semplice app personale con le intenzioni di [rub-] scaricare post da Instagram. Sfortunatamente, questo è stato abbandonato e io, Austin Huang, ho preso il timone. [Speriamo che sia almeno un po \'di denaro contante.] Dopotutto, questa app è completamente open source, senza pubblicità e senza tracciamento [a parte ciò che Instagram sa]. Anche se non ti importa di scaricare roba [come me], è comunque un ottimo client Instagram da usare! \ N \ nFai domande [o vuoi solo parlare]? Contatta instagrabber@austinhuang.me o fai clic su uno dei pulsanti di seguito.</string>
+    <string name="description">Il manutentore originale, AWAiS, ha reso InstaGrabber una piccola e semplice app personale con le intenzioni di [rub-] scaricare post da Instagram. Sfortunatamente, questo è stato abbandonato e io, Austin Huang, ho preso il timone. [Speriamo che sia almeno un po \'di denaro contante.] Dopotutto, questa app è completamente open source, senza pubblicità e senza tracciamento [a parte ciò che Instagram sa]. Anche se non ti importa di scaricare roba [come me], è comunque un ottimo client Instagram da usare! \n\nFai domande [o vuoi solo parlare]? Contatta instagrabber@austinhuang.me o fai clic su uno dei pulsanti di seguito.</string>
     <string name="action_quickaccess">Accesso rapido</string>
     <string name="action_about">Riguardo</string>
     <string name="action_notif">Notifiche</string>
@@ -58,18 +58,18 @@
     <string name="post_viewer_download_album">Intero Album</string>
     <string name="show_stories">Mostra storie</string>
     <string name="no_more_stories">Niente più storie!</string>
-    <string name="be_patient">Be patient!</string>
-    <string name="view_story_post">View Post</string>
+    <string name="be_patient">Sii paziente!</string>
+    <string name="view_story_post">Mostra Post</string>
     <string name="view_post">Mostra Post</string>
     <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Vota</string>
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
-    <string name="respond_story">Respond</string>
+    <string name="respond_story">Rispondi</string>
     <string name="answer_hint">Rispondi...</string>
     <string name="answered_story">Risposta corretta!</string>
     <string name="story_quiz">Quiz</string>
-    <string name="story_quizzed">You have already answered!</string>
+    <string name="story_quizzed">Hai già risposto!</string>
     <string name="story_mentions">Menzioni</string>
     <string name="priv_acc">Questo profilo è privato</string>
     <string name="no_acc">Puoi accedere tramite Impostazioni nell\'angolo in basso a destra. Oppure, puoi visualizzare gli account pubblici senza effettuare il login!</string>
@@ -187,12 +187,12 @@
     <string name="comment_notif">Ha commentato il tuo post:</string>
     <string name="follow_notif">Ha cominciato a seguirti</string>
     <string name="mention_notif">Ti ha menzionato:</string>
-    <string name="request_notif">Requested following you</string>
-    <string name="request_approve">Approve request</string>
-    <string name="request_reject">Reject request</string>
+    <string name="request_notif">Ha richiesto di seguirti</string>
+    <string name="request_approve">Richiesta accettata</string>
+    <string name="request_reject">Richiesta rifiutata</string>
     <string name="share_public_post">Condividi questo post pubblico a...</string>
     <string name="share_private_post">Questo è un post privato! Condividi con chi può vederli!</string>
-    <string name="discover_empty">This category is somehow empty...</string>
+    <string name="discover_empty">Questa categoria è in qualche modo vuota...</string>
     <string name="update_available">Un aggiornamento è disponibile! (%s)</string>
     <string name="update_notice">Promemoria: Se hai scaricato da F-Droid, devi aggiornare da esso! Stesso vale per GitHub.</string>
     <string name="updated">Grazie per aver aggiornato InstaGrabber!</string>
