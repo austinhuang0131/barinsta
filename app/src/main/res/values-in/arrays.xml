@@ -26,6 +26,9 @@
         <item>tanggal</item>
         <item>-</item>
     </string-array>
+    <string-array name="discover_placeholder">
+        <item>Loading...</item>
+    </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
         <item>dd/MM/yyyy</item>
