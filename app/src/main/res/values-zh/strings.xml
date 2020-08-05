@@ -58,6 +58,7 @@
     <string name="post_viewer_download_album">整个图集</string>
     <string name="show_stories">显示快拍</string>
     <string name="no_more_stories">到底啦！</string>
+    <string name="be_patient">Be patient!</string>
     <string name="view_story_post">查看帖子</string>
     <string name="view_post">查看帖子</string>
     <string name="spotify">Spotify</string>
@@ -186,6 +187,9 @@
     <string name="comment_notif">评论了你的帖子</string>
     <string name="follow_notif">关注了您</string>
     <string name="mention_notif">提到了您</string>
+    <string name="request_notif">Requested following you</string>
+    <string name="request_approve">Approve request</string>
+    <string name="request_reject">Reject request</string>
     <string name="share_public_post">分享公开帖...</string>
     <string name="share_private_post">这是一个私密帖！分享给那些可以查看他们的人！</string>
     <string name="update_available">检测到有新版本！ (%s)</string>
