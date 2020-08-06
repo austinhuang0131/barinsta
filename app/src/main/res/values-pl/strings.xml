@@ -8,6 +8,7 @@
     <string name="action_setting">Ustawienia (v%s)</string>
     <string name="action_settings">Ustawienia</string>
     <string name="action_download">Pobierz</string>
+    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">Szukaj użytkownika…</string>
     <string name="action_compare">Porównaj</string>
     <string name="single_like">like</string>
@@ -34,6 +35,7 @@
     <string name="bottom_toolbar">Pokazuj pasek narzędzi na dole</string>
     <string name="download_user_folder">Download posts to username folder in Downloads</string>
     <string name="autoload_posts">Automatycznie załaduj wszystkie posty użytkownika</string>
+    <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
     <string name="error_loading_profile">Błąd ładowania profilu!\nSpróbuj zalogować się i wyszukać ponownie.</string>
     <string name="error_creating_folders">Błąd podczas tworzenia folderu(ów) pobierania.</string>
     <string name="show_feed">Show user feed (Works only when user is logged in)</string>
@@ -68,6 +70,8 @@
     <string name="respond_story">Respond</string>
     <string name="answer_hint">Answer...</string>
     <string name="answered_story">Answer successful!</string>
+    <string name="reply_story">Reply to story</string>
+    <string name="reply_hint">Reply...</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Mentions</string>
@@ -183,6 +187,7 @@
     <string name="login_error_loading_cookies">Error loading cookies</string>
     <string name="login_success_loading_cookies">Pomyślnie załadowano ciasteczka!\nJeśli nadal nie możesz otworzyć prywatnych stron/postów, zaloguj się ponownie!</string>
     <string name="comment_hint">Napisz nowy komentarz...</string>
+    <string name="dm_hint">Write a new message...</string>
     <string name="liked_notif">Polubiono twój post</string>
     <string name="comment_notif">Skomentowano Twój post:</string>
     <string name="follow_notif">Zaczął Cię obserwować</string>
