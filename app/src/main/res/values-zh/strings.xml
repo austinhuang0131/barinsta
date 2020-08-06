@@ -8,7 +8,6 @@
     <string name="action_setting">设定 (v%s)</string>
     <string name="action_settings">设定</string>
     <string name="action_download">下载</string>
-    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">搜索用户名…</string>
     <string name="action_compare">比较</string>
     <string name="single_like">次赞</string>
@@ -35,7 +34,7 @@
     <string name="bottom_toolbar">下方显示工具栏</string>
     <string name="download_user_folder">下载使用用户名文件夹</string>
     <string name="autoload_posts">自动加载用户所有帖子</string>
-    <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
+    <string name="mark_as_seen_setting">将看过的快拍标记为已读\n（快拍作者会知道你看过了）</string>
     <string name="error_loading_profile">载入主页时出错！\n请尝试再次登录并搜索。</string>
     <string name="error_creating_folders">创建下载文件夹时出错</string>
     <string name="show_feed">显示用户动态 (只在登录后有效)</string>
@@ -60,7 +59,7 @@
     <string name="post_viewer_download_album">整个图集</string>
     <string name="show_stories">显示快拍</string>
     <string name="no_more_stories">到底啦！</string>
-    <string name="be_patient">Be patient!</string>
+    <string name="be_patient">请耐心等待！</string>
     <string name="view_story_post">查看帖子</string>
     <string name="view_post">查看帖子</string>
     <string name="spotify">Spotify</string>
@@ -70,8 +69,8 @@
     <string name="respond_story">回复</string>
     <string name="answer_hint">撰写回答…</string>
     <string name="answered_story">回答成功！</string>
-    <string name="reply_story">Reply to story</string>
-    <string name="reply_hint">Reply...</string>
+    <string name="reply_story">回复快拍</string>
+    <string name="reply_hint">回复...</string>
     <string name="story_quiz">测验</string>
     <string name="story_quizzed">您已回答过了！</string>
     <string name="story_mentions">提及</string>
@@ -187,14 +186,14 @@
     <string name="login_error_loading_cookies">载入 cookies 时出错</string>
     <string name="login_success_loading_cookies">成功载入 cookies!\n若你仍不能查看私密页面/帖子，重新登录!</string>
     <string name="comment_hint">发表评论...</string>
-    <string name="dm_hint">Write a new message...</string>
+    <string name="dm_hint">撰写消息...</string>
     <string name="liked_notif">赞了你的帖子</string>
     <string name="comment_notif">评论了你的帖子</string>
     <string name="follow_notif">关注了您</string>
     <string name="mention_notif">提到了您</string>
-    <string name="request_notif">Requested following you</string>
-    <string name="request_approve">Approve request</string>
-    <string name="request_reject">Reject request</string>
+    <string name="request_notif">请求关注您</string>
+    <string name="request_approve">同意请求</string>
+    <string name="request_reject">拒绝请求</string>
     <string name="share_public_post">分享公开帖...</string>
     <string name="share_private_post">这是一个私密帖！分享给那些可以查看他们的人！</string>
     <string name="discover_empty">这个板块居然是空的...</string>
