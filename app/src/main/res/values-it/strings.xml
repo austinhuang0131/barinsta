@@ -35,7 +35,7 @@
     <string name="bottom_toolbar">Mostra barra degli strumenti in basso</string>
     <string name="download_user_folder">Scarica i post nella cartella nome utente in Download</string>
     <string name="autoload_posts">Carica automaticamente tutti i post dall\'utente</string>
-    <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
+    <string name="mark_as_seen_setting">Segna le storie come viste dopo aver visualizzato\n(L\'autore della storia saprà che l\'hai vista)</string>
     <string name="error_loading_profile">Errore durante il caricamento del profilo!\nProvare ad accedere e cercare nuovamente.</string>
     <string name="error_creating_folders">Errore durante la creazione delle cartelle di download.</string>
     <string name="show_feed">Mostra feed utente (funziona solo quando l\'utente ha effettuato l\'accesso)</string>
@@ -70,8 +70,8 @@
     <string name="respond_story">Rispondi</string>
     <string name="answer_hint">Rispondi...</string>
     <string name="answered_story">Risposta corretta!</string>
-    <string name="reply_story">Reply to story</string>
-    <string name="reply_hint">Reply...</string>
+    <string name="reply_story">Rispondi alla storia</string>
+    <string name="reply_hint">Rispondi...</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">Hai già risposto!</string>
     <string name="story_mentions">Menzioni</string>
@@ -187,7 +187,7 @@
     <string name="login_error_loading_cookies"> Errore durante il caricamento dei cookie</string>
     <string name="login_success_loading_cookies">Cookie caricati correttamente! \nSe non riesci ancora ad aprire pagine / post privati, accedi nuovamente!</string>
     <string name="comment_hint">Scrivi un nuovo commento...</string>
-    <string name="dm_hint">Write a new message...</string>
+    <string name="dm_hint">Scrivi un nuovo messaggio...</string>
     <string name="liked_notif">Ha messo mi piace al tuo post</string>
     <string name="comment_notif">Ha commentato il tuo post:</string>
     <string name="follow_notif">Ha cominciato a seguirti</string>
