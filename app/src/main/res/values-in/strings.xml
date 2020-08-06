@@ -8,6 +8,7 @@
     <string name="action_setting">Pengaturan (v%s)</string>
     <string name="action_settings">Pengaturan</string>
     <string name="action_download">Unduh</string>
+    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">Cari Pengguna…</string>
     <string name="action_compare">Bandingkan</string>
     <string name="single_like">suka</string>
@@ -34,6 +35,7 @@
     <string name="bottom_toolbar">Tampilkan bilah alat di bawah</string>
     <string name="download_user_folder">Unduh kiriman ke folder nama pengguna di folder unduhan</string>
     <string name="autoload_posts">Muat otomatis semua kiriman dari pengguna</string>
+    <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
     <string name="error_loading_profile">Galat saat memuat profil!\nCoba masuk dan cari lagi.</string>
     <string name="error_creating_folders">Galat saat membuat folder unduhan.</string>
     <string name="show_feed">Tampilkan Beranda pengguna (hanya bisa saat anda sudah masuk)</string>
@@ -68,6 +70,8 @@
     <string name="respond_story">Tanggapi</string>
     <string name="answer_hint">Jawaban...</string>
     <string name="answered_story">Berhasil menjawab!</string>
+    <string name="reply_story">Reply to story</string>
+    <string name="reply_hint">Reply...</string>
     <string name="story_quiz">Kuis</string>
     <string name="story_quizzed">Anda sudah menjawab!</string>
     <string name="story_mentions">Sebutan</string>
@@ -183,6 +187,7 @@
     <string name="login_error_loading_cookies">Galat memuat cookies</string>
     <string name="login_success_loading_cookies">Berhasil memuat cookies!\nJika anda tetap tidak dapat membuka laman/kiriman pribadi, coba masuk lagi!</string>
     <string name="comment_hint">Tulis komentar baru...</string>
+    <string name="dm_hint">Write a new message...</string>
     <string name="liked_notif">Menyukai kiriman anda</string>
     <string name="comment_notif">Mengomentari kiriman anda:</string>
     <string name="follow_notif">Mulai mengikuti anda</string>
