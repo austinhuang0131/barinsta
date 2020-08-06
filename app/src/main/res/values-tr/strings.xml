@@ -8,7 +8,6 @@
     <string name="action_setting">Ayarlar (v%s)</string>
     <string name="action_settings">Ayarlar</string>
     <string name="action_download">İndir</string>
-    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">Kullanıcı adı ara…</string>
     <string name="action_compare">Karşılaştır</string>
     <string name="single_like">beğeni</string>
