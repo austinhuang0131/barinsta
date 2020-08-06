@@ -8,7 +8,7 @@
     <string name="action_setting">Paramètres (v%s)</string>
     <string name="action_settings">Paramètres</string>
     <string name="action_download">Téléchargement</string>
-    <string name="action_seen">Mark as Seen</string>
+    <string name="action_seen">Marquer comme vu</string>
     <string name="action_search">Rechercher par nom d\'utilisateur…</string>
     <string name="action_compare">Comparer</string>
     <string name="single_like">j\'aime</string>
@@ -35,7 +35,7 @@
     <string name="bottom_toolbar">Afficher la barre d\'outils en bas</string>
     <string name="download_user_folder">Télécharger les posts dans le dossier du nom de l\'utilisateur dans les Téléchargements</string>
     <string name="autoload_posts">Chargement automatique de tous les posts de l\'utilisateur</string>
-    <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
+    <string name="mark_as_seen_setting">Marquer les stories comme vues\n(L\'auteur de l\'histoire saura que vous l\'avez vue)</string>
     <string name="error_loading_profile">Erreur de chargement du profil!\nVeuillez vous reconnecter et réessayez.</string>
     <string name="error_creating_folders">Erreur de création de dossier(s) de téléchargement.</string>
     <string name="show_feed">Afficher le flux utilisateur (Ne fonctionne que lorsque l\'utilisateur est connecté)</string>
@@ -70,8 +70,8 @@
     <string name="respond_story">Répondre</string>
     <string name="answer_hint">Réponse...</string>
     <string name="answered_story">Réponse envoyée !</string>
-    <string name="reply_story">Reply to story</string>
-    <string name="reply_hint">Reply...</string>
+    <string name="reply_story">Répondre à la story</string>
+    <string name="reply_hint">Répondre...</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">Vous avez déjà répondu !</string>
     <string name="story_mentions">Mentions</string>
@@ -187,7 +187,7 @@
     <string name="login_error_loading_cookies">Erreur de chargement des cookies</string>
     <string name="login_success_loading_cookies">Cookies chargés avec succès!\nSi vous ne pouvez toujours pas ouvrir de pages/postes privés, reconnectez-vous !</string>
     <string name="comment_hint">Écrire un nouveau commentaire...</string>
-    <string name="dm_hint">Write a new message...</string>
+    <string name="dm_hint">Écrire un message...</string>
     <string name="liked_notif">A aimé votre publication</string>
     <string name="comment_notif">A commenté sur ta publication :</string>
     <string name="follow_notif">A commencé à vous suivre</string>
