@@ -9,6 +9,7 @@
     <string name="action_setting">Settings (v%s)</string>
     <string name="action_settings">Settings</string>
     <string name="action_download">Download</string>
+    <string name="action_seen">Mark as Seen</string>
     <string name="action_github" translatable="false">GitHub</string>
     <string name="action_fdroid" translatable="false">F-Droid</string>
     <string name="action_search">Search username…</string>
@@ -37,6 +38,7 @@
     <string name="bottom_toolbar">Show toolbar at bottom</string>
     <string name="download_user_folder">Download posts to username folder in Downloads</string>
     <string name="autoload_posts">Auto-load all posts from user</string>
+    <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
     <string name="show_feed">Show user feed (Works only when user is logged in)</string>
@@ -71,6 +73,8 @@
     <string name="respond_story">Respond</string>
     <string name="answer_hint">Answer...</string>
     <string name="answered_story">Answer successful!</string>
+    <string name="reply_story">Reply to story</string>
+    <string name="reply_hint">Reply...</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Mentions</string>
@@ -189,6 +193,7 @@
     <string name="login_success_loading_cookies">Successfully loaded cookies!\nIf you still can\'t open private pages/posts, re-login!</string>
 
     <string name="comment_hint">Write a new comment...</string>
+    <string name="dm_hint">Write a new message...</string>
 
     <string name="liked_notif">Liked your post</string>
     <string name="comment_notif">Commented on your post:</string>
