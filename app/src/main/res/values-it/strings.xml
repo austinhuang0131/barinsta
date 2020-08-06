@@ -8,7 +8,7 @@
     <string name="action_setting">Impostazioni (v%s)</string>
     <string name="action_settings">Impostazioni</string>
     <string name="action_download">Scarica</string>
-    <string name="action_seen">Mark as Seen</string>
+    <string name="action_seen">Segna come letto</string>
     <string name="action_search">Cerca utente…</string>
     <string name="action_compare">Compara</string>
     <string name="single_like">like</string>
