@@ -8,6 +8,7 @@
     <string name="action_setting">Settings (v%s)</string>
     <string name="action_settings">Settings</string>
     <string name="action_download">Download</string>
+    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">Search username…</string>
     <string name="action_compare">Compare</string>
     <string name="single_like">like</string>
@@ -41,6 +42,11 @@
     <string name="save_to_folder">Save to custom folder</string>
     <string name="select_folder">Select folder</string>
     <string name="theme_settings">Theme Settings</string>
+    <string name="login_settings">Only affects logged-in users:</string>
+    <string name="anonymous_settings">Only affects anonymous users:</string>
+    <string name="privacy_warning">Privacy</string>
+    <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
+    <string name="storiesig_settings">Use storiesig for stories and highlights from public users</string>
     <string name="import_export">Import/Export</string>
     <string name="select_language">Select language</string>
     <string name="what_to_do_dialog">What to do?</string>
@@ -63,6 +69,7 @@
     <string name="view_story_post">View Post</string>
     <string name="view_post">View Post</string>
     <string name="spotify">Spotify</string>
+    <string name="stories_notloggedin">Can\'t interact if y\'ain\'t logged in!</string>
     <string name="vote_story_poll">Vote</string>
     <string name="votef_story_poll">Vote successful!</string>
     <string name="voted_story_poll">You have already voted!</string>
