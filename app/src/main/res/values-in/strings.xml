@@ -8,6 +8,7 @@
     <string name="action_setting">Pengaturan (v%s)</string>
     <string name="action_settings">Pengaturan</string>
     <string name="action_download">Unduh</string>
+    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">Cari Pengguna…</string>
     <string name="action_compare">Bandingkan</string>
     <string name="single_like">suka</string>
@@ -41,6 +42,11 @@
     <string name="save_to_folder">Simpan ke folder khusus</string>
     <string name="select_folder">Pilih folder</string>
     <string name="theme_settings">Pengaturan tema</string>
+    <string name="login_settings">Only affects logged-in users:</string>
+    <string name="anonymous_settings">Only affects anonymous users:</string>
+    <string name="privacy_warning">Privacy</string>
+    <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
+    <string name="storiesig_settings">Use storiesig for stories and highlights from public users</string>
     <string name="import_export">Ekspor/impor Pengaturan</string>
     <string name="select_language">Pilih bahasa</string>
     <string name="what_to_do_dialog">Apa yang harus dilakukan?</string>
@@ -63,6 +69,7 @@
     <string name="view_story_post">Lihat Kiriman</string>
     <string name="view_post">Lihat Kiriman</string>
     <string name="spotify">Spotify</string>
+    <string name="stories_notloggedin">Can\'t interact if y\'ain\'t logged in!</string>
     <string name="vote_story_poll">Pilih</string>
     <string name="votef_story_poll">Berhasil memilih!</string>
     <string name="voted_story_poll">Anda sudah memilih!</string>
