@@ -8,6 +8,7 @@
     <string name="action_setting">设定 (v%s)</string>
     <string name="action_settings">设定</string>
     <string name="action_download">下载</string>
+    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">搜索用户名…</string>
     <string name="action_compare">比较</string>
     <string name="single_like">次赞</string>
@@ -41,6 +42,11 @@
     <string name="save_to_folder">保存至自定义文件夹</string>
     <string name="select_folder">选择文件夹</string>
     <string name="theme_settings">主题设定</string>
+    <string name="login_settings">Only affects logged-in users:</string>
+    <string name="anonymous_settings">Only affects anonymous users:</string>
+    <string name="privacy_warning">Privacy</string>
+    <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
+    <string name="storiesig_settings">Use storiesig for stories and highlights from public users</string>
     <string name="import_export">导入/导出</string>
     <string name="select_language">选择语言</string>
     <string name="what_to_do_dialog">怎么办?</string>
@@ -63,6 +69,7 @@
     <string name="view_story_post">查看帖子</string>
     <string name="view_post">查看帖子</string>
     <string name="spotify">Spotify</string>
+    <string name="stories_notloggedin">Can\'t interact if y\'ain\'t logged in!</string>
     <string name="vote_story_poll">投票</string>
     <string name="votef_story_poll">投票成功！</string>
     <string name="voted_story_poll">您已投票过了！</string>
