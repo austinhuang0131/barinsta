@@ -28,14 +28,6 @@ public abstract class BasePostModel implements Serializable {
         return bookmarked;
     }
 
-    public boolean setLike(final boolean like) {
-        liked = like; return liked;
-    }
-
-    public boolean setBookmark(final boolean bookmark) {
-        bookmarked = bookmark; return bookmarked;
-    }
-
     public MediaItemType getItemType() {
         return itemType;
     }

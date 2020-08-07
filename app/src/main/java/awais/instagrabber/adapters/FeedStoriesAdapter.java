@@ -42,6 +42,8 @@ public final class FeedStoriesAdapter extends RecyclerView.Adapter<HighlightView
 
             holder.title.setText(profileModel.getUsername());
             Glide.with(layoutInflater.getContext()).load(profileModel.getSdProfilePic()).into(holder.icon);
+            holder.icon.setAlpha(feedStoryModel.getFullyRead() ? 0.5F : 1.0F);
+            holder.title.setAlpha(feedStoryModel.getFullyRead() ? 0.5F : 1.0F);
         }
     }
 

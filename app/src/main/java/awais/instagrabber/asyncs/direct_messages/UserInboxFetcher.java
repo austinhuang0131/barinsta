@@ -15,6 +15,7 @@ import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.direct_messages.InboxThreadModel;
 import awais.instagrabber.models.enums.UserInboxDirection;
 import awais.instagrabber.utils.Constants;
+import awais.instagrabber.utils.LocaleUtils;
 import awais.instagrabber.utils.Utils;
 
 import static awais.instagrabber.utils.Utils.logCollector;
@@ -45,7 +46,8 @@ public final class UserInboxFetcher extends AsyncTask<Void, Void, InboxThreadMod
 
         try {
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
-            conn.setRequestProperty("User-Agent", Constants.USER_AGENT);
+            conn.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
+            conn.setRequestProperty("Accept-Language", LocaleUtils.getCurrentLocale().getLanguage() + ",en-US;q=0.8");
             conn.setUseCaches(false);
 
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {

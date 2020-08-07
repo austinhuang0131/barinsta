@@ -1,11 +1,13 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: App crashing? You seeing a confusing error message? Report them here!
 title: "[BUG]"
 labels: bug
 assignees: ''
 
 ---
+
+- [ ] My app is on the latest version. I understand that any other version is not supported.
 
 <!--
 First, describe the bug here. Don't stress too much, but do include the key points.
@@ -25,14 +27,12 @@ DETAILED Steps to reproduce the behaviour. If you do not describe this part clea
 
 ## Screenshots
 
-<!-- if applicable -->
+<!-- if applicable, remove otherwise -->
 
 ## Environment
 
  - Device: 
  - Android version:
- - App version:
-<!-- Long press Instagrabber => App info => Advanced => Version number is at the bottom -->
 
 ## Additional info
 

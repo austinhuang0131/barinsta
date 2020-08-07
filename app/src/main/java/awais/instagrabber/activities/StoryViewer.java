@@ -47,6 +47,7 @@ import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
+import java.util.Date;
 import java.util.UUID;
 
 import org.json.JSONObject;
@@ -74,6 +75,7 @@ import static awais.instagrabber.customviews.helpers.SwipeGestureListener.SWIPE_
 import static awais.instagrabber.customviews.helpers.SwipeGestureListener.SWIPE_VELOCITY_THRESHOLD;
 import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
+import static awais.instagrabber.utils.Constants.MARK_AS_SEEN;
 import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
@@ -94,7 +96,7 @@ public final class StoryViewer extends BaseLanguageActivity {
     private GestureDetectorCompat gestureDetector;
     private SimpleExoPlayer player;
     private SwipeEvent swipeEvent;
-    private MenuItem menuDownload;
+    private MenuItem menuDownload, menuDm;
     private PollModel poll;
     private QuestionModel question;
     private String[] mentions;
@@ -149,11 +151,11 @@ public final class StoryViewer extends BaseLanguageActivity {
                         if ((isRightSwipe == true && index == 0) || (isRightSwipe == false && index == storyFeed.length - 1))
                             Toast.makeText(getApplicationContext(), R.string.no_more_stories, Toast.LENGTH_SHORT).show();
                         else {
+                            boolean fetching = false;
                             final FeedStoryModel feedStoryModel = isRightSwipe ?
                                     (index == 0 ? null : storyFeed[index - 1]) :
                                     (storyFeed.length == index + 1 ? null : storyFeed[index + 1]);
                             if (feedStoryModel != null) {
-                                boolean fetching = false;
                                 if (fetching) {
                                     Toast.makeText(getApplicationContext(), R.string.be_patient, Toast.LENGTH_SHORT).show();
                                 } else {
@@ -179,7 +181,6 @@ public final class StoryViewer extends BaseLanguageActivity {
                             if (--slidePos <= 0) slidePos = 0;
                         } else if (++slidePos >= storiesLen) slidePos = storiesLen - 1;
                         currentStory = storyModels[slidePos];
-                        //slidePos = currentStory.getPosition();
                         refreshStory();
                     }
                 }
@@ -197,6 +198,7 @@ public final class StoryViewer extends BaseLanguageActivity {
         storiesAdapter.setData(null);
 
         if (menuDownload != null) menuDownload.setVisible(false);
+        if (menuDm != null) menuDm.setVisible(false);
 
         storyViewerBinding.playerView.setOnTouchListener((v, event) -> gestureDetector.onTouchEvent(event));
         storyViewerBinding.imageViewer.setOnSingleFlingListener((e1, e2, velocityX, velocityY) -> {
@@ -318,12 +320,14 @@ public final class StoryViewer extends BaseLanguageActivity {
             @Override
             public void onLoadCompleted(final int windowIndex, @Nullable final MediaSource.MediaPeriodId mediaPeriodId, final LoadEventInfo loadEventInfo, final MediaLoadData mediaLoadData) {
                 if (menuDownload != null) menuDownload.setVisible(true);
+                if (currentStory.canReply() && menuDm != null) menuDm.setVisible(true);
                 storyViewerBinding.progressView.setVisibility(View.GONE);
             }
 
             @Override
             public void onLoadStarted(final int windowIndex, @Nullable final MediaSource.MediaPeriodId mediaPeriodId, final LoadEventInfo loadEventInfo, final MediaLoadData mediaLoadData) {
                 if (menuDownload != null) menuDownload.setVisible(true);
+                if (currentStory.canReply() && menuDm != null) menuDm.setVisible(true);
                 storyViewerBinding.progressView.setVisibility(View.VISIBLE);
             }
 
@@ -335,6 +339,7 @@ public final class StoryViewer extends BaseLanguageActivity {
             @Override
             public void onLoadError(final int windowIndex, @Nullable final MediaSource.MediaPeriodId mediaPeriodId, final LoadEventInfo loadEventInfo, final MediaLoadData mediaLoadData, final IOException error, final boolean wasCanceled) {
                 if (menuDownload != null) menuDownload.setVisible(false);
+                if (menuDm != null) menuDm.setVisible(false);
                 storyViewerBinding.progressView.setVisibility(View.GONE);
             }
         });
@@ -368,6 +373,7 @@ public final class StoryViewer extends BaseLanguageActivity {
             @Override
             public boolean onResourceReady(final Drawable resource, final Object model, final Target<Drawable> target, final DataSource dataSource, final boolean isFirstResource) {
                 if (menuDownload != null) menuDownload.setVisible(true);
+                if (currentStory.canReply() && menuDm != null) menuDm.setVisible(true);
                 storyViewerBinding.progressView.setVisibility(View.GONE);
                 return false;
             }
@@ -382,12 +388,26 @@ public final class StoryViewer extends BaseLanguageActivity {
         menu.findItem(R.id.action_search).setVisible(false);
 
         menuDownload = menu.findItem(R.id.action_download);
+        menuDm = menu.findItem(R.id.action_dms);
         menuDownload.setVisible(true);
+        menuDm.setVisible(false);
         menuDownload.setOnMenuItemClickListener(item -> {
             if (ContextCompat.checkSelfPermission(this, Utils.PERMS[0]) == PackageManager.PERMISSION_GRANTED)
                 downloadStory();
             else
                 ActivityCompat.requestPermissions(this, Utils.PERMS, 8020);
+            return true;
+        });
+        menuDm.setOnMenuItemClickListener(item -> {
+            final EditText input = new EditText(this);
+            input.setHint(R.string.reply_hint);
+            new AlertDialog.Builder(this).setTitle(R.string.reply_story)
+                    .setView(input)
+                    .setPositiveButton(R.string.ok, (d,w) -> {
+                        new CommentAction().execute(input.getText().toString());
+                    })
+                    .setNegativeButton(R.string.cancel, null)
+                    .show();
             return true;
         });
 
@@ -488,6 +508,8 @@ public final class StoryViewer extends BaseLanguageActivity {
         storyViewerBinding.quiz.setVisibility(quiz != null ? View.VISIBLE : View.GONE);
         storyViewerBinding.quiz.setTag(quiz);
 
+        storyViewerBinding.toolbar.toolbar.setSubtitle(Utils.datetimeParser.format(new Date(currentStory.getTimestamp() * 1000L)));
+
         releasePlayer();
         final Intent intent = getIntent();
         if (intent.getBooleanExtra(Constants.EXTRAS_HASHTAG, false)) {
@@ -498,6 +520,8 @@ public final class StoryViewer extends BaseLanguageActivity {
         }
         if (itemType == MediaItemType.MEDIA_TYPE_VIDEO) setupVideo();
         else setupImage();
+
+        if (settingsHelper.getBoolean(MARK_AS_SEEN)) new SeenAction().execute();
     }
 
     private void searchUsername(final String text) {
@@ -535,7 +559,7 @@ public final class StoryViewer extends BaseLanguageActivity {
 
         protected Void doInBackground(Integer... rawchoice) {
             int choice = rawchoice[0];
-            final String url = "https://www.instagram.com/media/"+currentStory.getStoryMediaId()+"/"+poll.getId()+"/story_poll_vote/";
+            final String url = "https://www.instagram.com/media/"+currentStory.getStoryMediaId().split("_")[0]+"/"+poll.getId()+"/story_poll_vote/";
             try {
                 final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
                 urlConnection.setRequestMethod("POST");
@@ -554,7 +578,6 @@ public final class StoryViewer extends BaseLanguageActivity {
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     ok = choice;
                 }
-                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", "vote: " + ex);
@@ -568,6 +591,7 @@ public final class StoryViewer extends BaseLanguageActivity {
                 poll.setMyChoice(ok);
                 Toast.makeText(getApplicationContext(), R.string.votef_story_poll, Toast.LENGTH_SHORT).show();
             }
+            else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -578,7 +602,7 @@ public final class StoryViewer extends BaseLanguageActivity {
         protected Void doInBackground(Integer... rawchoice) {
             int choice = rawchoice[0];
             final String cookie = settingsHelper.getString(Constants.COOKIE);
-            final String url = "https://i.instagram.com/api/v1/media/"+currentStory.getStoryMediaId()+"/"+quiz.getId()+"/story_quiz_answer/";
+            final String url = "https://i.instagram.com/api/v1/media/"+currentStory.getStoryMediaId().split("_")[0]+"/"+quiz.getId()+"/story_quiz_answer/";
             try {
                 JSONObject ogbody = new JSONObject("{\"client_context\":\"" + UUID.randomUUID().toString()
                         +"\",\"mutation_token\":\"" + UUID.randomUUID().toString()
@@ -604,7 +628,6 @@ public final class StoryViewer extends BaseLanguageActivity {
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     ok = choice;
                 }
-                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", "quiz: " + ex);
@@ -618,6 +641,7 @@ public final class StoryViewer extends BaseLanguageActivity {
                 quiz.setMyChoice(ok);
                 Toast.makeText(getApplicationContext(), R.string.answered_story, Toast.LENGTH_SHORT).show();
             }
+            else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -628,7 +652,7 @@ public final class StoryViewer extends BaseLanguageActivity {
         protected Void doInBackground(String... rawchoice) {
             final String cookie = settingsHelper.getString(Constants.COOKIE);
             final String url = "https://i.instagram.com/api/v1/media/"
-                    +currentStory.getStoryMediaId()+"/"+question.getId()+"/story_question_response/";
+                    +currentStory.getStoryMediaId().split("_")[0]+"/"+question.getId()+"/story_question_response/";
             try {
                 JSONObject ogbody = new JSONObject("{\"client_context\":\"" + UUID.randomUUID().toString()
                         +"\",\"mutation_token\":\"" + UUID.randomUUID().toString()
@@ -654,7 +678,6 @@ public final class StoryViewer extends BaseLanguageActivity {
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     ok = true;
                 }
-                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", "respond: " + ex);
@@ -667,6 +690,117 @@ public final class StoryViewer extends BaseLanguageActivity {
             if (ok) {
                 Toast.makeText(getApplicationContext(), R.string.answered_story, Toast.LENGTH_SHORT).show();
             }
+            else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    class SeenAction extends AsyncTask<Void, Void, Void> {
+        protected Void doInBackground(Void... lmao) {
+            final String cookie = settingsHelper.getString(Constants.COOKIE);
+            final String url = "https://www.instagram.com/stories/reel/seen";
+            try {
+                String urlParameters = "reelMediaId="+currentStory.getStoryMediaId().split("_")[0]
+                        +"&reelMediaOwnerId="+currentStory.getUserId()
+                        +"&reelId="+currentStory.getUserId()
+                        +"&reelMediaTakenAt="+String.valueOf(currentStory.getTimestamp())
+                        +"&viewSeenAt="+String.valueOf(currentStory.getTimestamp());
+                final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setUseCaches(false);
+                urlConnection.setRequestProperty("x-csrftoken",
+                        settingsHelper.getString(Constants.COOKIE).split("csrftoken=")[1].split(";")[0]);
+                urlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                urlConnection.setRequestProperty("Content-Length", Integer.toString(urlParameters.getBytes().length));
+                urlConnection.setDoOutput(true);
+                DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+                wr.writeBytes(urlParameters);
+                wr.flush();
+                wr.close();
+                urlConnection.connect();
+                urlConnection.disconnect();
+            } catch (Throwable ex) {
+                Log.e("austin_debug", "seen: " + ex);
+            }
+            return null;
+        }
+    }
+
+    class CommentAction extends AsyncTask<String, Void, Void> {
+        boolean ok = false;
+
+        protected Void doInBackground(String... rawAction) {
+            final String action = rawAction[0];
+            final String url = "https://i.instagram.com/api/v1/direct_v2/create_group_thread/";
+            final String cookie = settingsHelper.getString(Constants.COOKIE);
+            try {
+                final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
+                urlConnection.setUseCaches(false);
+                final String urlParameters = Utils.sign("{\"_csrftoken\":\"" + cookie.split("csrftoken=")[1].split(";")[0]
+                        +"\",\"_uid\":\"" + Utils.getUserIdFromCookie(cookie)
+                        +"\",\"__uuid\":\"" + settingsHelper.getString(Constants.DEVICE_UUID)
+                        +"\",\"recipient_users\":\"["+currentStory.getUserId() // <- string of array of number (not joking)
+                        +"]\"}");
+                urlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                urlConnection.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters.getBytes().length));
+                urlConnection.setDoOutput(true);
+                DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
+                wr.writeBytes(urlParameters);
+                wr.flush();
+                wr.close();
+                urlConnection.connect();
+                if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                    try {
+                        final String threadid = new JSONObject(Utils.readFromConnection(urlConnection)).getString("thread_id");
+                        final String url2 = "https://i.instagram.com/api/v1/direct_v2/threads/broadcast/reel_share/";
+                        final HttpURLConnection urlConnection2 = (HttpURLConnection) new URL(url2).openConnection();
+                        urlConnection2.setRequestMethod("POST");
+                        urlConnection2.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
+                        urlConnection2.setUseCaches(false);
+                        final String commentText = URLEncoder.encode(action, "UTF-8")
+                                .replaceAll("\\+", "%20").replaceAll("\\%21", "!").replaceAll("\\%27", "'")
+                                .replaceAll("\\%28", "(").replaceAll("\\%29", ")").replaceAll("\\%7E", "~");
+                        final String cc = UUID.randomUUID().toString();
+                        final String urlParameters2 = Utils.sign("{\"_csrftoken\":\"" + cookie.split("csrftoken=")[1].split(";")[0]
+                                +"\",\"_uid\":\"" + Utils.getUserIdFromCookie(cookie)
+                                +"\",\"__uuid\":\"" + settingsHelper.getString(Constants.DEVICE_UUID)
+                                +"\",\"client_context\":\"" + cc
+                                +"\",\"mutation_token\":\"" + cc
+                                +"\",\"text\":\"" + commentText
+                                +"\",\"media_id\":\"" + currentStory.getStoryMediaId()
+                                +"\",\"reel_id\":\"" + currentStory.getUserId()
+                                +"\",\"thread_ids\":\"["+threadid
+                                +"]\",\"action\":\"send_item\",\"entry\":\"reel\"}");
+                        urlConnection2.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                        urlConnection2.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters2.getBytes().length));
+                        urlConnection2.setDoOutput(true);
+                        DataOutputStream wr2 = new DataOutputStream(urlConnection2.getOutputStream());
+                        wr2.writeBytes(urlParameters2);
+                        wr2.flush();
+                        wr2.close();
+                        urlConnection2.connect();
+                        Log.d("austin_debug", urlConnection2.getResponseCode() + " " + urlParameters2 + " " + cookie);
+                        if (urlConnection2.getResponseCode() == HttpURLConnection.HTTP_OK) {
+                            ok = true;
+                        }
+                        urlConnection2.disconnect();
+                    } catch (Throwable ex) {
+                        Log.e("austin_debug", "reply (B): " + ex);
+                    }
+                }
+
+                urlConnection.disconnect();
+            } catch (Throwable ex) {
+                Log.e("austin_debug", "reply (CT): " + ex);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            Toast.makeText(getApplicationContext(),
+                    ok ? R.string.answered_story : R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         }
     }
 }

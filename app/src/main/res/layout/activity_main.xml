@@ -525,21 +525,39 @@
             </LinearLayout>
 
             <!-- Discover View -->
-            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
-                android:id="@+id/discoverSwipeRefreshLayout"
+            <LinearLayout
+                android:id="@+id/discoverLayout"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="end"
+                android:paddingTop="24dp"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical"
                 android:tag="@android:string/yes">
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/discoverPosts"
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/discoverType"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:clipToPadding="false"
-                    android:paddingTop="24dp"
-                    tools:listitem="@layout/item_feed" />
-            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+                    android:layout_height="wrap_content"
+                    android:entries="@array/discover_placeholder"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp" />
+
+                <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                    android:id="@+id/discoverSwipeRefreshLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:tag="@android:string/yes">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/discoverPosts"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/item_feed" />
+                    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+            </LinearLayout>
         </awais.instagrabber.customviews.RemixDrawerLayout>
     </LinearLayout>
 

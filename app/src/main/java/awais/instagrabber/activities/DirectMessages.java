@@ -9,10 +9,12 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import android.view.View;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import awais.instagrabber.R;
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.adapters.DirectMessagesAdapter;
 import awais.instagrabber.asyncs.direct_messages.InboxFetcher;
@@ -72,6 +74,9 @@ public final class DirectMessages extends BaseLanguageActivity implements SwipeR
         setContentView(dmsBinding.getRoot());
 
         dmsBinding.swipeRefreshLayout.setOnRefreshListener(this);
+        dmsBinding.toolbar.toolbar.setTitle(R.string.action_dms);
+        dmsBinding.commentText.setVisibility(View.GONE);
+        dmsBinding.commentSend.setVisibility(View.GONE);
 
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         dmsBinding.rvDirectMessages.setLayoutManager(layoutManager);

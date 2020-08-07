@@ -39,9 +39,8 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
     @Override
     protected StoryModel[] doInBackground(final Void... voids) {
         StoryModel[] result = null;
-        final String url = "https://i.instagram.com/api/v1/" + (isLoc ? "locations/" : (isHashtag ? "tags/" : "feed/reels_media/?reel_ids="))
-                + id + ((isLoc || isHashtag) ? "/story/" : "");
-
+        final String url = "https://i.instagram.com/api/v1/" + (isLoc ? "locations/" : (isHashtag ? "tags/" : "feed/user/"))
+                + id + "/story/";
         try {
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
             conn.setInstanceFollowRedirects(false);
@@ -50,9 +49,7 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
             conn.connect();
 
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                JSONObject data = new JSONObject(Utils.readFromConnection(conn)).getJSONObject((isLoc || isHashtag) ? "story" : "reels");
-                if (!isLoc && !isHashtag && data.isNull(id)) return null;
-                else if (!isLoc && !isHashtag) data = data.getJSONObject(id);
+                JSONObject data = new JSONObject(Utils.readFromConnection(conn)).getJSONObject((isLoc || isHashtag) ? "story" : "reel");
 
                 JSONArray media;
                 if ((media = data.optJSONArray("items")) != null && media.length() > 0 &&
@@ -65,11 +62,12 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
                         data = media.getJSONObject(i);
                         final boolean isVideo = data.has("video_duration");
 
-                        models[i] = new StoryModel(data.getString("pk"),
+                        models[i] = new StoryModel(data.getString("id"),
                                 data.getJSONObject("image_versions2").getJSONArray("candidates").getJSONObject(0).getString("url"),
                                 isVideo ? MediaItemType.MEDIA_TYPE_VIDEO : MediaItemType.MEDIA_TYPE_IMAGE,
                                 data.optLong("taken_at", 0),
-                                (isLoc || isHashtag) ? data.getJSONObject("user").getString("username") : username);
+                                (isLoc || isHashtag) ? data.getJSONObject("user").getString("username") : username,
+                                data.getJSONObject("user").getString("pk"), data.getBoolean("can_reply"));
 
                         final JSONArray videoResources = data.optJSONArray("video_versions");
                         if (isVideo && videoResources != null)

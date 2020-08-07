@@ -20,6 +20,8 @@ import android.util.Log;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -61,6 +63,7 @@ import awais.instagrabber.asyncs.LocationFetcher;
 import awais.instagrabber.asyncs.PostsFetcher;
 import awais.instagrabber.asyncs.ProfileFetcher;
 import awais.instagrabber.asyncs.i.iStoryStatusFetcher;
+import awais.instagrabber.asyncs.i.iTopicFetcher;
 import awais.instagrabber.customviews.MouseDrawer;
 import awais.instagrabber.customviews.RamboTextView;
 import awais.instagrabber.customviews.helpers.GridAutofitLayoutManager;
@@ -71,6 +74,7 @@ import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.interfaces.MentionClickListener;
 import awais.instagrabber.models.BasePostModel;
 import awais.instagrabber.models.DiscoverItemModel;
+import awais.instagrabber.models.DiscoverTopicModel;
 import awais.instagrabber.models.FeedModel;
 import awais.instagrabber.models.FeedStoryModel;
 import awais.instagrabber.models.HashtagModel;
@@ -94,7 +98,8 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
     private final boolean autoloadPosts;
     private FeedStoryModel[] stories;
     private boolean hasNextPage = false, feedHasNextPage = false, discoverHasMore = false;
-    private String endCursor = null, feedEndCursor = null, discoverEndMaxId = null;
+    private String endCursor = null, feedEndCursor = null, discoverEndMaxId = null, topic = null;
+    private String[] topicIds = null;
     private final FetchListener<PostModel[]> postsFetchListener = new FetchListener<PostModel[]>() {
         @Override
         public void onResult(final PostModel[] result) {
@@ -109,38 +114,15 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                     main.mainBinding.mainPosts.setVisibility(View.VISIBLE);
                 });
 
-                final String username;
-                final String postFix;
-                if (!isHashtag && !isLocation) {
-                    username = "@"+main.profileModel.getUsername();
-                    postFix = "/" + main.profileModel.getPostCount() + ')';
-                } else {
-                    username = null;
-                    postFix = null;
-                }
-
                 if (isHashtag)
                     main.mainBinding.toolbar.toolbar.setTitle(main.userQuery);
                 else if (isLocation)
                     main.mainBinding.toolbar.toolbar.setTitle(main.locationModel.getName());
-                else main.mainBinding.toolbar.toolbar.setTitle(username + " (" + main.allItems.size() + postFix);
+                else main.mainBinding.toolbar.toolbar.setTitle("@"+main.profileModel.getUsername());
 
                 final PostModel model = result[result.length - 1];
                 if (model != null) {
                     endCursor = model.getEndCursor();
-
-                    if (endCursor == null && !isHashtag) {
-                        main.mainBinding.toolbar.toolbar.setTitle(username + " (" + main.profileModel.getPostCount() + postFix);
-                        final Handler handler = new Handler();
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                main.mainBinding.toolbar.toolbar.setTitle(username);
-                                handler.removeCallbacks(this);
-                            }
-                        }, 1000);
-                    }
-
                     hasNextPage = model.hasNextPage();
                     if (autoloadPosts && hasNextPage)
                         currentlyExecuting = new PostsFetcher(main.profileModel.getId(), endCursor, this)
@@ -194,7 +176,10 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
 
         @Override
         public void onResult(final DiscoverItemModel[] result) {
-            if (result != null) {
+            if (result == null || result.length == 0) {
+                Toast.makeText(main, R.string.discover_empty, Toast.LENGTH_SHORT).show();
+            }
+            else if (result != null) {
                 final int oldSize = main.discoverItems.size();
                 main.discoverItems.addAll(Arrays.asList(result));
                 discoverAdapter.notifyItemRangeInserted(oldSize, result.length);
@@ -208,6 +193,20 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
             }
 
             main.mainBinding.discoverSwipeRefreshLayout.setRefreshing(false);
+        }
+    };
+    private final FetchListener<DiscoverTopicModel> topicFetchListener = new FetchListener<DiscoverTopicModel>() {
+        @Override
+        public void doBefore() {}
+
+        @Override
+        public void onResult(final DiscoverTopicModel result) {
+            if (result != null) {
+                topicIds = result.getIds();
+                ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(
+                        main, android.R.layout.simple_spinner_dropdown_item, result.getNames() );
+                main.mainBinding.discoverType.setAdapter(spinnerArrayAdapter);
+            }
         }
     };
     private final FetchListener<FeedStoryModel[]> feedStoriesListener = new FetchListener<FeedStoryModel[]>() {
@@ -251,8 +250,6 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                         );
                     else Toast.makeText(main, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-
-
             }
         }
     });
@@ -533,11 +530,30 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
         main.mainBinding.discoverPosts.setLayoutManager(layoutManager);
         main.mainBinding.discoverPosts.addItemDecoration(new GridSpacingItemDecoration(Utils.convertDpToPx(4)));
 
+        new iTopicFetcher(topicFetchListener).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        main.mainBinding.discoverType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int pos, long id) {
+                if (topicIds != null) {
+                    topic = topicIds[pos];
+                    main.mainBinding.discoverSwipeRefreshLayout.setRefreshing(true);
+                    if (discoverLazyLoader != null) discoverLazyLoader.resetState();
+                    main.discoverItems.clear();
+                    if (discoverAdapter != null) discoverAdapter.notifyDataSetChanged();
+                    new DiscoverFetcher(topic, null, discoverFetchListener, false).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+            }
+        });
+
         main.mainBinding.discoverSwipeRefreshLayout.setOnRefreshListener(() -> {
             if (discoverLazyLoader != null) discoverLazyLoader.resetState();
             main.discoverItems.clear();
             if (discoverAdapter != null) discoverAdapter.notifyDataSetChanged();
-            new DiscoverFetcher(null, discoverFetchListener, false).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            new DiscoverFetcher(topic, null, discoverFetchListener, false).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         });
 
         main.mainBinding.discoverPosts.setAdapter(discoverAdapter = new DiscoverAdapter(main.discoverItems, v -> {
@@ -563,12 +579,12 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
         main.mainBinding.discoverPosts.addOnScrollListener(discoverLazyLoader = new RecyclerLazyLoader(layoutManager, (page, totalItemsCount) -> {
             if (discoverHasMore) {
                 main.mainBinding.discoverSwipeRefreshLayout.setRefreshing(true);
-                new DiscoverFetcher(discoverEndMaxId, discoverFetchListener, false).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                new DiscoverFetcher(topic, discoverEndMaxId, discoverFetchListener, false).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
                 discoverEndMaxId = null;
             }
         }));
 
-        new DiscoverFetcher(null, discoverFetchListener, true).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        new DiscoverFetcher(topic, null, discoverFetchListener, true).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
 
     public void onIntent(final Intent intent) {
@@ -1213,7 +1229,7 @@ public final class MainHelper implements SwipeRefreshLayout.OnRefreshListener {
                         Long.parseLong(Utils.dataBox.getFavorite(main.userQuery).split("/")[1]),
                         main.locationModel != null ? main.locationModel.getName() : main.userQuery.replaceAll("^@", "")));
                 onRefresh();
-            } else if (!isLoggedIn && v == main.mainBinding.btnFollow) {
+            } else if (!isLoggedIn && (v == main.mainBinding.btnFollow || v == main.mainBinding.btnFollowTag)) {
                 Utils.dataBox.addFavorite(new DataBox.FavoriteModel(main.userQuery, System.currentTimeMillis(),
                         main.locationModel != null ? main.locationModel.getName() : main.userQuery.replaceAll("^@", "")));
                 onRefresh();

@@ -104,6 +104,7 @@ public final class LogCollector {
         ////////////////////////
         ASYNC_DOWNLOADER("async-download.txt"),
         ASYNC_MAIN_POSTS_FETCHER("async-main-posts-fetcher.txt"),
+        ASYNC_DISCOVER_TOPICS_FETCHER("async-discover-topics-fetcher.txt"),
         ASYNC_POST_FETCHER("async-single-post-fetcher.txt"),
         ASYNC_FEED_FETCHER("async-feed-fetcher.txt"),
         ASYNC_HASHTAG_FETCHER("async-hashtag-fetcher.txt"),

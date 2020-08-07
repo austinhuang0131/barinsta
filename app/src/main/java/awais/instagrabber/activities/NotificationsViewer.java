@@ -158,7 +158,6 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     ok = true;
                 }
-                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", action+": " + ex);
@@ -171,6 +170,7 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
             if (ok == true) {
                 onRefresh();
             }
+            else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         }
     }
 }

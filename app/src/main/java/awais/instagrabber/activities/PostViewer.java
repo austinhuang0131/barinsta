@@ -88,7 +88,7 @@ public final class PostViewer extends BaseLanguageActivity {
     private SwipeEvent swipeEvent;
     private CharSequence postCaption = null, postShortCode, postUserId;
     private Resources resources;
-    private boolean session = false, isFromShare;
+    private boolean session = false, isFromShare, liked, saved, ok = false;
     private int slidePos = 0, lastSlidePos = 0;
     private ItemGetType itemGetType;
     @SuppressLint("ClickableViewAccessibility")
@@ -237,6 +237,8 @@ public final class PostViewer extends BaseLanguageActivity {
         viewerBinding.bottomPanel.commentsCount.setText(String.valueOf(commentsCount));
         viewerBinding.bottomPanel.btnComments.setVisibility(View.VISIBLE);
 
+        postShortCode = postModel.getShortCode();
+
         viewerBinding.bottomPanel.btnComments.setOnClickListener(v ->
                 startActivityForResult(new Intent(this, CommentsViewer.class)
                         .putExtra(Constants.EXTRAS_SHORTCODE, postShortCode)
@@ -250,8 +252,10 @@ public final class PostViewer extends BaseLanguageActivity {
             postModel.setPostId(viewerPostModel.getPostId());
             postModel.setTimestamp(viewerPostModel.getTimestamp());
             postModel.setPostCaption(viewerPostModel.getPostCaption());
-            postModel.setLike(viewerPostModel.getLike());
-            postModel.setBookmark(viewerPostModel.getBookmark());
+            if (!ok) {
+                liked = viewerPostModel.getLike();
+                saved = viewerPostModel.getBookmark();
+            }
         }
 
         setupPostInfoBar("@"+viewerPostModel.getUsername(), viewerPostModel.getItemType(),
@@ -390,6 +394,7 @@ public final class PostViewer extends BaseLanguageActivity {
 
             if (isMainSwipe) {
                 slidePos = 0;
+                ok = false;
                 Log.d("AWAISKING_APP", "swipe left <<< post[" + position + "]: " + postModel + " -- " + slides);
                 postModel = itemGetterItems.get(position);
                 postModel.setPosition(position);
@@ -628,19 +633,19 @@ public final class PostViewer extends BaseLanguageActivity {
             postModel.setPostId(viewerPostModel.getPostId());
             postModel.setTimestamp(viewerPostModel.getTimestamp());
             postModel.setPostCaption(viewerPostModel.getPostCaption());
-            postModel.setLike(viewerPostModel.getLike());
-            postModel.setBookmark(viewerPostModel.getBookmark());
-            if (viewerPostModel.getLike() == true) {
-                viewerBinding.btnLike.setText(resources.getString(R.string.unlike, viewerPostModel.getLikes()));
+            if (liked == true) {
+                viewerBinding.btnLike.setText(resources.getString(R.string.unlike, viewerPostModel.getLikes()
+                        + ((ok && viewerPostModel.getLike() != liked) ? (liked ? 1L : -1L) : 0L)));
                 viewerBinding.btnLike.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(
                         getApplicationContext(), R.color.btn_pink_background)));
             }
             else {
-                viewerBinding.btnLike.setText(resources.getString(R.string.like, viewerPostModel.getLikes()));
+                viewerBinding.btnLike.setText(resources.getString(R.string.like, viewerPostModel.getLikes()
+                        + ((ok && viewerPostModel.getLike() != liked) ? (liked ? 1L : -1L) : 0L)));
                 viewerBinding.btnLike.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(
                         getApplicationContext(), R.color.btn_lightpink_background)));
             }
-            if (viewerPostModel.getBookmark() == true) {
+            if (saved == true) {
                 viewerBinding.btnBookmark.setText(R.string.unbookmark);
                 viewerBinding.btnBookmark.setBackgroundTintList(ColorStateList.valueOf(ContextCompat.getColor(
                         getApplicationContext(), R.color.btn_orange_background)));
@@ -755,20 +760,14 @@ public final class PostViewer extends BaseLanguageActivity {
         decorView.setSystemUiVisibility(newUiOptions);
     }
 
-    /*
-     Recommended for PERSONAL use only
-     Don't ever think about running a like farm with this
-     */
-
     class PostAction extends AsyncTask<String, Void, Void> {
-        boolean ok = false;
         String action;
 
         protected Void doInBackground(String... rawAction) {
             action = rawAction[0];
             final String url = "https://www.instagram.com/web/"+action+"/"+postModel.getPostId()+"/"+ (action == "save" ?
-                    (postModel.getBookmark() == true ? "unsave/" : "save/") :
-                    (postModel.getLike() == true ? "unlike/" : "like/"));
+                    (saved ? "unsave/" : "save/") :
+                    (liked ? "unlike/" : "like/"));
             try {
                 final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
                 urlConnection.setRequestMethod("POST");
@@ -780,7 +779,6 @@ public final class PostViewer extends BaseLanguageActivity {
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     ok = true;
                 }
-                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", action+": " + ex);
@@ -791,15 +789,14 @@ public final class PostViewer extends BaseLanguageActivity {
         @Override
         protected void onPostExecute(Void result) {
             if (ok == true && action == "likes") {
-                postModel.setLike(!viewerPostModel.getLike());
-                viewerPostModel.setManualLike(!viewerPostModel.getLike());
+                liked = !liked;
                 refreshPost();
             }
             else if (ok == true && action == "save") {
-                viewerPostModel.setBookmark(!viewerPostModel.getBookmark());
-                postModel.setBookmark(!viewerPostModel.getBookmark());
+                saved = !saved;
                 refreshPost();
             }
+            else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         }
     }
 }

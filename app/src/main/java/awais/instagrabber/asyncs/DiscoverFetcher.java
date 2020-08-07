@@ -31,13 +31,15 @@ import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemModel[]> {
-    private final String maxId;
+    private final String cluster, maxId;
     private final FetchListener<DiscoverItemModel[]> fetchListener;
     private int lastId = 0;
     private boolean isFirst, moreAvailable;
     private String nextMaxId;
 
-    public DiscoverFetcher(final String maxId, final FetchListener<DiscoverItemModel[]> fetchListener, final boolean isFirst) {
+    public DiscoverFetcher(final String cluster, final String maxId,
+                           final FetchListener<DiscoverItemModel[]> fetchListener, final boolean isFirst) {
+        this.cluster = cluster == null ? "explore_all%3A0" : cluster.replace(":", "%3A");
         this.maxId = maxId == null ? "" : "&max_id=" + maxId;
         this.fetchListener = fetchListener;
         this.isFirst = isFirst;
@@ -54,7 +56,7 @@ public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemMod
             result = discoverItemModels.toArray(new DiscoverItemModel[0]);
             if (result.length > 0) {
                 final DiscoverItemModel lastModel = result[result.length - 1];
-                if (lastModel != null) lastModel.setMore(moreAvailable, nextMaxId);
+                if (lastModel != null && nextMaxId != null) lastModel.setMore(moreAvailable, nextMaxId);
             }
         }
 
@@ -64,7 +66,7 @@ public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemMod
     private ArrayList<DiscoverItemModel> fetchItems(ArrayList<DiscoverItemModel> discoverItemModels, final String maxId) {
         try {
             final String url = "https://www.instagram.com/explore/grid/?is_prefetch=false&omit_cover_media=true&module=explore_popular" +
-                    "&use_sectional_payload=false&cluster_id=explore_all%3A0&include_fixed_destinations=true" + maxId;
+                    "&use_sectional_payload=false&cluster_id="+cluster+"&include_fixed_destinations=true" + maxId;
 
             final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
 
@@ -75,7 +77,7 @@ public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemMod
                 final JSONObject discoverResponse = new JSONObject(Utils.readFromConnection(urlConnection));
 
                 moreAvailable = discoverResponse.getBoolean("more_available");
-                nextMaxId = discoverResponse.getString("next_max_id");
+                nextMaxId = discoverResponse.optString("next_max_id");
 
                 final JSONArray sectionalItems = discoverResponse.getJSONArray("sectional_items");
                 if (discoverItemModels == null) discoverItemModels = new ArrayList<>(sectionalItems.length() * 2);

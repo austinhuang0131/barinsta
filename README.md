@@ -2,17 +2,20 @@
 
 ## InstaGrabber
 
-InstaGrabber is an app that allows...
+InstaGrabber is an alternative Instagram client for Android. You can...
 
-* Viewing **and downloading** Instagram posts (including tagged, and your own saved posts\*), stories (including highlights)\*, DM\*, and profile pictures, **without** letting people know you viewed it<sup>1</sup>! Works for followed private accounts\*!
-* Like/bookmark posts\*!
-* Interact with stories\*!
-* Downloading multiple posts at once (hold & select)!
-* (Un)follow/restrict/block people\*, and (un)follow hashtags\*! (Or you can add shortcuts to them, without logging in!)
-* **View, copy, like\*, reply\*, & delete\*** comments!
-* **Copy** post captions, DM messages\*, and profile bios.
-* **Compare** follower/following list<sup>2</sup>!
-* Searching usernames and hashtags.
+* **Search**: Profile / Hashtag / Location
+* **Profile**: View posts (timeline & face-tagged), copy bio, view stories\* (Highlight & status), follow\*, restrict\*, block\*, compare following/followers\*
+* **Hashtag**: View posts (newest only), view stories\*, follow\*
+* **Location**: View posts (newest only), view stories\*, open map
+* **Post**: View, download (+ batch download selected posts), copy captions, like/save\*
+* **Story\***: View (w/ incognito mode), download, interact with stickers, reply as DM
+* **Comment**: View (+ copy), write\*, reply\*, like\*, delete\*
+* **DM\***: View, download attachments, text reply
+* Viewing\* your own feed, discover, saved, and liked posts
+* Adding personal bookmarks to accounts/hashtags/locations locally
+
+We support private accounts!\*
 
 <sub>* Requires [login](#how-to-log-in). You must be a current follower of the desired private accounts, this app cannot hack people (which I have to state despite the obvious)!</sub>
 

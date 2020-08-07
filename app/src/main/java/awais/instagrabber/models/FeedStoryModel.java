@@ -6,10 +6,12 @@ public final class FeedStoryModel implements Serializable {
     private final String storyMediaId;
     private final ProfileModel profileModel;
     private StoryModel[] storyModels;
+    private boolean fullyRead;
 
-    public FeedStoryModel(final String storyMediaId, final ProfileModel profileModel) {
+    public FeedStoryModel(final String storyMediaId, final ProfileModel profileModel, final boolean fullyRead) {
         this.storyMediaId = storyMediaId;
         this.profileModel = profileModel;
+        this.fullyRead = fullyRead;
     }
 
     public String getStoryMediaId() {
@@ -26,5 +28,9 @@ public final class FeedStoryModel implements Serializable {
 
     public StoryModel[] getStoryModels() {
         return storyModels;
+    }
+
+    public boolean getFullyRead() {
+        return fullyRead;
     }
 }

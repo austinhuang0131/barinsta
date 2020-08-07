@@ -46,9 +46,11 @@ import static awais.instagrabber.models.direct_messages.DirectItemModel.RavenExp
 public final class MessageItemsAdapter extends RecyclerView.Adapter<TextMessageViewHolder> {
     private static final int MESSAGE_INCOMING = 69, MESSAGE_OUTGOING = 420;
     private final ProfileModel myProfileHolder =
-            new ProfileModel(false, false, false, null, null, null, null, null, null, null, 0, 0, 0, false, false, false, false);
+            new ProfileModel(false, false, false,
+                    Utils.getUserIdFromCookie(Utils.settingsHelper.getString(Constants.COOKIE)),
+                    null, null, null, null, null, null, 0, 0, 0, false, false, false, false);
     private final ArrayList<DirectItemModel> directItemModels;
-    private final ArrayList<ProfileModel> users;
+    private final ArrayList<ProfileModel> users, leftusers;
     private final View.OnClickListener onClickListener;
     private final MentionClickListener mentionClickListener;
     private final View.OnClickListener openProfileClickListener = v -> {
@@ -93,8 +95,10 @@ public final class MessageItemsAdapter extends RecyclerView.Adapter<TextMessageV
     private String strDmYou;
 
     public MessageItemsAdapter(final ArrayList<DirectItemModel> directItemModels, final ArrayList<ProfileModel> users,
-                               final View.OnClickListener onClickListener, final MentionClickListener mentionClickListener) {
+                               final ArrayList<ProfileModel> leftusers, final View.OnClickListener onClickListener,
+                               final MentionClickListener mentionClickListener) {
         this.users = users;
+        this.leftusers = leftusers;
         this.directItemModels = directItemModels;
         this.onClickListener = onClickListener;
         this.mentionClickListener = mentionClickListener;
@@ -392,10 +396,15 @@ public final class MessageItemsAdapter extends RecyclerView.Adapter<TextMessageV
     @Nullable
     private ProfileModel getUser(final long userId) {
         if (users != null) {
+            ProfileModel result = myProfileHolder;
             for (final ProfileModel user : users) {
-                if (Long.toString(userId).equals(user.getId())) return user;
-                return myProfileHolder;
+                if (Long.toString(userId).equals(user.getId())) result = user;
             }
+            if (leftusers != null)
+                for (final ProfileModel leftuser : leftusers) {
+                    if (Long.toString(userId).equals(leftuser.getId())) result = leftuser;
+                }
+            return result;
         }
         return null;
     }

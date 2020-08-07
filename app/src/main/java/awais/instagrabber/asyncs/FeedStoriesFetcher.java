@@ -64,8 +64,9 @@ public final class FeedStoriesFetcher extends AsyncTask<Void, Void, FeedStoryMod
                             null, 0, 0, 0, false, false, false, false);
 
                     final String id = node.getString("id");
+                    final boolean fullyRead = !node.isNull("seen") && node.getLong("seen") == node.getLong("latest_reel_media");
                     feedStoryIDs[i] = id;
-                    feedStoryModels[i] = new FeedStoryModel(id, profileModel);
+                    feedStoryModels[i] = new FeedStoryModel(id, profileModel, fullyRead);
                 }
                 result = feedStoryModels;
             }

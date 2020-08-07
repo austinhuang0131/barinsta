@@ -279,7 +279,6 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
                         commentsBinding.commentText.clearFocus();
                     }
                 }
-                else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", action+": " + ex);
@@ -296,10 +295,9 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
                     commentModel = null;
                     focus = null;
                 }
-
-                //imm.hideSoftInputFromWindow(commentsBinding.getView().getRootView().getWindowToken(), 0);
                 onRefresh();
             }
+            else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         }
     }
 }

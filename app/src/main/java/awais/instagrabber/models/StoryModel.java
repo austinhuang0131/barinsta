@@ -8,7 +8,7 @@ import awais.instagrabber.models.stickers.QuestionModel;
 import awais.instagrabber.models.stickers.QuizModel;
 
 public final class StoryModel implements Serializable {
-    private final String storyMediaId, storyUrl, username;
+    private final String storyMediaId, storyUrl, username, userId;
     private final MediaItemType itemType;
     private final long timestamp;
     private String videoUrl, tappableShortCode, tappableId, spotify;
@@ -17,14 +17,17 @@ public final class StoryModel implements Serializable {
     private QuizModel quiz;
     private String[] mentions;
     private int position;
-    private boolean isCurrentSlide = false;
+    private boolean isCurrentSlide = false, canReply = false;
 
-    public StoryModel(final String storyMediaId, final String storyUrl, final MediaItemType itemType, final long timestamp, final String username) {
+    public StoryModel(final String storyMediaId, final String storyUrl, final MediaItemType itemType,
+                      final long timestamp, final String username, final String userId, final boolean canReply) {
         this.storyMediaId = storyMediaId;
         this.storyUrl = storyUrl;
         this.itemType = itemType;
         this.timestamp = timestamp;
         this.username = username;
+        this.userId = userId;
+        this.canReply = canReply;
     }
 
     public String getStoryUrl() {
@@ -115,7 +118,15 @@ public final class StoryModel implements Serializable {
         return isCurrentSlide;
     }
 
+    public boolean canReply() {
+        return canReply;
+    }
+
     public String getUsername() {
         return username;
+    }
+
+    public String getUserId() {
+        return userId;
     }
 }

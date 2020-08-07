@@ -39,7 +39,7 @@ public final class InboxFetcher extends AsyncTask<Void, Void, InboxModel> {
         final String url = "https://i.instagram.com/api/v1/direct_v2/inbox/" + endCursor;
         try {
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
-            conn.setRequestProperty("User-Agent", Constants.USER_AGENT);
+            conn.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
             conn.setRequestProperty("Accept-Language", LocaleUtils.getCurrentLocale().getLanguage() + ",en-US;q=0.8");
             conn.setUseCaches(false);
 

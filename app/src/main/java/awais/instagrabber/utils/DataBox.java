@@ -166,7 +166,7 @@ public final class DataBox extends SQLiteOpenHelper {
 
         try (final SQLiteDatabase db = getReadableDatabase();
              final Cursor cursor = db.rawQuery("SELECT query_text, date_added FROM favorites WHERE "
-                     +KEY_QUERY_DISPLAY+"='"+query+"' ORDER BY date_added DESC", null)) {
+                     +KEY_QUERY_TEXT+"='"+query+"' ORDER BY date_added DESC", null)) {
             if (cursor != null && cursor.moveToFirst()) {
                 return cursor.getString(0) + "/" + String.valueOf(cursor.getLong(1));
             }

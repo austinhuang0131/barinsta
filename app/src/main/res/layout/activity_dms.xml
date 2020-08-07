@@ -1,19 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".activities.DirectMessages">
 
+    <include
+        android:id="@+id/toolbar"
+        android:layout_weight="1"
+        layout="@layout/layout_include_toolbar" />
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
+        android:layout_weight="8"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvDirectMessages"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/commentText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:paddingLeft="8dp"
+            android:gravity="bottom"
+            android:hint="@string/dm_hint"
+            android:inputType="textMultiLine"
+            android:maxLength="2200"
+            android:maxLines="10"
+            android:visibility="gone"
+            android:scrollHorizontally="false" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/commentSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:paddingRight="8dp"
+            android:visibility="gone"
+            app:srcCompat="@android:drawable/ic_menu_send" />
+
+    </LinearLayout>
 </LinearLayout>

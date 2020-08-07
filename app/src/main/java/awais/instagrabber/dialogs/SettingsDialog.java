@@ -40,6 +40,7 @@ import static awais.instagrabber.utils.Constants.BOTTOM_TOOLBAR;
 import static awais.instagrabber.utils.Constants.DOWNLOAD_USER_FOLDER;
 import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
+import static awais.instagrabber.utils.Constants.MARK_AS_SEEN;
 import static awais.instagrabber.utils.Constants.MUTED_VIDEOS;
 import static awais.instagrabber.utils.Constants.SHOW_FEED;
 import static awais.instagrabber.utils.Utils.settingsHelper;
@@ -121,11 +122,13 @@ public final class SettingsDialog extends BottomSheetDialogFragment implements V
         final AppCompatCheckBox cbAutoloadPosts = contentView.findViewById(R.id.cbAutoloadPosts);
         final AppCompatCheckBox cbAutoplayVideos = contentView.findViewById(R.id.cbAutoplayVideos);
         final AppCompatCheckBox cbDownloadUsername = contentView.findViewById(R.id.cbDownloadUsername);
+        final AppCompatCheckBox cbMarkAsSeen = contentView.findViewById(R.id.cbMarkAsSeen);
 
         cbSaveTo.setChecked(settingsHelper.getBoolean(FOLDER_SAVE_TO));
         cbMuteVideos.setChecked(settingsHelper.getBoolean(MUTED_VIDEOS));
         cbBottomToolbar.setChecked(settingsHelper.getBoolean(BOTTOM_TOOLBAR));
         cbAutoplayVideos.setChecked(settingsHelper.getBoolean(AUTOPLAY_VIDEOS));
+        cbMarkAsSeen.setChecked(settingsHelper.getBoolean(MARK_AS_SEEN));
 
         cbAutoloadPosts.setChecked(settingsHelper.getBoolean(AUTOLOAD_POSTS));
         cbDownloadUsername.setChecked(settingsHelper.getBoolean(DOWNLOAD_USER_FOLDER));
@@ -136,6 +139,7 @@ public final class SettingsDialog extends BottomSheetDialogFragment implements V
         setupListener(cbAutoloadPosts);
         setupListener(cbAutoplayVideos);
         setupListener(cbDownloadUsername);
+        setupListener(cbMarkAsSeen);
 
         btnSaveTo.setEnabled(cbSaveTo.isChecked());
 
@@ -203,6 +207,7 @@ public final class SettingsDialog extends BottomSheetDialogFragment implements V
         else if (id == R.id.cbAutoplayVideos) settingsHelper.putBoolean(AUTOPLAY_VIDEOS, checked);
         else if (id == R.id.cbMuteVideos) settingsHelper.putBoolean(MUTED_VIDEOS, checked);
         else if (id == R.id.cbAutoloadPosts) settingsHelper.putBoolean(AUTOLOAD_POSTS, checked);
+        else if (id == R.id.cbMarkAsSeen) settingsHelper.putBoolean(MARK_AS_SEEN, checked);
         else if (id == R.id.cbSaveTo) {
             settingsHelper.putBoolean(FOLDER_SAVE_TO, checked);
             btnSaveTo.setEnabled(checked);

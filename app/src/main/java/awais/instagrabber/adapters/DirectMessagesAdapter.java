@@ -60,7 +60,7 @@ public final class DirectMessagesAdapter extends RecyclerView.Adapter<DirectMess
                 for (int i = 0; i < Math.min(3, users.length); ++i)
                     glideRequestManager.load(users[i].getSdProfilePic()).into(holder.multipleProfilePics[i]);
 
-            } else {
+            } else if (users.length == 1) {
                 holder.ivProfilePic.setVisibility(View.VISIBLE);
                 holder.multipleProfilePicsContainer.setVisibility(View.GONE);
 
@@ -77,36 +77,45 @@ public final class DirectMessagesAdapter extends RecyclerView.Adapter<DirectMess
             final Context context = layoutInflater.getContext();
 
             final CharSequence messageText;
-            if (itemType == DirectItemType.TEXT)
-                messageText = lastItemModel.getText();
-            else if (itemType == DirectItemType.LINK)
-                messageText = context.getString(R.string.direct_messages_sent_link);
-            else if (itemType == DirectItemType.MEDIA || itemType == DirectItemType.MEDIA_SHARE)
-                messageText = context.getString(R.string.direct_messages_sent_media);
-            else if (itemType == DirectItemType.ACTION_LOG) {
-                final DirectItemActionLogModel logModel = lastItemModel.getActionLogModel();
-                messageText = logModel != null ? logModel.getDescription() : "...";
-            }
-            else if (itemType == DirectItemType.REEL_SHARE) {
-                final DirectItemReelShareModel reelShare = lastItemModel.getReelShare();
-                if (reelShare == null)
+            switch (itemType) {
+                case TEXT:
+                    messageText = lastItemModel.getText();
+                    break;
+                case LINK:
+                    messageText = context.getString(R.string.direct_messages_sent_link);
+                    break;
+                case MEDIA:
+                case MEDIA_SHARE:
                     messageText = context.getString(R.string.direct_messages_sent_media);
-                else {
-                    final String reelType = reelShare.getType();
-                    final int textRes;
-                    if ("reply".equals(reelType)) textRes = R.string.direct_messages_replied_story;
-                    else if ("mention".equals(reelType))
-                        textRes = R.string.direct_messages_mention_story;
-                    else if ("reaction".equals(reelType))
-                        textRes = R.string.direct_messages_reacted_story;
-                    else textRes = R.string.direct_messages_sent_media;
+                    break;
+                case ACTION_LOG:
+                    final DirectItemActionLogModel logModel = lastItemModel.getActionLogModel();
+                    messageText = logModel != null ? logModel.getDescription() : "...";
+                    break;
+                case REEL_SHARE:
+                    final DirectItemReelShareModel reelShare = lastItemModel.getReelShare();
+                    if (reelShare == null)
+                        messageText = context.getString(R.string.direct_messages_sent_media);
+                    else {
+                        final String reelType = reelShare.getType();
+                        final int textRes;
+                        if ("reply".equals(reelType))
+                            textRes = R.string.direct_messages_replied_story;
+                        else if ("mention".equals(reelType))
+                            textRes = R.string.direct_messages_mention_story;
+                        else if ("reaction".equals(reelType))
+                            textRes = R.string.direct_messages_reacted_story;
+                        else textRes = R.string.direct_messages_sent_media;
 
-                    messageText = context.getString(textRes) + " : " + reelShare.getText();
-                }
+                        messageText = context.getString(textRes) + " : " + reelShare.getText();
+                    }
+                    break;
+                case RAVEN_MEDIA:
+                    messageText = context.getString(R.string.direct_messages_sent_media);
+                    break;
+                default:
+                    messageText = "<i>Unsupported message</i>";
             }
-            else if (itemType == DirectItemType.RAVEN_MEDIA) {
-                messageText = context.getString(R.string.direct_messages_sent_media);
-            } else messageText = "<i>Unsupported message</i>";
 
             holder.tvMessage.setText(HtmlCompat.fromHtml(messageText.toString(), 63));
 
