@@ -8,7 +8,6 @@
     <string name="action_setting">Settings (v%s)</string>
     <string name="action_settings">Settings</string>
     <string name="action_download">Download</string>
-    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">Search username…</string>
     <string name="action_compare">Compare</string>
     <string name="single_like">like</string>
