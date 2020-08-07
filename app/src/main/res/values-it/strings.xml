@@ -8,7 +8,7 @@
     <string name="action_setting">Impostazioni (v%s)</string>
     <string name="action_settings">Impostazioni</string>
     <string name="action_download">Scarica</string>
-    <string name="action_seen">Mark as Seen</string>
+    <string name="action_seen">Segna come letto</string>
     <string name="action_search">Cerca utente…</string>
     <string name="action_compare">Compara</string>
     <string name="single_like">like</string>
@@ -42,11 +42,11 @@
     <string name="save_to_folder">Salva nella cartella personalizzata</string>
     <string name="select_folder">Seleziona cartella</string>
     <string name="theme_settings">Impostazioni tema</string>
-    <string name="login_settings">Only affects logged-in users:</string>
-    <string name="anonymous_settings">Only affects anonymous users:</string>
+    <string name="login_settings">Riguarda solo gli utenti con l\'accesso:</string>
+    <string name="anonymous_settings">Riguarda solo utenti anonimi:</string>
     <string name="privacy_warning">Privacy</string>
-    <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
-    <string name="storiesig_settings">Use storiesig for stories and highlights from public users</string>
+    <string name="instadp_settings">Usa Instadp per le immagini del profilo ad alta definizione</string>
+    <string name="storiesig_settings">Usa storiesig per storie e momenti salienti da utenti pubblici</string>
     <string name="import_export">Importa/Esporta</string>
     <string name="select_language">Seleziona lingua</string>
     <string name="what_to_do_dialog">Cosa fare?</string>
@@ -69,7 +69,7 @@
     <string name="view_story_post">Mostra Post</string>
     <string name="view_post">Mostra Post</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Can\'t interact if y\'ain\'t logged in!</string>
+    <string name="stories_notloggedin">Impossibile interagire se non hai effettuato l\'accesso!</string>
     <string name="vote_story_poll">Vota</string>
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
