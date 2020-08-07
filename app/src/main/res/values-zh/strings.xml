@@ -8,7 +8,6 @@
     <string name="action_setting">设定 (v%s)</string>
     <string name="action_settings">设定</string>
     <string name="action_download">下载</string>
-    <string name="action_seen">Mark as Seen</string>
     <string name="action_search">搜索用户名…</string>
     <string name="action_compare">比较</string>
     <string name="single_like">次赞</string>
