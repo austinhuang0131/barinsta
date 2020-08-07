@@ -27,7 +27,7 @@
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>Yükleniyor...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
