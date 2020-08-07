@@ -58,7 +58,7 @@
     <string name="post_viewer_autoplay_video">Videoları otomatik oynat</string>
     <string name="post_viewer_muted_autoplay">Videoları her zaman sustur</string>
     <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Note: Current [Session] won\'t show this dialog until you\'re here, and will always download shown post slide.</string>
+    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Not: Mevcut [Session] siz buraya gelene kadar bu uyarıyı göstermeyecek ve hep gösterilen gönderiyi indirecek.</string>
     <string name="post_viewer_download_dialog_title">İndirmek için seçin</string>
     <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Geçerli Oturum [Session]</string>
     <string name="post_viewer_download_current">Güncel</string>
