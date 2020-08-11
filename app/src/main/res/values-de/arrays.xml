@@ -10,7 +10,7 @@
         <item>Italienisch [Danke an @RAR_Ramar (Telegram)]</item>
         <item>Deutsch [Danke an @peterge1998 (GitHub)]</item>
         <item>Polnisch [Danke an @Lego8486 (GitHub)]</item>
-        <item>Turkish [Thanks to @faydin90 (Telegram)]</item>
+        <item>Türkisch [Danke an @faydin90 (Telegram)]</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Folge System</item>
@@ -27,7 +27,7 @@
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>Lädt...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
