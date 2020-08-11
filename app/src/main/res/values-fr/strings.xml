@@ -208,4 +208,5 @@
     <string name="updated">Merci d\'avoir mis à jour InstaGrabber !</string>
     <string name="crash_title">L\'application a planté</string>
     <string name="crash_descr">Oups.. l\'application a planté, mais ne vous inquiétez pas, vous pouvez envoyer un rapport d\'erreur au développeur pour l\'aider à résoudre le problème :)</string>
+    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
 </resources>
