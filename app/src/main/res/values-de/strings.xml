@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Der ursprüngliche Maintainer, AWAiS, entwickelte InstaGrabber als kleine und einfache App mit dem Ziel, [steali-]Beiträge vom Instagram herunterzuladen. Leider wurde das Projekt aufgegeben und ich, Austin Huang, übernahm die Entwicklung. Die App ist vollständig Open Source, Werbe- und Trackerfrei [abgesehen von dem, was Instagram weiß]. Auch wenn Dir die Downloadfunktion egal ist, [wie mir], ist es immer noch ein großartiger Instagram-Client!\n\nHast du Fragen [oder andere Anmerkungen]? Kontaktiere mich unter instagrabber@austinhuang.me oder klicke auf einen der Button.</string>
+    <string name="description">Der ursprüngliche Maintainer, AWAiS, entwickelte InstaGrabber als kleine und einfache App mit dem Ziel, Beiträge vom Instagram herunterzuladen. Leider wurde das Projekt aufgegeben und ich, Austin Huang, übernahm die Entwicklung. Die App ist vollständig Open Source, Werbe- und Trackerfrei [abgesehen von dem, was Instagram weiß]. Auch wenn Dir die Downloadfunktion egal ist, [genau so wie mir], ist es immer noch ein großartiger Instagram-Client!\n\nHast du Fragen, [oder andere Anmerkungen]? Kontaktiere mich unter instagrabber@austinhuang.me oder klicke auf einen der Buttons.</string>
     <string name="action_quickaccess">Schnellzugriff</string>
     <string name="action_about">Über</string>
     <string name="action_notif">Benachrichtigungen</string>
@@ -45,7 +45,7 @@
     <string name="anonymous_settings">Betrifft nur anonyme Benutzer:</string>
     <string name="privacy_warning">Datenschutz</string>
     <string name="instadp_settings">Verwende Instadp für hochauflösende Profilbilder</string>
-    <string name="storiesig_settings">Use storiesig for stories and highlights from public users</string>
+    <string name="storiesig_settings">Verwende storiesig für Stories und Highlights von öffentlichen Nutzern</string>
     <string name="import_export">Importieren/Exportieren</string>
     <string name="select_language">Sprache auswählen</string>
     <string name="what_to_do_dialog">Was soll ich tun?</string>
@@ -90,7 +90,7 @@
     <string name="login">Anmelden</string>
     <string name="logout">Abmelden</string>
     <string name="send_logs">Debug-Protokolle senden</string>
-    <string name="time_settings">Beitragszeit Einstellungen</string>
+    <string name="time_settings">Zeitformat für Posts</string>
     <string name="project_link">Projektseite aufrufen</string>
     <string name="telegram_link">Telegram Gruppe beitreten</string>
     <string name="matrix_link">Matrix Raum beitreten</string>
@@ -154,7 +154,7 @@
     <string name="dms_inbox_raven_media_delivered">Zugestellt</string>
     <string name="dms_inbox_raven_media_sent">Gesendet</string>
     <string name="dms_inbox_raven_media_opened">Geöffnet</string>
-    <string name="dms_inbox_raven_media_replayed">Replayed</string>
+    <string name="dms_inbox_raven_media_replayed">Abgespielt</string>
     <string name="dms_inbox_raven_media_sending">Wird gesendet…</string>
     <string name="dms_inbox_raven_media_blocked">Blockiert</string>
     <string name="dms_inbox_raven_media_suggested">Empfohlen</string>
