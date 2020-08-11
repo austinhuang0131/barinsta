@@ -208,4 +208,5 @@
     <string name="updated">InstaGrabber\'ı güncellediğin için teşekkürler!</string>
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
+    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
 </resources>
