@@ -208,4 +208,5 @@
     <string name="updated">Terima kasih sudah menggunakan InstaGrabber!</string>
     <string name="crash_title">Aplikasi berhenti bekerja…</string>
     <string name="crash_descr">Ups! Aplikasi berhenti bekerja! Jangan khawatir, anda dapat mengirimkan laporan galat/kesalahan kepada Pengembang untuk membantunya memperbaiki masalah ini. (:</string>
+    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
 </resources>
