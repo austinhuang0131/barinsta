@@ -208,4 +208,5 @@
     <string name="updated">Grazie per aver aggiornato InstaGrabber!</string>
     <string name="crash_title">L\'app si è arrestata in modo anomalo</string>
     <string name="crash_descr">Oops… L\'app si è arrestata in modo anomalo, ma non preoccuparti, puoi inviare una segnalazione di errore allo sviluppatore per aiutarlo a risolvere il problema. (:</string>
+    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
 </resources>
