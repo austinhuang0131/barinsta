@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>Sistema por Defecto</item>
+        <item>Predeterminado del sistema</item>
         <item>Inglés</item>
         <item>Francés [Gracias a @kernoeb (Telegram)]</item>
         <item>Español [Gracias a @sguinetti (GitLab)]</item>
@@ -27,7 +27,7 @@
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>Cargando...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
