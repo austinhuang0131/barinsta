@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>Padrão do sistema</item>
+        <item>Inglês</item>
+        <item>Francês Agradecimentos a @kernoeb (Telegram)]</item>
+        <item>Espanhol Agradecimentos a @sguinetti (GitLab)]</item>
+        <item>Chinês (Simplificado)</item>
+        <item>Indonésio [Agradecimentos a @ Galang23 (GitLab)]</item>
+        <item>Italiano [Agradecimentos a @RAR_Ramar (Telegram)]</item>
+        <item>Alemão [Agradecimentos a @ peterge1998 (GitHub)]</item>
+        <item>Polonês [Agradecimentos a @ Lego8486 (GitHub)]</item>
+        <item>Turco [Agradecimentos a @ faydin90 (Telegram)]</item>
+    </string-array>
+    <string-array name="theme_presets">
+        <item>Auto / Seguir o sistema</item>
+        <item>Automático / Acompanhar bateria</item>
+        <item>Escuro</item>
+        <item>Claro</item>
+    </string-array>
+    <string-array name="separator_presets">
+        <item>Nenhum</item>
+        <item>\@</item>
+        <item>em</item>
+        <item>para</item>
+        <item>\|</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="discover_placeholder">
+        <item>Carregando...</item>
+    </string-array>
+    <string-array name="date_presets">
+        <item>dd-MM-yyyy</item>
+        <item>dd/MM/yyyy</item>
+        <item>dd.MM.yyyy</item>
+        <item>dd-MM-yy</item>
+        <item>dd/MM/yy</item>
+        <item>dd.MM.yy</item>
+        <item>dd-MMM-yyyy</item>
+        <item>dd/MMM/yyyy</item>
+        <item>dd.MMM.yyyy</item>
+        <item>dd-MMM-yy</item>
+        <item>dd/MMM/yy</item>
+        <item>dd.MMM.yy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MM/dd/yyyy</item>
+        <item>MM.dd.yyyy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy/MM/dd</item>
+        <item>yyyy.MM.dd</item>
+        <item>MM-dd-yy</item>
+        <item>MM/dd/yy</item>
+        <item>MM.dd.yy</item>
+        <item>yy-MM-dd</item>
+        <item>yy/MM/dd</item>
+        <item>yy.MM.dd</item>
+        <item>MMM-dd-yyyy</item>
+        <item>MMM/dd/yyyy</item>
+        <item>MMM.dd.yyyy</item>
+        <item>yyyy-MMM-dd</item>
+        <item>yyyy/MMM/dd</item>
+        <item>yyyy.MMM.dd</item>
+        <item>MMM-dd-yy</item>
+        <item>MMM/dd/yy</item>
+        <item>MMM.dd.yy</item>
+        <item>yy-MMM-dd</item>
+        <item>yy/MMM/dd</item>
+        <item>yy.MMM.dd</item>
+    </string-array>
+    <string-array name="time_presets">
+        <item>hh:mm:ss a</item>
+        <item>h:mm:ss a</item>
+        <item>HH:mm:ss</item>
+        <item>H:mm:ss</item>
+    </string-array>
+</resources>
