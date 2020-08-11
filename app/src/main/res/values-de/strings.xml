@@ -50,8 +50,8 @@
     <string name="select_language">Sprache auswählen</string>
     <string name="what_to_do_dialog">Was soll ich tun?</string>
     <string name="main_posts_count">%s\nBeiträge</string>
-    <string name="main_posts_followers">%s\nFollower</string>
-    <string name="main_posts_following">%s\nFollower</string>
+    <string name="main_posts_followers">%s\nAbonnenten</string>
+    <string name="main_posts_following">%s\nabonniert</string>
     <string name="post_viewer_video_post">Videobeitrag</string>
     <string name="post_viewer_image_post">Bildbeitrag</string>
     <string name="post_viewer_autoplay_video">Videos automatisch abspielen</string>
@@ -96,7 +96,7 @@
     <string name="matrix_link">Matrix Raum beitreten</string>
     <string name="liked">Gefällt mir</string>
     <string name="saved">Gespeichert</string>
-    <string name="tagged">Getagged</string>
+    <string name="tagged">Markiert</string>
     <string name="like">Like (%s)</string>
     <string name="unlike">Unlike (%s)</string>
     <string name="bookmark">Lesezeichen</string>
