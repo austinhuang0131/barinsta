@@ -208,4 +208,5 @@
     <string name="updated">Danke für die Aktualisierung von InstaGrabber!</string>
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden um ihm zu helfen, das Problem zu beheben. (:</string>
+    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
 </resources>
