@@ -211,4 +211,5 @@
     <string name="updated">Thank you for updating InstaGrabber!</string>
     <string name="crash_title">App crashed</string>
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
+    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
 </resources>
