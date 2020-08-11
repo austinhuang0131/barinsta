@@ -21,8 +21,8 @@
     <string-array name="separator_presets">
         <item>Kein(e)</item>
         <item>\@</item>
-        <item>bei</item>
-        <item>an</item>
+        <item>um</item>
+        <item>am</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
