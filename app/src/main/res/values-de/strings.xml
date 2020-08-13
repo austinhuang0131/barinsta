@@ -158,7 +158,7 @@
     <string name="dms_inbox_raven_media_sending">Wird gesendet…</string>
     <string name="dms_inbox_raven_media_blocked">Blockiert</string>
     <string name="dms_inbox_raven_media_suggested">Empfohlen</string>
-    <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
+    <string name="dms_inbox_raven_media_screenshot">Gescreenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Kann nicht zugestellt werden</string>
     <string name="direct_download">Direkt herunterladen</string>
     <string name="direct_download_desc">Lade Posts direkt auf das Handy herunter!</string>
@@ -197,7 +197,7 @@
     <string name="comment_notif">Hat deinen Beitrag kommentiert:</string>
     <string name="follow_notif">folgt dir jetzt.</string>
     <string name="mention_notif">Hat dich erwähnt:</string>
-    <string name="request_notif">Requested following you</string>
+    <string name="request_notif">Angefordert dir zu folgen</string>
     <string name="request_approve">Anfrage annehmen</string>
     <string name="request_reject">Anfrage ablehnen</string>
     <string name="share_public_post">Diesen öffentlichen Beitrag teilen mit...</string>
@@ -208,5 +208,5 @@
     <string name="updated">Danke für die Aktualisierung von InstaGrabber!</string>
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden um ihm zu helfen, das Problem zu beheben. (:</string>
-    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
+    <string name="use_amoled_dark_theme">Nutze AMOLED-Modus für Dunkles Design</string>
 </resources>
