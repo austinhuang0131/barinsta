@@ -3,7 +3,6 @@
     <string name="description">Der ursprüngliche Maintainer, AWAiS, entwickelte InstaGrabber als kleine und einfache App mit dem Ziel, Beiträge vom Instagram herunterzuladen. Leider wurde das Projekt aufgegeben und ich, Austin Huang, übernahm die Entwicklung. Die App ist vollständig Open Source, Werbe- und Trackerfrei [abgesehen von dem, was Instagram weiß]. Auch wenn Dir die Downloadfunktion egal ist, [genau so wie mir], ist es immer noch ein großartiger Instagram-Client!\n\nHast du Fragen, [oder andere Anmerkungen]? Kontaktiere mich unter instagrabber@austinhuang.me oder klicke auf einen der Buttons.</string>
     <string name="action_quickaccess">Schnellzugriff</string>
     <string name="action_about">Über</string>
-    <string name="action_notif">Benachrichtigungen</string>
     <string name="action_dms">Direktnachrichten</string>
     <string name="action_setting">Einstellungen (v%s)</string>
     <string name="action_settings">Einstellungen</string>
@@ -209,4 +208,5 @@
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden um ihm zu helfen, das Problem zu beheben. (:</string>
     <string name="use_amoled_dark_theme">Nutze AMOLED-Modus für Dunkles Design</string>
+    <string name="action_notif">Activity</string>
 </resources>
