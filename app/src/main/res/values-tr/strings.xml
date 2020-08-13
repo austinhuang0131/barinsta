@@ -3,7 +3,6 @@
     <string name="description">İlk geliştiricisi olan AWAIS, InstaGrabber adında küçük ve basit bir uygulama yaptı. Amacı Instagram paylaşımlarını [çalma-] indirmekti. Ne yazık ki bir süre sonra projeyi bıraktı ve ben, Austin Huang, devraldım. [Umarım biraz para da kazanırım.] Her şeyden önce bu uygulama tamamen açık kaynak kodlu, reklamsız ve gizliliğe önem veriyor [Instagram\'ın zaten bildikleri ayrı konu]. Eğer paylaşım indirmek amacınız olmasa bile [benim gibi], bir Instagram alternatifi olarak kullanmak için bile harika bir uygulama!\n\nSorun varsa ya da sadece konuşmak istiyorsan instagrabber@austinhuang.me üzerinden ulaşabilir ya da aşağıdaki butonlara tıklayabilirsin. Hatırlatmakta fayda var, Türkçe bilmiyorum.</string>
     <string name="action_quickaccess">Hızlı Erişim</string>
     <string name="action_about">Hakkında</string>
-    <string name="action_notif">Bildirimler</string>
     <string name="action_dms">Direkt Mesajlar</string>
     <string name="action_setting">Ayarlar (v%s)</string>
     <string name="action_settings">Ayarlar</string>
@@ -209,4 +208,5 @@
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="use_amoled_dark_theme">\'AMOLED ekran için Koyu Tema\'yı kullan</string>
+    <string name="action_notif">Activity</string>
 </resources>
