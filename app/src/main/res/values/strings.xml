@@ -190,7 +190,7 @@
     <string name="followers_compare">Comparing followers &amp; following</string>
     <string name="followers_both_following">Both following each other</string>
     <string name="followers_not_following">not following %s</string>
-    <string name="followers_not_follower">%s not following</string>
+    <string name="followers_not_follower">%s is not following</string>
     <string name="login_error_loading_cookies">Error loading cookies</string>
     <string name="login_success_loading_cookies">Successfully loaded cookies!\nIf you still can\'t open private pages/posts, re-login!</string>
     <string name="comment_hint">Write a new comment...</string>
