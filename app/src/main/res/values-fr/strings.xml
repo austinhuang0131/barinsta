@@ -187,7 +187,7 @@
     <string name="followers_compare">Comparer les abonnés et abonnements</string>
     <string name="followers_both_following">Abonnements en commun</string>
     <string name="followers_not_following">Comptes qui ne suivent pas %s</string>
-    <string name="followers_not_follower">Comptes non suivis par %s </string>
+    <string name="followers_not_follower">Comptes non suivis par %s</string>
     <string name="login_error_loading_cookies">Erreur de chargement des cookies</string>
     <string name="login_success_loading_cookies">Cookies chargés avec succès!\nSi vous ne pouvez toujours pas ouvrir de pages/postes privés, reconnectez-vous !</string>
     <string name="comment_hint">Écrire un nouveau commentaire...</string>
