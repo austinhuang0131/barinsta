@@ -208,5 +208,5 @@
     <string name="crash_title">Aplikasi berhenti bekerja…</string>
     <string name="crash_descr">Ups! Aplikasi berhenti bekerja! Jangan khawatir, anda dapat mengirimkan laporan galat/kesalahan kepada Pengembang untuk membantunya memperbaiki masalah ini. (:</string>
     <string name="use_amoled_dark_theme">Gunakan AMOLED untuk tema gelap</string>
-    <string name="action_notif">Activity</string>
+    <string name="action_notif">Aktivitas</string>
 </resources>
