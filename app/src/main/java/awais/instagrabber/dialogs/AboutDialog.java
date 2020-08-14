@@ -42,7 +42,7 @@ public final class AboutDialog extends BottomSheetDialogFragment {
             else if (v == btnMatrix) {
                 intent.setData(Uri.parse("https://matrix.to/#/#instagrabber:matrix.org"));
             } else
-                intent.setData(Uri.parse("https://github.com/austinhuang0131/instagrabber/"));
+                intent.setData(Uri.parse("https://instagrabber.austinhuang.me"));
             startActivity(intent);
         };
         btnProject.setOnClickListener(onClickListener);

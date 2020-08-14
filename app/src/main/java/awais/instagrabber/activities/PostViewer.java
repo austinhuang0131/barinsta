@@ -122,7 +122,7 @@ public final class PostViewer extends BaseLanguageActivity {
         if (which == 0) {
             searchUsername(username);
         } else if (profileModel != null && which == 1) {
-            startActivity(new Intent(this, ProfileViewer.class)
+            startActivity(new Intent(this, ProfilePicViewer.class)
                     .putExtra(Constants.EXTRAS_PROFILE, profileModel));
         }
     };
@@ -206,21 +206,6 @@ public final class PostViewer extends BaseLanguageActivity {
             viewerBinding.mediaList.setVisibility(View.VISIBLE);
         }
 
-        final View viewStoryPost = findViewById(R.id.viewStoryPost);
-        if (viewStoryPost != null) {
-            viewStoryPost.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (profileModel.isPrivate())
-                        Toast.makeText(getApplicationContext(), R.string.share_private_post, Toast.LENGTH_LONG).show();
-                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                    sharingIntent.setType("text/plain");
-                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+postModel.getShortCode());
-                    startActivity(Intent.createChooser(sharingIntent,
-                            (profileModel.isPrivate()) ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
-                }
-            });
-        }
-
         viewerCaptionParent.setOnTouchListener(gestureTouchListener);
         viewerBinding.playerView.setOnTouchListener(gestureTouchListener);
         viewerBinding.imageViewer.setOnSingleFlingListener((e1, e2, velocityX, velocityY) -> {
@@ -237,7 +222,7 @@ public final class PostViewer extends BaseLanguageActivity {
         viewerBinding.bottomPanel.commentsCount.setText(String.valueOf(commentsCount));
         viewerBinding.bottomPanel.btnComments.setVisibility(View.VISIBLE);
 
-        postShortCode = postModel.getShortCode();
+        postShortCode = result[0].getShortCode();
 
         viewerBinding.bottomPanel.btnComments.setOnClickListener(v ->
                 startActivityForResult(new Intent(this, CommentsViewer.class)
@@ -291,24 +276,8 @@ public final class PostViewer extends BaseLanguageActivity {
 
         resources = getResources();
 
-        final View viewStoryPost = findViewById(R.id.viewStoryPost);
-        if (viewStoryPost != null) {
-            viewStoryPost.setOnClickListener(new View.OnClickListener() {
-                public void onClick(View v) {
-                    if (profileModel.isPrivate())
-                        Toast.makeText(getApplicationContext(), R.string.share_private_post, Toast.LENGTH_LONG).show();
-                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
-                    sharingIntent.setType("text/plain");
-                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+postShortCode);
-                    startActivity(Intent.createChooser(sharingIntent,
-                            (profileModel.isPrivate()) ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
-                }
-            });
-        }
-
         viewerBinding.topPanel.title.setMovementMethod(new LinkMovementMethod());
-        viewerBinding.topPanel.title.setMentionClickListener((view, text, isHashtag) ->
-                onClickListener.onClick(viewerBinding.topPanel.ivProfilePic));
+        viewerBinding.topPanel.title.setMentionClickListener((view, text, isHashtag) -> searchUsername(text));
         viewerBinding.topPanel.ivProfilePic.setOnClickListener(onClickListener);
 
         viewerBinding.ivToggleFullScreen.setOnClickListener(onClickListener);
@@ -332,7 +301,6 @@ public final class PostViewer extends BaseLanguageActivity {
                 new String[]{resources.getString(R.string.open_profile), resources.getString(R.string.view_pfp)});
 
         postModel.setPosition(intent.getIntExtra(Constants.EXTRAS_INDEX, -1));
-        postShortCode = postModel.getShortCode();
 
         final boolean postIdNull = postModel.getPostId() == null;
         if (!postIdNull)
@@ -432,25 +400,24 @@ public final class PostViewer extends BaseLanguageActivity {
     }
 
     private void searchUsername(final String text) {
-        if (Main.scanHack != null) {
-            Main.scanHack.onResult(text);
-            setResult(6969);
-            Intent intent = new Intent(getApplicationContext(), Main.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-        }
+        startActivity(
+                new Intent(getApplicationContext(), ProfileViewer.class)
+                .putExtra(Constants.EXTRAS_USERNAME, text)
+        );
     }
 
     private void setupVideo() {
         viewerBinding.playerView.setVisibility(View.VISIBLE);
         viewerBinding.bottomPanel.btnDownload.setVisibility(View.VISIBLE);
         viewerBinding.bottomPanel.btnMute.setVisibility(View.VISIBLE);
-        viewsContainer.setVisibility(View.VISIBLE);
         viewerBinding.progressView.setVisibility(View.GONE);
         viewerBinding.imageViewer.setVisibility(View.GONE);
         viewerBinding.imageViewer.setImageDrawable(null);
 
-        viewerBinding.bottomPanel.tvVideoViews.setText(String.valueOf(viewerPostModel.getVideoViews()));
+        if (viewerPostModel.getVideoViews() > -1) {
+            viewsContainer.setVisibility(View.VISIBLE);
+            viewerBinding.bottomPanel.tvVideoViews.setText(String.valueOf(viewerPostModel.getVideoViews()));
+        }
 
         player = new SimpleExoPlayer.Builder(this).build();
         viewerBinding.playerView.setPlayer(player);
@@ -591,7 +558,6 @@ public final class PostViewer extends BaseLanguageActivity {
     }
 
     private void refreshPost() {
-        postShortCode = postModel.getShortCode();
         if (containerLayoutParams.weight != 3.3f) {
             containerLayoutParams.weight = (viewerBinding.mediaList.getVisibility() == View.VISIBLE) ? 1.35f : 1.9f;
             viewerBinding.container.setLayoutParams(containerLayoutParams);
@@ -615,11 +581,7 @@ public final class PostViewer extends BaseLanguageActivity {
 
         if (Utils.hasMentions(postCaption)) {
             viewerBinding.bottomPanel.viewerCaption.setText(Utils.getMentionText(postCaption), TextView.BufferType.SPANNABLE);
-            viewerBinding.bottomPanel.viewerCaption.setMentionClickListener((view, text, isHashtag) ->
-                    new AlertDialog.Builder(PostViewer.this).setTitle(text)
-                            .setMessage(isHashtag ? R.string.comment_view_mention_hash_search : R.string.comment_view_mention_user_search)
-                            .setNegativeButton(R.string.cancel, null).setPositiveButton(R.string.ok,
-                            (dialog, which) -> searchUsername(text)).show());
+            viewerBinding.bottomPanel.viewerCaption.setMentionClickListener((view, text, isHashtag) -> searchUsername(text));
         } else {
             viewerBinding.bottomPanel.viewerCaption.setMentionClickListener(null);
             viewerBinding.bottomPanel.viewerCaption.setText(postCaption);
@@ -714,6 +676,21 @@ public final class PostViewer extends BaseLanguageActivity {
                                 return false;
                             }
                         }).into(viewerBinding.topPanel.ivProfilePic);
+
+                        final View viewStoryPost = findViewById(R.id.viewStoryPost);
+                        if (viewStoryPost != null) {
+                            viewStoryPost.setOnClickListener(new View.OnClickListener() {
+                                public void onClick(View v) {
+                                    if (result.isPrivate())
+                                        Toast.makeText(getApplicationContext(), R.string.share_private_post, Toast.LENGTH_LONG).show();
+                                    Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+                                    sharingIntent.setType("text/plain");
+                                    sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+postShortCode);
+                                    startActivity(Intent.createChooser(sharingIntent,
+                                            (result.isPrivate()) ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
+                                }
+                            });
+                        }
                     }
                 }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
             prevUsername = from;
@@ -738,12 +715,7 @@ public final class PostViewer extends BaseLanguageActivity {
         else {
             viewerBinding.topPanel.location.setVisibility(View.VISIBLE);
             viewerBinding.topPanel.location.setText(location.optString("name"));
-            viewerBinding.topPanel.location.setOnClickListener(v ->
-                new AlertDialog.Builder(PostViewer.this).setTitle(location.optString("name"))
-                        .setMessage(R.string.comment_view_mention_location_search)
-                        .setNegativeButton(R.string.cancel, null).setPositiveButton(R.string.ok,
-                        (dialog, which) -> searchUsername(location.optString("id")+"/"+location.optString("slug"))).show()
-            );
+            viewerBinding.topPanel.location.setOnClickListener(v -> searchUsername(location.optString("id")+"/"+location.optString("slug")));
             viewerBinding.topPanel.title.setLayoutParams(new RelativeLayout.LayoutParams(
                     RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT
             ));

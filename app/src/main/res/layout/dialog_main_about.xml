@@ -75,6 +75,16 @@
                 android:textColor="@color/btn_green_text_color"
                 android:textSize="20sp"
                 app:backgroundTint="@color/btn_green_background" />
+
+            <awais.instagrabber.customviews.RamboTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:padding="8dp"
+                android:text="@string/license"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textSize="16sp"
+                android:textColor="?android:textColorPrimary" />
         </androidx.appcompat.widget.LinearLayoutCompat>
     </androidx.core.widget.NestedScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>

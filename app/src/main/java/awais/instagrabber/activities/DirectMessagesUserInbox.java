@@ -181,9 +181,7 @@ public final class DirectMessagesUserInbox extends BaseLanguageActivity {
             searchUsername(text);
         });
 
-        dmsBinding.rvDirectMessages.setAdapter(
-                messageItemsAdapter
-        );
+        dmsBinding.rvDirectMessages.setAdapter(messageItemsAdapter);
 
         new UserInboxFetcher(threadModel.getThreadId(), UserInboxDirection.OLDER, null, fetchListener).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
@@ -205,13 +203,7 @@ public final class DirectMessagesUserInbox extends BaseLanguageActivity {
     }
 
     private void searchUsername(final String text) {
-        if (Main.scanHack != null) {
-            Main.scanHack.onResult(text);
-            setResult(6969);
-            Intent intent = new Intent(getApplicationContext(), Main.class);
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-            startActivity(intent);
-        }
+        startActivity(new Intent(getApplicationContext(), ProfileViewer.class).putExtra(Constants.EXTRAS_USERNAME, text));
     }
 
     private final View.OnClickListener newCommentListener = v -> {
@@ -224,10 +216,9 @@ public final class DirectMessagesUserInbox extends BaseLanguageActivity {
         boolean ok = false;
 
         protected Void doInBackground(Void... lmao) {
-            final String url = "https://i.instagram.com/api/v1/direct_v2/create_group_thread/";
+            final String url2 = "https://i.instagram.com/api/v1/direct_v2/threads/broadcast/text/";
             final String cookie = settingsHelper.getString(Constants.COOKIE);
             try {
-                final String url2 = "https://i.instagram.com/api/v1/direct_v2/threads/broadcast/text/";
                 final HttpURLConnection urlConnection2 = (HttpURLConnection) new URL(url2).openConnection();
                 urlConnection2.setRequestMethod("POST");
                 urlConnection2.setRequestProperty("User-Agent", Constants.I_USER_AGENT);

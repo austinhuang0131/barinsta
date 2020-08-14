@@ -39,6 +39,7 @@ import static awais.instagrabber.utils.Constants.APP_THEME;
 import static awais.instagrabber.utils.Constants.AUTOLOAD_POSTS;
 import static awais.instagrabber.utils.Constants.AUTOPLAY_VIDEOS;
 import static awais.instagrabber.utils.Constants.BOTTOM_TOOLBAR;
+import static awais.instagrabber.utils.Constants.COOKIE;
 import static awais.instagrabber.utils.Constants.DOWNLOAD_USER_FOLDER;
 import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
@@ -57,6 +58,7 @@ public final class SettingsDialog extends BottomSheetDialogFragment implements V
     private Spinner spAppTheme, spLanguage;
     private boolean somethingChanged = false;
     private int currentTheme, currentLanguage, selectedLanguage;
+    private String currentCookie;
 
     @Override
     public void onRequestPermissionsResult(final int requestCode, @NonNull final String[] permissions, @NonNull final int[] grantResults) {
@@ -120,6 +122,8 @@ public final class SettingsDialog extends BottomSheetDialogFragment implements V
         currentLanguage = settingsHelper.getInteger(APP_LANGUAGE);
         spLanguage.setSelection(currentLanguage);
         spLanguage.setOnItemSelectedListener(this);
+
+        currentCookie = settingsHelper.getString(COOKIE);
 
         final AppCompatCheckBox cbSaveTo = contentView.findViewById(R.id.cbSaveTo);
         final AppCompatCheckBox cbMuteVideos = contentView.findViewById(R.id.cbMuteVideos);

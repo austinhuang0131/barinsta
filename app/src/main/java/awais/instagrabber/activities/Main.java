@@ -195,7 +195,7 @@ public final class Main extends BaseLanguageActivity {
         profileDialogListener = (dialog, which) -> {
             final Intent intent;
             if (which == 0 || storyModels == null || storyModels.length < 1) {
-                intent = new Intent(this, ProfileViewer.class).putExtra(
+                intent = new Intent(this, ProfilePicViewer.class).putExtra(
                         ((hashtagModel != null) ? Constants.EXTRAS_HASHTAG : (locationModel != null ? Constants.EXTRAS_LOCATION : Constants.EXTRAS_PROFILE)),
                         ((hashtagModel != null) ? hashtagModel : (locationModel != null ? locationModel : profileModel)));
             }

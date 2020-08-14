@@ -169,12 +169,21 @@
         </activity>
 
         <activity
-            android:name=".activities.ProfileViewer"
+            android:name=".activities.ProfilePicViewer"
             android:parentActivityName=".activities.Main">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.Main" />
+        </activity>
+
+        <activity
+            android:name=".activities.ProfileViewer"
+            android:parentActivityName=".activities.PostViewer">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activities.PostViewer" />
         </activity>
 
         <activity

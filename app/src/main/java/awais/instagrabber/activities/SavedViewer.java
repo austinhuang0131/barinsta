@@ -58,8 +58,8 @@ public final class SavedViewer extends BaseLanguageActivity implements SwipeRefr
     private final FetchListener<PostModel[]> postsFetchListener = new FetchListener<PostModel[]>() {
         @Override
         public void onResult(final PostModel[] result) {
+            final int oldSize = allItems.size();
             if (result != null) {
-                final int oldSize = allItems.size();
                 allItems.addAll(Arrays.asList(result));
 
                 postsAdapter.notifyItemRangeInserted(oldSize, result.length);
@@ -88,8 +88,10 @@ public final class SavedViewer extends BaseLanguageActivity implements SwipeRefr
             }
             else {
                 savedBinding.swipeRefreshLayout.setRefreshing(false);
-                Toast.makeText(getApplicationContext(), R.string.empty_list, Toast.LENGTH_SHORT).show();
-                finish();
+                if (oldSize == 0) {
+                    Toast.makeText(getApplicationContext(), R.string.empty_list, Toast.LENGTH_SHORT).show();
+                    finish();
+                }
             }
         }
     };

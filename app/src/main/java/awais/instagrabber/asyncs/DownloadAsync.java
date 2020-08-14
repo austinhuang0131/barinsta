@@ -34,7 +34,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
-import awais.instagrabber.activities.ProfileViewer;
+import awais.instagrabber.activities.ProfilePicViewer;
 import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.utils.Utils;
 
@@ -76,7 +76,7 @@ public final class DownloadAsync extends AsyncTask<Void, Float, File> {
             isChannelCreated = true;
         }
 
-        @StringRes final int titleRes = context instanceof ProfileViewer ? R.string.downloader_downloading_pfp : R.string.downloader_downloading_post;
+        @StringRes final int titleRes = context instanceof ProfilePicViewer ? R.string.downloader_downloading_pfp : R.string.downloader_downloading_post;
 
         downloadNotif = new NotificationCompat.Builder(context, CHANNEL_ID).setCategory(NotificationCompat.CATEGORY_STATUS)
                 .setSmallIcon(R.mipmap.ic_launcher).setContentText(shortCode == null ? username : shortCode).setOngoing(true)

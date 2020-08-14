@@ -54,7 +54,7 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
 
         notificationsBinding.swipeRefreshLayout.setRefreshing(true);
         setSupportActionBar(notificationsBinding.toolbar.toolbar);
-        notificationsBinding.toolbar.toolbar.setTitle(R.string.title_notifications);
+        notificationsBinding.toolbar.toolbar.setTitle(R.string.action_notif);
 
         resources = getResources();
 
@@ -134,11 +134,7 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
 
 
     private void searchUsername(final String text) {
-        if (Main.scanHack != null) {
-            Main.scanHack.onResult(text);
-            setResult(6969);
-            finish();
-        }
+        startActivity(new Intent(getApplicationContext(), ProfileViewer.class).putExtra(Constants.EXTRAS_USERNAME, text));
     }
 
     class ProfileAction extends AsyncTask<String, Void, Void> {

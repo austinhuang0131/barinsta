@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.ProfilePicViewer">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/layout_include_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.github.chrisbanes.photoview.PhotoView
+            android:id="@+id/imageViewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/imageInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="#40000000"
+            android:padding="8dp"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressView"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center" />
+    </FrameLayout>
+</LinearLayout>

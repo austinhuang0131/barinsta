@@ -31,16 +31,17 @@ import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemModel[]> {
-    private final String cluster, maxId;
+    private final String cluster, maxId, rankToken;
     private final FetchListener<DiscoverItemModel[]> fetchListener;
     private int lastId = 0;
     private boolean isFirst, moreAvailable;
     private String nextMaxId;
 
-    public DiscoverFetcher(final String cluster, final String maxId,
+    public DiscoverFetcher(final String cluster, final String maxId, final String rankToken,
                            final FetchListener<DiscoverItemModel[]> fetchListener, final boolean isFirst) {
         this.cluster = cluster == null ? "explore_all%3A0" : cluster.replace(":", "%3A");
         this.maxId = maxId == null ? "" : "&max_id=" + maxId;
+        this.rankToken = rankToken;
         this.fetchListener = fetchListener;
         this.isFirst = isFirst;
     }
@@ -66,12 +67,12 @@ public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemMod
     private ArrayList<DiscoverItemModel> fetchItems(ArrayList<DiscoverItemModel> discoverItemModels, final String maxId) {
         try {
             final String url = "https://www.instagram.com/explore/grid/?is_prefetch=false&omit_cover_media=true&module=explore_popular" +
-                    "&use_sectional_payload=false&cluster_id="+cluster+"&include_fixed_destinations=true" + maxId;
+                    "&use_sectional_payload=false&cluster_id="+cluster+"&include_fixed_destinations=true&session_id="+rankToken+maxId;
 
             final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
 
             urlConnection.setUseCaches(false);
-            urlConnection.setRequestProperty("User-Agent", Constants.USER_AGENT);
+            urlConnection.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
 
             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 final JSONObject discoverResponse = new JSONObject(Utils.readFromConnection(urlConnection));

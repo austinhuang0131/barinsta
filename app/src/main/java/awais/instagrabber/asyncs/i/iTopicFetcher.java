@@ -51,7 +51,7 @@ public final class iTopicFetcher extends AsyncTask<Void, Void, DiscoverTopicMode
                     names[i] = mediaNode.getString("title");
                 }
 
-                result = new DiscoverTopicModel(ids, names);
+                result = new DiscoverTopicModel(ids, names, body.getString("rank_token"));
             }
 
             conn.disconnect();

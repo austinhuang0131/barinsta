@@ -13,13 +13,11 @@ import android.view.inputmethod.InputMethodManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
@@ -38,8 +36,6 @@ import awais.instagrabber.models.CommentModel;
 import awais.instagrabber.models.ProfileModel;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.Utils;
-
-import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public final class CommentsViewer extends BaseLanguageActivity implements SwipeRefreshLayout.OnRefreshListener {
     private CommentsAdapter commentsAdapter;
@@ -117,7 +113,7 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
         if (which == 0) {
             searchUsername(profileModel.getUsername());
         } else if (which == 1) {
-            startActivity(new Intent(this, ProfileViewer.class).putExtra(Constants.EXTRAS_PROFILE, profileModel));
+            startActivity(new Intent(this, ProfilePicViewer.class).putExtra(Constants.EXTRAS_PROFILE, profileModel));
         } else if (which == 2) {
             Utils.copyText(this, profileModel.getUsername());
         } else if (which == 3) {
@@ -211,11 +207,10 @@ public final class CommentsViewer extends BaseLanguageActivity implements SwipeR
     };
 
     private void searchUsername(final String text) {
-        if (Main.scanHack != null) {
-            Main.scanHack.onResult(text);
-            setResult(6969);
-            finish();
-        }
+        startActivity(
+                new Intent(getApplicationContext(), ProfileViewer.class)
+                        .putExtra(Constants.EXTRAS_USERNAME, text)
+        );
     }
 
     @Override

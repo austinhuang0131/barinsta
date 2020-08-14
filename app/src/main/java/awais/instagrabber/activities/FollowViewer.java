@@ -63,8 +63,9 @@ public final class FollowViewer extends BaseLanguageActivity implements SwipeRef
 
         followers = intent.getBooleanExtra(Constants.EXTRAS_FOLLOWERS, false);
         name = intent.getStringExtra(Constants.EXTRAS_NAME);
-        namePost = name + " is";
+        namePost = name;
         if (Utils.isEmpty(name)) {
+            // this usually should not occur
             name = "You";
             namePost = "You're";
         }
@@ -77,8 +78,10 @@ public final class FollowViewer extends BaseLanguageActivity implements SwipeRef
             final Object tag = v.getTag();
             if (tag instanceof FollowModel) {
                 model = (FollowModel) tag;
-                Main.scanHack.onResult(model.getUsername());
-                finish();
+                startActivity(
+                        new Intent(getApplicationContext(), ProfileViewer.class)
+                                .putExtra(Constants.EXTRAS_USERNAME, model.getUsername())
+                );
             }
         };
 

@@ -103,10 +103,11 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
                         }
                         if (data.has("story_questions")) {
                             JSONObject tappableObject = data.getJSONArray("story_questions").getJSONObject(0).optJSONObject("question_sticker");
-                            if (tappableObject != null) models[i].setQuestion(new QuestionModel(
+                            if (tappableObject != null && !tappableObject.getString("question_type").equals("music"))
+                                models[i].setQuestion(new QuestionModel(
                                     String.valueOf(tappableObject.getLong("question_id")),
                                     tappableObject.getString("question")
-                            ));
+                                ));
                         }
                         if (data.has("story_quizs")) {
                             JSONObject tappableObject = data.getJSONArray("story_quizs").getJSONObject(0).optJSONObject("quiz_sticker");
