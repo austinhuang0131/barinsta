@@ -3,15 +3,15 @@
     <string-array name="languages">
         <item>Padrão do sistema</item>
         <item>Inglês</item>
-        <item>Francês Agradecimentos a @kernoeb (Telegram)]</item>
-        <item>Espanhol Agradecimentos a @sguinetti (GitLab)]</item>
+        <item>Francês [Agradecimentos a @kernoeb (Telegram)]</item>
+        <item>Espanhol [Agradecimentos a @sguinetti (GitLab)]</item>
         <item>Chinês (Simplificado)</item>
-        <item>Indonésio [Agradecimentos a @ Galang23 (GitLab)]</item>
+        <item>Indonésio [Agradecimentos a @Galang23 (GitLab)]</item>
         <item>Italiano [Agradecimentos a @RAR_Ramar (Telegram)]</item>
-        <item>Alemão [Agradecimentos a @ peterge1998 (GitHub)]</item>
-        <item>Polonês [Agradecimentos a @ Lego8486 (GitHub)]</item>
-        <item>Turco [Agradecimentos a @ faydin90 (Telegram)]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim (GitHub)]</item>
+        <item>Alemão [Agradecimentos a @peterge1998 (GitHub)]</item>
+        <item>Polonês [Agradecimentos a @Lego8486 (GitHub)]</item>
+        <item>Turco [Agradecimentos a @faydin90 (Telegram)]</item>
+        <item>Português (BR) [Agradecimentos a @wagnim (GitHub)]</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Seguir o sistema</item>
