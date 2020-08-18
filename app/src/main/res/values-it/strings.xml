@@ -178,7 +178,7 @@
     <string name="comment_viewer_like_comment">Metti like al commento</string>
     <string name="comment_viewer_unlike_comment">Togli like al commento</string>
     <string name="comment_viewer_delete_comment">Elimina commento</string>
-    <string name="comment_send_empty_comment">Non ci sono commenti vuoti, fra!</string>
+    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Vuoi cercare il nome utente?</string>
     <string name="comment_view_mention_hash_search">Vuoi cercare l\'hashtag?</string>
     <string name="comment_view_mention_location_search">Vuoi cercare la posizione?</string>
@@ -209,4 +209,5 @@
     <string name="crash_descr">Oops… L\'app si è arrestata in modo anomalo, ma non preoccuparti, puoi inviare una segnalazione di errore allo sviluppatore per aiutarlo a risolvere il problema. (:</string>
     <string name="use_amoled_dark_theme">Usa la modalità AMOLED per il tema scuro</string>
     <string name="action_notif">Attività</string>
+    <string name="select_picture">Select Picture</string>
 </resources>
