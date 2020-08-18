@@ -178,7 +178,7 @@
     <string name="comment_viewer_like_comment">Kommentar liken</string>
     <string name="comment_viewer_unlike_comment">Kommentar nicht liken</string>
     <string name="comment_viewer_delete_comment">Kommentar löschen</string>
-    <string name="comment_send_empty_comment">Keine leeren Kommentare, Kumpel!</string>
+    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Möchten du nach dem Benutzernamen suchen?</string>
     <string name="comment_view_mention_hash_search">Möchten du nach dem Hashtag suchen?</string>
     <string name="comment_view_mention_location_search">Möchten du nach dem Ort suchen?</string>
@@ -209,4 +209,5 @@
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden um ihm zu helfen, das Problem zu beheben. (:</string>
     <string name="use_amoled_dark_theme">Nutze AMOLED-Modus für Dunkles Design</string>
     <string name="action_notif">Activity</string>
+    <string name="select_picture">Select Picture</string>
 </resources>
