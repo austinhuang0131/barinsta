@@ -178,7 +178,7 @@
     <string name="comment_viewer_like_comment">Aimer le commentaire</string>
     <string name="comment_viewer_unlike_comment">Retirer le j\'aime du commentaire</string>
     <string name="comment_viewer_delete_comment">Supprimer le commentaire</string>
-    <string name="comment_send_empty_comment">Ehh, pas de commentaires vides !</string>
+    <string name="comment_send_empty_comment">Aucun commentaire vide !</string>
     <string name="comment_view_mention_user_search">Souhaitez-vous faire une recherche sur le nom d\'utilisateur ?</string>
     <string name="comment_view_mention_hash_search">Souhaitez-vous faire une recherch sur le hashtag ?</string>
     <string name="comment_view_mention_location_search">Souhaitez-vous rechercher l\'emplacement ?</string>
@@ -209,4 +209,5 @@
     <string name="crash_descr">Oups.. l\'application a planté, mais ne vous inquiétez pas, vous pouvez envoyer un rapport d\'erreur au développeur pour l\'aider à résoudre le problème :)</string>
     <string name="use_amoled_dark_theme">Utiliser le mode AMOLED pour le thème sombre</string>
     <string name="action_notif">Activité</string>
+    <string name="select_picture">Sélectionnez une image</string>
 </resources>
