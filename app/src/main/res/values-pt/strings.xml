@@ -178,7 +178,7 @@
     <string name="comment_viewer_like_comment">Curtir comentário</string>
     <string name="comment_viewer_unlike_comment">Descurtir comentário</string>
     <string name="comment_viewer_delete_comment">Deletar comentário</string>
-    <string name="comment_send_empty_comment">Comentários vazios</string>
+    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Você quer pesquisar o nome de usuário?</string>
     <string name="comment_view_mention_hash_search">Você quer pesquisar a hashtag?</string>
     <string name="comment_view_mention_location_search">Você quer pesquisar o local?</string>
@@ -209,4 +209,5 @@
     <string name="crash_descr">Ops... o aplicativo travou, mas não se preocupe, você pode enviar um relatório de erro para o desenvolvedor para ajudá-lo a corrigir o problema. (:</string>
     <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
     <string name="action_notif">Activity</string>
+    <string name="select_picture">Select Picture</string>
 </resources>
