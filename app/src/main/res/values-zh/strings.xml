@@ -178,7 +178,7 @@
     <string name="comment_viewer_like_comment">赞评论</string>
     <string name="comment_viewer_unlike_comment">取消赞</string>
     <string name="comment_viewer_delete_comment">删除评论</string>
-    <string name="comment_send_empty_comment">朋友，评论要写字的！</string>
+    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">要搜索用户名吗?</string>
     <string name="comment_view_mention_hash_search">要搜索标签吗?</string>
     <string name="comment_view_mention_location_search">要搜索地点吗?</string>
@@ -209,4 +209,5 @@
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
     <string name="use_amoled_dark_theme">使用 AMOLED 夜间主题</string>
     <string name="action_notif">动态</string>
+    <string name="select_picture">Select Picture</string>
 </resources>
