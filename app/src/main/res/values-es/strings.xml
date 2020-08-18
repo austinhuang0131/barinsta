@@ -147,13 +147,13 @@
     <string name="direct_messages_reacted_story">Reaccionó a una historia</string>
     <string name="direct_messages_mention_story">Fue mencionado en una historia</string>
     <string name="dms_inbox_raven_message_unknown"><i>Tipo de mensaje no soportado</i></string>
-    <string name="dms_inbox_open_link">Open link</string>
-    <string name="dms_inbox_copy_text">Copy text</string>
-    <string name="dms_inbox_download">Download attachment</string>
-    <string name="dms_inbox_like">Like message</string>
-    <string name="dms_inbox_unlike">Unlike message</string>
-    <string name="dms_inbox_unsend">Unsend message</string>
-    <string name="dms_inbox_author">View author profile</string>
+    <string name="dms_inbox_open_link">Abrir enlace</string>
+    <string name="dms_inbox_copy_text">Copiar texto</string>
+    <string name="dms_inbox_download">Descargar archivo adjunto</string>
+    <string name="dms_inbox_like">Dar \"me gusta\" al mensaje</string>
+    <string name="dms_inbox_unlike">Quitar \"me gusta\" al mensaje</string>
+    <string name="dms_inbox_unsend">Cancelar envío de mensaje</string>
+    <string name="dms_inbox_author">Ver perfil del autor</string>
     <string name="dms_inbox_media_shared_from">Publicación compartida desde %s</string>
     <string name="dms_inbox_raven_media_unknown"><i>Tipo de medio desconocido</i></string>
     <string name="dms_inbox_raven_media_expired">¡Medio caducado!</string>
@@ -185,7 +185,7 @@
     <string name="comment_viewer_like_comment">Dar me gusta a comentario</string>
     <string name="comment_viewer_unlike_comment">Quitar me gusta a comentario</string>
     <string name="comment_viewer_delete_comment">Eliminar comentario</string>
-    <string name="comment_send_empty_comment">No empty comments!</string>
+    <string name="comment_send_empty_comment">¡No hay comentarios vacíos!</string>
     <string name="comment_view_mention_user_search">¿Quieres buscar el nombre de usuario?</string>
     <string name="comment_view_mention_hash_search">¿Quieres buscar el hashtag?</string>
     <string name="comment_view_mention_location_search">¿Quiere buscar la ubicación?</string>
@@ -216,6 +216,6 @@
     <string name="crash_descr">Vaya.. la aplicación dejó de funcionar, pero no te preocupes por un enviar un reporte de error al desarrollador para solucionar este problema. (:</string>
     <string name="use_amoled_dark_theme">Usar modo AMOLED para el tema oscuro</string>
     <string name="action_notif">Actividad</string>
-    <string name="select_picture">Select Picture</string>
-    <string name="uploading">Uploading...</string>
+    <string name="select_picture">Seleccionar imagen</string>
+    <string name="uploading">Subiendo...</string>
 </resources>
