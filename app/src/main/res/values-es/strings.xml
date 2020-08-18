@@ -178,7 +178,7 @@
     <string name="comment_viewer_like_comment">Dar me gusta a comentario</string>
     <string name="comment_viewer_unlike_comment">Quitar me gusta a comentario</string>
     <string name="comment_viewer_delete_comment">Eliminar comentario</string>
-    <string name="comment_send_empty_comment">¡No hay comentarios vacíos!</string>
+    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">¿Quieres buscar el nombre de usuario?</string>
     <string name="comment_view_mention_hash_search">¿Quieres buscar el hashtag?</string>
     <string name="comment_view_mention_location_search">¿Quiere buscar la ubicación?</string>
@@ -209,4 +209,5 @@
     <string name="crash_descr">Vaya.. la aplicación dejó de funcionar, pero no te preocupes por un enviar un reporte de error al desarrollador para solucionar este problema. (:</string>
     <string name="use_amoled_dark_theme">Usar modo AMOLED para el tema oscuro</string>
     <string name="action_notif">Actividad</string>
+    <string name="select_picture">Select Picture</string>
 </resources>
