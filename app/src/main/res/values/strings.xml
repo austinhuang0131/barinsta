@@ -181,7 +181,7 @@
     <string name="comment_viewer_like_comment">Like comment</string>
     <string name="comment_viewer_unlike_comment">Unlike comment</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_send_empty_comment">No empty comments, dawg!</string>
+    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Do you want to search the username?</string>
     <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
     <string name="comment_view_mention_location_search">Do you want to search the location?</string>
@@ -213,4 +213,5 @@
     <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
     <string name="action_notif">Activity</string>
     <string name="license" translatable="false">InstaGrabber\nCopyright (C) 2019  AWAiS\nCopyright (C) 2020  Austin Huang, Ammar Githam\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.\n\nTHIS SOFTWARE IS PROVIDED BY THE AUTHOR \'\'AS IS\'\' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\nSee project page for third-party attributions.</string>
+    <string name="select_picture">Select Picture</string>
 </resources>
