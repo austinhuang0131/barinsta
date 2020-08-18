@@ -147,6 +147,13 @@
     <string name="direct_messages_reacted_story">A réagi à une story</string>
     <string name="direct_messages_mention_story">Mentionné dans une story</string>
     <string name="dms_inbox_raven_message_unknown"><i>Type de message non pris en charge</i></string>
+    <string name="dms_inbox_open_link">Open link</string>
+    <string name="dms_inbox_copy_text">Copy text</string>
+    <string name="dms_inbox_download">Download attachment</string>
+    <string name="dms_inbox_like">Like message</string>
+    <string name="dms_inbox_unlike">Unlike message</string>
+    <string name="dms_inbox_unsend">Unsend message</string>
+    <string name="dms_inbox_author">View author profile</string>
     <string name="dms_inbox_media_shared_from">Post partagé par %s</string>
     <string name="dms_inbox_raven_media_unknown"><i>Type de média inconnu</i></string>
     <string name="dms_inbox_raven_media_expired">Média expiré!</string>
@@ -210,4 +217,5 @@
     <string name="use_amoled_dark_theme">Utiliser le mode AMOLED pour le thème sombre</string>
     <string name="action_notif">Activité</string>
     <string name="select_picture">Sélectionnez une image</string>
+    <string name="uploading">Uploading...</string>
 </resources>
