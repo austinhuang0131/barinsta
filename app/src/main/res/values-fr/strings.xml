@@ -40,11 +40,11 @@
     <string name="save_to_folder">Enregistrer dans un dossier personnalisé</string>
     <string name="select_folder">Sélectionnez un dossier</string>
     <string name="theme_settings">Paramètres des thèmes</string>
-    <string name="login_settings">Only affects logged-in users:</string>
-    <string name="anonymous_settings">Only affects anonymous users:</string>
-    <string name="privacy_warning">Privacy</string>
-    <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
-    <string name="storiesig_settings">Use storiesig for stories and highlights from public users</string>
+    <string name="login_settings">N\'affecte que les utilisateurs connectés :</string>
+    <string name="anonymous_settings">N\'affecte que les utilisateurs anonymes:</string>
+    <string name="privacy_warning">Confidentialité</string>
+    <string name="instadp_settings">Utiliser Instadp pour les photos de profil haute définition</string>
+    <string name="storiesig_settings">Utiliser le storesig pour les stories (mises en avant ou non) des utilisateurs publics</string>
     <string name="import_export">Importer/Exporter</string>
     <string name="select_language">Choisir la langue</string>
     <string name="what_to_do_dialog">Que voulez-vous faire?</string>
@@ -67,7 +67,7 @@
     <string name="view_story_post">Aperçu</string>
     <string name="view_post">Aperçu</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Can\'t interact if y\'ain\'t logged in!</string>
+    <string name="stories_notloggedin">Impossible d\'interagir si vous n\'êtes pas connecté!</string>
     <string name="vote_story_poll">Vote</string>
     <string name="votef_story_poll">Vote réussi !</string>
     <string name="voted_story_poll">Vous avez déjà voté !</string>
@@ -218,11 +218,11 @@
     <string name="action_notif">Activité</string>
     <string name="select_picture">Sélectionnez une image</string>
     <string name="uploading">Téléversement...</string>
-    <string name="activity_count_prefix">You have:</string>
-    <string name="activity_count_relationship">%s follows</string>
-    <string name="activity_count_comments">%s comments</string>
-    <string name="activity_count_commentlikes">%s comment likes</string>
+    <string name="activity_count_prefix">Vous avez :</string>
+    <string name="activity_count_relationship">%s abonné(e)s</string>
+    <string name="activity_count_comments">%s commentaires</string>
+    <string name="activity_count_commentlikes">%s j\'aime(s) sur le commentaire</string>
     <string name="activity_count_usertags">%s usertags</string>
-    <string name="activity_count_likes">%s likes</string>
-    <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
+    <string name="activity_count_likes">%s j\'aime(s)</string>
+    <string name="activity_notloggedin">Vous vous êtes déconnecté avant de cliquer sur cette notification?!</string>
 </resources>
