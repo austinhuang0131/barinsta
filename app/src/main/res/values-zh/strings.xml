@@ -218,4 +218,11 @@
     <string name="action_notif">动态</string>
     <string name="select_picture">Select Picture</string>
     <string name="uploading">Uploading...</string>
+    <string name="activity_count_prefix">You have:</string>
+    <string name="activity_count_relationship">%s follows</string>
+    <string name="activity_count_comments">%s comments</string>
+    <string name="activity_count_commentlikes">%s comment likes</string>
+    <string name="activity_count_usertags">%s usertags</string>
+    <string name="activity_count_likes">%s likes</string>
+    <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
 </resources>
