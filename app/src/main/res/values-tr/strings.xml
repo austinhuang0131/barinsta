@@ -185,7 +185,7 @@
     <string name="comment_viewer_like_comment">Yorumu beğen</string>
     <string name="comment_viewer_unlike_comment">Yorum beğenisini geri al</string>
     <string name="comment_viewer_delete_comment">Yorumu sil</string>
-    <string name="comment_send_empty_comment">No empty comments!</string>
+    <string name="comment_send_empty_comment">Boş yorum yapılamaz!</string>
     <string name="comment_view_mention_user_search">Kullanıcı adını aratmak istiyor musun?</string>
     <string name="comment_view_mention_hash_search">Etiketi aratmak istiyor musun?</string>
     <string name="comment_view_mention_location_search">Konumu aratmak istiyor musun?</string>
@@ -216,6 +216,6 @@
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="use_amoled_dark_theme">\'AMOLED ekran için Koyu Tema\'yı kullan</string>
     <string name="action_notif">Etkinlik</string>
-    <string name="select_picture">Select Picture</string>
+    <string name="select_picture">Resim Seç</string>
     <string name="uploading">Uploading...</string>
 </resources>
