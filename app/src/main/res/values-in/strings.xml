@@ -153,7 +153,7 @@
     <string name="dms_inbox_like">Sukai pesan</string>
     <string name="dms_inbox_unlike">Batal sukai pesan</string>
     <string name="dms_inbox_unsend">Batalkan pengiriman pesan</string>
-    <string name="dms_inbox_author">View author profile</string>
+    <string name="dms_inbox_author">Lihat profil pengirim</string>
     <string name="dms_inbox_media_shared_from">Kiriman dibagikan dari %s</string>
     <string name="dms_inbox_raven_media_unknown"><i>Jenis media tidak diketahui</i></string>
     <string name="dms_inbox_raven_media_expired">Media kedaluwarsa!</string>
@@ -185,7 +185,7 @@
     <string name="comment_viewer_like_comment">Suka komentar</string>
     <string name="comment_viewer_unlike_comment">Batal suka komentar</string>
     <string name="comment_viewer_delete_comment">Hapus komentar</string>
-    <string name="comment_send_empty_comment">No empty comments!</string>
+    <string name="comment_send_empty_comment">Ups, komentar kosong!</string>
     <string name="comment_view_mention_user_search">Apakah anda ingin mencari nama pengguna ini?</string>
     <string name="comment_view_mention_hash_search">Apakah anda ingin mencari hashtag ini?</string>
     <string name="comment_view_mention_location_search">Apakah anda ingin mencari lokasi?</string>
@@ -216,6 +216,6 @@
     <string name="crash_descr">Ups! Aplikasi berhenti bekerja! Jangan khawatir, anda dapat mengirimkan laporan galat/kesalahan kepada Pengembang untuk membantunya memperbaiki masalah ini. (:</string>
     <string name="use_amoled_dark_theme">Gunakan AMOLED untuk tema gelap</string>
     <string name="action_notif">Aktivitas</string>
-    <string name="select_picture">Select Picture</string>
-    <string name="uploading">Uploading...</string>
+    <string name="select_picture">Pilih Gambar</string>
+    <string name="uploading">Mengunggah...</string>
 </resources>
