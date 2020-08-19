@@ -222,4 +222,11 @@
     <string name="license" translatable="false">InstaGrabber\nCopyright (C) 2019  AWAiS\nCopyright (C) 2020  Austin Huang, Ammar Githam\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.\n\nTHIS SOFTWARE IS PROVIDED BY THE AUTHOR \'\'AS IS\'\' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\nSee project page for third-party attributions.</string>
     <string name="select_picture">Select Picture</string>
     <string name="uploading">Uploading...</string>
+    <string name="activity_count_prefix">You have:</string>
+    <string name="activity_count_relationship">%s follows</string>
+    <string name="activity_count_comments">%s comments</string>
+    <string name="activity_count_commentlikes">%s comment likes</string>
+    <string name="activity_count_usertags">%s usertags</string>
+    <string name="activity_count_likes">%s likes</string>
+    <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
 </resources>
