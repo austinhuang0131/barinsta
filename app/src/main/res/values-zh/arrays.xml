@@ -10,14 +10,14 @@
         <item>意大利文 [感谢 @RAR_Ramar (Telegram)]</item>
         <item>德文 [感谢 @peterge1998 (GitHub)]</item>
         <item>波兰文 [感谢 @Lego8486 (GitHub)]</item>
-        <item>土耳其文 [感谢 @faydin90 (Telegram)]</item>
+        <item>土耳其语 [感谢 @faydin90 (Telegram)]</item>
         <item>巴西葡文 [感谢 @wagnim (GitHub)]</item>
     </string-array>
     <string-array name="theme_presets">
         <item>自动 / 跟随系统</item>
         <item>自动 / 跟随电池</item>
-        <item>夜间模式</item>
-        <item>明亮模式</item>
+        <item>暗黑</item>
+        <item>明亮</item>
     </string-array>
     <string-array name="separator_presets">
         <item>无</item>
