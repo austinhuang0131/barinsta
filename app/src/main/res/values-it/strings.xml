@@ -147,9 +147,9 @@
     <string name="direct_messages_reacted_story">Hai reagito a una storia</string>
     <string name="direct_messages_mention_story">Sei stato menzionato in una storia</string>
     <string name="dms_inbox_raven_message_unknown"><i>Tipo di messaggio non supportato</i></string>
-    <string name="dms_inbox_open_link">Open link</string>
-    <string name="dms_inbox_copy_text">Copy text</string>
-    <string name="dms_inbox_download">Download attachment</string>
+    <string name="dms_inbox_open_link">Apri link</string>
+    <string name="dms_inbox_copy_text">Copia testo</string>
+    <string name="dms_inbox_download">Scarica allegato</string>
     <string name="dms_inbox_like">Like message</string>
     <string name="dms_inbox_unlike">Unlike message</string>
     <string name="dms_inbox_unsend">Unsend message</string>
@@ -185,7 +185,7 @@
     <string name="comment_viewer_like_comment">Metti like al commento</string>
     <string name="comment_viewer_unlike_comment">Togli like al commento</string>
     <string name="comment_viewer_delete_comment">Elimina commento</string>
-    <string name="comment_send_empty_comment">No empty comments!</string>
+    <string name="comment_send_empty_comment">Nessun commento vuoto!</string>
     <string name="comment_view_mention_user_search">Vuoi cercare il nome utente?</string>
     <string name="comment_view_mention_hash_search">Vuoi cercare l\'hashtag?</string>
     <string name="comment_view_mention_location_search">Vuoi cercare la posizione?</string>
@@ -216,7 +216,7 @@
     <string name="crash_descr">Oops… L\'app si è arrestata in modo anomalo, ma non preoccuparti, puoi inviare una segnalazione di errore allo sviluppatore per aiutarlo a risolvere il problema. (:</string>
     <string name="use_amoled_dark_theme">Usa la modalità AMOLED per il tema scuro</string>
     <string name="action_notif">Attività</string>
-    <string name="select_picture">Select Picture</string>
+    <string name="select_picture">Seleziona immagine</string>
     <string name="uploading">Uploading...</string>
     <string name="activity_count_prefix">You have:</string>
     <string name="activity_count_relationship">%s follows</string>
