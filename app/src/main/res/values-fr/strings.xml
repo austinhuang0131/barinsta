@@ -219,10 +219,10 @@
     <string name="select_picture">Sélectionnez une image</string>
     <string name="uploading">Téléversement...</string>
     <string name="activity_count_prefix">Vous avez :</string>
-    <string name="activity_count_relationship" comment="activity_count_relationship">%s abonné(e)s</string>
-    <string name="activity_count_comments" comment="activity_count_comments">%s commentaires</string>
-    <string name="activity_count_commentlikes" comment="activity_count_commentlikes">%s j\'aime(s) sur le commentaire</string>
+    <string name="activity_count_relationship" comment="activity_count_relationship">%d abonné(e)s</string>
+    <string name="activity_count_comments" comment="activity_count_comments">%d commentaires</string>
+    <string name="activity_count_commentlikes" comment="activity_count_commentlikes">%d j\'aime(s) sur le commentaire</string>
     <string name="activity_count_usertags" comment="activity_count_usertags">%d usertags</string>
-    <string name="activity_count_likes" comment="activity_count_likes">%s j\'aime(s)</string>
+    <string name="activity_count_likes" comment="activity_count_likes">%d j\'aime(s)</string>
     <string name="activity_notloggedin">Vous vous êtes déconnecté avant de cliquer sur cette notification?!</string>
 </resources>
