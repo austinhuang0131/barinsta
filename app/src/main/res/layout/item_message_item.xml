@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    tools:viewBindingIgnore="true">
+    android:orientation="horizontal">
 
     <awais.instagrabber.customviews.CircularImageView
         android:id="@+id/ivProfilePic"
@@ -31,6 +30,7 @@
             android:textColor="?android:textColorPrimary" />
 
         <androidx.cardview.widget.CardView
+            android:id="@+id/messageCard"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:foreground="?android:selectableItemBackground"
@@ -252,5 +252,12 @@
                 </FrameLayout>
             </LinearLayout>
         </androidx.cardview.widget.CardView>
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/liked"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_like"
+            android:visibility="gone"/>
     </LinearLayout>
 </LinearLayout>

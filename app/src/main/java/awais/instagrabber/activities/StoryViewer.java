@@ -56,6 +56,7 @@ import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
 import awais.instagrabber.adapters.StoriesAdapter;
 import awais.instagrabber.asyncs.DownloadAsync;
+import awais.instagrabber.asyncs.direct_messages.DirectThreadBroadcaster;
 import awais.instagrabber.asyncs.i.iStoryStatusFetcher;
 import awais.instagrabber.customviews.helpers.SwipeGestureListener;
 import awais.instagrabber.databinding.ActivityStoryViewerBinding;
@@ -723,8 +724,6 @@ final String url = "https://i.instagram.com/api/v1/media/"+currentStory.getStory
     }
 
     class CommentAction extends AsyncTask<String, Void, Void> {
-        boolean ok = false;
-
         protected Void doInBackground(String... rawAction) {
             final String action = rawAction[0];
             final String url = "https://i.instagram.com/api/v1/direct_v2/create_group_thread/";
@@ -747,55 +746,27 @@ final String url = "https://i.instagram.com/api/v1/media/"+currentStory.getStory
                 wr.close();
                 urlConnection.connect();
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                    try {
-                        final String threadid = new JSONObject(Utils.readFromConnection(urlConnection)).getString("thread_id");
-                        final String url2 = "https://i.instagram.com/api/v1/direct_v2/threads/broadcast/reel_share/";
-                        final HttpURLConnection urlConnection2 = (HttpURLConnection) new URL(url2).openConnection();
-                        urlConnection2.setRequestMethod("POST");
-                        urlConnection2.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
-                        urlConnection2.setUseCaches(false);
-                        final String commentText = URLEncoder.encode(action, "UTF-8")
-                                .replaceAll("\\+", "%20").replaceAll("\\%21", "!").replaceAll("\\%27", "'")
-                                .replaceAll("\\%28", "(").replaceAll("\\%29", ")").replaceAll("\\%7E", "~");
-                        final String cc = UUID.randomUUID().toString();
-                        final String urlParameters2 = Utils.sign("{\"_csrftoken\":\"" + cookie.split("csrftoken=")[1].split(";")[0]
-                                +"\",\"_uid\":\"" + Utils.getUserIdFromCookie(cookie)
-                                +"\",\"__uuid\":\"" + settingsHelper.getString(Constants.DEVICE_UUID)
-                                +"\",\"client_context\":\"" + cc
-                                +"\",\"mutation_token\":\"" + cc
-                                +"\",\"text\":\"" + commentText
-                                +"\",\"media_id\":\"" + currentStory.getStoryMediaId()
-                                +"\",\"reel_id\":\"" + currentStory.getUserId()
-                                +"\",\"thread_ids\":\"["+threadid
-                                +"]\",\"action\":\"send_item\",\"entry\":\"reel\"}");
-                        urlConnection2.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-                        urlConnection2.setRequestProperty("Content-Length", "" + Integer.toString(urlParameters2.getBytes().length));
-                        urlConnection2.setDoOutput(true);
-                        DataOutputStream wr2 = new DataOutputStream(urlConnection2.getOutputStream());
-                        wr2.writeBytes(urlParameters2);
-                        wr2.flush();
-                        wr2.close();
-                        urlConnection2.connect();
-                        if (urlConnection2.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                            ok = true;
-                        }
-                        urlConnection2.disconnect();
-                    } catch (Throwable ex) {
-                        Log.e("austin_debug", "reply (B): " + ex);
-                    }
+                    final String threadid = new JSONObject(Utils.readFromConnection(urlConnection)).getString("thread_id");
+                    final DirectThreadBroadcaster.StoryReplyBroadcastOptions options =
+                            new DirectThreadBroadcaster.StoryReplyBroadcastOptions(
+                                    action,
+                                    currentStory.getStoryMediaId(),
+                                    currentStory.getUserId()
+                            );
+                    final DirectThreadBroadcaster broadcast = new DirectThreadBroadcaster(threadid);
+                    broadcast.setOnTaskCompleteListener(result -> {
+                        Toast.makeText(getApplicationContext(),
+                                result != null ? R.string.answered_story : R.string.downloader_unknown_error,
+                                Toast.LENGTH_SHORT).show();
+                    });
+                    broadcast.execute(options);
                 }
-
                 urlConnection.disconnect();
             } catch (Throwable ex) {
                 Log.e("austin_debug", "reply (CT): " + ex);
+                Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
             }
             return null;
-        }
-
-        @Override
-        protected void onPostExecute(Void result) {
-            Toast.makeText(getApplicationContext(),
-                    ok ? R.string.answered_story : R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         }
     }
 }

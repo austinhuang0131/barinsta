@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".activities.DirectMessages">
-
-    <include
-        android:id="@+id/toolbar"
-        android:layout_weight="1"
-        layout="@layout/layout_include_toolbar" />
+    android:orientation="vertical">
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
-        android:layout_weight="8"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvDirectMessages"
+            android:id="@+id/messageList"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
@@ -28,29 +21,48 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="4dp"
+            app:srcCompat="@drawable/ic_image_24" />
+
         <EditText
             android:id="@+id/commentText"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:paddingLeft="8dp"
+            android:layout_weight="1"
             android:gravity="bottom"
             android:hint="@string/dm_hint"
+            android:importantForAutofill="no"
             android:inputType="textMultiLine"
             android:maxLength="2200"
             android:maxLines="10"
-            android:visibility="gone"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingEnd="4dp"
+            android:paddingRight="4dp"
             android:scrollHorizontally="false" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/commentSend"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:background="?selectableItemBackgroundBorderless"
             android:clickable="true"
+            android:focusable="true"
+            android:paddingStart="4dp"
+            android:paddingLeft="4dp"
+            android:paddingTop="4dp"
+            android:paddingEnd="8dp"
             android:paddingRight="8dp"
-            android:visibility="gone"
-            app:srcCompat="@android:drawable/ic_menu_send" />
-
+            android:paddingBottom="4dp"
+            app:srcCompat="@drawable/ic_send_24" />
     </LinearLayout>
 </LinearLayout>

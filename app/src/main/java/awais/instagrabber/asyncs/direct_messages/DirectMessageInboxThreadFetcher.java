@@ -9,6 +9,8 @@ import org.json.JSONObject;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.HashMap;
+import java.util.Map;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.interfaces.FetchListener;
@@ -21,17 +23,21 @@ import awais.instagrabber.utils.Utils;
 import static awais.instagrabber.utils.Utils.logCollector;
 import static awaisomereport.LogCollector.LogFile;
 
-public final class UserInboxFetcher extends AsyncTask<Void, Void, InboxThreadModel> {
+public final class DirectMessageInboxThreadFetcher extends AsyncTask<Void, Void, InboxThreadModel> {
+    private static final String TAG = "DMInboxThreadFetcher";
+
     private final String id;
     private final String endCursor;
     private final FetchListener<InboxThreadModel> fetchListener;
-    private final String direction;
+    private final UserInboxDirection direction;
 
-    public UserInboxFetcher(final String id, final UserInboxDirection direction, final String endCursor,
-                            final FetchListener<InboxThreadModel> fetchListener) {
+    public DirectMessageInboxThreadFetcher(final String id,
+                                           final UserInboxDirection direction,
+                                           final String cursor,
+                                           final FetchListener<InboxThreadModel> fetchListener) {
         this.id = id;
-        this.direction = "&direction=" + (direction == UserInboxDirection.NEWER ? "newer" : "older");
-        this.endCursor = !Utils.isEmpty(endCursor) ? "&cursor=" + endCursor : "";
+        this.direction = direction;
+        this.endCursor = cursor;
         this.fetchListener = fetchListener;
     }
 
@@ -39,11 +45,14 @@ public final class UserInboxFetcher extends AsyncTask<Void, Void, InboxThreadMod
     @Override
     protected InboxThreadModel doInBackground(final Void... voids) {
         InboxThreadModel result = null;
-        final String url = "https://i.instagram.com/api/v1/direct_v2/threads/" + id + "/?visual_message_return_type=unseen"
-                + direction + endCursor;
-        // todo probably
-        //  &   seq_id = seqId
-
+        final Map<String, String> queryParamsMap = new HashMap<>();
+        queryParamsMap.put("visual_message_return_type", "unseen");
+        queryParamsMap.put("direction", direction.getValue());
+        if (!Utils.isEmpty(endCursor)) {
+            queryParamsMap.put("cursor", endCursor);
+        }
+        final String queryString = Utils.getQueryString(queryParamsMap);
+        final String url = "https://i.instagram.com/api/v1/direct_v2/threads/" + id + "/?" + queryString;
         try {
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
             conn.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
@@ -60,9 +69,8 @@ public final class UserInboxFetcher extends AsyncTask<Void, Void, InboxThreadMod
             result = null;
             if (logCollector != null)
                 logCollector.appendException(e, LogFile.ASYNC_DMS_THREAD, "doInBackground");
-            if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
+            if (BuildConfig.DEBUG) Log.e(TAG, "", e);
         }
-
         return result;
     }
 

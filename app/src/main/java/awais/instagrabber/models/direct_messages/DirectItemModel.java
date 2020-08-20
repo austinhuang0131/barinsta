@@ -3,6 +3,7 @@ package awais.instagrabber.models.direct_messages;
 import androidx.annotation.NonNull;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Date;
 
 import awais.instagrabber.models.ProfileModel;
@@ -12,10 +13,14 @@ import awais.instagrabber.models.enums.RavenExpiringMediaType;
 import awais.instagrabber.models.enums.RavenMediaViewType;
 import awais.instagrabber.utils.Utils;
 
+import static awais.instagrabber.utils.Constants.COOKIE;
+
 public final class DirectItemModel implements Serializable, Comparable<DirectItemModel> {
     private final long userId, timestamp;
     private final DirectItemType itemType;
     private final String itemId;
+    private String[] likes;
+    private boolean liked;
     private final CharSequence text;
     private final DirectItemLinkModel linkModel;
     private final DirectItemMediaModel mediaModel;
@@ -27,9 +32,11 @@ public final class DirectItemModel implements Serializable, Comparable<DirectIte
     private final DirectItemAnimatedMediaModel animatedMediaModel;
     private final DirectItemVideoCallEventModel videoCallEventModel;
 
-    public DirectItemModel(final long userId, final long timestamp, final String itemId, final DirectItemType itemType,
-                           final CharSequence text, final DirectItemLinkModel linkModel, final ProfileModel profileModel,
-                           final DirectItemReelShareModel reelShare, final DirectItemMediaModel mediaModel,
+    private final String myId = Utils.getUserIdFromCookie(Utils.settingsHelper.getString(COOKIE));
+
+    public DirectItemModel(final long userId, final long timestamp, final String itemId, final String[] likes,
+                           final DirectItemType itemType, final CharSequence text, final DirectItemLinkModel linkModel,
+                           final ProfileModel profileModel, final DirectItemReelShareModel reelShare, final DirectItemMediaModel mediaModel,
                            final DirectItemActionLogModel actionLogModel, final DirectItemVoiceMediaModel voiceMediaModel,
                            final DirectItemRavenMediaModel ravenMediaModel, final DirectItemVideoCallEventModel videoCallEventModel,
                            final DirectItemAnimatedMediaModel animatedMediaModel) {
@@ -37,6 +44,8 @@ public final class DirectItemModel implements Serializable, Comparable<DirectIte
         this.timestamp = timestamp;
         this.itemType = itemType;
         this.itemId = itemId;
+        this.likes = likes;
+        this.liked = likes != null ? Arrays.asList(likes).contains(myId) : false;
         this.text = text;
         this.linkModel = linkModel;
         this.profileModel = profileModel;
@@ -63,6 +72,14 @@ public final class DirectItemModel implements Serializable, Comparable<DirectIte
 
     public long getUserId() {
         return userId;
+    }
+
+    public boolean isLiked() {
+        return liked;
+    }
+
+    public void setLiked() {
+        this.liked = !liked;
     }
 
     public long getTimestamp() {

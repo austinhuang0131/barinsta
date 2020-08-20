@@ -2,6 +2,7 @@ package awais.instagrabber;
 
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.util.Log;
 
 import androidx.core.app.NotificationManagerCompat;
 import androidx.multidex.MultiDexApplication;
@@ -31,6 +32,16 @@ public final class InstaApp extends MultiDexApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        if (BuildConfig.DEBUG) {
+            try {
+                Class.forName("dalvik.system.CloseGuard")
+                        .getMethod("setEnabled", boolean.class)
+                        .invoke(null, true);
+            } catch (Exception e) {
+                Log.e("InstaApp", "Error", e);
+            }
+        }
 
         if (!BuildConfig.DEBUG) CrashReporter.get(this).start();
         logCollector = new LogCollector(this);

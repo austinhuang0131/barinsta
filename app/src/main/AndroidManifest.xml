@@ -215,21 +215,12 @@
         </activity>
 
         <activity
-            android:name=".activities.DirectMessages"
+            android:name=".activities.DirectMessagesActivity"
             android:parentActivityName=".activities.Main">
 
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.Main" />
-        </activity>
-
-        <activity
-            android:name=".activities.DirectMessagesUserInbox"
-            android:parentActivityName=".activities.DirectMessages">
-
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".activities.DirectMessages" />
         </activity>
 
         <provider

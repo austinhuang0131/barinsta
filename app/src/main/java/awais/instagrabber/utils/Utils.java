@@ -42,6 +42,7 @@ import androidx.fragment.app.FragmentManager;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
+import org.jsoup.internal.StringUtil;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -57,6 +58,8 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
+import java.util.Set;
 import java.util.regex.Pattern;
 
 import javax.crypto.Mac;
@@ -101,6 +104,7 @@ import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
 
 public final class Utils {
+    private static final String TAG = "Utils";
     public static LogCollector logCollector;
     public static SettingsHelper settingsHelper;
     public static DataBox dataBox;
@@ -121,29 +125,31 @@ public final class Utils {
 
     public static void setupCookies(final String cookieRaw) {
         final CookieStore cookieStore = NET_COOKIE_MANAGER.getCookieStore();
-        if (cookieRaw == "LOGOUT") {
-            cookieStore.removeAll();
+        if (cookieStore == null || isEmpty(cookieRaw)) {
+            return;
         }
-        else if (cookieRaw != null && !isEmpty(cookieRaw)) {
-            try {
-                final URI uri1 = new URI("https://instagram.com");
-                final URI uri2 = new URI("https://instagram.com/");
-                final URI uri3 = new URI("https://i.instagram.com/");
-                for (final String cookie : cookieRaw.split(";")) {
-                    final String[] strings = cookie.split("=", 2);
-                    final HttpCookie httpCookie = new HttpCookie(strings[0].trim(), strings[1].trim());
-                    httpCookie.setDomain("instagram.com");
-                    httpCookie.setPath("/");
-                    httpCookie.setVersion(0);
-                    cookieStore.add(uri1, httpCookie);
-                    cookieStore.add(uri2, httpCookie);
-                    cookieStore.add(uri3, httpCookie);
-                }
-            } catch (final URISyntaxException e) {
-                if (logCollector != null)
-                    logCollector.appendException(e, LogCollector.LogFile.UTILS, "setupCookies");
-                if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
+        if (cookieRaw.equals("LOGOUT")) {
+            cookieStore.removeAll();
+            return;
+        }
+        try {
+            final URI uri1 = new URI("https://instagram.com");
+            final URI uri2 = new URI("https://instagram.com/");
+            final URI uri3 = new URI("https://i.instagram.com/");
+            for (final String cookie : cookieRaw.split(";")) {
+                final String[] strings = cookie.split("=", 2);
+                final HttpCookie httpCookie = new HttpCookie(strings[0].trim(), strings[1].trim());
+                httpCookie.setDomain("instagram.com");
+                httpCookie.setPath("/");
+                httpCookie.setVersion(0);
+                cookieStore.add(uri1, httpCookie);
+                cookieStore.add(uri2, httpCookie);
+                cookieStore.add(uri3, httpCookie);
             }
+        } catch (final URISyntaxException e) {
+            if (logCollector != null)
+                logCollector.appendException(e, LogCollector.LogFile.UTILS, "setupCookies");
+            if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
         }
     }
 
@@ -169,8 +175,8 @@ public final class Utils {
             clipString = clipString.substring((isHttps ? 22 : 21) + wwwDel);
 
             final char firstChar = clipString.charAt(0);
-            if (clipString.startsWith("p/") || clipString.startsWith("reel/")) {
-                clipString = clipString.substring(clipString.startsWith("p/") ? 2 : 5);
+            if (clipString.startsWith("p/") || clipString.startsWith("reel/") || clipString.startsWith("tv/")) {
+                clipString = clipString.substring(clipString.startsWith("p/") ? 2 : (clipString.startsWith("tv/") ? 3 : 5));
                 type = IntentModelType.POST;
             } else if (clipString.startsWith("explore/tags/")) {
                 clipString = clipString.substring(13);
@@ -726,10 +732,20 @@ public final class Utils {
                     break;
             }
 
+            String[] liked = null;
+            if (!itemObject.isNull("reactions") && !itemObject.getJSONObject("reactions").isNull("likes")) {
+                JSONArray rawLiked = itemObject.getJSONObject("reactions").getJSONArray("likes");
+                liked = new String[rawLiked.length()];
+                for (int l = 0; l < rawLiked.length(); ++l) {
+                    liked[l] = String.valueOf(rawLiked.getJSONObject(l).getLong("sender_id"));
+                }
+            }
+
             itemModels.add(new DirectItemModel(
                     itemObject.getLong("user_id"),
                     itemObject.getLong("timestamp"),
                     itemObject.getString("item_id"),
+                    liked,
                     itemType,
                     text,
                     linkModel,
@@ -1174,19 +1190,19 @@ public final class Utils {
 
     public static String sign(final String message) {
         try {
-            Mac hasher = Mac.getInstance("HmacSHA256");
+            final Mac hasher = Mac.getInstance("HmacSHA256");
             hasher.init(new SecretKeySpec(Constants.SIGNATURE_KEY.getBytes(), "HmacSHA256"));
             byte[] hash = hasher.doFinal(message.getBytes());
-            StringBuffer hexString = new StringBuffer();
-            for (int i = 0; i < hash.length; i++) {
-                String hex = Integer.toHexString(0xff & hash[i]);
+            final StringBuilder hexString = new StringBuilder();
+            for (byte b : hash) {
+                final String hex = Integer.toHexString(0xff & b);
                 if (hex.length() == 1) hexString.append('0');
                 hexString.append(hex);
             }
             return "ig_sig_key_version="+Constants.SIGNATURE_VERSION+"&signed_body=" + hexString.toString() + "." + message;
         }
-        catch (Throwable e) {
-            Log.e("austin_debug", "sign: ", e);
+        catch (Exception e) {
+            Log.e(TAG, "Error signing", e);
             return null;
         }
     }
@@ -1354,5 +1370,34 @@ public final class Utils {
         }
 
         return null;
+    }
+
+    public static void setConnectionHeaders(final HttpURLConnection connection, final Map<String, String> headers) {
+        if (connection == null || headers == null || headers.isEmpty()) {
+            return;
+        }
+        for (Map.Entry<String, String> header : headers.entrySet()) {
+            connection.setRequestProperty(header.getKey(), header.getValue());
+        }
+    }
+
+    public static String getQueryString(final Map<String, String> queryParamsMap) {
+        if (queryParamsMap == null || queryParamsMap.isEmpty()) {
+            return "";
+        }
+        final Set<Map.Entry<String, String>> params = queryParamsMap.entrySet();
+        final StringBuilder builder = new StringBuilder();
+        for (final Map.Entry<String, String> param : params) {
+            if (isEmpty(param.getKey())) {
+                continue;
+            }
+            if (builder.length() != 0) {
+                builder.append("&");
+            }
+            builder.append(param.getKey());
+            builder.append("=");
+            builder.append(param.getValue() != null ? param.getValue() : "");
+        }
+        return builder.toString();
     }
 }

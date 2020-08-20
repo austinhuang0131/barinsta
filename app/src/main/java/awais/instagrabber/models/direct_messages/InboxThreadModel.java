@@ -1,5 +1,7 @@
 package awais.instagrabber.models.direct_messages;
 
+import androidx.core.util.ObjectsCompat;
+
 import java.io.Serializable;
 
 import awais.instagrabber.models.ProfileModel;
@@ -123,7 +125,7 @@ public final class InboxThreadModel implements Serializable {
         return canonical;
     }
 
-    public boolean isHasOlder() {
+    public boolean hasOlder() {
         return hasOlder;
     }
 
@@ -141,5 +143,19 @@ public final class InboxThreadModel implements Serializable {
 
     public long getLastActivityAt() {
         return lastActivityAt;
+    }
+
+    @Override
+    public boolean equals(final Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        final InboxThreadModel that = (InboxThreadModel) o;
+        return ObjectsCompat.equals(threadId, that.threadId) &&
+                ObjectsCompat.equals(threadV2Id, that.threadV2Id);
+    }
+
+    @Override
+    public int hashCode() {
+        return ObjectsCompat.hash(threadId, threadV2Id);
     }
 }

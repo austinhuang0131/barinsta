@@ -35,8 +35,9 @@ import awais.instagrabber.models.ProfileModel;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.Utils;
 
+import static awais.instagrabber.utils.Utils.notificationManager;
+
 public final class NotificationsViewer extends BaseLanguageActivity implements SwipeRefreshLayout.OnRefreshListener {
-    private NotificationsAdapter notificationsAdapter;
     private NotificationModel notificationModel;
     private ActivityNotificationBinding notificationsBinding;
     private ArrayAdapter<String> commmentDialogAdapter;
@@ -47,26 +48,18 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
 
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
+        notificationManager.cancel(1800000000);
+        if (Utils.isEmpty(cookie)) {
+            Toast.makeText(this, R.string.activity_notloggedin, Toast.LENGTH_SHORT).show();
+        }
         super.onCreate(savedInstanceState);
         notificationsBinding = ActivityNotificationBinding.inflate(getLayoutInflater());
         setContentView(notificationsBinding.getRoot());
         notificationsBinding.swipeRefreshLayout.setOnRefreshListener(this);
-
-        notificationsBinding.swipeRefreshLayout.setRefreshing(true);
+        resources = getResources();
         setSupportActionBar(notificationsBinding.toolbar.toolbar);
         notificationsBinding.toolbar.toolbar.setTitle(R.string.action_notif);
-
-        resources = getResources();
-
-        new NotificationsFetcher(new FetchListener<NotificationModel[]>() {
-            @Override
-            public void onResult(final NotificationModel[] notificationModels) {
-                notificationsAdapter = new NotificationsAdapter(notificationModels, clickListener, mentionClickListener);
-
-                notificationsBinding.rvComments.setAdapter(notificationsAdapter);
-                notificationsBinding.swipeRefreshLayout.setRefreshing(false);
-            }
-        }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        onRefresh();
     }
 
     @Override
@@ -75,11 +68,9 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
         new NotificationsFetcher(new FetchListener<NotificationModel[]>() {
             @Override
             public void onResult(final NotificationModel[] notificationModels) {
+                notificationsBinding.rvComments.setAdapter(new NotificationsAdapter(notificationModels, clickListener, mentionClickListener));
                 notificationsBinding.swipeRefreshLayout.setRefreshing(false);
-
-                notificationsAdapter = new NotificationsAdapter(notificationModels, clickListener, mentionClickListener);
-
-                notificationsBinding.rvComments.setAdapter(notificationsAdapter);
+                new SeenAction().execute();
             }
         }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
     }
@@ -150,7 +141,8 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
                 urlConnection.setUseCaches(false);
                 urlConnection.setRequestProperty("User-Agent", Constants.USER_AGENT);
                 urlConnection.setRequestProperty("x-csrftoken",
-                        Utils.settingsHelper.getString(Constants.COOKIE).split("csrftoken=")[1].split(";")[0]);urlConnection.connect();
+                        Utils.settingsHelper.getString(Constants.COOKIE).split("csrftoken=")[1].split(";")[0]);
+                urlConnection.connect();
                 if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                     ok = true;
                 }
@@ -167,6 +159,25 @@ public final class NotificationsViewer extends BaseLanguageActivity implements S
                 onRefresh();
             }
             else Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    class SeenAction extends AsyncTask<Void, Void, Void> {
+        protected Void doInBackground(Void... lmao) {
+            try {
+                final HttpURLConnection urlConnection =
+                        (HttpURLConnection) new URL("https://www.instagram.com/web/activity/mark_checked/").openConnection();
+                urlConnection.setRequestMethod("POST");
+                urlConnection.setUseCaches(false);
+                urlConnection.setRequestProperty("User-Agent", Constants.USER_AGENT);
+                urlConnection.setRequestProperty("x-csrftoken",
+                        Utils.settingsHelper.getString(Constants.COOKIE).split("csrftoken=")[1].split(";")[0]);
+                urlConnection.connect();
+                urlConnection.disconnect();
+            } catch (Throwable ex) {
+                Log.e("austin_debug", "seen: " + ex);
+            }
+            return null;
         }
     }
 }

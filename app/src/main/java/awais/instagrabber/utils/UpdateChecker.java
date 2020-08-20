@@ -33,9 +33,9 @@ public final class UpdateChecker extends AsyncTask<Void, Void, Boolean> {
             conn.connect();
 
             final int responseCode = conn.getResponseCode();
-            if (responseCode == HttpURLConnection.HTTP_MOVED_TEMP) {
+            if (responseCode == HttpURLConnection.HTTP_MOVED_TEMP && !BuildConfig.DEBUG) {
                 version = conn.getHeaderField("Location").split("/v")[1];
-                return Float.parseFloat(version) > Float.parseFloat(BuildConfig.VERSION_NAME);
+                return version != BuildConfig.VERSION_NAME;
             }
 
             conn.disconnect();

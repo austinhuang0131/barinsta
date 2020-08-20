@@ -31,6 +31,14 @@ public final class ProfileModel implements Serializable {
         this.requested = requested;
     }
 
+    public static ProfileModel getDefaultProfileModel() {
+        return new ProfileModel(false, false, false, null, null, null, null, null, null, null, 0, 0, 0, false, false, false, false);
+    }
+
+    public static ProfileModel getDefaultProfileModel(final String userId) {
+        return new ProfileModel(false, false, false, userId, null, null, null, null, null, null, 0, 0, 0, false, false, false, false);
+    }
+
     public boolean isPrivate() {
         return isPrivate;
     }
@@ -71,17 +79,25 @@ public final class ProfileModel implements Serializable {
         return hdProfilePic;
     }
 
-    public long getPostCount() { return postCount; }
+    public long getPostCount() {
+        return postCount;
+    }
 
-    public long getFollowersCount() { return followersCount; }
+    public long getFollowersCount() {
+        return followersCount;
+    }
 
     public long getFollowingCount() {
         return followingCount;
     }
 
-    public boolean getFollowing() { return following; }
+    public boolean getFollowing() {
+        return following;
+    }
 
-    public boolean getRestricted() { return restricted; }
+    public boolean getRestricted() {
+        return restricted;
+    }
 
     public boolean getBlocked() {
         return blocked;
