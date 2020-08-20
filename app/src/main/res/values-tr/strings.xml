@@ -219,10 +219,10 @@
     <string name="select_picture">Resim Seç</string>
     <string name="uploading">Yükleniyor...</string>
     <string name="activity_count_prefix">Sahip olduğun:</string>
-    <string name="activity_count_relationship">%s takip</string>
-    <string name="activity_count_comments">%s yorum</string>
-    <string name="activity_count_commentlikes">%s yorum beğenisi</string>
-    <string name="activity_count_usertags">%s kullanıcı etiketi</string>
-    <string name="activity_count_likes">%s beğeni</string>
+    <string name="activity_count_relationship" comment="activity_count_relationship">%s takip</string>
+    <string name="activity_count_comments" comment="activity_count_comments">%s yorum</string>
+    <string name="activity_count_commentlikes" comment="activity_count_commentlikes">%s yorum beğenisi</string>
+    <string name="activity_count_usertags" comment="activity_count_usertags">%s kullanıcı etiketi</string>
+    <string name="activity_count_likes" comment="activity_count_likes">%s beğeni</string>
     <string name="activity_notloggedin">Bu bildirime tıklamadan önce çıkış yaptın?!</string>
 </resources>
