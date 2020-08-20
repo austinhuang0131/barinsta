@@ -150,10 +150,10 @@
     <string name="dms_inbox_open_link">Apri link</string>
     <string name="dms_inbox_copy_text">Copia testo</string>
     <string name="dms_inbox_download">Scarica allegato</string>
-    <string name="dms_inbox_like">Like message</string>
-    <string name="dms_inbox_unlike">Unlike message</string>
-    <string name="dms_inbox_unsend">Unsend message</string>
-    <string name="dms_inbox_author">View author profile</string>
+    <string name="dms_inbox_like">Metti like al messaggio</string>
+    <string name="dms_inbox_unlike">Togli like al messaggio</string>
+    <string name="dms_inbox_unsend">Annulla invio messaggio</string>
+    <string name="dms_inbox_author">Visualizza profilo autore</string>
     <string name="dms_inbox_media_shared_from">Post condiviso da %s</string>
     <string name="dms_inbox_raven_media_unknown"><i>Tipo di media sconosciuto</i></string>
     <string name="dms_inbox_raven_media_expired">Media scaduto!</string>
@@ -217,12 +217,12 @@
     <string name="use_amoled_dark_theme">Usa la modalità AMOLED per il tema scuro</string>
     <string name="action_notif">Attività</string>
     <string name="select_picture">Seleziona immagine</string>
-    <string name="uploading">Uploading...</string>
-    <string name="activity_count_prefix">You have:</string>
-    <string name="activity_count_relationship">%s follows</string>
-    <string name="activity_count_comments">%s comments</string>
-    <string name="activity_count_commentlikes">%s comment likes</string>
+    <string name="uploading">Upload in corso...</string>
+    <string name="activity_count_prefix">Hai:</string>
+    <string name="activity_count_relationship">%s seguaci</string>
+    <string name="activity_count_comments">%s commenti</string>
+    <string name="activity_count_commentlikes">%s like commento</string>
     <string name="activity_count_usertags">%s usertags</string>
-    <string name="activity_count_likes">%s likes</string>
-    <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
+    <string name="activity_count_likes">%s like</string>
+    <string name="activity_notloggedin">Ti sei disconnesso prima di cliccare su questa notifica?!</string>
 </resources>
