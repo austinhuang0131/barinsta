@@ -182,6 +182,7 @@
     <string name="downloader_unknown_error">Unknown error occurred!!!</string>
     <string name="downloader_error_creating_folder">Error creating folder!</string>
     <string name="downloader_error_download_file">Error downloading file</string>
+    <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
     <string name="comment_viewer_copy_user">Copy username</string>
     <string name="comment_viewer_copy_comment">Copy comment</string>
     <string name="comment_viewer_reply_comment">Reply to comment</string>
