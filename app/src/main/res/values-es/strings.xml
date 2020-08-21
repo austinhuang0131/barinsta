@@ -179,6 +179,7 @@
     <string name="downloader_unknown_error">¡Ha ocurrido un error desconocido!</string>
     <string name="downloader_error_creating_folder">¡Error al crear carpeta!</string>
     <string name="downloader_error_download_file">¡Error al descargar archivo!</string>
+    <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
     <string name="comment_viewer_copy_user">Copiar nombre de usuario</string>
     <string name="comment_viewer_copy_comment">Copiar comentario</string>
     <string name="comment_viewer_reply_comment">Responder a comentario</string>
