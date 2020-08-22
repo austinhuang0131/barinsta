@@ -34,6 +34,7 @@
     <string name="download_user_folder">Download posts to username folder in Downloads</string>
     <string name="autoload_posts">Automatycznie załaduj wszystkie posty użytkownika</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
+    <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Błąd ładowania profilu!\nSpróbuj zalogować się i wyszukać ponownie.</string>
     <string name="error_creating_folders">Błąd podczas tworzenia folderu(ów) pobierania.</string>
     <string name="show_feed">Show user feed (Works only when user is logged in)</string>
@@ -166,6 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">Suggested</string>
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Cannot delivered</string>
+    <string name="dms_action_success">Great success!</string>
+    <string name="dms_action_leave">Leave</string>
+    <string name="dms_action_leave_question">Leave this chat?</string>
     <string name="direct_download">Download directly</string>
     <string name="direct_download_desc">Downloads posts directly to the phone!</string>
     <string name="direct_download_loading">Pobieranie post(ów)</string>
