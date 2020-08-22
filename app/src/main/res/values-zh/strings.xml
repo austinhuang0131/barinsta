@@ -179,7 +179,7 @@
     <string name="downloader_unknown_error">出现不详错误!!!</string>
     <string name="downloader_error_creating_folder">创建文件夹时出错!</string>
     <string name="downloader_error_download_file">下载文件时出错</string>
-    <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
+    <string name="downloader_too_many">您一次只能下载100个帖子。切勿贪得无厌！</string>
     <string name="comment_viewer_copy_user">复制用户名</string>
     <string name="comment_viewer_copy_comment">复制评论</string>
     <string name="comment_viewer_reply_comment">回复评论</string>
