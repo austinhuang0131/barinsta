@@ -34,6 +34,7 @@
     <string name="download_user_folder">Unduh kiriman ke folder nama pengguna di folder unduhan</string>
     <string name="autoload_posts">Muat otomatis semua kiriman dari pengguna</string>
     <string name="mark_as_seen_setting">Tandai cerita telah dilihat setelah ditampilkan\n(Pembuat cerita akan mengetahui anda telah melihat ceritanya)</string>
+    <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Galat saat memuat profil!\nCoba masuk dan cari lagi.</string>
     <string name="error_creating_folders">Galat saat membuat folder unduhan.</string>
     <string name="show_feed">Tampilkan Beranda pengguna (hanya bisa saat anda sudah masuk)</string>
@@ -166,6 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">Telah disarankan</string>
     <string name="dms_inbox_raven_media_screenshot">Layar tertangkap</string>
     <string name="dms_inbox_raven_media_cant_deliver">Tidak dapat mengirim</string>
+    <string name="dms_action_success">Great success!</string>
+    <string name="dms_action_leave">Leave</string>
+    <string name="dms_action_leave_question">Leave this chat?</string>
     <string name="direct_download">Langsung unduh</string>
     <string name="direct_download_desc">Langsung unduh kiriman ke ponsel!</string>
     <string name="direct_download_loading">Mendapatkan kiriman…</string>
