@@ -34,6 +34,7 @@
     <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
     <string name="autoload_posts">Kullanıcıların tüm gönderilerini otomatik yükle</string>
     <string name="mark_as_seen_setting">Hikayeleri izledikten sonra izlendi olarak işaretle\n(Paylaşan kişi de gördüğünüzü bilecek böylece)</string>
+    <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Profili yüklerken hata oluştu!\nGiriş yapıp tekrar deneyin.</string>
     <string name="error_creating_folders">İndirilenler klasörü(leri) oluşturulamadı.</string>
     <string name="show_feed">Kullanıcıların gönderilerini ana sayfada göster (sadece giriş yapıldığında çalışır)</string>
@@ -166,6 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">Önerilen</string>
     <string name="dms_inbox_raven_media_screenshot">Ekran görüntüsü alındı</string>
     <string name="dms_inbox_raven_media_cant_deliver">İletilemiyor</string>
+    <string name="dms_action_success">Great success!</string>
+    <string name="dms_action_leave">Leave</string>
+    <string name="dms_action_leave_question">Leave this chat?</string>
     <string name="direct_download">Direkt indir</string>
     <string name="direct_download_desc">Gönderileri direkt telefona indir!</string>
     <string name="direct_download_loading">Gönderi(ler) getiriliyor</string>
