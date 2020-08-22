@@ -34,7 +34,7 @@
     <string name="download_user_folder">Scarica i post nella cartella nome utente in Download</string>
     <string name="autoload_posts">Carica automaticamente tutti i post dall\'utente</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo aver visualizzato\n(L\'autore della storia saprà che l\'hai vista)</string>
-    <string name="activity_setting">Enable activity notifications</string>
+    <string name="activity_setting">Abilita notifiche attività</string>
     <string name="error_loading_profile">Errore durante il caricamento del profilo!\nProvare ad accedere e cercare nuovamente.</string>
     <string name="error_creating_folders">Errore durante la creazione delle cartelle di download.</string>
     <string name="show_feed">Mostra feed utente (funziona solo quando l\'utente ha effettuato l\'accesso)</string>
@@ -167,9 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">Consigliato</string>
     <string name="dms_inbox_raven_media_screenshot">Effettuato screenshot</string>
     <string name="dms_inbox_raven_media_cant_deliver">Non consegnato</string>
-    <string name="dms_action_success">Great success!</string>
-    <string name="dms_action_leave">Leave</string>
-    <string name="dms_action_leave_question">Leave this chat?</string>
+    <string name="dms_action_success">Ottimo successo!</string>
+    <string name="dms_action_leave">Lascia</string>
+    <string name="dms_action_leave_question">Lascia questa chat?</string>
     <string name="direct_download">Scarica direttamente</string>
     <string name="direct_download_desc">Scarica i post direttamente sul telefono!</string>
     <string name="direct_download_loading">Recupero post</string>
