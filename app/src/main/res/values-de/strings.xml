@@ -34,6 +34,7 @@
     <string name="download_user_folder">Beiträge in den Benutzernamen-Ordner in Downloads herunterladen</string>
     <string name="autoload_posts">Alle Beiträge des Benutzers automatisch laden</string>
     <string name="mark_as_seen_setting">Markiere Stories als gesehen nach dem Ansehen\n(Der Storyersteller wird wissen, dass du sie gesehen hast)</string>
+    <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Fehler beim Laden des Profils!\nVersuche dich einzuloggen und erneut zu suchen.</string>
     <string name="error_creating_folders">Fehler beim Erstellen von Download-Ordner(n).</string>
     <string name="show_feed">Nutzer-Feed anzeigen (Funktioniert nur, wenn Benutzer angemeldet ist)</string>
@@ -166,6 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">Empfohlen</string>
     <string name="dms_inbox_raven_media_screenshot">Gescreenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Kann nicht zugestellt werden</string>
+    <string name="dms_action_success">Great success!</string>
+    <string name="dms_action_leave">Leave</string>
+    <string name="dms_action_leave_question">Leave this chat?</string>
     <string name="direct_download">Direkt herunterladen</string>
     <string name="direct_download_desc">Lade Posts direkt auf das Handy herunter!</string>
     <string name="direct_download_loading">Beiträgen abrufen</string>
