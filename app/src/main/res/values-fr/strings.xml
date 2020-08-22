@@ -34,7 +34,7 @@
     <string name="download_user_folder">Télécharger les posts dans le dossier du nom de l\'utilisateur dans les Téléchargements</string>
     <string name="autoload_posts">Chargement automatique de tous les posts de l\'utilisateur</string>
     <string name="mark_as_seen_setting">Marquer les stories comme vues\n(L\'auteur de l\'histoire saura que vous l\'avez vue)</string>
-    <string name="activity_setting">Enable activity notifications</string>
+    <string name="activity_setting">Activer les notifications d\'activités</string>
     <string name="error_loading_profile">Erreur de chargement du profil!\nVeuillez vous reconnecter et réessayez.</string>
     <string name="error_creating_folders">Erreur de création de dossier(s) de téléchargement.</string>
     <string name="show_feed">Afficher le flux utilisateur (Ne fonctionne que lorsque l\'utilisateur est connecté)</string>
@@ -167,9 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">Suggéré</string>
     <string name="dms_inbox_raven_media_screenshot">Capture d\'écran effectuée</string>
     <string name="dms_inbox_raven_media_cant_deliver">Impossible de distribuer</string>
-    <string name="dms_action_success">Great success!</string>
-    <string name="dms_action_leave">Leave</string>
-    <string name="dms_action_leave_question">Leave this chat?</string>
+    <string name="dms_action_success">Succès !</string>
+    <string name="dms_action_leave">Quitter</string>
+    <string name="dms_action_leave_question">Quitter cette conversation ?</string>
     <string name="direct_download">Télécharger directement</string>
     <string name="direct_download_desc">Téléchargez les posts directement sur le téléphone !</string>
     <string name="direct_download_loading">Téléchargement de(s) post(s)</string>
