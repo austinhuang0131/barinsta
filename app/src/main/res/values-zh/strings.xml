@@ -34,6 +34,7 @@
     <string name="download_user_folder">下载使用用户名文件夹</string>
     <string name="autoload_posts">自动加载用户所有帖子</string>
     <string name="mark_as_seen_setting">将看过的快拍标记为已读\n（快拍作者会知道你看过了）</string>
+    <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">载入主页时出错！\n请尝试再次登录并搜索。</string>
     <string name="error_creating_folders">创建下载文件夹时出错</string>
     <string name="show_feed">显示用户动态 (只在登录后有效)</string>
@@ -166,6 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">为您推荐</string>
     <string name="dms_inbox_raven_media_screenshot">已截屏</string>
     <string name="dms_inbox_raven_media_cant_deliver">无法发送</string>
+    <string name="dms_action_success">Great success!</string>
+    <string name="dms_action_leave">Leave</string>
+    <string name="dms_action_leave_question">Leave this chat?</string>
     <string name="direct_download">直接下载</string>
     <string name="direct_download_desc">直接下载至手机!</string>
     <string name="direct_download_loading">读取帖子</string>
