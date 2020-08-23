@@ -167,9 +167,9 @@
     <string name="dms_inbox_raven_media_suggested">Önerilen</string>
     <string name="dms_inbox_raven_media_screenshot">Ekran görüntüsü alındı</string>
     <string name="dms_inbox_raven_media_cant_deliver">İletilemiyor</string>
-    <string name="dms_action_success">Great success!</string>
-    <string name="dms_action_leave">Leave</string>
-    <string name="dms_action_leave_question">Leave this chat?</string>
+    <string name="dms_action_success">Büyük başarı!</string>
+    <string name="dms_action_leave">Ayrıl</string>
+    <string name="dms_action_leave_question">Bu sohbetten ayrıl?</string>
     <string name="direct_download">Direkt indir</string>
     <string name="direct_download_desc">Gönderileri direkt telefona indir!</string>
     <string name="direct_download_loading">Gönderi(ler) getiriliyor</string>
