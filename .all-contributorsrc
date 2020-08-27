@@ -32,6 +32,19 @@
         "maintenance",
         "question"
       ]
+    },
+    {
+      "login": "Shadowspear123",
+      "name": "Shadowspear123",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/50462281?v=4",
+      "profile": "https://github.com/Shadowspear123",
+      "contributions": [
+        "blog",
+        "bug",
+        "ideas",
+        "question",
+        "userTesting"
+      ]
     }
   ],
   "contributorsPerLine": 7,
