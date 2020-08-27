@@ -15,7 +15,9 @@
         "doc",
         "question",
         "translation",
-        "userTesting"
+        "userTesting",
+        "ideas",
+        "maintenance"
       ]
     }
   ],
