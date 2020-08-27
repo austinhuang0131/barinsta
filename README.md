@@ -40,7 +40,7 @@ Version status: ![F-Droid](https://img.shields.io/f-droid/v/me.austinhuang.insta
 ### Contributors
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Prominent contributors are listed here in the [all-contributors](https://allcontributors.org/) format. See [emoji key](https://allcontributors.org/docs/en/emoji-key).
@@ -54,6 +54,7 @@ Prominent contributors are listed here in the [all-contributors](https://allcont
     <td align="center"><a href="https://github.com/ammargitham"><img src="https://avatars0.githubusercontent.com/u/8017365?v=4" width="100px;" alt=""/><br /><sub><b>Ammar Githam</b></sub></a><br /><a href="https://github.com/austinhuang0131/instagrabber/commits?author=ammargitham" title="Code">💻</a> <a href="#design-ammargitham" title="Design">🎨</a> <a href="#ideas-ammargitham" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-ammargitham" title="Maintenance">🚧</a> <a href="#question-ammargitham" title="Answering Questions">💬</a></td>
     <td align="center"><a href="http://rerolledgeek.blogspot.com/"><img src="https://avatars3.githubusercontent.com/u/5278488?v=4" width="100px;" alt=""/><br /><sub><b>AWAiS</b></sub></a><br /><a href="https://github.com/austinhuang0131/instagrabber/commits?author=AwaisKing" title="Code">💻</a> <a href="#ideas-AwaisKing" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/Shadowspear123"><img src="https://avatars1.githubusercontent.com/u/50462281?v=4" width="100px;" alt=""/><br /><sub><b>Shadowspear123</b></sub></a><br /><a href="#blog-Shadowspear123" title="Blogposts">📝</a> <a href="https://github.com/austinhuang0131/instagrabber/issues?q=author%3AShadowspear123" title="Bug reports">🐛</a> <a href="#ideas-Shadowspear123" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-Shadowspear123" title="Answering Questions">💬</a> <a href="#userTesting-Shadowspear123" title="User Testing">📓</a></td>
+    <td align="center"><a href="http://kevinthomas.dev"><img src="https://avatars2.githubusercontent.com/u/15370181?v=4" width="100px;" alt=""/><br /><sub><b>Kevin Thomas</b></sub></a><br /><a href="#financial-KevinNThomas" title="Financial">💵</a></td>
   </tr>
 </table>
 
