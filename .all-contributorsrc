@@ -55,6 +55,15 @@
         "question",
         "userTesting"
       ]
+    },
+    {
+      "login": "KevinNThomas",
+      "name": "Kevin Thomas",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/15370181?v=4",
+      "profile": "http://kevinthomas.dev",
+      "contributions": [
+        "financial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
