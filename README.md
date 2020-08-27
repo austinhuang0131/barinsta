@@ -40,7 +40,7 @@ Version status: ![F-Droid](https://img.shields.io/f-droid/v/me.austinhuang.insta
 ### Contributors
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Prominent contributors are listed here in the [all-contributors](https://allcontributors.org/) format. See [emoji key](https://allcontributors.org/docs/en/emoji-key).
@@ -52,6 +52,7 @@ Prominent contributors are listed here in the [all-contributors](https://allcont
   <tr>
     <td align="center"><a href="https://austinhuang.me"><img src="https://avatars1.githubusercontent.com/u/16656689?v=4" width="100px;" alt=""/><br /><sub><b>Austin Huang</b></sub></a><br /><a href="https://github.com/austinhuang0131/instagrabber/commits?author=austinhuang0131" title="Code">💻</a> <a href="https://github.com/austinhuang0131/instagrabber/commits?author=austinhuang0131" title="Documentation">📖</a> <a href="#question-austinhuang0131" title="Answering Questions">💬</a> <a href="#translation-austinhuang0131" title="Translation">🌍</a> <a href="#userTesting-austinhuang0131" title="User Testing">📓</a> <a href="#ideas-austinhuang0131" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-austinhuang0131" title="Maintenance">🚧</a></td>
     <td align="center"><a href="https://github.com/ammargitham"><img src="https://avatars0.githubusercontent.com/u/8017365?v=4" width="100px;" alt=""/><br /><sub><b>Ammar Githam</b></sub></a><br /><a href="https://github.com/austinhuang0131/instagrabber/commits?author=ammargitham" title="Code">💻</a> <a href="#design-ammargitham" title="Design">🎨</a> <a href="#ideas-ammargitham" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-ammargitham" title="Maintenance">🚧</a> <a href="#question-ammargitham" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="http://rerolledgeek.blogspot.com/"><img src="https://avatars3.githubusercontent.com/u/5278488?v=4" width="100px;" alt=""/><br /><sub><b>AWAiS</b></sub></a><br /><a href="https://github.com/austinhuang0131/instagrabber/commits?author=AwaisKing" title="Code">💻</a> <a href="#ideas-AwaisKing" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
