@@ -50,7 +50,7 @@ Prominent contributors are listed here in the [all-contributors](https://allcont
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://austinhuang.me"><img src="https://avatars1.githubusercontent.com/u/16656689?v=4" width="100px;" alt=""/><br /><sub><b>Austin Huang</b></sub></a><br /><a href="https://github.com/austinhuang0131/instagrabber/commits?author=austinhuang0131" title="Code">💻</a> <a href="https://github.com/austinhuang0131/instagrabber/commits?author=austinhuang0131" title="Documentation">📖</a> <a href="#question-austinhuang0131" title="Answering Questions">💬</a> <a href="#translation-austinhuang0131" title="Translation">🌍</a> <a href="#userTesting-austinhuang0131" title="User Testing">📓</a></td>
+    <td align="center"><a href="https://austinhuang.me"><img src="https://avatars1.githubusercontent.com/u/16656689?v=4" width="100px;" alt=""/><br /><sub><b>Austin Huang</b></sub></a><br /><a href="https://github.com/austinhuang0131/instagrabber/commits?author=austinhuang0131" title="Code">💻</a> <a href="https://github.com/austinhuang0131/instagrabber/commits?author=austinhuang0131" title="Documentation">📖</a> <a href="#question-austinhuang0131" title="Answering Questions">💬</a> <a href="#translation-austinhuang0131" title="Translation">🌍</a> <a href="#userTesting-austinhuang0131" title="User Testing">📓</a> <a href="#ideas-austinhuang0131" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-austinhuang0131" title="Maintenance">🚧</a></td>
   </tr>
 </table>
 
