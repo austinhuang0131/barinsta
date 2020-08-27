@@ -17,6 +17,19 @@
         "translation",
         "userTesting"
       ]
+    },
+    {
+      "login": "ammargitham",
+      "name": "Ammar Githam",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/8017365?v=4",
+      "profile": "https://github.com/ammargitham",
+      "contributions": [
+        "code",
+        "design",
+        "ideas",
+        "maintenance",
+        "question"
+      ]
     }
   ],
   "contributorsPerLine": 7,
