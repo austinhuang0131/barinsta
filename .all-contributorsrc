@@ -1,0 +1,28 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "austinhuang0131",
+      "name": "Austin Huang",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16656689?v=4",
+      "profile": "https://austinhuang.me",
+      "contributions": [
+        "code",
+        "doc",
+        "question",
+        "translation",
+        "userTesting"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "instagrabber",
+  "projectOwner": "austinhuang0131",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
