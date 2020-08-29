@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
+        <item>پیش فرض سیستم</item>
+        <item>انگلیسی</item>
         <item>French [Thanks to @kernoeb (Telegram)]</item>
         <item>Spanish [Thanks to @sguinetti (GitLab)]</item>
         <item>Chinese Simplified</item>
@@ -14,21 +14,21 @@
         <item>Brazilian Portuguese [Thanks to @wagnim (GitHub)]</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>خودکار / پیروی از سیستم</item>
+        <item>خودکار / پیروی از باتری</item>
+        <item>تاریک</item>
+        <item>روشن</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>هیچکدام</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>در</item>
+        <item>روشن</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>درحال بارگذاری...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
