@@ -34,9 +34,11 @@
     <string name="title_user_story">User Story</string>
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Show toolbar at bottom</string>
+    <string name="update_check">Check for new updates on GitHub at startup</string>
     <string name="download_user_folder">Download posts to username folder in Downloads</string>
     <string name="autoload_posts">Auto-load all posts from user</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
+    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
     <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
@@ -84,6 +86,7 @@
     <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">This Account is Private</string>
+    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">You can log in via Settings on the bottom-right corner. Or, you can view public accounts without login!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
     <string name="empty_acc">This Account has No Posts</string>
@@ -173,6 +176,8 @@
     <string name="dms_action_success">Great success!</string>
     <string name="dms_action_leave">Leave</string>
     <string name="dms_action_leave_question">Leave this chat?</string>
+    <string name="dms_action_kick">Kick</string>
+    <string name="dms_left_users">Left users</string>
     <string name="direct_download">Download directly</string>
     <string name="direct_download_desc">Downloads posts directly to the phone!</string>
     <string name="direct_download_loading">Fetching post(s)</string>
