@@ -31,9 +31,11 @@
     <string name="title_user_story">Story</string>
     <string name="title_changelog">Catatan Perubahan</string>
     <string name="bottom_toolbar">Tampilkan bilah alat di bawah</string>
+    <string name="update_check">Check for new updates on GitHub at startup</string>
     <string name="download_user_folder">Unduh kiriman ke folder nama pengguna di folder unduhan</string>
     <string name="autoload_posts">Muat otomatis semua kiriman dari pengguna</string>
     <string name="mark_as_seen_setting">Tandai cerita telah dilihat setelah ditampilkan\n(Pembuat cerita akan mengetahui anda telah melihat ceritanya)</string>
+    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
     <string name="error_loading_profile">Galat saat memuat profil!\nCoba masuk dan cari lagi.</string>
     <string name="error_creating_folders">Galat saat membuat folder unduhan.</string>
@@ -81,6 +83,7 @@
     <string name="story_quizzed">Anda sudah menjawab!</string>
     <string name="story_mentions">Sebutan</string>
     <string name="priv_acc">Akun Ini Bersifat Pribadi</string>
+    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">Anda bisa masuk melalui Pengaturan di pojok kanan bawah. Atau anda dapat melihat akun publik tanpa masuk!</string>
     <string name="no_acc_logged_in">Anda dapat mengusap ke kiri/kanan untuk jelajah/beranda, atau cari sesuatu di bawah!</string>
     <string name="empty_acc">Akun ini tidak memiliki kiriman</string>
@@ -170,6 +173,8 @@
     <string name="dms_action_success">Berhasil!</string>
     <string name="dms_action_leave">Tinggalkan</string>
     <string name="dms_action_leave_question">Tinggalkan obrolan ini?</string>
+    <string name="dms_action_kick">Kick</string>
+    <string name="dms_left_users">Left users</string>
     <string name="direct_download">Langsung unduh</string>
     <string name="direct_download_desc">Langsung unduh kiriman ke ponsel!</string>
     <string name="direct_download_loading">Mendapatkan kiriman…</string>
