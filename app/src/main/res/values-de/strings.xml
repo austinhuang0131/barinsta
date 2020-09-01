@@ -31,9 +31,11 @@
     <string name="title_user_story">Nutzerstory</string>
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Symbolleiste unten anzeigen</string>
+    <string name="update_check">Check for new updates on GitHub at startup</string>
     <string name="download_user_folder">Beiträge in den Benutzernamen-Ordner in Downloads herunterladen</string>
     <string name="autoload_posts">Alle Beiträge des Benutzers automatisch laden</string>
     <string name="mark_as_seen_setting">Markiere Stories als gesehen nach dem Ansehen\n(Der Storyersteller wird wissen, dass du sie gesehen hast)</string>
+    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
     <string name="activity_setting">Aktiviere Aktivitätsbenachrichtigungen</string>
     <string name="error_loading_profile">Fehler beim Laden des Profils!\nVersuche dich einzuloggen und erneut zu suchen.</string>
     <string name="error_creating_folders">Fehler beim Erstellen von Download-Ordner(n).</string>
@@ -81,6 +83,7 @@
     <string name="story_quizzed">Du hast bereits geantwortet!</string>
     <string name="story_mentions">Erwähnungen</string>
     <string name="priv_acc">Dieser Account ist privat</string>
+    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">Du kannst dich über die Einstellungen unten rechts einloggen, oder öffentliche Konten ohne Anmeldung ansehen!</string>
     <string name="no_acc_logged_in">Wische nach links/rechts für Erkunden/Feed, oder suche unten etwas!</string>
     <string name="empty_acc">Dieses Konto hat keine Beiträge</string>
@@ -170,6 +173,8 @@
     <string name="dms_action_success">Großer Erfolg!</string>
     <string name="dms_action_leave">Verlassen</string>
     <string name="dms_action_leave_question">Chat verlassen?</string>
+    <string name="dms_action_kick">Kick</string>
+    <string name="dms_left_users">Left users</string>
     <string name="direct_download">Direkt herunterladen</string>
     <string name="direct_download_desc">Lade Posts direkt auf das Handy herunter!</string>
     <string name="direct_download_loading">Beiträgen abrufen</string>
