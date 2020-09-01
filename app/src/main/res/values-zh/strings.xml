@@ -31,9 +31,11 @@
     <string name="title_user_story">用户快拍</string>
     <string name="title_changelog">日志</string>
     <string name="bottom_toolbar">下方显示工具栏</string>
+    <string name="update_check">Check for new updates on GitHub at startup</string>
     <string name="download_user_folder">下载使用用户名文件夹</string>
     <string name="autoload_posts">自动加载用户所有帖子</string>
     <string name="mark_as_seen_setting">将看过的快拍标记为已读\n（快拍作者会知道你看过了）</string>
+    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
     <string name="activity_setting">启用活动通知</string>
     <string name="error_loading_profile">载入主页时出错！\n请尝试再次登录并搜索。</string>
     <string name="error_creating_folders">创建下载文件夹时出错</string>
@@ -81,6 +83,7 @@
     <string name="story_quizzed">您已回答过了！</string>
     <string name="story_mentions">提及</string>
     <string name="priv_acc">私密账户</string>
+    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">您可以通过右下角的设定来登录。注意，您无需登录即可查看公开账户！</string>
     <string name="no_acc_logged_in">您可以向左/向右滑动查看探索/订阅，或在下方进行搜索！</string>
     <string name="empty_acc">暂未发帖</string>
@@ -170,6 +173,8 @@
     <string name="dms_action_success">非常成功!</string>
     <string name="dms_action_leave">离开</string>
     <string name="dms_action_leave_question">离开此聊天吗？</string>
+    <string name="dms_action_kick">Kick</string>
+    <string name="dms_left_users">Left users</string>
     <string name="direct_download">直接下载</string>
     <string name="direct_download_desc">直接下载至手机!</string>
     <string name="direct_download_loading">读取帖子</string>
