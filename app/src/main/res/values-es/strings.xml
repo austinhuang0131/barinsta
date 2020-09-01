@@ -31,9 +31,11 @@
     <string name="title_user_story">Historia de usuario</string>
     <string name="title_changelog">Lista de cambios</string>
     <string name="bottom_toolbar">Mostrar barra de herramientas inferior</string>
+    <string name="update_check">Check for new updates on GitHub at startup</string>
     <string name="download_user_folder">Descargar mensajes a la carpeta de usuario en Downloads</string>
     <string name="autoload_posts">Cargar automáticamente todos los mensajes de usuario</string>
     <string name="mark_as_seen_setting">Marcar historias como vistas después de ver\n(El autor de la historia sabrá que la has visto)</string>
+    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
     <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">¡Error al cargar el perfil!\nVuelve a entrar y buscar de nuevo.</string>
     <string name="error_creating_folders">Error creando carpetas de descarga.</string>
@@ -81,6 +83,7 @@
     <string name="story_quizzed">¡Ya has respondido!</string>
     <string name="story_mentions">Menciones</string>
     <string name="priv_acc">Esta cuenta es privada</string>
+    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">Puedes iniciar sesión a través de Ajustes en la esquina inferior derecha. ¡O, puedes ver cuentas públicas sin iniciar sesión!</string>
     <string name="no_acc_logged_in">¡Puedes deslizar hacia la izquierda/derecha para explorar/feed, o buscar algo abajo!</string>
     <string name="empty_acc">Esta cuenta no tiene publicaciones</string>
@@ -170,6 +173,8 @@
     <string name="dms_action_success">Great success!</string>
     <string name="dms_action_leave">Leave</string>
     <string name="dms_action_leave_question">Leave this chat?</string>
+    <string name="dms_action_kick">Kick</string>
+    <string name="dms_left_users">Left users</string>
     <string name="direct_download">Descargar directamente</string>
     <string name="direct_download_desc">¡Descarga los mensajes directamente al teléfono!</string>
     <string name="direct_download_loading">Capturando publicaciones</string>
