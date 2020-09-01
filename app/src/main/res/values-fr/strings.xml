@@ -31,11 +31,11 @@
     <string name="title_user_story">Stories de l\'utilisateur</string>
     <string name="title_changelog">Journal des changements</string>
     <string name="bottom_toolbar">Afficher la barre d\'outils en bas</string>
-    <string name="update_check">Check for new updates on GitHub at startup</string>
+    <string name="update_check">Vérifier les nouvelles mises à jour sur GitHub au démarrage</string>
     <string name="download_user_folder">Télécharger les posts dans le dossier du nom de l\'utilisateur dans les Téléchargements</string>
     <string name="autoload_posts">Chargement automatique de tous les posts de l\'utilisateur</string>
     <string name="mark_as_seen_setting">Marquer les stories comme vues\n(L\'auteur de l\'histoire saura que vous l\'avez vue)</string>
-    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
+    <string name="dm_mark_as_seen_setting">Marquer automatiquement le DM comme vu après l\'avoir vu\n(les autres membres sauront que vous l\'avez vu)</string>
     <string name="activity_setting">Activer les notifications d\'activités</string>
     <string name="error_loading_profile">Erreur de chargement du profil!\nVeuillez vous reconnecter et réessayez.</string>
     <string name="error_creating_folders">Erreur de création de dossier(s) de téléchargement.</string>
@@ -83,7 +83,7 @@
     <string name="story_quizzed">Vous avez déjà répondu !</string>
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">Compte privé</string>
-    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
+    <string name="priv_acc_confirm">Vous ne pourrez plus accéder aux messages après avoir été désabonné! Êtes-vous sûr(e) ?</string>
     <string name="no_acc">Vous pouvez vous connecter dans les paramètres situés dans le coin inférieur droit. Vous pouvez visualiser les comptes publics sans vous connecter!</string>
     <string name="no_acc_logged_in">Vous pouvez glisser vers la gauche/droite pour changer de catégorie, ou rechercher quelque chose ci-dessous!</string>
     <string name="empty_acc">Ce compte ne contient pas de posts</string>
@@ -173,8 +173,8 @@
     <string name="dms_action_success">Succès !</string>
     <string name="dms_action_leave">Quitter</string>
     <string name="dms_action_leave_question">Quitter cette conversation ?</string>
-    <string name="dms_action_kick">Kick</string>
-    <string name="dms_left_users">Left users</string>
+    <string name="dms_action_kick">Éjecter</string>
+    <string name="dms_left_users">Utilisateurs restants</string>
     <string name="direct_download">Télécharger directement</string>
     <string name="direct_download_desc">Téléchargez les posts directement sur le téléphone !</string>
     <string name="direct_download_loading">Téléchargement de(s) post(s)</string>
