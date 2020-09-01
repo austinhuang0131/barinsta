@@ -31,9 +31,11 @@
     <string name="title_user_story">História do usuário</string>
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Mostrar barra de ferramentas na parte inferior</string>
+    <string name="update_check">Check for new updates on GitHub at startup</string>
     <string name="download_user_folder">Baixe postagens para a pasta de nome de usuário em Downloads</string>
     <string name="autoload_posts">Carregar automaticamente todas as postagens do usuário</string>
     <string name="mark_as_seen_setting">Marque as histórias como vistas após a visualização\n(O autor da história saberá que você a viu)</string>
+    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
     <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Erro ao carregar o perfil!\nTente fazer login e pesquise novamente.</string>
     <string name="error_creating_folders">Erro ao criar pasta (s) de download.</string>
@@ -81,6 +83,7 @@
     <string name="story_quizzed">Você já respondeu!</string>
     <string name="story_mentions">Menções</string>
     <string name="priv_acc">Esta conta é privada</string>
+    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">Você pode fazer login em Configurações no canto inferior direito. Ou você pode ver as contas públicas sem fazer login!</string>
     <string name="no_acc_logged_in">Você pode deslizar para a esquerda / direita para explorar / alimentar ou pesquisar algo abaixo!</string>
     <string name="empty_acc">Esta conta não tem postagens</string>
@@ -170,6 +173,8 @@
     <string name="dms_action_success">Great success!</string>
     <string name="dms_action_leave">Leave</string>
     <string name="dms_action_leave_question">Leave this chat?</string>
+    <string name="dms_action_kick">Kick</string>
+    <string name="dms_left_users">Left users</string>
     <string name="direct_download">Baixe diretamente</string>
     <string name="direct_download_desc">Baixe as postagens diretamente para o telefone!</string>
     <string name="direct_download_loading">Buscando postagem(s)</string>
