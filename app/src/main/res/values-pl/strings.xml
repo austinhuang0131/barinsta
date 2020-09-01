@@ -31,9 +31,11 @@
     <string name="title_user_story">User Story</string>
     <string name="title_changelog">Dziennik zmian</string>
     <string name="bottom_toolbar">Pokazuj pasek narzędzi na dole</string>
+    <string name="update_check">Check for new updates on GitHub at startup</string>
     <string name="download_user_folder">Download posts to username folder in Downloads</string>
     <string name="autoload_posts">Automatycznie załaduj wszystkie posty użytkownika</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
+    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
     <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Błąd ładowania profilu!\nSpróbuj zalogować się i wyszukać ponownie.</string>
     <string name="error_creating_folders">Błąd podczas tworzenia folderu(ów) pobierania.</string>
@@ -81,6 +83,7 @@
     <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">To konto jest prywatne</string>
+    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">Możesz zalogować się w ustawieniach w prawym dolnym rogu. Możesz też przeglądać konta publiczne bez logowania!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
     <string name="empty_acc">To konto nie zawiera postów</string>
@@ -170,6 +173,8 @@
     <string name="dms_action_success">Great success!</string>
     <string name="dms_action_leave">Leave</string>
     <string name="dms_action_leave_question">Leave this chat?</string>
+    <string name="dms_action_kick">Kick</string>
+    <string name="dms_left_users">Left users</string>
     <string name="direct_download">Download directly</string>
     <string name="direct_download_desc">Downloads posts directly to the phone!</string>
     <string name="direct_download_loading">Pobieranie post(ów)</string>
