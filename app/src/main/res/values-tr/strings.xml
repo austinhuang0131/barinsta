@@ -83,7 +83,7 @@
     <string name="story_quizzed">Zaten cevapladınız!</string>
     <string name="story_mentions">Etiketlenenler</string>
     <string name="priv_acc">Bu Hesap Gizlidir</string>
-    <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
+    <string name="priv_acc_confirm">Takipten çıkarsan gönderilere erişemeyeceksin! Emin misin?</string>
     <string name="no_acc">Sağ alttaki Ayarlar butonunu kullanarak giriş yapabilirsin. Ya da gizli olmayan hesapları giriş yapmadan da görebilirsin!</string>
     <string name="no_acc_logged_in">Keşfet ve ana sayfa arasında geçiş yapmak için sola/sağa kaydırabilirsin, ya da aşağıdan bir şey aratabilirsin!</string>
     <string name="empty_acc">Bu Hesabın Gönderisi Yok</string>
@@ -105,7 +105,7 @@
     <string name="bookmark">Yer İşareti Koy</string>
     <string name="unbookmark">Yer İşaretini Kaldır</string>
     <string name="follow">Takip Et</string>
-    <string name="unfollow">Takibi bırak</string>
+    <string name="unfollow">Takipten Çık</string>
     <string name="favorite_short">Favorilere Ekle</string>
     <string name="unfavorite_short">Favorilerden Çıkar</string>
     <string name="block">Engelle</string>
@@ -174,7 +174,7 @@
     <string name="dms_action_leave">Ayrıl</string>
     <string name="dms_action_leave_question">Bu sohbetten ayrıl?</string>
     <string name="dms_action_kick">Dışarıya At</string>
-    <string name="dms_left_users">Left users</string>
+    <string name="dms_left_users">Terk eden kullanıcılar</string>
     <string name="direct_download">Direkt indir</string>
     <string name="direct_download_desc">Gönderileri direkt telefona indir!</string>
     <string name="direct_download_loading">Gönderi(ler) getiriliyor</string>
