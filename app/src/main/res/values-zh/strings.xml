@@ -173,8 +173,8 @@
     <string name="dms_action_success">非常成功!</string>
     <string name="dms_action_leave">离开</string>
     <string name="dms_action_leave_question">离开此聊天吗？</string>
-    <string name="dms_action_kick">踢出</string>
-    <string name="dms_left_users">Left users</string>
+    <string name="dms_action_kick">移除成员</string>
+    <string name="dms_left_users">已离开成员</string>
     <string name="direct_download">直接下载</string>
     <string name="direct_download_desc">直接下载至手机!</string>
     <string name="direct_download_loading">读取帖子</string>
