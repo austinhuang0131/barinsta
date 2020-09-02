@@ -31,11 +31,11 @@
     <string name="title_user_story">Kullanıcı Hikayesi</string>
     <string name="title_changelog">Güncelleme Notları</string>
     <string name="bottom_toolbar">Araç çubuğunu aşağıda göster</string>
-    <string name="update_check">Check for new updates on GitHub at startup</string>
+    <string name="update_check">GitHub\'daki güncellemeleri uygulama açılınca kontrol et</string>
     <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
     <string name="autoload_posts">Kullanıcıların tüm gönderilerini otomatik yükle</string>
     <string name="mark_as_seen_setting">Hikayeleri izledikten sonra izlendi olarak işaretle\n(Paylaşan kişi de gördüğünüzü bilecek böylece)</string>
-    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
+    <string name="dm_mark_as_seen_setting">DM\'leri açınca otomatik olarak görüldü olarak işaretle\n(Böyle karşıdaki kişi gördüğünü bilecek)</string>
     <string name="activity_setting">Etkinlik bildirimlerini aktif et</string>
     <string name="error_loading_profile">Profili yüklerken hata oluştu!\nGiriş yapıp tekrar deneyin.</string>
     <string name="error_creating_folders">İndirilenler klasörü(leri) oluşturulamadı.</string>
@@ -173,7 +173,7 @@
     <string name="dms_action_success">Büyük başarı!</string>
     <string name="dms_action_leave">Ayrıl</string>
     <string name="dms_action_leave_question">Bu sohbetten ayrıl?</string>
-    <string name="dms_action_kick">Kick</string>
+    <string name="dms_action_kick">Dışarıya At</string>
     <string name="dms_left_users">Left users</string>
     <string name="direct_download">Direkt indir</string>
     <string name="direct_download_desc">Gönderileri direkt telefona indir!</string>
