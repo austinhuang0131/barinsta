@@ -174,7 +174,7 @@
     <string name="dms_action_leave">Tinggalkan</string>
     <string name="dms_action_leave_question">Tinggalkan obrolan ini?</string>
     <string name="dms_action_kick">Keluarkan</string>
-    <string name="dms_left_users">Left users</string>
+    <string name="dms_left_users">Pengguna tersisa</string>
     <string name="direct_download">Langsung unduh</string>
     <string name="direct_download_desc">Langsung unduh kiriman ke ponsel!</string>
     <string name="direct_download_loading">Mendapatkan kiriman…</string>
