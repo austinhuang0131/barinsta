@@ -31,8 +31,8 @@
     <string name="title_user_story">وضعیت کاربر</string>
     <string name="title_changelog">گزارش تغییرات</string>
     <string name="bottom_toolbar">نمایش نوار ابزار در پایین</string>
-    <string name="update_check">Check for new updates on GitHub at startup</string>
-    <string name="download_user_folder">Download posts to username folder in Downloads</string>
+    <string name="update_check">بررسی برای بروز رسانی های جدید هنگام شروع در GitHub</string>
+    <string name="download_user_folder">دانلود پست ها با ایجاد پوشه به اسم نام کاربری در دانلود ها</string>
     <string name="autoload_posts">نمایش خودکار پست‌های کاربر</string>
     <string name="mark_as_seen_setting">نشان‌گذاری وضعیت به عنوان خوانده شده بعد از دیدن \n(صاحب اثر می‌فهمه شما وضعیتش رو دیدید)</string>
     <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
