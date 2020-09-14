@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">InstaGrabber</string>
+    <string name="app_name" translatable="false">Barinsta</string>
     <string name="description">The original maintainer, AWAiS, made InstaGrabber as a small and basic little personal app with intentions of [steali-]downloading posts off Instagram. Very unfortunately, this was abandoned and me, Austin Huang, took over the ship. [Let\'s hope that\'s at least a lil\' bit cash money.] After all, this app is fully open source, ad-less, and tracking-less [aside from what Instagram knows]. Even if you don\'t care about downloading stuff [like me], it\'s still a great Instagram client to use!\n\nGot questions [or just wanna talk]? Contact instagrabber@austinhuang.me or click one of the buttons below.</string>
     <string name="action_quickaccess">Quick Access</string>
     <string name="action_about">About</string>
@@ -34,25 +34,28 @@
     <string name="title_user_story">User Story</string>
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Show toolbar at bottom</string>
-    <string name="update_check">Check for new updates on GitHub at startup</string>
+    <string name="update_check">Check for updates at startup</string>
     <string name="download_user_folder">Download posts to username folder in Downloads</string>
     <string name="autoload_posts">Auto-load all posts from user</string>
-    <string name="mark_as_seen_setting">Mark stories as seen after viewing\n(Story author will know you viewed it)</string>
-    <string name="dm_mark_as_seen_setting">Automatically mark DM as seen after viewing\n(Other members will know you viewed it)</string>
+    <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
+    <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
+    <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>
+    <string name="dm_mark_as_seen_setting_summary">Other members will know you viewed it</string>
     <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
     <string name="show_feed">Show user feed (Works only when user is logged in)</string>
     <string name="save_to_folder">Save to custom folder</string>
     <string name="select_folder">Select folder</string>
-    <string name="theme_settings">Theme Settings</string>
+    <string name="theme_settings">Theme</string>
     <string name="login_settings">Only affects logged-in users:</string>
     <string name="anonymous_settings">Only affects anonymous users:</string>
     <string name="privacy_warning">Privacy</string>
     <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
     <string name="storiesig_settings">Use storiesig for stories and highlights from public users</string>
+    <string name="stories_viewer_settings">Story viewer service</string>
     <string name="import_export">Import/Export</string>
-    <string name="select_language">Select language</string>
+    <string name="select_language">Language</string>
     <string name="what_to_do_dialog">What to do?</string>
     <string name="main_posts_count">%s\nPosts</string>
     <string name="main_posts_followers">%s\nFollowers</string>
@@ -87,7 +90,7 @@
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">This Account is Private</string>
     <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
-    <string name="no_acc">You can log in via Settings on the bottom-right corner. Or, you can view public accounts without login!</string>
+    <string name="no_acc">You can log in via More -> Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
     <string name="empty_acc">This Account has No Posts</string>
     <string name="empty_list">No Such Posts!</string>
@@ -95,8 +98,11 @@
     <string name="read_more">read more…</string>
     <string name="login">Login</string>
     <string name="logout">Logout</string>
+    <string name="logout_summary">Browse Instagram anonymously</string>
+    <string name="remove_all_acc">Remove all accounts</string>
+    <string name="remove_all_acc_warning">This will remove all added accounts from the app!\nTo remove just one account, long tap the account from the account switcher dialog.\nDo you want to continue?</string>
     <string name="send_logs">Send Debug Logs</string>
-    <string name="time_settings">Post Time Settings</string>
+    <string name="time_settings">Date format</string>
     <string name="project_link">Visit Project Page</string>
     <string name="telegram_link">Join Telegram Group</string>
     <string name="matrix_link">Join Matrix Room</string>
@@ -132,12 +138,12 @@
     <string name="refresh">Refresh</string>
     <string name="get_cookies">Get cookies</string>
     <string name="desktop_2fa">Desktop Mode</string>
-    <string name="time_settings_title_custom">Custom Format</string>
+    <string name="time_settings_title_custom">Use custom format</string>
     <string name="time_settings_title_separator">Separator</string>
     <string name="time_settings_title_time_format">Time Format</string>
     <string name="time_settings_title_date_format">Date Format</string>
     <string name="time_settings_title_preview">Preview</string>
-    <string name="time_settings_swap_time">Swap Time and\nDate positions</string>
+    <string name="time_settings_swap_time">Swap Time and Date positions</string>
     <string name="quick_access_info_dialog">Favorites panel is for adding your favorite hashtags and/or usernames.\n\nAnd the Quick Access panel is for quickly switching between accounts.\n\nNote 1: Make sure to Login into each account [Settings &gt; Login] to add account to the list!\n\nNote 2: Log out of the current account and then log into the other account.</string>
     <string name="quick_access_cannot_delete_curr">Cannot delete currently in use account</string>
     <string name="quick_access_confirm_delete">Are you sure you want to delete %s?</string>
@@ -229,7 +235,8 @@
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
     <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
     <string name="action_notif">Activity</string>
-    <string name="license" translatable="false">InstaGrabber\nCopyright (C) 2019  AWAiS\nCopyright (C) 2020  Austin Huang, Ammar Githam\n\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.\n\nTHIS SOFTWARE IS PROVIDED BY THE AUTHOR \'\'AS IS\'\' AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\nSee project page for third-party attributions.</string>
+    <string name="license" translatable="false">Copyright (C) 2019  AWAiS\nCopyright (C) 2020  Austin Huang, Ammar Githam\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.</string>
+    <string name="liability" translatable="false">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</string>
     <string name="select_picture">Select Picture</string>
     <string name="uploading">Uploading...</string>
     <string name="activity_count_prefix">You have:</string>
@@ -239,4 +246,41 @@
     <string name="activity_count_usertags">%d usertags</string>
     <string name="activity_count_likes">%d likes</string>
     <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
+    <string name="feed">Feed</string>
+    <string name="profile">Profile</string>
+    <string name="more">More</string>
+    <string name="title_dm">DM</string>
+    <string name="number_selected">%d selected</string>
+    <string name="relogin">Relogin</string>
+    <string name="relogin_summary">Refresh your cookies if facing any issues</string>
+    <string name="logout_success">Successfully logged out!</string>
+    <string name="dm_thread_info">Info</string>
+    <string name="mark_as_seen">Mark as seen</string>
+    <string name="skip_update_checkbox">Do not show again until next update</string>
+    <string name="version">Version</string>
+    <string name="pref_start_screen">Start screen</string>
+    <string name="pref_category_general">General</string>
+    <string name="pref_category_theme">Theme</string>
+    <string name="pref_category_downloads">Downloads</string>
+    <string name="pref_category_locale">Locale</string>
+    <string name="account">Account</string>
+    <string name="account_hint">Current login not working? Simply add the account again.</string>
+    <string name="add_account">Add account</string>
+    <string name="about_category_license">License (English only)</string>
+    <string name="about_documentation">Visit our website</string>
+    <string name="about_documentation_summary">Get support, discuss, meet others, and have fun!</string>
+    <string name="about_repository">See our source code on GitHub</string>
+    <string name="about_repository_summary">Audit, star, report bugs, contribute, and have fun (again)!</string>
+    <string name="about_feedback">Send feedback by email</string>
+    <string name="about_feedback_summary" translatable="false">instagrabber@austinhuang.me</string>
+    <string name="about_category_3pt">Third-Party Attributions</string>
+    <string name="about_category_3pt_summary">The following third-party open-source libraries are used:</string>
+    <string name="reminder">Reminder</string>
+    <string name="reminder_summary">Please use this app responsibly. Downloaded images should only be used for purposes allowed by applicable laws.</string>
+    <string name="light_white_theme">White</string>
+    <string name="dark_black_theme">Black</string>
+    <string name="light_theme_settings">Light theme</string>
+    <string name="dark_theme_settings">Dark theme</string>
+    <string name="light_barinsta_theme">Barinsta</string>
+    <string name="dark_material_dark_theme">Material Dark</string>
 </resources>
