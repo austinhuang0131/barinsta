@@ -89,7 +89,7 @@
 یا، شما میتوانید بدون وارد شدن اکانت های عمومی را ببینید!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
     <string name="empty_acc">این اکانت پستی ندارد</string>
-    <string name="empty_list">No Such Posts!</string>
+    <string name="empty_list">چنین پست هایی نیست!</string>
     <string name="curr_version">ورژن کنونی: v%s</string>
     <string name="read_more">دیدن بیشتر…</string>
     <string name="login">ورود</string>
