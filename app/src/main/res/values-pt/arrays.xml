@@ -13,11 +13,36 @@
         <item>Turco [Agradecimentos a @faydin90 (Telegram)]</item>
         <item>Português (BR) [Agradecimentos a @wagnim (GitHub)]</item>
     </string-array>
+    <string-array name="languages_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
     <string-array name="theme_presets">
         <item>Auto / Seguir o sistema</item>
         <item>Automático / Acompanhar bateria</item>
         <item>Escuro</item>
         <item>Claro</item>
+    </string-array>
+    <string-array name="theme_presets_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="anonymous_story_viewer">
+        <item>Disable</item>
+        <item>storiesig</item>
+        <item>Aloinstagram</item>
+        <item>Instadp</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Nenhum</item>
@@ -73,5 +98,28 @@
         <item>h:mm:ss a</item>
         <item>HH:mm:ss</item>
         <item>H:mm:ss</item>
+    </string-array>
+    <string-array name="main_nav_ids_values">
+        <item>@string/title_dm</item>
+        <item>@string/feed</item>
+        <item>@string/profile</item>
+        <item>@string/title_discover</item>
+        <item>@string/more</item>
+    </string-array>
+    <string-array name="light_themes">
+        <item>@string/light_white_theme</item>
+        <item>@string/light_barinsta_theme</item>
+    </string-array>
+    <string-array name="light_theme_values">
+        <item>@style/AppTheme.Light.White</item>
+        <item>@style/AppTheme.Light.Barinsta</item>
+    </string-array>
+    <string-array name="dark_themes">
+        <item>@string/dark_black_theme</item>
+        <item>@string/dark_material_dark_theme</item>
+    </string-array>
+    <string-array name="dark_theme_values">
+        <item>@style/AppTheme.Dark.Black</item>
+        <item>@style/AppTheme.Dark.MaterialDark</item>
     </string-array>
 </resources>
