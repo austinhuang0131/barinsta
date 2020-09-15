@@ -33,14 +33,14 @@
         <item>روشن</item>
     </string-array>
     <string-array name="theme_presets_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>۰</item>
+        <item>۱</item>
+        <item>۲</item>
+        <item>۳</item>
     </string-array>
     <string-array name="anonymous_story_viewer">
-        <item>Disable</item>
-        <item>storiesig</item>
+        <item>غیرفعال</item>
+        <item>استوری های ig</item>
         <item>Aloinstagram</item>
         <item>Instadp</item>
     </string-array>
