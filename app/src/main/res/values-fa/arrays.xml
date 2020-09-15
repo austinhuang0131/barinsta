@@ -3,15 +3,15 @@
     <string-array name="languages">
         <item>پیش فرض سیستم</item>
         <item>انگلیسی</item>
-        <item>French [Thanks to @kernoeb (Telegram)]</item>
-        <item>Spanish [Thanks to @sguinetti (GitLab)]</item>
-        <item>Chinese Simplified</item>
-        <item>Indonesian [Thanks to @Galang23 (GitLab)]</item>
-        <item>Italian [Thanks to @RAR_Ramar (Telegram)]</item>
-        <item>German [Thanks to @peterge1998 (GitHub)]</item>
-        <item>Polish [Thanks to @Lego8486 (GitHub)]</item>
-        <item>Turkish [Thanks to @faydin90 (Telegram)]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim (GitHub)]</item>
+        <item>فرانسوی [ با سپاس از kernoeb@ (تلگرام)]</item>
+        <item>اسپانیایی [ با سپاس از sguinetti@ (گیت هاب)]</item>
+        <item>چینی ساده شده</item>
+        <item>اندونزیایی [ با سپاس از Galang23@ (گیت هاب)]</item>
+        <item>ایتالیایی [ با سپاس از RAR_Ramar@ (تلگرام)]</item>
+        <item>آلمانی [ با سپاس از peterge1998@ (گیت هاب)]</item>
+        <item>لهستانی [ با سپاس از Lego8486@ (گیت هاب)]</item>
+        <item>ترکی [ با سپاس از faydin90@ (تلگرام)]</item>
+        <item>برزیلی پرتغالی [ با سپاس از wagnim@ (گیت هاب)]</item>
     </string-array>
     <string-array name="languages_values">
         <item>۰</item>
