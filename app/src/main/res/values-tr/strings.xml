@@ -38,7 +38,7 @@
     <string name="mark_as_seen_setting_summary">Hikayeyi paylaşan gördüğünüzü bilecek</string>
     <string name="dm_mark_as_seen_setting">DM\'leri gördükten sonra görüldü olarak işaretle</string>
     <string name="dm_mark_as_seen_setting_summary">Diğerleri gördüğünüzü bilecek</string>
-    <string name="activity_setting">Etkinlik bildirimlerini aktif et</string>
+    <string name="activity_setting">Hareketler için bildirimleri aktifleştir</string>
     <string name="error_loading_profile">Profili yüklerken hata oluştu!\nGiriş yapıp tekrar deneyin.</string>
     <string name="error_creating_folders">İndirilenler klasörü(leri) oluşturulamadı.</string>
     <string name="show_feed">Kullanıcıların gönderilerini ana sayfada göster (sadece giriş yapıldığında çalışır)</string>
@@ -50,7 +50,7 @@
     <string name="privacy_warning">Gizlilik</string>
     <string name="instadp_settings">Yüksek kalite profil fotoğrafları için Instadp kullan</string>
     <string name="storiesig_settings">Gizli olmayan hesapların hikayeleri ve öne çıkarılanları için storiesig kullan</string>
-    <string name="stories_viewer_settings">Hikaye gösterici hizmeti</string>
+    <string name="stories_viewer_settings">Hikayeler için kullanılan servis</string>
     <string name="import_export">İçe Aktar/Dışa Aktar</string>
     <string name="select_language">Dil</string>
     <string name="what_to_do_dialog">Ne yapalım?</string>
@@ -87,7 +87,7 @@
     <string name="story_mentions">Etiketlenenler</string>
     <string name="priv_acc">Bu Hesap Gizlidir</string>
     <string name="priv_acc_confirm">Takipten çıkarsan gönderilere erişemeyeceksin! Emin misin?</string>
-    <string name="no_acc">Sağ alttaki Hesap-&gt; Ekle butonunu kullanarak giriş yapabilirsin ya da gizli olmayan hesapları giriş yapmadan da görebilirsin!</string>
+    <string name="no_acc">Hesabınıza giriş yapmak için sağ alttan Daha Fazla -&gt; Hesap yolunu takip edebilir ya da giriş yapmadan herkese açık profilleri dolaşabilirsin!</string>
     <string name="no_acc_logged_in">Keşfet ve ana sayfa arasında geçiş yapmak için sola/sağa kaydırabilirsin, ya da aşağıdan bir şey aratabilirsin!</string>
     <string name="empty_acc">Bu Hesabın Gönderisi Yok</string>
     <string name="empty_list">Öyle Bir Gönderi Yok!</string>
@@ -231,7 +231,7 @@
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="use_amoled_dark_theme">\'AMOLED ekran için Koyu Tema\'yı kullan</string>
-    <string name="action_notif">Etkinlik</string>
+    <string name="action_notif">Hareketler</string>
     <string name="select_picture">Resim Seç</string>
     <string name="uploading">Yükleniyor...</string>
     <string name="activity_count_prefix">Sahip olduğun:</string>
@@ -241,10 +241,10 @@
     <string name="activity_count_usertags">%d kullanıcı etiketi</string>
     <string name="activity_count_likes">%d beğeni</string>
     <string name="activity_notloggedin">Bu bildirime tıklamadan önce çıkış yaptın?!</string>
-    <string name="feed">Gönderi Akışı</string>
+    <string name="feed">Akış</string>
     <string name="profile">Profil</string>
     <string name="more">Fazlası</string>
-    <string name="title_dm">DM</string>
+    <string name="title_dm">Mesajlar</string>
     <string name="number_selected">%d seçildi</string>
     <string name="relogin">Tekrar giriş yap</string>
     <string name="relogin_summary">Bir sorun oluşursa çerezleri yenile</string>
@@ -265,12 +265,12 @@
     <string name="about_documentation">İnternet sitemizi ziyaret et</string>
     <string name="about_documentation_summary">Destek al, tartışmalara katıl, diğerleriyle tanış ve eğlen!</string>
     <string name="about_repository">Kaynak kodumuzu Github üzerinde gör</string>
-    <string name="about_repository_summary">Denetle, yıldızla, hataları bildir, katkıda bulun ve eğlen (yine)!</string>
+    <string name="about_repository_summary">Denetle, yıldızla, hataları bildir, katkıda bulun ve keyfini çıkart (tekrar)!</string>
     <string name="about_feedback">Eposta yoluyla geribildirim gönder</string>
     <string name="about_category_3pt">Üçüncü-Parti Atıfları</string>
     <string name="about_category_3pt_summary">Aşağıdaki üçüncü-parti açık-kaynak kütüphaneler kullanılıyor:</string>
     <string name="reminder">Hatırlatıcı</string>
-    <string name="reminder_summary">Lütfen bu uygulamayı sorumlu bir şekilde kullan. İndirilen gönderiler, kanunlar çerçevesinde kullanılmalıdır.</string>
+    <string name="reminder_summary">Lütfen bu uygulamayı bilinçli bir şekilde kullan. İndirilen gönderiler, kanunlar çerçevesinde kullanılmalıdır.</string>
     <string name="light_white_theme">Beyaz</string>
     <string name="dark_black_theme">Siyah</string>
     <string name="light_theme_settings">Açık tema</string>
