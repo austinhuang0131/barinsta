@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>Системски одбрано</item>
+        <item>Англиски</item>
+        <item>Француски [Благодарност до @kernoeb (Telegram)]</item>
+        <item>Шпански [Благодарност до @sguinetti (GitLab)]</item>
+        <item>Кинески</item>
+        <item>Индонезиски [Благодарност до @Galang23 (GitLab)]</item>
+        <item>Италијански [Благодарност до @RAR_Ramar (Telegram)]</item>
+        <item>Германски [Благодарност до @peterge1998 (GitHub)]</item>
+        <item>Полски [Благодарност до @Lego8486 (GitHub)]</item>
+        <item>Турски [Благодарност до @faydin90 (Telegram)]</item>
+        <item>Португалски(Бразил) [Благодарност до @wagnim (GitHub)]</item>
+    </string-array>
+    <string-array name="languages_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="theme_presets">
+        <item>Auto / Follow System</item>
+        <item>Auto / Follow Battery</item>
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="theme_presets_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="anonymous_story_viewer">
+        <item>Disable</item>
+        <item>storiesig</item>
+        <item>Aloinstagram</item>
+        <item>Instadp</item>
+    </string-array>
+    <string-array name="separator_presets">
+        <item>None</item>
+        <item>\@</item>
+        <item>at</item>
+        <item>on</item>
+        <item>\|</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="discover_placeholder">
+        <item>Loading...</item>
+    </string-array>
+    <string-array name="date_presets">
+        <item>dd-MM-yyyy</item>
+        <item>dd/MM/yyyy</item>
+        <item>dd.MM.yyyy</item>
+        <item>dd-MM-yy</item>
+        <item>dd/MM/yy</item>
+        <item>dd.MM.yy</item>
+        <item>dd-MMM-yyyy</item>
+        <item>dd/MMM/yyyy</item>
+        <item>dd.MMM.yyyy</item>
+        <item>dd-MMM-yy</item>
+        <item>dd/MMM/yy</item>
+        <item>dd.MMM.yy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MM/dd/yyyy</item>
+        <item>MM.dd.yyyy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy/MM/dd</item>
+        <item>yyyy.MM.dd</item>
+        <item>MM-dd-yy</item>
+        <item>MM/dd/yy</item>
+        <item>MM.dd.yy</item>
+        <item>yy-MM-dd</item>
+        <item>yy/MM/dd</item>
+        <item>yy.MM.dd</item>
+        <item>MMM-dd-yyyy</item>
+        <item>MMM/dd/yyyy</item>
+        <item>MMM.dd.yyyy</item>
+        <item>yyyy-MMM-dd</item>
+        <item>yyyy/MMM/dd</item>
+        <item>yyyy.MMM.dd</item>
+        <item>MMM-dd-yy</item>
+        <item>MMM/dd/yy</item>
+        <item>MMM.dd.yy</item>
+        <item>yy-MMM-dd</item>
+        <item>yy/MMM/dd</item>
+        <item>yy.MMM.dd</item>
+    </string-array>
+    <string-array name="time_presets">
+        <item>hh:mm:ss a</item>
+        <item>h:mm:ss a</item>
+        <item>HH:mm:ss</item>
+        <item>H:mm:ss</item>
+    </string-array>
+    <string-array name="main_nav_ids_values">
+        <item>@string/title_dm</item>
+        <item>@string/feed</item>
+        <item>@string/profile</item>
+        <item>@string/title_discover</item>
+        <item>@string/more</item>
+    </string-array>
+    <string-array name="light_themes">
+        <item>@string/light_white_theme</item>
+        <item>@string/light_barinsta_theme</item>
+    </string-array>
+    <string-array name="light_theme_values">
+        <item>@style/AppTheme.Light.White</item>
+        <item>@style/AppTheme.Light.Barinsta</item>
+    </string-array>
+    <string-array name="dark_themes">
+        <item>@string/dark_black_theme</item>
+        <item>@string/dark_material_dark_theme</item>
+    </string-array>
+    <string-array name="dark_theme_values">
+        <item>@style/AppTheme.Dark.Black</item>
+        <item>@style/AppTheme.Dark.MaterialDark</item>
+    </string-array>
+</resources>
