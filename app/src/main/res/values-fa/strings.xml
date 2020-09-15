@@ -88,8 +88,8 @@
     <string name="priv_acc">این اکانت شخصی است</string>
     <string name="priv_acc_confirm">شما امکان دسترسی به پست ها را بعد از آنفالو کردن ندارید!
 مطمن هستید؟</string>
-    <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
-    <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
+    <string name="no_acc">می توانید توسط (بیشتر) وارد شوید -&gt; حساب در گوشه پایین سمت راست یا می توانید حساب های عمومی را بدون ورود به سیستم ببینید!</string>
+    <string name="no_acc_logged_in">شما میتوانید بکشید به سمت چپ/راست برای کاوش/پست، یا جستوجوی چیزهای زیر!</string>
     <string name="empty_acc">این اکانت پستی ندارد</string>
     <string name="empty_list">چنین پست هایی نیست!</string>
     <string name="curr_version">ورژن کنونی: v%s</string>
@@ -98,7 +98,7 @@
     <string name="logout">خروج</string>
     <string name="logout_summary">گشت و گذار ناشناس در اینستاگرام</string>
     <string name="remove_all_acc">حذف همه حساب ها</string>
-    <string name="remove_all_acc_warning">This will remove all added accounts from the app!\nTo remove just one account, long tap the account from the account switcher dialog.\nDo you want to continue?</string>
+    <string name="remove_all_acc_warning">این تمام حساب های اضافه شده به برنامه را حذف خواهد کرد!\n برای حذف کردن فقط یک حساب، مدت طولانی روی حساب ضربه بزنید از دیالوگ تعویض حساب.\n میخواهید ادامه دهید؟</string>
     <string name="send_logs">فرستادن گزارش های اشکال زدایی</string>
     <string name="time_settings">فرمت تاریخ</string>
     <string name="project_link">دیدن صفحه پروژه</string>
@@ -141,12 +141,12 @@
     <string name="time_settings_title_time_format">فرمت زمان</string>
     <string name="time_settings_title_date_format">فرمت تاریخ</string>
     <string name="time_settings_title_preview">پیش نمایش</string>
-    <string name="time_settings_swap_time">Swap Time and Date positions</string>
+    <string name="time_settings_swap_time">موقعیت زمان و تاریخ را عوض کنید</string>
     <string name="quick_access_info_dialog">Favorites panel is for adding your favorite hashtags and/or usernames.\n\nAnd the Quick Access panel is for quickly switching between accounts.\n\nNote 1: Make sure to Login into each account [Settings &gt; Login] to add account to the list!\n\nNote 2: Log out of the current account and then log into the other account.</string>
     <string name="quick_access_cannot_delete_curr">نمیتواند حذف شود این اکانت در حال استفاده است</string>
     <string name="quick_access_confirm_delete">مطمن هستید میخواهید حذف کنید %s ؟</string>
     <string name="profile_viewer_imageinfo">عرض: %d\nارتفاع: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nColor depth:</string>
+    <string name="profile_viewer_colordepth_prefix">\n عمق رنگ:</string>
     <string name="profile_endpoint">Select profile picture endpoint\n(Does not affect hashtags)</string>
     <string name="open_profile">باز کردن پروفایل</string>
     <string name="view_pfp">دیدن عکس پروفایل</string>
@@ -156,8 +156,8 @@
     <string name="direct_messages_sent_raven">یک پیام زمان بندی شده به اشتراک گذاشته شد</string>
     <string name="direct_messages_replied_story">به یک استوری پاسخ داده شد</string>
     <string name="direct_messages_reacted_story">به یک استوری واکنش نشان داده</string>
-    <string name="direct_messages_mention_story">Mentioned in a story</string>
-    <string name="dms_inbox_raven_message_unknown"><i>Unsupported message type</i></string>
+    <string name="direct_messages_mention_story">نام برده شده در یک استوری</string>
+    <string name="dms_inbox_raven_message_unknown"><i>نوع پیام پشتیبانی نمی شود</i></string>
     <string name="dms_inbox_open_link">باز کردن لینک</string>
     <string name="dms_inbox_copy_text">کپی متن</string>
     <string name="dms_inbox_download">دانلود ضمیمه</string>
@@ -165,9 +165,9 @@
     <string name="dms_inbox_unlike">نپسندیدن پیام</string>
     <string name="dms_inbox_unsend">بازگرداندن پیام</string>
     <string name="dms_inbox_author">دیدن پروفایل نویسنده</string>
-    <string name="dms_inbox_media_shared_from">Post shared from %s</string>
-    <string name="dms_inbox_raven_media_unknown"><i>Unknown media type</i></string>
-    <string name="dms_inbox_raven_media_expired">Media expired!</string>
+    <string name="dms_inbox_media_shared_from">پست به اشتراک گذاشته شده از %s</string>
+    <string name="dms_inbox_raven_media_unknown"><i>نوع رسانه ناشناخته است</i></string>
+    <string name="dms_inbox_raven_media_expired">رسانه منقضی شده!</string>
     <string name="dms_inbox_raven_media_delivered">ارسال شد</string>
     <string name="dms_inbox_raven_media_sent">ارسال شد</string>
     <string name="dms_inbox_raven_media_opened">باز شده</string>
@@ -184,7 +184,7 @@
     <string name="dms_left_users">کاربران ترک کرده</string>
     <string name="direct_download">دانلود مستقیم</string>
     <string name="direct_download_desc">دانلود مستقیم پست ها در موبایل!</string>
-    <string name="direct_download_loading">Fetching post(s)</string>
+    <string name="direct_download_loading">آوردن پست (ها)</string>
     <string name="direct_download_perms_ask">لطفا دسترسی بدهید و تلاش کنید دوباره دانلود کنید!</string>
     <string name="downloader_started">دانلود شروع شده</string>
     <string name="downloader_complete">دانلود کامل شده</string>
@@ -208,12 +208,12 @@
     <string name="comment_view_mention_location_search">آیا میخواهید مکانی را جستوجو کنید ؟</string>
     <string name="followers_type_followers">دنبال کننده ها</string>
     <string name="followers_type_following">دنبال کردن</string>
-    <string name="followers_compare">Comparing followers &amp; following</string>
+    <string name="followers_compare">مقایسه دنبال کنندگان &amp; زیر</string>
     <string name="followers_both_following">هردو یکدیگر را دنبال میکنند</string>
-    <string name="followers_not_following">not following %s</string>
-    <string name="followers_not_follower">%s is not following</string>
+    <string name="followers_not_following">دنبال نمیکند %s</string>
+    <string name="followers_not_follower">%s دنبال نمی کنند</string>
     <string name="login_error_loading_cookies">خطای بالا آوردن کوکی ها</string>
-    <string name="login_success_loading_cookies">Successfully loaded cookies!\nIf you still can\'t open private pages/posts, re-login!</string>
+    <string name="login_success_loading_cookies">کوکی ها با موفقیت بارگیری شده!\n اگر هنوز نمی توانید صفحه شخصی/پست ها را باز کنید، دوباره وارد حساب شوید!</string>
     <string name="comment_hint">نوشت یک کامنت جدید...</string>
     <string name="dm_hint">نوشتن یک پیام جدید...</string>
     <string name="liked_notif">پست شمارا پسندید</string>
