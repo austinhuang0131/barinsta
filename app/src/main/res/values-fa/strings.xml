@@ -35,7 +35,7 @@
     <string name="download_user_folder">دانلود پست ها با ایجاد پوشه به اسم نام کاربری در دانلود ها</string>
     <string name="autoload_posts">بارگذاری خودکار همه پست‌ های کاربر</string>
     <string name="mark_as_seen_setting">نشان کرد استوری ها به عنوان دیده شده بعد از دیدن</string>
-    <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
+    <string name="mark_as_seen_setting_summary">نویسنده استوری می داند که شما آن را دیده اید</string>
     <string name="dm_mark_as_seen_setting">نشان کردن پیام خصوصی بعنوان دیده شده بعد از دیدن</string>
     <string name="dm_mark_as_seen_setting_summary">کاربران دیگر خواهند فهمید شما این را دیده اید</string>
     <string name="activity_setting">روشن کردن آگهداد فعالیت ها</string>
@@ -62,7 +62,7 @@
     <string name="post_viewer_autoplay_video">پخش خودکار فیلم ها</string>
     <string name="post_viewer_muted_autoplay">همیشه فیلم هارو بی صدا کن</string>
     <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Note: Current [Session] won\'t show this dialog until you\'re here, and will always download shown post slide.</string>
+    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">توجه: تا زمانی که [Session] در اینجا باشید این دیالوگ نمایش داده نمی شود و همیشه اسلاید پست نمایش داده شده دانلود خواهد شد.</string>
     <string name="post_viewer_download_dialog_title">انتخاب کن چی دانلود کنی</string>
     <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">[Session] کنونی</string>
     <string name="post_viewer_download_current">کنونی</string>
@@ -73,7 +73,7 @@
     <string name="view_story_post">دیدن پست</string>
     <string name="view_post">دیدن پست</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Can\'t interact if y\'ain\'t logged in!</string>
+    <string name="stories_notloggedin">در صورت عدم ورود به سیستم نمی توان ارتباط برقرار کرد!</string>
     <string name="vote_story_poll">رای دادن</string>
     <string name="votef_story_poll">رای با موفقیت بود!</string>
     <string name="voted_story_poll">در حال حاظر شما رای داده اید!</string>
