@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">The original maintainer, AWAiS, made InstaGrabber as a small and basic little personal app with intentions of [steali-]downloading posts off Instagram. Very unfortunately, this was abandoned and me, Austin Huang, took over the ship. [Let\'s hope that\'s at least a lil\' bit cash money.] After all, this app is fully open source, ad-less, and tracking-less [aside from what Instagram knows]. Even if you don\'t care about downloading stuff [like me], it\'s still a great Instagram client to use!\n\nGot questions [or just wanna talk]? Contact instagrabber@austinhuang.me or click one of the buttons below.</string>
+    <string name="description">نگهدارنده اصلی ، AWAiS ، ساخت InstaGrabber را بعنوان یک برنامه کوچک و ساده شخصی به منظور [steali-] دانلود پست های اینستاگرام. متأسفانه ، این کار رها شد و من ، آستین هوانگ ، کشتی را تحویل گرفتم.[بیایید امیدواریم باشیم که این حداقل یکم پول نقد باشد.] از این گذشته ، این برنامه کاملا منبع باز ، بدون تبلیغات و بدون ردیابی است (جدا از آنچه اینستاگرام می داند).حتی اگر دانلود کردن پست ها برای شما مهم نیست [مثل من] ، باز هم این یک کلاینت خوب اینستاگرام برای استفاده است!\n\n سوالی دارید ؟ [ یا فقط میخواهید گفتگو کنید ] تماس بگیرید با instagrabber@austinhuang.me یا بر روی یکی از دکمه های زیر کلیک کنید</string>
     <string name="action_quickaccess">دسترسی سریع</string>
     <string name="action_about">درباره</string>
     <string name="action_dms">پیام‌های خصوصی</string>
@@ -142,7 +142,7 @@
     <string name="time_settings_title_date_format">فرمت تاریخ</string>
     <string name="time_settings_title_preview">پیش نمایش</string>
     <string name="time_settings_swap_time">موقعیت زمان و تاریخ را عوض کنید</string>
-    <string name="quick_access_info_dialog">Favorites panel is for adding your favorite hashtags and/or usernames.\n\nAnd the Quick Access panel is for quickly switching between accounts.\n\nNote 1: Make sure to Login into each account [Settings &gt; Login] to add account to the list!\n\nNote 2: Log out of the current account and then log into the other account.</string>
+    <string name="quick_access_info_dialog">پنل علاقه مندی ها برای اضافه کردن هشتگ های مورد علاقه شما و یا نام کاربری است.\n\n و پنل دسترسی سریع برای سریع تعویض کردن میان حساب هاست.\n\n یادداشت ۱ : توجه 1: حتما وارد هر حساب شوید [تنظیمات &gt; ورود] برای اضافه کردن حساب در لیست!\n\n یادداشت ۲: از حساب کنونی بیرون بروید و سپس وارد حساب های دیگر شوید.</string>
     <string name="quick_access_cannot_delete_curr">نمیتواند حذف شود این اکانت در حال استفاده است</string>
     <string name="quick_access_confirm_delete">مطمن هستید میخواهید حذف کنید %s ؟</string>
     <string name="profile_viewer_imageinfo">عرض: %d\nارتفاع: %d</string>
