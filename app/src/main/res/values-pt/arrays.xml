@@ -3,15 +3,17 @@
     <string-array name="languages">
         <item>Padrão do sistema</item>
         <item>Inglês</item>
-        <item>Francês [Agradecimentos a @kernoeb (Telegram)]</item>
-        <item>Espanhol [Agradecimentos a @sguinetti (GitLab)]</item>
+        <item>French [Thanks to @kernoeb]</item>
+        <item>Spanish [Thanks to @sguinetti]</item>
         <item>Chinês (Simplificado)</item>
-        <item>Indonésio [Agradecimentos a @Galang23 (GitLab)]</item>
-        <item>Italiano [Agradecimentos a @RAR_Ramar (Telegram)]</item>
-        <item>Alemão [Agradecimentos a @peterge1998 (GitHub)]</item>
-        <item>Polonês [Agradecimentos a @Lego8486 (GitHub)]</item>
-        <item>Turco [Agradecimentos a @faydin90 (Telegram)]</item>
-        <item>Português (BR) [Agradecimentos a @wagnim (GitHub)]</item>
+        <item>Indonesian [Thanks to @Galang23]</item>
+        <item>Italian [Thanks to @RAR_Ramar]</item>
+        <item>German [Thanks to @peterge1998]</item>
+        <item>Polish [Thanks to @Lego8486]</item>
+        <item>Turkish [Thanks to @faydin90]</item>
+        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
+        <item>Persian [Thanks to @farzadx]</item>
+        <item>Macedonian [Thanks to @snajdovski]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -109,10 +111,12 @@
     <string-array name="light_themes">
         <item>@string/light_white_theme</item>
         <item>@string/light_barinsta_theme</item>
+        <item>@string/light_bibliogram_theme</item>
     </string-array>
     <string-array name="light_theme_values">
         <item>@style/AppTheme.Light.White</item>
         <item>@style/AppTheme.Light.Barinsta</item>
+        <item>@style/AppTheme.Light.Bibliogram</item>
     </string-array>
     <string-array name="dark_themes">
         <item>@string/dark_black_theme</item>
