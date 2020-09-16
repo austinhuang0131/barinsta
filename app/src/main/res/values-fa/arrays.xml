@@ -3,17 +3,17 @@
     <string-array name="languages">
         <item>پیش فرض سیستم</item>
         <item>انگلیسی</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
+        <item>فرانسوی [ با سپاس از kernoeb@ ]</item>
+        <item>اسپانیایی [ با سپاس از sguinetti@ ]</item>
         <item>چینی ساده شده</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
+        <item>اندونزیایی [ با سپاس از Galang23@ ]</item>
+        <item>ایتالیایی [ با سپاس از RAR_Ramar@ ]</item>
+        <item>آلمانی [ با سپاس از peterge1998@ ]</item>
+        <item>لهستانی [ با سپاس از Lego8486@ ]</item>
+        <item>ترکی [ با سپاس از faydin90@ ]</item>
+        <item>برزیلی پرتغالی [ با سپاس از wagnim@ ]</item>
+        <item>پارسی [ با سپاس از Frzking@ ]</item>
+        <item>مقدونی [ با تشکر از snajdovski@ ]</item>
     </string-array>
     <string-array name="languages_values">
         <item>۰</item>
