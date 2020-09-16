@@ -264,18 +264,18 @@
     <string name="add_account">افزودن حساب</string>
     <string name="about_category_license">مجوز (فقط انگلیسی)</string>
     <string name="about_documentation">از وبسایت ما بازدید کنید</string>
-    <string name="about_documentation_summary">Get support, discuss, meet others, and have fun!</string>
-    <string name="about_repository">See our source code on GitHub</string>
-    <string name="about_repository_summary">Audit, star, report bugs, contribute, and have fun (again)!</string>
+    <string name="about_documentation_summary">پشتیبانی دریافت کنید ، بحث کنید ، با دیگران ملاقات کنید و از آن لذت ببرید!</string>
+    <string name="about_repository">کد منبع ما را در GitHub ببینید</string>
+    <string name="about_repository_summary">حسابرسی ، ستاره گذاری ، گزارش اشکالات ، مشارکت و سرگرمی (دوباره)!</string>
     <string name="about_feedback">ارسال بازخورد با ایمیل</string>
-    <string name="about_category_3pt">Third-Party Attributions</string>
-    <string name="about_category_3pt_summary">The following third-party open-source libraries are used:</string>
+    <string name="about_category_3pt">اسناد شخص ثالث</string>
+    <string name="about_category_3pt_summary">از کتابخانه های منبع باز شخص ثالث زیر استفاده می شود:</string>
     <string name="reminder">یادآور</string>
-    <string name="reminder_summary">Please use this app responsibly. Downloaded images should only be used for purposes allowed by applicable laws.</string>
+    <string name="reminder_summary">لطفا با مسئولیت پذیری از این برنامه استفاده کنید. از تصاویر بارگیری شده فقط باید برای مقاصدی استفاده شود که طبق قوانین قابل اجرا است.</string>
     <string name="light_white_theme">سفید</string>
     <string name="dark_black_theme">مشکی</string>
     <string name="light_theme_settings">پوسته روشن</string>
     <string name="dark_theme_settings">پوسته تیره</string>
-    <string name="light_barinsta_theme">Barinsta</string>
+    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">متریال تیره</string>
 </resources>
