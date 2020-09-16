@@ -275,6 +275,6 @@
     <string name="dark_black_theme">黑色</string>
     <string name="light_theme_settings">浅色主题</string>
     <string name="dark_theme_settings">深色主题</string>
-    <string name="light_barinsta_theme">Barinsta</string>
+    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
 </resources>
