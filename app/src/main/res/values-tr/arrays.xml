@@ -3,17 +3,17 @@
     <string-array name="languages">
         <item>Sistem Varsayılanı</item>
         <item>İngilizce</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
+        <item>Fransızca [@kernoeb tarafından]</item>
+        <item>İspanyolca [@sguinetti tarafından]</item>
         <item>Basitleştirilmiş Çince</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
+        <item>Endonezyaca [@Galang23 tarafından]</item>
+        <item>İtalyaca [@RAR_Ramar tarafından]</item>
+        <item>Almanca [@peterge1998 tarafından]</item>
+        <item>Lehçe [@Lego8486 tarafından]</item>
+        <item>Türkçe [@faydin90 tarafından]</item>
+        <item>Brezilya Portekizce [@wagnim tarafından]</item>
+        <item>Farsça [@farzadx tarafından]</item>
+        <item>Makedonyaca [@snajdovski tarafından]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
