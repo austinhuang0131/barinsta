@@ -3,17 +3,17 @@
     <string-array name="languages">
         <item>Bawaan Sistem</item>
         <item>Inggris</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
+        <item>Prancis [Terima kasih @kernoeb]</item>
+        <item>Spanyol [Terima kasih @sguinetti]</item>
         <item>Tiongkok Sederhana</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
+        <item>Bahasa Indonesia [Terima kasih @Galang23]</item>
+        <item>Italia [Terima kasih @RAR_Ramar]</item>
+        <item>Jerman [Teirma kasih @peterge1998]</item>
+        <item>Polandia [Terima kasih @Lego8486]</item>
+        <item>Turki [Terima kasih @faydin90]</item>
+        <item>Portugis Brazil [Terima kasih @wagnim]</item>
+        <item>Persia [Terima kasih @farzadx]</item>
+        <item>Makedonia [Terima kasih @snajdovski]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -41,7 +41,7 @@
         <item>3</item>
     </string-array>
     <string-array name="anonymous_story_viewer">
-        <item>Disable</item>
+        <item>Nonaktifkan</item>
         <item>storiesig</item>
         <item>Aloinstagram</item>
         <item>Instadp</item>
