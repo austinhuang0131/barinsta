@@ -40,7 +40,7 @@
     <string name="dm_mark_as_seen_setting_summary">Altri membri sapranno di averlo visto</string>
     <string name="activity_setting">Abilita notifiche attività</string>
     <string name="error_loading_profile">Errore durante il caricamento del profilo!\nProvare ad accedere e cercare nuovamente.</string>
-    <string name="error_creating_folders">Errore durante la creazione della cartella di scaricamento().</string>
+    <string name="error_creating_folders">Errore durante la creazione delle cartelle di scaricamento.</string>
     <string name="show_feed">Mostra feed utente (funziona solo quando l\'utente ha effettuato l\'accesso)</string>
     <string name="save_to_folder">Salva nella cartella personalizzata</string>
     <string name="select_folder">Seleziona cartella</string>
