@@ -7,13 +7,13 @@
         <item>西班牙文 [感谢 @sguinetti]</item>
         <item>简体中文</item>
         <item>印尼文 [感谢 @Galang23]</item>
-        <item>意大利语 [感谢@RAR_Ramar]</item>
-        <item>德语 [感谢@peterge1998年]</item>
-        <item>波兰语 [谢谢@Lego8486]</item>
-        <item>土耳其语 [感谢@faydin90]</item>
-        <item>巴西葡萄牙语 [感谢@wagnim]</item>
-        <item>波斯语 [感谢@frazadx]</item>
-        <item>马其顿语 [感谢@snajdovski]</item>
+        <item>意大利文 [感谢 @RAR_Ramar]</item>
+        <item>德文 [感谢 @peterge1998]</item>
+        <item>波兰文 [感谢 @Lego8486]</item>
+        <item>土耳其文 [感谢 @faydin90]</item>
+        <item>巴西葡文 [感谢 @wagnim]</item>
+        <item>波斯文 [感谢 @farzadx]</item>
+        <item>马其顿文 [感谢 @snajdovski]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
