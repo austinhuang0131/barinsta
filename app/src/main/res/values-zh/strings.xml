@@ -87,7 +87,7 @@
     <string name="story_mentions">提及</string>
     <string name="priv_acc">私密账户</string>
     <string name="priv_acc_confirm">取消关注后，您将无法访问帖子！您确定吗？</string>
-    <string name="no_acc">你可以通过右上角的更多-&gt; 账户登录或者你可以不登录查看公开账户！</string>
+    <string name="no_acc">你可以通过右下角的 更多-&gt; 账户 来登录，或者您无须登录即可查看公开账户！</string>
     <string name="no_acc_logged_in">您可以向左/向右滑动查看探索/订阅，或在下方进行搜索！</string>
     <string name="empty_acc">暂未发帖</string>
     <string name="empty_list">无此类帖！</string>
@@ -245,7 +245,7 @@
     <string name="profile">用户</string>
     <string name="more">更多</string>
     <string name="title_dm">私信</string>
-    <string name="number_selected">已选择 %d</string>
+    <string name="number_selected">已选择 %d 个</string>
     <string name="relogin">重新登录</string>
     <string name="relogin_summary">如果遇到问题，请刷新您的 cookie</string>
     <string name="logout_success">成功退出！</string>
@@ -275,6 +275,6 @@
     <string name="dark_black_theme">黑色</string>
     <string name="light_theme_settings">浅色主题</string>
     <string name="dark_theme_settings">深色主题</string>
-    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
-    <string name="dark_material_dark_theme">Material Dark</string>
+    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">咖啡棕</string>
+    <string name="dark_material_dark_theme">Material 黑</string>
 </resources>
