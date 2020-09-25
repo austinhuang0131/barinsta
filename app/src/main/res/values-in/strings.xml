@@ -15,6 +15,8 @@
     <string name="clipboard_copied">Tersalin!</string>
     <string name="report">Laporkan</string>
     <string name="password">Sandi (maks. 32 karakter)</string>
+    <string name="set_password">Set a password (max 32 chars)</string>
+    <string name="password_no_max">Password</string>
     <string name="ok">Oke</string>
     <string name="yes">Ya</string>
     <string name="cancel">Batalkan</string>
@@ -22,7 +24,7 @@
     <string name="confirm">Konfirmasi</string>
     <string name="nav_up">Naik</string>
     <string name="dont_show_again">Jangan Tampilkan Lagi</string>
-    <string name="selected_folder_label">Folder terpilih:</string>
+    <string name="selected_folder_label">Current directory</string>
     <string name="title_favorites">Favorit</string>
     <string name="title_discover">Temukan</string>
     <string name="title_comments">Komentar</string>
@@ -55,6 +57,7 @@
     <string name="select_language">Bahasa</string>
     <string name="what_to_do_dialog">Apa yang harus dilakukan?</string>
     <string name="main_posts_count">%s\nkiriman</string>
+    <string name="main_posts_count_inline">%s Posts</string>
     <string name="main_posts_followers">%s\npengikut</string>
     <string name="main_posts_following">%s\ndiikuti</string>
     <string name="post_viewer_video_post">Kiriman video</string>
@@ -106,6 +109,7 @@
     <string name="liked">Disuka</string>
     <string name="saved">Tersimpan</string>
     <string name="tagged">Ditandai</string>
+    <string name="dm_person">Message</string>
     <string name="like">Suka (%s)</string>
     <string name="unlike">Batal suka (%s)</string>
     <string name="bookmark">Markah</string>
@@ -122,16 +126,18 @@
     <string name="dialog_export_btn_export">Ekspor</string>
     <string name="dialog_export_btn_import">Impor</string>
     <string name="dialog_export_logins">Ekspor Info Masuk</string>
-    <string name="dialog_export_settings">Ekspor Pengaturan</string>
-    <string name="dialog_export_favorites">Ekspor Favorit</string>
-    <string name="dialog_import_settings">Impor Pengaturan</string>
+    <string name="dialog_export_accounts">Accounts</string>
+    <string name="dialog_export_settings">Settings</string>
+    <string name="dialog_export_favorites">Favorites</string>
+    <string name="dialog_import_settings">Import settings</string>
     <string name="dialog_import_logins">Impor Info Masuk</string>
-    <string name="dialog_import_favorites">Impor Favorit</string>
+    <string name="dialog_import_accounts">Import accounts</string>
+    <string name="dialog_import_favorites">Import favorites</string>
     <string name="dialog_import_success">Berhasil diimpor!</string>
     <string name="dialog_import_failed">Gagal mengimpor!</string>
     <string name="dialog_export_success">Berhasil diekspor!</string>
     <string name="dialog_export_failed">Gagal mengekspor!</string>
-    <string name="dialog_export_err_password_empty">Kata sandi kosong! Kata sandi gak boleh kosong!</string>
+    <string name="dialog_export_err_password_empty">Password is empty!</string>
     <string name="refresh">Muat ulang</string>
     <string name="get_cookies">Dapatkan cookies</string>
     <string name="desktop_2fa">Desktop Mode\nuntuk 2FA</string>
@@ -143,7 +149,7 @@
     <string name="time_settings_swap_time">Tukar posisi jam dan tanggal</string>
     <string name="quick_access_info_dialog">Panel Favorit digunakan untuk menambahkan hashtag dan/atau pengguna yang anda sukai.\n\nPanel Akses Cepat digunakan untuk berpindah akun secara cepat.\n\nNb. 1: Pastikan kamu masuk ke akun yang kamu inginkan [Pengaturan &gt; Masuk] terlebih dahulu untuk menambahkan akun ke daftar ini.\n\nNb. 2: Keluar dari akun saat ini kemudian masuk ke akun lainnya.\nJika banyak akun tidak bekerja untukmu, tidak ada yang bisa kita lakukan!</string>
     <string name="quick_access_cannot_delete_curr">Tidak dapat menghapus akun yang sedang digunakan</string>
-    <string name="quick_access_confirm_delete">Apakah anda yakin ingin menghapus %s?</string>
+    <string name="quick_access_confirm_delete">Are you sure you want to delete \'%s\'?</string>
     <string name="profile_viewer_imageinfo">Lebar: %d\nTinggi: %d</string>
     <string name="profile_viewer_colordepth_prefix">\nKetajaman warna:</string>
     <string name="profile_endpoint">Pilih titik akhir foto profil\n(Tidak memengaruhi hashtag)</string>
@@ -277,4 +283,17 @@
     <string name="dark_theme_settings">Tema gelap</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
+    <string name="added_to_favs">Added to Favorites</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="accounts">Accounts</string>
+    <string name="hashtags">Hashtags</string>
+    <string name="locations">Locations</string>
+    <string name="unknown">Unknown</string>
+    <string name="removed_from_favs">Removed from Favourites</string>
+    <string name="backup_and_restore">Backup &amp; Restore</string>
+    <string name="create_backup">Create</string>
+    <string name="restore_backup">Restore</string>
+    <string name="file_chosen_label">File:</string>
+    <string name="enter_password">Enter password</string>
+    <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
 </resources>
