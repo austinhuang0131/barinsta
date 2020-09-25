@@ -40,11 +40,6 @@
         <item>۲</item>
         <item>۳</item>
     </string-array>
-    <string-array name="anonymous_story_viewer">
-        <item>غیرفعال</item>
-        <item>Aloinstagram</item>
-        <item>Instadp</item>
-    </string-array>
     <string-array name="separator_presets">
         <item>هیچکدام</item>
         <item>\@</item>
