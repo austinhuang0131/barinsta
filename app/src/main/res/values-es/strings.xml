@@ -15,6 +15,8 @@
     <string name="clipboard_copied">¡Copiar al portapapeles!</string>
     <string name="report">Reportar</string>
     <string name="password">Contraseña (Max 32 chars)</string>
+    <string name="set_password">Set a password (max 32 chars)</string>
+    <string name="password_no_max">Password</string>
     <string name="ok">Aceptar</string>
     <string name="yes">Sí</string>
     <string name="cancel">Cancelar</string>
@@ -22,7 +24,7 @@
     <string name="confirm">Confirmar</string>
     <string name="nav_up">Subir</string>
     <string name="dont_show_again">No mostrar de nuevo</string>
-    <string name="selected_folder_label">Seleccionar carpeta:</string>
+    <string name="selected_folder_label">Current directory</string>
     <string name="title_favorites">Favoritos</string>
     <string name="title_discover">Explorar</string>
     <string name="title_comments">Comentarios</string>
@@ -55,6 +57,7 @@
     <string name="select_language">Language</string>
     <string name="what_to_do_dialog">¿Qué quieres hacer?</string>
     <string name="main_posts_count">%s\nPublicaciones</string>
+    <string name="main_posts_count_inline">%s Posts</string>
     <string name="main_posts_followers">%s\nSeguidores</string>
     <string name="main_posts_following">%s\nSiguiendo</string>
     <string name="post_viewer_video_post">Publicación de vídeo</string>
@@ -106,6 +109,7 @@
     <string name="liked">Gustado</string>
     <string name="saved">Guardado</string>
     <string name="tagged">Etiquetado</string>
+    <string name="dm_person">Message</string>
     <string name="like">Me gusta (%s)</string>
     <string name="unlike">No me gusta (%s)</string>
     <string name="bookmark">Añadir marcador</string>
@@ -122,16 +126,18 @@
     <string name="dialog_export_btn_export">Exportar</string>
     <string name="dialog_export_btn_import">Importar</string>
     <string name="dialog_export_logins">Exportar Logins</string>
-    <string name="dialog_export_settings">Ajustes de exportación</string>
-    <string name="dialog_export_favorites">Exportar favoritos</string>
-    <string name="dialog_import_settings">Ajustes de la importación</string>
+    <string name="dialog_export_accounts">Accounts</string>
+    <string name="dialog_export_settings">Settings</string>
+    <string name="dialog_export_favorites">Favorites</string>
+    <string name="dialog_import_settings">Import settings</string>
     <string name="dialog_import_logins">Importar inicio de sesión</string>
-    <string name="dialog_import_favorites">Importar favoritos</string>
+    <string name="dialog_import_accounts">Import accounts</string>
+    <string name="dialog_import_favorites">Import favorites</string>
     <string name="dialog_import_success">¡Importado con éxito!</string>
     <string name="dialog_import_failed">¡Falló la importación!</string>
     <string name="dialog_export_success">¡Exportado con éxito!</string>
     <string name="dialog_export_failed">¡Falló la exportación!</string>
-    <string name="dialog_export_err_password_empty">¡La contraseña está vacía! La contraseña no puede estar vacía, ¡tonto!</string>
+    <string name="dialog_export_err_password_empty">Password is empty!</string>
     <string name="refresh">Actualizar</string>
     <string name="get_cookies">Obtener cookies</string>
     <string name="desktop_2fa">Modo escritorio\npara 2FA</string>
@@ -143,7 +149,7 @@
     <string name="time_settings_swap_time">Swap Time and Date positions</string>
     <string name="quick_access_info_dialog">El panel de favoritos es para añadir tus hashtags y/o nombres de usuario favoritos.\n\nY el panel de acceso rápido es para cambiar rápidamente entre cuentas. \n\nNota 1: Asegúrate de acceder a cada cuenta [Ajustes &gt; Ingreso] para añadir una cuenta a la lista. \n\nNota 2: Sal de la cuenta actual y luego accede a la otra cuenta. Si varias cuentas no funcionan para ti, no hay nada que podamos hacer con los dos.</string>
     <string name="quick_access_cannot_delete_curr">No se puede borrar la cuenta actualmente en uso account</string>
-    <string name="quick_access_confirm_delete">¿Estás seguro de que quieres borrar %s?</string>
+    <string name="quick_access_confirm_delete">Are you sure you want to delete \'%s\'?</string>
     <string name="profile_viewer_imageinfo">Ancho: %d\nAlto: %d</string>
     <string name="profile_viewer_colordepth_prefix">\nProfundidad de color:</string>
     <string name="profile_endpoint">Seleccionar el extremo de la imagen de perfil\n(No afecta a los hashtags)</string>
@@ -277,4 +283,17 @@
     <string name="dark_theme_settings">Dark theme</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
+    <string name="added_to_favs">Added to Favorites</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="accounts">Accounts</string>
+    <string name="hashtags">Hashtags</string>
+    <string name="locations">Locations</string>
+    <string name="unknown">Unknown</string>
+    <string name="removed_from_favs">Removed from Favourites</string>
+    <string name="backup_and_restore">Backup &amp; Restore</string>
+    <string name="create_backup">Create</string>
+    <string name="restore_backup">Restore</string>
+    <string name="file_chosen_label">File:</string>
+    <string name="enter_password">Enter password</string>
+    <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
 </resources>
