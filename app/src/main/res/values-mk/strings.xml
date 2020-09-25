@@ -15,6 +15,8 @@
     <string name="clipboard_copied">Копрано во clipboard!</string>
     <string name="report">Пријави</string>
     <string name="password">Пасворд (Максимално 32 карактери)</string>
+    <string name="set_password">Set a password (max 32 chars)</string>
+    <string name="password_no_max">Password</string>
     <string name="ok">OK</string>
     <string name="yes">Да</string>
     <string name="cancel">Откажи</string>
@@ -22,7 +24,7 @@
     <string name="confirm">Потврди</string>
     <string name="nav_up">Горе</string>
     <string name="dont_show_again">Не прикажувај повторно</string>
-    <string name="selected_folder_label">Избраната папка:</string>
+    <string name="selected_folder_label">Current directory</string>
     <string name="title_favorites">Омилени</string>
     <string name="title_discover">Откриј</string>
     <string name="title_comments">Коментари</string>
@@ -55,6 +57,7 @@
     <string name="select_language">Јазик</string>
     <string name="what_to_do_dialog">Што да правам?</string>
     <string name="main_posts_count">%s\nПостови</string>
+    <string name="main_posts_count_inline">%s Posts</string>
     <string name="main_posts_followers">%s\nСледбеници</string>
     <string name="main_posts_following">%s\nFollowing</string>
     <string name="post_viewer_video_post">Пост со видео</string>
@@ -106,6 +109,7 @@
     <string name="liked">Лајкнато</string>
     <string name="saved">Зачувано</string>
     <string name="tagged">Такнато</string>
+    <string name="dm_person">Message</string>
     <string name="like">Лајк (%s)</string>
     <string name="unlike">Дислајск (%s)</string>
     <string name="bookmark">Обележи</string>
@@ -122,16 +126,18 @@
     <string name="dialog_export_btn_export">Експорт</string>
     <string name="dialog_export_btn_import">Импорт</string>
     <string name="dialog_export_logins">Експортни Логирање</string>
-    <string name="dialog_export_settings">Ескпортни Опции</string>
-    <string name="dialog_export_favorites">Ескпортни Омилени</string>
-    <string name="dialog_import_settings">Импортирај Опции</string>
+    <string name="dialog_export_accounts">Accounts</string>
+    <string name="dialog_export_settings">Settings</string>
+    <string name="dialog_export_favorites">Favorites</string>
+    <string name="dialog_import_settings">Import settings</string>
     <string name="dialog_import_logins">Импортирај Логирање</string>
-    <string name="dialog_import_favorites">Импортирај Омилени</string>
+    <string name="dialog_import_accounts">Import accounts</string>
+    <string name="dialog_import_favorites">Import favorites</string>
     <string name="dialog_import_success">Успешно импортирање!</string>
     <string name="dialog_import_failed">Неуспешно Импортирање!</string>
     <string name="dialog_export_success">Успешно експортиање!</string>
     <string name="dialog_export_failed">Неуспешно експортиање!</string>
-    <string name="dialog_export_err_password_empty">Полето за лозинка не треба да биде празно!</string>
+    <string name="dialog_export_err_password_empty">Password is empty!</string>
     <string name="refresh">Refresh</string>
     <string name="get_cookies">Превземи колачиња</string>
     <string name="desktop_2fa">Desktop Mode</string>
@@ -143,7 +149,7 @@
     <string name="time_settings_swap_time">Премести ги местата на датата и времето</string>
     <string name="quick_access_info_dialog">Панелот за омилени е за додавање корисници и хаштагов.\n\n и Панелот за Брз Пристап е за брзо променување помеѓу акаунти.\n\nЗабелешка бр 1: Бидете сигрни дека сте логирани на секој поединечен акаунт[Опции &gt; Логин] за да доадете акаунт во листата!\n\nЗабелешка број 2: Одлогирај се од сегашниот акаунт и логирај се на друг акаунт.</string>
     <string name="quick_access_cannot_delete_curr">Неможе да избришите акаунт во корист</string>
-    <string name="quick_access_confirm_delete">Дали сте сигурни дека сакате да избршите %s?</string>
+    <string name="quick_access_confirm_delete">Are you sure you want to delete \'%s\'?</string>
     <string name="profile_viewer_imageinfo">Ширина: %d\nВисина: %d</string>
     <string name="profile_viewer_colordepth_prefix">\nДлабочина на боја:</string>
     <string name="profile_endpoint">Одберете провајдер за профилна слика\n(Не влијае на хаштагови)</string>
@@ -277,4 +283,17 @@
     <string name="dark_theme_settings">Темна тема</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Материјално Црна</string>
+    <string name="added_to_favs">Added to Favorites</string>
+    <string name="add_to_favorites">Add to favorites</string>
+    <string name="accounts">Accounts</string>
+    <string name="hashtags">Hashtags</string>
+    <string name="locations">Locations</string>
+    <string name="unknown">Unknown</string>
+    <string name="removed_from_favs">Removed from Favourites</string>
+    <string name="backup_and_restore">Backup &amp; Restore</string>
+    <string name="create_backup">Create</string>
+    <string name="restore_backup">Restore</string>
+    <string name="file_chosen_label">File:</string>
+    <string name="enter_password">Enter password</string>
+    <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
 </resources>
