@@ -40,11 +40,6 @@
         <item>2</item>
         <item>3</item>
     </string-array>
-    <string-array name="anonymous_story_viewer">
-        <item>Disable</item>
-        <item>Aloinstagram</item>
-        <item>Instadp</item>
-    </string-array>
     <string-array name="separator_presets">
         <item>Brak</item>
         <item>\@</item>
