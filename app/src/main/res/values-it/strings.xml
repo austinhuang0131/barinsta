@@ -15,7 +15,7 @@
     <string name="clipboard_copied">Copiato negli appunti!</string>
     <string name="report">Segnala</string>
     <string name="password">Password (Massimo 32 caratteri)</string>
-    <string name="set_password">Set a password (max 32 chars)</string>
+    <string name="set_password">Imposta una password (max 32 caratteri)</string>
     <string name="password_no_max">Password</string>
     <string name="ok">OK</string>
     <string name="yes">Si</string>
@@ -24,7 +24,7 @@
     <string name="confirm">Conferma</string>
     <string name="nav_up">Su</string>
     <string name="dont_show_again">Non mostrare di nuovo</string>
-    <string name="selected_folder_label">Current directory</string>
+    <string name="selected_folder_label">Cartella corrente</string>
     <string name="title_favorites">Favoriti</string>
     <string name="title_discover">Scopri</string>
     <string name="title_comments">Commenti</string>
@@ -57,7 +57,7 @@
     <string name="select_language">Lingua</string>
     <string name="what_to_do_dialog">Cosa fare?</string>
     <string name="main_posts_count">%s\nPost</string>
-    <string name="main_posts_count_inline">%s Posts</string>
+    <string name="main_posts_count_inline">%s Post</string>
     <string name="main_posts_followers">%s\nFollower</string>
     <string name="main_posts_following">%s\nProfili seguiti</string>
     <string name="post_viewer_video_post">Video post</string>
@@ -109,7 +109,7 @@
     <string name="liked">Hai messo Like</string>
     <string name="saved">Elementi salvati</string>
     <string name="tagged">Taggato</string>
-    <string name="dm_person">Message</string>
+    <string name="dm_person">Messaggio</string>
     <string name="like">Like (%s)</string>
     <string name="unlike">Unlike (%s)</string>
     <string name="bookmark">Salva elemento</string>
