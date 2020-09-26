@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Оригиналниот програмер и одржувач, AWAiS,го создаде InstaGrabber (сега познат како Barinsta) како мал проект и алатка за со намера да \"украде\" т.е да ги превзема содржините од Инстаграм. За жал оригиналниот програмер го напуште и јас, Остин Хуанг, го превзедов прокетот во мој раце.[Се надевам дека ќе направам некој динар].Оваа апликација е целосно со отворен изворен код, без реклами и без tracking (освен тоа што Инстаграм го знае).Покрај тоа што е за превземање слики и видеа, Barinsta е одличен Инстаграм клиент за користење!\n\n Ако имате прашање или сте за зборување? Конактирајте instagrabber@austinhuang.me или кликнете од едно од копчињеата подолу.</string>
-    <string name="action_quickaccess">Брз Пристап</string>
     <string name="action_about">За Прокетот</string>
     <string name="action_dms">Директни Пораки</string>
-    <string name="action_setting">Опции (v%s)</string>
     <string name="action_settings">Опции</string>
     <string name="action_download">Превземи</string>
     <string name="action_search">Пребарај username…</string>
