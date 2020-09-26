@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Il manutentore originale, AWAiS, ha reso InstaGrabber una piccola e semplice app personale con le intenzioni di [rub-] scaricare post da Instagram. Sfortunatamente, questo è stato abbandonato e io, Austin Huang, ho preso il timone. [Speriamo che sia almeno un po \'di denaro contante.] Dopotutto, questa app è completamente open source, senza pubblicità e senza tracciamento [a parte ciò che Instagram sa]. Anche se non ti importa di scaricare roba [come me], è comunque un ottimo client Instagram da usare! \n\nFai domande [o vuoi solo parlare]? Contatta instagrabber@austinhuang.me o fai clic su uno dei pulsanti di seguito.</string>
-    <string name="action_quickaccess">Accesso rapido</string>
     <string name="action_about">Riguardo</string>
     <string name="action_dms">Messaggi Direct</string>
-    <string name="action_setting">Impostazioni (v%s)</string>
     <string name="action_settings">Impostazioni</string>
     <string name="action_download">Scarica</string>
     <string name="action_search">Cerca utente…</string>
