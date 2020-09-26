@@ -14,6 +14,7 @@
         <item>Brazilian Portuguese [Thanks to @wagnim]</item>
         <item>Persian [Thanks to @farzadx]</item>
         <item>Macedonian [Thanks to @snajdovski]</item>
+        <item>Vietnamese [Thanks to @fouze555]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
