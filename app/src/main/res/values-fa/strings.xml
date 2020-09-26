@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">نگهدارنده اصلی ، AWAiS ، ساخت InstaGrabber را بعنوان یک برنامه کوچک و ساده شخصی به منظور [steali-] دانلود پست های اینستاگرام. متأسفانه ، این کار رها شد و من ، آستین هوانگ ، کشتی را تحویل گرفتم.[بیایید امیدواریم باشیم که این حداقل یکم پول نقد باشد.] از این گذشته ، این برنامه کاملا منبع باز ، بدون تبلیغات و بدون ردیابی است (جدا از آنچه اینستاگرام می داند).حتی اگر دانلود کردن پست ها برای شما مهم نیست [مثل من] ، باز هم این یک کلاینت خوب اینستاگرام برای استفاده است!\n\n سوالی دارید ؟ [ یا فقط میخواهید گفتگو کنید ] تماس بگیرید با instagrabber@austinhuang.me یا بر روی یکی از دکمه های زیر کلیک کنید</string>
-    <string name="action_quickaccess">دسترسی سریع</string>
     <string name="action_about">درباره</string>
     <string name="action_dms">پیام‌های خصوصی</string>
-    <string name="action_setting">تنظیمات (v%s)</string>
     <string name="action_settings">تنظیمات</string>
     <string name="action_download">دانلود</string>
     <string name="action_search">جستجوی نام کاربری…</string>
