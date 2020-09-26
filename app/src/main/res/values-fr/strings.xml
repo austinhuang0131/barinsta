@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Le mainteneur original, AWAiS, a fait d\'InstaGrabber une petite application personnelle de base avec l\'intention de \"voler\" les messages d\'Instagram. Très malheureusement, elle a été abandonnée et moi, Austin Huang, j\'ai repris le navire. Après tout, cette application est entièrement open source, sans publicité, et sans suivi (en dehors de ce que sait Instagram). Même si vous ne vous souciez pas de télécharger des choses (comme moi), ça reste un excellent client Instagram à utiliser ! Contactez instagrabber@austinhuang.me ou cliquez sur l\'un des boutons ci-dessous.</string>
-    <string name="action_quickaccess">Accès rapide</string>
     <string name="action_about">À propos</string>
     <string name="action_dms">Messages privés</string>
-    <string name="action_setting">Paramètres (v%s)</string>
     <string name="action_settings">Paramètres</string>
     <string name="action_download">Téléchargement</string>
     <string name="action_search">Rechercher par nom d\'utilisateur…</string>
