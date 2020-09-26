@@ -99,6 +99,9 @@
             android:name="isHashtag"
             app:argType="boolean" />
         <argument
+            android:name="isLoc"
+            app:argType="boolean" />
+        <argument
             android:name="profileId"
             app:argType="string"
             app:nullable="true" />

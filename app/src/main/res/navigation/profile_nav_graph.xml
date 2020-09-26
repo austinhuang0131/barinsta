@@ -36,7 +36,7 @@
 
     <action
         android:id="@+id/action_global_profileFragment"
-        app:destination="@id/profileFragment">
+        app:destination="@id/profile_nav_graph">
         <argument
             android:name="username"
             android:defaultValue=""
@@ -74,6 +74,9 @@
         <action
             android:id="@+id/action_profileFragment_to_storyViewerFragment"
             app:destination="@id/storyViewerFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_dMThreadFragment"
+            app:destination="@id/directMessagesThreadFragment" />
     </fragment>
     <fragment
         android:id="@+id/savedViewerFragment"
@@ -137,6 +140,9 @@
             android:name="isHashtag"
             app:argType="boolean" />
         <argument
+            android:name="isLoc"
+            app:argType="boolean" />
+        <argument
             android:name="profileId"
             app:argType="string"
             app:nullable="true" />
@@ -144,5 +150,32 @@
             android:name="username"
             app:argType="string"
             app:nullable="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/directMessagesThreadFragment"
+        android:name="awais.instagrabber.fragments.directmessages.DirectMessageThreadFragment"
+        android:label="DirectMessagesThreadFragment"
+        tools:layout="@layout/fragment_direct_messages_thread">
+        <argument
+            android:name="threadId"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dMThreadFragment_to_dMSettingsFragment"
+            app:destination="@id/directMessagesSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/directMessagesSettingsFragment"
+        android:name="awais.instagrabber.fragments.directmessages.DirectMessageSettingsFragment"
+        android:label="DirectMessagesSettingsFragment"
+        tools:layout="@layout/fragment_direct_messages_settings">
+        <argument
+            android:name="threadId"
+            app:argType="string" />
+        <argument
+            android:name="title"
+            app:argType="string" />
     </fragment>
 </navigation>

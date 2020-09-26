@@ -1,28 +1,20 @@
 package awais.instagrabber.utils;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.net.Uri;
-import android.os.Build;
-import android.text.Editable;
 import android.util.DisplayMetrics;
 import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
+import android.util.Pair;
 import android.webkit.MimeTypeMap;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.StringRes;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
-import androidx.fragment.app.FragmentManager;
+import androidx.annotation.Nullable;
 
 import com.google.android.exoplayer2.database.ExoDatabaseProvider;
 import com.google.android.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvictor;
@@ -39,10 +31,8 @@ import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 
 import awais.instagrabber.R;
-import awais.instagrabber.databinding.DialogImportExportBinding;
+import awais.instagrabber.models.enums.FavoriteType;
 import awaisomereport.LogCollector;
-
-import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 
 public final class Utils {
     private static final String TAG = "Utils";
@@ -64,19 +54,6 @@ public final class Utils {
         return Math.round((dp * displayMetrics.densityDpi) / 160.0f);
     }
 
-    public static void setTooltipText(final View view, @StringRes final int tooltipTextRes) {
-        if (view != null && tooltipTextRes != 0 && tooltipTextRes != -1) {
-            final Context context = view.getContext();
-            final String tooltipText = context.getResources().getString(tooltipTextRes);
-
-            if (Build.VERSION.SDK_INT >= 26) view.setTooltipText(tooltipText);
-            else view.setOnLongClickListener(v -> {
-                Toast.makeText(context, tooltipText, Toast.LENGTH_SHORT).show();
-                return true;
-            });
-        }
-    }
-
     public static void copyText(@NonNull final Context context, final CharSequence string) {
         if (clipboardManager == null)
             clipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
@@ -87,100 +64,6 @@ public final class Utils {
             toastMessage = R.string.clipboard_copied;
         }
         Toast.makeText(context, toastMessage, Toast.LENGTH_SHORT).show();
-    }
-
-    public static void showImportExportDialog(final Context context) {
-        final DialogImportExportBinding importExportBinding = DialogImportExportBinding.inflate(LayoutInflater.from(context));
-
-        final View passwordParent = (View) importExportBinding.cbPassword.getParent();
-        final View exportLoginsParent = (View) importExportBinding.cbExportLogins.getParent();
-        final View exportFavoritesParent = (View) importExportBinding.cbExportFavorites.getParent();
-        final View exportSettingsParent = (View) importExportBinding.cbExportSettings.getParent();
-        final View importLoginsParent = (View) importExportBinding.cbImportLogins.getParent();
-        final View importFavoritesParent = (View) importExportBinding.cbImportFavorites.getParent();
-        final View importSettingsParent = (View) importExportBinding.cbImportSettings.getParent();
-
-        importExportBinding.cbPassword.setOnCheckedChangeListener((buttonView, isChecked) ->
-                                                                          importExportBinding.etPassword.etPassword.setEnabled(isChecked));
-
-        final AlertDialog[] dialog = new AlertDialog[1];
-        final View.OnClickListener onClickListener = v -> {
-            if (v == passwordParent) importExportBinding.cbPassword.performClick();
-
-            else if (v == exportLoginsParent) importExportBinding.cbExportLogins.performClick();
-            else if (v == exportFavoritesParent)
-                importExportBinding.cbExportFavorites.performClick();
-
-            else if (v == importLoginsParent) importExportBinding.cbImportLogins.performClick();
-            else if (v == importFavoritesParent)
-                importExportBinding.cbImportFavorites.performClick();
-
-            else if (v == exportSettingsParent) importExportBinding.cbExportSettings.performClick();
-            else if (v == importSettingsParent) importExportBinding.cbImportSettings.performClick();
-
-            else if (context instanceof AppCompatActivity) {
-                final FragmentManager fragmentManager = ((AppCompatActivity) context).getSupportFragmentManager();
-                final String folderPath = settingsHelper.getString(FOLDER_PATH);
-
-                if (v == importExportBinding.btnSaveTo) {
-                    final Editable text = importExportBinding.etPassword.etPassword.getText();
-                    final boolean passwordChecked = importExportBinding.cbPassword.isChecked();
-                    if (passwordChecked && TextUtils.isEmpty(text))
-                        Toast.makeText(context, R.string.dialog_export_err_password_empty, Toast.LENGTH_SHORT).show();
-                    else {
-                        new DirectoryChooser().setInitialDirectory(folderPath).setInteractionListener(path -> {
-                            final File file = new File(path, "InstaGrabber_Settings_" + System.currentTimeMillis() + ".zaai");
-                            final String password = passwordChecked ? text.toString() : null;
-                            int flags = 0;
-                            if (importExportBinding.cbExportFavorites.isChecked())
-                                flags |= ExportImportUtils.FLAG_FAVORITES;
-                            if (importExportBinding.cbExportSettings.isChecked())
-                                flags |= ExportImportUtils.FLAG_SETTINGS;
-                            if (importExportBinding.cbExportLogins.isChecked())
-                                flags |= ExportImportUtils.FLAG_COOKIES;
-
-                            ExportImportUtils.Export(password, flags, file, result -> {
-                                Toast.makeText(context, result ? R.string.dialog_export_success : R.string.dialog_export_failed, Toast.LENGTH_SHORT)
-                                     .show();
-                                if (dialog[0] != null && dialog[0].isShowing()) dialog[0].dismiss();
-                            });
-
-                        }).show(fragmentManager, null);
-                    }
-
-                } else if (v == importExportBinding.btnImport) {
-                    new DirectoryChooser().setInitialDirectory(folderPath).setShowZaAiConfigFiles(true).setInteractionListener(path -> {
-                        int flags = 0;
-                        if (importExportBinding.cbImportFavorites.isChecked())
-                            flags |= ExportImportUtils.FLAG_FAVORITES;
-                        if (importExportBinding.cbImportSettings.isChecked())
-                            flags |= ExportImportUtils.FLAG_SETTINGS;
-                        if (importExportBinding.cbImportLogins.isChecked())
-                            flags |= ExportImportUtils.FLAG_COOKIES;
-
-                        ExportImportUtils.Import(context, flags, new File(path), result -> {
-                            ((AppCompatActivity) context).recreate();
-                            Toast.makeText(context, result ? R.string.dialog_import_success : R.string.dialog_import_failed, Toast.LENGTH_SHORT)
-                                 .show();
-                            if (dialog[0] != null && dialog[0].isShowing()) dialog[0].dismiss();
-                        });
-
-                    }).show(fragmentManager, null);
-                }
-            }
-        };
-
-        passwordParent.setOnClickListener(onClickListener);
-        exportLoginsParent.setOnClickListener(onClickListener);
-        exportSettingsParent.setOnClickListener(onClickListener);
-        exportFavoritesParent.setOnClickListener(onClickListener);
-        importLoginsParent.setOnClickListener(onClickListener);
-        importSettingsParent.setOnClickListener(onClickListener);
-        importFavoritesParent.setOnClickListener(onClickListener);
-        importExportBinding.btnSaveTo.setOnClickListener(onClickListener);
-        importExportBinding.btnImport.setOnClickListener(onClickListener);
-
-        dialog[0] = new AlertDialog.Builder(context).setView(importExportBinding.getRoot()).show();
     }
 
     public static Map<String, String> sign(final Map<String, Object> form) {
@@ -250,5 +133,17 @@ public final class Utils {
             simpleCache = new SimpleCache(cacheDir, new LeastRecentlyUsedCacheEvictor(VIDEO_CACHE_MAX_BYTES), exoDatabaseProvider);
         }
         return simpleCache;
+    }
+
+    @Nullable
+    public static Pair<FavoriteType, String> migrateOldFavQuery(final String queryText) {
+        if (queryText.startsWith("@")) {
+            return new Pair<>(FavoriteType.USER, queryText.substring(1));
+        } else if (queryText.contains("/")) {
+            return new Pair<>(FavoriteType.LOCATION, queryText.substring(0, queryText.indexOf("/")));
+        } else if (queryText.startsWith("#")) {
+            return new Pair<>(FavoriteType.HASHTAG, queryText.substring(1));
+        }
+        return null;
     }
 }

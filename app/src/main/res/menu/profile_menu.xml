@@ -1,12 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@+id/favourites"
-        android:enabled="true"
-        android:icon="@drawable/ic_star_24"
-        android:title="@string/title_favorites"
-        android:visible="false"
-        app:showAsAction="ifRoom" />
+    <!--<item-->
+    <!--    android:id="@+id/favourites"-->
+    <!--    android:enabled="true"-->
+    <!--    android:icon="@drawable/ic_star_24"-->
+    <!--    android:title="@string/title_favorites"-->
+    <!--    android:visible="false"-->
+    <!--    app:showAsAction="ifRoom" />-->
 
+    <item
+        android:id="@+id/block"
+        android:icon="@drawable/ic_block_24"
+        android:title="@string/block"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/restrict"
+        android:icon="@drawable/ic_highlight_off_24"
+        android:title="@string/restrict"
+        android:visible="false"
+        app:showAsAction="never" />
 </menu>

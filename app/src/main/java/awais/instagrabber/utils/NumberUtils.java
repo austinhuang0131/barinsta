@@ -1,6 +1,7 @@
 package awais.instagrabber.utils;
 
 import androidx.annotation.NonNull;
+import androidx.core.util.Pair;
 
 import java.util.Random;
 
@@ -52,5 +53,16 @@ public final class NumberUtils {
                 r = random.nextLong();
         }
         return r;
+    }
+
+    @NonNull
+    public static Pair<Integer, Integer> calculateWidthHeight(final int height, final int width, final int maxHeight, final int maxWidth) {
+        int tempWidth = NumberUtils.getResultingWidth(maxHeight, height, width);
+        int tempHeight = maxHeight;
+        if (width > maxWidth) {
+            tempHeight = NumberUtils.getResultingHeight(maxWidth, height, width);
+            tempWidth = maxWidth;
+        }
+        return new Pair<>(tempWidth, tempHeight);
     }
 }

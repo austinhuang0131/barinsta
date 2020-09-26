@@ -10,7 +10,6 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.models.ProfileModel;
@@ -24,6 +23,8 @@ import awais.instagrabber.models.enums.RavenMediaViewType;
 import awaisomereport.LogCollector;
 
 public final class ResponseBodyUtils {
+    private static final String TAG = "ResponseBodyUtils";
+
     // isI: true if the content was requested from i.instagram.com instead of graphql
     @Nullable
     public static String getHighQualityPost(final JSONArray resources, final boolean isVideo, final boolean isI, final boolean low) {
@@ -103,37 +104,38 @@ public final class ResponseBodyUtils {
         return src;
     }
 
-    public static String getItemThumbnail(@NonNull final JSONArray jsonArray) {
-        String thumbnail = null;
+    public static ThumbnailDetails getItemThumbnail(@NonNull final JSONArray jsonArray) {
+        final ThumbnailDetails thumbnailDetails = new ThumbnailDetails();
         final int imageResLen = jsonArray.length();
-
         for (int i = 0; i < imageResLen; ++i) {
             final JSONObject imageResource = jsonArray.optJSONObject(i);
             try {
-                final int width = imageResource.getInt("width");
-                final int height = imageResource.getInt("height");
-                final float ratio = Float.parseFloat(String.format(Locale.ENGLISH, "%.2f", (float) height / width));
-                if (ratio >= 0.95f && ratio <= 1.0f) {
-                    thumbnail = imageResource.getString("url");
-                    break;
-                }
+                // final float ratio = (float) height / width;
+                // if (ratio >= 0.95f && ratio <= 1.0f) {
+                thumbnailDetails.height = imageResource.getInt("height");
+                thumbnailDetails.width = imageResource.getInt("width");
+                thumbnailDetails.url = imageResource.getString("url");
+                break;
+                // }
             } catch (final Exception e) {
                 if (Utils.logCollector != null)
                     Utils.logCollector.appendException(e, LogCollector.LogFile.UTILS, "getItemThumbnail");
-                if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
-                thumbnail = null;
+                if (BuildConfig.DEBUG) Log.e(TAG, "", e);
             }
         }
+        // if (TextUtils.isEmpty(thumbnail)) thumbnail = jsonArray.optJSONObject(0).optString("url");
+        return thumbnailDetails;
+    }
 
-        if (TextUtils.isEmpty(thumbnail)) thumbnail = jsonArray.optJSONObject(0).optString("url");
-
-        return thumbnail;
+    public static class ThumbnailDetails {
+        int width;
+        int height;
+        public String url;
     }
 
     @Nullable
-    public static String getThumbnailUrl(@NonNull final JSONObject mediaObj, final MediaItemType mediaType) throws Exception {
-        String thumbnail = null;
-
+    public static ThumbnailDetails getThumbnailUrl(@NonNull final JSONObject mediaObj, final MediaItemType mediaType) throws Exception {
+        ThumbnailDetails thumbnail = null;
         if (mediaType == MediaItemType.MEDIA_TYPE_IMAGE || mediaType == MediaItemType.MEDIA_TYPE_VIDEO) {
             final JSONObject imageVersions = mediaObj.optJSONObject("image_versions2");
             if (imageVersions != null)
@@ -143,19 +145,18 @@ public final class ResponseBodyUtils {
             final JSONArray carouselMedia = mediaObj.optJSONArray("carousel_media");
             if (carouselMedia != null)
                 thumbnail = getItemThumbnail(carouselMedia.getJSONObject(0)
-                                                          .getJSONObject("image_versions2").getJSONArray("candidates"));
+                                                          .getJSONObject("image_versions2")
+                                                          .getJSONArray("candidates"));
         }
-
         return thumbnail;
     }
 
-    public static String getVideoUrl(@NonNull final JSONObject mediaObj) throws Exception {
+    public static String getVideoUrl(@NonNull final JSONObject mediaObj) {
         String thumbnail = null;
-
         final JSONArray imageVersions = mediaObj.optJSONArray("video_versions");
-        if (imageVersions != null)
-            thumbnail = getItemThumbnail(imageVersions);
-
+        if (imageVersions != null) {
+            thumbnail = getItemThumbnail(imageVersions).url;
+        }
         return thumbnail;
     }
 
@@ -193,14 +194,18 @@ public final class ResponseBodyUtils {
             String id = mediaObj.optString("id");
             if (TextUtils.isEmpty(id)) id = null;
 
-            mediaModel = new DirectItemModel.DirectItemMediaModel(mediaType,
-                                                                  mediaObj.optLong("expiring_at"),
-                                                                  mediaObj.optLong("pk"),
-                                                                  id,
-                                                                  getThumbnailUrl(mediaObj, mediaType),
-                                                                  mediaType == MediaItemType.MEDIA_TYPE_VIDEO ? getVideoUrl(mediaObj) : null,
-                                                                  user,
-                                                                  mediaObj.optString("code"));
+            final ThumbnailDetails thumbnailDetails = getThumbnailUrl(mediaObj, mediaType);
+            mediaModel = new DirectItemModel.DirectItemMediaModel(
+                    mediaType,
+                    mediaObj.optLong("expiring_at"),
+                    mediaObj.optLong("pk"),
+                    id,
+                    thumbnailDetails != null ? thumbnailDetails.url : null,
+                    mediaType == MediaItemType.MEDIA_TYPE_VIDEO ? getVideoUrl(mediaObj) : null,
+                    user,
+                    mediaObj.optString("code"),
+                    thumbnailDetails != null ? thumbnailDetails.height : 0,
+                    thumbnailDetails != null ? thumbnailDetails.width : 0);
         }
         return mediaModel;
     }
@@ -232,8 +237,8 @@ public final class ResponseBodyUtils {
         final String threadV2Id = data.getString("thread_v2_id");
         final String threadTitle = data.getString("thread_title");
 
-        final String threadNewestCursor = data.getString("newest_cursor");
-        final String threadOldestCursor = data.getString("oldest_cursor");
+        final String threadNewestCursor = data.optString("newest_cursor");
+        final String threadOldestCursor = data.optString("oldest_cursor");
         final String threadNextCursor = data.has("next_cursor") ? data.getString("next_cursor") : null;
         final String threadPrevCursor = data.has("prev_cursor") ? data.getString("prev_cursor") : null;
 
@@ -314,14 +319,15 @@ public final class ResponseBodyUtils {
                     final JSONObject animatedMedia = itemObject.getJSONObject("animated_media");
                     final JSONObject stickerImage = animatedMedia.getJSONObject("images").getJSONObject("fixed_height");
 
-                    animatedMediaModel = new DirectItemModel.DirectItemAnimatedMediaModel(animatedMedia.getBoolean("is_random"),
-                                                                                          animatedMedia.getBoolean("is_sticker"),
-                                                                                          animatedMedia.getString("id"),
-                                                                                          stickerImage.getString("url"),
-                                                                                          stickerImage.optString("webp"),
-                                                                                          stickerImage.optString("mp4"),
-                                                                                          stickerImage.getInt("height"),
-                                                                                          stickerImage.getInt("width"));
+                    animatedMediaModel = new DirectItemModel.DirectItemAnimatedMediaModel(
+                            animatedMedia.getBoolean("is_random"),
+                            animatedMedia.getBoolean("is_sticker"),
+                            animatedMedia.getString("id"),
+                            stickerImage.getString("url"),
+                            stickerImage.optString("webp"),
+                            stickerImage.optString("mp4"),
+                            stickerImage.getInt("height"),
+                            stickerImage.getInt("width"));
                 }
                 break;
 
@@ -340,9 +346,11 @@ public final class ResponseBodyUtils {
                         }
                     }
 
-                    voiceMediaModel = new DirectItemModel.DirectItemVoiceMediaModel(voiceMedia.getString("id"),
-                                                                                    audio.getString("audio_src"), audio.getLong("duration"),
-                                                                                    waveformData);
+                    voiceMediaModel = new DirectItemModel.DirectItemVoiceMediaModel(
+                            voiceMedia.getString("id"),
+                            audio.getString("audio_src"),
+                            audio.getLong("duration"),
+                            waveformData);
                 }
                 break;
 
@@ -360,10 +368,11 @@ public final class ResponseBodyUtils {
                         );
                     }
 
-                    linkModel = new DirectItemModel.DirectItemLinkModel(linkObj.getString("text"),
-                                                                        linkObj.getString("client_context"),
-                                                                        linkObj.optString("mutation_token"),
-                                                                        itemLinkContext);
+                    linkModel = new DirectItemModel.DirectItemLinkModel(
+                            linkObj.getString("text"),
+                            linkObj.getString("client_context"),
+                            linkObj.optString("mutation_token"),
+                            itemLinkContext);
                 }
                 break;
 

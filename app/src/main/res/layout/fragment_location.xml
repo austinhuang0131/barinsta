@@ -17,101 +17,128 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
-            <RelativeLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/locInfoContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:animateLayoutChanges="true"
                 android:background="@null"
-                android:orientation="vertical"
-                android:paddingBottom="5dp">
+                android:padding="8dp">
 
-                <LinearLayout
-                    android:id="@+id/locInfo"
-                    android:layout_width="match_parent"
+                <awais.instagrabber.customviews.CircularImageView
+                    android:id="@+id/mainLocationImage"
+                    android:layout_width="@dimen/profile_picture_size"
+                    android:layout_height="@dimen/profile_picture_size"
+                    android:background="?selectableItemBackgroundBorderless"
+                    app:actualImageScaleType="centerCrop"
+                    app:layout_constraintEnd_toStartOf="@id/mainLocPostCount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:background="@mipmap/ic_launcher" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/mainLocPostCount"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    app:layout_constraintBottom_toTopOf="@id/btnMap"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/mainLocationImage"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="35 Posts" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btnMap"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="@dimen/profile_info_container_bottom_space">
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/map"
+                    app:chipBackgroundColor="@null"
+                    app:chipIcon="@drawable/ic_outline_map_24"
+                    app:chipIconTint="@color/green_500"
+                    app:layout_constraintBottom_toTopOf="@id/locationFullName"
+                    app:layout_constraintStart_toEndOf="@id/mainLocationImage"
+                    app:layout_constraintTop_toBottomOf="@id/mainLocPostCount"
+                    app:rippleColor="@color/grey_500"
+                    tools:visibility="visible" />
 
-                    <awais.instagrabber.customviews.CircularImageView
-                        android:id="@+id/mainLocationImage"
-                        android:layout_width="@dimen/profile_picture_size"
-                        android:layout_height="@dimen/profile_picture_size"
-                        android:background="?selectableItemBackgroundBorderless"
-                        app:actualImageScaleType="fitCenter" />
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/mainLocPostCount"
-                        android:layout_width="0dp"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="12dp"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginEnd="12dp"
-                        android:layout_marginRight="12dp"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:textAppearance="@style/TextAppearance.AppCompat"
-                        android:textSize="15sp"
-                        tools:text="35\nPosts" />
-
-                    <androidx.appcompat.widget.AppCompatButton
-                        android:id="@+id/btnMap"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_weight="2"
-                        android:text="@string/map"
-                        android:textColor="@color/btn_green_text_color"
-                        android:textSize="20sp"
-                        android:visibility="gone"
-                        app:backgroundTint="@color/btn_green_background" />
-                </LinearLayout>
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fav_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/add_to_favorites"
+                    app:chipBackgroundColor="@null"
+                    app:chipIcon="@drawable/ic_outline_star_plus_24"
+                    app:chipIconTint="@color/yellow_800"
+                    app:layout_constraintBottom_toBottomOf="@id/mainLocationImage"
+                    app:layout_constraintStart_toEndOf="@id/btnMap"
+                    app:layout_constraintTop_toBottomOf="@id/mainLocPostCount"
+                    app:rippleColor="@color/yellow_400" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/locationFullName"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/locInfo"
                     android:ellipsize="marquee"
-                    android:paddingStart="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingTop="4dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp"
                     android:singleLine="true"
-                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                    android:textSize="16sp"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/locationBiography"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/mainLocationImage"
                     tools:text="OUR HOUSE" />
 
                 <awais.instagrabber.customviews.RamboTextView
                     android:id="@+id/locationBiography"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/locationFullName"
                     android:background="?android:selectableItemBackground"
-                    android:paddingStart="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textSize="16sp"
                     android:visibility="gone"
-                    tools:text="IN THE MIDDLE OF OUR STREET" />
+                    app:layout_constraintBottom_toTopOf="@id/locationUrl"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/locationFullName"
+                    tools:text="IN THE MIDDLE OF OUR STREET"
+                    tools:visibility="visible" />
 
                 <awais.instagrabber.customviews.RamboTextView
                     android:id="@+id/locationUrl"
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/locationBiography"
                     android:ellipsize="marquee"
-                    android:paddingStart="10dp"
-                    android:paddingLeft="10dp"
-                    android:paddingEnd="10dp"
-                    android:paddingRight="10dp"
+                    android:paddingStart="8dp"
+                    android:paddingLeft="8dp"
+                    android:paddingEnd="8dp"
+                    android:paddingRight="8dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-                    android:textSize="16sp"
                     android:visibility="gone"
-                    tools:text="https://austinhuang.me/" />
-            </RelativeLayout>
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/locationBiography"
+                    tools:text="https://austinhuang.me/"
+                    tools:visibility="visible" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

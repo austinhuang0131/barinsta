@@ -21,7 +21,7 @@ public abstract class BasePreferencesFragment extends PreferenceFragmentCompat i
     @Override
     public void onCreatePreferences(final Bundle savedInstanceState, final String rootKey) {
         final PreferenceManager preferenceManager = getPreferenceManager();
-        preferenceManager.setSharedPreferencesName("settings");
+        preferenceManager.setSharedPreferencesName(Constants.SHARED_PREFERENCES_NAME);
         preferenceManager.getSharedPreferences().registerOnSharedPreferenceChangeListener(this);
         final Context context = getContext();
         if (context == null) return;

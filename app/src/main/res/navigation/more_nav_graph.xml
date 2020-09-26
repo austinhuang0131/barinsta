@@ -34,6 +34,24 @@
             app:nullable="true" />
     </action>
 
+    <action
+        android:id="@+id/action_global_hashTagFragment"
+        app:destination="@id/hashtag_nav_graph">
+        <argument
+            android:name="hashtag"
+            app:argType="string"
+            app:nullable="false" />
+    </action>
+
+    <action
+        android:id="@+id/action_global_locationFragment"
+        app:destination="@id/location_nav_graph">
+        <argument
+            android:name="locationId"
+            app:argType="string"
+            app:nullable="false" />
+    </action>
+
     <fragment
         android:id="@+id/morePreferencesFragment"
         android:name="awais.instagrabber.fragments.settings.MorePreferencesFragment"
@@ -47,6 +65,12 @@
         <action
             android:id="@+id/action_morePreferencesFragment_to_notificationsViewer"
             app:destination="@id/notificationsViewer" />
+        <action
+            android:id="@+id/action_morePreferencesFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_morePreferencesFragment_to_backupPreferencesFragment"
+            app:destination="@id/backupPreferencesFragment" />
     </fragment>
     <fragment
         android:id="@+id/settingsPreferencesFragment"
@@ -69,4 +93,12 @@
         android:id="@+id/themePreferencesFragment"
         android:name="awais.instagrabber.fragments.settings.ThemePreferencesFragment"
         android:label="@string/theme_settings" />
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="awais.instagrabber.fragments.FavoritesFragment"
+        android:label="@string/title_favorites" />
+    <fragment
+        android:id="@+id/backupPreferencesFragment"
+        android:name="awais.instagrabber.fragments.settings.BackupPreferencesFragment"
+        android:label="@string/backup_and_restore" />
 </navigation>

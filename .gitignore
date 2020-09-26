@@ -9,11 +9,11 @@
 /.idea/workspace.xml
 /.idea/navEditor.xml
 /.idea/assetWizardSettings.xml
+/.idea/git_toolbox_prj.xml
+/.idea/dbnavigator.xml
 .DS_Store
 /build
 /captures
 .externalNativeBuild
 .cxx
 app/release
-
-.idea/git_toolbox_prj.xml

@@ -57,7 +57,11 @@
     </style>
 
     <style name="Widget.MaterialComponents.Button.Light.White" parent="Widget.MaterialComponents.Button">
-        <item name="materialThemeOverlay">@style/ThemeOverlay.Button.Dark.Black</item>
+        <item name="materialThemeOverlay">@style/ThemeOverlay.Button.Light.White</item>
+    </style>
+
+    <style name="ThemeOverlay.Button.Light.White" parent="">
+        <item name="colorPrimary">@color/black</item>
     </style>
 
     <style name="Widget.MaterialComponents.Button.Dark.Black" parent="Widget.MaterialComponents.Button">
@@ -107,5 +111,30 @@
     <style name="PreferenceFragmentCompatStyle.Dark.MaterialDark" parent="PreferenceFragment.Material">
         <item name="android:background">?colorSurface</item>
         <item name="android:windowBackground">?attr/colorSurface</item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog.Light" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Light</item>
+        <item name="buttonBarNeutralButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Light</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog.Light</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.TextButton.Dialog.Light" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialComponents.Button.TextButton.Light</item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialComponents.Button.TextButton.Light" parent="">
+        <item name="colorPrimary">?attr/colorPrimaryDark</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Light.White" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Light.White</item>
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorOnSurface">@color/black</item>
+    </style>
+
+    <style name="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox.Light.White" parent="ThemeOverlay.MaterialComponents.TextInputEditText.OutlinedBox">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorOnSurface">@color/black</item>
     </style>
 </resources>

@@ -1,10 +1,9 @@
 package awais.instagrabber;
 
+import android.app.Application;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.util.Log;
-
-import androidx.multidex.MultiDexApplication;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.facebook.imagepipeline.core.ImagePipelineConfig;
@@ -27,7 +26,7 @@ import static awais.instagrabber.utils.Utils.datetimeParser;
 import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
-public final class InstaGrabberApplication extends MultiDexApplication {
+public final class InstaGrabberApplication extends Application {
     private static final String TAG = "InstaGrabberApplication";
 
     @Override

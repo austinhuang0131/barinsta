@@ -17,47 +17,120 @@
             android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll">
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/tagInfoContainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="@dimen/profile_info_container_bottom_space"
-                android:visibility="visible">
+                android:padding="@dimen/profile_info_container_bottom_space">
 
                 <awais.instagrabber.customviews.CircularImageView
                     android:id="@+id/mainHashtagImage"
                     android:layout_width="@dimen/profile_picture_size"
                     android:layout_height="@dimen/profile_picture_size"
-                    android:adjustViewBounds="true"
-                    android:background="?selectableItemBackgroundBorderless" />
+                    android:background="?selectableItemBackgroundBorderless"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/mainTagPostCount"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:background="@mipmap/ic_launcher" />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/mainTagPostCount"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginStart="12dp"
-                    android:layout_marginLeft="12dp"
-                    android:layout_marginEnd="12dp"
-                    android:layout_marginRight="12dp"
-                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
                     android:gravity="center"
+                    android:padding="8dp"
                     android:textAppearance="@style/TextAppearance.AppCompat"
-                    android:textSize="15sp"
-                    tools:text="35\nPosts" />
+                    app:layout_constraintBottom_toTopOf="@id/btnFollowTag"
+                    app:layout_constraintStart_toEndOf="@id/mainHashtagImage"
+                    app:layout_constraintTop_toTopOf="@id/mainHashtagImage"
+                    tools:text="35 Posts" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.chip.Chip
                     android:id="@+id/btnFollowTag"
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_weight="2"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
                     android:text="@string/follow"
-                    android:textColor="@color/btn_pink_text_color"
-                    android:textSize="20sp"
                     android:visibility="gone"
-                    app:backgroundTint="@color/btn_pink_background" />
-            </LinearLayout>
+                    app:chipBackgroundColor="@null"
+                    app:chipIcon="@drawable/ic_outline_person_add_24"
+                    app:chipIconTint="@color/deep_purple_800"
+                    app:layout_constraintBottom_toBottomOf="@id/mainHashtagImage"
+                    app:layout_constraintStart_toEndOf="@id/mainHashtagImage"
+                    app:layout_constraintTop_toBottomOf="@id/mainTagPostCount"
+                    app:rippleColor="@color/purple_200" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/fav_chip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:text="@string/add_to_favorites"
+                    android:visibility="gone"
+                    app:chipBackgroundColor="@null"
+                    app:chipIcon="@drawable/ic_outline_star_plus_24"
+                    app:chipIconTint="@color/yellow_800"
+                    app:layout_constraintBottom_toBottomOf="@id/mainHashtagImage"
+                    app:layout_constraintStart_toEndOf="@id/btnFollowTag"
+                    app:layout_constraintTop_toBottomOf="@id/mainTagPostCount"
+                    app:rippleColor="@color/yellow_400" />
+
+                <!--<com.google.android.material.chip.Chip-->
+                <!--    android:layout_width="wrap_content"-->
+                <!--    android:layout_height="wrap_content"-->
+                <!--    app:layout_constraintBottom_toBottomOf="@id/mainHashtagImage"-->
+                <!--    app:layout_constraintStart_toEndOf="@id/mainHashtagImage"-->
+                <!--    app:layout_constraintTop_toBottomOf="@id/mainTagPostCount" />-->
+
+                <!--<com.google.android.material.button.MaterialButton-->
+                <!--    android:id="@+id/btnFollowTag"-->
+                <!--    style="@style/Widget.MaterialComponents.Button.TextButton"-->
+                <!--    android:layout_width="0dp"-->
+                <!--    android:layout_height="0dp"-->
+                <!--    android:text="@string/follow"-->
+                <!--    android:textColor="@color/deep_purple_200"-->
+                <!--    android:visibility="gone"-->
+                <!--    app:icon="@drawable/ic_outline_person_add_24"-->
+                <!--    app:iconGravity="top"-->
+                <!--    app:iconTint="@color/deep_purple_200"-->
+                <!--    app:layout_constraintBottom_toTopOf="@id/fav_cb"-->
+                <!--    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--    app:layout_constraintStart_toEndOf="@id/mainTagPostCount"-->
+                <!--    app:layout_constraintTop_toTopOf="@id/mainHashtagImage"-->
+                <!--    tools:visibility="visible" />-->
+
+                <!--<CheckBox-->
+                <!--    android:id="@+id/fav_cb"-->
+                <!--    android:layout_width="0dp"-->
+                <!--    android:layout_height="wrap_content"-->
+                <!--    android:button="@drawable/sl_favourite_24"-->
+                <!--    android:paddingStart="8dp"-->
+                <!--    android:paddingEnd="8dp"-->
+                <!--    android:text="Add to favorites"-->
+                <!--    android:visibility="gone"-->
+                <!--    app:buttonTint="@color/yellow_800"-->
+                <!--    app:layout_constraintBottom_toBottomOf="@id/mainHashtagImage"-->
+                <!--    app:layout_constraintEnd_toEndOf="parent"-->
+                <!--    app:layout_constraintStart_toEndOf="@id/mainHashtagImage"-->
+                <!--    app:layout_constraintTop_toBottomOf="@id/btnFollowTag"-->
+                <!--    tools:visibility="gone" />-->
+
+                <!--<ProgressBar-->
+                <!--    android:id="@+id/fav_progress"-->
+                <!--    style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Indeterminate"-->
+                <!--    android:layout_width="24dp"-->
+                <!--    android:layout_height="24dp"-->
+                <!--    android:paddingStart="8dp"-->
+                <!--    android:paddingEnd="8dp"-->
+                <!--    android:visibility="gone"-->
+                <!--    app:layout_constraintBottom_toBottomOf="@id/mainHashtagImage"-->
+                <!--    app:layout_constraintStart_toStartOf="@id/fav_cb"-->
+                <!--    app:layout_constraintTop_toBottomOf="@id/mainTagPostCount"-->
+                <!--    tools:visibility="gone" />-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.appbar.CollapsingToolbarLayout>
     </com.google.android.material.appbar.AppBarLayout>
 

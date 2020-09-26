@@ -33,14 +33,13 @@ import static awais.instagrabber.utils.Constants.PREF_LIGHT_THEME;
 import static awais.instagrabber.utils.Constants.PREV_INSTALL_VERSION;
 import static awais.instagrabber.utils.Constants.SHOW_QUICK_ACCESS_DIALOG;
 import static awais.instagrabber.utils.Constants.SKIPPED_VERSION;
-import static awais.instagrabber.utils.Constants.STORY_VIEWER;
 import static awais.instagrabber.utils.Constants.SWAP_DATE_TIME_FORMAT_ENABLED;
 
 public final class SettingsHelper {
     private final SharedPreferences sharedPreferences;
 
     public SettingsHelper(@NonNull final Context context) {
-        this.sharedPreferences = context.getSharedPreferences("settings", Context.MODE_PRIVATE);
+        this.sharedPreferences = context.getSharedPreferences(Constants.SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE);
     }
 
     @NonNull
@@ -114,7 +113,7 @@ public final class SettingsHelper {
 
     @StringDef(
             {APP_LANGUAGE, APP_THEME, COOKIE, FOLDER_PATH, DATE_TIME_FORMAT, DATE_TIME_SELECTION, CUSTOM_DATE_TIME_FORMAT,
-                    DEVICE_UUID, SKIPPED_VERSION, DEFAULT_TAB, STORY_VIEWER, PREF_DARK_THEME, PREF_LIGHT_THEME})
+                    DEVICE_UUID, SKIPPED_VERSION, DEFAULT_TAB, PREF_DARK_THEME, PREF_LIGHT_THEME})
     public @interface StringSettings {}
 
     @StringDef({DOWNLOAD_USER_FOLDER, FOLDER_SAVE_TO, AUTOPLAY_VIDEOS, SHOW_QUICK_ACCESS_DIALOG, MUTED_VIDEOS,

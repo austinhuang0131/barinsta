@@ -29,12 +29,13 @@ public class AboutFragment extends BasePreferencesFragment {
         final PreferenceCategory thirdPartyCategory = new PreferenceCategory(context);
         screen.addPreference(thirdPartyCategory);
         thirdPartyCategory.setTitle(R.string.about_category_3pt);
-        thirdPartyCategory.setSummary(R.string.about_category_3pt_summary);
+        //thirdPartyCategory.setSummary(R.string.about_category_3pt_summary);
         thirdPartyCategory.setIconSpaceReserved(false);
         // alphabetical order!!!
         thirdPartyCategory.addPreference(getExoPlayerPreference());
         thirdPartyCategory.addPreference(getFrescoPreference());
         thirdPartyCategory.addPreference(getJsoupPreference());
+        thirdPartyCategory.addPreference(getMDIPreference());
         thirdPartyCategory.addPreference(getRetrofitPreference());
 
         final PreferenceCategory licenseCategory = new PreferenceCategory(context);
@@ -151,6 +152,22 @@ public class AboutFragment extends BasePreferencesFragment {
         preference.setOnPreferenceClickListener(p -> {
             final Intent intent = new Intent(Intent.ACTION_VIEW);
             intent.setData(Uri.parse("https://exoplayer.dev/"));
+            startActivity(intent);
+            return true;
+        });
+        return preference;
+    }
+
+    private Preference getMDIPreference() {
+        final Context context = getContext();
+        if (context == null) return null;
+        final Preference preference = new Preference(context);
+        preference.setTitle("Material Design Icons");
+        preference.setSummary("Copyright (C) 2014 Austin Andrews & Google LLC. Apache Version 2.0.");
+        preference.setIconSpaceReserved(false);
+        preference.setOnPreferenceClickListener(p -> {
+            final Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse("https://materialdesignicons.com/"));
             startActivity(intent);
             return true;
         });

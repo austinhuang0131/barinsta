@@ -18,7 +18,7 @@
             android:id="@+id/media_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            tools:background="@color/semi_transparent_black" />
+            tools:background="@color/black_a50" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="24dp"

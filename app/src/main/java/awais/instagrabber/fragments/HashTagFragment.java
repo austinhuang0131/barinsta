@@ -1,7 +1,7 @@
 package awais.instagrabber.fragments;
 
 import android.content.Context;
-import android.content.res.ColorStateList;
+import android.content.DialogInterface;
 import android.graphics.Typeface;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -22,16 +22,19 @@ import androidx.activity.OnBackPressedDispatcher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-import androidx.core.content.ContextCompat;
-import androidx.core.view.ViewCompat;
+import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 
 import awais.instagrabber.R;
@@ -39,7 +42,6 @@ import awais.instagrabber.activities.MainActivity;
 import awais.instagrabber.adapters.PostsAdapter;
 import awais.instagrabber.asyncs.HashtagFetcher;
 import awais.instagrabber.asyncs.PostsFetcher;
-import awais.instagrabber.asyncs.i.iStoryStatusFetcher;
 import awais.instagrabber.customviews.PrimaryActionModeCallback;
 import awais.instagrabber.customviews.helpers.GridAutofitLayoutManager;
 import awais.instagrabber.customviews.helpers.GridSpacingItemDecoration;
@@ -51,35 +53,42 @@ import awais.instagrabber.models.HashtagModel;
 import awais.instagrabber.models.PostModel;
 import awais.instagrabber.models.StoryModel;
 import awais.instagrabber.models.enums.DownloadMethod;
+import awais.instagrabber.models.enums.FavoriteType;
 import awais.instagrabber.models.enums.PostItemType;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
+import awais.instagrabber.utils.DataBox;
 import awais.instagrabber.utils.DownloadUtils;
 import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
 import awais.instagrabber.viewmodels.PostsViewModel;
+import awais.instagrabber.webservices.ServiceCallback;
+import awais.instagrabber.webservices.StoriesService;
+import awais.instagrabber.webservices.TagsService;
 import awaisomereport.LogCollector;
 
 import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
-public class HashTagFragment extends Fragment {
+public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private static final String TAG = "HashTagFragment";
 
     private MainActivity fragmentActivity;
     private FragmentHashtagBinding binding;
     private NestedCoordinatorLayout root;
-    private boolean shouldRefresh = true;
+    private boolean shouldRefresh = true, hasStories = false;
     private String hashtag;
     private HashtagModel hashtagModel;
     private PostsViewModel postsViewModel;
     private PostsAdapter postsAdapter;
     private ActionMode actionMode;
+    private StoriesService storiesService;
     private boolean hasNextPage;
     private String endCursor;
     private AsyncTask<?, ?, ?> currentlyExecuting;
     private boolean isLoggedIn;
-    private StoryModel[] storyModels;
+    private TagsService tagsService;
+    private boolean isPullToRefresh;
 
     private final OnBackPressedCallback onBackPressedCallback = new OnBackPressedCallback(false) {
         @Override
@@ -116,19 +125,27 @@ public class HashTagFragment extends Fragment {
                     return false;
                 }
             });
-    private final FetchListener<PostModel[]> postsFetchListener = new FetchListener<PostModel[]>() {
+    private final FetchListener<List<PostModel>> postsFetchListener = new FetchListener<List<PostModel>>() {
         @Override
-        public void onResult(final PostModel[] result) {
+        public void onResult(final List<PostModel> result) {
             binding.swipeRefreshLayout.setRefreshing(false);
             if (result == null) return;
             binding.mainPosts.post(() -> binding.mainPosts.setVisibility(View.VISIBLE));
             final List<PostModel> postModels = postsViewModel.getList().getValue();
-            final List<PostModel> finalList = postModels == null || postModels.isEmpty() ? new ArrayList<>() : new ArrayList<>(postModels);
-            finalList.addAll(Arrays.asList(result));
+            List<PostModel> finalList = postModels == null || postModels.isEmpty()
+                                        ? new ArrayList<>()
+                                        : new ArrayList<>(postModels);
+            if (isPullToRefresh) {
+                finalList = result;
+                isPullToRefresh = false;
+            } else {
+                finalList.addAll(result);
+            }
+            finalList.addAll(result);
             postsViewModel.getList().postValue(finalList);
             PostModel model = null;
-            if (result.length != 0) {
-                model = result[result.length - 1];
+            if (!result.isEmpty()) {
+                model = result.get(result.size() - 1);
             }
             if (model == null) return;
             endCursor = model.getEndCursor();
@@ -141,6 +158,8 @@ public class HashTagFragment extends Fragment {
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         fragmentActivity = (MainActivity) requireActivity();
+        tagsService = TagsService.getInstance();
+        storiesService = StoriesService.getInstance();
     }
 
     @Nullable
@@ -158,8 +177,22 @@ public class HashTagFragment extends Fragment {
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
         if (!shouldRefresh) return;
+        binding.swipeRefreshLayout.setOnRefreshListener(this);
         init();
         shouldRefresh = false;
+    }
+
+    @Override
+    public void onRefresh() {
+        isPullToRefresh = true;
+        endCursor = null;
+        fetchHashtagModel();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        setTitle();
     }
 
     @Override
@@ -257,7 +290,6 @@ public class HashTagFragment extends Fragment {
 
     private void fetchPosts() {
         stopCurrentExecutor();
-        binding.btnFollowTag.setVisibility(View.VISIBLE);
         binding.swipeRefreshLayout.setRefreshing(true);
         if (TextUtils.isEmpty(hashtag)) return;
         currentlyExecuting = new PostsFetcher(hashtag.substring(1), PostItemType.HASHTAG, endCursor, postsFetchListener)
@@ -265,34 +297,137 @@ public class HashTagFragment extends Fragment {
         final Context context = getContext();
         if (context == null) return;
         if (isLoggedIn) {
-            new iStoryStatusFetcher(hashtagModel.getName(), null, false, true, false, false, stories -> {
-                storyModels = stories;
-                if (stories != null && stories.length > 0) {
-                    binding.mainHashtagImage.setStoriesBorder();
-                }
-            }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            storiesService.getUserStory(hashtagModel.getName(),
+                    null,
+                    false,
+                    true,
+                    false,
+                    new ServiceCallback<List<StoryModel>>() {
+                        @Override
+                        public void onSuccess(final List<StoryModel> storyModels) {
+                            if (storyModels != null && !storyModels.isEmpty()) {
+                                binding.mainHashtagImage.setStoriesBorder();
+                                hasStories = true;
+                            }
+                        }
 
+                        @Override
+                        public void onFailure(final Throwable t) {
+                            Log.e(TAG, "Error", t);
+                        }
+                    });
+            binding.btnFollowTag.setVisibility(View.VISIBLE);
             binding.btnFollowTag.setText(hashtagModel.getFollowing() ? R.string.unfollow : R.string.follow);
-            ViewCompat.setBackgroundTintList(binding.btnFollowTag, ColorStateList.valueOf(
-                    ContextCompat.getColor(context, hashtagModel.getFollowing()
-                                                    ? R.color.btn_purple_background
-                                                    : R.color.btn_pink_background)));
+            binding.btnFollowTag.setChipIconResource(hashtagModel.getFollowing()
+                                                     ? R.drawable.ic_outline_person_add_disabled_24
+                                                     : R.drawable.ic_outline_person_add_24);
+            binding.btnFollowTag.setOnClickListener(v -> {
+                final String cookie = settingsHelper.getString(Constants.COOKIE);
+                final String csrfToken = CookieUtils.getCsrfTokenFromCookie(cookie);
+                binding.btnFollowTag.setClickable(false);
+                if (!hashtagModel.getFollowing()) {
+                    tagsService.follow(hashtag.substring(1), csrfToken, new ServiceCallback<Boolean>() {
+                        @Override
+                        public void onSuccess(final Boolean result) {
+                            binding.btnFollowTag.setClickable(true);
+                            if (!result) {
+                                Log.e(TAG, "onSuccess: result is false");
+                                return;
+                            }
+                            onRefresh();
+                        }
+
+                        @Override
+                        public void onFailure(@NonNull final Throwable t) {
+                            binding.btnFollowTag.setClickable(true);
+                            Log.e(TAG, "onFailure: ", t);
+                            final String message = t.getMessage();
+                            Snackbar.make(root,
+                                          message != null ? message
+                                                          : getString(R.string.downloader_unknown_error),
+                                          BaseTransientBottomBar.LENGTH_LONG)
+                                    .show();
+                        }
+                    });
+                    return;
+                }
+                tagsService.unfollow(hashtag.substring(1), csrfToken, new ServiceCallback<Boolean>() {
+                    @Override
+                    public void onSuccess(final Boolean result) {
+                        binding.btnFollowTag.setClickable(true);
+                        if (!result) {
+                            Log.e(TAG, "onSuccess: result is false");
+                            return;
+                        }
+                        onRefresh();
+                    }
+
+                    @Override
+                    public void onFailure(@NonNull final Throwable t) {
+                        binding.btnFollowTag.setClickable(true);
+                        Log.e(TAG, "onFailure: ", t);
+                        final String message = t.getMessage();
+                        Snackbar.make(root,
+                                      message != null ? message
+                                                      : getString(R.string.downloader_unknown_error),
+                                      BaseTransientBottomBar.LENGTH_LONG)
+                                .show();
+                    }
+                });
+            });
         } else {
-            binding.btnFollowTag.setText(Utils.dataBox.getFavorite(hashtag) != null
-                                         ? R.string.unfavorite_short
-                                         : R.string.favorite_short);
-            ViewCompat.setBackgroundTintList(binding.btnFollowTag, ColorStateList.valueOf(
-                    ContextCompat.getColor(context, Utils.dataBox.getFavorite(hashtag) != null
-                                                    ? R.color.btn_purple_background
-                                                    : R.color.btn_pink_background)));
+            binding.btnFollowTag.setVisibility(View.GONE);
         }
+        final DataBox.FavoriteModel favorite = Utils.dataBox.getFavorite(hashtag.substring(1), FavoriteType.HASHTAG);
+        final boolean isFav = favorite != null;
+        binding.favChip.setVisibility(View.VISIBLE);
+        binding.favChip.setChipIconResource(isFav ? R.drawable.ic_star_check_24
+                                                  : R.drawable.ic_outline_star_plus_24);
+        binding.favChip.setText(isFav ? R.string.favorite_short : R.string.add_to_favorites);
+        binding.favChip.setOnClickListener(v -> {
+            final DataBox.FavoriteModel fav = Utils.dataBox.getFavorite(hashtag.substring(1), FavoriteType.HASHTAG);
+            final boolean isFavorite = fav != null;
+            final String message;
+            if (isFavorite) {
+                Utils.dataBox.deleteFavorite(hashtag.substring(1), FavoriteType.HASHTAG);
+                binding.favChip.setText(R.string.add_to_favorites);
+                binding.favChip.setChipIconResource(R.drawable.ic_outline_star_plus_24);
+                message = getString(R.string.removed_from_favs);
+            } else {
+                Utils.dataBox.addOrUpdateFavorite(new DataBox.FavoriteModel(
+                        -1,
+                        hashtag.substring(1),
+                        FavoriteType.HASHTAG,
+                        hashtagModel.getName(),
+                        null,
+                        new Date()
+                ));
+                binding.favChip.setText(R.string.favorite_short);
+                binding.favChip.setChipIconResource(R.drawable.ic_star_check_24);
+                message = getString(R.string.added_to_favs);
+            }
+            final Snackbar snackbar = Snackbar.make(root, message, BaseTransientBottomBar.LENGTH_LONG);
+            snackbar.setAction(R.string.ok, v1 -> snackbar.dismiss())
+                    .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE)
+                    .setAnchorView(fragmentActivity.getBottomNavView())
+                    .show();
+        });
         binding.mainHashtagImage.setImageURI(hashtagModel.getSdProfilePic());
         final String postCount = String.valueOf(hashtagModel.getPostCount());
-        final SpannableStringBuilder span = new SpannableStringBuilder(getString(R.string.main_posts_count, postCount));
+        final SpannableStringBuilder span = new SpannableStringBuilder(getString(R.string.main_posts_count_inline, postCount));
         span.setSpan(new RelativeSizeSpan(1.2f), 0, postCount.length(), 0);
         span.setSpan(new StyleSpan(Typeface.BOLD), 0, postCount.length(), 0);
         binding.mainTagPostCount.setText(span);
         binding.mainTagPostCount.setVisibility(View.VISIBLE);
+        binding.mainHashtagImage.setOnClickListener(v -> {
+            if (hasStories) {
+                // show stories
+                final NavDirections action = HashTagFragmentDirections
+                        .actionHashtagFragmentToStoryViewerFragment(-1, null, true, false, hashtagModel.getName(), hashtagModel.getName());
+                NavHostFragment.findNavController(this).navigate(action);
+                return;
+            }
+        });
     }
 
     public void stopCurrentExecutor() {
@@ -312,9 +447,7 @@ public class HashTagFragment extends Fragment {
         if (actionBar != null) {
             Log.d(TAG, "setting title: " + hashtag);
             final Handler handler = new Handler();
-            handler.postDelayed(() -> {
-                actionBar.setTitle(hashtag);
-            }, 200);
+            handler.postDelayed(() -> actionBar.setTitle(hashtag), 200);
         }
     }
 

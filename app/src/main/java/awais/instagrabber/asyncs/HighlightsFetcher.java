@@ -19,25 +19,23 @@ import awais.instagrabber.utils.NetworkUtils;
 
 public final class HighlightsFetcher extends AsyncTask<Void, Void, List<HighlightModel>> {
     private final String id;
-    private final boolean storiesig;
     private final FetchListener<List<HighlightModel>> fetchListener;
 
-    public HighlightsFetcher(final String id, final boolean storiesig, final FetchListener<List<HighlightModel>> fetchListener) {
+    public HighlightsFetcher(final String id, final FetchListener<List<HighlightModel>> fetchListener) {
         this.id = id;
-        this.storiesig = storiesig;
         this.fetchListener = fetchListener;
     }
 
     @Override
     protected List<HighlightModel> doInBackground(final Void... voids) {
         List<HighlightModel> result = null;
-        String url = "https://" + (storiesig ? "storiesig" : "i.instagram") + ".com/api/v1/highlights/" + id + "/highlights_tray/";
+        String url = "https://i.instagram.com/api/v1/highlights/" + id + "/highlights_tray/";
 
         try {
             HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
             conn.setInstanceFollowRedirects(false);
             conn.setUseCaches(false);
-            conn.setRequestProperty("User-Agent", storiesig ? Constants.A_USER_AGENT : Constants.I_USER_AGENT);
+            conn.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
             conn.connect();
 
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {

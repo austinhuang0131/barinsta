@@ -42,7 +42,6 @@ public final class SuggestionsFetcher extends AsyncTask<String, String, Suggesti
             conn.connect();
 
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
-                final String defaultHashTagPic = "https://www.instagram.com/static/images/hashtag/search-hashtag-default-avatar.png/1d8417c9a4f5.png";
                 final JSONObject jsonObject = new JSONObject(NetworkUtils.readFromConnection(conn));
                 conn.disconnect();
 
@@ -63,7 +62,7 @@ public final class SuggestionsFetcher extends AsyncTask<String, String, Suggesti
                     suggestionModels.add(new SuggestionModel(false,
                             hashtag.getString(Constants.EXTRAS_NAME),
                             null,
-                            hashtag.optString("profile_pic_url", defaultHashTagPic),
+                            hashtag.optString("profile_pic_url", Constants.DEFAULT_HASH_TAG_PIC),
                             SuggestionType.TYPE_HASHTAG,
                             hashtagsArrayJSONObject.optInt("position", suggestionModels.size() - 1)));
                 }

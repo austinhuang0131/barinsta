@@ -27,7 +27,6 @@ import androidx.navigation.fragment.NavHostFragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -58,7 +57,6 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
     private static AsyncTask<?, ?, ?> currentlyExecuting;
     private PostsAdapter postsAdapter;
     private boolean hasNextPage;
-    private boolean autoloadPosts;
     private FragmentSavedBinding binding;
     private String username;
     private String endCursor;
@@ -107,17 +105,16 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
                     return false;
                 }
             });
-    private final FetchListener<PostModel[]> postsFetchListener = new FetchListener<PostModel[]>() {
+    private final FetchListener<List<PostModel>> postsFetchListener = new FetchListener<List<PostModel>>() {
         @Override
-        public void onResult(final PostModel[] result) {
+        public void onResult(final List<PostModel> result) {
             final List<PostModel> current = postsViewModel.getList().getValue();
-            if (result != null && result.length > 0) {
-                final List<PostModel> resultList = Arrays.asList(result);
+            if (result != null && !result.isEmpty()) {
                 if (current == null) {
-                    postsViewModel.getList().postValue(resultList);
+                    postsViewModel.getList().postValue(result);
                 } else {
                     final List<PostModel> currentCopy = new ArrayList<>(current);
-                    currentCopy.addAll(resultList);
+                    currentCopy.addAll(result);
                     postsViewModel.getList().postValue(currentCopy);
                 }
                 binding.mainPosts.post(() -> {
@@ -125,11 +122,11 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
                     binding.mainPosts.setVisibility(View.VISIBLE);
                 });
 
-                final PostModel model = result.length > 0 ? result[result.length - 1] : null;
+                final PostModel model = !result.isEmpty() ? result.get(result.size() - 1) : null;
                 if (model != null) {
                     endCursor = model.getEndCursor();
                     hasNextPage = model.hasNextPage();
-                    if (autoloadPosts && hasNextPage) {
+                    if (hasNextPage) {
                         fetchPosts();
                     } else {
                         binding.swipeRefreshLayout.setRefreshing(false);
@@ -246,7 +243,7 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
         binding.swipeRefreshLayout.setRefreshing(true);
 
         lazyLoader = new RecyclerLazyLoader(layoutManager, (page, totalItemsCount) -> {
-            if (!autoloadPosts && hasNextPage) {
+            if (hasNextPage) {
                 binding.swipeRefreshLayout.setRefreshing(true);
                 fetchPosts();
                 endCursor = null;
@@ -258,7 +255,7 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
 
     private void fetchPosts() {
         stopCurrentExecutor();
-        final AsyncTask<Void, Void, PostModel[]> asyncTask;
+        final AsyncTask<Void, Void, List<PostModel>> asyncTask;
         switch (type) {
             case LIKED:
                 asyncTask = new iLikedFetcher(endCursor, postsFetchListener);

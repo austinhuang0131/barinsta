@@ -4,6 +4,7 @@
   ],
   "imageSize": 100,
   "commit": false,
+  "badgeTemplate": "[![All Contributors](https://img.shields.io/badge/all_contributors-<%= contributors.length %>-orange.svg)](#contributors)",
   "contributors": [
     {
       "login": "austinhuang0131",
@@ -79,8 +80,7 @@
         "blog",
         "bug",
         "ideas",
-        "question",
-        "userTesting"
+        "question"
       ]
     },
     {
@@ -89,8 +89,18 @@
       "avatar_url": "https://avatars0.githubusercontent.com/u/53869451",
       "profile": "https://airikr.me/",
       "contributions": [
-        "question",
-        "ideas"
+        "ideas",
+        "question"
+      ]
+    },
+    {
+      "login": "Akrai",
+      "name": "Akrai",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5624597?v=4",
+      "profile": "https://github.com/Akrai",
+      "contributions": [
+        "ideas",
+        "translation"
       ]
     },
     {
@@ -107,6 +117,15 @@
       "name": "farzadx",
       "avatar_url": "https://avatars2.githubusercontent.com/u/70059397?v=4",
       "profile": "https://github.com/farzadx",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "faydin",
+      "name": "Fatih Aydın",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/22706676?v=4",
+      "profile": "https://github.com/faydin",
       "contributions": [
         "translation"
       ]
@@ -167,10 +186,17 @@
     }
   ],
   "contributorsPerLine": 6,
-  "projectName": "instagrabber",
+  "projectName": "barinsta",
   "projectOwner": "austinhuang0131",
   "repoType": "github",
   "repoHost": "https://github.com",
   "skipCi": true,
+  "types": {
+    "translation": {
+      "symbol": "🌍",
+      "description": "Translation",
+      "link": "https://crowdin.com/project/instagrabber"
+    }
+  },
   "commitConvention": "none"
 }

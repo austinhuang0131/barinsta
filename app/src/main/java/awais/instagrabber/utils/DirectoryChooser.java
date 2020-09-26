@@ -3,20 +3,26 @@ package awais.instagrabber.utils;
 import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.FileObserver;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.snackbar.BaseTransientBottomBar;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -24,22 +30,27 @@ import java.util.Collections;
 import java.util.List;
 
 import awais.instagrabber.R;
-import awais.instagrabber.adapters.SimpleAdapter;
+import awais.instagrabber.adapters.DirectoryFilesAdapter;
+import awais.instagrabber.databinding.LayoutDirectoryChooserBinding;
+import awais.instagrabber.viewmodels.FileListViewModel;
 
 public final class DirectoryChooser extends DialogFragment {
+    private static final String TAG = "DirectoryChooser";
+
     public static final String KEY_CURRENT_DIRECTORY = "CURRENT_DIRECTORY";
     private static final File sdcardPathFile = Environment.getExternalStorageDirectory();
     private static final String sdcardPath = sdcardPathFile.getPath();
-    private final List<String> fileNames = new ArrayList<>();
+
     private Context context;
-    private View btnConfirm, btnNavUp, btnCancel;
+    private LayoutDirectoryChooserBinding binding;
+    private FileObserver fileObserver;
     private File selectedDir;
     private String initialDirectory;
-    private TextView tvSelectedFolder;
-    private FileObserver fileObserver;
-    private SimpleAdapter<String> listDirectoriesAdapter;
     private OnFragmentInteractionListener interactionListener;
-    private boolean showZaAiConfigFiles = false;
+    private boolean showBackupFiles = false;
+    private View.OnClickListener navigationOnClickListener;
+    private FileListViewModel fileListViewModel;
+    private OnCancelListener onCancelListener;
 
     public DirectoryChooser() {
         super();
@@ -51,8 +62,8 @@ public final class DirectoryChooser extends DialogFragment {
         return this;
     }
 
-    public DirectoryChooser setShowZaAiConfigFiles(final boolean showZaAiConfigFiles) {
-        this.showZaAiConfigFiles = showZaAiConfigFiles;
+    public DirectoryChooser setShowBackupFiles(final boolean showBackupFiles) {
+        this.showBackupFiles = showBackupFiles;
         return this;
     }
 
@@ -74,60 +85,71 @@ public final class DirectoryChooser extends DialogFragment {
     @NonNull
     @Override
     public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
+        binding = LayoutDirectoryChooserBinding.inflate(inflater, container, false);
+        init(container);
+        return binding.getRoot();
+    }
+
+    private void init(final ViewGroup container) {
         Context context = this.context;
         if (context == null) context = getContext();
         if (context == null) context = getActivity();
-        if (context == null) context = inflater.getContext();
-
-        final View view = inflater.inflate(R.layout.layout_directory_chooser, container, false);
-
-        btnNavUp = view.findViewById(R.id.btnNavUp);
-        btnCancel = view.findViewById(R.id.btnCancel);
-        btnConfirm = view.findViewById(R.id.btnConfirm);
-        tvSelectedFolder = view.findViewById(R.id.txtvSelectedFolder);
-
+        if (context == null) return;
+        if (ContextCompat.checkSelfPermission(context, DownloadUtils.PERMS[0]) != PackageManager.PERMISSION_GRANTED) {
+            final String text = "Storage permissions denied!";
+            if (container == null) {
+                Toast.makeText(context, text, Toast.LENGTH_LONG).show();
+            } else {
+                Snackbar.make(container, text, BaseTransientBottomBar.LENGTH_LONG).show();
+            }
+            dismiss();
+        }
         final View.OnClickListener clickListener = v -> {
-            final Object tag;
-            if (v instanceof TextView && (tag = v.getTag()) instanceof CharSequence) {
-                final File file = new File(selectedDir, tag.toString());
-                if (file.isDirectory())
-                    changeDirectory(file);
-                else if (showZaAiConfigFiles && file.isFile()) {
-                    if (interactionListener != null && file.canRead())
-                        interactionListener.onSelectDirectory(file.getAbsolutePath());
-                    dismiss();
-                }
-
-            } else if (v == btnNavUp) {
-                final File parent;
-                if (selectedDir != null && (parent = selectedDir.getParentFile()) != null)
-                    changeDirectory(parent);
-
-            } else if (v == btnConfirm) {
+            if (v == binding.btnConfirm) {
                 if (interactionListener != null && isValidFile(selectedDir))
-                    interactionListener.onSelectDirectory(selectedDir.getAbsolutePath());
+                    interactionListener.onSelectDirectory(selectedDir);
                 dismiss();
-            } else if (v == btnCancel) {
+            } else if (v == binding.btnCancel) {
+                if (onCancelListener != null) {
+                    onCancelListener.onCancel();
+                }
                 dismiss();
             }
         };
 
-        btnNavUp.setOnClickListener(clickListener);
-        btnCancel.setOnClickListener(clickListener);
-        btnConfirm.setOnClickListener(clickListener);
-
-        listDirectoriesAdapter = new SimpleAdapter<>(context, fileNames, clickListener);
-
-        final RecyclerView directoriesList = view.findViewById(R.id.directoryList);
-        directoriesList.setLayoutManager(new LinearLayoutManager(context));
-        directoriesList.setAdapter(listDirectoriesAdapter);
-
+        navigationOnClickListener = v -> {
+            final File parent;
+            if (selectedDir != null && (parent = selectedDir.getParentFile()) != null) {
+                changeDirectory(parent);
+            }
+        };
+        binding.toolbar.setNavigationOnClickListener(navigationOnClickListener);
+        binding.toolbar.setSubtitle(showBackupFiles ? R.string.select_backup_file : R.string.select_folder);
+        binding.btnCancel.setOnClickListener(clickListener);
+        // no need to show confirm for file picker
+        binding.btnConfirm.setVisibility(showBackupFiles ? View.GONE : View.VISIBLE);
+        if (!showBackupFiles) {
+            binding.btnConfirm.setOnClickListener(clickListener);
+        }
+        fileListViewModel = new ViewModelProvider(this).get(FileListViewModel.class);
+        final DirectoryFilesAdapter listDirectoriesAdapter = new DirectoryFilesAdapter(file -> {
+            if (file.isDirectory()) {
+                changeDirectory(file);
+                return;
+            }
+            if (showBackupFiles && file.isFile()) {
+                if (interactionListener != null && file.canRead()) {
+                    interactionListener.onSelectDirectory(file);
+                }
+                dismiss();
+            }
+        });
+        fileListViewModel.getList().observe(this, listDirectoriesAdapter::submitList);
+        binding.directoryList.setLayoutManager(new LinearLayoutManager(context));
+        binding.directoryList.setAdapter(listDirectoriesAdapter);
         final File initDir = new File(initialDirectory);
         final File initialDir = !TextUtils.isEmpty(initialDirectory) && isValidFile(initDir) ? initDir : Environment.getExternalStorageDirectory();
-
         changeDirectory(initialDir);
-
-        return view;
     }
 
     @Override
@@ -153,10 +175,14 @@ public final class DirectoryChooser extends DialogFragment {
             public void onBackPressed() {
                 if (selectedDir != null) {
                     final String absolutePath = selectedDir.getAbsolutePath();
-                    if (absolutePath.equals(sdcardPath) || absolutePath.equals(sdcardPathFile.getAbsolutePath()))
+                    if (absolutePath.equals(sdcardPath) || absolutePath.equals(sdcardPathFile.getAbsolutePath())) {
+                        if (onCancelListener != null) {
+                            onCancelListener.onCancel();
+                        }
                         dismiss();
-                    else
+                    } else {
                         changeDirectory(selectedDir.getParentFile());
+                    }
                 }
             }
         };
@@ -189,21 +215,28 @@ public final class DirectoryChooser extends DialogFragment {
     private void changeDirectory(final File dir) {
         if (dir != null && dir.isDirectory()) {
             final String path = dir.getAbsolutePath();
-
+            binding.toolbar.setTitle(path);
             final File[] contents = dir.listFiles();
             if (contents != null) {
-                fileNames.clear();
-
+                final List<File> fileNames = new ArrayList<>();
                 for (final File f : contents) {
                     final String name = f.getName();
-                    if (f.isDirectory() || showZaAiConfigFiles && f.isFile() && name.toLowerCase().endsWith(".zaai"))
-                        fileNames.add(name);
+                    final String nameLowerCase = name.toLowerCase();
+                    final boolean isBackupFile = nameLowerCase.endsWith(".zaai") || nameLowerCase.endsWith(".backup");
+                    if (f.isDirectory() || (showBackupFiles && f.isFile() && isBackupFile))
+                        fileNames.add(f);
                 }
-
-                Collections.sort(fileNames);
+                Collections.sort(fileNames, (o1, o2) -> {
+                    if ((o1.isDirectory() && o2.isDirectory())
+                            || (o1.isFile() && o2.isFile())) {
+                        return o1.getName().compareToIgnoreCase(o2.getName());
+                    }
+                    if (o1.isDirectory()) return -1;
+                    if (o2.isDirectory()) return 1;
+                    return 0;
+                });
+                fileListViewModel.getList().postValue(fileNames);
                 selectedDir = dir;
-                tvSelectedFolder.setText(path);
-                listDirectoriesAdapter.notifyDataSetChanged();
                 fileObserver = new FileObserver(path, FileObserver.CREATE | FileObserver.DELETE | FileObserver.MOVED_FROM | FileObserver.MOVED_TO) {
                     private final Runnable currentDirRefresher = () -> changeDirectory(selectedDir);
 
@@ -222,15 +255,15 @@ public final class DirectoryChooser extends DialogFragment {
         if (selectedDir != null) {
             final String path = selectedDir.getAbsolutePath();
             toggleUpButton(!path.equals(sdcardPathFile.getAbsolutePath()) && selectedDir != sdcardPathFile);
-            btnConfirm.setEnabled(isValidFile(selectedDir));
+            binding.btnConfirm.setEnabled(isValidFile(selectedDir));
         }
     }
 
     private void toggleUpButton(final boolean enable) {
-        if (btnNavUp != null) {
-            btnNavUp.setEnabled(enable);
-            btnNavUp.setAlpha(enable ? 1f : 0.617f);
-        }
+        binding.toolbar.setNavigationOnClickListener(enable ? navigationOnClickListener : null);
+        final Drawable navigationIcon = binding.toolbar.getNavigationIcon();
+        if (navigationIcon == null) return;
+        navigationIcon.setAlpha(enable ? 255 : (int) (255 * 0.617));
     }
 
     private boolean isValidFile(final File file) {
@@ -242,7 +275,17 @@ public final class DirectoryChooser extends DialogFragment {
         return this;
     }
 
+    public void setOnCancelListener(final OnCancelListener onCancelListener) {
+        if (onCancelListener != null) {
+            this.onCancelListener = onCancelListener;
+        }
+    }
+
+    public interface OnCancelListener {
+        void onCancel();
+    }
+
     public interface OnFragmentInteractionListener {
-        void onSelectDirectory(final String path);
+        void onSelectDirectory(final File file);
     }
 }

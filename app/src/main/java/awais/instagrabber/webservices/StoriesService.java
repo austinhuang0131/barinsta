@@ -98,14 +98,12 @@ public class StoriesService extends BaseService {
 
     public void getUserStory(final String id,
                              final String username,
-                             final boolean storiesig,
                              final boolean isLoc,
                              final boolean isHashtag,
                              final boolean highlight,
                              final ServiceCallback<List<StoryModel>> callback) {
-        final String url = buildUrl(id, storiesig, isLoc, isHashtag, highlight);
-        final String userAgent = storiesig ? Constants.A_USER_AGENT : Constants.I_USER_AGENT;
-        final Call<String> userStoryCall = repository.getUserStory(userAgent, url);
+        final String url = buildUrl(id, isLoc, isHashtag, highlight);
+        final Call<String> userStoryCall = repository.getUserStory(Constants.I_USER_AGENT, url);
         userStoryCall.enqueue(new Callback<String>() {
             @Override
             public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {
@@ -119,7 +117,7 @@ public class StoriesService extends BaseService {
                     }
                     data = new JSONObject(body);
 
-                    if (!storiesig && !highlight)
+                    if (!highlight)
                         data = data.optJSONObject((isLoc || isHashtag) ? "story" : "reel");
                     else if (highlight) data = data.getJSONObject("reels").optJSONObject(id);
 
@@ -155,6 +153,7 @@ public class StoriesService extends BaseService {
                                 model.setTappableShortCode(data.getJSONArray("story_feed_media").getJSONObject(0).optString("media_id"));
                             }
 
+                            // TODO: this may not be limited to spotify
                             if (!data.isNull("story_app_attribution"))
                                 model.setSpotify(data.getJSONObject("story_app_attribution").optString("content_url").split("\\?")[0]);
 
@@ -175,7 +174,7 @@ public class StoriesService extends BaseService {
                                 ));
                             }
                             if (data.has("story_questions")) {
-                                JSONObject tappableObject = data.getJSONArray("story_questions").getJSONObject(0).optJSONObject("question_sticker");
+                                final JSONObject tappableObject = data.getJSONArray("story_questions").getJSONObject(0).optJSONObject("question_sticker");
                                 if (tappableObject != null && !tappableObject.getString("question_type").equals("music"))
                                     model.setQuestion(new QuestionModel(
                                             String.valueOf(tappableObject.getLong("question_id")),
@@ -231,6 +230,9 @@ public class StoriesService extends BaseService {
                         }
                         callback.onSuccess(models);
                     }
+                    else {
+                        callback.onSuccess(null);
+                    }
                 } catch (JSONException e) {
                     Log.e(TAG, "Error parsing string");
                 }
@@ -243,34 +245,25 @@ public class StoriesService extends BaseService {
         });
     }
 
-    private String buildUrl(final String id, final boolean storiesig, final boolean isLoc, final boolean isHashtag, final boolean highlight) {
+    private String buildUrl(final String id, final boolean isLoc, final boolean isHashtag, final boolean highlight) {
         final String userId = id.replace(":", "%3A");
         final StringBuilder builder = new StringBuilder();
-        builder.append("https://");
-        if (storiesig) {
-            builder.append("storiesig");
-        } else {
-            builder.append("i.instagram");
-        }
-        builder.append(".com/api/v1/");
+        builder.append("https://i.instagram.com/api/v1/");
         if (isLoc) {
             builder.append("locations/");
         }
-        if (isHashtag) {
+        else if (isHashtag) {
             builder.append("tags/");
         }
-        if (highlight) {
+        else if (highlight) {
             builder.append("feed/reels_media?user_ids=");
-        } else {
+        }
+        else {
             builder.append("feed/user/");
         }
         builder.append(userId);
         if (!highlight) {
-            if (storiesig) {
-                builder.append("/reel_media/");
-            } else {
-                builder.append("/story/");
-            }
+            builder.append("/story/");
         }
         return builder.toString();
     }

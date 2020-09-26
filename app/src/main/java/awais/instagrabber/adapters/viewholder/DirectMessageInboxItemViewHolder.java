@@ -73,7 +73,14 @@ public final class DirectMessageInboxItemViewHolder extends RecyclerView.ViewHol
             }
         }
         binding.tvUsername.setText(model.getThreadTitle());
-        final DirectItemModel lastItemModel = itemModels[itemModels.length - 1];
+        final int length = itemModels.length;
+        DirectItemModel lastItemModel = null;
+        if (length != 0) {
+            lastItemModel = itemModels[length - 1];
+        }
+        if (lastItemModel == null) {
+            return;
+        }
         final DirectItemType itemType = lastItemModel.getItemType();
         // binding.notTextType.setVisibility(itemType != DirectItemType.TEXT ? View.VISIBLE : View.GONE);
         final Context context = itemView.getContext();

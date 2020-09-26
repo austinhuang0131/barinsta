@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.IBinder;
 import android.text.TextUtils;
 
+import androidx.annotation.NonNull;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
@@ -115,18 +116,24 @@ public class ActivityCheckerService extends Service {
     }
 
     private void showNotification(final String notificationString) {
-        final Intent intent = new Intent(getApplicationContext(), MainActivity.class)
-                .setAction(Constants.ACTION_SHOW_ACTIVITY)
-                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         final Notification notification = new NotificationCompat.Builder(this, Constants.ACTIVITY_CHANNEL_ID)
                 .setCategory(NotificationCompat.CATEGORY_STATUS)
                 .setSmallIcon(R.drawable.ic_notif)
                 .setAutoCancel(true)
-                .setPriority(NotificationCompat.PRIORITY_MIN)
+                .setOnlyAlertOnce(true)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                 .setContentTitle(getString(R.string.action_notif))
                 .setContentText(notificationString)
-                .setContentIntent(PendingIntent.getActivity(getApplicationContext(), 1738, intent, PendingIntent.FLAG_UPDATE_CURRENT))
+                .setContentIntent(getPendingIntent())
                 .build();
         notificationManager.notify(Constants.ACTIVITY_NOTIFICATION_ID, notification);
+    }
+
+    @NonNull
+    private PendingIntent getPendingIntent() {
+        final Intent intent = new Intent(getApplicationContext(), MainActivity.class)
+                .setAction(Constants.ACTION_SHOW_ACTIVITY)
+                .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+        return PendingIntent.getActivity(getApplicationContext(), 1738, intent, PendingIntent.FLAG_UPDATE_CURRENT);
     }
 }

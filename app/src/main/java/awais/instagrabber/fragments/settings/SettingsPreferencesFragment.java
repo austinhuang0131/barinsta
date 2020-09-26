@@ -89,7 +89,6 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
             anonUsersPreferenceCategory.setIconSpaceReserved(false);
             anonUsersPreferenceCategory.setTitle(R.string.anonymous_settings);
             anonUsersPreferenceCategory.addPreference(getUseInstaDpPreference());
-            anonUsersPreferenceCategory.addPreference(getStoryViewerPreference());
         }
 
     }
@@ -180,9 +179,9 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
         if (context == null) return null;
         return new SaveToCustomFolderPreference(context, (resultCallback) -> new DirectoryChooser()
                 .setInitialDirectory(settingsHelper.getString(FOLDER_PATH))
-                .setInteractionListener(path -> {
-                    settingsHelper.putString(FOLDER_PATH, path);
-                    resultCallback.onResult(path);
+                .setInteractionListener(file -> {
+                    settingsHelper.putString(FOLDER_PATH, file.getAbsolutePath());
+                    resultCallback.onResult(file.getAbsolutePath());
                 })
                 .show(getParentFragmentManager(), null));
     }
@@ -250,25 +249,6 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
         preference.setKey(Constants.INSTADP);
         preference.setTitle(R.string.instadp_settings);
         preference.setIconSpaceReserved(false);
-        return preference;
-    }
-
-    private Preference getStoryViewerPreference() {
-        final Context context = getContext();
-        if (context == null) return null;
-        final ListPreference preference = new ListPreference(context);
-        preference.setSummaryProvider(ListPreference.SimpleSummaryProvider.getInstance());
-        final int length = getResources().getStringArray(R.array.anonymous_story_viewer).length;
-        final String[] values = new String[length];
-        for (int i = 0; i < length; i++) {
-            values[i] = String.valueOf(i);
-        }
-        preference.setKey(Constants.STORY_VIEWER);
-        preference.setTitle(R.string.stories_viewer_settings);
-        preference.setDialogTitle(R.string.stories_viewer_settings);
-        preference.setEntries(R.array.anonymous_story_viewer);
-        preference.setIconSpaceReserved(false);
-        preference.setEntryValues(values);
         return preference;
     }
 

@@ -139,11 +139,19 @@ public final class DirectItemModel implements Serializable, Comparable<DirectIte
     public final static class DirectItemAnimatedMediaModel implements Serializable {
         private final boolean isRandom, isSticker;
         private final String id;
-        private final String gifUrl, webpUrl, mp4Url;
+        private final String gifUrl;
+        private final String webpUrl;
+        private final String mp4Url;
         private final int height, width;
 
-        public DirectItemAnimatedMediaModel(final boolean isRandom, final boolean isSticker, final String id, final String gifUrl,
-                                            final String webpUrl, final String mp4Url, final int height, final int width) {
+        public DirectItemAnimatedMediaModel(final boolean isRandom,
+                                            final boolean isSticker,
+                                            final String id,
+                                            final String gifUrl,
+                                            final String webpUrl,
+                                            final String mp4Url,
+                                            final int height,
+                                            final int width) {
             this.isRandom = isRandom;
             this.isSticker = isSticker;
             this.id = id;
@@ -370,11 +378,24 @@ public final class DirectItemModel implements Serializable, Comparable<DirectIte
     public final static class DirectItemMediaModel implements Serializable {
         private final MediaItemType mediaType;
         private final long expiringAt, pk;
-        private final String id, thumbUrl, videoUrl, code;
+        private final String id;
+        private final String thumbUrl;
+        private final String videoUrl;
+        private final String code;
         private final ProfileModel user;
+        private final int height;
+        private final int width;
 
-        public DirectItemMediaModel(final MediaItemType mediaType, final long expiringAt, final long pk, final String id,
-                                    final String thumbUrl, final String videoUrl, final ProfileModel user, final String code) {
+        public DirectItemMediaModel(final MediaItemType mediaType,
+                                    final long expiringAt,
+                                    final long pk,
+                                    final String id,
+                                    final String thumbUrl,
+                                    final String videoUrl,
+                                    final ProfileModel user,
+                                    final String code,
+                                    final int height,
+                                    final int width) {
             this.mediaType = mediaType;
             this.expiringAt = expiringAt;
             this.pk = pk;
@@ -383,6 +404,8 @@ public final class DirectItemModel implements Serializable, Comparable<DirectIte
             this.videoUrl = videoUrl;
             this.user = user;
             this.code = code;
+            this.height = height;
+            this.width = width;
         }
 
         public MediaItemType getMediaType() {
@@ -418,6 +441,14 @@ public final class DirectItemModel implements Serializable, Comparable<DirectIte
             if (mediaType == MediaItemType.MEDIA_TYPE_VIDEO) return videoUrl;
             else return thumbUrl;
 
+        }
+
+        public int getHeight() {
+            return height;
+        }
+
+        public int getWidth() {
+            return width;
         }
     }
 

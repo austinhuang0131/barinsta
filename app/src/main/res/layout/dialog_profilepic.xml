@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/semi_transparent_black">
+    android:background="@color/black_a50">
 
     <awais.instagrabber.customviews.drawee.ZoomableDraweeView
         android:id="@+id/imageViewer"

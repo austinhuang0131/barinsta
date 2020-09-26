@@ -166,10 +166,11 @@ public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemMod
 
         final MediaItemType mediaType = ResponseBodyUtils.getMediaItemType(media.getInt("media_type"));
 
+        final ResponseBodyUtils.ThumbnailDetails thumbnailUrl = ResponseBodyUtils.getThumbnailUrl(media, mediaType);
         final DiscoverItemModel model = new DiscoverItemModel(mediaType,
                                                               media.getString("pk"),
                                                               media.getString("code"),
-                                                              ResponseBodyUtils.getThumbnailUrl(media, mediaType));
+                                                              thumbnailUrl != null ? thumbnailUrl.url : null);
 
         final File downloadDir = new File(Environment.getExternalStorageDirectory(), "Download" +
                 (Utils.settingsHelper.getBoolean(DOWNLOAD_USER_FOLDER) ? ("/" + username) : ""));
@@ -179,9 +180,9 @@ public final class DiscoverFetcher extends AsyncTask<Void, Void, DiscoverItemMod
         if (settingsHelper.getBoolean(FOLDER_SAVE_TO)) {
             final String customPath = settingsHelper.getString(FOLDER_PATH);
             if (!TextUtils.isEmpty(customPath)) customDir = new File(customPath +
-                                                                         (Utils.settingsHelper.getBoolean(DOWNLOAD_USER_FOLDER)
-                                                                          ? "/" + username
-                                                                          : ""));
+                                                                             (Utils.settingsHelper.getBoolean(DOWNLOAD_USER_FOLDER)
+                                                                              ? "/" + username
+                                                                              : ""));
         }
 
         DownloadUtils.checkExistence(downloadDir, customDir, mediaType == MediaItemType.MEDIA_TYPE_SLIDER, model);

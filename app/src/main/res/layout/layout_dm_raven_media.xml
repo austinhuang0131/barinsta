@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="?actionBarSize"
         android:padding="8dp"
-        android:src="@drawable/expired" />
+        app:srcCompat="@drawable/ic_clock_alert_outline_24" />
 
     <FrameLayout
         android:layout_width="match_parent"

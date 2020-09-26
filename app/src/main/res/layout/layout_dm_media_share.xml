@@ -20,8 +20,8 @@
 
         <com.facebook.drawee.view.SimpleDraweeView
             android:id="@+id/ivMediaPreview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:adjustViewBounds="true"
             android:maxHeight="@dimen/dm_media_img_max_height" />
 

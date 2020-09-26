@@ -37,7 +37,9 @@ import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
 public final class DownloadUtils {
     public static final String[] PERMS = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-    public static void batchDownload(@NonNull final Context context, @Nullable String username, final DownloadMethod method,
+    public static void batchDownload(@NonNull final Context context,
+                                     @Nullable String username,
+                                     final DownloadMethod method,
                                      final List<? extends BasePostModel> itemsToDownload) {
         if (Utils.settingsHelper == null) Utils.settingsHelper = new SettingsHelper(context);
 

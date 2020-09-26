@@ -1,4 +1,4 @@
-package awais.instagrabber.asyncs;
+package awais.instagrabber.asyncs.direct_messages;
 
 import android.os.AsyncTask;
 import android.util.Log;
@@ -9,7 +9,6 @@ import java.io.DataOutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import awais.instagrabber.models.StoryModel;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.NetworkUtils;
@@ -17,21 +16,20 @@ import awais.instagrabber.utils.Utils;
 
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
-public class CommentAction extends AsyncTask<String, Void, String> {
+public class CreateThreadAction extends AsyncTask<Void, Void, String> {
     private static final String TAG = "CommentAction";
 
     private final String cookie;
-    private final StoryModel storyModel;
+    private final String userId;
     private final OnTaskCompleteListener onTaskCompleteListener;
 
-    public CommentAction(final String cookie, final StoryModel storyModel, final OnTaskCompleteListener onTaskCompleteListener) {
+    public CreateThreadAction(final String cookie, final String userId, final OnTaskCompleteListener onTaskCompleteListener) {
         this.cookie = cookie;
-        this.storyModel = storyModel;
+        this.userId = userId;
         this.onTaskCompleteListener = onTaskCompleteListener;
     }
 
-    protected String doInBackground(String... rawAction) {
-        final String action = rawAction[0];
+    protected String doInBackground(Void... lmao) {
         final String url = "https://i.instagram.com/api/v1/direct_v2/create_group_thread/";
         HttpURLConnection urlConnection = null;
         try {
@@ -42,7 +40,7 @@ public class CommentAction extends AsyncTask<String, Void, String> {
             final String urlParameters = Utils.sign("{\"_csrftoken\":\"" + cookie.split("csrftoken=")[1].split(";")[0]
                     + "\",\"_uid\":\"" + CookieUtils.getUserIdFromCookie(cookie)
                     + "\",\"__uuid\":\"" + settingsHelper.getString(Constants.DEVICE_UUID)
-                    + "\",\"recipient_users\":\"[" + storyModel.getUserId() // <- string of array of number (not joking)
+                    + "\",\"recipient_users\":\"[" + userId // <- string of array of number (not joking)
                     + "]\"}");
             urlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
             if (urlParameters != null) {
@@ -57,10 +55,8 @@ public class CommentAction extends AsyncTask<String, Void, String> {
             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 return new JSONObject(NetworkUtils.readFromConnection(urlConnection)).getString("thread_id");
             }
-
         } catch (Throwable ex) {
             Log.e(TAG, "reply (CT): " + ex);
-            // Toast.makeText(getApplicationContext(), R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
         } finally {
             if (urlConnection != null) {
                 urlConnection.disconnect();

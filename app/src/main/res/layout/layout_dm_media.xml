@@ -7,9 +7,7 @@
     <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/ivMediaPreview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:maxHeight="@dimen/dm_media_img_max_height" />
+        android:layout_height="wrap_content" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/typeIcon"

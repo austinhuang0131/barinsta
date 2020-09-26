@@ -22,10 +22,10 @@
         android:layout_weight="1"
         android:animateLayoutChanges="true"
         android:background="@null"
+        android:gravity="center"
         android:orientation="vertical"
         android:paddingStart="8dp"
         android:paddingLeft="8dp"
-        android:gravity="center"
         android:paddingEnd="8dp"
         android:paddingRight="8dp"
         android:weightSum="2">
@@ -36,7 +36,6 @@
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-            android:textColor="@color/feed_text_primary_color"
             tools:text="username" />
 
         <awais.instagrabber.customviews.RamboTextView
@@ -46,7 +45,6 @@
             android:layout_below="@+id/title"
             android:gravity="center_vertical"
             android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
-            android:textColor="@color/feed_text_primary_color"
             android:textSize="15sp"
             android:visibility="visible"
             tools:text="location" />

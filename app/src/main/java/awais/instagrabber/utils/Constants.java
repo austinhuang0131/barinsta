@@ -24,7 +24,7 @@ public final class Constants {
     public static final String DM_MARK_AS_SEEN = "dm_mark_as_seen";
     public static final String INSTADP = "instadp";
     // deprecated: public static final String STORIESIG = "storiesig";
-    public static final String STORY_VIEWER = "story_viewer";
+    // deprecated: public static final String STORY_VIEWER = "story_viewer";
     // deprecated: public static final String AMOLED_THEME = "amoled_theme";
     public static final String CHECK_ACTIVITY = "check_activity";
     public static final String CHECK_UPDATES = "check_updates";
@@ -54,9 +54,9 @@ public final class Constants {
     // spoof
     public static final String USER_AGENT = "Mozilla/5.0 (Linux; Android 8.1.0; motorola one Build/OPKS28.63-18-3; wv) " +
             "AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/70.0.3538.80 Mobile Safari/537.36 " +
-            "Instagram 156.0.0.26.109 Android (27/8.1.0; 320dpi; 720x1362; motorola; motorola one; deen_sprout; qcom; pt_BR; 240726452)";
+            "Instagram 160.0.0.25.132 Android (27/8.1.0; 320dpi; 720x1362; motorola; motorola one; deen_sprout; qcom; pt_BR; 246889068)";
     public static final String I_USER_AGENT =
-            "Instagram 156.0.0.26.109 Android (27/8.1.0; 320dpi; 720x1362; motorola; motorola one; deen_sprout; qcom; pt_BR; 240726452)";
+            "Instagram 160.0.0.25.132 Android (27/8.1.0; 320dpi; 720x1362; motorola; motorola one; deen_sprout; qcom; pt_BR; 246889068)";
     public static final String A_USER_AGENT = "https://InstaGrabber.AustinHuang.me / mailto:InstaGrabber@AustinHuang.me";
     // see https://github.com/dilame/instagram-private-api/blob/master/src/core/constants.ts
     public static final String SUPPORTED_CAPABILITIES = "[ { \"name\": \"SUPPORTED_SDK_VERSIONS\", \"value\":" +
@@ -82,4 +82,6 @@ public final class Constants {
     public static final String ACTION_SHOW_ACTIVITY = "show_activity";
     public static final String PREF_DARK_THEME = "dark_theme";
     public static final String PREF_LIGHT_THEME = "light_theme";
+    public static final String DEFAULT_HASH_TAG_PIC = "https://www.instagram.com/static/images/hashtag/search-hashtag-default-avatar.png/1d8417c9a4f5.png";
+    public static final String SHARED_PREFERENCES_NAME = "settings";
 }

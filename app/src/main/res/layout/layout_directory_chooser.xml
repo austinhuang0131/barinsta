@@ -1,116 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout
-        android:id="@+id/footer"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_alignParentBottom="true">
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:layout_alignParentTop="true"
-            android:background="@android:color/darker_gray" />
-
-        <View
-            android:id="@+id/horizontalDivider"
-            android:layout_width="1dip"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:background="@android:color/darker_gray" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnCancel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentBottom="true"
-            android:layout_toStartOf="@id/horizontalDivider"
-            android:layout_toLeftOf="@id/horizontalDivider"
-            android:background="?android:selectableItemBackground"
-            android:text="@string/cancel" />
-
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnConfirm"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@id/horizontalDivider"
-            android:layout_toRightOf="@id/horizontalDivider"
-            android:background="?android:selectableItemBackground"
-            android:text="@string/confirm" />
-    </RelativeLayout>
-
-    <RelativeLayout
-        android:id="@+id/directoryInfo"
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true">
+        app:layout_constraintBottom_toTopOf="@id/directoryList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/btnNavUp"
-            android:layout_width="56dp"
-            android:layout_height="56dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:background="?android:selectableItemBackground"
-            android:contentDescription="@string/nav_up"
-            android:padding="8dp"
-            android:scaleType="fitCenter"
-            app:srcCompat="@drawable/ic_arrow_upward_24" />
-
-        <TextView
-            android:id="@+id/txtvSelectedFolderLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_toEndOf="@id/btnNavUp"
-            android:layout_toRightOf="@id/btnNavUp"
-            android:text="@string/selected_folder_label"
-            android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/txtvSelectedFolder"
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtvSelectedFolderLabel"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="8dp"
-            android:layout_toEndOf="@id/btnNavUp"
-            android:layout_toRightOf="@id/btnNavUp"
-            android:ellipsize="start"
-            android:scrollHorizontally="true"
-            android:singleLine="true" />
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@id/btnNavUp"
-            android:background="@android:color/darker_gray" />
-    </RelativeLayout>
+            app:navigationIcon="@drawable/ic_arrow_upward_24"
+            tools:title="/this/that/thy" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/directoryList"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_above="@id/footer"
-        android:layout_below="@id/directoryInfo" />
-</RelativeLayout>
+        app:layout_constraintBottom_toTopOf="@id/bottom_horizontal_divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+
+    <include
+        android:id="@+id/bottom_horizontal_divider"
+        layout="@layout/item_pref_divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toTopOf="@id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/directoryList" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancel"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cancel"
+        app:icon="@drawable/ic_close_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/directoryList" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnConfirm"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        app:icon="@drawable/ic_check_24"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/directoryList" />
+</androidx.constraintlayout.widget.ConstraintLayout>

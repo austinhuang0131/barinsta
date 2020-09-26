@@ -20,7 +20,7 @@ import androidx.preference.PreferenceCategory;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
@@ -55,11 +55,11 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
         accountCategory.setTitle(R.string.account);
         accountCategory.setIconSpaceReserved(false);
         screen.addPreference(accountCategory);
-        final ArrayList<DataBox.CookieModel> allCookies = Utils.dataBox.getAllCookies();
+        final List<DataBox.CookieModel> allCookies = Utils.dataBox.getAllCookies();
         if (isLoggedIn) {
             accountCategory.setSummary(R.string.account_hint);
             accountCategory.addPreference(getAccountSwitcherPreference(cookie));
-            accountCategory.addPreference(getPreference(R.string.logout, R.string.logout_summary, R.drawable.ic_logout, preference -> {
+            accountCategory.addPreference(getPreference(R.string.logout, R.string.logout_summary, R.drawable.ic_logout_24, preference -> {
                 if (getContext() == null) return false;
                 CookieUtils.setupCookies("LOGOUT");
                 shouldRecreate();
@@ -79,7 +79,7 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
         }
 
         if (allCookies != null && allCookies.size() > 0) {
-            accountCategory.addPreference(getPreference(R.string.remove_all_acc, null, R.drawable.ic_delete, preference -> {
+            accountCategory.addPreference(getPreference(R.string.remove_all_acc, null, R.drawable.ic_account_multiple_remove_24, preference -> {
                 if (getContext() == null) return false;
                 new AlertDialog.Builder(getContext())
                         .setTitle(R.string.logout)
@@ -96,37 +96,49 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
             }));
         }
 
-        final PreferenceCategory generalCategory = new PreferenceCategory(context);
-        generalCategory.setTitle(R.string.pref_category_general);
-        generalCategory.setIconSpaceReserved(false);
-        screen.addPreference(generalCategory);
+        // final PreferenceCategory generalCategory = new PreferenceCategory(context);
+        // generalCategory.setTitle(R.string.pref_category_general);
+        // generalCategory.setIconSpaceReserved(false);
+        // screen.addPreference(generalCategory);
+        screen.addPreference(getDivider(context));
         if (isLoggedIn) {
-            generalCategory.addPreference(getPreference(R.string.action_notif, R.drawable.ic_not_liked, preference -> {
+            screen.addPreference(getPreference(R.string.action_notif, R.drawable.ic_not_liked, preference -> {
                 final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToNotificationsViewer();
                 NavHostFragment.findNavController(this).navigate(navDirections);
                 return true;
             }));
         }
-        generalCategory.addPreference(getPreference(R.string.action_settings, R.drawable.ic_outline_settings_24, preference -> {
+        screen.addPreference(getPreference(R.string.title_favorites, R.drawable.ic_star_24, preference -> {
+            final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToFavoritesFragment();
+            NavHostFragment.findNavController(this).navigate(navDirections);
+            return true;
+        }));
+
+        screen.addPreference(getDivider(context));
+        screen.addPreference(getPreference(R.string.action_settings, R.drawable.ic_outline_settings_24, preference -> {
             final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToSettingsPreferencesFragment();
             NavHostFragment.findNavController(this).navigate(navDirections);
             return true;
         }));
-        final Preference aboutPreference = getPreference(R.string.action_about, R.drawable.ic_outline_info_24, preference -> {
+        screen.addPreference(getPreference(R.string.backup_and_restore, R.drawable.ic_settings_backup_restore_24, preference -> {
+            final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToBackupPreferencesFragment();
+            NavHostFragment.findNavController(this).navigate(navDirections);
+            return true;
+        }));
+        screen.addPreference(getPreference(R.string.action_about, R.drawable.ic_outline_info_24, preference1 -> {
             final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToAboutFragment();
             NavHostFragment.findNavController(this).navigate(navDirections);
             return true;
-        });
-        generalCategory.addPreference(aboutPreference);
+        }));
 
         screen.addPreference(getDivider(context));
-
-        final Preference versionPreference = getPreference(R.string.version,
-                                                           BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")", -1, preference -> {
-                    FlavorTown.updateCheck((AppCompatActivity) requireActivity(), true);
-                    return true;
-                });
-        screen.addPreference(versionPreference);
+        screen.addPreference(getPreference(R.string.version,
+                                           BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")",
+                                           -1,
+                                           preference -> {
+                                               FlavorTown.updateCheck((AppCompatActivity) requireActivity(), true);
+                                               return true;
+                                           }));
         screen.addPreference(getDivider(context));
 
         final Preference reminderPreference = getPreference(R.string.reminder, R.string.reminder_summary, R.drawable.ic_warning, null);

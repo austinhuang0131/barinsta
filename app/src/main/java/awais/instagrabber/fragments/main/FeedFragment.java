@@ -325,6 +325,7 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     @Override
     public void onResume() {
         super.onResume();
+        binding.feedSwipeRefreshLayout.setRefreshing(false);
         if (videoAwareRecyclerScroller != null && shouldAutoPlay) {
             videoAwareRecyclerScroller.startPlaying();
         }
@@ -370,7 +371,7 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private void setupFeedStories() {
         feedStoriesViewModel = new ViewModelProvider(fragmentActivity).get(FeedStoriesViewModel.class);
         final FeedStoriesAdapter feedStoriesAdapter = new FeedStoriesAdapter((model, position) -> {
-            final NavDirections action = FeedFragmentDirections.actionFeedFragmentToStoryViewerFragment(position, null, false, null, null);
+            final NavDirections action = FeedFragmentDirections.actionFeedFragmentToStoryViewerFragment(position, null, false, false, null, null);
             NavHostFragment.findNavController(this).navigate(action);
         });
         final Context context = getContext();

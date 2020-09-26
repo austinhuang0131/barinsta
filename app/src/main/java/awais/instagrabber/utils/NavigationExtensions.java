@@ -34,7 +34,7 @@ public class NavigationExtensions {
         int firstFragmentGraphId = 0;
         for (int i = 0; i < navGraphIds.size(); i++) {
             final int navGraphId = navGraphIds.get(i);
-            final String fragmentTag = getFragmentTag(i);
+            final String fragmentTag = getFragmentTag(navGraphId);
             final NavHostFragment navHostFragment = obtainNavHostFragment(fragmentManager, fragmentTag, navGraphId, containerId);
             final NavController navController = navHostFragment.getNavController();
             final int graphId = navController.getGraph().getId();
@@ -57,7 +57,8 @@ public class NavigationExtensions {
                 return false;
             }
             String newlySelectedItemTag = graphIdToTagMap.get(item.getItemId());
-            if (!selectedItemTag[0].equals(newlySelectedItemTag)) {
+            String tag = selectedItemTag[0];
+            if (tag != null && !tag.equals(newlySelectedItemTag)) {
                 fragmentManager.popBackStack(firstFragmentTag, FragmentManager.POP_BACK_STACK_INCLUSIVE);
                 Fragment fragment = fragmentManager.findFragmentByTag(newlySelectedItemTag);
                 if (fragment == null) {
@@ -176,7 +177,7 @@ public class NavigationExtensions {
                                        final Intent intent) {
         for (int i = 0; i < navGraphIds.size(); i++) {
             final int navGraphId = navGraphIds.get(i);
-            final String fragmentTag = getFragmentTag(i);
+            final String fragmentTag = getFragmentTag(navGraphId);
             final NavHostFragment navHostFragment = obtainNavHostFragment(fragmentManager, fragmentTag, navGraphId, containerId);
             if (navHostFragment.getNavController().handleDeepLink(intent)) {
                 final int selectedItemId = bottomNavigationView.getSelectedItemId();

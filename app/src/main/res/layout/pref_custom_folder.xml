@@ -72,7 +72,8 @@
         android:layout_marginLeft="15dip"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSaveTo"

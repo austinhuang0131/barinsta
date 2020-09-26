@@ -28,15 +28,13 @@
     <color name="btn_lightorange_background">#FFBB00</color>
     <color name="btn_lightorange_text_color">#FF000000</color>
 
-    <color name="feed_text_primary_color">@color/text_color_light</color>
-
     <color name="dm_profile_button_color">#efefef</color>
-    <color name="semi_transparent_black">#80000000</color>
 
     <color name="white">#FFFFFF</color>
 
     <color name="black">#000000</color>
     <color name="black_800">#121212</color>
+    <color name="black_a50">#80000000</color>
 
     <color name="grey_50">#FAFAFA</color>
     <color name="grey_100">#F5F5F5</color>
@@ -83,7 +81,67 @@
     <color name="purple_200">#bb86fc</color>
     <color name="purple_600">#4b01d0</color>
 
-    <color name="red_200">#cf6679</color>
+    <color name="deep_purple_50">#EDE7F6</color>
+    <color name="deep_purple_100">#D1C4E9</color>
+    <color name="deep_purple_200">#B39DDB</color>
+    <color name="deep_purple_300">#9575CD</color>
+    <color name="deep_purple_400">#7E57C2</color>
+    <color name="deep_purple_500">#673AB7</color>
+    <color name="deep_purple_600">#5E35B1</color>
+    <color name="deep_purple_700">#512DA8</color>
+    <color name="deep_purple_800">#4527A0</color>
+    <color name="deep_purple_900">#311B92</color>
+    <color name="deep_purple_A100">#B388FF</color>
+    <color name="deep_purple_A200">#7C4DFF</color>
+    <color name="deep_purple_A400">#651FFF</color>
+    <color name="deep_purple_A700">#6200EA</color>
+
+    <color name="red_50">#FFEBEE</color>
+    <color name="red_100">#FFCDD2</color>
+    <color name="red_200">#EF9A9A</color>
+    <color name="red_300">#E57373</color>
+    <color name="red_400">#EF5350</color>
+    <color name="red_500">#F44336</color>
+    <color name="red_600">#E53935</color>
+    <color name="red_700">#D32F2F</color>
+    <color name="red_800">#C62828</color>
+    <color name="red_900">#B71C1C</color>
+    <color name="red_A100">#FF8A80</color>
+    <color name="red_A200">#FF5252</color>
+    <color name="red_A400">#FF1744</color>
+    <color name="red_A700">#D50000</color>
+
+    <color name="deep_orange_50">#FBE9E7</color>
+    <color name="deep_orange_100">#FFCCBC</color>
+    <color name="deep_orange_200">#FFAB91</color>
+    <color name="deep_orange_300">#FF8A65</color>
+    <color name="deep_orange_400">#FF7043</color>
+    <color name="deep_orange_500">#FF5722</color>
+    <color name="deep_orange_600">#F4511E</color>
+    <color name="deep_orange_700">#E64A19</color>
+    <color name="deep_orange_800">#D84315</color>
+    <color name="deep_orange_900">#BF360C</color>
+    <color name="deep_orange_A100">#FF9E80</color>
+    <color name="deep_orange_A200">#FF6E40</color>
+    <color name="deep_orange_A400">#FF3D00</color>
+    <color name="deep_orange_A700">#DD2C00</color>
+
+    <color name="yellow_50">#FFFDE7</color>
+    <color name="yellow_100">#FFF9C4</color>
+    <color name="yellow_200">#FFF59D</color>
+    <color name="yellow_300">#FFF176</color>
+    <color name="yellow_400">#FFEE58</color>
+    <color name="yellow_500">#FFEB3B</color>
+    <color name="yellow_600">#FDD835</color>
+    <color name="yellow_700">#FBC02D</color>
+    <color name="yellow_800">#F9A825</color>
+    <color name="yellow_900">#F57F17</color>
+    <color name="yellow_A100">#FFFF8D</color>
+    <color name="yellow_A200">#FFFF00</color>
+    <color name="yellow_A400">#FFEA00</color>
+    <color name="yellow_A700">#FFD600</color>
+
+    <color name="green">#5CE362</color>
 
     <!-- Barinsta Theme colors -->
     <color name="barinstaColorPrimary">#a86735</color>

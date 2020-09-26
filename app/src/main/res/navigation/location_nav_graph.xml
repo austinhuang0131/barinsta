@@ -30,6 +30,9 @@
             android:name="locationId"
             app:argType="string"
             app:nullable="false" />
+        <action
+            android:id="@+id/action_locationFragment_to_storyViewerFragment"
+            app:destination="@id/storyViewerFragment" />
     </fragment>
     <action
         android:id="@+id/action_global_locationFragment"
@@ -39,4 +42,32 @@
             app:argType="string"
             app:nullable="false" />
     </action>
+    <fragment
+        android:id="@+id/storyViewerFragment"
+        android:name="awais.instagrabber.fragments.StoryViewerFragment"
+        android:label="StoryViewerFragment"
+        tools:layout="@layout/fragment_story_viewer">
+        <argument
+            android:name="feedStoryIndex"
+            app:argType="integer"
+            app:nullable="false" />
+        <argument
+            android:name="highlight"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="isHashtag"
+            app:argType="boolean" />
+        <argument
+            android:name="isLoc"
+            app:argType="boolean" />
+        <argument
+            android:name="profileId"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="true" />
+    </fragment>
 </navigation>

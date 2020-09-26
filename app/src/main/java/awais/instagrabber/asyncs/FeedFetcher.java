@@ -212,9 +212,10 @@ public final class FeedFetcher extends AsyncTask<Void, Void, FeedModel[]> {
                 feedModelsList.trimToSize();
 
                 final FeedModel[] feedModels = feedModelsList.toArray(new FeedModel[0]);
-                if (feedModels[feedModels.length - 1] != null)
-                    feedModels[feedModels.length - 1].setPageCursor(hasNextPage, endCursor);
-
+                final int length = feedModels.length;
+                if (length >= 1 && feedModels[length - 1] != null) {
+                    feedModels[length - 1].setPageCursor(hasNextPage, endCursor);
+                }
                 result = feedModels;
             }
 

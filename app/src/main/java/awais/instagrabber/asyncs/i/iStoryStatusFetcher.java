@@ -30,7 +30,6 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
     private String username;
     private final boolean isLoc;
     private final boolean isHashtag;
-    private final boolean storiesig;
     private final boolean highlight;
     private final FetchListener<StoryModel[]> fetchListener;
 
@@ -38,14 +37,12 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
                                final String username,
                                final boolean isLoc,
                                final boolean isHashtag,
-                               final boolean storiesig,
                                final boolean highlight,
                                final FetchListener<StoryModel[]> fetchListener) {
         this.id = id;
         this.username = username;
         this.isLoc = isLoc;
         this.isHashtag = isHashtag;
-        this.storiesig = storiesig;
         this.highlight = highlight;
         this.fetchListener = fetchListener;
     }
@@ -55,13 +52,7 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
         StoryModel[] result = null;
         final String userId = id.replace(":", "%3A");
         final StringBuilder builder = new StringBuilder();
-        builder.append("https://");
-        if (storiesig) {
-            builder.append("storiesig");
-        } else {
-            builder.append("i.instagram");
-        }
-        builder.append(".com/api/v1/");
+        builder.append("https://i.instagram.com/api/v1/");
         if (isLoc) {
             builder.append("locations/");
         }
@@ -75,24 +66,20 @@ public final class iStoryStatusFetcher extends AsyncTask<Void, Void, StoryModel[
         }
         builder.append(userId);
         if (!highlight) {
-            if (storiesig) {
-                builder.append("/reel_media/");
-            } else {
-                builder.append("/story/");
-            }
+            builder.append("/story/");
         }
         final String url = builder.toString();
         try {
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
             conn.setInstanceFollowRedirects(true);
             conn.setUseCaches(false);
-            conn.setRequestProperty("User-Agent", storiesig ? Constants.A_USER_AGENT : Constants.I_USER_AGENT);
+            conn.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
             conn.setRequestProperty("Accept-Language", LocaleUtils.getCurrentLocale().getLanguage() + ",en-US;q=0.8");
             conn.connect();
 
             if (conn.getResponseCode() == HttpURLConnection.HTTP_OK) {
                 JSONObject data = new JSONObject(NetworkUtils.readFromConnection(conn));
-                if (!storiesig && !highlight)
+                if (!highlight)
                     data = data.optJSONObject((isLoc || isHashtag) ? "story" : "reel");
                 else if (highlight) data = data.getJSONObject("reels").optJSONObject(id);
 

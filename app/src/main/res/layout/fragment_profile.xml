@@ -79,8 +79,10 @@
                     android:ellipsize="marquee"
                     android:paddingStart="8dp"
                     android:paddingLeft="8dp"
+                    android:paddingTop="8dp"
                     android:paddingEnd="4dp"
                     android:paddingRight="4dp"
+                    android:paddingBottom="8dp"
                     android:singleLine="true"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:textStyle="bold"
@@ -102,15 +104,34 @@
                     app:srcCompat="@drawable/verified"
                     tools:visibility="visible" />
 
+                <CheckBox
+                    android:id="@+id/fav_cb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/sl_favourite_24"
+                    android:visibility="gone"
+                    app:buttonTint="@color/yellow_800"
+                    app:layout_constraintBaseline_toBaselineOf="@id/mainFullName"
+                    app:layout_constraintBottom_toTopOf="@id/mainBiography"
+                    app:layout_constraintStart_toEndOf="@id/isVerified" />
+
+                <ProgressBar
+                    android:id="@+id/fav_progress"
+                    style="@style/Widget.MaterialComponents.ProgressIndicator.Circular.Indeterminate"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/mainFullName"
+                    app:layout_constraintStart_toEndOf="@id/isVerified"
+                    app:layout_constraintTop_toTopOf="@id/mainFullName"
+                    tools:visibility="gone" />
+
                 <awais.instagrabber.customviews.RamboTextView
                     android:id="@+id/mainBiography"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
                     android:background="?android:selectableItemBackground"
-                    android:paddingStart="8dp"
-                    android:paddingLeft="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingRight="8dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     app:layout_constraintBottom_toTopOf="@id/mainUrl"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -124,10 +145,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/mainBiography"
                     android:ellipsize="marquee"
-                    android:paddingStart="8dp"
-                    android:paddingLeft="8dp"
-                    android:paddingEnd="8dp"
-                    android:paddingRight="8dp"
+                    android:padding="8dp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Body1"
                     android:visibility="gone"
                     app:layout_constraintEnd_toEndOf="parent"
@@ -135,97 +153,96 @@
                     app:layout_constraintTop_toBottomOf="@id/mainBiography"
                     tools:text="https://austinhuang.me/"
                     tools:textColor="@android:color/holo_blue_dark"
-                    tools:visibility="visible" />
+                    tools:visibility="gone" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnFollow"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/follow"
-                    android:textColor="@color/btn_pink_text_color"
+                    android:textColor="@color/deep_purple_200"
                     android:visibility="gone"
-                    app:backgroundTint="@color/btn_pink_background"
-                    app:layout_constraintBottom_toTopOf="@id/button_barrier"
-                    app:layout_constraintEnd_toStartOf="@id/btnRestrict"
+                    app:icon="@drawable/ic_outline_person_add_24"
+                    app:iconGravity="top"
+                    app:iconTint="@color/deep_purple_200"
+                    app:layout_constraintBottom_toTopOf="@id/highlights_barrier"
+                    app:layout_constraintEnd_toStartOf="@id/btnTagged"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/mainUrl"
+                    app:rippleColor="@color/purple_200"
                     tools:visibility="visible" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnRestrict"
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnTagged"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:text="@string/restrict"
-                    android:textColor="@color/btn_orange_text_color"
+                    android:text="@string/tagged"
+                    android:textColor="@color/deep_orange_600"
                     android:visibility="gone"
-                    app:backgroundTint="@color/btn_orange_background"
-                    app:layout_constraintBottom_toTopOf="@id/button_barrier"
-                    app:layout_constraintEnd_toStartOf="@id/btnBlock"
+                    app:icon="@drawable/ic_outline_person_pin_24"
+                    app:iconGravity="top"
+                    app:iconTint="@color/deep_orange_600"
+                    app:layout_constraintBottom_toTopOf="@id/highlights_barrier"
+                    app:layout_constraintEnd_toStartOf="@id/btnSaved"
                     app:layout_constraintStart_toEndOf="@id/btnFollow"
                     app:layout_constraintTop_toBottomOf="@id/mainUrl"
                     tools:visibility="visible" />
 
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnBlock"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/block"
-                    android:textColor="@color/btn_red_text_color"
-                    android:visibility="gone"
-                    app:backgroundTint="@color/btn_red_background"
-                    app:layout_constraintBottom_toTopOf="@id/button_barrier"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/btnRestrict"
-                    app:layout_constraintTop_toBottomOf="@id/mainUrl"
-                    tools:visibility="visible" />
-
-                <androidx.constraintlayout.widget.Barrier
-                    android:id="@+id/button_barrier"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:barrierDirection="bottom"
-                    app:constraint_referenced_ids="btnFollow, btnRestrict, btnBlock" />
-
-                <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btnTagged"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/tagged"
-                    android:textColor="@color/btn_blue_text_color"
-                    android:visibility="gone"
-                    app:backgroundTint="@color/btn_blue_background"
-                    app:layout_constraintBottom_toTopOf="@id/highlights_barrier"
-                    app:layout_constraintEnd_toStartOf="@id/btnSaved"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="@id/button_barrier"
-                    tools:visibility="visible" />
-
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnSaved"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/saved"
-                    android:textColor="@color/btn_orange_text_color"
+                    android:textColor="@color/blue_700"
                     android:visibility="gone"
-                    app:backgroundTint="@color/btn_orange_background"
+                    app:icon="@drawable/ic_outline_class_24"
+                    app:iconGravity="top"
+                    app:iconTint="@color/blue_700"
                     app:layout_constraintBottom_toTopOf="@id/highlights_barrier"
                     app:layout_constraintEnd_toStartOf="@id/btnLiked"
                     app:layout_constraintStart_toEndOf="@id/btnTagged"
-                    app:layout_constraintTop_toTopOf="@id/button_barrier"
+                    app:layout_constraintTop_toBottomOf="@id/mainUrl"
+                    app:rippleColor="@color/blue_A400"
                     tools:visibility="visible" />
 
-                <androidx.appcompat.widget.AppCompatButton
+                <com.google.android.material.button.MaterialButton
                     android:id="@+id/btnLiked"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:text="@string/liked"
-                    android:textColor="@color/btn_lightpink_text_color"
+                    android:textColor="@color/red_600"
                     android:visibility="gone"
-                    app:backgroundTint="@color/btn_lightpink_background"
+                    app:icon="@drawable/ic_like"
+                    app:iconGravity="top"
+                    app:iconTint="@color/red_600"
                     app:layout_constraintBottom_toTopOf="@id/highlights_barrier"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnDM"
                     app:layout_constraintStart_toEndOf="@id/btnSaved"
-                    app:layout_constraintTop_toTopOf="@id/button_barrier"
+                    app:layout_constraintTop_toBottomOf="@id/mainUrl"
+                    app:rippleColor="@color/red_300"
+                    tools:visibility="visible" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnDM"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dm_person"
+                    android:textColor="@color/green"
+                    android:visibility="gone"
+                    app:icon="@drawable/ic_send_24"
+                    app:iconGravity="top"
+                    app:iconTint="@color/green"
+                    app:layout_constraintBottom_toTopOf="@id/highlights_barrier"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btnLiked"
+                    app:layout_constraintTop_toBottomOf="@id/mainUrl"
+                    app:rippleColor="@color/green"
                     tools:visibility="visible" />
 
                 <androidx.constraintlayout.widget.Barrier

@@ -10,6 +10,8 @@ import org.json.JSONObject;
 import java.io.File;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.List;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.interfaces.FetchListener;
@@ -28,18 +30,18 @@ import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
 import static awais.instagrabber.utils.Utils.logCollector;
 
-public final class PostsFetcher extends AsyncTask<Void, Void, PostModel[]> {
+public final class PostsFetcher extends AsyncTask<Void, Void, List<PostModel>> {
     private static final String TAG = "PostsFetcher";
     private final PostItemType type;
     private final String endCursor;
     private final String id;
-    private final FetchListener<PostModel[]> fetchListener;
+    private final FetchListener<List<PostModel>> fetchListener;
     private String username = null;
 
     public PostsFetcher(final String id,
                         final PostItemType type,
                         final String endCursor,
-                        final FetchListener<PostModel[]> fetchListener) {
+                        final FetchListener<List<PostModel>> fetchListener) {
         this.id = id;
         this.type = type;
         this.endCursor = endCursor == null ? "" : endCursor;
@@ -52,7 +54,7 @@ public final class PostsFetcher extends AsyncTask<Void, Void, PostModel[]> {
     }
 
     @Override
-    protected PostModel[] doInBackground(final Void... voids) {
+    protected List<PostModel> doInBackground(final Void... voids) {
         // final boolean isHashTag = id.charAt(0) == '#';
         // final boolean isSaved = id.charAt(0) == '$';
         // final boolean isTagged = id.charAt(0) == '%';
@@ -77,9 +79,10 @@ public final class PostsFetcher extends AsyncTask<Void, Void, PostModel[]> {
                         "{\"id\":\"" + id + "\",\"first\":150,\"after\":\"" + endCursor + "\"}";
                 break;
             default:
-                url = "https://www.instagram.com/graphql/query/?query_id=17880160963012870&id=" + id + "&first=50&after=" + endCursor;
+                url = "https://www.instagram.com/graphql/query/?query_hash=18a7b935ab438c4514b1f742d8fa07a7&variables=" +
+                        "{\"id\":\"" + id + "\",\"first\":150,\"after\":\"" + endCursor + "\"}";
         }
-        PostModel[] result = null;
+        List<PostModel> result = new ArrayList<>();
         try {
             final HttpURLConnection conn = (HttpURLConnection) new URL(url).openConnection();
             conn.setUseCaches(false);
@@ -126,8 +129,7 @@ public final class PostsFetcher extends AsyncTask<Void, Void, PostModel[]> {
                 }
 
                 final JSONArray edges = mediaPosts.getJSONArray("edges");
-                final PostModel[] models = new PostModel[edges.length()];
-                for (int i = 0; i < models.length; ++i) {
+                for (int i = 0; i < edges.length(); ++i) {
                     final JSONObject mediaNode = edges.getJSONObject(i).getJSONObject("node");
                     final JSONArray captions = mediaNode.getJSONObject("edge_media_to_caption").getJSONArray("edges");
 
@@ -139,34 +141,42 @@ public final class PostsFetcher extends AsyncTask<Void, Void, PostModel[]> {
                     else if (isVideo) itemType = MediaItemType.MEDIA_TYPE_VIDEO;
                     else itemType = MediaItemType.MEDIA_TYPE_IMAGE;
 
-                    models[i] = new PostModel(itemType, mediaNode.getString(Constants.EXTRAS_ID),
-                                              mediaNode.getString("display_url"), mediaNode.getString("thumbnail_src"),
-                                              mediaNode.getString(Constants.EXTRAS_SHORTCODE),
-                                              captions.length() > 0 ? captions.getJSONObject(0).getJSONObject("node").getString("text") : null,
-                                              mediaNode.getLong("taken_at_timestamp"), mediaNode.optBoolean("viewer_has_liked"),
-                                              mediaNode.optBoolean("viewer_has_saved"), mediaNode.getJSONObject("edge_liked_by").getLong("count"));
-
-                    DownloadUtils.checkExistence(downloadDir, customDir, isSlider, models[i]);
+                    final PostModel model = new PostModel(
+                            itemType,
+                            mediaNode.getString(Constants.EXTRAS_ID),
+                            mediaNode.getString("display_url"),
+                            mediaNode.getString("thumbnail_src"),
+                            mediaNode.getString(Constants.EXTRAS_SHORTCODE),
+                            captions.length() > 0 ? captions.getJSONObject(0)
+                                                            .getJSONObject("node")
+                                                            .getString("text")
+                                                  : null,
+                            mediaNode.getLong("taken_at_timestamp"),
+                            mediaNode.optBoolean("viewer_has_liked"),
+                            mediaNode.optBoolean("viewer_has_saved"),
+                            mediaNode.isNull("edge_liked_by") ? 0 : mediaNode.getJSONObject("edge_liked_by").getLong("count")
+                    );
+                    result.add(model);
+                    DownloadUtils.checkExistence(downloadDir, customDir, isSlider, model);
                 }
 
-                if (models.length != 0 && models[models.length - 1] != null)
-                    models[models.length - 1].setPageCursor(hasNextPage, endCursor);
-
-                result = models;
+                if (!result.isEmpty() && result.get(result.size() - 1) != null)
+                    result.get(result.size() - 1).setPageCursor(hasNextPage, endCursor);
             }
-
             conn.disconnect();
         } catch (Exception e) {
-            if (logCollector != null)
+            if (logCollector != null) {
                 logCollector.appendException(e, LogCollector.LogFile.ASYNC_MAIN_POSTS_FETCHER, "doInBackground");
-            if (BuildConfig.DEBUG) Log.e(TAG, "", e);
+            }
+            if (BuildConfig.DEBUG) {
+                Log.e(TAG, "Error fetching posts", e);
+            }
         }
-
         return result;
     }
 
     @Override
-    protected void onPostExecute(final PostModel[] postModels) {
+    protected void onPostExecute(final List<PostModel> postModels) {
         if (fetchListener != null) fetchListener.onResult(postModels);
     }
 }
