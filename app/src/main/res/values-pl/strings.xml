@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Pierwotny opiekun projektu, AWAiS, stworzył InstaGrabber jako małą i podstawową, osobistą aplikację z zamiarem [kradzieży-]pobierania postów z Instagrama. Niestety, projekt został porzucony, a ja, Austin Huang, przejąłem statek. [Miejmy nadzieję, że przyniesie to trochę gotówki.] W końcu ta aplikacja jest w pełni open source, bez reklam i bez śledzenia [poza tym, co wie już o Tobie Instagram]. Nawet jeśli nie zależy ci na pobieraniu rzeczy, nadal jest to świetny klient Instagrama!\n\nMasz pytania [lub po prostu chcesz porozmawiać]? Skontaktuj się ze mną drogą mailową: instagrabber@austinhuang.me lub kliknij jeden z poniższych przycisków.</string>
-    <string name="action_quickaccess">Szybki dostęp</string>
     <string name="action_about">O aplikacji</string>
     <string name="action_dms">Prywatne wiadomości</string>
-    <string name="action_setting">Ustawienia (v%s)</string>
     <string name="action_settings">Ustawienia</string>
     <string name="action_download">Pobierz</string>
     <string name="action_search">Szukaj użytkownika…</string>
