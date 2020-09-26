@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Pengembang original, AWAiS, membuat InstaGrabber sebagai aplikasi personal yang kecil dan sederhana untuk men[cu-]ngunduh kiriman di Instagram. Sayangnya, dia pergi dan saya, Austin Huang, mengambil alih kendali. [Mari berharap paling nggak sedikit uang.] Toh, aplikasi ini sepenuhnya bersumber terbuka, tanpa iklan, dan tanpa pelacak [disamping apa yang diketahui Instagram]. Meski anda tidak peduli dengan mengunduh kiriman [seperti saya], aplikasi ini masih menjadi klien Instagram yang bagus untuk digunakan!\n\nAda pertanyaan [atau mau ngobrol]? Hubungi instagrabber@austinhuang.me atau klik salah satu tombol di bawah ini.</string>
-    <string name="action_quickaccess">Akses Cepat</string>
     <string name="action_about">Tentang</string>
     <string name="action_dms">Pesan Langsung</string>
-    <string name="action_setting">Pengaturan (v%s)</string>
     <string name="action_settings">Pengaturan</string>
     <string name="action_download">Unduh</string>
     <string name="action_search">Cari Pengguna…</string>
