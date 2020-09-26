@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">İlk geliştiricisi olan AWAIS, InstaGrabber adında küçük ve basit bir uygulama yaptı. Amacı Instagram paylaşımlarını [çalma-] indirmekti. Ne yazık ki bir süre sonra projeyi bıraktı ve ben, Austin Huang, devraldım. [Umarım biraz para da kazanırım.] Her şeyden önce bu uygulama tamamen açık kaynak kodlu, reklamsız ve gizliliğe önem veriyor [Instagram\'ın zaten bildikleri ayrı konu]. Eğer paylaşım indirmek amacınız olmasa bile [benim gibi], bir Instagram alternatifi olarak kullanmak için bile harika bir uygulama!\n\nSorun varsa ya da sadece konuşmak istiyorsan instagrabber@austinhuang.me üzerinden ulaşabilir ya da aşağıdaki butonlara tıklayabilirsin. Hatırlatmakta fayda var, Türkçe bilmiyorum.</string>
-    <string name="action_quickaccess">Hızlı Erişim</string>
     <string name="action_about">Hakkında</string>
     <string name="action_dms">Direkt Mesajlar</string>
-    <string name="action_setting">Ayarlar (v%s)</string>
     <string name="action_settings">Ayarlar</string>
     <string name="action_download">İndir</string>
     <string name="action_search">Kullanıcı adı ara…</string>
