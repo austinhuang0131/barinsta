@@ -263,7 +263,7 @@
     <string name="pref_category_general">Chung</string>
     <string name="pref_category_theme">Giao diện</string>
     <string name="pref_category_downloads">Tải xuống</string>
-    <string name="pref_category_locale">Ngôn ngữ</string>
+    <string name="pref_category_locale">Địa phương</string>
     <string name="account">Tài khoản</string>
     <string name="account_hint">Đăng nhập hiện tại không hoạt động? Chỉ cần thêm tài khoản lại.</string>
     <string name="add_account">Thêm tài khoản</string>
