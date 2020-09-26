@@ -127,7 +127,7 @@
     <string name="dialog_export_btn_import">导入</string>
     <string name="dialog_export_logins">导出登录</string>
     <string name="dialog_export_accounts">帐户</string>
-    <string name="dialog_export_settings">设定</string>
+    <string name="dialog_export_settings">设置</string>
     <string name="dialog_export_favorites">收藏</string>
     <string name="dialog_import_settings">导入设置</string>
     <string name="dialog_import_logins">导入登录</string>
@@ -286,11 +286,11 @@
     <string name="added_to_favs">已添加至收藏夹</string>
     <string name="add_to_favorites">添加到收藏</string>
     <string name="accounts">帐户</string>
-    <string name="hashtags">话题标签</string>
+    <string name="hashtags">话题</string>
     <string name="locations">地点</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">已从收藏夹中删除</string>
-    <string name="backup_and_restore">备份&amp; 还原</string>
+    <string name="backup_and_restore">备份 &amp; 还原</string>
     <string name="create_backup">创建</string>
     <string name="restore_backup">还原</string>
     <string name="file_chosen_label">文件:</string>
