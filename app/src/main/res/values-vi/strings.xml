@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">Người bảo trì ban đầu, AWAiS, tạo ra InstaGrabber như một ứng dụng nhỏ và đơn giản cá nhân nhằm tải về những bài đăng trên Instagram. Không may, nó đã bị bỏ rơi và tôi, Austin Huang, đã tiếp quản con thuyền này. Dù sao đi nữa, ứng dụng này hoàn toàn mã nguồn mở, không quảng cáo và không có theo dõi (ngoại trừ những gì Instagram biết ra). Dù cho bạn không quan tâm đến việc tải về (như tôi), nó vẫn là một ứng Instagram rất đáng dể dùng! Bạn có câu hỏi (hoặc chỉ muốn nói chuyện)? Liên hệ instagrabber@austinhuang.me hoặc click vào một trong những nút phía dưới đây.</string>
-    <string name="action_quickaccess">Truy cập nhanh</string>
     <string name="action_about">Giới thiệu</string>
     <string name="action_dms">Tin nhắn trực tiếp</string>
-    <string name="action_setting">Cài đặt</string>
     <string name="action_settings">Cài đặt</string>
     <string name="action_download">Tải xuống</string>
     <string name="action_search">Tìm tên người dùng…</string>
