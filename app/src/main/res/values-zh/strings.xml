@@ -15,8 +15,8 @@
     <string name="clipboard_copied">已复制到剪贴板！</string>
     <string name="report">报告</string>
     <string name="password">密码 (最多32字符)</string>
-    <string name="set_password">Set a password (max 32 chars)</string>
-    <string name="password_no_max">Password</string>
+    <string name="set_password">设置密码 (最多32个字符)</string>
+    <string name="password_no_max">密码</string>
     <string name="ok">好的</string>
     <string name="yes">是</string>
     <string name="cancel">取消</string>
