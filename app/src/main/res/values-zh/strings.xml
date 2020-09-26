@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="description">原作者 AWAiS 将 InstaGrabber 做成了一个小巧玲珑的 Instagram 帖子下载 [写作下载读作剽窃] 程序，不过他跳槽了，所以我（Austin Huang）就把它接了下来。 [希望此举有所值得。] 不管怎样，InstaGrabber 完全开源，无广告，无跟踪 [Instagram 原生跟踪除外]，998都不要，你还等啥？？？\n有问题 [或者只是想谈谈心] ？请联系 instagrabber@austinhuang.me 或点击下方各按钮。</string>
-    <string name="action_quickaccess">快捷通道</string>
     <string name="action_about">关于</string>
     <string name="action_dms">私聊</string>
-    <string name="action_setting">设定 (v%s)</string>
     <string name="action_settings">设定</string>
     <string name="action_download">下载</string>
     <string name="action_search">搜索用户名…</string>
