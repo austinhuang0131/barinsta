@@ -31,7 +31,7 @@
     <string name="title_changelog">گزارش دگرگونی</string>
     <string name="bottom_toolbar">نمایش نوار ابزار در پایین</string>
     <string name="update_check">بررسی بروزرسانی هنگام آغاز برنامه</string>
-    <string name="download_user_folder">دانلود پست ها با ایجاد پوشه به اسم نام کاربری در دانلود ها</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">بارگذاری خودکار همه پست‌ های کاربر</string>
     <string name="mark_as_seen_setting">نشان کرد استوری ها به عنوان دیده شده بعد از دیدن</string>
     <string name="mark_as_seen_setting_summary">نویسنده استوری می داند که شما آن را دیده اید</string>
