@@ -31,7 +31,7 @@
     <string name="title_changelog">Листа на промени</string>
     <string name="bottom_toolbar">Прикажи ја лентата со алатки долу</string>
     <string name="update_check">Провери за надоградба (ажурирање) при старт на апликацијата.</string>
-    <string name="download_user_folder">Превземи постови во фолдерот означен со корисничко име(username)</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">Прикажи ги сите постови наеднаш од корисникот</string>
     <string name="mark_as_seen_setting">Означи ги приказните како видени после нивно отварање</string>
     <string name="mark_as_seen_setting_summary">Авторот на Приказната ќе знае дека сте ја виделе Приказната.</string>
