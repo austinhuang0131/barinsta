@@ -31,7 +31,7 @@
     <string name="title_changelog">Catatan Perubahan</string>
     <string name="bottom_toolbar">Tampilkan bilah alat di bawah</string>
     <string name="update_check">Cek pembaruan saat memulai</string>
-    <string name="download_user_folder">Unduh kiriman ke folder nama pengguna di folder unduhan</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">Muat otomatis semua kiriman dari pengguna</string>
     <string name="mark_as_seen_setting">Tandai cerita dibaca setelah melihat</string>
     <string name="mark_as_seen_setting_summary">Pembuat cerita akan tahu Anda melihatnya</string>
