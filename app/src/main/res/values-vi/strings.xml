@@ -31,7 +31,7 @@
     <string name="title_changelog">Nhật ký thay đổi</string>
     <string name="bottom_toolbar">Hiển thị thanh công cụ ở dưới</string>
     <string name="update_check">Kiểm tra cập nhật khi khởi động</string>
-    <string name="download_user_folder">Download posts to username folders</string>
+    <string name="download_user_folder">Tải bài viết xuống theo thư mục tên người dùng trong Downloads</string>
     <string name="autoload_posts">Tự động tải tất cả bài viết từ người dùng</string>
     <string name="mark_as_seen_setting">Đánh dấu story là đã xem sau khi xem</string>
     <string name="mark_as_seen_setting_summary">Người đăng story sẽ biết bạn đã xem nó</string>
