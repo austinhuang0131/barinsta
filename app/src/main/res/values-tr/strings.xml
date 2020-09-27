@@ -31,7 +31,7 @@
     <string name="title_changelog">Güncelleme Notları</string>
     <string name="bottom_toolbar">Araç çubuğunu aşağıda göster</string>
     <string name="update_check">Güncellemeleri başlangıçta kontrol et</string>
-    <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">Kullanıcıların tüm gönderilerini otomatik yükle</string>
     <string name="mark_as_seen_setting">Hikayeleri gördükten sonra görüldü olarak işaretle</string>
     <string name="mark_as_seen_setting_summary">Hikayeyi paylaşan gördüğünüzü bilecek</string>
