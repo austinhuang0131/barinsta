@@ -31,7 +31,7 @@
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Mostrar barra de ferramentas na parte inferior</string>
     <string name="update_check">Check for updates at startup</string>
-    <string name="download_user_folder">Baixe postagens para a pasta de nome de usuário em Downloads</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">Carregar automaticamente todas as postagens do usuário</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
     <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
