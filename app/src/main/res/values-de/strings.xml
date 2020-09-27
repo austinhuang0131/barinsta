@@ -31,7 +31,7 @@
     <string name="title_changelog">Änderungsprotokoll</string>
     <string name="bottom_toolbar">Symbolleiste unten anzeigen</string>
     <string name="update_check">Beim Start auf Aktualisierungen prüfen</string>
-    <string name="download_user_folder">Beiträge in den Benutzernamen-Ordner in Downloads herunterladen</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">Alle Beiträge des Benutzers automatisch laden</string>
     <string name="mark_as_seen_setting">Stories nach dem Ansehen als gesehen markieren</string>
     <string name="mark_as_seen_setting_summary">Die Person wird wissen, dass du dir die Story angesehen hast</string>
