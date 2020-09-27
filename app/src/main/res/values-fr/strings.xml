@@ -31,7 +31,7 @@
     <string name="title_changelog">Journal des changements</string>
     <string name="bottom_toolbar">Afficher la barre d\'outils en bas</string>
     <string name="update_check">Check for updates at startup</string>
-    <string name="download_user_folder">Télécharger les posts dans le dossier du nom de l\'utilisateur dans les Téléchargements</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">Chargement automatique de tous les posts de l\'utilisateur</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
     <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
