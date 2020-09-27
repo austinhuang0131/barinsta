@@ -3,18 +3,18 @@
     <string-array name="languages">
         <item>Systemstandard</item>
         <item>Englisch</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
+        <item>Französisch [Danke an @kernoeb]</item>
+        <item>Spanisch [Danke an @sguinetti]</item>
         <item>Chinesisch (Vereinfacht)</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
-        <item>Vietnamese [Thanks to @fouze555]</item>
+        <item>Indonesisch [Danke an @Galang23]</item>
+        <item>Italienisch [Danke an @RAR_Ramar]</item>
+        <item>Deutsch [Danke an @peterge1998]</item>
+        <item>Polnisch [Danke an @Lego8486]</item>
+        <item>Türkisch [Danke an @faydin90]</item>
+        <item>Brasilianisches Portugiesisch [Danke an @wagnim]</item>
+        <item>Persisch [Danke an @farzadx]</item>
+        <item>Mazedonisch [Danke an @snajdovski]</item>
+        <item>Vietnamesisch [Danke an @fouze555]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
