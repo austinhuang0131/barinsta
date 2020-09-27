@@ -31,7 +31,7 @@
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Mostra barra degli strumenti in basso</string>
     <string name="update_check">Controlla gli aggiornamenti all\'avvio</string>
-    <string name="download_user_folder">Download posts to username folders</string>
+    <string name="download_user_folder">Scarica post nelle cartelle del nome utente</string>
     <string name="autoload_posts">Carica automaticamente tutti i post dall\'utente</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo la visualizzazione</string>
     <string name="mark_as_seen_setting_summary">L\'autore della storia saprà che l\'hai vista</string>
@@ -87,7 +87,7 @@
     <string name="story_mentions">Menzioni</string>
     <string name="priv_acc">Questo profilo è privato</string>
     <string name="priv_acc_confirm">Non sarai in grado di accedere ai post dopo non seguire! Sei sicuro?</string>
-    <string name="no_acc">È possibile accedere tramite More -&gt; Account nell\'angolo in basso a destra o è possibile visualizzare gli account pubblici senza effettuare il login!</string>
+    <string name="no_acc">È possibile accedere tramite Altro -&gt; Account nell\'angolo in basso a destra o è possibile visualizzare gli account pubblici senza effettuare il login!</string>
     <string name="no_acc_logged_in">È possibile scorrere a sinistra/destra per esplorare/feed, o cercare qualcosa qui sotto!</string>
     <string name="empty_acc">Questo profilo non ha post</string>
     <string name="empty_list">Nessun Post Simile!</string>
