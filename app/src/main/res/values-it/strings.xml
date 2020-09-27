@@ -31,7 +31,7 @@
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Mostra barra degli strumenti in basso</string>
     <string name="update_check">Controlla gli aggiornamenti all\'avvio</string>
-    <string name="download_user_folder">Scarica i post nella cartella nome utente in Download</string>
+    <string name="download_user_folder">Download posts to username folders</string>
     <string name="autoload_posts">Carica automaticamente tutti i post dall\'utente</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo la visualizzazione</string>
     <string name="mark_as_seen_setting_summary">L\'autore della storia saprà che l\'hai vista</string>
