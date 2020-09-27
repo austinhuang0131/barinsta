@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
-        <item>Chinese Simplified</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
-        <item>Vietnamese [Thanks to @fouze555]</item>
+        <item>प्रणाली चूक</item>
+        <item>अंग्रेजी</item>
+        <item>फ्रेंच(फ्रान्स)[@kernoeb के द्वारा]</item>
+        <item>स्पानिस[@sguinetti के द्बारा]</item>
+        <item>चीनी (सरलीकृत)</item>
+        <item>इन्डोनेसियान [@Galang23 के द्बारा]</item>
+        <item>इटालियान[@RAR_Ramar के द्बारा]</item>
+        <item>जर्मान[@peterge1998 के द्बारा]</item>
+        <item>पलिस [@Lego8486 के द्बारा]</item>
+        <item>तुर्किस [@faydin90 के द्बारा]</item>
+        <item>ब्राजिलिय पर्तुगिज [@wagnim के द्बारा]</item>
+        <item>पर्सियान [@farzadx के द्बारा]</item>
+        <item>मासेडोनियान [@snajdovski के द्बारा]</item>
+        <item>भिएतनामिज [@fouze555 के द्बारा]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -30,10 +30,10 @@
         <item>10</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>सिष्टम के अनुसार</item>
+        <item>ब्याटेरि के अनुसार</item>
+        <item>काला</item>
+        <item>हल्का</item>
     </string-array>
     <string-array name="theme_presets_values">
         <item>0</item>
@@ -42,15 +42,15 @@
         <item>3</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>कुछ नहीं</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>पर</item>
+        <item>ऑन</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>लोड हो रहा है...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
