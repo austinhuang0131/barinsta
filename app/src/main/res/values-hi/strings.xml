@@ -73,8 +73,8 @@
     <string name="view_story_post">पोस्ट देखें</string>
     <string name="view_post">पोस्ट देखें</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Can\'t interact if y\'ain\'t logged in!</string>
-    <string name="vote_story_poll">Vote</string>
+    <string name="stories_notloggedin">बिना लग इन कर के आप ब्यबहार नहीं कर सकते!</string>
+    <string name="vote_story_poll">मत दें</string>
     <string name="votef_story_poll">Vote successful!</string>
     <string name="voted_story_poll">You have already voted!</string>
     <string name="respond_story">Respond</string>
