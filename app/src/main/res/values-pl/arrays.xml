@@ -6,15 +6,15 @@
         <item>Francuski [Podziękowania dla @kernoeb]</item>
         <item>Hiszpański [Podziękowania dla @sguinetti]</item>
         <item>Chiński uproszczony</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
-        <item>Vietnamese [Thanks to @fouze555]</item>
+        <item>Indonezyjski [Podziękowania dla @Galang23]</item>
+        <item>Włoski [Podziękowania dla @RAR_Ramar]</item>
+        <item>Niemiecki [Podziękowania dla @peterge1998]</item>
+        <item>Polski [Podziękowania dla @Lego8486]</item>
+        <item>Turecki [Podziękowania dla @faydin90]</item>
+        <item>Portugalski [Podziękowania dla @wagnim]</item>
+        <item>Perski [Podziękowania dla @farzadx]</item>
+        <item>Macedoński [Podziękowania dla @snajdovski]</item>
+        <item>Wietnamski [Podziękowania dla @fouze555]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -50,7 +50,7 @@
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>Ładowanie...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
