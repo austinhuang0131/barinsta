@@ -183,7 +183,7 @@
     <string name="dms_action_leave">Ливни</string>
     <string name="dms_action_leave_question">Дали сакате да ливните од чатот?</string>
     <string name="dms_action_kick">Кикни</string>
-    <string name="dms_left_users">Left users</string>
+    <string name="dms_left_users">Поранешни корисници</string>
     <string name="direct_download">Превземи директно</string>
     <string name="direct_download_desc">Превземи постови директно во твојот смарттелефон!</string>
     <string name="direct_download_loading">Се превземаат пост(ови)</string>
@@ -268,11 +268,11 @@
     <string name="about_documentation">Посете ја нашата вебстрана</string>
     <string name="about_documentation_summary">Пронјадете подршка, дискутирајте се, запознај се со други, и забавувај се!</string>
     <string name="about_repository">Погледнете го изворниот код на GitHub</string>
-    <string name="about_repository_summary">Audit, star, report bugs, contribute, and have fun (again)!</string>
+    <string name="about_repository_summary">Ревидирајте, додадете ѕвезда, пријавете грешки и багови, контрибуирајте и имајте забава (повторно)!</string>
     <string name="about_feedback">Пратете пофалби/поплаки преку email</string>
     <string name="about_category_3pt">Интеграција на Third-Party</string>
     <string name="about_category_3pt_summary">Следниве third-party библиотеки кои се со отворен код се користени:</string>
-    <string name="reminder">Reminder</string>
+    <string name="reminder">Потсетник</string>
     <string name="reminder_summary">Ве молиме користете ја апликацијата со одговорност. Превземените содржини како слики, видеа и аудио, треба да бидат користени со применливите закони на Инстаграм и авторите на постот/приказната.</string>
     <string name="light_white_theme">Бела</string>
     <string name="dark_black_theme">Црна</string>
@@ -280,14 +280,14 @@
     <string name="dark_theme_settings">Темна тема</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Материјално Црна</string>
-    <string name="added_to_favs">Added to Favorites</string>
+    <string name="added_to_favs">Додадено во Омилени</string>
     <string name="add_to_favorites">Додади во омилени</string>
     <string name="accounts">Акаунти</string>
     <string name="hashtags">Хаштагови</string>
     <string name="locations">Локации</string>
     <string name="unknown">Непознато</string>
     <string name="removed_from_favs">Отстрането од омилени</string>
-    <string name="backup_and_restore">Backup &amp; Restore</string>
+    <string name="backup_and_restore">Направете Резервна Копија &amp; Враќање</string>
     <string name="create_backup">Креирај</string>
     <string name="restore_backup">Врати</string>
     <string name="file_chosen_label">Фајл:</string>
