@@ -3,18 +3,18 @@
     <string-array name="languages">
         <item>Системски одбрано</item>
         <item>Англиски</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
+        <item>Француски [Благодарност до @kernoeb]</item>
+        <item>Шпански [Благодарност до @sguinetti]</item>
         <item>Кинески</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
-        <item>Vietnamese [Thanks to @fouze555]</item>
+        <item>Индонезиски [Благодарност до @Galang23]</item>
+        <item>Италијански [Благодарност до @RAR_Ramar]</item>
+        <item>Германски [Благодарност до @peterge1998]</item>
+        <item>Полски [Благодарност до @Lego8486]</item>
+        <item>Турски [Благодарност до @faydin90]</item>
+        <item>Бразилски Португалски [Благодарност до @wagnim]</item>
+        <item>Персиски [Благодарност до @farzadx]</item>
+        <item>Македонски [Благодарност до @snajdovski]</item>
+        <item>Виетнамски[Благодарност до @fouze555]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -30,10 +30,10 @@
         <item>10</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Автоматска тема</item>
+        <item>Автоматска Тема која зависи од нивото на Батеријата</item>
+        <item>Темно</item>
+        <item>Светло</item>
     </string-array>
     <string-array name="theme_presets_values">
         <item>0</item>
@@ -42,15 +42,15 @@
         <item>3</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Ништо</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>на</item>
+        <item>уклучи</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>Вчитување...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
