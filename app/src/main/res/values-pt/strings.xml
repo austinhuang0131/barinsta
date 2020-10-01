@@ -3,7 +3,7 @@
     <string name="action_about">Sobre</string>
     <string name="action_dms">Mensagens diretas</string>
     <string name="action_settings">Configurações</string>
-    <string name="action_download">Download</string>
+    <string name="action_download">Baixar</string>
     <string name="action_search">Pesquisar nome de usuário ...</string>
     <string name="action_compare">Comparar</string>
     <string name="single_like">like</string>
