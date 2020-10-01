@@ -12,8 +12,8 @@
     <string name="clipboard_copied">Copiado para a área de transferência!</string>
     <string name="report">Relatório</string>
     <string name="password">Senha (máx 32 caracteres)</string>
-    <string name="set_password">Set a password (max 32 chars)</string>
-    <string name="password_no_max">Password</string>
+    <string name="set_password">Defina uma senha (máx. 32 caracteres)</string>
+    <string name="password_no_max">Senha</string>
     <string name="ok">OK</string>
     <string name="yes">Sim</string>
     <string name="cancel">Cancelar</string>
@@ -21,7 +21,7 @@
     <string name="confirm">Confirme</string>
     <string name="nav_up">Acima</string>
     <string name="dont_show_again">Não mostrar de novo</string>
-    <string name="selected_folder_label">Current directory</string>
+    <string name="selected_folder_label">Pasta atual</string>
     <string name="title_favorites">Favoritos</string>
     <string name="title_discover">Descobrir</string>
     <string name="title_comments">Comentários</string>
@@ -30,12 +30,12 @@
     <string name="title_user_story">História do usuário</string>
     <string name="title_changelog">Changelog</string>
     <string name="bottom_toolbar">Mostrar barra de ferramentas na parte inferior</string>
-    <string name="update_check">Check for updates at startup</string>
-    <string name="download_user_folder">Download posts to username folders</string>
+    <string name="update_check">Verificar se há atualizações ao iniciar</string>
+    <string name="download_user_folder">Baixar postagens para pastas com o nome de usuário</string>
     <string name="autoload_posts">Carregar automaticamente todas as postagens do usuário</string>
-    <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
-    <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
-    <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>
+    <string name="mark_as_seen_setting">Marcar stories como vistos após a visualização</string>
+    <string name="mark_as_seen_setting_summary">O autor do story saberá que você viu</string>
+    <string name="dm_mark_as_seen_setting">Marcar DM como visto após a visualização</string>
     <string name="dm_mark_as_seen_setting_summary">Other members will know you viewed it</string>
     <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Erro ao carregar o perfil!\nTente fazer login e pesquise novamente.</string>
