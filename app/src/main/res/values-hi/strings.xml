@@ -89,7 +89,7 @@
     <string name="priv_acc_confirm">अनफलो चे बाद आप पोस्ट तक पहुंच नहिं पाओगे!
 आप निश्चित हैं?</string>
     <string name="no_acc">आप लग इन और तरिकें के साथ कर सकते हो -&gt; दक्षिण के निचे कोने में एकाउॅट पर या आप सार्बजनीन एकाउॅट को बिना लग इन के देख सकते हो!</string>
-    <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
+    <string name="no_acc_logged_in">तुम बाम/दक्षिण को स्बाइप करने से अन्वेषण/फिड देख सकते हो, या निचे से कुछ खोज सकते हो!</string>
     <string name="empty_acc">इसी एकाउॅट में कोई पोस्ट नहीं है।</string>
     <string name="empty_list">एसे कोई पोस्ट नहीं है!</string>
     <string name="curr_version">वर्तमान संस्करण: v%s</string>
