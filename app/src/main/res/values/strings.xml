@@ -300,4 +300,8 @@
     <string name="file_chosen_label">File:</string>
     <string name="enter_password">Enter password</string>
     <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
+    <!--Activity No Connection Strings-->
+    <string name="no_internet_access">No Internet Access</string>
+    <string name="no_internet_description">It looks like you don\'t have internet connection, would you like to connect?</string>
+    <string name="exit">Exit</string>
 </resources>
