@@ -30,8 +30,8 @@
         <item>10</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Seguir o sistema</item>
-        <item>Automático / Acompanhar bateria</item>
+        <item>Automático (Definido pelo sistema)</item>
+        <item>Automático (Definido pela Bateria)</item>
         <item>Escuro</item>
         <item>Claro</item>
     </string-array>
@@ -44,8 +44,8 @@
     <string-array name="separator_presets">
         <item>Nenhum</item>
         <item>\@</item>
+        <item>as</item>
         <item>em</item>
-        <item>para</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
