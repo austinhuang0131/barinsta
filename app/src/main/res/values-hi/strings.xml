@@ -139,10 +139,10 @@
     <string name="refresh">ताज़ा करें:</string>
     <string name="get_cookies">कुकिज पायें</string>
     <string name="desktop_2fa">डेस्कटप मोड करें</string>
-    <string name="time_settings_title_custom">Use custom format</string>
-    <string name="time_settings_title_separator">Separator</string>
-    <string name="time_settings_title_time_format">Time Format</string>
-    <string name="time_settings_title_date_format">Date Format</string>
+    <string name="time_settings_title_custom">कस्टम फर्माट ब्यबहार करें</string>
+    <string name="time_settings_title_separator">सेपरेटर</string>
+    <string name="time_settings_title_time_format">समय का स्बरुप</string>
+    <string name="time_settings_title_date_format">दिनांक स्वरूप</string>
     <string name="time_settings_title_preview">Preview</string>
     <string name="time_settings_swap_time">Swap Time and Date positions</string>
     <string name="quick_access_info_dialog">Favorites panel is for adding your favorite hashtags and/or usernames.\n\nAnd the Quick Access panel is for quickly switching between accounts.\n\nNote 1: Make sure to Login into each account [Settings &gt; Login] to add account to the list!\n\nNote 2: Log out of the current account and then log into the other account.</string>
