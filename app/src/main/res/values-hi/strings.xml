@@ -145,11 +145,12 @@
     <string name="time_settings_title_date_format">दिनांक स्वरूप</string>
     <string name="time_settings_title_preview">अवलोकन</string>
     <string name="time_settings_swap_time">समय और दिबस अदला-बदली करें</string>
-    <string name="quick_access_info_dialog">Favorites panel is for adding your favorite hashtags and/or usernames.\n\nAnd the Quick Access panel is for quickly switching between accounts.\n\nNote 1: Make sure to Login into each account [Settings &gt; Login] to add account to the list!\n\nNote 2: Log out of the current account and then log into the other account.</string>
-    <string name="quick_access_cannot_delete_curr">Cannot delete currently in use account</string>
-    <string name="quick_access_confirm_delete">Are you sure you want to delete \'%s\'?</string>
-    <string name="profile_viewer_imageinfo">Width: %d\nHeight: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nColor depth:</string>
+    <string name="quick_access_info_dialog">फेवराइट पैनल आपके पसन्दिता हैजटैग या/और ब्यक्ति के नाम को लिखने के लिए है।\n\nऔर क्विक आसेस पैनल दो या ज्यादा एकाऊँटस में 
+तुरन्त बदलाव कर सकते हैं।\n\n टिप्पणी १: सुनिश्चित करें कि प्रत्येक एकाउँट पर लग इन करें[सेटिंगस &gt; लग इन]\n\n२: बर्तमान एकाउँट से लग आउट करें और अन्य एक एकाउँट पे लग इन करें।</string>
+    <string name="quick_access_cannot_delete_curr">बर्तमीन ब्यबह्रत एकाउँट को मिटा नहिं सकते</string>
+    <string name="quick_access_confirm_delete">क्या आप सचमुच %s मिटाना चाहते हैं?</string>
+    <string name="profile_viewer_imageinfo">दैर्घ्य: %d\nप्रस्त: %d</string>
+    <string name="profile_viewer_colordepth_prefix">\nरंग के घनता:</string>
     <string name="profile_endpoint">Select profile picture endpoint\n(Does not affect hashtags)</string>
     <string name="open_profile">Open profile</string>
     <string name="view_pfp">View profile picture</string>
