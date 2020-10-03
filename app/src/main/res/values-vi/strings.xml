@@ -230,7 +230,7 @@
     <string name="discover_empty">Mục này đang bị bỏ trống...</string>
     <string name="update_available">Đã có bản cập nhật! (%s)</string>
     <string name="update_notice">Nhắc nhở: Nếu bạn tải về từ F-Droid, bạn phải cập nhật từ nó! Điều tương tự cho GitHub.</string>
-    <string name="updated">Cảm ơn bạn đã cập nhật InstaGrabber!</string>
+    <string name="updated">Thank you for updating Barinsta!</string>
     <string name="crash_title">Ứng dụng đã bị crash</string>
     <string name="crash_descr">Ối.. ứng dụng đã bị crash, nhưng đừng lo bạn có thể gửi báo cáo lỗi đến cho nhà phát triển để giúp anh ấy sửa vấn đề. (:</string>
     <string name="use_amoled_dark_theme">Sử dụng chế độ AMOLED cho nền tối</string>
