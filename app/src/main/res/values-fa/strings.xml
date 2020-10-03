@@ -231,7 +231,7 @@
     <string name="discover_empty">این دسته به نوعی خالی است...</string>
     <string name="update_available">یک بروزرسانی آمده است! (%s)</string>
     <string name="update_notice">یادآور: اگه شما از F-Droid دانلود کرده اید، شما باید از همانجا بروزرسانی کنید! برای GitHub هم همینطور.</string>
-    <string name="updated">از شما بابت بروز رسانتی InstaGrabber سپاسگزاریم!</string>
+    <string name="updated">Thank you for updating Barinsta!</string>
     <string name="crash_title">برنامه خراب شد</string>
     <string name="crash_descr">اوپسس.. برنامه خراب است، اما نگران نباشید شما میتوانید گزارش خطا را برای توسعه دهنده بفرستید برای کمک به او در درست کردن مشکل. (:</string>
     <string name="use_amoled_dark_theme">استفاده از حالت AMOLED در پوسته تاریک</string>
