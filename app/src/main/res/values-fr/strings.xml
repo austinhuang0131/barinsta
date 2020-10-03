@@ -230,7 +230,7 @@
     <string name="discover_empty">Cette catégorie est vide...</string>
     <string name="update_available">Une mise-à-jour est disponible! (%s)</string>
     <string name="update_notice">Rappel : Si vous avez téléchargé l\'application à partir de F-Droid, vous devez la mettre à jour depuis là ! Il en va de même pour GitHub.</string>
-    <string name="updated">Merci d\'avoir mis à jour InstaGrabber !</string>
+    <string name="updated">Thank you for updating Barinsta!</string>
     <string name="crash_title">L\'application a planté</string>
     <string name="crash_descr">Oups.. l\'application a planté, mais ne vous inquiétez pas, vous pouvez envoyer un rapport d\'erreur au développeur pour l\'aider à résoudre le problème :)</string>
     <string name="use_amoled_dark_theme">Utiliser le mode AMOLED pour le thème sombre</string>
