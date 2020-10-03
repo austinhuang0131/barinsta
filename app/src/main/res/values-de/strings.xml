@@ -230,7 +230,7 @@
     <string name="discover_empty">Diese Kategorie ist irgendwie leer...</string>
     <string name="update_available">Ein Update ist verfügbar! (%s)</string>
     <string name="update_notice">Erinnerung: Wenn du die App von F-Droid heruntergeladen hast, musst du sie dort aktualisieren! Das gilt auch für GitHub.</string>
-    <string name="updated">Danke für die Aktualisierung von InstaGrabber!</string>
+    <string name="updated">Thank you for updating Barinsta!</string>
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden, um ihm zu helfen, das Problem zu beheben. (:</string>
     <string name="use_amoled_dark_theme">AMOLED-Modus für Dunkles Design verwenden</string>
