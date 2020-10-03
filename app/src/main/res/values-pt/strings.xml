@@ -230,7 +230,7 @@
     <string name="discover_empty">Esta categoria está vazia...</string>
     <string name="update_available">Uma atualização está disponível! (%s)</string>
     <string name="update_notice">Lembrete: se você baixou do F-Droid, você deve atualizar a partir dele! O mesmo se aplica ao GitHub.</string>
-    <string name="updated">Thank you for updating Barinsta!</string>
+    <string name="updated">Obrigado por atualizar o Barinsta!</string>
     <string name="crash_title">O aplicativo travou</string>
     <string name="crash_descr">Ops... o aplicativo travou, mas não se preocupe, você pode enviar um relatório de erro para o desenvolvedor para ajudá-lo a corrigir o problema. (:</string>
     <string name="use_amoled_dark_theme">Usar o modo AMOLED no tema escuro</string>
