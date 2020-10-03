@@ -132,7 +132,6 @@ public class StoryViewerFragment extends Fragment {
     private StoryViewerFragmentArgs fragmentArgs;
     private ViewModel viewModel;
     private boolean isHighlight;
-    private boolean isLoggedIn;
 
     private final String cookie = settingsHelper.getString(Constants.COOKIE);
 
@@ -244,7 +243,6 @@ public class StoryViewerFragment extends Fragment {
     }
 
     private void init() {
-        isLoggedIn = !TextUtils.isEmpty(cookie) && CookieUtils.getUserIdFromCookie(cookie) != null;
         if (getArguments() == null) return;
         fragmentArgs = StoryViewerFragmentArgs.fromBundle(getArguments());
         currentFeedStoryIndex = fragmentArgs.getFeedStoryIndex();
@@ -745,14 +743,21 @@ public class StoryViewerFragment extends Fragment {
     }
 
     private void openProfile(final String username) {
+        final ActionBar actionBar = fragmentActivity.getSupportActionBar();
+        if (actionBar != null) {
+            actionBar.setSubtitle(null);
+        }
         final char t = username.charAt(0);
-        Log.d("austin_debug", username);
         if (t == '@') {
             final NavDirections action = HashTagFragmentDirections.actionGlobalProfileFragment(username);
             NavHostFragment.findNavController(this).navigate(action);
         }
         else if (t == '#') {
             final NavDirections action = HashTagFragmentDirections.actionGlobalHashTagFragment(username.substring(1));
+            NavHostFragment.findNavController(this).navigate(action);
+        }
+        else {
+            final NavDirections action = ProfileFragmentDirections.actionGlobalLocationFragment(username.split(" \\(")[1].replace(")", ""));
             NavHostFragment.findNavController(this).navigate(action);
         }
     }

@@ -66,7 +66,7 @@ public class NavigationExtensions {
                     // throw new RuntimeException("null cannot be cast to non-null NavHostFragment");
                 }
                 final NavHostFragment selectedFragment = (NavHostFragment) fragment;
-                if (!firstFragmentTag.equals(newlySelectedItemTag)) {
+                if (firstFragmentTag != null && !firstFragmentTag.equals(newlySelectedItemTag)) {
                     FragmentTransaction fragmentTransaction = fragmentManager
                             .beginTransaction()
                             .setCustomAnimations(

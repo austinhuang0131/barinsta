@@ -168,8 +168,7 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
         if (context == null) return null;
         final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
         preference.setKey(Constants.DOWNLOAD_USER_FOLDER);
-        preference.setTitle("Download to username folder");
-        preference.setSummary(R.string.download_user_folder);
+        preference.setTitle(R.string.download_user_folder);
         preference.setIconSpaceReserved(false);
         return preference;
     }

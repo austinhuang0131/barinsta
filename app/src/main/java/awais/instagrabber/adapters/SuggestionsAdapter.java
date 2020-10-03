@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.cursoradapter.widget.CursorAdapter;
 
+import awais.instagrabber.R;
 import awais.instagrabber.databinding.ItemSuggestionBinding;
 import awais.instagrabber.models.enums.SuggestionType;
 
@@ -38,7 +39,7 @@ public final class SuggestionsAdapter extends CursorAdapter {
         // 0, 1       , 2       , 3   , 4     , 5
         final String fullName = cursor.getString(2);
         String username = cursor.getString(1);
-        final String picUrl = cursor.getString(4);
+        String picUrl = cursor.getString(4);
         final boolean verified = cursor.getString(5).charAt(0) == 't';
 
         final String type = cursor.getString(3);
@@ -61,6 +62,7 @@ public final class SuggestionsAdapter extends CursorAdapter {
                 break;
             case TYPE_LOCATION:
                 query = fullName;
+                picUrl = "res:/" + R.drawable.ic_location;
                 break;
             default:
                 return; // will never come here

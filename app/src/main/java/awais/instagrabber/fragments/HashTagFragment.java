@@ -233,7 +233,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
             if (postModels == null || postModels.size() == 0) return;
             if (postModels.get(0) == null) return;
             final String postId = postModels.get(0).getPostId();
-            final boolean isId = postId != null;
+            final boolean isId = postId != null && isLoggedIn;
             final String[] idsOrShortCodes = new String[postModels.size()];
             for (int i = 0; i < postModels.size(); i++) {
                 idsOrShortCodes[i] = isId ? postModels.get(i).getPostId()

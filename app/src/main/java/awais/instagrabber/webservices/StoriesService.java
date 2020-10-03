@@ -221,8 +221,8 @@ public class StoriesService extends BaseService {
                             if (locations != null) {
                                 for (int h = 0; h < locations.length(); ++h) {
                                     mentions[h + (hashtags == null ? 0 : hashtags.length()) + (atmarks == null ? 0 : atmarks.length())] =
-                                            locations.getJSONObject(h).getJSONObject("location").getLong("pk")
-                                                    + "/ (" + locations.getJSONObject(h).getJSONObject("location").getString("short_name") + ")";
+                                            locations.getJSONObject(h).getJSONObject("location").getString("short_name")
+                                                    + " (" + locations.getJSONObject(h).getJSONObject("location").getLong("pk") + ")";
                                 }
                             }
                             if (mentions.length != 0) model.setMentions(mentions);
@@ -256,7 +256,7 @@ public class StoriesService extends BaseService {
             builder.append("tags/");
         }
         else if (highlight) {
-            builder.append("feed/reels_media?user_ids=");
+            builder.append("feed/reels_media/?user_ids=");
         }
         else {
             builder.append("feed/user/");
