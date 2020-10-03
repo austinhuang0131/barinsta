@@ -230,7 +230,7 @@
     <string name="discover_empty">Esta categoría está vacía...</string>
     <string name="update_available">¡Hay una actualización disponible! (%s)</string>
     <string name="update_notice">Recordatorio: si ha descargado de F-Droid, debe actualizar desde él. Lo mismo se aplica a GitHub.</string>
-    <string name="updated">¡Gracias por actualizar InstaGrabber!</string>
+    <string name="updated">Thank you for updating Barinsta!</string>
     <string name="crash_title">App atascada</string>
     <string name="crash_descr">Vaya.. la aplicación dejó de funcionar, pero no te preocupes por un enviar un reporte de error al desarrollador para solucionar este problema. (:</string>
     <string name="use_amoled_dark_theme">Usar modo AMOLED para el tema oscuro</string>
