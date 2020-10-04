@@ -230,7 +230,7 @@
     <string name="discover_empty">这个板块居然是空的...</string>
     <string name="update_available">检测到有新版本！ (%s)</string>
     <string name="update_notice">注意：若您下载的是F-Droid版本，那您还得在F-Droid更新！GitHub版本也是如此。</string>
-    <string name="updated">Thank you for updating Barinsta!</string>
+    <string name="updated">感谢你更新Barinsta！</string>
     <string name="crash_title">应用崩溃了</string>
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
     <string name="use_amoled_dark_theme">使用 AMOLED 夜间主题</string>
