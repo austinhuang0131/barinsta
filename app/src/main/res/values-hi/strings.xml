@@ -185,9 +185,9 @@
     <string name="dms_action_leave">छोड़ दें</string>
     <string name="dms_action_leave_question">इसी बार्तालाप को छोड दें?</string>
     <string name="dms_action_kick">बाहर निकालें</string>
-    <string name="dms_left_users">Left users</string>
-    <string name="direct_download">Download directly</string>
-    <string name="direct_download_desc">Downloads posts directly to the phone!</string>
+    <string name="dms_left_users">अवशेष ब्यबहारकारी</string>
+    <string name="direct_download">सीधे डाउनलोड करें</string>
+    <string name="direct_download_desc">पोस्ट को सिधे अपने फोन पर डाउनलोड करें</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="direct_download_perms_ask">Please grant permissions and try downloading again!</string>
     <string name="downloader_started">Download started</string>
