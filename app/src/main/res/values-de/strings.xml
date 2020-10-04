@@ -80,8 +80,8 @@
     <string name="respond_story">Antworten</string>
     <string name="answer_hint">Antwort...</string>
     <string name="answered_story">Antwort erfolgreich!</string>
-    <string name="reply_story">Antworte auf eine Story</string>
-    <string name="reply_hint">Nachricht senden...</string>
+    <string name="reply_story">Auf Story antworten</string>
+    <string name="reply_hint">Antworten...</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">Du hast bereits geantwortet!</string>
     <string name="story_mentions">Erwähnungen</string>
