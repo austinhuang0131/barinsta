@@ -230,7 +230,7 @@
     <string name="discover_empty">Bu kategori nasıl oluyorsa boş...</string>
     <string name="update_available">Yeni bir güncelleme mevcut! (%s)</string>
     <string name="update_notice">Hatırlatıcı: Eğer F-Droid kullanarak kurduysanız güncellemeyi oradan yapmalısınız. Aynısı GitHub için de geçerli.</string>
-    <string name="updated">Thank you for updating Barinsta!</string>
+    <string name="updated">Barinsta\'yı güncellediğin için teşekkürler!</string>
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="use_amoled_dark_theme">\'AMOLED ekran için Koyu Tema\'yı kullan</string>
