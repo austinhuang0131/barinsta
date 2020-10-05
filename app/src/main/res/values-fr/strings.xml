@@ -43,7 +43,7 @@
     <string name="show_feed">Afficher le flux utilisateur (Ne fonctionne que lorsque l\'utilisateur est connecté)</string>
     <string name="save_to_folder">Enregistrer dans un dossier personnalisé</string>
     <string name="select_folder">Sélectionnez un dossier</string>
-    <string name="theme_settings">Theme</string>
+    <string name="theme_settings">Thème</string>
     <string name="login_settings">N\'affecte que les utilisateurs connectés :</string>
     <string name="anonymous_settings">N\'affecte que les utilisateurs anonymes:</string>
     <string name="privacy_warning">Confidentialité</string>
@@ -252,13 +252,13 @@
     <string name="relogin">Relogin</string>
     <string name="relogin_summary">Refresh your cookies if facing any issues</string>
     <string name="logout_success">Successfully logged out!</string>
-    <string name="dm_thread_info">Info</string>
+    <string name="dm_thread_info">Informations</string>
     <string name="mark_as_seen">Mark as seen</string>
     <string name="skip_update_checkbox">Do not show again until next update</string>
     <string name="version">Version</string>
     <string name="pref_start_screen">Start screen</string>
     <string name="pref_category_general">General</string>
-    <string name="pref_category_theme">Theme</string>
+    <string name="pref_category_theme">Thème</string>
     <string name="pref_category_downloads">Downloads</string>
     <string name="pref_category_locale">Locale</string>
     <string name="account">Account</string>
