@@ -230,7 +230,7 @@
     <string name="discover_empty">Entah bagaimana kategori ini kosong...</string>
     <string name="update_available">Ada pembaruan! (%s)</string>
     <string name="update_notice">Kiat: Jika anda mengunduh InstaGrabber dari F-Droid, perbarui dari situ. Juga berlaku jika diunduh lewat GitHub.</string>
-    <string name="updated">Thank you for updating Barinsta!</string>
+    <string name="updated">Terima kasih sudah menggunakan Barinsta!</string>
     <string name="crash_title">Aplikasi berhenti bekerja…</string>
     <string name="crash_descr">Ups! Aplikasi berhenti bekerja! Jangan khawatir, anda dapat mengirimkan laporan galat/kesalahan kepada Pengembang untuk membantunya memperbaiki masalah ini. (:</string>
     <string name="use_amoled_dark_theme">Gunakan AMOLED untuk tema gelap</string>
