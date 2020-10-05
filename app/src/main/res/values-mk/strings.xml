@@ -230,7 +230,7 @@
     <string name="discover_empty">Оваа категорија некако магично е празна...</string>
     <string name="update_available">Нова надоградба е присутна! (%s)</string>
     <string name="update_notice">Потсетник: Ако го имате превземено од F-Droid, морате од таму да надоградите! Истото важи и за верзиите од GitHub.</string>
-    <string name="updated">Thank you for updating Barinsta!</string>
+    <string name="updated">Ви благодариме за надоградбата на Barinsta!</string>
     <string name="crash_title">Апликацијата крашна</string>
     <string name="crash_descr">аааагхххх.. апликацијаа крашна, ама не се грижете, можете да пратите листа на фатални грешки кај програмерите за да ви помогнат да се поправи проблемот. (:</string>
     <string name="use_amoled_dark_theme">Користи AMOLED тема (потемна од темната) за Темна тема</string>
