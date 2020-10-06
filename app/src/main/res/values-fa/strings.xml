@@ -231,7 +231,7 @@
     <string name="discover_empty">این دسته به نوعی خالی است...</string>
     <string name="update_available">یک بروزرسانی آمده است! (%s)</string>
     <string name="update_notice">یادآور: اگه شما از F-Droid دانلود کرده اید، شما باید از همانجا بروزرسانی کنید! برای GitHub هم همینطور.</string>
-    <string name="updated">Thank you for updating Barinsta!</string>
+    <string name="updated">از شما بابت بروز رسانی Barinsta سپاسگزاریم!</string>
     <string name="crash_title">برنامه خراب شد</string>
     <string name="crash_descr">اوپسس.. برنامه خراب است، اما نگران نباشید شما میتوانید گزارش خطا را برای توسعه دهنده بفرستید برای کمک به او در درست کردن مشکل. (:</string>
     <string name="use_amoled_dark_theme">استفاده از حالت AMOLED در پوسته تاریک</string>
@@ -281,17 +281,17 @@
     <string name="dark_theme_settings">پوسته تیره</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">باریستا</string>
     <string name="dark_material_dark_theme">متریال تیره</string>
-    <string name="added_to_favs">Added to Favorites</string>
-    <string name="add_to_favorites">Add to favorites</string>
-    <string name="accounts">Accounts</string>
-    <string name="hashtags">Hashtags</string>
-    <string name="locations">Locations</string>
-    <string name="unknown">Unknown</string>
-    <string name="removed_from_favs">Removed from Favourites</string>
-    <string name="backup_and_restore">Backup &amp; Restore</string>
-    <string name="create_backup">Create</string>
-    <string name="restore_backup">Restore</string>
-    <string name="file_chosen_label">File:</string>
-    <string name="enter_password">Enter password</string>
-    <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
+    <string name="added_to_favs">به علاقه مندی ها افزوده شد</string>
+    <string name="add_to_favorites">افزودن به علاقه ‌مندی ‌ها</string>
+    <string name="accounts">حساب ها</string>
+    <string name="hashtags">هشتگ ها</string>
+    <string name="locations">مکان ‌ها</string>
+    <string name="unknown">ناشناخته</string>
+    <string name="removed_from_favs">از علاقه مندی ها حذف شده</string>
+    <string name="backup_and_restore">پشتیبان گیری &amp; بازیابی</string>
+    <string name="create_backup">ایجاد</string>
+    <string name="restore_backup">بازیابی</string>
+    <string name="file_chosen_label">فایل:</string>
+    <string name="enter_password">رمز عبور را وارد کنید</string>
+    <string name="select_backup_file">یک فایل پشتیبان گیری انتخاب کنید (.zaai/.backup)</string>
 </resources>
