@@ -190,11 +190,11 @@
     <string name="direct_download_desc">पोस्ट को सिधे अपने फोन पर डाउनलोड करें</string>
     <string name="direct_download_loading">पोस्ट(स्) ला रहे हैं</string>
     <string name="direct_download_perms_ask">अनुमति दें और फिर से प्रयास करें!</string>
-    <string name="downloader_started">Download started</string>
-    <string name="downloader_complete">Download completed</string>
-    <string name="downloader_downloading_post">Downloading post</string>
-    <string name="downloader_downloading_media">Downloading media</string>
-    <string name="downloader_downloading_pfp">Downloading profile picture</string>
+    <string name="downloader_started">डाउनलोड शुरू...</string>
+    <string name="downloader_complete">डाउनलोड समाप्त हुआ</string>
+    <string name="downloader_downloading_post">पोस्ट डाउनलोड हो रहा है</string>
+    <string name="downloader_downloading_media">मिडीया डाउनलोड हो रहा है</string>
+    <string name="downloader_downloading_pfp">प्रोफाइल चित्र डाउनलोड करें</string>
     <string name="downloader_downloaded_in_folder">File downloaded in Downloads folder!</string>
     <string name="downloader_unknown_error">Unknown error occurred!!!</string>
     <string name="downloader_error_creating_folder">Error creating folder!</string>
