@@ -189,7 +189,7 @@
     <string name="direct_download">सीधे डाउनलोड करें</string>
     <string name="direct_download_desc">पोस्ट को सिधे अपने फोन पर डाउनलोड करें</string>
     <string name="direct_download_loading">पोस्ट(स्) ला रहे हैं</string>
-    <string name="direct_download_perms_ask">Please grant permissions and try downloading again!</string>
+    <string name="direct_download_perms_ask">अनुमति दें और फिर से प्रयास करें!</string>
     <string name="downloader_started">Download started</string>
     <string name="downloader_complete">Download completed</string>
     <string name="downloader_downloading_post">Downloading post</string>
