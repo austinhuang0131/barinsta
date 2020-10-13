@@ -207,11 +207,11 @@
     <string name="comment_viewer_unlike_comment">टिप्पणी को पसन्द न करें</string>
     <string name="comment_viewer_delete_comment">टिप्पणी हटा दें</string>
     <string name="comment_send_empty_comment">रिक्त टिप्पणी न करें!</string>
-    <string name="comment_view_mention_user_search">Do you want to search the username?</string>
-    <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
-    <string name="comment_view_mention_location_search">Do you want to search the location?</string>
-    <string name="followers_type_followers">Followers</string>
-    <string name="followers_type_following">Following</string>
+    <string name="comment_view_mention_user_search">ब्यबहारकारी के नाम ढूंढने चाहते हैं?</string>
+    <string name="comment_view_mention_hash_search">हाजट्याग को ढूंढने चाहते हैं?</string>
+    <string name="comment_view_mention_location_search">स्थान को ढूंढने चाहते हैं?</string>
+    <string name="followers_type_followers">अनुयायी</string>
+    <string name="followers_type_following">फ़ॉलो कर रहे हैं</string>
     <string name="followers_compare">Comparing followers &amp; following</string>
     <string name="followers_both_following">Both following each other</string>
     <string name="followers_not_following">not following %s</string>
