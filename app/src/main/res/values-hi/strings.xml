@@ -212,7 +212,7 @@
     <string name="comment_view_mention_location_search">स्थान को ढूंढने चाहते हैं?</string>
     <string name="followers_type_followers">अनुयायी</string>
     <string name="followers_type_following">फ़ॉलो कर रहे हैं</string>
-    <string name="followers_compare">Comparing followers &amp; following</string>
+    <string name="followers_compare">फलोअर्स &amp; फलोइंग के तुलना</string>
     <string name="followers_both_following">Both following each other</string>
     <string name="followers_not_following">not following %s</string>
     <string name="followers_not_follower">%s is not following</string>
