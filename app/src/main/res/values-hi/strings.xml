@@ -213,10 +213,10 @@
     <string name="followers_type_followers">अनुयायी</string>
     <string name="followers_type_following">फ़ॉलो कर रहे हैं</string>
     <string name="followers_compare">फलोअर्स &amp; फलोइंग के तुलना</string>
-    <string name="followers_both_following">Both following each other</string>
-    <string name="followers_not_following">not following %s</string>
-    <string name="followers_not_follower">%s is not following</string>
-    <string name="login_error_loading_cookies">Error loading cookies</string>
+    <string name="followers_both_following">एक दुसरे को फोलो कर रहें हैं</string>
+    <string name="followers_not_following">फोलो नहीं कर रहा %s</string>
+    <string name="followers_not_follower">%s फोलो नहीं कर रहा है</string>
+    <string name="login_error_loading_cookies">कुकीज लोड करने में त्रुटि</string>
     <string name="login_success_loading_cookies">Successfully loaded cookies!\nIf you still can\'t open private pages/posts, re-login!</string>
     <string name="comment_hint">Write a new comment...</string>
     <string name="dm_hint">Write a new message...</string>
