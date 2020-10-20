@@ -226,8 +226,8 @@
     <string name="mention_notif">आपका उल्लेख किया:</string>
     <string name="request_notif">आपको फॉलो करने का निवेदन किया</string>
     <string name="request_approve">निवेदन को ग्रहण करें</string>
-    <string name="request_reject">Reject request</string>
-    <string name="share_public_post">Share this public post to...</string>
+    <string name="request_reject">अनुरोध प्रत्याख्यान करें</string>
+    <string name="share_public_post">इसी सार्वजनिक पोस्ट को भेजें...</string>
     <string name="share_private_post">This is a private post! Share to those who can view them!</string>
     <string name="discover_empty">This category is somehow empty...</string>
     <string name="update_available">An update is available! (%s)</string>
