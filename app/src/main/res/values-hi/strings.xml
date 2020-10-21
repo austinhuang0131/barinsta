@@ -228,8 +228,8 @@
     <string name="request_approve">निवेदन को ग्रहण करें</string>
     <string name="request_reject">अनुरोध प्रत्याख्यान करें</string>
     <string name="share_public_post">इसी सार्वजनिक पोस्ट को भेजें...</string>
-    <string name="share_private_post">This is a private post! Share to those who can view them!</string>
-    <string name="discover_empty">This category is somehow empty...</string>
+    <string name="share_private_post">यह एक गुप्त पोस्ट है! उन लोगों को बांटना जो उन्हें देख सकते हैं!</string>
+    <string name="discover_empty">यह वर्ग रिक्त है...</string>
     <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
     <string name="updated">Thank you for updating Barinsta!</string>
