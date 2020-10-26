@@ -218,7 +218,7 @@
     <string name="login_success_loading_cookies">Cookies carregados com sucesso!\nSe você ainda não consegue abrir páginas/postagens privadas, faça o login novamente!</string>
     <string name="comment_hint">Escrever um novo comentário...</string>
     <string name="dm_hint">Escrever uma nova mensagem...</string>
-    <string name="liked_notif">Curtiu sua postagem</string>
+    <string name="liked_notif">Curtiu sua publicação</string>
     <string name="comment_notif">Comentou em sua postagem:</string>
     <string name="follow_notif">Começou a seguir você</string>
     <string name="mention_notif">Mencionou você:</string>
@@ -242,7 +242,7 @@
     <string name="activity_count_comments">%d comentários</string>
     <string name="activity_count_commentlikes">%d comentários curtidos</string>
     <string name="activity_count_usertags">%d marcações</string>
-    <string name="activity_count_likes">%d likes</string>
+    <string name="activity_count_likes">%d curtidas</string>
     <string name="activity_notloggedin">Você deslogou antes de clicar nessa notificação?!</string>
     <string name="feed">Feed</string>
     <string name="profile">Perfil</string>
