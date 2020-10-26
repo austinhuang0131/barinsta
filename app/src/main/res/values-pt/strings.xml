@@ -186,7 +186,7 @@
     <string name="dms_left_users">Usuários que saíram</string>
     <string name="direct_download">Baixar diretamente</string>
     <string name="direct_download_desc">Baixar as publicações diretamente no telefone!</string>
-    <string name="direct_download_loading">Buscando publicações</string>
+    <string name="direct_download_loading">Buscando publicação(ões)</string>
     <string name="direct_download_perms_ask">Por favor, conceda as permissões e tente baixar novamente!</string>
     <string name="downloader_started">Download iniciado</string>
     <string name="downloader_complete">Download concluído</string>
