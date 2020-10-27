@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>پیش فرض سیستم</item>
+        <item>پیشگزیده سامانه</item>
         <item>انگلیسی</item>
         <item>فرانسوی [ با سپاس از kernoeb@ ]</item>
         <item>اسپانیایی [ با سپاس از sguinetti@ ]</item>
@@ -32,7 +32,7 @@
     <string-array name="theme_presets">
         <item>خودکار / پیروی از سیستم</item>
         <item>خودکار / پیروی از باتری</item>
-        <item>تاریک</item>
+        <item>تیره</item>
         <item>روشن</item>
     </string-array>
     <string-array name="theme_presets_values">
