@@ -76,10 +76,10 @@
     <string name="votef_story_poll">رای با موفقیت بود!</string>
     <string name="voted_story_poll">در حال حاظر شما رای داده اید!</string>
     <string name="respond_story">پاسخ</string>
-    <string name="answer_hint">جواب...</string>
+    <string name="answer_hint">Answer…</string>
     <string name="answered_story">جواب درست است!</string>
     <string name="reply_story">پاسخ به استوری</string>
-    <string name="reply_hint">پاسخ...</string>
+    <string name="reply_hint">Reply…</string>
     <string name="story_quiz">نظرسنجی</string>
     <string name="story_quizzed">در حال حاظر شما رای داده اید!</string>
     <string name="story_mentions">یادآوری ها</string>
@@ -107,7 +107,9 @@
     <string name="tagged">تگ شده</string>
     <string name="dm_person">پیام</string>
     <string name="like">لایک (%s)</string>
+    <string name="like_without_count">Like</string>
     <string name="unlike">نپسندیدن (%s)</string>
+    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">نشانک</string>
     <string name="unbookmark">حذف نشانک</string>
     <string name="follow">دنبال کردن</string>
@@ -189,7 +191,7 @@
     <string name="direct_download_perms_ask">لطفا دسترسی بدهید و تلاش کنید دوباره دانلود کنید!</string>
     <string name="downloader_started">دانلود شروع شده</string>
     <string name="downloader_complete">دانلود کامل شده</string>
-    <string name="downloader_downloading_post">دانلود پست ها</string>
+    <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">دانلود رسانه ها</string>
     <string name="downloader_downloading_pfp">دانلود عکس پروفایل</string>
     <string name="downloader_downloaded_in_folder">فایل دانلود شده در پوشه دانلود!</string>
@@ -215,18 +217,19 @@
     <string name="followers_not_follower">%s دنبال نمی کنند</string>
     <string name="login_error_loading_cookies">خطای بالا آوردن کوکی ها</string>
     <string name="login_success_loading_cookies">کوکی ها با موفقیت بارگیری شده!\n اگر هنوز نمی توانید صفحه شخصی/پست ها را باز کنید، دوباره وارد حساب شوید!</string>
-    <string name="comment_hint">نوشت یک کامنت جدید...</string>
-    <string name="dm_hint">نوشتن یک پیام جدید...</string>
+    <string name="comment_hint">Write a new comment…</string>
+    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">پست شمارا پسندید</string>
     <string name="comment_notif">کامنت رو پست شما گذاشته:</string>
     <string name="follow_notif">شروع به دنبال کردن شما کرده</string>
     <string name="mention_notif">به شما اشاره کرده:</string>
+    <string name="tagged_notif">Tagged you in a post</string>
     <string name="request_notif">درخواست دنبال کردن شما را کرده</string>
     <string name="request_approve">قبول درخواست</string>
     <string name="request_reject">رد درخواست</string>
-    <string name="share_public_post">به اشتراک گذاری این پست عمومی در...</string>
+    <string name="share_public_post">Share this public post to…</string>
     <string name="share_private_post">این پست شخصی است! آنهایی رو به اشتراک بزارید که میتوانید ببینید!</string>
-    <string name="discover_empty">این دسته به نوعی خالی است...</string>
+    <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">یک بروزرسانی آمده است! (%s)</string>
     <string name="update_notice">یادآور: اگه شما از F-Droid دانلود کرده اید، شما باید از همانجا بروزرسانی کنید! برای GitHub هم همینطور.</string>
     <string name="updated">از شما بابت بروز رسانی Barinsta سپاسگزاریم!</string>
@@ -235,7 +238,7 @@
     <string name="use_amoled_dark_theme">استفاده از حالت AMOLED در پوسته تاریک</string>
     <string name="action_notif">فعالیت</string>
     <string name="select_picture">انتخاب تصویر</string>
-    <string name="uploading">درحال آپلود...</string>
+    <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">شما باید:</string>
     <string name="activity_count_relationship">%d دنبال کننده‌</string>
     <string name="activity_count_comments">%d دیدگاه</string>
@@ -292,4 +295,32 @@
     <string name="file_chosen_label">فایل:</string>
     <string name="enter_password">رمز عبور را وارد کنید</string>
     <string name="select_backup_file">یک فایل پشتیبان گیری انتخاب کنید (.zaai/.backup)</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="caption">Caption</string>
+    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="liking">Liking…</string>
+    <string name="like_unsuccessful">Like unsuccessful</string>
+    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
+    <string name="unliking">Unliking…</string>
+    <string name="controls">Controls</string>
+    <string name="saving">Saving…</string>
+    <string name="removing">Removing…</string>
+    <string name="save_unsuccessful">Save unsuccessful</string>
+    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloader_downloading_child">Download item %d of %d</string>
+    <string name="delete">Delete</string>
+    <string name="comment">Comment</string>
+    <string name="layout">Layout</string>
+    <string name="opening_post">Opening post...</string>
+    <string name="share">Share</string>
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <plurals name="comments_count">
+        <item quantity="one">%d comment</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
 </resources>
