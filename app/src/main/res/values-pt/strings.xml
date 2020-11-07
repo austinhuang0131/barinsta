@@ -293,7 +293,7 @@
     <string name="restore_backup">Restaurar</string>
     <string name="file_chosen_label">Arquivo:</string>
     <string name="enter_password">Digite a senha</string>
-    <string name="select_backup_file">Selecionar um arquivo de becape (.zaai/.backup)</string>
+    <string name="select_backup_file">Selecione um arquivo de becape (.zaai/.backup)</string>
     <string name="apply">Aplicar</string>
     <string name="save">Salvar</string>
     <string name="caption">Legenda</string>
