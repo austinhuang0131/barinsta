@@ -76,10 +76,10 @@
     <string name="votef_story_poll">Bình chọn thành công!</string>
     <string name="voted_story_poll">Bạn đã bình chọn rồi!</string>
     <string name="respond_story">Trả lời</string>
-    <string name="answer_hint">Trả lời...</string>
+    <string name="answer_hint">Answer…</string>
     <string name="answered_story">Trả lời thành công!</string>
     <string name="reply_story">Trả lời story</string>
-    <string name="reply_hint">Trả lời...</string>
+    <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Câu hỏi</string>
     <string name="story_quizzed">Bạn đã trả lời rồi!</string>
     <string name="story_mentions">Đề cập</string>
@@ -106,7 +106,9 @@
     <string name="tagged">Đã gắn thẻ</string>
     <string name="dm_person">Tin nhắn</string>
     <string name="like">Thích (%s)</string>
+    <string name="like_without_count">Like</string>
     <string name="unlike">Bỏ Thích (%s)</string>
+    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Dấu trang</string>
     <string name="unbookmark">Gỡ dấu trang</string>
     <string name="follow">Theo dõi</string>
@@ -188,7 +190,7 @@
     <string name="direct_download_perms_ask">Xin hãy chấp nhận quyền và thử tải lại!</string>
     <string name="downloader_started">Đã bắt đầu tải xuống</string>
     <string name="downloader_complete">Tải xuống hoàn tất</string>
-    <string name="downloader_downloading_post">Đang tải xuống bài viết</string>
+    <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Đang tải xuống phương tiện</string>
     <string name="downloader_downloading_pfp">Đang tải xuống ảnh đại diện</string>
     <string name="downloader_downloaded_in_folder">Tệp đã được tải xuống trong thư mục Downloads!</string>
@@ -214,18 +216,19 @@
     <string name="followers_not_follower">%s không theo dõi</string>
     <string name="login_error_loading_cookies">Lỗi khi tải cookies</string>
     <string name="login_success_loading_cookies">Tải cookies thành công!\nNếu bạn vẫn không thể mở trang/bài riêng tư, hãy đăng nhập lại!</string>
-    <string name="comment_hint">Viết bình luận mới...</string>
-    <string name="dm_hint">Viết tin nhắn mới...</string>
+    <string name="comment_hint">Write a new comment…</string>
+    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Đã thích bài đăng của bạn</string>
     <string name="comment_notif">Đã bình luận về bài đăng của bạn:</string>
     <string name="follow_notif">Đã bắt đầu theo dõi bạn</string>
     <string name="mention_notif">Đã nhắc đến bạn:</string>
+    <string name="tagged_notif">Tagged you in a post</string>
     <string name="request_notif">Đã yêu cầu theo dõi bạn</string>
     <string name="request_approve">Duyệt yêu cầu</string>
     <string name="request_reject">Từ chối yêu cầu</string>
-    <string name="share_public_post">Chia sẻ bài viết công khai này đến...</string>
+    <string name="share_public_post">Share this public post to…</string>
     <string name="share_private_post">Đây là một bài viết riêng tư! Hãy chia sẻ đến những ai có thể xem chúng!</string>
-    <string name="discover_empty">Mục này đang bị bỏ trống...</string>
+    <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">Đã có bản cập nhật! (%s)</string>
     <string name="update_notice">Nhắc nhở: Nếu bạn tải về từ F-Droid, bạn phải cập nhật từ nó! Điều tương tự cho GitHub.</string>
     <string name="updated">Cảm ơn bạn đã cập nhật Barinsta!</string>
@@ -234,7 +237,7 @@
     <string name="use_amoled_dark_theme">Sử dụng chế độ AMOLED cho nền tối</string>
     <string name="action_notif">Hoạt động</string>
     <string name="select_picture">Chọn hình ảnh</string>
-    <string name="uploading">Đang tải lên...</string>
+    <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">Bạn có:</string>
     <string name="activity_count_relationship">%d người theo dõi</string>
     <string name="activity_count_comments">%d bình luận</string>
@@ -291,4 +294,30 @@
     <string name="file_chosen_label">Tập tin:</string>
     <string name="enter_password">Nhập mật khẩu</string>
     <string name="select_backup_file">Chọn tệp sao lưu (.zaai/.backup)</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="caption">Caption</string>
+    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="liking">Liking…</string>
+    <string name="like_unsuccessful">Like unsuccessful</string>
+    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
+    <string name="unliking">Unliking…</string>
+    <string name="controls">Controls</string>
+    <string name="saving">Saving…</string>
+    <string name="removing">Removing…</string>
+    <string name="save_unsuccessful">Save unsuccessful</string>
+    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloader_downloading_child">Download item %d of %d</string>
+    <string name="delete">Delete</string>
+    <string name="comment">Comment</string>
+    <string name="layout">Layout</string>
+    <string name="opening_post">Opening post...</string>
+    <string name="share">Share</string>
+    <plurals name="likes_count">
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <plurals name="comments_count">
+        <item quantity="other">%d comments</item>
+    </plurals>
 </resources>
