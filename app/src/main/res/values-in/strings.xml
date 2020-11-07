@@ -76,10 +76,10 @@
     <string name="votef_story_poll">Berhasil memilih!</string>
     <string name="voted_story_poll">Anda sudah memilih!</string>
     <string name="respond_story">Tanggapi</string>
-    <string name="answer_hint">Jawaban...</string>
+    <string name="answer_hint">Answer…</string>
     <string name="answered_story">Berhasil menjawab!</string>
     <string name="reply_story">Balas cerita</string>
-    <string name="reply_hint">Balas...</string>
+    <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Kuis</string>
     <string name="story_quizzed">Anda sudah menjawab!</string>
     <string name="story_mentions">Sebutan</string>
@@ -106,7 +106,9 @@
     <string name="tagged">Ditandai</string>
     <string name="dm_person">Pesan</string>
     <string name="like">Suka (%s)</string>
+    <string name="like_without_count">Like</string>
     <string name="unlike">Batal suka (%s)</string>
+    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Markah</string>
     <string name="unbookmark">Batalkan Markah</string>
     <string name="follow">Ikuti</string>
@@ -188,7 +190,7 @@
     <string name="direct_download_perms_ask">Mohon beri izin dan coba unduh lagi!</string>
     <string name="downloader_started">Unduhan dimulai</string>
     <string name="downloader_complete">Unduhan selesai</string>
-    <string name="downloader_downloading_post">Mengunduh kiriman</string>
+    <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Mengunduh media</string>
     <string name="downloader_downloading_pfp">Mengunduh foto profil</string>
     <string name="downloader_downloaded_in_folder">Berkas diunduh ke folder unduhan!</string>
@@ -214,18 +216,19 @@
     <string name="followers_not_follower">%s tidak mengikuti</string>
     <string name="login_error_loading_cookies">Galat memuat cookies</string>
     <string name="login_success_loading_cookies">Berhasil memuat cookies!\nJika anda tetap tidak dapat membuka laman/kiriman pribadi, coba masuk lagi!</string>
-    <string name="comment_hint">Tulis komentar baru...</string>
-    <string name="dm_hint">Tulis pesan baru...</string>
+    <string name="comment_hint">Write a new comment…</string>
+    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Menyukai kiriman anda</string>
     <string name="comment_notif">Mengomentari kiriman anda:</string>
     <string name="follow_notif">Mulai mengikuti anda</string>
     <string name="mention_notif">Menyebut anda:</string>
+    <string name="tagged_notif">Tagged you in a post</string>
     <string name="request_notif">Meminta mengikuti anda</string>
     <string name="request_approve">Terima permintaan</string>
     <string name="request_reject">Tolak permintaan</string>
-    <string name="share_public_post">Bagikan kiriman publik ini ke...</string>
+    <string name="share_public_post">Share this public post to…</string>
     <string name="share_private_post">Kiriman privat! Bagikan kepada orang yang bisa melihatnya!</string>
-    <string name="discover_empty">Entah bagaimana kategori ini kosong...</string>
+    <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">Ada pembaruan! (%s)</string>
     <string name="update_notice">Kiat: Jika anda mengunduh InstaGrabber dari F-Droid, perbarui dari situ. Juga berlaku jika diunduh lewat GitHub.</string>
     <string name="updated">Terima kasih sudah menggunakan Barinsta!</string>
@@ -234,7 +237,7 @@
     <string name="use_amoled_dark_theme">Gunakan AMOLED untuk tema gelap</string>
     <string name="action_notif">Aktivitas</string>
     <string name="select_picture">Pilih Gambar</string>
-    <string name="uploading">Mengunggah...</string>
+    <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">Anda memiliki:</string>
     <string name="activity_count_relationship">%d mengikuti</string>
     <string name="activity_count_comments">%d komentar</string>
@@ -291,4 +294,30 @@
     <string name="file_chosen_label">Berkas:</string>
     <string name="enter_password">Masukkan sandi</string>
     <string name="select_backup_file">Pilih berkas cadangan (.zaai/.backup)</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="caption">Caption</string>
+    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="liking">Liking…</string>
+    <string name="like_unsuccessful">Like unsuccessful</string>
+    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
+    <string name="unliking">Unliking…</string>
+    <string name="controls">Controls</string>
+    <string name="saving">Saving…</string>
+    <string name="removing">Removing…</string>
+    <string name="save_unsuccessful">Save unsuccessful</string>
+    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloader_downloading_child">Download item %d of %d</string>
+    <string name="delete">Delete</string>
+    <string name="comment">Comment</string>
+    <string name="layout">Layout</string>
+    <string name="opening_post">Opening post...</string>
+    <string name="share">Share</string>
+    <plurals name="likes_count">
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <plurals name="comments_count">
+        <item quantity="other">%d comments</item>
+    </plurals>
 </resources>
