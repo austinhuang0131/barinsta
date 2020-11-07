@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_about">Sobre</string>
-    <string name="action_dms">Mensagens diretas</string>
+    <string name="action_dms">Mensagens Diretas</string>
     <string name="action_settings">Configurações</string>
     <string name="action_download">Baixar</string>
     <string name="action_search">Pesquisar nome de usuário…</string>
@@ -18,7 +18,7 @@
     <string name="no">Não</string>
     <string name="confirm">Confirmar</string>
     <string name="nav_up">Subir</string>
-    <string name="dont_show_again">Não mostrar de novo</string>
+    <string name="dont_show_again">Não Mostrar de Novo</string>
     <string name="selected_folder_label">Pasta atual</string>
     <string name="title_favorites">Favoritos</string>
     <string name="title_discover">Descobrir</string>
@@ -40,7 +40,7 @@
     <string name="error_creating_folders">Falha ao criar pasta(s) de download.</string>
     <string name="show_feed">Mostrar feed do usuário (funciona apenas quando o usuário está logado)</string>
     <string name="save_to_folder">Salvar em pasta personalizada</string>
-    <string name="select_folder">Selecione uma pasta</string>
+    <string name="select_folder">Selecionar pasta</string>
     <string name="theme_settings">Tema</string>
     <string name="login_settings">Afeta apenas usuários logados:</string>
     <string name="anonymous_settings">Afeta apenas usuários anônimos:</string>
@@ -61,10 +61,10 @@
     <string name="post_viewer_muted_autoplay">Sempre silenciar vídeos</string>
     <string name="post_viewer_post_from">%s - %s</string>
     <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Obs: A [Sessão] atual não mostrará esta mensagem até que você esteja aqui e sempre baixará o slide de publicação mostrado.</string>
-    <string name="post_viewer_download_dialog_title">Selecione o que baixar</string>
+    <string name="post_viewer_download_dialog_title">Selecionar o que baixar</string>
     <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">[Sessão] Atual</string>
     <string name="post_viewer_download_current">Atual</string>
-    <string name="post_viewer_download_album">Álbum inteiro</string>
+    <string name="post_viewer_download_album">Álbum Inteiro</string>
     <string name="show_stories">Mostrar stories</string>
     <string name="no_more_stories">Sem mais stories!</string>
     <string name="be_patient">Tenha paciência!</string>
@@ -73,13 +73,13 @@
     <string name="spotify">Spotify</string>
     <string name="stories_notloggedin">Não é possível interagir se você não estiver logado!</string>
     <string name="vote_story_poll">Votar</string>
-    <string name="votef_story_poll">Votação bem-sucedida!</string>
+    <string name="votef_story_poll">Voto enviado!</string>
     <string name="voted_story_poll">Você já votou!</string>
     <string name="respond_story">Responder</string>
-    <string name="answer_hint">Answer…</string>
+    <string name="answer_hint">Responder…</string>
     <string name="answered_story">Resposta enviada!</string>
     <string name="reply_story">Responder o story</string>
-    <string name="reply_hint">Reply…</string>
+    <string name="reply_hint">Responder…</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">Você já respondeu!</string>
     <string name="story_mentions">Menções</string>
@@ -106,15 +106,15 @@
     <string name="tagged">Marcado</string>
     <string name="dm_person">Mensagem</string>
     <string name="like">Curtir (%s)</string>
-    <string name="like_without_count">Like</string>
+    <string name="like_without_count">Curtir</string>
     <string name="unlike">Descurtir(%s)</string>
-    <string name="unlike_without_count">Unlike</string>
+    <string name="unlike_without_count">Descurtir</string>
     <string name="bookmark">Salvar</string>
     <string name="unbookmark">Remover</string>
     <string name="follow">Seguir</string>
     <string name="unfollow">Deixar de seguir</string>
     <string name="favorite_short">Favoritar</string>
-    <string name="unfavorite_short">Remover dos favoritos</string>
+    <string name="unfavorite_short">Desfavoritar</string>
     <string name="block">Bloquear</string>
     <string name="unblock">Desbloquear</string>
     <string name="restrict">Restringir</string>
@@ -190,7 +190,7 @@
     <string name="direct_download_perms_ask">Por favor, conceda as permissões e tente baixar novamente!</string>
     <string name="downloader_started">Download iniciado</string>
     <string name="downloader_complete">Download concluído</string>
-    <string name="downloader_downloading_post">Downloading post…</string>
+    <string name="downloader_downloading_post">Baixando publicação…</string>
     <string name="downloader_downloading_media">Baixando mídia</string>
     <string name="downloader_downloading_pfp">Baixando foto do perfil</string>
     <string name="downloader_downloaded_in_folder">Arquivo baixado na pasta Downloads!</string>
@@ -216,19 +216,19 @@
     <string name="followers_not_follower">%s não segue</string>
     <string name="login_error_loading_cookies">Falha ao carregar cookies</string>
     <string name="login_success_loading_cookies">Cookies carregados com sucesso!\nSe você ainda não consegue abrir páginas/publicações privadas, faça o login novamente!</string>
-    <string name="comment_hint">Write a new comment…</string>
-    <string name="dm_hint">Write a new message…</string>
+    <string name="comment_hint">Escrever um novo comentário…</string>
+    <string name="dm_hint">Escrever uma nova mensagem…</string>
     <string name="liked_notif">Curtiu sua publicação</string>
     <string name="comment_notif">Comentou em sua publicação:</string>
     <string name="follow_notif">Começou a seguir você</string>
     <string name="mention_notif">Mencionou você:</string>
-    <string name="tagged_notif">Tagged you in a post</string>
+    <string name="tagged_notif">Marcou você em uma publicação</string>
     <string name="request_notif">Pediu para seguir você</string>
     <string name="request_approve">Aprovar pedido</string>
     <string name="request_reject">Rejeitar pedido</string>
-    <string name="share_public_post">Share this public post to…</string>
+    <string name="share_public_post">Compartilhar esta publicação pública com…</string>
     <string name="share_private_post">Esta é uma publicação privada! Compartilhe com quem pode visualizá-la!</string>
-    <string name="discover_empty">This category is somehow empty…</string>
+    <string name="discover_empty">Esta categoria está vazia…</string>
     <string name="update_available">Uma atualização está disponível! (%s)</string>
     <string name="update_notice">Lembrete: se você baixou do F-Droid, você deve atualizar a partir dele! O mesmo se aplica ao GitHub.</string>
     <string name="updated">Obrigado por atualizar o Barinsta!</string>
@@ -237,7 +237,7 @@
     <string name="use_amoled_dark_theme">Usar o modo AMOLED no tema escuro</string>
     <string name="action_notif">Atividade</string>
     <string name="select_picture">Selecionar imagem</string>
-    <string name="uploading">Uploading…</string>
+    <string name="uploading">Enviando…</string>
     <string name="activity_count_prefix">Você tem:</string>
     <string name="activity_count_relationship">%d seguidores</string>
     <string name="activity_count_comments">%d comentários</string>
@@ -294,32 +294,32 @@
     <string name="file_chosen_label">Arquivo:</string>
     <string name="enter_password">Digite a senha</string>
     <string name="select_backup_file">Selecione um arquivo de becape (.zaai/.backup)</string>
-    <string name="apply">Apply</string>
-    <string name="save">Save</string>
-    <string name="caption">Caption</string>
-    <string name="player_timeline_desc">Video player timeline</string>
-    <string name="liking">Liking…</string>
-    <string name="like_unsuccessful">Like unsuccessful</string>
-    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
-    <string name="unliking">Unliking…</string>
-    <string name="controls">Controls</string>
-    <string name="saving">Saving…</string>
-    <string name="removing">Removing…</string>
-    <string name="save_unsuccessful">Save unsuccessful</string>
-    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
-    <string name="downloading">Downloading…</string>
-    <string name="downloader_downloading_child">Download item %d of %d</string>
-    <string name="delete">Delete</string>
-    <string name="comment">Comment</string>
-    <string name="layout">Layout</string>
-    <string name="opening_post">Opening post...</string>
-    <string name="share">Share</string>
+    <string name="apply">Aplicar</string>
+    <string name="save">Salvar</string>
+    <string name="caption">Legenda</string>
+    <string name="player_timeline_desc">Barra de progresso do reprodutor de vídeo</string>
+    <string name="liking">Curtindo…</string>
+    <string name="like_unsuccessful">Falha ao curtir</string>
+    <string name="unlike_unsuccessful">Falha ao descurtir</string>
+    <string name="unliking">Descurtindo…</string>
+    <string name="controls">Controles</string>
+    <string name="saving">Salvando…</string>
+    <string name="removing">Removendo…</string>
+    <string name="save_unsuccessful">Falha ao salvar</string>
+    <string name="save_remove_unsuccessful">Falha ao remover</string>
+    <string name="downloading">Baixando…</string>
+    <string name="downloader_downloading_child">Baixar item %d de %d</string>
+    <string name="delete">Excluir</string>
+    <string name="comment">Comentar</string>
+    <string name="layout">Aparência</string>
+    <string name="opening_post">Abrindo publicação...</string>
+    <string name="share">Compartilhar</string>
     <plurals name="likes_count">
-        <item quantity="one">%d like</item>
-        <item quantity="other">%d likes</item>
+        <item quantity="one">%d curtida</item>
+        <item quantity="other">%d curtidas</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="one">%d comentário</item>
+        <item quantity="other">%d comentários</item>
     </plurals>
 </resources>
