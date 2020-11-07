@@ -107,7 +107,7 @@
     <string name="dm_person">Mensagem</string>
     <string name="like">Curtir (%s)</string>
     <string name="like_without_count">Curtir</string>
-    <string name="unlike">Descurtir(%s)</string>
+    <string name="unlike">Descurtir (%s)</string>
     <string name="unlike_without_count">Descurtir</string>
     <string name="bookmark">Salvar</string>
     <string name="unbookmark">Remover</string>
