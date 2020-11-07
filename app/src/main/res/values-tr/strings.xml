@@ -76,10 +76,10 @@
     <string name="votef_story_poll">Oylama başarılı!</string>
     <string name="voted_story_poll">Zaten oy verdiniz!</string>
     <string name="respond_story">Yanıt ver</string>
-    <string name="answer_hint">Cevapla...</string>
+    <string name="answer_hint">Answer…</string>
     <string name="answered_story">Cevaplama başarılı!</string>
     <string name="reply_story">Hikayeye cevap ver</string>
-    <string name="reply_hint">Yanıtla...</string>
+    <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Test</string>
     <string name="story_quizzed">Zaten cevapladınız!</string>
     <string name="story_mentions">Etiketlenenler</string>
@@ -106,7 +106,9 @@
     <string name="tagged">Etiketlenilenler</string>
     <string name="dm_person">Mesaj</string>
     <string name="like">Beğen (%s)</string>
+    <string name="like_without_count">Like</string>
     <string name="unlike">Beğenmekten Vazgeç (%s)</string>
+    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Yer İşareti Koy</string>
     <string name="unbookmark">Yer İşaretini Kaldır</string>
     <string name="follow">Takip Et</string>
@@ -188,7 +190,7 @@
     <string name="direct_download_perms_ask">Lütfen gerekli izinleri verin ve indirmeyi tekrar deneyin!</string>
     <string name="downloader_started">İndirme başlatıldı</string>
     <string name="downloader_complete">İndirme tamamlandı</string>
-    <string name="downloader_downloading_post">Gönderi indiriliyor</string>
+    <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Medya indiriliyor</string>
     <string name="downloader_downloading_pfp">Profil fotoğrafı indiriliyor</string>
     <string name="downloader_downloaded_in_folder">Dosya İndirilenler klasörüye kaydedildi!</string>
@@ -214,18 +216,19 @@
     <string name="followers_not_follower">%s takip edilmeyen takipçi</string>
     <string name="login_error_loading_cookies">Çerezleri yükleme hatası</string>
     <string name="login_success_loading_cookies">Çerezler başarıyla yüklendi!\nEğer hala gizli hesapları açamıyorsan tekrar giriş yap!</string>
-    <string name="comment_hint">Yeni bir yorum yaz...</string>
-    <string name="dm_hint">Yeni bir mesaj yaz...</string>
+    <string name="comment_hint">Write a new comment…</string>
+    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Gönderini beğendi</string>
     <string name="comment_notif">Gönderine yorum yaptı:</string>
     <string name="follow_notif">Seni takip etmeye başladı</string>
     <string name="mention_notif">Senden bahsetti:</string>
+    <string name="tagged_notif">Tagged you in a post</string>
     <string name="request_notif">Seni takip etmek istiyor</string>
     <string name="request_approve">İsteği onayla</string>
     <string name="request_reject">İsteği reddet</string>
-    <string name="share_public_post">Bu genel gönderiyi paylaş...</string>
+    <string name="share_public_post">Share this public post to…</string>
     <string name="share_private_post">Bu gizli bir gönderi! Onu görebilen kişilerle paylaş!</string>
-    <string name="discover_empty">Bu kategori nasıl oluyorsa boş...</string>
+    <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">Yeni bir güncelleme mevcut! (%s)</string>
     <string name="update_notice">Hatırlatıcı: Eğer F-Droid kullanarak kurduysanız güncellemeyi oradan yapmalısınız. Aynısı GitHub için de geçerli.</string>
     <string name="updated">Barinsta\'yı güncellediğin için teşekkürler!</string>
@@ -234,7 +237,7 @@
     <string name="use_amoled_dark_theme">\'AMOLED ekran için Koyu Tema\'yı kullan</string>
     <string name="action_notif">Hareketler</string>
     <string name="select_picture">Resim Seç</string>
-    <string name="uploading">Yükleniyor...</string>
+    <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">Sahip olduğun:</string>
     <string name="activity_count_relationship">%d takip</string>
     <string name="activity_count_comments">%d yorum</string>
@@ -291,4 +294,32 @@
     <string name="file_chosen_label">Dosya:</string>
     <string name="enter_password">Şifreyi gir</string>
     <string name="select_backup_file">Yedekleme dosyası seç (.zaai/.backup)</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="caption">Caption</string>
+    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="liking">Liking…</string>
+    <string name="like_unsuccessful">Like unsuccessful</string>
+    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
+    <string name="unliking">Unliking…</string>
+    <string name="controls">Controls</string>
+    <string name="saving">Saving…</string>
+    <string name="removing">Removing…</string>
+    <string name="save_unsuccessful">Save unsuccessful</string>
+    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloader_downloading_child">Download item %d of %d</string>
+    <string name="delete">Delete</string>
+    <string name="comment">Comment</string>
+    <string name="layout">Layout</string>
+    <string name="opening_post">Opening post...</string>
+    <string name="share">Share</string>
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <plurals name="comments_count">
+        <item quantity="one">%d comment</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
 </resources>
