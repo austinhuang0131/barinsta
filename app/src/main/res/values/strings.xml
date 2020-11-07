@@ -9,8 +9,6 @@
     <string name="action_fdroid" translatable="false">F-Droid</string>
     <string name="action_search">Search username…</string>
     <string name="action_compare">Compare</string>
-    <string name="single_like">like</string>
-    <string name="multiple_likes">likes</string>
     <string name="clipboard_error">Error copying text</string>
     <string name="clipboard_copied">Copied to clipboard!</string>
     <string name="report">Report</string>
@@ -81,10 +79,10 @@
     <string name="votef_story_poll">Vote successful!</string>
     <string name="voted_story_poll">You have already voted!</string>
     <string name="respond_story">Respond</string>
-    <string name="answer_hint">Answer...</string>
+    <string name="answer_hint">Answer…</string>
     <string name="answered_story">Answer successful!</string>
     <string name="reply_story">Reply to story</string>
-    <string name="reply_hint">Reply...</string>
+    <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Mentions</string>
@@ -111,7 +109,9 @@
     <string name="tagged">Tagged</string>
     <string name="dm_person">Message</string>
     <string name="like">Like (%s)</string>
+    <string name="like_without_count">Like</string>
     <string name="unlike">Unlike (%s)</string>
+    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Bookmark</string>
     <string name="unbookmark">Unbookmark</string>
     <string name="follow">Follow</string>
@@ -193,7 +193,7 @@
     <string name="direct_download_perms_ask">Please grant permissions and try downloading again!</string>
     <string name="downloader_started">Download started</string>
     <string name="downloader_complete">Download completed</string>
-    <string name="downloader_downloading_post">Downloading post</string>
+    <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Downloading media</string>
     <string name="downloader_downloading_pfp">Downloading profile picture</string>
     <string name="downloader_downloaded_in_folder">File downloaded in Downloads folder!</string>
@@ -219,18 +219,19 @@
     <string name="followers_not_follower">%s is not following</string>
     <string name="login_error_loading_cookies">Error loading cookies</string>
     <string name="login_success_loading_cookies">Successfully loaded cookies!\nIf you still can\'t open private pages/posts, re-login!</string>
-    <string name="comment_hint">Write a new comment...</string>
-    <string name="dm_hint">Write a new message...</string>
+    <string name="comment_hint">Write a new comment…</string>
+    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Liked your post</string>
     <string name="comment_notif">Commented on your post:</string>
     <string name="follow_notif">Started following you</string>
     <string name="mention_notif">Mentioned you:</string>
+    <string name="tagged_notif">Tagged you in a post</string>
     <string name="request_notif">Requested following you</string>
     <string name="request_approve">Approve request</string>
     <string name="request_reject">Reject request</string>
-    <string name="share_public_post">Share this public post to...</string>
+    <string name="share_public_post">Share this public post to…</string>
     <string name="share_private_post">This is a private post! Share to those who can view them!</string>
-    <string name="discover_empty">This category is somehow empty...</string>
+    <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
     <string name="updated">Thank you for updating Barinsta!</string>
@@ -241,7 +242,7 @@
     <string name="license" translatable="false">Copyright (C) 2019  AWAiS\nCopyright (C) 2020  Austin Huang, Ammar Githam\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.</string>
     <string name="liability" translatable="false">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</string>
     <string name="select_picture">Select Picture</string>
-    <string name="uploading">Uploading...</string>
+    <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">You have:</string>
     <string name="activity_count_relationship">%d follows</string>
     <string name="activity_count_comments">%d comments</string>
@@ -300,4 +301,39 @@
     <string name="file_chosen_label">File:</string>
     <string name="enter_password">Enter password</string>
     <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="caption">Caption</string>
+    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="one_x" translatable="false">1x</string>
+    <string name="two_x" translatable="false">2x</string>
+    <string name="pt_two_five_x" translatable="false">0.25x</string>
+    <string name="pt_five_x" translatable="false">0.5x</string>
+    <string name="pt_seven_five_x" translatable="false">0.75x</string>
+    <string name="one_pt_two_five_x" translatable="false">1.25x</string>
+    <string name="one_pt_five_x" translatable="false">1.5x</string>
+    <string name="liking">Liking…</string>
+    <string name="like_unsuccessful">Like unsuccessful</string>
+    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
+    <string name="unliking">Unliking…</string>
+    <string name="controls">Controls</string>
+    <string name="saving">Saving…</string>
+    <string name="removing">Removing…</string>
+    <string name="save_unsuccessful">Save unsuccessful</string>
+    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloader_downloading_child">Download item %d of %d</string>
+    <string name="delete">Delete</string>
+    <string name="comment">Comment</string>
+    <string name="layout">Layout</string>
+    <string name="opening_post">Opening post...</string>
+    <string name="share">Share</string>
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <plurals name="comments_count">
+        <item quantity="one">%d comment</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
 </resources>
