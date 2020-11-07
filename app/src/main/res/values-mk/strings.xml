@@ -76,10 +76,10 @@
     <string name="votef_story_poll">Гласањето беше успешно!</string>
     <string name="voted_story_poll">Вие веќе гласавте!</string>
     <string name="respond_story">Одговори</string>
-    <string name="answer_hint">Одговори...</string>
+    <string name="answer_hint">Answer…</string>
     <string name="answered_story">Одговарњето беше успешно!</string>
     <string name="reply_story">Одговори на приказната</string>
-    <string name="reply_hint">Одговори...</string>
+    <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Квиз</string>
     <string name="story_quizzed">Вие веќе гласавте/одговоривте!</string>
     <string name="story_mentions">Спомнувања</string>
@@ -106,7 +106,9 @@
     <string name="tagged">Такнато</string>
     <string name="dm_person">Порака</string>
     <string name="like">Лајк (%s)</string>
+    <string name="like_without_count">Like</string>
     <string name="unlike">Дислајск (%s)</string>
+    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Обележи</string>
     <string name="unbookmark">Одобележи</string>
     <string name="follow">Следи</string>
@@ -188,7 +190,7 @@
     <string name="direct_download_perms_ask">Ве молиме одобрете ги дозволите и пробајте повторно да превземите!</string>
     <string name="downloader_started">Превзмањето започна</string>
     <string name="downloader_complete">Превземањето е готово</string>
-    <string name="downloader_downloading_post">Се превзема пост</string>
+    <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Се превзема медиум</string>
     <string name="downloader_downloading_pfp">Се превзема профилната слика</string>
     <string name="downloader_downloaded_in_folder">Фајлот беше превземен во фолдерот Downloads!</string>
@@ -214,18 +216,19 @@
     <string name="followers_not_follower">%s не следи</string>
     <string name="login_error_loading_cookies">Грешка при вчитување колачиња</string>
     <string name="login_success_loading_cookies">Колачињата испешно беа вчитани!\nАко сеуште неможете да отворите приватни постови релогирајте се!</string>
-    <string name="comment_hint">Напишете но коментар...</string>
-    <string name="dm_hint">Напишете нова порака...</string>
+    <string name="comment_hint">Write a new comment…</string>
+    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Го лајкна твојот пост</string>
     <string name="comment_notif">Коментира на твојот пост:</string>
     <string name="follow_notif">Започна да те следи</string>
     <string name="mention_notif">Те спомна:</string>
+    <string name="tagged_notif">Tagged you in a post</string>
     <string name="request_notif">Пуште барање за следење</string>
     <string name="request_approve">Одобри барање</string>
     <string name="request_reject">Не одобрувај барање</string>
-    <string name="share_public_post">Сподели овој јавен пост...</string>
+    <string name="share_public_post">Share this public post to…</string>
     <string name="share_private_post">Овој пост е приватен! Споделте го на оние кои можат да го видат!</string>
-    <string name="discover_empty">Оваа категорија некако магично е празна...</string>
+    <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">Нова надоградба е присутна! (%s)</string>
     <string name="update_notice">Потсетник: Ако го имате превземено од F-Droid, морате од таму да надоградите! Истото важи и за верзиите од GitHub.</string>
     <string name="updated">Ви благодариме за надоградбата на Barinsta!</string>
@@ -234,7 +237,7 @@
     <string name="use_amoled_dark_theme">Користи AMOLED тема (потемна од темната) за Темна тема</string>
     <string name="action_notif">Активности</string>
     <string name="select_picture">Селектирај слика</string>
-    <string name="uploading">Се уплоадира...</string>
+    <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">Вие имате:</string>
     <string name="activity_count_relationship">%d следачи</string>
     <string name="activity_count_comments">%d коментари</string>
@@ -291,4 +294,32 @@
     <string name="file_chosen_label">Фајл:</string>
     <string name="enter_password">Внесете лозинка</string>
     <string name="select_backup_file">Одбери backup фајл (.zaai/.backup)</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="caption">Caption</string>
+    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="liking">Liking…</string>
+    <string name="like_unsuccessful">Like unsuccessful</string>
+    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
+    <string name="unliking">Unliking…</string>
+    <string name="controls">Controls</string>
+    <string name="saving">Saving…</string>
+    <string name="removing">Removing…</string>
+    <string name="save_unsuccessful">Save unsuccessful</string>
+    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloader_downloading_child">Download item %d of %d</string>
+    <string name="delete">Delete</string>
+    <string name="comment">Comment</string>
+    <string name="layout">Layout</string>
+    <string name="opening_post">Opening post...</string>
+    <string name="share">Share</string>
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <plurals name="comments_count">
+        <item quantity="one">%d comment</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
 </resources>
