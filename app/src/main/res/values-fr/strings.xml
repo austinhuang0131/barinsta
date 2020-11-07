@@ -76,10 +76,10 @@
     <string name="votef_story_poll">Vote réussi !</string>
     <string name="voted_story_poll">Vous avez déjà voté !</string>
     <string name="respond_story">Répondre</string>
-    <string name="answer_hint">Réponse...</string>
+    <string name="answer_hint">Answer…</string>
     <string name="answered_story">Réponse envoyée !</string>
     <string name="reply_story">Répondre à la story</string>
-    <string name="reply_hint">Répondre...</string>
+    <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_quizzed">Vous avez déjà répondu !</string>
     <string name="story_mentions">Mentions</string>
@@ -106,7 +106,9 @@
     <string name="tagged">Taggé</string>
     <string name="dm_person">Message</string>
     <string name="like">Aimer (%s)</string>
+    <string name="like_without_count">Like</string>
     <string name="unlike">Supprimer le j\'aime (%s)</string>
+    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Ajouter aux marque-pages</string>
     <string name="unbookmark">Retirer des marque-pages</string>
     <string name="follow">Suivre</string>
@@ -188,7 +190,7 @@
     <string name="direct_download_perms_ask">Veuillez accorder les autorisations et réessayez !</string>
     <string name="downloader_started">Téléchargement commencé</string>
     <string name="downloader_complete">Téléchargement terminé</string>
-    <string name="downloader_downloading_post">Téléchargement du post</string>
+    <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Téléchargement du média en cours</string>
     <string name="downloader_downloading_pfp">Téléchargement de la photo de profil</string>
     <string name="downloader_downloaded_in_folder">Fichier téléchargé dans le dossier Téléchargements !</string>
@@ -214,18 +216,19 @@
     <string name="followers_not_follower">Comptes non suivis par %s</string>
     <string name="login_error_loading_cookies">Erreur de chargement des cookies</string>
     <string name="login_success_loading_cookies">Cookies chargés avec succès!\nSi vous ne pouvez toujours pas ouvrir de pages/postes privés, reconnectez-vous !</string>
-    <string name="comment_hint">Écrire un nouveau commentaire...</string>
-    <string name="dm_hint">Écrire un message...</string>
+    <string name="comment_hint">Write a new comment…</string>
+    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">A aimé votre publication</string>
     <string name="comment_notif">A commenté sur ta publication :</string>
     <string name="follow_notif">A commencé à vous suivre</string>
     <string name="mention_notif">Vous a mentionné :</string>
+    <string name="tagged_notif">Tagged you in a post</string>
     <string name="request_notif">A demandé à vous suivre</string>
     <string name="request_approve">Approuver la demande</string>
     <string name="request_reject">Refuser la demande</string>
-    <string name="share_public_post">Partager ce post public à...</string>
+    <string name="share_public_post">Share this public post to…</string>
     <string name="share_private_post">C\'est post privé ! Partagez avec ceux qui peuvent le voir !</string>
-    <string name="discover_empty">Cette catégorie est vide...</string>
+    <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">Une mise-à-jour est disponible! (%s)</string>
     <string name="update_notice">Rappel : Si vous avez téléchargé l\'application à partir de F-Droid, vous devez la mettre à jour depuis là ! Il en va de même pour GitHub.</string>
     <string name="updated">Merci d\'avoir mis à jour Barinsta !</string>
@@ -234,7 +237,7 @@
     <string name="use_amoled_dark_theme">Utiliser le mode AMOLED pour le thème sombre</string>
     <string name="action_notif">Activité</string>
     <string name="select_picture">Sélectionnez une image</string>
-    <string name="uploading">Téléversement...</string>
+    <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">Vous avez :</string>
     <string name="activity_count_relationship">%d abonné(e)s</string>
     <string name="activity_count_comments">%d commentaires</string>
@@ -291,4 +294,32 @@
     <string name="file_chosen_label">Fichier :</string>
     <string name="enter_password">Saisissez le mot de passe</string>
     <string name="select_backup_file">Sélectionnez un fichier de sauvegarde (.zaai/.backup)</string>
+    <string name="apply">Apply</string>
+    <string name="save">Save</string>
+    <string name="caption">Caption</string>
+    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="liking">Liking…</string>
+    <string name="like_unsuccessful">Like unsuccessful</string>
+    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
+    <string name="unliking">Unliking…</string>
+    <string name="controls">Controls</string>
+    <string name="saving">Saving…</string>
+    <string name="removing">Removing…</string>
+    <string name="save_unsuccessful">Save unsuccessful</string>
+    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
+    <string name="downloading">Downloading…</string>
+    <string name="downloader_downloading_child">Download item %d of %d</string>
+    <string name="delete">Delete</string>
+    <string name="comment">Comment</string>
+    <string name="layout">Layout</string>
+    <string name="opening_post">Opening post...</string>
+    <string name="share">Share</string>
+    <plurals name="likes_count">
+        <item quantity="one">%d like</item>
+        <item quantity="other">%d likes</item>
+    </plurals>
+    <plurals name="comments_count">
+        <item quantity="one">%d comment</item>
+        <item quantity="other">%d comments</item>
+    </plurals>
 </resources>
