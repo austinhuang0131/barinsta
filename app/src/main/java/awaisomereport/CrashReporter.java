@@ -39,7 +39,7 @@ public final class CrashReporter implements Thread.UncaughtExceptionHandler {
 
     private CrashReporter(@NonNull final Application application) {
         this.application = application;
-        this.email = "instagrabber@austinhuang.me";
+        this.email = "barinsta@austinhuang.me";
         this.crashLogsZip = new File(application.getExternalCacheDir(), "crash_logs.zip");
     }
 

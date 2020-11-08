@@ -56,6 +56,7 @@ import com.google.android.material.snackbar.BaseTransientBottomBar;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import awais.instagrabber.R;
 import awais.instagrabber.activities.MainActivity;
@@ -372,7 +373,9 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
             binding.sliderParent.setLayoutParams(new ConstraintLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,
                                                                                    ViewGroup.LayoutParams.MATCH_PARENT));
             binding.sliderParent.requestLayout();
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            if (bottomSheetBehavior != null) {
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
             return;
         }
         if (destView == binding.videoPost.thumbnailParent) {
@@ -381,7 +384,9 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
             params.gravity = Gravity.CENTER;
             binding.videoPost.thumbnailParent.setLayoutParams(params);
             binding.videoPost.thumbnailParent.requestLayout();
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            if (bottomSheetBehavior != null) {
+                bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+            }
         }
     }
 
@@ -666,7 +671,10 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
 
     private void setupCaption() {
         final CharSequence postCaption = feedModel.getPostCaption();
+        binding.date.setText(Utils.datetimeParser.format(new Date(feedModel.getTimestamp() * 1000L)));
         if (TextUtils.isEmpty(postCaption)) {
+            binding.caption.setVisibility(View.GONE);
+            binding.captionToggle.setVisibility(View.GONE);
             return;
         }
         binding.caption.addOnHashtagListener(autoLinkItem -> {
@@ -699,10 +707,12 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
             }
         });
         binding.caption.setOnClickListener(v -> {
+            if (bottomSheetBehavior == null) return;
             if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) return;
             bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
         });
         binding.captionToggle.setOnClickListener(v -> {
+            if (bottomSheetBehavior == null) return;
             switch (bottomSheetBehavior.getState()) {
                 case BottomSheetBehavior.STATE_HIDDEN:
                     binding.captionParent.fullScroll(ScrollView.FOCUS_UP); // reset scroll position
@@ -730,6 +740,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
                 @Override
                 public void onGlobalLayout() {
                     binding.getRoot().getViewTreeObserver().removeOnGlobalLayoutListener(this);
+                    if (bottomSheetBehavior == null) return;
                     bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
                 }
             });
@@ -744,9 +755,9 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
                 Toast.makeText(context, R.string.share_private_post, Toast.LENGTH_LONG).show();
             Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
             sharingIntent.setType("text/plain");
-            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/"+feedModel.getShortCode());
+            sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, "https://instagram.com/p/" + feedModel.getShortCode());
             startActivity(Intent.createChooser(sharingIntent,
-                    isPrivate ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
+                                               isPrivate ? getString(R.string.share_private_post) : getString(R.string.share_public_post)));
         });
     }
 
@@ -758,7 +769,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
             final int likesCount = (int) feedModel.getLikesCount();
             final String likesString = getResources().getQuantityString(R.plurals.likes_count, likesCount, likesCount);
             binding.likesCount.setText(likesString);
-        } catch (IllegalStateException e) {}
+        } catch (IllegalStateException ignored) {}
     }
 
     private void setupPostTypeLayout() {
@@ -1062,6 +1073,8 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
                 detailsVisible = false;
                 binding.profilePic.setVisibility(View.GONE);
                 binding.title.setVisibility(View.GONE);
+                binding.isVerified.setVisibility(View.GONE);
+                binding.righttitle.setVisibility(View.GONE);
                 binding.topBg.setVisibility(View.GONE);
                 if (!TextUtils.isEmpty(binding.subtitle.getText())) {
                     binding.subtitle.setVisibility(View.GONE);
@@ -1070,6 +1083,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
                 binding.bottomBg.setVisibility(View.GONE);
                 binding.likesCount.setVisibility(View.GONE);
                 binding.commentsCount.setVisibility(View.GONE);
+                binding.date.setVisibility(View.GONE);
                 binding.comment.setVisibility(View.GONE);
                 binding.captionToggle.setVisibility(View.GONE);
                 binding.playerControlsToggle.setVisibility(View.GONE);
@@ -1086,6 +1100,8 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
             }
             binding.profilePic.setVisibility(View.VISIBLE);
             binding.title.setVisibility(View.VISIBLE);
+            binding.isVerified.setVisibility(feedModel.getProfileModel().isVerified() ? View.VISIBLE : View.GONE);
+            binding.righttitle.setVisibility(View.VISIBLE);
             binding.topBg.setVisibility(View.VISIBLE);
             if (!TextUtils.isEmpty(binding.subtitle.getText())) {
                 binding.subtitle.setVisibility(View.VISIBLE);
@@ -1094,6 +1110,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
             binding.bottomBg.setVisibility(View.VISIBLE);
             binding.likesCount.setVisibility(View.VISIBLE);
             binding.commentsCount.setVisibility(View.VISIBLE);
+            binding.date.setVisibility(View.VISIBLE);
             binding.captionToggle.setVisibility(View.VISIBLE);
             binding.comment.setVisibility(View.VISIBLE);
             if (video) {

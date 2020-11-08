@@ -1,1 +1,1 @@
-Simple yet advanced Instagram client (ex-InstaGrabber)
+Simple yet advanced Instagram client

@@ -1,17 +1,17 @@
-If you don't upload posts or stories on Instagram, but you still have to use it to keep in touch with people and contents, you now have an alternative: InstaGrabber allows you to browse Instagram, while giving you more options to control your data. (And yes, InstaGrabber has been revived!)
+If you don't upload posts or stories on Instagram, but you still have to use it to keep in touch with people and contents, you now have an alternative: Barinsta is a beautiful client that allows you to browse Instagram, while giving you more options to control your data.
 
 Features:
 
 * Login NOT NEEDED to browse timeline and face-tagged posts from public profiles, hashtags, and locations.
 * View & download posts.
-* View & download stories, highlights, and HD avatar (see note below).
 * View & copy comments, captions, & biographies.
 * Zoom in on pictures with ease.
-* Batch download posts from profile (Hold & Select).
+* Batch download posts from feeds (Hold & Select).
 * Mark profiles as favourite for quicker access.
 
 Additional features for those logged in:
 
+* View & download stories, highlights, and HD avatar.
 * Browse feed (posts and stories), discover (by topic), DM, activity/notifications, and private profiles that you have followed.
 * Most features you need to view and interact: Like, "save", write/like/reply to comments, follow/block/restrict, reply to stories, play with stickers, respond to DMs (text & picture), etc.
 * View stories anonymously (by default, configurable).
@@ -21,7 +21,8 @@ Additional features for those logged in:
 
 Extra merits:
 
-* Prevents irrational decisions: Instagram likes are set-it-forget-it, allowing them to collect more data from you. InstaGrabber intentionally removes double-tap and requires you to click into posts to give it a like. InstaGrabber also allows you to easily access posts you've liked through your own profile.
+* Prevents irrational decisions: Instagram likes are set-it-forget-it, allowing them to collect more data from you. Barinsta intentionally removes double-tap and requires you to click into posts to give it a like. Barinsta also allows you to easily access posts you've liked through your own profile.
+* Allows customization: Pick your themes and layouts!
 * Allows viewing at your own pace: No need to "hold" a story with your fingers!
 * Not a webapp: Absolutely NO browser involved, except for login.
 * Not a mod: Absolutely NO dependency of the actual Instagram app.
@@ -30,4 +31,6 @@ Extra merits:
 
 *** Please use this app responsibly. ***
 
-(Note: HD avatars are only available on profiles. If you're not logged in, you must enable them in Settings to view stories, which are limited to profiles. If you're logged in, you can view stories from hashtags and locations, in addition to public and followed private profiles, regardless of settings.)
+For more info, visit https://barinsta.austinhuang.me.
+
+(We're previously known as InstaGrabber.)

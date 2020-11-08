@@ -9,14 +9,16 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/austinhuang0131/instagrabber.svg?style=social&label=Star)](https://GitHub.com/austinhuang0131/barinsta/stargazers/)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-We're previously known as InstaGrabber and still in process of rebranding. For documentation, visit [Barinsta.AustinHuang.me](https://barinsta.austinhuang.me).
+We're previously known as InstaGrabber.
+
+For documentation, visit [Barinsta.AustinHuang.me](https://barinsta.austinhuang.me).
 
 ## Download
 
-**By installing, you indicate your acceptance of [Disclosure and Privacy Policy](https://instagrabber.austinhuang.me/disclosure).**
+**By installing, you indicate your acceptance of [Terms of Service](https://barinsta.austinhuang.me/en/latest/tos/) and [Privacy Policy](https://barinsta.austinhuang.me/en/latest/privacy/).**
 
 <a href="https://f-droid.org/en/packages/me.austinhuang.instagrabber/"><img src="https://fdroid.gitlab.io/artwork/badge/get-it-on.png" height="75"></a>
 <a href="https://github.com/austinhuang0131/barinsta/releases/latest"><img src="https://raw.githubusercontent.com/andOTP/andOTP/master/assets/badges/get-it-on-github.png" height="75"></a>
@@ -26,14 +28,14 @@ Version status: ![F-Droid](https://img.shields.io/f-droid/v/me.austinhuang.insta
 <a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/1.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" alt="Profile" width="15%"/></a>
 <a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/2.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" alt="Post" width="15%"/></a>
 <a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/3.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" alt="Comments" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/4.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" alt="Story (Highlight shown)" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/4.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" alt="Story" width="15%"/></a>
 <a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/5.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg" alt="Hashtag" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/6.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg" alt="Location" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/6.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg" alt="Discover Topics" width="15%"/></a>
 
 ## Contact us
 
 * Use [GitHub issues](https://github.com/austinhuang0131/instagrabber/issues) when possible.
-* Email: [InstaGrabber@AustinHuang.me](mailto:instagrabber@austinhuang.me) (Synced to GitHub issues)
+* Email: [Barinsta@AustinHuang.me](mailto:barinsta@austinhuang.me) (Synced to GitHub issues)
 * Chat (Bridged to each other): [![Matrix](https://img.shields.io/badge/Matrix-@Barinsta:matrix.org-000000?logo=matrix)](https://matrix.to/#/#barinsta:matrix.org) [![Telegram](https://img.shields.io/badge/Telegram-@Grabber__App-2CA5E0?logo=telegram)](https://t.me/grabber_app) [![Discord](https://img.shields.io/badge/Discord-YtEDzN2-7289da?logo=discord&logoColor=white)](https://discord.gg/YtEDzN2) [![Gitter](https://img.shields.io/badge/Gitter-InstaGrabber/General-ed1965?logo=gitter)](https://gitter.im/instagrabber/general)
 
 ## Contributors
@@ -65,10 +67,13 @@ Prominent contributors are listed here in the [all-contributors](https://allcont
     <td align="center"><a href="https://becauseofprog.fr/"><img src="https://avatars3.githubusercontent.com/u/24623168?s=100" width="100px;" alt=""/><br /><sub><b>kernoeb</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/Lego8486"><img src="https://avatars1.githubusercontent.com/u/47414485?s=100" width="100px;" alt=""/><br /><sub><b>Ten_Lego</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/MoaufmKlo"><img src="https://avatars1.githubusercontent.com/u/45636897?s=100" width="100px;" alt=""/><br /><sub><b>MoaufmKlo</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/nalinalini"><img src="https://avatars0.githubusercontent.com/u/65640431?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nalinalini</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/peterge1998"><img src="https://avatars2.githubusercontent.com/u/47355238?s=100" width="100px;" alt=""/><br /><sub><b>peterge1998</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/RAMAR-RAR"><img src="https://avatars3.githubusercontent.com/u/47423745?s=100" width="100px;" alt=""/><br /><sub><b>RAMAR-RAR</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/PierreM0"><img src="https://avatars3.githubusercontent.com/u/71077853?v=4?s=100" width="100px;" alt=""/><br /><sub><b>PierreM0</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/RAMAR-RAR"><img src="https://avatars3.githubusercontent.com/u/47423745?s=100" width="100px;" alt=""/><br /><sub><b>RAMAR-RAR</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/RickyM7"><img src="https://avatars3.githubusercontent.com/u/24703825?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ricardo</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/wagnim"><img src="https://avatars0.githubusercontent.com/u/30241419?s=100" width="100px;" alt=""/><br /><sub><b>wagnim</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
   </tr>
 </table>
@@ -101,9 +106,9 @@ This app is originally made by [@AwaisKing](https://github.com/AwaisKing) on [Gi
 
 Logo by [Stefan Najdovski](https://stefannajdovski.com/). Used under license.
 
-[![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/austinhuang0131/instagrabber)](https://snyk.io/test/github/austinhuang0131/instagrabber)
-[![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/austinhuang0131/instagrabber)](https://lgtm.com/projects/g/austinhuang0131/instagrabber)
-[![LGTM Grade](https://img.shields.io/lgtm/grade/java/github/austinhuang0131/instagrabber)](https://lgtm.com/projects/g/austinhuang0131/instagrabber)
+[![Snyk Vulnerabilities](https://img.shields.io/snyk/vulnerabilities/github/austinhuang0131/instagrabber)](https://snyk.io/test/github/austinhuang0131/barinsta)
+[![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/austinhuang0131/instagrabber)](https://lgtm.com/projects/g/austinhuang0131/barinsta)
+[![LGTM Grade](https://img.shields.io/lgtm/grade/java/github/austinhuang0131/instagrabber)](https://lgtm.com/projects/g/austinhuang0131/barinsta)
 [![CodeFactor](https://www.codefactor.io/repository/github/austinhuang0131/barinsta/badge)](https://www.codefactor.io/repository/github/austinhuang0131/barinsta)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/e9cfcb7733f8477d92e5c0f30cac137a)](https://www.codacy.com/manual/austinhuang0131/instagrabber)
 [![Crowdin](https://badges.crowdin.net/instagrabber/localized.svg)](https://crowdin.com/project/instagrabber)

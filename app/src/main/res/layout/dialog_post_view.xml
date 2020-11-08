@@ -211,7 +211,7 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/buttons_barrier"
+        app:layout_constraintBottom_toTopOf="@id/date"
         app:layout_constraintEnd_toStartOf="@id/comments_count"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toStartOf="parent"
@@ -225,7 +225,7 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/buttons_barrier"
+        app:layout_constraintBottom_toTopOf="@id/date"
         app:layout_constraintEnd_toStartOf="@id/views_count"
         app:layout_constraintHorizontal_bias="0"
         app:layout_constraintStart_toEndOf="@id/likes_count"
@@ -239,12 +239,22 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/buttons_barrier"
+        app:layout_constraintBottom_toTopOf="@id/date"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/comments_count"
         app:layout_constraintTop_toTopOf="@id/bottom_bg_barrier"
         tools:text="9999999999 views"
         tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:textColor="@color/white"
+        tools:text="2020-11-07 11:18:55"
+        app:layout_constraintTop_toBottomOf="@id/likes_count"
+        app:layout_constraintBottom_toBottomOf="@id/buttons_barrier" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/buttons_barrier"

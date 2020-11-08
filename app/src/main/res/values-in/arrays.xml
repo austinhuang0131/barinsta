@@ -15,6 +15,7 @@
         <item>Persia [Terima kasih @farzadx]</item>
         <item>Makedonia [Terima kasih @snajdovski]</item>
         <item>Vietnam</item>
+        <item>Chinese Traditional</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -28,6 +29,7 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
+        <item>11</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Otomatis / Ikuti Sistem</item>
