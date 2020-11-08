@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>系统默认</item>
+        <item>英文</item>
+        <item>法文 [感谢 @kernoeb]</item>
+        <item>西班牙文 [感谢 @sguinetti]</item>
+        <item>简体中文</item>
+        <item>印尼文 [感谢 @Galang23]</item>
+        <item>意大利文 [感谢 @RAR_Ramar]</item>
+        <item>德文 [感谢 @peterge1998]</item>
+        <item>波兰文 [感谢 @Lego8486]</item>
+        <item>土耳其文 [感谢 @faydin90]</item>
+        <item>巴西葡文 [感谢 @wagnim]</item>
+        <item>波斯文 [感谢 @farzadx]</item>
+        <item>马其顿文 [感谢 @snajdovski]</item>
+        <item>越南文 [感谢 @fouze555]</item>
+        <item>Chinese Traditional</item>
+    </string-array>
+    <string-array name="languages_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+    </string-array>
+    <string-array name="theme_presets">
+        <item>自动 / 跟随系统</item>
+        <item>自动 / 跟随电池</item>
+        <item>暗黑</item>
+        <item>明亮</item>
+    </string-array>
+    <string-array name="theme_presets_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+    <string-array name="separator_presets">
+        <item>无</item>
+        <item>\@</item>
+        <item>在</item>
+        <item>于</item>
+        <item>\|</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="discover_placeholder">
+        <item>正在载入...</item>
+    </string-array>
+    <string-array name="date_presets">
+        <item>dd-MM-yyyy</item>
+        <item>dd/MM/yyyy</item>
+        <item>dd.MM.yyyy</item>
+        <item>dd-MM-yy</item>
+        <item>dd/MM/yy</item>
+        <item>dd.MM.yy</item>
+        <item>dd-MMM-yyyy</item>
+        <item>dd/MMM/yyyy</item>
+        <item>dd.MMM.yyyy</item>
+        <item>dd-MMM-yy</item>
+        <item>dd/MMM/yy</item>
+        <item>dd.MMM.yy</item>
+        <item>MM-dd-yyyy</item>
+        <item>MM/dd/yyyy</item>
+        <item>MM.dd.yyyy</item>
+        <item>yyyy-MM-dd</item>
+        <item>yyyy/MM/dd</item>
+        <item>yyyy.MM.dd</item>
+        <item>MM-dd-yy</item>
+        <item>MM/dd/yy</item>
+        <item>MM.dd.yy</item>
+        <item>yy-MM-dd</item>
+        <item>yy/MM/dd</item>
+        <item>yy.MM.dd</item>
+        <item>MMM-dd-yyyy</item>
+        <item>MMM/dd/yyyy</item>
+        <item>MMM.dd.yyyy</item>
+        <item>yyyy-MMM-dd</item>
+        <item>yyyy/MMM/dd</item>
+        <item>yyyy.MMM.dd</item>
+        <item>MMM-dd-yy</item>
+        <item>MMM/dd/yy</item>
+        <item>MMM.dd.yy</item>
+        <item>yy-MMM-dd</item>
+        <item>yy/MMM/dd</item>
+        <item>yy.MMM.dd</item>
+    </string-array>
+    <string-array name="time_presets">
+        <item>hh:mm:ss a</item>
+        <item>h:mm:ss a</item>
+        <item>HH:mm:ss</item>
+        <item>H:mm:ss</item>
+    </string-array>
+    <string-array name="main_nav_ids_values">
+        <item>@string/title_dm</item>
+        <item>@string/feed</item>
+        <item>@string/profile</item>
+        <item>@string/title_discover</item>
+        <item>@string/more</item>
+    </string-array>
+    <string-array name="light_themes">
+        <item>@string/light_white_theme</item>
+        <item>@string/light_barinsta_theme</item>
+        <item>@string/light_bibliogram_theme</item>
+    </string-array>
+    <string-array name="light_theme_values">
+        <item>@style/AppTheme.Light.White</item>
+        <item>@style/AppTheme.Light.Barinsta</item>
+        <item>@style/AppTheme.Light.Bibliogram</item>
+    </string-array>
+    <string-array name="dark_themes">
+        <item>@string/dark_black_theme</item>
+        <item>@string/dark_material_dark_theme</item>
+    </string-array>
+    <string-array name="dark_theme_values">
+        <item>@style/AppTheme.Dark.Black</item>
+        <item>@style/AppTheme.Dark.MaterialDark</item>
+    </string-array>
+</resources>
