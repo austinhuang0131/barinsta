@@ -15,7 +15,6 @@
         <item>Persian [Thanks to @farzadx]</item>
         <item>Macedonian [Thanks to @snajdovski]</item>
         <item>Vietnamese [Thanks to @fouze555]</item>
-        <item>Chinese Traditional</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -29,7 +28,6 @@
         <item>8</item>
         <item>9</item>
         <item>10</item>
-        <item>11</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Follow System</item>
