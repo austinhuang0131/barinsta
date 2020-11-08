@@ -5,7 +5,7 @@
         <item>Inglês</item>
         <item>Francês [Obrigado @kernoeb]</item>
         <item>Espanhol [Obrigado @sguinetti]</item>
-        <item>Chinês (Simplificado)</item>
+        <item>Chinês Simplificado</item>
         <item>Indonésio [Obrigado @Galang23]</item>
         <item>Italiano [Obrigado @RAR_Ramar]</item>
         <item>Alemão [Obrigado @peterge1998]</item>
@@ -15,7 +15,7 @@
         <item>Persa [Obrigado @farzadx]</item>
         <item>Macedônio [Obrigado @snajdovski]</item>
         <item>Vietnamita [Obrigado @fouze555]</item>
-        <item>Chinese Traditional</item>
+        <item>Chinês Tradicional</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
