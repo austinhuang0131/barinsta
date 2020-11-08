@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>Системски одбрано</item>
-        <item>Англиски</item>
-        <item>Француски [Благодарност до @kernoeb]</item>
-        <item>Шпански [Благодарност до @sguinetti]</item>
-        <item>Кинески</item>
-        <item>Индонезиски [Благодарност до @Galang23]</item>
-        <item>Италијански [Благодарност до @RAR_Ramar]</item>
-        <item>Германски [Благодарност до @peterge1998]</item>
-        <item>Полски [Благодарност до @Lego8486]</item>
-        <item>Турски [Благодарност до @faydin90]</item>
-        <item>Бразилски Португалски [Благодарност до @wagnim]</item>
-        <item>Персиски [Благодарност до @farzadx]</item>
-        <item>Македонски [Благодарност до @snajdovski]</item>
-        <item>Виетнамски[Благодарност до @fouze555]</item>
-        <item>Chinese Traditional</item>
+        <item>系統預設</item>
+        <item>英文</item>
+        <item>法文 [Thanks to @kernoeb]</item>
+        <item>西班牙文 [Thanks to @sguinetti]</item>
+        <item>簡體中文</item>
+        <item>印尼文 [Thanks to @Galang23]</item>
+        <item>義大利文 [Thanks to @RAR_Ramar]</item>
+        <item>德文 [Thanks to @peterge1998]</item>
+        <item>波蘭文 [Thanks to @Lego8486]</item>
+        <item>土耳其文 [Thanks to @faydin90]</item>
+        <item>巴西葡萄牙文 [Thanks to @wagnim]</item>
+        <item>波斯文 [Thanks to @farzadx]</item>
+        <item>馬其頓文 [Thanks to @snajdovski]</item>
+        <item>越南文 [Thanks to @fouze555]</item>
+        <item>繁體中文</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -32,10 +32,10 @@
         <item>11</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Автоматска тема</item>
-        <item>Автоматска Тема која зависи од нивото на Батеријата</item>
-        <item>Темно</item>
-        <item>Светло</item>
+        <item>自動/跟隨系統</item>
+        <item>自動/跟隨電量</item>
+        <item>暗黑</item>
+        <item>明亮</item>
     </string-array>
     <string-array name="theme_presets_values">
         <item>0</item>
@@ -44,15 +44,15 @@
         <item>3</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>Ништо</item>
+        <item>無</item>
         <item>\@</item>
-        <item>на</item>
-        <item>уклучи</item>
+        <item>於</item>
+        <item>在</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Вчитување...</item>
+        <item>讀取中…</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
@@ -98,6 +98,13 @@
         <item>HH:mm:ss</item>
         <item>H:mm:ss</item>
     </string-array>
+    <array name="main_nav_ids">
+        <item>@navigation/direct_messages_nav_graph</item>
+        <item>@navigation/feed_nav_graph</item>
+        <item>@navigation/profile_nav_graph</item>
+        <item>@navigation/discover_nav_graph</item>
+        <item>@navigation/more_nav_graph</item>
+    </array>
     <string-array name="main_nav_ids_values">
         <item>@string/title_dm</item>
         <item>@string/feed</item>
@@ -105,6 +112,10 @@
         <item>@string/title_discover</item>
         <item>@string/more</item>
     </string-array>
+    <array name="logged_out_main_nav_ids">
+        <item>@navigation/profile_nav_graph</item>
+        <item>@navigation/more_nav_graph</item>
+    </array>
     <string-array name="light_themes">
         <item>@string/light_white_theme</item>
         <item>@string/light_barinsta_theme</item>

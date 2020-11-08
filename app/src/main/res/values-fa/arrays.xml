@@ -15,6 +15,7 @@
         <item>پارسی [ با سپاس از Frzking@ ]</item>
         <item>مقدونی [ با تشکر از snajdovski@ ]</item>
         <item>ویتنامی [ با سپاس از fouze555@ ]</item>
+        <item>Chinese Traditional</item>
     </string-array>
     <string-array name="languages_values">
         <item>۰</item>
@@ -28,6 +29,7 @@
         <item>۸</item>
         <item>۹</item>
         <item>۱۰</item>
+        <item>11</item>
     </string-array>
     <string-array name="theme_presets">
         <item>خودکار / پیروی از سیستم</item>
