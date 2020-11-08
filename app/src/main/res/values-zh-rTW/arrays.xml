@@ -98,13 +98,6 @@
         <item>HH:mm:ss</item>
         <item>H:mm:ss</item>
     </string-array>
-    <array name="main_nav_ids">
-        <item>@navigation/direct_messages_nav_graph</item>
-        <item>@navigation/feed_nav_graph</item>
-        <item>@navigation/profile_nav_graph</item>
-        <item>@navigation/discover_nav_graph</item>
-        <item>@navigation/more_nav_graph</item>
-    </array>
     <string-array name="main_nav_ids_values">
         <item>@string/title_dm</item>
         <item>@string/feed</item>
@@ -112,10 +105,6 @@
         <item>@string/title_discover</item>
         <item>@string/more</item>
     </string-array>
-    <array name="logged_out_main_nav_ids">
-        <item>@navigation/profile_nav_graph</item>
-        <item>@navigation/more_nav_graph</item>
-    </array>
     <string-array name="light_themes">
         <item>@string/light_white_theme</item>
         <item>@string/light_barinsta_theme</item>
