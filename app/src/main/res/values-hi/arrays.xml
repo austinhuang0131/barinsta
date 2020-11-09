@@ -32,8 +32,8 @@
         <item>११</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>सिष्टम के अनुसार</item>
-        <item>ब्याटेरि के अनुसार</item>
+        <item>सिस्टम के अनुसार</item>
+        <item>बैटरी के अनुसार</item>
         <item>काला</item>
         <item>हल्का</item>
     </string-array>
