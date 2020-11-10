@@ -76,7 +76,7 @@
     <string name="votef_story_poll">मतदान सफल!</string>
     <string name="voted_story_poll">आप पहले से ही मत दिये हो!</string>
     <string name="respond_story">जवाब</string>
-    <string name="answer_hint">Answer…</string>
+    <string name="answer_hint">उत्तर…</string>
     <string name="answered_story">सही उत्तर</string>
     <string name="reply_story">स्टोरि पे प्रतिक्रिया करें</string>
     <string name="reply_hint">Reply…</string>
