@@ -29,7 +29,7 @@
     <string name="title_changelog">Güncelleme Notları</string>
     <string name="bottom_toolbar">Araç çubuğunu aşağıda göster</string>
     <string name="update_check">Güncellemeleri başlangıçta kontrol et</string>
-    <string name="download_user_folder">Download posts to username folders</string>
+    <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
     <string name="autoload_posts">Kullanıcıların tüm gönderilerini otomatik yükle</string>
     <string name="mark_as_seen_setting">Hikayeleri gördükten sonra görüldü olarak işaretle</string>
     <string name="mark_as_seen_setting_summary">Hikayeyi paylaşan gördüğünüzü bilecek</string>
@@ -76,10 +76,10 @@
     <string name="votef_story_poll">Oylama başarılı!</string>
     <string name="voted_story_poll">Zaten oy verdiniz!</string>
     <string name="respond_story">Yanıt ver</string>
-    <string name="answer_hint">Answer…</string>
+    <string name="answer_hint">Cevapla…</string>
     <string name="answered_story">Cevaplama başarılı!</string>
     <string name="reply_story">Hikayeye cevap ver</string>
-    <string name="reply_hint">Reply…</string>
+    <string name="reply_hint">Yanıtla…</string>
     <string name="story_quiz">Test</string>
     <string name="story_quizzed">Zaten cevapladınız!</string>
     <string name="story_mentions">Etiketlenenler</string>
