@@ -258,7 +258,7 @@
     <string name="dm_thread_info">Info</string>
     <string name="mark_as_seen">Mark as seen</string>
     <string name="skip_update_checkbox">Do not show again until next update</string>
-    <string name="version">Version</string>
+    <string name="version">संस्करण</string>
     <string name="pref_start_screen">Start screen</string>
     <string name="pref_category_general">General</string>
     <string name="pref_category_theme">Theme</string>
