@@ -52,7 +52,7 @@
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>درحال بارگذاری...</item>
+        <item>در بارگیری...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
