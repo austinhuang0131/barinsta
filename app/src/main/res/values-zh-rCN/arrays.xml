@@ -15,7 +15,8 @@
         <item>波斯文 [感谢 @farzadx]</item>
         <item>马其顿文 [感谢 @snajdovski]</item>
         <item>越南文 [感谢 @fouze555]</item>
-        <item>繁体中文</item>
+        <item>Chinese Traditional [Thanks to @Still34]</item>
+        <item>Hindi</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -30,6 +31,8 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
     <string-array name="theme_presets">
         <item>自动 / 跟随系统</item>
