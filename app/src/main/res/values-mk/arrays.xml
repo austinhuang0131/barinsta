@@ -15,7 +15,8 @@
         <item>Персиски [Благодарност до @farzadx]</item>
         <item>Македонски [Благодарност до @snajdovski]</item>
         <item>Виетнамски[Благодарност до @fouze555]</item>
-        <item>Chinese Traditional</item>
+        <item>Chinese Traditional [Thanks to @Still34]</item>
+        <item>Hindi</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -30,6 +31,8 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Автоматска тема</item>
