@@ -11,12 +11,12 @@
     <string name="report">گزارش</string>
     <string name="password">گذرواژه (بیشینه ۳۲ کاراکتر)</string>
     <string name="set_password">گذاشتن رمز ( بیشینه 32 کاراکتر )</string>
-    <string name="password_no_max">رمز</string>
-    <string name="ok">باشه</string>
+    <string name="password_no_max">گذرواژه</string>
+    <string name="ok">خوب</string>
     <string name="yes">بله</string>
     <string name="cancel">لغو</string>
     <string name="no">نه</string>
-    <string name="confirm">تایید</string>
+    <string name="confirm">پذیرش</string>
     <string name="nav_up">بالا</string>
     <string name="dont_show_again">دوباره نمایش نده</string>
     <string name="selected_folder_label">دایرکتوری کنونی</string>
@@ -76,7 +76,7 @@
     <string name="votef_story_poll">رای با موفقیت بود!</string>
     <string name="voted_story_poll">در حال حاظر شما رای داده اید!</string>
     <string name="respond_story">پاسخ</string>
-    <string name="answer_hint">Answer…</string>
+    <string name="answer_hint">پاسخ…</string>
     <string name="answered_story">جواب درست است!</string>
     <string name="reply_story">پاسخ به استوری</string>
     <string name="reply_hint">Reply…</string>
@@ -217,8 +217,8 @@
     <string name="followers_not_follower">%s دنبال نمی کنند</string>
     <string name="login_error_loading_cookies">خطای بالا آوردن کوکی ها</string>
     <string name="login_success_loading_cookies">کوکی ها با موفقیت بارگیری شده!\n اگر هنوز نمی توانید صفحه شخصی/پست ها را باز کنید، دوباره وارد حساب شوید!</string>
-    <string name="comment_hint">Write a new comment…</string>
-    <string name="dm_hint">Write a new message…</string>
+    <string name="comment_hint">نوشتن یک دیدگاه نو…</string>
+    <string name="dm_hint">نوشتن یک پیام نو…</string>
     <string name="liked_notif">پست شمارا پسندید</string>
     <string name="comment_notif">کامنت رو پست شما گذاشته:</string>
     <string name="follow_notif">شروع به دنبال کردن شما کرده</string>
@@ -295,7 +295,7 @@
     <string name="file_chosen_label">فایل:</string>
     <string name="enter_password">رمز عبور را وارد کنید</string>
     <string name="select_backup_file">یک فایل پشتیبان گیری انتخاب کنید (.zaai/.backup)</string>
-    <string name="apply">Apply</string>
+    <string name="apply">گماشتن</string>
     <string name="save">Save</string>
     <string name="caption">Caption</string>
     <string name="player_timeline_desc">Video player timeline</string>
@@ -310,17 +310,17 @@
     <string name="save_remove_unsuccessful">Remove unsuccessful</string>
     <string name="downloading">Downloading…</string>
     <string name="downloader_downloading_child">Download item %d of %d</string>
-    <string name="delete">Delete</string>
-    <string name="comment">Comment</string>
+    <string name="delete">حذف</string>
+    <string name="comment">دیدگاه</string>
     <string name="layout">Layout</string>
     <string name="opening_post">Opening post...</string>
-    <string name="share">Share</string>
+    <string name="share">همرسانی</string>
     <plurals name="likes_count">
-        <item quantity="one">%d like</item>
-        <item quantity="other">%d likes</item>
+        <item quantity="one">%d پسند</item>
+        <item quantity="other">%d پسند</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="one">%d دیدگاه</item>
+        <item quantity="other">%d دیدگاه</item>
     </plurals>
 </resources>
