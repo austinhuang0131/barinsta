@@ -15,7 +15,8 @@
         <item>Persa [Gracias a @farzadx]</item>
         <item>Macedonio [Gracias a @snajdovski]</item>
         <item>Vietnamita [Gracias a @fouze555]</item>
-        <item>Chino tradicional</item>
+        <item>Chinese Traditional [Thanks to @Still34]</item>
+        <item>Hindi</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -30,6 +31,8 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Seguir al sistema</item>
