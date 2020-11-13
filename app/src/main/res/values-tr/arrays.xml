@@ -15,7 +15,8 @@
         <item>Farsça [@farzadx tarafından]</item>
         <item>Makedonyaca [@snajdovski tarafından]</item>
         <item>Vietnamca [@fouze555 sayesinde]</item>
-        <item>Geleneksel Çince</item>
+        <item>Chinese Traditional [Thanks to @Still34]</item>
+        <item>Hindi</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -30,6 +31,8 @@
         <item>9</item>
         <item>10</item>
         <item>11</item>
+        <item>12</item>
+        <item>13</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Otomatik / Sistemi Takip Et</item>
