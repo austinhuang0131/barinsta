@@ -64,7 +64,7 @@ public class FeedGridItemViewHolder extends RecyclerView.ViewHolder {
             binding.postImage.setAspectRatio(1);
         }
         if (layoutPreferences.isAvatarVisible()) {
-            binding.profilePic.setVisibility(View.VISIBLE);
+            binding.profilePic.setVisibility(TextUtils.isEmpty(feedModel.getProfileModel().getSdProfilePic()) ? View.GONE : View.VISIBLE);
             binding.profilePic.setImageURI(feedModel.getProfileModel().getSdProfilePic());
             final ViewGroup.LayoutParams layoutParams = binding.profilePic.getLayoutParams();
             @DimenRes final int dimenRes;
@@ -88,7 +88,7 @@ public class FeedGridItemViewHolder extends RecyclerView.ViewHolder {
             binding.profilePic.setVisibility(View.GONE);
         }
         if (layoutPreferences.isNameVisible()) {
-            binding.name.setVisibility(View.VISIBLE);
+            binding.name.setVisibility(TextUtils.isEmpty(feedModel.getProfileModel().getUsername()) ? View.GONE : View.VISIBLE);
             binding.name.setText(feedModel.getProfileModel().getUsername());
         } else {
             binding.name.setVisibility(View.GONE);

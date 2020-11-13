@@ -36,6 +36,7 @@ Version status: ![F-Droid](https://img.shields.io/f-droid/v/me.austinhuang.insta
 
 * Use [GitHub issues](https://github.com/austinhuang0131/instagrabber/issues) when possible.
 * Email: [Barinsta@AustinHuang.me](mailto:barinsta@austinhuang.me) (Synced to GitHub issues)
+* Reddit: [r/Barinsta](https://reddit.com/r/barinsta)
 * Chat (Bridged to each other): [![Matrix](https://img.shields.io/badge/Matrix-@Barinsta:matrix.org-000000?logo=matrix)](https://matrix.to/#/#barinsta:matrix.org) [![Telegram](https://img.shields.io/badge/Telegram-@Grabber__App-2CA5E0?logo=telegram)](https://t.me/grabber_app) [![Discord](https://img.shields.io/badge/Discord-YtEDzN2-7289da?logo=discord&logoColor=white)](https://discord.gg/YtEDzN2) [![Gitter](https://img.shields.io/badge/Gitter-InstaGrabber/General-ed1965?logo=gitter)](https://gitter.im/instagrabber/general)
 
 ## Contributors

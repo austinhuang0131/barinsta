@@ -49,7 +49,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Set;
 
-import awais.instagrabber.ProfileNavGraphDirections;
 import awais.instagrabber.R;
 import awais.instagrabber.activities.MainActivity;
 import awais.instagrabber.adapters.FeedAdapterV2;
@@ -67,7 +66,6 @@ import awais.instagrabber.dialogs.PostsLayoutPreferencesDialogFragment;
 import awais.instagrabber.dialogs.ProfilePicDialogFragment;
 import awais.instagrabber.fragments.PostViewV2Fragment;
 import awais.instagrabber.interfaces.FetchListener;
-import awais.instagrabber.interfaces.MentionClickListener;
 import awais.instagrabber.models.FeedModel;
 import awais.instagrabber.models.PostsLayoutPreferences;
 import awais.instagrabber.models.ProfileModel;
@@ -160,24 +158,6 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
                     return false;
                 }
             });
-    private final MentionClickListener mentionClickListener = (view, text, isHashtag, isLocation) -> {
-        Log.d(TAG, "action...");
-        if (isHashtag) {
-            final NavDirections action = ProfileFragmentDirections
-                    .actionGlobalHashTagFragment(text);
-            NavHostFragment.findNavController(this).navigate(action);
-            return;
-        }
-        if (isLocation) {
-            final NavDirections action = FeedFragmentDirections.actionGlobalLocationFragment(text);
-            NavHostFragment.findNavController(this).navigate(action);
-            return;
-        }
-        final ProfileNavGraphDirections.ActionGlobalProfileFragment action = ProfileFragmentDirections
-                .actionGlobalProfileFragment();
-        action.setUsername("@" + text);
-        NavHostFragment.findNavController(this).navigate(action);
-    };
     private final FeedAdapterV2.FeedItemCallback feedItemCallback = new FeedAdapterV2.FeedItemCallback() {
         @Override
         public void onPostClick(final FeedModel feedModel, final View profilePicView, final View mainPostImage) {
@@ -748,7 +728,6 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
     }
 
     private void setupCommonListeners() {
-
         final String userIdFromCookie = CookieUtils.getUserIdFromCookie(cookie);
         binding.btnFollow.setOnClickListener(v -> {
             if (profileModel.getFollowing() || profileModel.getRequested()) {

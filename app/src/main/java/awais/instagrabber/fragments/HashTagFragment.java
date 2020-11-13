@@ -352,7 +352,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
     private void setupPosts() {
         binding.posts.setViewModelStoreOwner(this)
                      .setLifeCycleOwner(this)
-                     .setPostFetchService(new HashtagPostFetchService(hashtagModel))
+                     .setPostFetchService(new HashtagPostFetchService(hashtagModel, isLoggedIn))
                      .setLayoutPreferences(PostsLayoutPreferences.fromJson(settingsHelper.getString(Constants.PREF_HASHTAG_POSTS_LAYOUT)))
                      .addFetchStatusChangeListener(fetching -> updateSwipeRefreshState())
                      .setFeedItemCallback(feedItemCallback)

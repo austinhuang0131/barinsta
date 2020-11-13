@@ -93,7 +93,8 @@ public abstract class DirectMessageItemViewHolder extends RecyclerView.ViewHolde
         return null;
     }
 
-    protected void removeElevation() {
+    protected void setupForAnimatedMedia() {
         binding.messageCard.setCardElevation(0);
+        binding.messageCard.setCardBackgroundColor(itemView.getResources().getColor(android.R.color.transparent));
     }
 }

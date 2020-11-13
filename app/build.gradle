@@ -10,8 +10,8 @@ android {
         minSdkVersion 21
         targetSdkVersion 29
 
-        versionCode 52
-        versionName '19.0.0'
+        versionCode 53
+        versionName '19.0.1'
 
         multiDexEnabled true
 
@@ -45,7 +45,7 @@ configurations.all {
 }
 
 dependencies {
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.0.10'
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.0'
 
     def appcompat_version = "1.2.0"
     def nav_version = '2.3.1'
@@ -74,14 +74,14 @@ dependencies {
 
     implementation 'org.jsoup:jsoup:1.13.1'
     implementation 'com.facebook.fresco:fresco:2.3.0'
-    implementation 'com.facebook.fresco:animated-gif:2.3.0'
+    implementation 'com.facebook.fresco:animated-webp:2.3.0'
+    implementation 'com.facebook.fresco:webpsupport:2.3.0'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
-    implementation 'com.github.dragon66:icafe:master-SNAPSHOT'
-    implementation 'javax.media:jai_imageio:1.1.1'
+    implementation 'org.apache.commons:commons-imaging:1.0-alpha2'
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.5'
 

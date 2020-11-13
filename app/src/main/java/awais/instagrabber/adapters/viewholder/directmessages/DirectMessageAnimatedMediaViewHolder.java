@@ -1,6 +1,5 @@
 package awais.instagrabber.adapters.viewholder.directmessages;
 
-import android.net.Uri;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -8,9 +7,6 @@ import androidx.annotation.NonNull;
 import androidx.core.util.Pair;
 
 import com.facebook.drawee.backends.pipeline.Fresco;
-import com.facebook.imagepipeline.common.ResizeOptions;
-import com.facebook.imagepipeline.request.ImageRequest;
-import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
 import awais.instagrabber.R;
 import awais.instagrabber.databinding.LayoutDmAnimatedMediaBinding;
@@ -31,15 +27,15 @@ public class DirectMessageAnimatedMediaViewHolder extends DirectMessageItemViewH
         super(baseBinding, onClickListener);
         this.binding = binding;
         maxHeight = itemView.getResources().getDimensionPixelSize(R.dimen.dm_media_img_max_height);
-        maxWidth = (int) (Utils.displayMetrics.widthPixels - Utils.convertDpToPx(64) - getItemMargin());
+        maxWidth = Utils.displayMetrics.widthPixels - Utils.convertDpToPx(64) - getItemMargin();
         setItemView(binding.getRoot());
-        removeElevation();
+        setupForAnimatedMedia();
     }
 
     @Override
     public void bindItem(final DirectItemModel directItemModel) {
         final DirectItemModel.DirectItemAnimatedMediaModel animatedMediaModel = directItemModel.getAnimatedMediaModel();
-        final String url = animatedMediaModel.getGifUrl();
+        final String url = animatedMediaModel.getWebpUrl();
         final Pair<Integer, Integer> widthHeight = NumberUtils.calculateWidthHeight(
                 animatedMediaModel.getHeight(),
                 animatedMediaModel.getWidth(),
@@ -53,11 +49,8 @@ public class DirectMessageAnimatedMediaViewHolder extends DirectMessageItemViewH
         layoutParams.width = width;
         layoutParams.height = height;
         binding.ivAnimatedMessage.requestLayout();
-        final ImageRequest request = ImageRequestBuilder.newBuilderWithSource(Uri.parse(url))
-                                                        .setResizeOptions(ResizeOptions.forDimensions(width, height))
-                                                        .build();
         binding.ivAnimatedMessage.setController(Fresco.newDraweeControllerBuilder()
-                                                      .setImageRequest(request)
+                                                      .setUri(url)
                                                       .setAutoPlayAnimations(true)
                                                       .build());
     }

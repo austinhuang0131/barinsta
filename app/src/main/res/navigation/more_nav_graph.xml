@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/more_nav_graph"
     app:startDestination="@id/morePreferencesFragment">
 
@@ -9,6 +8,7 @@
     <include app:graph="@navigation/hashtag_nav_graph" />
     <include app:graph="@navigation/location_nav_graph" />
     <include app:graph="@navigation/comments_nav_graph" />
+    <include app:graph="@navigation/notification_viewer_nav_graph" />
 
     <action
         android:id="@+id/action_global_profileFragment"
@@ -37,6 +37,10 @@
             app:nullable="false" />
     </action>
 
+    <action
+        android:id="@+id/action_global_notificationsViewerFragment"
+        app:destination="@id/notification_viewer_nav_graph" />
+
     <fragment
         android:id="@+id/morePreferencesFragment"
         android:name="awais.instagrabber.fragments.settings.MorePreferencesFragment"
@@ -47,9 +51,6 @@
         <action
             android:id="@+id/action_morePreferencesFragment_to_aboutFragment"
             app:destination="@id/aboutFragment" />
-        <action
-            android:id="@+id/action_morePreferencesFragment_to_notificationsViewer"
-            app:destination="@id/notificationsViewer" />
         <action
             android:id="@+id/action_morePreferencesFragment_to_favoritesFragment"
             app:destination="@id/favoritesFragment" />
@@ -69,11 +70,6 @@
         android:id="@+id/aboutFragment"
         android:name="awais.instagrabber.fragments.settings.AboutFragment"
         android:label="@string/action_about" />
-    <fragment
-        android:id="@+id/notificationsViewer"
-        android:name="awais.instagrabber.fragments.NotificationsViewerFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications_viewer" />
     <fragment
         android:id="@+id/themePreferencesFragment"
         android:name="awais.instagrabber.fragments.settings.ThemePreferencesFragment"

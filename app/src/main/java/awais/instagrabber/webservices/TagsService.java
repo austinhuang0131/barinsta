@@ -12,7 +12,9 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 import awais.instagrabber.models.FeedModel;
@@ -179,6 +181,82 @@ public class TagsService extends BaseService {
                 continue;
             }
             final FeedModel feedModel = ResponseBodyUtils.parseItem(itemJson);
+            if (feedModel != null) {
+                feedModels.add(feedModel);
+            }
+        }
+        return feedModels;
+    }
+
+    public void fetchGraphQLPosts(@NonNull final String tag,
+                           final String maxId,
+                           final ServiceCallback<TagPostsFetchResponse> callback) {
+        final Map<String, String> queryMap = new HashMap<>();
+        queryMap.put("query_hash", "9b498c08113f1e09617a1703c22b2f32");
+        queryMap.put("variables", "{" +
+                "\"tag_name\":\"" + tag + "\"," +
+                "\"first\":25," +
+                "\"after\":\"" + (maxId == null ? "" : maxId) + "\"" +
+                "}");
+        final Call<String> request = webRepository.fetchGraphQLPosts(queryMap);
+        request.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {
+                try {
+                    if (callback == null) {
+                        return;
+                    }
+                    final String body = response.body();
+                    if (TextUtils.isEmpty(body)) {
+                        callback.onSuccess(null);
+                        return;
+                    }
+                    final TagPostsFetchResponse tagPostsFetchResponse = parseGraphQLResponse(body);
+                    callback.onSuccess(tagPostsFetchResponse);
+                } catch (JSONException e) {
+                    Log.e(TAG, "onResponse", e);
+                    callback.onFailure(e);
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull final Call<String> call, @NonNull final Throwable t) {
+                if (callback != null) {
+                    callback.onFailure(t);
+                }
+            }
+        });
+    }
+
+    private TagPostsFetchResponse parseGraphQLResponse(@NonNull final String body) throws JSONException {
+        final JSONObject rootroot = new JSONObject(body);
+        final JSONObject root = rootroot.getJSONObject("data").getJSONObject("hashtag").getJSONObject("edge_hashtag_to_media");
+        final boolean moreAvailable = root.getJSONObject("page_info").optBoolean("has_next_page");
+        final String nextMaxId = root.getJSONObject("page_info").optString("end_cursor");
+        final int numResults = root.optInt("count");
+        final String status = rootroot.optString("status");
+        final JSONArray itemsJson = root.optJSONArray("edges");
+        final List<FeedModel> items = parseGraphQLItems(itemsJson);
+        return new TagPostsFetchResponse(
+                moreAvailable,
+                nextMaxId,
+                numResults,
+                status,
+                items
+        );
+    }
+
+    private List<FeedModel> parseGraphQLItems(final JSONArray items) throws JSONException {
+        if (items == null) {
+            return Collections.emptyList();
+        }
+        final List<FeedModel> feedModels = new ArrayList<>();
+        for (int i = 0; i < items.length(); i++) {
+            final JSONObject itemJson = items.optJSONObject(i);
+            if (itemJson == null) {
+                continue;
+            }
+            final FeedModel feedModel = ResponseBodyUtils.parseGraphQLItem(itemJson);
             if (feedModel != null) {
                 feedModels.add(feedModel);
             }

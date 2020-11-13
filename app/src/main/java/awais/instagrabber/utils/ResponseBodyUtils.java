@@ -665,6 +665,124 @@ public final class ResponseBodyUtils {
         return feedModelBuilder.build();
     }
 
+    public static FeedModel parseGraphQLItem(final JSONObject itemJson) throws JSONException {
+        if (itemJson == null) {
+            return null;
+        }
+        final JSONObject feedItem = itemJson.getJSONObject("node");
+        final String mediaType = feedItem.optString("__typename");
+        if (mediaType.isEmpty() || "GraphSuggestedUserFeedUnit".equals(mediaType))
+            return null;
+
+        final boolean isVideo = feedItem.optBoolean("is_video");
+        final long videoViews = feedItem.optLong("video_view_count", 0);
+
+        final String displayUrl = feedItem.optString("display_url");
+        if (TextUtils.isEmpty(displayUrl)) return null;
+        final String resourceUrl;
+        if (isVideo && feedItem.has("video_url")) {
+            resourceUrl = feedItem.getString("video_url");
+        } else {
+            resourceUrl = feedItem.has("display_resources") ? ResponseBodyUtils.getHighQualityImage(feedItem) : displayUrl;
+        }
+
+        ProfileModel profileModel = null;
+        if (feedItem.has("owner")) {
+            final JSONObject owner = feedItem.getJSONObject("owner");
+            profileModel = new ProfileModel(
+                    owner.optBoolean("is_private"),
+                    false, // if you can see it then you def follow
+                    owner.optBoolean("is_verified"),
+                    owner.getString(Constants.EXTRAS_ID),
+                    owner.optString(Constants.EXTRAS_USERNAME),
+                    owner.optString("full_name"),
+                    null,
+                    null,
+                    owner.optString("profile_pic_url"),
+                    null,
+                    0,
+                    0,
+                    0,
+                    false,
+                    false,
+                    false,
+                    false);
+        }
+        JSONObject tempJsonObject = feedItem.optJSONObject("edge_media_preview_comment");
+        final long commentsCount = tempJsonObject != null ? tempJsonObject.optLong("count") : 0;
+        tempJsonObject = feedItem.optJSONObject("edge_media_preview_like");
+        final long likesCount = tempJsonObject != null ? tempJsonObject.optLong("count") : 0;
+        tempJsonObject = feedItem.optJSONObject("edge_media_to_caption");
+        final JSONArray captions = tempJsonObject != null ? tempJsonObject.getJSONArray("edges") : null;
+        String captionText = null;
+        if (captions != null && captions.length() > 0) {
+            if ((tempJsonObject = captions.optJSONObject(0)) != null &&
+                    (tempJsonObject = tempJsonObject.optJSONObject("node")) != null) {
+                captionText = tempJsonObject.getString("text");
+            }
+        }
+        final JSONObject location = feedItem.optJSONObject("location");
+        // Log.d(TAG, "location: " + (location == null ? null : location.toString()));
+        String locationId = null;
+        String locationName = null;
+        if (location != null) {
+            locationName = location.optString("name");
+            if (location.has("id")) {
+                locationId = location.getString("id");
+            } else if (location.has("pk")) {
+                locationId = location.getString("pk");
+            }
+            // Log.d(TAG, "locationId: " + locationId);
+        }
+        int height = 0;
+        int width = 0;
+        final JSONObject dimensions = feedItem.optJSONObject("dimensions");
+        if (dimensions != null) {
+            height = dimensions.optInt("height");
+            width = dimensions.optInt("width");
+        }
+        String thumbnailUrl = null;
+        try {
+            thumbnailUrl = feedItem.getJSONArray("display_resources")
+                    .getJSONObject(0)
+                    .getString("src");
+        } catch (JSONException ignored) {}
+        final FeedModel.Builder feedModelBuilder = new FeedModel.Builder()
+                .setProfileModel(profileModel)
+                .setItemType(isVideo ? MediaItemType.MEDIA_TYPE_VIDEO
+                        : MediaItemType.MEDIA_TYPE_IMAGE)
+                .setViewCount(videoViews)
+                .setPostId(feedItem.getString(Constants.EXTRAS_ID))
+                .setDisplayUrl(resourceUrl)
+                .setThumbnailUrl(thumbnailUrl != null ? thumbnailUrl : displayUrl)
+                .setShortCode(feedItem.getString(Constants.EXTRAS_SHORTCODE))
+                .setPostCaption(captionText)
+                .setCommentsCount(commentsCount)
+                .setTimestamp(feedItem.optLong("taken_at_timestamp", -1))
+                .setLiked(feedItem.optBoolean("viewer_has_liked"))
+                .setBookmarked(feedItem.optBoolean("viewer_has_saved"))
+                .setLikesCount(likesCount)
+                .setLocationName(locationName)
+                .setLocationId(locationId)
+                .setImageHeight(height)
+                .setImageWidth(width);
+
+        final boolean isSlider = "GraphSidecar".equals(mediaType) && feedItem.has("edge_sidecar_to_children");
+
+        if (isSlider) {
+            feedModelBuilder.setItemType(MediaItemType.MEDIA_TYPE_SLIDER);
+            final JSONObject sidecar = feedItem.optJSONObject("edge_sidecar_to_children");
+            if (sidecar != null) {
+                final JSONArray children = sidecar.optJSONArray("edges");
+                if (children != null) {
+                    final List<PostChild> sliderItems = getSliderItems(children);
+                    feedModelBuilder.setSliderItems(sliderItems);
+                }
+            }
+        }
+        return feedModelBuilder.build();
+    }
+
     private static List<PostChild> getChildPosts(final JSONObject mediaJson) throws JSONException {
         if (mediaJson == null) {
             return Collections.emptyList();
@@ -707,5 +825,43 @@ public final class ResponseBodyUtils {
                       .setHeight(childJson.optInt("original_height"))
                       .setWidth(childJson.optInt("original_width"))
                       .build();
+    }
+
+    // this is for graphql
+    @NonNull
+    private static List<PostChild> getSliderItems(final JSONArray children) throws JSONException {
+        final List<PostChild> sliderItems = new ArrayList<>();
+        for (int j = 0; j < children.length(); ++j) {
+            final JSONObject childNode = children.optJSONObject(j).getJSONObject("node");
+            final boolean isChildVideo = childNode.optBoolean("is_video");
+            int height = 0;
+            int width = 0;
+            final JSONObject dimensions = childNode.optJSONObject("dimensions");
+            if (dimensions != null) {
+                height = dimensions.optInt("height");
+                width = dimensions.optInt("width");
+            }
+            String thumbnailUrl = null;
+            try {
+                thumbnailUrl = childNode.getJSONArray("display_resources")
+                        .getJSONObject(0)
+                        .getString("src");
+            } catch (JSONException ignored) {}
+            final PostChild sliderItem = new PostChild.Builder()
+                    .setItemType(isChildVideo ? MediaItemType.MEDIA_TYPE_VIDEO
+                            : MediaItemType.MEDIA_TYPE_IMAGE)
+                    .setPostId(childNode.getString(Constants.EXTRAS_ID))
+                    .setDisplayUrl(isChildVideo ? childNode.getString("video_url")
+                            : childNode.getString("display_url"))
+                    .setThumbnailUrl(thumbnailUrl != null ? thumbnailUrl
+                            : childNode.getString("display_url"))
+                    .setVideoViews(childNode.optLong("video_view_count", 0))
+                    .setHeight(height)
+                    .setWidth(width)
+                    .build();
+            // Log.d(TAG, "getSliderItems: sliderItem: " + sliderItem);
+            sliderItems.add(sliderItem);
+        }
+        return sliderItems;
     }
 }

@@ -38,6 +38,12 @@
             app:nullable="false" />
     </action>
 
+    <include app:graph="@navigation/notification_viewer_nav_graph" />
+
+    <action
+        android:id="@+id/action_global_notificationsViewerFragment"
+        app:destination="@id/notification_viewer_nav_graph" />
+
     <fragment
         android:id="@+id/directMessagesInboxFragment"
         android:name="awais.instagrabber.fragments.directmessages.DirectMessageInboxFragment"

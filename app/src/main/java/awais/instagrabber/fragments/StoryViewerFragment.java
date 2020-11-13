@@ -112,7 +112,7 @@ public class StoryViewerFragment extends Fragment {
     private StoryModel currentStory;
     private int slidePos;
     private int lastSlidePos;
-    private String url, username;
+    private String url;
     private PollModel poll;
     private QuestionModel question;
     private String[] mentions;
@@ -498,7 +498,7 @@ public class StoryViewerFragment extends Fragment {
             }
         } else if (!TextUtils.isEmpty(fragmentArgs.getProfileId()) && !TextUtils.isEmpty(fragmentArgs.getUsername())) {
             currentStoryMediaId = fragmentArgs.getProfileId();
-            username = fragmentArgs.getUsername();
+            currentStoryUsername = fragmentArgs.getUsername();
         }
         isHashtag = fragmentArgs.getIsHashtag();
         isLoc = fragmentArgs.getIsLoc();
@@ -534,7 +534,7 @@ public class StoryViewerFragment extends Fragment {
             }
         };
         storiesService.getUserStory(currentStoryMediaId,
-                                    username,
+                                    currentStoryUsername,
                                     isLoc,
                                     isHashtag,
                                     isHighlight,

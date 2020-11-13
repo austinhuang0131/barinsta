@@ -110,6 +110,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
     private int captionState = BottomSheetBehavior.STATE_HIDDEN;
     private int sliderPosition = -1;
     private DialogInterface.OnShowListener onShowListener;
+    private boolean isLoggedIn;
 
     private final VerticalDragHelper.OnVerticalDragListener onVerticalDragListener = new VerticalDragHelper.OnVerticalDragListener() {
 
@@ -399,6 +400,8 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
     }
 
     private void init() {
+        final String cookie = settingsHelper.getString(Constants.COOKIE);
+        isLoggedIn = !TextUtils.isEmpty(cookie) && CookieUtils.getUserIdFromCookie(cookie) != null;
         if (!wasPaused && (sharedProfilePicElement != null || sharedMainPostElement != null)) {
             binding.getRoot().getBackground().mutate().setAlpha(0);
         }
@@ -418,6 +421,10 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
     }
 
     private void setupComment() {
+        if (!isLoggedIn) {
+            binding.comment.setVisibility(View.GONE);
+            return;
+        }
         binding.comment.setOnClickListener(v -> {
             final NavController navController = getNavController();
             if (navController == null) return;
@@ -448,6 +455,10 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
     }
 
     private void setupLike() {
+        if (!isLoggedIn) {
+            binding.like.setVisibility(View.GONE);
+            return;
+        }
         if (mediaService == null) return;
         setLikedResources(feedModel.getLike());
         final ServiceCallback<Boolean> likeCallback = new ServiceCallback<Boolean>() {
@@ -535,6 +546,10 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
     }
 
     private void setupSave() {
+        if (!isLoggedIn) {
+            binding.save.setVisibility(View.GONE);
+            return;
+        }
         if (mediaService == null) return;
         setSavedResources(feedModel.isSaved());
         final ServiceCallback<Boolean> saveCallback = new ServiceCallback<Boolean>() {
@@ -1112,14 +1127,16 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment {
             binding.commentsCount.setVisibility(View.VISIBLE);
             binding.date.setVisibility(View.VISIBLE);
             binding.captionToggle.setVisibility(View.VISIBLE);
-            binding.comment.setVisibility(View.VISIBLE);
+            binding.download.setVisibility(View.VISIBLE);
+            binding.share.setVisibility(View.VISIBLE);
+            if (isLoggedIn) {
+                binding.comment.setVisibility(View.VISIBLE);
+                binding.like.setVisibility(View.VISIBLE);
+                binding.save.setVisibility(View.VISIBLE);
+            }
             if (video) {
                 binding.playerControlsToggle.setVisibility(View.VISIBLE);
             }
-            binding.download.setVisibility(View.VISIBLE);
-            binding.like.setVisibility(View.VISIBLE);
-            binding.save.setVisibility(View.VISIBLE);
-            binding.share.setVisibility(View.VISIBLE);
             if (wasControlsVisible) {
                 showPlayerControls();
             }

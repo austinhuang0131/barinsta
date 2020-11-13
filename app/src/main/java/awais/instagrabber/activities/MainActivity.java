@@ -35,7 +35,6 @@ import androidx.lifecycle.LiveData;
 import androidx.navigation.NavBackStackEntry;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDestination;
-import androidx.navigation.NavDirections;
 import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.appbar.AppBarLayout;
@@ -58,7 +57,6 @@ import awais.instagrabber.customviews.helpers.CustomHideBottomViewOnScrollBehavi
 import awais.instagrabber.databinding.ActivityMainBinding;
 import awais.instagrabber.fragments.PostViewV2Fragment;
 import awais.instagrabber.fragments.main.FeedFragment;
-import awais.instagrabber.fragments.settings.MorePreferencesFragmentDirections;
 import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.IntentModel;
 import awais.instagrabber.models.SuggestionModel;
@@ -171,12 +169,14 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
     public boolean onCreateOptionsMenu(final Menu menu) {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         searchMenuItem = menu.findItem(R.id.search);
-        if (showSearch && currentNavControllerLiveData != null && currentNavControllerLiveData.getValue() != null) {
+        if (showSearch && currentNavControllerLiveData != null) {
             final NavController navController = currentNavControllerLiveData.getValue();
-            final NavDestination currentDestination = navController.getCurrentDestination();
-            if (currentDestination != null) {
-                final int destinationId = currentDestination.getId();
-                showSearch = destinationId == R.id.profileFragment;
+            if (navController != null) {
+                final NavDestination currentDestination = navController.getCurrentDestination();
+                if (currentDestination != null) {
+                    final int destinationId = currentDestination.getId();
+                    showSearch = destinationId == R.id.profileFragment;
+                }
             }
         }
         if (!showSearch) {
@@ -206,10 +206,10 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
 
     @Override
     public boolean onSupportNavigateUp() {
-        if (currentNavControllerLiveData != null && currentNavControllerLiveData.getValue() != null) {
-            return currentNavControllerLiveData.getValue().navigateUp();
-        }
-        return false;
+        if (currentNavControllerLiveData == null) return false;
+        final NavController navController = currentNavControllerLiveData.getValue();
+        if (navController == null) return false;
+        return navController.navigateUp();
     }
 
     @Override
@@ -220,7 +220,11 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
+        try {
+            super.onDestroy();
+        } catch (Exception e) {
+            Log.e(TAG, "onDestroy: ", e);
+        }
         unbindActivityCheckerService();
     }
 
@@ -256,23 +260,23 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
         suggestionAdapter = new SuggestionsAdapter(this, (type, query) -> {
             if (searchMenuItem != null) searchMenuItem.collapseActionView();
             if (searchView != null && !searchView.isIconified()) searchView.setIconified(true);
-            if (currentNavControllerLiveData != null && currentNavControllerLiveData.getValue() != null) {
-                final NavController navController = currentNavControllerLiveData.getValue();
-                final Bundle bundle = new Bundle();
-                switch (type) {
-                    case TYPE_LOCATION:
-                        bundle.putString("locationId", query);
-                        navController.navigate(R.id.action_global_locationFragment, bundle);
-                        break;
-                    case TYPE_HASHTAG:
-                        bundle.putString("hashtag", query);
-                        navController.navigate(R.id.action_global_hashTagFragment, bundle);
-                        break;
-                    case TYPE_USER:
-                        bundle.putString("username", query);
-                        navController.navigate(R.id.action_global_profileFragment, bundle);
-                        break;
-                }
+            if (currentNavControllerLiveData == null) return;
+            final NavController navController = currentNavControllerLiveData.getValue();
+            if (navController == null) return;
+            final Bundle bundle = new Bundle();
+            switch (type) {
+                case TYPE_LOCATION:
+                    bundle.putString("locationId", query);
+                    navController.navigate(R.id.action_global_locationFragment, bundle);
+                    break;
+                case TYPE_HASHTAG:
+                    bundle.putString("hashtag", query);
+                    navController.navigate(R.id.action_global_hashTagFragment, bundle);
+                    break;
+                case TYPE_USER:
+                    bundle.putString("username", query);
+                    navController.navigate(R.id.action_global_profileFragment, bundle);
+                    break;
             }
         });
     }
@@ -465,9 +469,7 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
     }
 
     private void setupNavigation(final Toolbar toolbar, final NavController navController) {
-        if (navController == null) {
-            return;
-        }
+        if (navController == null) return;
         NavigationUI.setupWithNavController(toolbar, navController);
         navController.addOnDestinationChangedListener((controller, destination, arguments) -> {
             // below is a hack to check if we are at the end of the current stack, to setup the search view
@@ -582,8 +584,9 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
     private void showProfileView(@NonNull final IntentModel intentModel) {
         final String username = intentModel.getText();
         // Log.d(TAG, "username: " + username);
+        if (currentNavControllerLiveData == null) return;
         final NavController navController = currentNavControllerLiveData.getValue();
-        if (currentNavControllerLiveData == null || navController == null) return;
+        if (navController == null) return;
         final Bundle bundle = new Bundle();
         bundle.putString("username", "@" + username);
         navController.navigate(R.id.action_global_profileFragment, bundle);
@@ -609,8 +612,9 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
     private void showLocationView(@NonNull final IntentModel intentModel) {
         final String locationId = intentModel.getText();
         // Log.d(TAG, "locationId: " + locationId);
+        if (currentNavControllerLiveData == null) return;
         final NavController navController = currentNavControllerLiveData.getValue();
-        if (currentNavControllerLiveData == null || navController == null) return;
+        if (navController == null) return;
         final Bundle bundle = new Bundle();
         bundle.putString("locationId", locationId);
         navController.navigate(R.id.action_global_locationFragment, bundle);
@@ -619,21 +623,19 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
     private void showHashtagView(@NonNull final IntentModel intentModel) {
         final String hashtag = intentModel.getText();
         // Log.d(TAG, "hashtag: " + hashtag);
+        if (currentNavControllerLiveData == null) return;
         final NavController navController = currentNavControllerLiveData.getValue();
-        if (currentNavControllerLiveData == null || navController == null) return;
+        if (navController == null) return;
         final Bundle bundle = new Bundle();
         bundle.putString("hashtag", "#" + hashtag);
         navController.navigate(R.id.action_global_hashTagFragment, bundle);
     }
 
     private void showActivityView() {
-        binding.bottomNavView.setSelectedItemId(R.id.more_nav_graph);
-        binding.bottomNavView.post(() -> {
-            final NavController navController = currentNavControllerLiveData.getValue();
-            if (currentNavControllerLiveData == null || navController == null) return;
-            final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToNotificationsViewer();
-            navController.navigate(navDirections);
-        });
+        if (currentNavControllerLiveData == null) return;
+        final NavController navController = currentNavControllerLiveData.getValue();
+        if (navController == null) return;
+        navController.navigate(R.id.action_global_notificationsViewerFragment);
     }
 
     private void bindActivityCheckerService() {
@@ -670,12 +672,14 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
     public void setToolbar(final Toolbar toolbar) {
         binding.appBarLayout.setVisibility(View.GONE);
         setSupportActionBar(toolbar);
+        if (currentNavControllerLiveData == null) return;
         setupNavigation(toolbar, currentNavControllerLiveData.getValue());
     }
 
     public void resetToolbar() {
         binding.appBarLayout.setVisibility(View.VISIBLE);
         setSupportActionBar(binding.toolbar);
+        if (currentNavControllerLiveData == null) return;
         setupNavigation(binding.toolbar, currentNavControllerLiveData.getValue());
     }
 }

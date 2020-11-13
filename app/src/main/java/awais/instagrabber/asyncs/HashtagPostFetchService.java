@@ -14,16 +14,36 @@ public class HashtagPostFetchService implements PostFetcher.PostFetchService {
     private final TagsService tagsService;
     private final HashtagModel hashtagModel;
     private String nextMaxId;
-    private boolean moreAvailable;
+    private boolean moreAvailable, isLoggedIn;
 
-    public HashtagPostFetchService(final HashtagModel hashtagModel) {
+    public HashtagPostFetchService(final HashtagModel hashtagModel, final boolean isLoggedIn) {
         this.hashtagModel = hashtagModel;
+        this.isLoggedIn = isLoggedIn;
         tagsService = TagsService.getInstance();
     }
 
     @Override
     public void fetch(final FetchListener<List<FeedModel>> fetchListener) {
-        tagsService.fetchPosts(hashtagModel.getName().toLowerCase(), nextMaxId, new ServiceCallback<TagPostsFetchResponse>() {
+        if (isLoggedIn) tagsService.fetchPosts(hashtagModel.getName().toLowerCase(), nextMaxId, new ServiceCallback<TagPostsFetchResponse>() {
+            @Override
+            public void onSuccess(final TagPostsFetchResponse result) {
+                if (result == null) return;
+                nextMaxId = result.getNextMaxId();
+                moreAvailable = result.isMoreAvailable();
+                if (fetchListener != null) {
+                    fetchListener.onResult(result.getItems());
+                }
+            }
+
+            @Override
+            public void onFailure(final Throwable t) {
+                // Log.e(TAG, "onFailure: ", t);
+                if (fetchListener != null) {
+                    fetchListener.onFailure(t);
+                }
+            }
+        });
+        else tagsService.fetchGraphQLPosts(hashtagModel.getName().toLowerCase(), nextMaxId, new ServiceCallback<TagPostsFetchResponse>() {
             @Override
             public void onSuccess(final TagPostsFetchResponse result) {
                 if (result == null) return;

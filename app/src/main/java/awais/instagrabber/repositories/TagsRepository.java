@@ -24,4 +24,7 @@ public interface TagsRepository {
     @GET("/api/v1/feed/tag/{tag}/")
     Call<String> fetchPosts(@Path("tag") final String tag,
                             @QueryMap Map<String, String> queryParams);
+
+    @GET("/graphql/query/")
+    Call<String> fetchGraphQLPosts(@QueryMap(encoded = true) Map<String, String> queryParams);
 }

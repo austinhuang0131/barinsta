@@ -39,10 +39,10 @@ public class AboutFragment extends BasePreferencesFragment {
         //thirdPartyCategory.setSummary(R.string.about_category_3pt_summary);
         thirdPartyCategory.setIconSpaceReserved(false);
         // alphabetical order!!!
+        thirdPartyCategory.addPreference(getACIPreference());
         thirdPartyCategory.addPreference(getAutolinkPreference());
         thirdPartyCategory.addPreference(getExoPlayerPreference());
         thirdPartyCategory.addPreference(getFrescoPreference());
-        thirdPartyCategory.addPreference(getIcafePreference());
         thirdPartyCategory.addPreference(getJsoupPreference());
         thirdPartyCategory.addPreference(getMDIPreference());
         thirdPartyCategory.addPreference(getRetrofitPreference());
@@ -101,7 +101,7 @@ public class AboutFragment extends BasePreferencesFragment {
         if (context == null) return null;
         final Preference preference = new Preference(context);
         preference.setTitle("Retrofit");
-        preference.setSummary("Copyright 2013 Square, Inc. Apache Version 2.0.");
+        preference.setSummary("Copyright 2013 Square, Inc. Apache 2.0.");
         preference.setIconSpaceReserved(false);
         preference.setOnPreferenceClickListener(p -> {
             final Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -149,7 +149,7 @@ public class AboutFragment extends BasePreferencesFragment {
         if (context == null) return null;
         final Preference preference = new Preference(context);
         preference.setTitle("ExoPlayer");
-        preference.setSummary("Copyright (C) 2016 The Android Open Source Project. Apache Version 2.0.");
+        preference.setSummary("Copyright (C) 2016 The Android Open Source Project. Apache 2.0.");
         preference.setIconSpaceReserved(false);
         preference.setOnPreferenceClickListener(p -> {
             final Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -165,7 +165,7 @@ public class AboutFragment extends BasePreferencesFragment {
         if (context == null) return null;
         final Preference preference = new Preference(context);
         preference.setTitle("Material Design Icons");
-        preference.setSummary("Copyright (C) 2014 Austin Andrews & Google LLC. Apache Version 2.0.");
+        preference.setSummary("Copyright (C) 2014 Austin Andrews & Google LLC. Apache 2.0.");
         preference.setIconSpaceReserved(false);
         preference.setOnPreferenceClickListener(p -> {
             final Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -181,7 +181,7 @@ public class AboutFragment extends BasePreferencesFragment {
         if (context == null) return null;
         final Preference preference = new Preference(context);
         preference.setTitle("AutoLinkTextViewV2");
-        preference.setSummary("Copyright (C) 2019 Arman Chatikyan. Apache Version 2.0.");
+        preference.setSummary("Copyright (C) 2019 Arman Chatikyan. Apache 2.0.");
         preference.setIconSpaceReserved(false);
         preference.setOnPreferenceClickListener(p -> {
             final Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -192,16 +192,16 @@ public class AboutFragment extends BasePreferencesFragment {
         return preference;
     }
 
-    private Preference getIcafePreference() {
+    private Preference getACIPreference() {
         final Context context = getContext();
         if (context == null) return null;
         final Preference preference = new Preference(context);
-        preference.setTitle("ICAFE");
-        preference.setSummary("Copyright (C) 2014-2019 Wen Yu. Eclipse Version 2.0.");
+        preference.setTitle("Apache Commons Imaging");
+        preference.setSummary("Copyright 2007-2020 The Apache Software Foundation. Apache 2.0.");
         preference.setIconSpaceReserved(false);
         preference.setOnPreferenceClickListener(p -> {
             final Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://github.com/dragon66/icafe"));
+            intent.setData(Uri.parse("https://commons.apache.org/proper/commons-imaging/"));
             startActivity(intent);
             return true;
         });

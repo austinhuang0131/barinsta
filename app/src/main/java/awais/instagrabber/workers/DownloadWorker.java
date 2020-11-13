@@ -26,8 +26,8 @@ import androidx.work.WorkerParameters;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonSyntaxException;
-import com.icafe4j.image.meta.Metadata;
-import com.icafe4j.image.meta.MetadataType;
+
+import org.apache.commons.imaging.formats.jpeg.iptc.JpegIptcRewriter;
 
 import java.io.BufferedInputStream;
 import java.io.File;
@@ -89,6 +89,7 @@ public class DownloadWorker extends Worker {
         try (Scanner scanner = new Scanner(requestFile)) {
             downloadRequestString = scanner.useDelimiter("\\A").next();
         } catch (Exception e) {
+            Log.e(TAG, "doWork: ", e);
             return Result.failure(new Data.Builder()
                                           .putString("error", e.getLocalizedMessage())
                                           .build());
@@ -170,9 +171,10 @@ public class DownloadWorker extends Worker {
             }
             if (isJpg) {
                 final File finalFile = new File(filePath);
-                try (FileInputStream bis = new FileInputStream(outFile);
+                try (FileInputStream fis = new FileInputStream(outFile);
                      FileOutputStream fos = new FileOutputStream(finalFile)) {
-                    Metadata.removeMetadata(bis, fos, MetadataType.IPTC);
+                    final JpegIptcRewriter jpegIptcRewriter = new JpegIptcRewriter();
+                    jpegIptcRewriter.removeIPTC(fis, fos);
                 } catch (Exception e) {
                     Log.e(TAG, "Error while removing iptc: url: " + url
                             + ", tempFile: " + outFile.getAbsolutePath()
@@ -198,6 +200,10 @@ public class DownloadWorker extends Worker {
                                         final float percent) {
         final Notification notification = createProgressNotification(position, total, percent);
         try {
+            if (notification == null) {
+                notificationManager.cancel(notificationId);
+                return;
+            }
             setForegroundAsync(new ForegroundInfo(notificationId, notification)).get();
         } catch (ExecutionException | InterruptedException e) {
             Log.e(TAG, "updateDownloadProgress", e);
@@ -213,6 +219,9 @@ public class DownloadWorker extends Worker {
             totalPercent = 100;
         } else {
             totalPercent = (int) ((100f * (position - 1) / total) + (1f / total) * (percent));
+        }
+        if (totalPercent == 100) {
+            return null;
         }
         // Log.d(TAG, "createProgressNotification: position: " + position
         //         + ", total: " + total

@@ -16,7 +16,6 @@ allprojects {
         google()
         jcenter()
         mavenCentral()
-        maven { url 'http://maven.geotoolkit.org/' }
         maven { url 'https://jitpack.io' }
     }
 }

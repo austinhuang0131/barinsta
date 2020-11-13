@@ -35,7 +35,6 @@ import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public class SettingsPreferencesFragment extends BasePreferencesFragment {
     private static final String TAG = "SettingsPrefsFrag";
-    private static AppCompatTextView customPathTextView;
     private boolean isLoggedIn;
 
     @Override
@@ -293,9 +292,9 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
     }
 
     public static class SaveToCustomFolderPreference extends Preference {
-
+        private AppCompatTextView customPathTextView;
         private final OnSelectFolderButtonClickListener onSelectFolderButtonClickListener;
-        private String key;
+        private final String key;
 
         public SaveToCustomFolderPreference(final Context context, final OnSelectFolderButtonClickListener onSelectFolderButtonClickListener) {
             super(context);
