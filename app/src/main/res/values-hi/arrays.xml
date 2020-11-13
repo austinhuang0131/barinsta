@@ -33,7 +33,7 @@
     </string-array>
     <string-array name="theme_presets">
         <item>सिस्टम के अनुसार</item>
-        <item>बैटरी के अनुसार</item>
+        <item>बैटरी स्तर के अनुसार</item>
         <item>काला</item>
         <item>हल्का</item>
     </string-array>
@@ -52,7 +52,7 @@
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>लोड हो रहा है...</item>
+        <item>खुल रहा है।</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
