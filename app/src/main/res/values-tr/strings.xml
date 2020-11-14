@@ -46,11 +46,8 @@
     <string name="anonymous_settings">Sadece anonim hesapları etkiler:</string>
     <string name="privacy_warning">Gizlilik</string>
     <string name="instadp_settings">Yüksek kalite profil fotoğrafları için Instadp kullan</string>
-    <string name="storiesig_settings">Gizli olmayan hesapların hikayeleri ve öne çıkarılanları için storiesig kullan</string>
-    <string name="stories_viewer_settings">Hikayeler için kullanılan servis</string>
     <string name="import_export">İçe Aktar/Dışa Aktar</string>
     <string name="select_language">Dil</string>
-    <string name="what_to_do_dialog">Ne yapalım?</string>
     <string name="main_posts_count">%s\nGönderi</string>
     <string name="main_posts_count_inline">%s Gönderi</string>
     <string name="main_posts_followers">%s\nTakipçi</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">Resimli gönderi</string>
     <string name="post_viewer_autoplay_video">Videoları otomatik oynat</string>
     <string name="post_viewer_muted_autoplay">Videoları her zaman sustur</string>
-    <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Not: Mevcut [Session] siz buraya gelene kadar bu uyarıyı göstermeyecek ve hep gösterilen gönderiyi indirecek.</string>
     <string name="post_viewer_download_dialog_title">İndirmek için seçin</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Geçerli Oturum [Session]</string>
     <string name="post_viewer_download_current">Güncel</string>
     <string name="post_viewer_download_album">Tüm Albüm</string>
     <string name="show_stories">Hikayeleri göster</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">Gönderiyi Gör</string>
     <string name="view_post">Gönderiyi Gör</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Eğer giriş yapmazsan erişemezsin!</string>
     <string name="vote_story_poll">Oyla</string>
     <string name="votef_story_poll">Oylama başarılı!</string>
     <string name="voted_story_poll">Zaten oy verdiniz!</string>
@@ -99,8 +92,6 @@
     <string name="send_logs">Hata ayıklama metnini gönder</string>
     <string name="time_settings">Tarih biçimi</string>
     <string name="project_link">Proje Sayfasına Git</string>
-    <string name="telegram_link">Telegram Grubuna Katıl</string>
-    <string name="matrix_link">Matrix Grubuna Katıl</string>
     <string name="liked">Beğenilenler</string>
     <string name="saved">Kaydedilenler</string>
     <string name="tagged">Etiketlenilenler</string>
@@ -144,7 +135,6 @@
     <string name="time_settings_title_date_format">Tarih Biçimi</string>
     <string name="time_settings_title_preview">Önizle</string>
     <string name="time_settings_swap_time">Saat ve Tarih konumlarını değiştir</string>
-    <string name="quick_access_info_dialog">Favoriler paneli en sık kullandığınız etiketleri ve/veya kullanıcı adlarını eklemenizi sağlar.\n\nVe Hızlı Erişim paneli hesaplar arasında hızlıca geçiş yapmaya yarar.\n\nNot 1: Her hesaba giriş yapmış olduğunuza emin olun, [Ayarlar &gt; Giriş Yap] şeklinde hesap ekleyebilirsiniz listeye!\n\nNot 2: Mevcut hesaptan çıkış yapın ve diğer hesaba bağlanın.</string>
     <string name="quick_access_cannot_delete_curr">Şu an kullanımda olan hesap silinemez</string>
     <string name="quick_access_confirm_delete">Şunu silmek istediğinden emin misin?: \'%s\'</string>
     <string name="profile_viewer_imageinfo">Genişlik: %d\nYükseklik: %d</string>
