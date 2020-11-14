@@ -92,6 +92,8 @@
     <string name="send_logs">Пратете Архива за Дебагирање</string>
     <string name="time_settings">Формат на датум</string>
     <string name="project_link">Посетете ја страната на Прокетот</string>
+    <string name="telegram_link">Join Telegram Group</string>
+    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">Лајкнато</string>
     <string name="saved">Зачувано</string>
     <string name="tagged">Такнато</string>
