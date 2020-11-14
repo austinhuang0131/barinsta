@@ -157,7 +157,7 @@
     <string name="dms_inbox_unlike">收回訊息的讚</string>
     <string name="dms_inbox_unsend">收回訊息</string>
     <string name="dms_inbox_author">獲取個人檔案</string>
-    <string name="dms_inbox_media_shared_from">來自 %s 的訊息分享</string>
+    <string name="dms_inbox_media_shared_from">來自 %s 的貼文分享</string>
     <string name="dms_inbox_raven_media_unknown"><i>未知的媒體類型</i></string>
     <string name="dms_inbox_raven_media_expired">媒體已過期！</string>
     <string name="dms_inbox_raven_media_delivered">已傳送</string>
@@ -175,12 +175,12 @@
     <string name="dms_action_kick">踢除</string>
     <string name="dms_left_users">已離開的用戶</string>
     <string name="direct_download">直接下載</string>
-    <string name="direct_download_desc">將文章直接下載到手機中！</string>
+    <string name="direct_download_desc">將貼文直接下載到手機中！</string>
     <string name="direct_download_loading">獲取文章中</string>
     <string name="direct_download_perms_ask">請授予權限，然後試著重新下載！</string>
     <string name="downloader_started">已開始下載</string>
     <string name="downloader_complete">下載完成</string>
-    <string name="downloader_downloading_post">下載文章中…</string>
+    <string name="downloader_downloading_post">下載貼文中…</string>
     <string name="downloader_downloading_media">下載媒體中</string>
     <string name="downloader_downloading_pfp">下載個人圖片中</string>
     <string name="downloader_downloaded_in_folder">檔案已下載到下載資料夾中！</string>
@@ -239,7 +239,7 @@
     <string name="profile">檔案</string>
     <string name="more">更多</string>
     <string name="title_dm">訊息</string>
-    <string name="number_selected">已選 %s</string>
+    <string name="number_selected">已選 %d</string>
     <string name="relogin">重新登入</string>
     <string name="relogin_summary">如果遇到任何問題，請刷新您的 Cookie</string>
     <string name="logout_success">已成功登出！</string>
@@ -283,10 +283,10 @@
     <string name="restore_backup">還原</string>
     <string name="file_chosen_label">檔案：</string>
     <string name="enter_password">輸入密碼</string>
-    <string name="select_backup_file">選擇一個備份文件（.zaai  / .backup）</string>
+    <string name="select_backup_file">選擇一個備份文件（.zaai / .backup）</string>
     <string name="apply">套用</string>
     <string name="save">儲存</string>
-    <string name="caption">字幕</string>
+    <string name="caption">說明</string>
     <string name="player_timeline_desc">影片播放器時間軸</string>
     <string name="liking">按讚中…</string>
     <string name="like_unsuccessful">按讚失敗</string>
