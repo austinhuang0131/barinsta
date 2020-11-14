@@ -46,11 +46,8 @@
     <string name="anonymous_settings">Hanya memengaruhi pengguna anonim:</string>
     <string name="privacy_warning">Privasi</string>
     <string name="instadp_settings">Gunakan Instadp untuk foto profil kualitas tinggi</string>
-    <string name="storiesig_settings">Gunakan storiesig untuk cerita dan sorotan dari pengguna publik</string>
-    <string name="stories_viewer_settings">Layanan penayang cerita</string>
     <string name="import_export">Ekspor/impor Pengaturan</string>
     <string name="select_language">Bahasa</string>
-    <string name="what_to_do_dialog">Apa yang harus dilakukan?</string>
     <string name="main_posts_count">%s\nkiriman</string>
     <string name="main_posts_count_inline">%s Kiriman</string>
     <string name="main_posts_followers">%s\npengikut</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">Kiriman gambar</string>
     <string name="post_viewer_autoplay_video">Otomatis putar video</string>
     <string name="post_viewer_muted_autoplay">Selalu bisukan video</string>
-    <string name="post_viewer_post_from">%s dari %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Catatan: [Sesi] saat ini tidak akan meminta anda untuk memilih foto mana yang akan diunduh dan akan selalu mengunduh semua foto jika foto pada kiriman lebih dari 1.</string>
     <string name="post_viewer_download_dialog_title">Pilih apa yang akan diunduh</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">[Sesi] saat ini</string>
     <string name="post_viewer_download_current">Foto ini saja</string>
     <string name="post_viewer_download_album">Semua foto</string>
     <string name="show_stories">Tampilkan story</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">Lihat Kiriman</string>
     <string name="view_post">Lihat Kiriman</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Tidak dapat berinteraksi apabila anda tidak masuk!</string>
     <string name="vote_story_poll">Pilih</string>
     <string name="votef_story_poll">Berhasil memilih!</string>
     <string name="voted_story_poll">Anda sudah memilih!</string>
@@ -99,8 +92,6 @@
     <string name="send_logs">Kirim Jurnal [kalau sesuatu gak jalan]</string>
     <string name="time_settings">Format tanggal</string>
     <string name="project_link">Kunjungi Laman Proyek</string>
-    <string name="telegram_link">Gabung Grup Telegram</string>
-    <string name="matrix_link">Gabung ke Ruangan Matrix</string>
     <string name="liked">Disuka</string>
     <string name="saved">Tersimpan</string>
     <string name="tagged">Ditandai</string>
@@ -144,7 +135,6 @@
     <string name="time_settings_title_date_format">Format Tanggal</string>
     <string name="time_settings_title_preview">Pratinjau</string>
     <string name="time_settings_swap_time">Tukar posisi jam dan tanggal</string>
-    <string name="quick_access_info_dialog">Panel Kesukaan digunakan untuk menambahkan hashtag dan/atau pengguna yang anda sukai.\n\nPanel Akses Cepat digunakan untuk berpindah akun secara cepat.\n\nNb. 1: Pastikan kamu masuk ke akun yang kamu inginkan [Pengaturan &gt; Masuk] terlebih dahulu untuk menambahkan akun ke daftar ini.\n\nNb. 2: Keluar dari akun saat ini kemudian masuk ke akun lainnya.\nJika banyak akun tidak bekerja untukmu, tidak ada yang bisa kita lakukan!</string>
     <string name="quick_access_cannot_delete_curr">Tidak dapat menghapus akun yang sedang digunakan</string>
     <string name="quick_access_confirm_delete">Anda yakin ingin menghapus \'%s\'?</string>
     <string name="profile_viewer_imageinfo">Lebar: %d\nTinggi: %d</string>
