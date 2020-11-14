@@ -306,16 +306,16 @@
     <string name="layout">布局</string>
     <string name="opening_post">正在打开帖子...</string>
     <string name="share">分享</string>
-    <string name="layout_style">Layout style</string>
-    <string name="column_count">Column count</string>
+    <string name="layout_style">布局样式</string>
+    <string name="column_count">列数</string>
     <string name="two">2</string>
     <string name="three">3</string>
-    <string name="show_names">Show names</string>
-    <string name="show_avatars">Show avatars</string>
-    <string name="avatar_size">Avatar size</string>
+    <string name="show_names">显示名称</string>
+    <string name="show_avatars">展示头像</string>
+    <string name="avatar_size">头像大小</string>
     <string name="corners">Corners</string>
-    <string name="show_grid_gap">Show grid gap</string>
-    <string name="disable_animation">Disable animation</string>
+    <string name="show_grid_gap">显示网格间距</string>
+    <string name="disable_animation">禁用动画</string>
     <plurals name="likes_count">
         <item quantity="other">%d 个赞</item>
     </plurals>
