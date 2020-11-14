@@ -92,6 +92,8 @@
     <string name="send_logs">Enviar registros de depuración</string>
     <string name="time_settings">Formato de fecha</string>
     <string name="project_link">Visitar página del proyecto</string>
+    <string name="telegram_link">Join Telegram Group</string>
+    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">Gustado</string>
     <string name="saved">Guardado</string>
     <string name="tagged">Etiquetado</string>
