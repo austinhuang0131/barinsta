@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>सिष्टम निर्धारित</item>
+        <item>सिस्टम निर्धारित</item>
         <item>अंग्रेजी</item>
         <item>फ़्रान्सीसी [@kernoeb के द्वारा]</item>
         <item>स्पेनी भाषा [@sguinetti के द्बारा]</item>
@@ -20,19 +20,19 @@
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-        <item>5</item>
-        <item>6</item>
-        <item>7</item>
-        <item>8</item>
-        <item>9</item>
-        <item>10</item>
+        <item>१</item>
+        <item>२</item>
+        <item>३</item>
+        <item>४</item>
+        <item>५</item>
+        <item>६</item>
+        <item>७</item>
+        <item>८</item>
+        <item>९</item>
+        <item>१०</item>
         <item>११</item>
-        <item>12</item>
-        <item>13</item>
+        <item>१२</item>
+        <item>१३</item>
     </string-array>
     <string-array name="theme_presets">
         <item>सिस्टम के अनुसार</item>
@@ -41,21 +41,21 @@
         <item>हल्का</item>
     </string-array>
     <string-array name="theme_presets_values">
-        <item>0</item>
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
+        <item>०</item>
+        <item>१</item>
+        <item>२</item>
+        <item>३</item>
     </string-array>
     <string-array name="separator_presets">
         <item>कुछ नहीं</item>
         <item>\@</item>
         <item>पर</item>
-        <item>ऑन</item>
+        <item>पर</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>खुल रहा है।</item>
+        <item>खुल रहा है...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
