@@ -93,6 +93,8 @@
     <string name="send_logs">डिबग लग्स को भेजें</string>
     <string name="time_settings">दिनांक स्वरूप</string>
     <string name="project_link">प्रोजेक्ट पेज को जाएं</string>
+    <string name="telegram_link">Join Telegram Group</string>
+    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">पसंद किये</string>
     <string name="saved">सेव किया</string>
     <string name="tagged">टैग किये</string>
