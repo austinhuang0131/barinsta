@@ -46,11 +46,8 @@
     <string name="anonymous_settings">गुमनामी लोगों के लिये</string>
     <string name="privacy_warning">गोपनीयता</string>
     <string name="instadp_settings">अधिक स्पष्ट रूपरेखा के लिये instadp कि ब्यबहार करें।</string>
-    <string name="storiesig_settings">सार्बजनीन एकाउॅट से स्टोरीज और हाइलाइट्स दिखने के लिये soriesig की ब्यबहार करें</string>
-    <string name="stories_viewer_settings">स्टोरी देखने की सेबा</string>
     <string name="import_export">आयात/निर्यात</string>
     <string name="select_language">भाषा</string>
-    <string name="what_to_do_dialog">क्या करे?</string>
     <string name="main_posts_count">%s\n पोस्टस</string>
     <string name="main_posts_count_inline">%s पोस्टस</string>
     <string name="main_posts_followers">%s\n अनुगामीयाॅ</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">चित्र पोस्ट</string>
     <string name="post_viewer_autoplay_video">वीडियो ऑटोप्ले करें</string>
     <string name="post_viewer_muted_autoplay">सर्बदा वीडियो को शब्दहिन रखें</string>
-    <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">नोट: बर्तमान [Session] ये वार्ता को नहीं दिखाएगा जब तक आप यहाॅ है, और सर्बदा दिखाए गये पोस्ट स्लाइड को डाउनलोड करे</string>
     <string name="post_viewer_download_dialog_title">डाउनलोड करने के लिए चयन करें</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">बर्तमान [Session]</string>
     <string name="post_viewer_download_current">वर्तमान</string>
     <string name="post_viewer_download_album">सम्पूर्ण आलबम</string>
     <string name="show_stories">कहानियाँ दिखाएँ</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">पोस्ट देखें</string>
     <string name="view_post">पोस्ट देखें</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">बिना लग इन कर के आप ब्यबहार नहीं कर सकते!</string>
     <string name="vote_story_poll">मत दें</string>
     <string name="votef_story_poll">मतदान सफल!</string>
     <string name="voted_story_poll">आप पहले से ही मत दिये हो!</string>
@@ -100,8 +93,6 @@
     <string name="send_logs">डिबग लग्स को भेजें</string>
     <string name="time_settings">दिनांक स्वरूप</string>
     <string name="project_link">प्रोजेक्ट पेज को जाएं</string>
-    <string name="telegram_link">टेलिग्राम ग्रुप पे जएन करें</string>
-    <string name="matrix_link">माट्रिक्स ग्रुप पे जएन करें</string>
     <string name="liked">पसंद किये</string>
     <string name="saved">सेव किया</string>
     <string name="tagged">टैग किये</string>
@@ -145,8 +136,6 @@
     <string name="time_settings_title_date_format">दिनांक स्वरूप</string>
     <string name="time_settings_title_preview">अवलोकन</string>
     <string name="time_settings_swap_time">समय और दिबस अदला-बदली करें</string>
-    <string name="quick_access_info_dialog">फेवराइट पैनल आपके पसन्दिता हैजटैग या/और ब्यक्ति के नाम को लिखने के लिए है।\n\nऔर क्विक आसेस पैनल दो या ज्यादा एकाऊँटस में 
-तुरन्त बदलाव कर सकते हैं।\n\n टिप्पणी १: सुनिश्चित करें कि प्रत्येक एकाउँट पर लग इन करें[सेटिंगस &gt; लग इन]\n\n२: बर्तमान एकाउँट से लग आउट करें और अन्य एक एकाउँट पे लग इन करें।</string>
     <string name="quick_access_cannot_delete_curr">बर्तमीन ब्यबह्रत एकाउँट को मिटा नहिं सकते</string>
     <string name="quick_access_confirm_delete">क्या आप सचमुच %s मिटाना चाहते हैं?</string>
     <string name="profile_viewer_imageinfo">दैर्घ्य: %d\nप्रस्त: %d</string>
