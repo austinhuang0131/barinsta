@@ -92,6 +92,8 @@
     <string name="send_logs">Hata ayıklama metnini gönder</string>
     <string name="time_settings">Tarih biçimi</string>
     <string name="project_link">Proje Sayfasına Git</string>
+    <string name="telegram_link">Join Telegram Group</string>
+    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">Beğenilenler</string>
     <string name="saved">Kaydedilenler</string>
     <string name="tagged">Etiketlenilenler</string>
