@@ -93,8 +93,6 @@
     <string name="send_logs">فرستادن گزارش های اشکال زدایی</string>
     <string name="time_settings">فرمت تاریخ</string>
     <string name="project_link">دیدن صفحه پروژه</string>
-    <string name="telegram_link">Join Telegram Group</string>
-    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">پسندیده شد</string>
     <string name="saved">ذخیره شد</string>
     <string name="tagged">تگ شده</string>
