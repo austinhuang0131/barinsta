@@ -12,7 +12,7 @@
     <string name="password">密碼（最多32個字元）</string>
     <string name="set_password">設定密碼（最多32個字元）</string>
     <string name="password_no_max">密碼</string>
-    <string name="ok">OK</string>
+    <string name="ok">確定</string>
     <string name="yes">是</string>
     <string name="cancel">取消</string>
     <string name="no">否</string>
@@ -279,7 +279,7 @@
     <string name="dark_black_theme">黑色</string>
     <string name="light_theme_settings">淺色主題</string>
     <string name="dark_theme_settings">暗色主題</string>
-    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
+    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">咖啡棕</string>
     <string name="dark_material_dark_theme">暗黑 Material</string>
     <string name="added_to_favs">已加入至收藏夾</string>
     <string name="add_to_favorites">加入至收藏夾</string>
@@ -315,9 +315,9 @@
     <string name="opening_post">開啟貼文中…</string>
     <string name="share">分享</string>
     <plurals name="likes_count">
-        <item quantity="other">%d likes</item>
+        <item quantity="other">%d 個讚</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="other">%d comments</item>
+        <item quantity="other">%d 個評論</item>
     </plurals>
 </resources>
