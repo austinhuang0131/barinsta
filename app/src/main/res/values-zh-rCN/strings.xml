@@ -92,8 +92,6 @@
     <string name="send_logs">发送调试日志</string>
     <string name="time_settings">日期格式</string>
     <string name="project_link">参观项目页面</string>
-    <string name="telegram_link">加入 Telegram 群组</string>
-    <string name="matrix_link">加入 Matrix 聊天室</string>
     <string name="liked">已赞</string>
     <string name="saved">已保存</string>
     <string name="tagged">已标记</string>
