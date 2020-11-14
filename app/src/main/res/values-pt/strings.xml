@@ -46,11 +46,8 @@
     <string name="anonymous_settings">Afeta apenas usuários anônimos:</string>
     <string name="privacy_warning">Privacidade</string>
     <string name="instadp_settings">Usar Instadp para fotos de perfil de alta definição</string>
-    <string name="storiesig_settings">Usar storiesig para stories e destaques de usuários públicos</string>
-    <string name="stories_viewer_settings">Serviço de visualização de stories</string>
     <string name="import_export">Importar/Exportar</string>
     <string name="select_language">Idioma</string>
-    <string name="what_to_do_dialog">O que fazer?</string>
     <string name="main_posts_count">%s\nPublicações</string>
     <string name="main_posts_count_inline">%s Publicações</string>
     <string name="main_posts_followers">%s\nSeguidores</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">Publicação de imagem</string>
     <string name="post_viewer_autoplay_video">Reprodução automática de vídeos</string>
     <string name="post_viewer_muted_autoplay">Sempre silenciar vídeos</string>
-    <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Obs: A [Sessão] atual não mostrará esta mensagem até que você esteja aqui e sempre baixará o slide de publicação mostrado.</string>
     <string name="post_viewer_download_dialog_title">Selecionar o que baixar</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">[Sessão] Atual</string>
     <string name="post_viewer_download_current">Atual</string>
     <string name="post_viewer_download_album">Álbum Inteiro</string>
     <string name="show_stories">Mostrar stories</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">Ver Publicação</string>
     <string name="view_post">Ver Publicação</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Não é possível interagir se você não estiver logado!</string>
     <string name="vote_story_poll">Votar</string>
     <string name="votef_story_poll">Voto enviado!</string>
     <string name="voted_story_poll">Você já votou!</string>
@@ -99,8 +92,6 @@
     <string name="send_logs">Enviar registros de depuração</string>
     <string name="time_settings">Formato de data</string>
     <string name="project_link">Visite a página do projeto</string>
-    <string name="telegram_link">Junte-se ao Grupo do Telegram</string>
-    <string name="matrix_link">Junte-se à sala Matrix</string>
     <string name="liked">Curtiu</string>
     <string name="saved">Salvo</string>
     <string name="tagged">Marcado</string>
@@ -144,7 +135,6 @@
     <string name="time_settings_title_date_format">Formato de data</string>
     <string name="time_settings_title_preview">Pré-visualizar</string>
     <string name="time_settings_swap_time">Trocar posições de Data e Hora</string>
-    <string name="quick_access_info_dialog">O painel de Favoritos serve para adicionar suas hashtags e/ou nomes de usuário favoritos.\n\nE o painel de acesso rápido serve para alternar rapidamente entre contas.\n\nObservação 1: Certifique-se de fazer login em cada conta [Configurações &gt; Logar] para adicionar uma conta a lista!\n\nObservação 2: Deslogue da conta atual e, em seguida, faça login na outra conta.</string>
     <string name="quick_access_cannot_delete_curr">Não é possível excluir a conta atualmente em uso</string>
     <string name="quick_access_confirm_delete">Tem certeza que deseja excluir %s\'?</string>
     <string name="profile_viewer_imageinfo">Largura: %d\nAltura: %d</string>
