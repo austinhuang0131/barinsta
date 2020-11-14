@@ -46,11 +46,8 @@
     <string name="anonymous_settings">فقط بر کاربران ناشناس اثر دارد:</string>
     <string name="privacy_warning">حریم خصوصی</string>
     <string name="instadp_settings">استفاده از Instadp برای بالا بردن وضوح عکس‌های نمایه</string>
-    <string name="storiesig_settings">استفاده از storiesig برای وضعیت‌ها و هایلایت‌های کاربران عمومی</string>
-    <string name="stories_viewer_settings">سرویس دیدن استوری</string>
     <string name="import_export">وارد کردن/خروجی گرفتن</string>
     <string name="select_language">زبان</string>
-    <string name="what_to_do_dialog">چه باید کرد؟</string>
     <string name="main_posts_count">%s\n پست‌ها</string>
     <string name="main_posts_count_inline">%s پست ها</string>
     <string name="main_posts_followers">%s\nدنبال کننده ها</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">پست عکس</string>
     <string name="post_viewer_autoplay_video">پخش خودکار فیلم ها</string>
     <string name="post_viewer_muted_autoplay">همیشه فیلم هارو بی صدا کن</string>
-    <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">توجه: تا زمانی که [Session] در اینجا باشید این دیالوگ نمایش داده نمی شود و همیشه اسلاید پست نمایش داده شده دانلود خواهد شد.</string>
     <string name="post_viewer_download_dialog_title">انتخاب کن چی دانلود کنی</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">[Session] کنونی</string>
     <string name="post_viewer_download_current">کنونی</string>
     <string name="post_viewer_download_album">آلبوم کامل</string>
     <string name="show_stories">نمایش استوری ها</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">دیدن پست</string>
     <string name="view_post">دیدن پست</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">در صورت عدم ورود به سیستم نمی توان ارتباط برقرار کرد!</string>
     <string name="vote_story_poll">رای دادن</string>
     <string name="votef_story_poll">رای با موفقیت بود!</string>
     <string name="voted_story_poll">در حال حاظر شما رای داده اید!</string>
@@ -100,8 +93,6 @@
     <string name="send_logs">فرستادن گزارش های اشکال زدایی</string>
     <string name="time_settings">فرمت تاریخ</string>
     <string name="project_link">دیدن صفحه پروژه</string>
-    <string name="telegram_link">عضو شدن در گروه تلگرام</string>
-    <string name="matrix_link">عضو شدن در Matrix Room</string>
     <string name="liked">پسندیده شد</string>
     <string name="saved">ذخیره شد</string>
     <string name="tagged">تگ شده</string>
@@ -145,7 +136,6 @@
     <string name="time_settings_title_date_format">فرمت تاریخ</string>
     <string name="time_settings_title_preview">پیش نمایش</string>
     <string name="time_settings_swap_time">موقعیت زمان و تاریخ را عوض کنید</string>
-    <string name="quick_access_info_dialog">پنل علاقه مندی ها برای اضافه کردن هشتگ های مورد علاقه شما و یا نام کاربری است.\n\n و پنل دسترسی سریع برای سریع تعویض کردن میان حساب هاست.\n\n یادداشت ۱ : توجه 1: حتما وارد هر حساب شوید [تنظیمات &gt; ورود] برای اضافه کردن حساب در لیست!\n\n یادداشت ۲: از حساب کنونی بیرون بروید و سپس وارد حساب های دیگر شوید.</string>
     <string name="quick_access_cannot_delete_curr">نمیتواند حذف شود این اکانت در حال استفاده است</string>
     <string name="quick_access_confirm_delete">آیا مطمن هستید میخواهید حذف کنید \'%s\'؟</string>
     <string name="profile_viewer_imageinfo">عرض: %d\nارتفاع: %d</string>
