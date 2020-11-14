@@ -46,11 +46,8 @@
     <string name="anonymous_settings">仅影响匿名用户：</string>
     <string name="privacy_warning">隐私</string>
     <string name="instadp_settings">使用 Instadp 获取高清头像</string>
-    <string name="storiesig_settings">使用 storiesig 获取快拍和精彩</string>
-    <string name="stories_viewer_settings">快拍查看工具</string>
     <string name="import_export">导入/导出</string>
     <string name="select_language">语言</string>
-    <string name="what_to_do_dialog">怎么办?</string>
     <string name="main_posts_count">%s\n帖子</string>
     <string name="main_posts_count_inline">%s 个帖子</string>
     <string name="main_posts_followers">%s\n粉丝</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">图片帖</string>
     <string name="post_viewer_autoplay_video">自动播放视频</string>
     <string name="post_viewer_muted_autoplay">视频默认静音</string>
-    <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">注: 当前[帖子] 键将默认下载您说看到的那一张照片，直到按返回键退出本帖为止。</string>
     <string name="post_viewer_download_dialog_title">选择要下载的</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">当前 [帖子]</string>
     <string name="post_viewer_download_current">当前</string>
     <string name="post_viewer_download_album">整个图集</string>
     <string name="show_stories">显示快拍</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">查看帖子</string>
     <string name="view_post">查看帖子</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">匿名用户不能使用此功能！</string>
     <string name="vote_story_poll">投票</string>
     <string name="votef_story_poll">投票成功！</string>
     <string name="voted_story_poll">您已投票过了！</string>
@@ -99,8 +92,6 @@
     <string name="send_logs">发送调试日志</string>
     <string name="time_settings">日期格式</string>
     <string name="project_link">参观项目页面</string>
-    <string name="telegram_link">加入 Telegram 群组</string>
-    <string name="matrix_link">加入 Matrix 群组</string>
     <string name="liked">已赞</string>
     <string name="saved">已保存</string>
     <string name="tagged">已标记</string>
@@ -144,7 +135,6 @@
     <string name="time_settings_title_date_format">日期格式</string>
     <string name="time_settings_title_preview">预览</string>
     <string name="time_settings_swap_time">互换时间和日期位置</string>
-    <string name="quick_access_info_dialog">最爱面板让您添加您最爱的标签和用户。\n\n而快捷通道是用来迅速切换账户的。\n\n注1: 请确保各个账户已登录 [设定 &gt; 登录] 来添加账户!\n\n注2: 登出当前账户之后再登录另一个账户。</string>
     <string name="quick_access_cannot_delete_curr">无法删除正在使用的账户</string>
     <string name="quick_access_confirm_delete">您确定要删除\"%s\"吗？</string>
     <string name="profile_viewer_imageinfo">宽: %d\n高: %d</string>
