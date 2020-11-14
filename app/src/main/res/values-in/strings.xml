@@ -92,6 +92,8 @@
     <string name="send_logs">Kirim Jurnal [kalau sesuatu gak jalan]</string>
     <string name="time_settings">Format tanggal</string>
     <string name="project_link">Kunjungi Laman Proyek</string>
+    <string name="telegram_link">Join Telegram Group</string>
+    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">Disuka</string>
     <string name="saved">Tersimpan</string>
     <string name="tagged">Ditandai</string>
