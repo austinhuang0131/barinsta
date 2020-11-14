@@ -46,11 +46,8 @@
     <string name="anonymous_settings">Riguarda solo utenti anonimi:</string>
     <string name="privacy_warning">Privacy</string>
     <string name="instadp_settings">Usa Instadp per le immagini del profilo ad alta definizione</string>
-    <string name="storiesig_settings">Usa storiesig per storie e momenti salienti da utenti pubblici</string>
-    <string name="stories_viewer_settings">Servizio visualizzatore storia</string>
     <string name="import_export">Importa/Esporta</string>
     <string name="select_language">Lingua</string>
-    <string name="what_to_do_dialog">Cosa fare?</string>
     <string name="main_posts_count">%s\nPost</string>
     <string name="main_posts_count_inline">%s Post</string>
     <string name="main_posts_followers">%s\nFollower</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">Immagine post</string>
     <string name="post_viewer_autoplay_video">Auto-avvia video</string>
     <string name="post_viewer_muted_autoplay">Disattiva sempre audio ai video</string>
-    <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Nota: l\'attuale [Session] non mostrerà questa finestra di dialogo finché non sarai qui e scaricherai sempre la diapositiva post mostrata.</string>
     <string name="post_viewer_download_dialog_title">Seleziona cosa scaricare</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Corrente [Session]</string>
     <string name="post_viewer_download_current">Corrente</string>
     <string name="post_viewer_download_album">Intero Album</string>
     <string name="show_stories">Mostra storie</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">Mostra Post</string>
     <string name="view_post">Mostra Post</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Impossibile interagire se non hai effettuato l\'accesso!</string>
     <string name="vote_story_poll">Vota</string>
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
@@ -99,8 +92,6 @@
     <string name="send_logs">Invia registri di debug</string>
     <string name="time_settings">Formato della data</string>
     <string name="project_link">Visita la pagina del progetto</string>
-    <string name="telegram_link">Unisciti al gruppo Telegram</string>
-    <string name="matrix_link">Unisciti alla stanza Matrix</string>
     <string name="liked">Hai messo Like</string>
     <string name="saved">Elementi salvati</string>
     <string name="tagged">Taggato</string>
@@ -144,7 +135,6 @@
     <string name="time_settings_title_date_format">Formato data</string>
     <string name="time_settings_title_preview">Anteprima</string>
     <string name="time_settings_swap_time">Scambia posizioni Orario e Data</string>
-    <string name="quick_access_info_dialog">Il pannello Preferiti consente di aggiungere hashtag e / o nomi utente preferiti. \n\nIl pannello Accesso rapido consente di passare rapidamente da un account all\'altro. \n\nNota 1: assicurati di accedere a ciascun profilo [Impostazioni&gt; Accedi] per aggiungere il profilo all\'elenco! \n\nNota 2: disconnettiti dal profilo corrente e quindi accedi all\'altro profilo. \nSe più profili non funzionano per te, non possiamo fare nulla!</string>
     <string name="quick_access_cannot_delete_curr">Impossibile eliminare l\'account attualmente in uso</string>
     <string name="quick_access_confirm_delete">Sei sicuro di voler eliminare \'%s\'?</string>
     <string name="profile_viewer_imageinfo">Larghezza: %d\nAltezza: %d</string>
