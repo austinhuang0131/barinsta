@@ -137,9 +137,9 @@
     <string name="time_settings_swap_time">交換時間和日期位置</string>
     <string name="quick_access_cannot_delete_curr">無法刪除當前正在使用的帳戶</string>
     <string name="quick_access_confirm_delete">您確定要刪除 %s 嗎？</string>
-    <string name="profile_viewer_imageinfo">寬: %d\高: %d</string>
+    <string name="profile_viewer_imageinfo">寬: %d\n高: %d</string>
     <string name="profile_viewer_colordepth_prefix">\n顏色深度:</string>
-    <string name="profile_endpoint">選擇個人檔案圖片端點 （不影響主題標籤）</string>
+    <string name="profile_endpoint">選擇個人檔案圖片端點\n（不影響主題標籤）</string>
     <string name="open_profile">開啟個人檔案</string>
     <string name="view_pfp">查看個人檔案圖片</string>
     <string name="direct_messages_you">您</string>
@@ -156,7 +156,7 @@
     <string name="dms_inbox_like">對此訊息說讚</string>
     <string name="dms_inbox_unlike">收回訊息的讚</string>
     <string name="dms_inbox_unsend">收回訊息</string>
-    <string name="dms_inbox_author">獲取貼文中</string>
+    <string name="dms_inbox_author">獲取個人檔案</string>
     <string name="dms_inbox_media_shared_from">來自 %s 的訊息分享</string>
     <string name="dms_inbox_raven_media_unknown"><i>未知的媒體類型</i></string>
     <string name="dms_inbox_raven_media_expired">媒體已過期！</string>
@@ -236,7 +236,7 @@
     <string name="activity_count_likes">%d 個讚</string>
     <string name="activity_notloggedin">你怎麼在點擊此通知前登出的？！</string>
     <string name="feed">貼文</string>
-    <string name="profile">個人檔案</string>
+    <string name="profile">檔案</string>
     <string name="more">更多</string>
     <string name="title_dm">訊息</string>
     <string name="number_selected">已選 %s</string>
