@@ -320,6 +320,16 @@
     <string name="layout">Layout</string>
     <string name="opening_post">Opening post...</string>
     <string name="share">Share</string>
+    <string name="layout_style">Layout style</string>
+    <string name="column_count">Column count</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="show_names">Show names</string>
+    <string name="show_avatars">Show avatars</string>
+    <string name="avatar_size">Avatar size</string>
+    <string name="corners">Corners</string>
+    <string name="show_grid_gap">Show grid gap</string>
+    <string name="disable_animation">Disable animation</string>
     <plurals name="likes_count">
         <item quantity="one">%d like</item>
         <item quantity="other">%d likes</item>
