@@ -92,8 +92,6 @@
     <string name="send_logs">Gửi nhật ký gỡ lỗi</string>
     <string name="time_settings">Định dạng ngày tháng</string>
     <string name="project_link">Truy cập trang của dự án</string>
-    <string name="telegram_link">Join Telegram Group</string>
-    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">Đã thích</string>
     <string name="saved">Đã lưu</string>
     <string name="tagged">Đã gắn thẻ</string>
