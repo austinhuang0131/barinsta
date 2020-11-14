@@ -92,6 +92,8 @@
     <string name="send_logs">發送除錯日誌</string>
     <string name="time_settings">日期格式</string>
     <string name="project_link">造訪專案頁面</string>
+    <string name="telegram_link">Join Telegram Group</string>
+    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">已按讚</string>
     <string name="saved">已儲存</string>
     <string name="tagged">已標記</string>
