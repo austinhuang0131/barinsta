@@ -309,7 +309,7 @@
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="show_names">显示名称</string>
-    <string name="show_avatars">展示头像</string>
+    <string name="show_avatars">显示头像</string>
     <string name="avatar_size">头像大小</string>
     <string name="corners">边角</string>
     <string name="show_grid_gap">显示网格间距</string>
