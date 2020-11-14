@@ -92,6 +92,8 @@
     <string name="send_logs">Envoyer des journaux de débogage</string>
     <string name="time_settings">Format de la date</string>
     <string name="project_link">Visiter la page du projet</string>
+    <string name="telegram_link">Join Telegram Group</string>
+    <string name="matrix_link">Join Matrix Room</string>
     <string name="liked">Aimé</string>
     <string name="saved">Sauvegardé</string>
     <string name="tagged">Taggé</string>
