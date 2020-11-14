@@ -299,25 +299,25 @@
     <string name="caption">Keterangan</string>
     <string name="player_timeline_desc">Bilah waktu pemutar video</string>
     <string name="liking">Menyukai…</string>
-    <string name="like_unsuccessful">Like unsuccessful</string>
-    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
-    <string name="unliking">Unliking…</string>
-    <string name="controls">Controls</string>
-    <string name="saving">Saving…</string>
-    <string name="removing">Removing…</string>
-    <string name="save_unsuccessful">Save unsuccessful</string>
-    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
-    <string name="downloading">Downloading…</string>
-    <string name="downloader_downloading_child">Download item %d of %d</string>
-    <string name="delete">Delete</string>
-    <string name="comment">Comment</string>
-    <string name="layout">Layout</string>
-    <string name="opening_post">Opening post...</string>
-    <string name="share">Share</string>
+    <string name="like_unsuccessful">Gagal menyukai</string>
+    <string name="unlike_unsuccessful">Gagal membatalkan suka</string>
+    <string name="unliking">Membatalkan suka…</string>
+    <string name="controls">Kontrol</string>
+    <string name="saving">Menyimpan…</string>
+    <string name="removing">Menghpus…</string>
+    <string name="save_unsuccessful">Gagal menyimpan</string>
+    <string name="save_remove_unsuccessful">Gagal menghilangkan</string>
+    <string name="downloading">Mengunduh…</string>
+    <string name="downloader_downloading_child">Unduh item %d dari %d</string>
+    <string name="delete">Hapus</string>
+    <string name="comment">Komentar</string>
+    <string name="layout">Tata letak</string>
+    <string name="opening_post">Membuka kiriman...</string>
+    <string name="share">Bagikan</string>
     <plurals name="likes_count">
-        <item quantity="other">%d likes</item>
+        <item quantity="other">%d suka</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="other">%d comments</item>
+        <item quantity="other">%d komentar</item>
     </plurals>
 </resources>
