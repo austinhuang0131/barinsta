@@ -46,11 +46,8 @@
     <string name="anonymous_settings">Влијае на анинимните корисници:</string>
     <string name="privacy_warning">Приватност</string>
     <string name="instadp_settings">Користи Instadp за профили со висока резолуција</string>
-    <string name="storiesig_settings">Користи storiesig за Приказни и нагласени Приказни за отворени профили.</string>
-    <string name="stories_viewer_settings">Опции за гледање Приказни</string>
     <string name="import_export">Увоз/Извоз</string>
     <string name="select_language">Јазик</string>
-    <string name="what_to_do_dialog">Што да правам?</string>
     <string name="main_posts_count">%s\nПостови</string>
     <string name="main_posts_count_inline">%s Постови</string>
     <string name="main_posts_followers">%s\nСледбеници</string>
@@ -59,10 +56,7 @@
     <string name="post_viewer_image_post">Пост со фотографија</string>
     <string name="post_viewer_autoplay_video">Autoplay на видеа</string>
     <string name="post_viewer_muted_autoplay">Секогаш гледај видеа без звук</string>
-    <string name="post_viewer_post_from">%s - %s</string>
-    <string name="post_viewer_download_message" comment="post_viewer_download_message&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Белешка: Тековната [Session] нема да го прикажува овој дијалог сè додека не сте тука и секогаш ќе го прикажува во табот за објавување.</string>
     <string name="post_viewer_download_dialog_title">Селектирај што сакаш да превземеш</string>
-    <string name="post_viewer_download_session" comment="post_viewer_download_session&#10;&#10;[Session] is NOT a variable, please translate it and ignore warnings">Тековна сесија[Session]</string>
     <string name="post_viewer_download_current">Сегашно</string>
     <string name="post_viewer_download_album">Цел Албум</string>
     <string name="show_stories">Прикажи приказни</string>
@@ -71,7 +65,6 @@
     <string name="view_story_post">Прегледај Пост</string>
     <string name="view_post">Поглдни Пост</string>
     <string name="spotify">Spotify</string>
-    <string name="stories_notloggedin">Интеракцијата беше игнорарана, не си логиран!</string>
     <string name="vote_story_poll">Гласај</string>
     <string name="votef_story_poll">Гласањето беше успешно!</string>
     <string name="voted_story_poll">Вие веќе гласавте!</string>
@@ -99,8 +92,6 @@
     <string name="send_logs">Пратете Архива за Дебагирање</string>
     <string name="time_settings">Формат на датум</string>
     <string name="project_link">Посетете ја страната на Прокетот</string>
-    <string name="telegram_link">Приклучи се во Telegram Групата</string>
-    <string name="matrix_link">Приклучи се во Matrix Грубата</string>
     <string name="liked">Лајкнато</string>
     <string name="saved">Зачувано</string>
     <string name="tagged">Такнато</string>
@@ -144,7 +135,6 @@
     <string name="time_settings_title_date_format">Формат на дата</string>
     <string name="time_settings_title_preview">Преглед</string>
     <string name="time_settings_swap_time">Премести ги местата на датата и времето</string>
-    <string name="quick_access_info_dialog">Панелот за омилени е за додавање корисници и хаштагов.\n\n и Панелот за Брз Пристап е за брзо променување помеѓу акаунти.\n\nЗабелешка бр 1: Бидете сигрни дека сте логирани на секој поединечен акаунт[Опции &gt; Логин] за да доадете акаунт во листата!\n\nЗабелешка број 2: Одлогирај се од сегашниот акаунт и логирај се на друг акаунт.</string>
     <string name="quick_access_cannot_delete_curr">Неможе да избришите акаунт во корист</string>
     <string name="quick_access_confirm_delete">Дали сте сигурни дека сакате да избришите \'%s\'?</string>
     <string name="profile_viewer_imageinfo">Ширина: %d\nВисина: %d</string>
