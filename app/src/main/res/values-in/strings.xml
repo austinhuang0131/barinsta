@@ -304,17 +304,17 @@
     <string name="layout">Tata letak</string>
     <string name="opening_post">Membuka kiriman...</string>
     <string name="share">Bagikan</string>
-    <string name="layout_style">Layout style</string>
-    <string name="column_count">Column count</string>
+    <string name="layout_style">Gaya tata letak</string>
+    <string name="column_count">Jumlah kolom</string>
     <string name="two">2</string>
     <string name="three">3</string>
-    <string name="show_names">Show names</string>
-    <string name="show_avatars">Show avatars</string>
-    <string name="avatar_size">Avatar size</string>
-    <string name="corners">Corners</string>
-    <string name="show_grid_gap">Show grid gap</string>
-    <string name="disable_animation">Disable animation</string>
-    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
+    <string name="show_names">Tampilkan nama</string>
+    <string name="show_avatars">Tampilkan avatar</string>
+    <string name="avatar_size">Ukuran avatar</string>
+    <string name="corners">Sudut</string>
+    <string name="show_grid_gap">Tampilkan batas kisi</string>
+    <string name="disable_animation">Matikan animasi</string>
+    <string name="follower_wait_to_load">Harap tunggu hingga tugas saat ini selesai!</string>
     <plurals name="likes_count">
         <item quantity="other">%d suka</item>
     </plurals>
