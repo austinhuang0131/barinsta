@@ -314,6 +314,7 @@
     <string name="corners">邊角</string>
     <string name="show_grid_gap">Show grid gap</string>
     <string name="disable_animation">停用動畫</string>
+    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
     <plurals name="likes_count">
         <item quantity="other">%d 個讚</item>
     </plurals>
