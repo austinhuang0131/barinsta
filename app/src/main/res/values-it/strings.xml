@@ -314,6 +314,7 @@
     <string name="corners">Angoli</string>
     <string name="show_grid_gap">Mostra divario griglia</string>
     <string name="disable_animation">Disabilita animazione</string>
+    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
     <plurals name="likes_count">
         <item quantity="one">%d Mi piace</item>
         <item quantity="other">%d Mi piace</item>
