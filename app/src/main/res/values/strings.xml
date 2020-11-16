@@ -328,6 +328,7 @@
     <string name="corners">Corners</string>
     <string name="show_grid_gap">Show grid gap</string>
     <string name="disable_animation">Disable animation</string>
+    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
     <plurals name="likes_count">
         <item quantity="one">%d like</item>
         <item quantity="other">%d likes</item>
