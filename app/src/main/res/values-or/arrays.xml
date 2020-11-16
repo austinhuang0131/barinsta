@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
+        <item>ସିଷ୍ଟମ ନିର୍ଧାରିତ</item>
+        <item>ଇଂରାଜୀ</item>
         <item>French [Thanks to @kernoeb]</item>
         <item>Spanish [Thanks to @sguinetti]</item>
         <item>Chinese Simplified</item>
