@@ -229,10 +229,10 @@
     <string name="action_notif">कार्यकलाप</string>
     <string name="select_picture">चित्र का चयन करें</string>
     <string name="uploading">अपलोड हो रहा है...</string>
-    <string name="activity_count_prefix">You have:</string>
-    <string name="activity_count_relationship">%d follows</string>
-    <string name="activity_count_comments">%d comments</string>
-    <string name="activity_count_commentlikes">%d comment likes</string>
+    <string name="activity_count_prefix">आपके पास है:</string>
+    <string name="activity_count_relationship">%d अनुगामी</string>
+    <string name="activity_count_comments">%d टिप्पणियाँ</string>
+    <string name="activity_count_commentlikes">%d टिप्पणीयाँ पसन्दीत</string>
     <string name="activity_count_usertags">%d usertags</string>
     <string name="activity_count_likes">%d likes</string>
     <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
