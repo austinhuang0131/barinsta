@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
-        <item>Chinese Simplified</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
-        <item>Vietnamese [Thanks to @fouze555]</item>
-        <item>Chinese Traditional [Thanks to @Still34]</item>
+        <item>Predeterminat del sistema</item>
+        <item>Anglès</item>
+        <item>Francès [Gràcies a @kernoeb]</item>
+        <item>Castellà [Gràcies a @sguinetti]</item>
+        <item>Chinès si</item>
+        <item>Indonès [Gràcies a @Galang23]</item>
+        <item>Italià [Gràcies a @RAR_Ramar]</item>
+        <item>Alemany [Gràcies a @peterge1998]</item>
+        <item>Polonès [Gràcies a @Lego8486]</item>
+        <item>Turc [Gràcies a @faydin90]</item>
+        <item>Portuguès brasiler [Gràcies a @wagnim]</item>
+        <item>Persa [Gràcies a @farzadx]</item>
+        <item>Macedoni [Gràcies a @snajdovski]</item>
+        <item>Vietnamita [Gràcies a @fouze555]</item>
+        <item>Xinès tradicional [Gràcies a @Still34]</item>
         <item>Hindi</item>
     </string-array>
     <string-array name="languages_values">
@@ -35,10 +35,10 @@
         <item>13</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Automàtic / Predeterminat del sistema</item>
+        <item>Automàtic / Seguir la bateria</item>
+        <item>Fosc</item>
+        <item>Clar</item>
     </string-array>
     <string-array name="theme_presets_values">
         <item>0</item>
@@ -47,15 +47,15 @@
         <item>3</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Ningún</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>a</item>
+        <item>sobre</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>S\'està carregant...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
