@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>Predefinito da sistema</item>
+        <item>Predefinito di Sistema</item>
         <item>Inglese</item>
         <item>Francese [Grazie a @kernoeb]</item>
         <item>Spagnolo [Grazie a @sguinetti]</item>
         <item>Cinese Semplificato</item>
         <item>Indonesiano [Grazie a @Galang23]</item>
-        <item>Italiano [Grazie a @RAR_Ramar]</item>
+        <item>Italiano [Grazie a @RAR_Ramar e Giorgio Arbato]</item>
         <item>Tedesco [Grazie a @peterge1998]</item>
         <item>Polacco [Grazie a @Lego8486]</item>
         <item>Turco [Grazie a @faydin90]</item>
-        <item>Portoghese brasiliano [Grazie a @wagnim]</item>
+        <item>Portoghese Brasiliano [Grazie a @wagnim]</item>
         <item>Persiano [Grazie a @farzadx]</item>
         <item>Macedone [Grazie a @snajdovski]</item>
         <item>Vietnamita [Grazie a @fouze555]</item>
@@ -35,8 +35,8 @@
         <item>13</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Automatico / In base al sistema</item>
-        <item>Automatico / In base alla batteria</item>
+        <item>Automatico / Basato sul Sistema</item>
+        <item>Automatico / Basato sulla Batteria</item>
         <item>Scuro</item>
         <item>Chiaro</item>
     </string-array>
@@ -47,10 +47,10 @@
         <item>3</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>Niente</item>
+        <item>Nessuno</item>
         <item>\@</item>
         <item>a</item>
-        <item>del</item>
+        <item>il</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
