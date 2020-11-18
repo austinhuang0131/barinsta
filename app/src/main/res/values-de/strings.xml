@@ -153,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Blockiert</string>
     <string name="dms_inbox_raven_media_suggested">Empfohlen</string>
     <string name="dms_inbox_raven_media_screenshot">Screenshot erstellt</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Kann nicht zugestellt werden</string>
     <string name="dms_action_success">Großer Erfolg!</string>
     <string name="dms_action_leave">Verlassen</string>
     <string name="dms_action_leave_question">Chat verlassen?</string>
