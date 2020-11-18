@@ -25,12 +25,8 @@
     <string name="title_comments">Коментари</string>
     <string name="title_notifications">Нотификации</string>
     <string name="title_highlight">Важни Приказни: %s</string>
-    <string name="title_user_story">Прказна на корисник</string>
-    <string name="title_changelog">Листа на промени</string>
-    <string name="bottom_toolbar">Прикажи ја лентата со алатки долу</string>
     <string name="update_check">Провери за надоградба (ажурирање) при старт на апликацијата.</string>
     <string name="download_user_folder">Превземи постови во фолдерот со кориснички имиња</string>
-    <string name="autoload_posts">Прикажи ги сите постови наеднаш од корисникот</string>
     <string name="mark_as_seen_setting">Означи ги приказните како видени после нивно отварање</string>
     <string name="mark_as_seen_setting_summary">Авторот на Приказната ќе знае дека сте ја виделе Приказната.</string>
     <string name="dm_mark_as_seen_setting">Означи порака како видена при отварање.</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">Овозможи нотификации</string>
     <string name="error_loading_profile">Фатална Грека при отварање на профилот!\nПробајте повторно да се логирате и да пребарате.</string>
     <string name="error_creating_folders">Фатална Грешка при креирање на фолдер(и).</string>
-    <string name="show_feed">Прикажи постови од тие што ги следите (Работи само кога сте логирани)</string>
     <string name="save_to_folder">Зачувај во сопствена папка</string>
     <string name="select_folder">Одбери фолдер</string>
     <string name="theme_settings">Тема</string>
     <string name="login_settings">Влијае само на корисниците кои се логирани:</string>
     <string name="anonymous_settings">Влијае на анинимните корисници:</string>
-    <string name="privacy_warning">Приватност</string>
     <string name="instadp_settings">Користи Instadp за профили со висока резолуција</string>
     <string name="import_export">Увоз/Извоз</string>
     <string name="select_language">Јазик</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s Постови</string>
     <string name="main_posts_followers">%s\nСледбеници</string>
     <string name="main_posts_following">%s\nСледбеници</string>
-    <string name="post_viewer_video_post">Пост со видео</string>
-    <string name="post_viewer_image_post">Пост со фотографија</string>
     <string name="post_viewer_autoplay_video">Autoplay на видеа</string>
     <string name="post_viewer_muted_autoplay">Секогаш гледај видеа без звук</string>
     <string name="post_viewer_download_dialog_title">Селектирај што сакаш да превземеш</string>
@@ -89,16 +81,12 @@
     <string name="logout_summary">Пребарувај инстаграм анонимно</string>
     <string name="remove_all_acc">Отстрани сите акаунти</string>
     <string name="remove_all_acc_warning">Ова ќе ги отстране сите акаунти од апликацијата!\n За да отстраните само еден акаунт држете со прстот на акаунтот\n Дали сакате да продолжите?</string>
-    <string name="send_logs">Пратете Архива за Дебагирање</string>
     <string name="time_settings">Формат на датум</string>
-    <string name="project_link">Посетете ја страната на Прокетот</string>
     <string name="liked">Лајкнато</string>
     <string name="saved">Зачувано</string>
     <string name="tagged">Такнато</string>
     <string name="dm_person">Порака</string>
-    <string name="like">Лајк (%s)</string>
     <string name="like_without_count">Like</string>
-    <string name="unlike">Дислајск (%s)</string>
     <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Обележи</string>
     <string name="unbookmark">Одобележи</string>
@@ -137,9 +125,6 @@
     <string name="time_settings_swap_time">Премести ги местата на датата и времето</string>
     <string name="quick_access_cannot_delete_curr">Неможе да избришите акаунт во корист</string>
     <string name="quick_access_confirm_delete">Дали сте сигурни дека сакате да избришите \'%s\'?</string>
-    <string name="profile_viewer_imageinfo">Ширина: %d\nВисина: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nДлабочина на боја:</string>
-    <string name="profile_endpoint">Одберете провајдер за профилна слика\n(Не влијае на хаштагови)</string>
     <string name="open_profile">Отвори Профил</string>
     <string name="view_pfp">Прегладај профилната слика</string>
     <string name="direct_messages_you">Ти</string>
@@ -168,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Блокнат</string>
     <string name="dms_inbox_raven_media_suggested">Предложено</string>
     <string name="dms_inbox_raven_media_screenshot">Скриншотнато</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Неможе да се прати</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">Одличен успех!</string>
     <string name="dms_action_leave">Ливни</string>
     <string name="dms_action_leave_question">Дали сакате да ливните од чатот?</string>
@@ -197,7 +182,6 @@
     <string name="comment_send_empty_comment">Не смее празни коментари!</string>
     <string name="comment_view_mention_user_search">Дали сакате да го пребарате ова корисничко име?</string>
     <string name="comment_view_mention_hash_search">Дали сакате да го пребарате овај хаштаг?</string>
-    <string name="comment_view_mention_location_search">Дали сакате да ја пребарате оваа локација?</string>
     <string name="followers_type_followers">Следачи</string>
     <string name="followers_type_following">Оние кои ги следиш</string>
     <string name="followers_compare">Споредување следбеници &amp; following</string>
@@ -205,7 +189,6 @@
     <string name="followers_not_following">Не се следат %s</string>
     <string name="followers_not_follower">%s не следи</string>
     <string name="login_error_loading_cookies">Грешка при вчитување колачиња</string>
-    <string name="login_success_loading_cookies">Колачињата испешно беа вчитани!\nАко сеуште неможете да отворите приватни постови релогирајте се!</string>
     <string name="comment_hint">Write a new comment…</string>
     <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Го лајкна твојот пост</string>
@@ -224,7 +207,6 @@
     <string name="updated">Ви благодариме за надоградбата на Barinsta!</string>
     <string name="crash_title">Апликацијата крашна</string>
     <string name="crash_descr">аааагхххх.. апликацијаа крашна, ама не се грижете, можете да пратите листа на фатални грешки кај програмерите за да ви помогнат да се поправи проблемот. (:</string>
-    <string name="use_amoled_dark_theme">Користи AMOLED тема (потемна од темната) за Темна тема</string>
     <string name="action_notif">Активности</string>
     <string name="select_picture">Селектирај слика</string>
     <string name="uploading">Uploading…</string>
@@ -240,8 +222,6 @@
     <string name="more">Повеќе</string>
     <string name="title_dm">Чат</string>
     <string name="number_selected">%d селктирано</string>
-    <string name="relogin">Релогирај се</string>
-    <string name="relogin_summary">Обновете ги колачињата ако имате проблеми</string>
     <string name="logout_success">Успешно се одлогиравте!</string>
     <string name="dm_thread_info">Информации</string>
     <string name="mark_as_seen">Означи како видено(seen)</string>
