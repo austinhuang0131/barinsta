@@ -25,12 +25,8 @@
     <string name="title_comments">टिप्पणियाँ</string>
     <string name="title_notifications">सूचनाएँ</string>
     <string name="title_highlight">विशेषताएँ: %s</string>
-    <string name="title_user_story">ब्यबहारकारी का कथा</string>
-    <string name="title_changelog">परिवर्तन लॉग</string>
-    <string name="bottom_toolbar">निचे उपकरण पट्टी दिखायें</string>
     <string name="update_check">खुलने पर अपडेट के लिए जाँच करें</string>
     <string name="download_user_folder">पोस्ट को ब्यबहारकारी के नाम पर किये फोल्डरस में रखें</string>
-    <string name="autoload_posts">ब्यबहारकारी के सारे पोस्ट को स्बयंक्रिय दिखायें</string>
     <string name="mark_as_seen_setting">स्टोरि को दिखने के बाद \"दिखा गया\" दिखादें</string>
     <string name="mark_as_seen_setting_summary">सटोरि के लेखक जानेगा कि तुम देखे हो इसको</string>
     <string name="dm_mark_as_seen_setting">तुम देखने के बाद सीधा संदेश को \"दिखागया\" लिखा जाएगा</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">क्रियाकलाप सूचनाएँ दिखायें</string>
     <string name="error_loading_profile">रूपरेखा लोड नहिं हो रहा है!\n लग इन करके पुनः खोज करें</string>
     <string name="error_creating_folders">डाउनलोड के फोल्डर(स) बनाने में त्रुटि आ रहा है।</string>
-    <string name="show_feed">ब्यबहारकारी फिड दिखायें (केबल लग इन होने के बाद)</string>
     <string name="save_to_folder">खुद के द्बारा निर्धारित फोल्डर पे रखें</string>
     <string name="select_folder">फोल्डर का चयन करें</string>
     <string name="theme_settings">थीम</string>
     <string name="login_settings">सिर्फ लग इन किए हुए ब्यबहारकारी के लिये</string>
     <string name="anonymous_settings">गुमनामी लोगों के लिये</string>
-    <string name="privacy_warning">गोपनीयता</string>
     <string name="instadp_settings">अधिक स्पष्ट रूपरेखा के लिये instadp कि ब्यबहार करें।</string>
     <string name="import_export">आयात/निर्यात</string>
     <string name="select_language">भाषा</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s पोस्टस</string>
     <string name="main_posts_followers">%s\n अनुगामीयाॅ</string>
     <string name="main_posts_following">%s\n फलो कर रहें है</string>
-    <string name="post_viewer_video_post">वीडियो पोस्ट</string>
-    <string name="post_viewer_image_post">चित्र पोस्ट</string>
     <string name="post_viewer_autoplay_video">वीडियो ऑटोप्ले करें</string>
     <string name="post_viewer_muted_autoplay">सर्बदा वीडियो को शब्दहिन रखें</string>
     <string name="post_viewer_download_dialog_title">डाउनलोड करने के लिए चयन करें</string>
@@ -90,16 +82,12 @@
     <string name="logout_summary">इनस्टाग्राम में अज्ञात हो कर के देखें</string>
     <string name="remove_all_acc">समस्त खाता हटाएं</string>
     <string name="remove_all_acc_warning">अब एप से सब आड हुआ एकाउॅट मिट जाएगा!\nसिर्फ एक एकाउॅट को मिटाने के लिये, एकाउॅट स्बिचर डाइलग से बही एकाउॅट को देर तक टैप करें।\nआप आगे बढने के लिये चाहते हैं?</string>
-    <string name="send_logs">डिबग लग्स को भेजें</string>
     <string name="time_settings">दिनांक स्वरूप</string>
-    <string name="project_link">प्रोजेक्ट पेज को जाएं</string>
     <string name="liked">पसंद किये</string>
     <string name="saved">सेव किया</string>
     <string name="tagged">टैग किये</string>
     <string name="dm_person">संदेश</string>
-    <string name="like">पसंद(%s)</string>
     <string name="like_without_count">पसन्द</string>
-    <string name="unlike">अपसंद (%s)</string>
     <string name="unlike_without_count">नापसंद</string>
     <string name="bookmark">बुकमार्क</string>
     <string name="unbookmark">बुकमार्क न करें</string>
@@ -138,9 +126,6 @@
     <string name="time_settings_swap_time">समय और दिबस अदला-बदली करें</string>
     <string name="quick_access_cannot_delete_curr">बर्तमीन ब्यबह्रत एकाउँट को मिटा नहिं सकते</string>
     <string name="quick_access_confirm_delete">क्या आप सचमुच %s मिटाना चाहते हैं?</string>
-    <string name="profile_viewer_imageinfo">दैर्घ्य: %d\nप्रस्त: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nरंग के घनता:</string>
-    <string name="profile_endpoint">प्रोफाइल फोटो के अन्तिम बिन्दु को चुनिए\n(हैजटैग को प्रभावित नहिं करता)</string>
     <string name="open_profile">प्रोफाइल खुलें</string>
     <string name="view_pfp">प्रोफ़ाइल चित्र देखें</string>
     <string name="direct_messages_you">आप</string>
@@ -169,7 +154,7 @@
     <string name="dms_inbox_raven_media_blocked">अवरोधित</string>
     <string name="dms_inbox_raven_media_suggested">सुझाव</string>
     <string name="dms_inbox_raven_media_screenshot">स्क्रीनशॉट किया</string>
-    <string name="dms_inbox_raven_media_cant_deliver">पहुॅचा नहिं जा सकता</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">बडा सफलता!</string>
     <string name="dms_action_leave">छोड़ दें</string>
     <string name="dms_action_leave_question">इसी बार्तालाप को छोड दें?</string>
@@ -198,7 +183,6 @@
     <string name="comment_send_empty_comment">रिक्त टिप्पणी न करें!</string>
     <string name="comment_view_mention_user_search">ब्यबहारकारी के नाम ढूंढने चाहते हैं?</string>
     <string name="comment_view_mention_hash_search">हाजट्याग को ढूंढने चाहते हैं?</string>
-    <string name="comment_view_mention_location_search">स्थान को ढूंढने चाहते हैं?</string>
     <string name="followers_type_followers">अनुयायी</string>
     <string name="followers_type_following">फ़ॉलो कर रहे हैं</string>
     <string name="followers_compare">फलोअर्स &amp; फलोइंग के तुलना</string>
@@ -206,7 +190,6 @@
     <string name="followers_not_following">फोलो नहीं कर रहा %s</string>
     <string name="followers_not_follower">%s फोलो नहीं कर रहा है</string>
     <string name="login_error_loading_cookies">कुकीज लोड करने में त्रुटि</string>
-    <string name="login_success_loading_cookies">कुकीज सफलतापूर्बक लोड हुआ!\nअगर आप अभी तक गोपन पेज या पोस्ट खुल नहीं पा रहे हैं, फिर से लग इन करें!</string>
     <string name="comment_hint">एक नया टिप्पणी लिखें...</string>
     <string name="dm_hint">एक नया संदेश लिखो...</string>
     <string name="liked_notif">आपकी पोस्ट को पसंद किया</string>
@@ -225,7 +208,6 @@
     <string name="updated">बारइनष्टा को अद्दतन करने के लिए धन्यबाद!</string>
     <string name="crash_title">एप में त्रुटि हुयी।</string>
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
-    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
     <string name="action_notif">कार्यकलाप</string>
     <string name="select_picture">चित्र का चयन करें</string>
     <string name="uploading">अपलोड हो रहा है...</string>
@@ -241,8 +223,6 @@
     <string name="more">More</string>
     <string name="title_dm">DM</string>
     <string name="number_selected">%d selected</string>
-    <string name="relogin">Relogin</string>
-    <string name="relogin_summary">Refresh your cookies if facing any issues</string>
     <string name="logout_success">Successfully logged out!</string>
     <string name="dm_thread_info">Info</string>
     <string name="mark_as_seen">Mark as seen</string>
