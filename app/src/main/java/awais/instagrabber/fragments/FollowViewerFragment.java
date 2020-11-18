@@ -1,5 +1,6 @@
 package awais.instagrabber.fragments;
 
+import android.content.Context;
 import android.content.res.Resources;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,15 +28,20 @@ import java.util.Arrays;
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
 import awais.instagrabber.adapters.FollowAdapter;
-import awais.instagrabber.asyncs.FollowFetcher;
 import awais.instagrabber.databinding.FragmentFollowersViewerBinding;
-import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.FollowModel;
+import awais.instagrabber.repositories.responses.FriendshipRepoChangeRootResponse;
+import awais.instagrabber.repositories.responses.FriendshipRepoListFetchResponse;
+import awais.instagrabber.utils.Constants;
+import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.TextUtils;
+import awais.instagrabber.webservices.FriendshipService;
+import awais.instagrabber.webservices.ServiceCallback;
 import awaisomereport.LogCollector;
 import thoughtbot.expandableadapter.ExpandableGroup;
 
 import static awais.instagrabber.utils.Utils.logCollector;
+import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public final class FollowViewerFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private static final String TAG = "FollowViewerFragment";
@@ -44,7 +51,7 @@ public final class FollowViewerFragment extends Fragment implements SwipeRefresh
     private final ArrayList<FollowModel> followersModels = new ArrayList<>();
     private final ArrayList<FollowModel> allFollowing = new ArrayList<>();
 
-    private boolean isFollowersList, isCompare = false;
+    private boolean isFollowersList, isCompare = false, loading = false;
     private String profileId, username, namePost, type;
     private Resources resources;
     private FollowModel model;
@@ -53,12 +60,14 @@ public final class FollowViewerFragment extends Fragment implements SwipeRefresh
     private FragmentFollowersViewerBinding binding;
     private AsyncTask<Void, Void, FollowModel[]> currentlyExecuting;
     private SwipeRefreshLayout root;
+    private FriendshipService friendshipService;
     private boolean shouldRefresh = true;
     private AppCompatActivity fragmentActivity;
 
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        friendshipService = FriendshipService.getInstance();
         fragmentActivity = (AppCompatActivity) getActivity();
         setHasOptionsMenu(true);
     }
@@ -135,102 +144,114 @@ public final class FollowViewerFragment extends Fragment implements SwipeRefresh
     }
 
     private void listFollows() {
-        stopCurrentExecutor();
+        loading = true;
         type = resources.getString(isFollowersList ? R.string.followers_type_followers : R.string.followers_type_following);
         setSubtitle(type);
         followModels.clear();
-        final FetchListener<FollowModel[]> fetchListener = new FetchListener<FollowModel[]>() {
+        final ServiceCallback<FriendshipRepoListFetchResponse> cb = new ServiceCallback<FriendshipRepoListFetchResponse>() {
             @Override
-            public void doBefore() {
-                binding.swipeRefreshLayout.setRefreshing(true);
-            }
-
-            @Override
-            public void onResult(final FollowModel[] result) {
-                if (result == null) binding.swipeRefreshLayout.setRefreshing(false);
+            public void onSuccess(final FriendshipRepoListFetchResponse result) {
+                if (result == null) {
+                    binding.swipeRefreshLayout.setRefreshing(false);
+                    return;
+                }
                 else {
-                    followModels.addAll(Arrays.asList(result));
-
-                    final FollowModel model = result[result.length - 1];
-                    if (model != null && model.hasNextPage()) {
-                        stopCurrentExecutor();
-                        currentlyExecuting = new FollowFetcher(profileId, isFollowersList, model.getEndCursor(), this)
-                                .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                        model.setPageCursor(false, null);
-                    } else {
+                    followModels.addAll(result.getItems());
+                    if (result.isMoreAvailable()) {
+                        friendshipService.getList(isFollowersList, profileId, result.getNextMaxId(), this);
+                    }
+                    else {
                         binding.swipeRefreshLayout.setRefreshing(false);
-
+                        if (isFollowersList) followersModels.addAll(followModels);
+                        else followingModels.addAll(followModels);
                         refreshAdapter(followModels, null, null, null);
                     }
                 }
             }
+
+            @Override
+            public void onFailure(final Throwable t) {
+                binding.swipeRefreshLayout.setRefreshing(false);
+                Log.e(TAG, "Error fetching list (single)", t);
+            }
         };
-        currentlyExecuting = new FollowFetcher(profileId, isFollowersList, fetchListener).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        binding.swipeRefreshLayout.setRefreshing(true);
+        friendshipService.getList(isFollowersList, profileId, null, cb);
     }
 
     private void listCompare() {
-        stopCurrentExecutor();
+        loading = true;
         setSubtitle(R.string.followers_compare);
         allFollowing.clear();
         followersModels.clear();
         followingModels.clear();
-        final FetchListener<FollowModel[]> followingFetchListener = new FetchListener<FollowModel[]>() {
+        final ServiceCallback<FriendshipRepoListFetchResponse> followingFetchCb = new ServiceCallback<FriendshipRepoListFetchResponse>() {
             @Override
-            public void onResult(final FollowModel[] result) {
+            public void onSuccess(final FriendshipRepoListFetchResponse result) {
                 if (result != null) {
-                    followingModels.addAll(Arrays.asList(result));
+                    followingModels.addAll(result.getItems());
 
-                    final FollowModel model = result[result.length - 1];
-                    if (model != null && model.hasNextPage()) {
-                        stopCurrentExecutor();
-                        currentlyExecuting = new FollowFetcher(profileId, false, model.getEndCursor(), this)
-                                .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                        model.setPageCursor(false, null);
+                    if (result.isMoreAvailable()) {
+                        friendshipService.getList(false, profileId, result.getNextMaxId(), this);
                     } else {
-                        allFollowing.addAll(followersModels);
-                        allFollowing.retainAll(followingModels);
-
-                        for (final FollowModel followModel : allFollowing) {
-                            followersModels.remove(followModel);
-                            followingModels.remove(followModel);
-                        }
-
-                        allFollowing.trimToSize();
-                        followersModels.trimToSize();
-                        followingModels.trimToSize();
-
-                        binding.swipeRefreshLayout.setRefreshing(false);
-
-                        refreshAdapter(null, followingModels, followersModels, allFollowing);
+                        showCompare();
                     }
                 } else binding.swipeRefreshLayout.setRefreshing(false);
             }
-        };
-        final FetchListener<FollowModel[]> followersFetchListener = new FetchListener<FollowModel[]>() {
-            @Override
-            public void doBefore() {
-                binding.swipeRefreshLayout.setRefreshing(true);
-            }
 
             @Override
-            public void onResult(final FollowModel[] result) {
+            public void onFailure(final Throwable t) {
+                binding.swipeRefreshLayout.setRefreshing(false);
+                Log.e(TAG, "Error fetching list (double, following)", t);
+            }
+        };
+        final ServiceCallback<FriendshipRepoListFetchResponse> followersFetchCb = new ServiceCallback<FriendshipRepoListFetchResponse>() {
+            @Override
+            public void onSuccess(final FriendshipRepoListFetchResponse result) {
                 if (result != null) {
-                    followersModels.addAll(Arrays.asList(result));
-                    final FollowModel model = result[result.length - 1];
-                    if (model == null || !model.hasNextPage()) {
-                        stopCurrentExecutor();
-                        currentlyExecuting = new FollowFetcher(profileId, false, followingFetchListener)
-                                .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+                    followersModels.addAll(result.getItems());
+                    if (result.isMoreAvailable()) {
+                        friendshipService.getList(true, profileId, result.getNextMaxId(), this);
+                    } else if (followingModels.size() == 0) {
+                        friendshipService.getList(false, profileId, null, followingFetchCb);
                     } else {
-                        stopCurrentExecutor();
-                        currentlyExecuting = new FollowFetcher(profileId, true, model.getEndCursor(), this)
-                                .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-                        model.setPageCursor(false, null);
+                        showCompare();
                     }
                 }
             }
+
+            @Override
+            public void onFailure(final Throwable t) {
+                binding.swipeRefreshLayout.setRefreshing(false);
+                Log.e(TAG, "Error fetching list (double, follower)", t);
+            }
         };
-        currentlyExecuting = new FollowFetcher(profileId, true, followersFetchListener).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        binding.swipeRefreshLayout.setRefreshing(true);
+        if (followersModels.size() == 0) {
+            friendshipService.getList(true, profileId, null, followersFetchCb);
+        }
+        else if (followingModels.size() == 0) {
+            friendshipService.getList(false, profileId, null, followingFetchCb);
+        }
+        else showCompare();
+    }
+
+    private void showCompare() {
+        allFollowing.addAll(followersModels);
+        allFollowing.retainAll(followingModels);
+
+        for (final FollowModel followModel : allFollowing) {
+            followersModels.remove(followModel);
+            followingModels.remove(followModel);
+        }
+
+        allFollowing.trimToSize();
+        followersModels.trimToSize();
+        followingModels.trimToSize();
+
+        binding.swipeRefreshLayout.setRefreshing(false);
+
+        refreshAdapter(null, followingModels, followersModels, allFollowing);
     }
 
     @Override
@@ -322,9 +343,16 @@ public final class FollowViewerFragment extends Fragment implements SwipeRefresh
     public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
         if (item.getItemId() != R.id.action_compare) return super.onOptionsItemSelected(item);
         binding.rvFollow.setAdapter(null);
-        if (isCompare) listFollows();
-        else listCompare();
-        isCompare = !isCompare;
+        final Context context = getContext();
+        if (loading) Toast.makeText(context, R.string.follower_wait_to_load, Toast.LENGTH_LONG).show();
+        else if (isCompare) {
+            listFollows();
+            isCompare = !isCompare;
+        }
+        else {
+            listCompare();
+            isCompare = !isCompare;
+        }
         return true;
     }
 
@@ -332,6 +360,7 @@ public final class FollowViewerFragment extends Fragment implements SwipeRefresh
                                 final ArrayList<FollowModel> followingModels,
                                 final ArrayList<FollowModel> followersModels,
                                 final ArrayList<FollowModel> allFollowing) {
+        loading = false;
         final ArrayList<ExpandableGroup> groups = new ArrayList<>(1);
 
         if (isCompare) {
@@ -348,19 +377,5 @@ public final class FollowViewerFragment extends Fragment implements SwipeRefresh
         adapter = new FollowAdapter(clickListener, groups);
         adapter.toggleGroup(0);
         binding.rvFollow.setAdapter(adapter);
-    }
-
-    public void stopCurrentExecutor() {
-        if (currentlyExecuting != null) {
-            try {
-                currentlyExecuting.cancel(true);
-            } catch (final Exception e) {
-                if (logCollector != null)
-                    logCollector.appendException(e, LogCollector.LogFile.MAIN_HELPER, "stopCurrentExecutor");
-                if (BuildConfig.DEBUG) {
-                    Log.e(TAG, "", e);
-                }
-            }
-        }
     }
 }

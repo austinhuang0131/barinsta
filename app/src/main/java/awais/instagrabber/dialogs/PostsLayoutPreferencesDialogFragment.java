@@ -80,6 +80,7 @@ public class PostsLayoutPreferencesDialogFragment extends DialogFragment {
         initAvatarsToggle();
         initCornersToggle();
         initGapToggle();
+        initAnimationDisableToggle();
     }
 
     private void initLayoutToggle() {
@@ -167,6 +168,11 @@ public class PostsLayoutPreferencesDialogFragment extends DialogFragment {
     private void initGapToggle() {
         binding.showGapToggle.setChecked(preferencesBuilder.getHasGap());
         binding.showGapToggle.setOnCheckedChangeListener((buttonView, isChecked) -> preferencesBuilder.setHasGap(isChecked));
+    }
+
+    private void initAnimationDisableToggle() {
+        binding.disableAnimationToggle.setChecked(preferencesBuilder.isAnimationDisabled());
+        binding.disableAnimationToggle.setOnCheckedChangeListener((buttonView, isChecked) -> preferencesBuilder.setAnimationDisabled(isChecked));
     }
 
     private int getSelectedLayoutId() {

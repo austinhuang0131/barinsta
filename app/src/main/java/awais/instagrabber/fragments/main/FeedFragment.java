@@ -72,6 +72,7 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private Set<FeedModel> selectedFeedModels;
     private FeedModel downloadFeedModel;
     private int downloadChildPosition = -1;
+    private PostsLayoutPreferences layoutPreferences = PostsLayoutPreferences.fromJson(settingsHelper.getString(Constants.PREF_POSTS_LAYOUT));
 
     private final FeedAdapterV2.FeedItemCallback feedItemCallback = new FeedAdapterV2.FeedItemCallback() {
         @Override
@@ -153,11 +154,11 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             if (position >= 0) {
                 builder.setPosition(position);
             }
-            final PostViewV2Fragment fragment = builder
-                    .setSharedProfilePicElement(profilePicView)
-                    .setSharedMainPostElement(mainPostImage)
-                    .build();
-            fragment.show(getChildFragmentManager(), "post_view");
+            if (!layoutPreferences.isAnimationDisabled()) {
+                builder.setSharedProfilePicElement(profilePicView)
+                       .setSharedMainPostElement(mainPostImage);
+            }
+            builder.build().show(getChildFragmentManager(), "post_view");
         }
     };
     private final OnBackPressedCallback onBackPressedCallback = new OnBackPressedCallback(false) {
@@ -324,7 +325,7 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         binding.feedRecyclerView.setViewModelStoreOwner(this)
                                 .setLifeCycleOwner(this)
                                 .setPostFetchService(new FeedPostFetchService())
-                                .setLayoutPreferences(PostsLayoutPreferences.fromJson(settingsHelper.getString(Constants.PREF_POSTS_LAYOUT)))
+                                .setLayoutPreferences(layoutPreferences)
                                 .addFetchStatusChangeListener(fetching -> updateSwipeRefreshState())
                                 .setFeedItemCallback(feedItemCallback)
                                 .setSelectionModeCallback(selectionModeCallback)
@@ -377,7 +378,10 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private void showPostsLayoutPreferences() {
         final PostsLayoutPreferencesDialogFragment fragment = new PostsLayoutPreferencesDialogFragment(
                 Constants.PREF_POSTS_LAYOUT,
-                preferences -> new Handler().postDelayed(() -> binding.feedRecyclerView.setLayoutPreferences(preferences), 200));
+                preferences -> {
+                    layoutPreferences = preferences;
+                    new Handler().postDelayed(() -> binding.feedRecyclerView.setLayoutPreferences(preferences), 200);
+                });
         fragment.show(getChildFragmentManager(), "posts_layout_preferences");
     }
 

@@ -48,8 +48,7 @@
       "avatar_url": "https://avatars3.githubusercontent.com/u/5278488",
       "profile": "http://rerolledgeek.blogspot.com/",
       "contributions": [
-        "code",
-        "ideas"
+        "code"
       ]
     },
     {
@@ -91,6 +90,16 @@
       "contributions": [
         "ideas",
         "question"
+      ]
+    },
+    {
+      "login": "alin-1",
+      "name": "ALIN",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/13281020?v=4",
+      "profile": "https://alin.atwebpages.com/",
+      "contributions": [
+        "bug",
+        "ideas"
       ]
     },
     {
@@ -203,10 +212,29 @@
       ]
     },
     {
+      "login": "rohang02",
+      "name": "rohang02",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/47921164?v=4",
+      "profile": "https://github.com/rohang02",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
       "login": "RickyM7",
       "name": "Ricardo",
       "avatar_url": "https://avatars3.githubusercontent.com/u/24703825?v=4",
       "profile": "https://github.com/RickyM7",
+      "contributions": [
+        "bug",
+        "translation"
+      ]
+    },
+    {
+      "login": "Still34",
+      "name": "Still Hsu",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5843208?v=4",
+      "profile": "https://stillu.cc/",
       "contributions": [
         "translation"
       ]

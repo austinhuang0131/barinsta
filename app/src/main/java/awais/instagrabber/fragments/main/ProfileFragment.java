@@ -117,6 +117,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
     private Set<FeedModel> selectedFeedModels;
     private FeedModel downloadFeedModel;
     private int downloadChildPosition = -1;
+    private PostsLayoutPreferences layoutPreferences = PostsLayoutPreferences.fromJson(settingsHelper.getString(Constants.PREF_PROFILE_POSTS_LAYOUT));
 
     private final Runnable usernameSettingRunnable = () -> {
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();
@@ -238,11 +239,11 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
             if (position >= 0) {
                 builder.setPosition(position);
             }
-            final PostViewV2Fragment fragment = builder
-                    .setSharedProfilePicElement(profilePicView)
-                    .setSharedMainPostElement(mainPostImage)
-                    .build();
-            fragment.show(getChildFragmentManager(), "post_view");
+            if (!layoutPreferences.isAnimationDisabled()) {
+                builder.setSharedProfilePicElement(profilePicView)
+                       .setSharedMainPostElement(mainPostImage);
+            }
+            builder.build().show(getChildFragmentManager(), "post_view");
         }
     };
     private final FeedAdapterV2.SelectionModeCallback selectionModeCallback = new FeedAdapterV2.SelectionModeCallback() {
@@ -611,7 +612,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
                 return true;
             });
         }
-        if (!profileModel.isReallyPrivate()) {
+        if (!profileModel.isReallyPrivate() && isLoggedIn) {
             binding.mainFollowing.setClickable(true);
             binding.mainFollowers.setClickable(true);
 
@@ -876,7 +877,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
         binding.postsRecyclerView.setViewModelStoreOwner(this)
                                  .setLifeCycleOwner(this)
                                  .setPostFetchService(new ProfilePostFetchService(profileModel))
-                                 .setLayoutPreferences(PostsLayoutPreferences.fromJson(settingsHelper.getString(Constants.PREF_PROFILE_POSTS_LAYOUT)))
+                                 .setLayoutPreferences(layoutPreferences)
                                  .addFetchStatusChangeListener(fetching -> updateSwipeRefreshState())
                                  .setFeedItemCallback(feedItemCallback)
                                  .setSelectionModeCallback(selectionModeCallback)
@@ -922,7 +923,10 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
     private void showPostsLayoutPreferences() {
         final PostsLayoutPreferencesDialogFragment fragment = new PostsLayoutPreferencesDialogFragment(
                 Constants.PREF_PROFILE_POSTS_LAYOUT,
-                preferences -> new Handler().postDelayed(() -> binding.postsRecyclerView.setLayoutPreferences(preferences), 200));
+                preferences -> {
+                    layoutPreferences = preferences;
+                    new Handler().postDelayed(() -> binding.postsRecyclerView.setLayoutPreferences(preferences), 200);
+                });
         fragment.show(getChildFragmentManager(), "posts_layout_preferences");
     }
 }

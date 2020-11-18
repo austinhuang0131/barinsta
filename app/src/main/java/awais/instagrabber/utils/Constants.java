@@ -16,8 +16,6 @@ public final class Constants {
     public static final String FOLDER_SAVE_TO = "saved_to";
     public static final String AUTOPLAY_VIDEOS = "autoplay_videos";
     public static final String MUTED_VIDEOS = "muted_videos";
-    public static final String AUTOLOAD_POSTS = "autoload_posts";
-    public static final String SHOW_FEED = "show_feed";
     public static final String CUSTOM_DATE_TIME_FORMAT_ENABLED = "data_time_custom_enabled";
     public static final String SWAP_DATE_TIME_FORMAT_ENABLED = "swap_date_time_enabled";
     public static final String MARK_AS_SEEN = "mark_as_seen";

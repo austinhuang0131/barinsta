@@ -12,6 +12,7 @@ public final class PostsLayoutPreferences {
     private final ProfilePicSize profilePicSize;
     private final boolean hasRoundedCorners;
     private final boolean hasGap;
+    private final boolean animationDisabled;
 
     public static class Builder {
         private PostsLayoutType type = PostsLayoutType.GRID;
@@ -21,6 +22,7 @@ public final class PostsLayoutPreferences {
         private ProfilePicSize profilePicSize = ProfilePicSize.SMALL;
         private boolean hasRoundedCorners = true;
         private boolean hasGap = true;
+        private boolean animationDisabled = false;
 
         public Builder setType(final PostsLayoutType type) {
             this.type = type;
@@ -57,6 +59,11 @@ public final class PostsLayoutPreferences {
             return this;
         }
 
+        public Builder setAnimationDisabled(final boolean animationDisabled) {
+            this.animationDisabled = animationDisabled;
+            return this;
+        }
+
         // Breaking builder pattern and adding getters to avoid too many object creations in PostsLayoutPreferencesDialogFragment
         public PostsLayoutType getType() {
             return type;
@@ -86,6 +93,10 @@ public final class PostsLayoutPreferences {
             return hasGap;
         }
 
+        public boolean isAnimationDisabled() {
+            return animationDisabled;
+        }
+
         public Builder mergeFrom(final PostsLayoutPreferences preferences) {
             if (preferences == null) {
                 return this;
@@ -97,11 +108,13 @@ public final class PostsLayoutPreferences {
             setProfilePicSize(preferences.getProfilePicSize());
             setHasRoundedCorners(preferences.getHasRoundedCorners());
             setHasGap(preferences.getHasGap());
+            setAnimationDisabled(preferences.isAnimationDisabled());
             return this;
         }
 
         public PostsLayoutPreferences build() {
-            return new PostsLayoutPreferences(type, colCount, isAvatarVisible, isNameVisible, profilePicSize, hasRoundedCorners, hasGap);
+            return new PostsLayoutPreferences(type, colCount, isAvatarVisible, isNameVisible, profilePicSize, hasRoundedCorners, hasGap,
+                                              animationDisabled);
         }
     }
 
@@ -115,7 +128,8 @@ public final class PostsLayoutPreferences {
                                    final boolean isNameVisible,
                                    final ProfilePicSize profilePicSize,
                                    final boolean hasRoundedCorners,
-                                   final boolean hasGap) {
+                                   final boolean hasGap,
+                                   final boolean animationDisabled) {
 
         this.type = type;
         this.colCount = colCount;
@@ -124,6 +138,7 @@ public final class PostsLayoutPreferences {
         this.profilePicSize = profilePicSize;
         this.hasRoundedCorners = hasRoundedCorners;
         this.hasGap = hasGap;
+        this.animationDisabled = animationDisabled;
     }
 
     public PostsLayoutType getType() {
@@ -163,6 +178,10 @@ public final class PostsLayoutPreferences {
         return new Gson().fromJson(json, PostsLayoutPreferences.class);
     }
 
+    public boolean isAnimationDisabled() {
+        return animationDisabled;
+    }
+
     @Override
     public boolean equals(final Object o) {
         if (this == o) return true;
@@ -172,12 +191,13 @@ public final class PostsLayoutPreferences {
                 isAvatarVisible == that.isAvatarVisible &&
                 isNameVisible == that.isNameVisible &&
                 type == that.type &&
-                profilePicSize == that.profilePicSize;
+                profilePicSize == that.profilePicSize &&
+                animationDisabled == that.animationDisabled;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, colCount, isAvatarVisible, isNameVisible, profilePicSize);
+        return Objects.hash(type, colCount, isAvatarVisible, isNameVisible, profilePicSize, animationDisabled);
     }
 
     @Override
@@ -190,6 +210,7 @@ public final class PostsLayoutPreferences {
                 ", profilePicSize=" + profilePicSize +
                 ", hasRoundedCorners=" + hasRoundedCorners +
                 ", hasGap=" + hasGap +
+                ", animationDisabled=" + animationDisabled +
                 '}';
     }
 

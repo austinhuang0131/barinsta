@@ -94,6 +94,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
     private Set<FeedModel> selectedFeedModels;
     private FeedModel downloadFeedModel;
     private int downloadChildPosition = -1;
+    private PostsLayoutPreferences layoutPreferences = PostsLayoutPreferences.fromJson(settingsHelper.getString(Constants.PREF_HASHTAG_POSTS_LAYOUT));
 
     private final OnBackPressedCallback onBackPressedCallback = new OnBackPressedCallback(false) {
         @Override
@@ -202,36 +203,23 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
                                     final View mainPostImage,
                                     final int position) {
             if (opening) return;
-            else if (TextUtils.isEmpty(feedModel.getProfileModel().getUsername())) {
+            if (TextUtils.isEmpty(feedModel.getProfileModel().getUsername())) {
                 opening = true;
-                new PostFetcher(feedModel.getShortCode(), newFeedModel -> {
-                    final PostViewV2Fragment.Builder builder = PostViewV2Fragment
-                            .builder(newFeedModel);
-                    if (position >= 0) {
-                        builder.setPosition(position);
-                    }
-                    final PostViewV2Fragment fragment = builder
-                            .setSharedProfilePicElement(profilePicView)
-                            .setSharedMainPostElement(mainPostImage)
-                            .build();
-                    fragment.show(getChildFragmentManager(), "post_view");
-                    opening = false;
-                }).execute();
+                new PostFetcher(feedModel.getShortCode(), newFeedModel -> openPostDialog(newFeedModel, profilePicView, mainPostImage, position))
+                        .execute();
+                return;
             }
-            else {
-                opening = true;
-                final PostViewV2Fragment.Builder builder = PostViewV2Fragment
-                        .builder(feedModel);
-                if (position >= 0) {
-                    builder.setPosition(position);
-                }
-                final PostViewV2Fragment fragment = builder
-                        .setSharedProfilePicElement(profilePicView)
-                        .setSharedMainPostElement(mainPostImage)
-                        .build();
-                fragment.show(getChildFragmentManager(), "post_view");
-                opening = false;
+            opening = true;
+            final PostViewV2Fragment.Builder builder = PostViewV2Fragment.builder(feedModel);
+            if (position >= 0) {
+                builder.setPosition(position);
             }
+            if (!layoutPreferences.isAnimationDisabled()) {
+                builder.setSharedProfilePicElement(profilePicView)
+                       .setSharedMainPostElement(mainPostImage);
+            }
+            builder.build().show(getChildFragmentManager(), "post_view");
+            opening = false;
         }
     };
     private final FeedAdapterV2.SelectionModeCallback selectionModeCallback = new FeedAdapterV2.SelectionModeCallback() {
@@ -376,7 +364,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         binding.posts.setViewModelStoreOwner(this)
                      .setLifeCycleOwner(this)
                      .setPostFetchService(new HashtagPostFetchService(hashtagModel, isLoggedIn))
-                     .setLayoutPreferences(PostsLayoutPreferences.fromJson(settingsHelper.getString(Constants.PREF_HASHTAG_POSTS_LAYOUT)))
+                     .setLayoutPreferences(layoutPreferences)
                      .addFetchStatusChangeListener(fetching -> updateSwipeRefreshState())
                      .setFeedItemCallback(feedItemCallback)
                      .setSelectionModeCallback(selectionModeCallback)
@@ -565,7 +553,10 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
     private void showPostsLayoutPreferences() {
         final PostsLayoutPreferencesDialogFragment fragment = new PostsLayoutPreferencesDialogFragment(
                 Constants.PREF_HASHTAG_POSTS_LAYOUT,
-                preferences -> new Handler().postDelayed(() -> binding.posts.setLayoutPreferences(preferences), 200));
+                preferences -> {
+                    layoutPreferences = preferences;
+                    new Handler().postDelayed(() -> binding.posts.setLayoutPreferences(preferences), 200);
+                });
         fragment.show(getChildFragmentManager(), "posts_layout_preferences");
     }
 }

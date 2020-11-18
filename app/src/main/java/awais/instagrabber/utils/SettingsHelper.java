@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatDelegate;
 
 import static awais.instagrabber.utils.Constants.APP_LANGUAGE;
 import static awais.instagrabber.utils.Constants.APP_THEME;
-import static awais.instagrabber.utils.Constants.AUTOLOAD_POSTS;
 import static awais.instagrabber.utils.Constants.AUTOPLAY_VIDEOS;
 import static awais.instagrabber.utils.Constants.CHECK_ACTIVITY;
 import static awais.instagrabber.utils.Constants.CHECK_UPDATES;
@@ -121,14 +120,14 @@ public final class SettingsHelper {
 
     @StringDef(
             {APP_LANGUAGE, APP_THEME, COOKIE, FOLDER_PATH, DATE_TIME_FORMAT, DATE_TIME_SELECTION, CUSTOM_DATE_TIME_FORMAT,
-                    DEVICE_UUID, SKIPPED_VERSION, DEFAULT_TAB, PREF_DARK_THEME, PREF_LIGHT_THEME, PREF_POSTS_LAYOUT, PREF_PROFILE_POSTS_LAYOUT,
-                    PREF_TOPIC_POSTS_LAYOUT, PREF_HASHTAG_POSTS_LAYOUT, PREF_LOCATION_POSTS_LAYOUT, PREF_LIKED_POSTS_LAYOUT, PREF_TAGGED_POSTS_LAYOUT,
-                    PREF_SAVED_POSTS_LAYOUT})
+                    DEVICE_UUID, SKIPPED_VERSION, DEFAULT_TAB, PREF_DARK_THEME, PREF_LIGHT_THEME, PREF_POSTS_LAYOUT,
+                    PREF_PROFILE_POSTS_LAYOUT, PREF_TOPIC_POSTS_LAYOUT, PREF_HASHTAG_POSTS_LAYOUT, PREF_LOCATION_POSTS_LAYOUT,
+                    PREF_LIKED_POSTS_LAYOUT, PREF_TAGGED_POSTS_LAYOUT, PREF_SAVED_POSTS_LAYOUT})
     public @interface StringSettings {}
 
     @StringDef({DOWNLOAD_USER_FOLDER, FOLDER_SAVE_TO, AUTOPLAY_VIDEOS, SHOW_QUICK_ACCESS_DIALOG, MUTED_VIDEOS,
-                       AUTOLOAD_POSTS, CUSTOM_DATE_TIME_FORMAT_ENABLED, MARK_AS_SEEN, DM_MARK_AS_SEEN, INSTADP,
-                       CHECK_ACTIVITY, CHECK_UPDATES, SWAP_DATE_TIME_FORMAT_ENABLED})
+                       CUSTOM_DATE_TIME_FORMAT_ENABLED, MARK_AS_SEEN, DM_MARK_AS_SEEN, INSTADP, CHECK_ACTIVITY,
+                       CHECK_UPDATES, SWAP_DATE_TIME_FORMAT_ENABLED})
     public @interface BooleanSettings {}
 
     @StringDef({PREV_INSTALL_VERSION})

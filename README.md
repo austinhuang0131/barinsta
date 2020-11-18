@@ -1,6 +1,6 @@
 **THERE ARE CURRENTLY NO OFFICIAL GOOGLE PLAY RELEASES. PLEASE REPORT ANY OCCURRENCES TO US.**
 
-<img src="./app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" alt="InstaGrabber" align="right"/>
+<img src="./app/src/main/ic_launcher-round.png" alt="Barinsta logo" align="right" width="20%"/>
 
 # Barinsta
 
@@ -9,7 +9,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](./LICENSE)
 [![GitHub stars](https://img.shields.io/github/stars/austinhuang0131/instagrabber.svg?style=social&label=Star)](https://GitHub.com/austinhuang0131/barinsta/stargazers/)<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-25-orange.svg)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 We're previously known as InstaGrabber.
@@ -25,19 +25,19 @@ For documentation, visit [Barinsta.AustinHuang.me](https://barinsta.austinhuang.
 
 Version status: ![F-Droid](https://img.shields.io/f-droid/v/me.austinhuang.instagrabber.svg) vs. ![GitHub](https://img.shields.io/github/release/austinhuang0131/barinsta.svg?logo=github)
 
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/1.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" alt="Profile" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/2.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" alt="Post" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/3.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" alt="Comments" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/4.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" alt="Story" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/5.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg" alt="Hashtag" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/images/en-US/phoneScreenshots/6.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg" alt="Discover Topics" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" alt="Profile" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" alt="Post" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" alt="Comments" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" alt="Story" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg" alt="Hashtag" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg" alt="Discover Topics" width="15%"/></a>
 
 ## Contact us
 
 * Use [GitHub issues](https://github.com/austinhuang0131/instagrabber/issues) when possible.
-* Email: [Barinsta@AustinHuang.me](mailto:barinsta@austinhuang.me) (Synced to GitHub issues)
+* Email: [Barinsta@AustinHuang.me](mailto:barinsta@austinhuang.me?body=Please%20note%20that%20your%20email%20address%20and%20the%20entire%20content%20will%20be%20published%20onto%20GitHub%20issues.%20If%20you%20do%20not%20wish%20to%20do%20that%2C%20use%20other%20contact%20methods%20instead.) (Synced to GitHub issues)
 * Reddit: [r/Barinsta](https://reddit.com/r/barinsta)
-* Chat (Bridged to each other): [![Matrix](https://img.shields.io/badge/Matrix-@Barinsta:matrix.org-000000?logo=matrix)](https://matrix.to/#/#barinsta:matrix.org) [![Telegram](https://img.shields.io/badge/Telegram-@Grabber__App-2CA5E0?logo=telegram)](https://t.me/grabber_app) [![Discord](https://img.shields.io/badge/Discord-YtEDzN2-7289da?logo=discord&logoColor=white)](https://discord.gg/YtEDzN2) [![Gitter](https://img.shields.io/badge/Gitter-InstaGrabber/General-ed1965?logo=gitter)](https://gitter.im/instagrabber/general)
+* Chat (Bridged to each other): [![Matrix](https://img.shields.io/badge/Matrix-%23Barinsta:matrix.org-000000?logo=matrix)](https://matrix.to/#/#barinsta:matrix.org) [![Telegram](https://img.shields.io/badge/Telegram-@Grabber__App-2CA5E0?logo=telegram)](https://t.me/grabber_app) [![Discord](https://img.shields.io/badge/Discord-YtEDzN2-7289da?logo=discord&logoColor=white)](https://discord.gg/YtEDzN2) [![Gitter](https://img.shields.io/badge/Gitter-InstaGrabber/General-ed1965?logo=gitter)](https://gitter.im/instagrabber/general)
 
 ## Contributors
 
@@ -51,30 +51,35 @@ Prominent contributors are listed here in the [all-contributors](https://allcont
     <td align="center"><a href="https://austinhuang.me"><img src="https://avatars1.githubusercontent.com/u/16656689?s=100" width="100px;" alt=""/><br /><sub><b>Austin Huang</b></sub></a><br /><a href="https://github.com/austinhuang0131/barinsta/commits?author=austinhuang0131" title="Code">💻</a> <a href="https://github.com/austinhuang0131/barinsta/commits?author=austinhuang0131" title="Documentation">📖</a> <a href="#question-austinhuang0131" title="Answering Questions">💬</a> <a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a> <a href="#ideas-austinhuang0131" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/ammargitham"><img src="https://avatars0.githubusercontent.com/u/8017365?s=100" width="100px;" alt=""/><br /><sub><b>Ammar Githam</b></sub></a><br /><a href="https://github.com/austinhuang0131/barinsta/commits?author=ammargitham" title="Code">💻</a> <a href="#design-ammargitham" title="Design">🎨</a> <a href="#ideas-ammargitham" title="Ideas, Planning, & Feedback">🤔</a> <a href="#maintenance-ammargitham" title="Maintenance">🚧</a> <a href="#question-ammargitham" title="Answering Questions">💬</a></td>
     <td align="center"><a href="https://github.com/andersonvom"><img src="https://avatars3.githubusercontent.com/u/69922?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Anderson Mesquita</b></sub></a><br /><a href="https://github.com/austinhuang0131/barinsta/commits?author=andersonvom" title="Code">💻</a> <a href="https://github.com/austinhuang0131/barinsta/issues?q=author%3Aandersonvom" title="Bug reports">🐛</a></td>
-    <td align="center"><a href="http://rerolledgeek.blogspot.com/"><img src="https://avatars3.githubusercontent.com/u/5278488?s=100" width="100px;" alt=""/><br /><sub><b>AWAiS</b></sub></a><br /><a href="https://github.com/austinhuang0131/barinsta/commits?author=AwaisKing" title="Code">💻</a> <a href="#ideas-AwaisKing" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="http://rerolledgeek.blogspot.com/"><img src="https://avatars3.githubusercontent.com/u/5278488?s=100" width="100px;" alt=""/><br /><sub><b>AWAiS</b></sub></a><br /><a href="https://github.com/austinhuang0131/barinsta/commits?author=AwaisKing" title="Code">💻</a></td>
     <td align="center"><a href="https://stefannajdovski.com/"><img src="https://avatars2.githubusercontent.com/u/42580385?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Stefan Najdovski</b></sub></a><br /><a href="#design-snajdovski" title="Design">🎨</a> <a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="http://kevinthomas.dev"><img src="https://avatars2.githubusercontent.com/u/15370181?s=100" width="100px;" alt=""/><br /><sub><b>Kevin Thomas</b></sub></a><br /><a href="#financial-KevinNThomas" title="Financial">💵</a></td>
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/Shadowspear123"><img src="https://avatars1.githubusercontent.com/u/50462281?s=100" width="100px;" alt=""/><br /><sub><b>Shadowspear123</b></sub></a><br /><a href="#blog-Shadowspear123" title="Blogposts">📝</a> <a href="https://github.com/austinhuang0131/barinsta/issues?q=author%3AShadowspear123" title="Bug reports">🐛</a> <a href="#ideas-Shadowspear123" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-Shadowspear123" title="Answering Questions">💬</a></td>
     <td align="center"><a href="https://airikr.me/"><img src="https://avatars0.githubusercontent.com/u/53869451?s=100" width="100px;" alt=""/><br /><sub><b>Airikr</b></sub></a><br /><a href="#ideas-e-edgren" title="Ideas, Planning, & Feedback">🤔</a> <a href="#question-e-edgren" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://alin.atwebpages.com/"><img src="https://avatars2.githubusercontent.com/u/13281020?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ALIN</b></sub></a><br /><a href="https://github.com/austinhuang0131/barinsta/issues?q=author%3Aalin-1" title="Bug reports">🐛</a> <a href="#ideas-alin-1" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/Akrai"><img src="https://avatars1.githubusercontent.com/u/5624597?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Akrai</b></sub></a><br /><a href="#ideas-Akrai" title="Ideas, Planning, & Feedback">🤔</a> <a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/Galang23"><img src="https://avatars3.githubusercontent.com/u/13700948?s=100" width="100px;" alt=""/><br /><sub><b>Galang23</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/farzadx"><img src="https://avatars2.githubusercontent.com/u/70059397?v=4?s=100" width="100px;" alt=""/><br /><sub><b>farzadx</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/faydin"><img src="https://avatars2.githubusercontent.com/u/22706676?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fatih Aydın</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/faydin"><img src="https://avatars2.githubusercontent.com/u/22706676?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fatih Aydın</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/fouze555"><img src="https://avatars3.githubusercontent.com/u/71935341?v=4?s=100" width="100px;" alt=""/><br /><sub><b>fouze555</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://becauseofprog.fr/"><img src="https://avatars3.githubusercontent.com/u/24623168?s=100" width="100px;" alt=""/><br /><sub><b>kernoeb</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/Lego8486"><img src="https://avatars1.githubusercontent.com/u/47414485?s=100" width="100px;" alt=""/><br /><sub><b>Ten_Lego</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/MoaufmKlo"><img src="https://avatars1.githubusercontent.com/u/45636897?s=100" width="100px;" alt=""/><br /><sub><b>MoaufmKlo</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/nalinalini"><img src="https://avatars0.githubusercontent.com/u/65640431?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nalinalini</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/peterge1998"><img src="https://avatars2.githubusercontent.com/u/47355238?s=100" width="100px;" alt=""/><br /><sub><b>peterge1998</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
   </tr>
   <tr>
+    <td align="center"><a href="https://github.com/peterge1998"><img src="https://avatars2.githubusercontent.com/u/47355238?s=100" width="100px;" alt=""/><br /><sub><b>peterge1998</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/PierreM0"><img src="https://avatars3.githubusercontent.com/u/71077853?v=4?s=100" width="100px;" alt=""/><br /><sub><b>PierreM0</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
     <td align="center"><a href="https://github.com/RAMAR-RAR"><img src="https://avatars3.githubusercontent.com/u/47423745?s=100" width="100px;" alt=""/><br /><sub><b>RAMAR-RAR</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
-    <td align="center"><a href="https://github.com/RickyM7"><img src="https://avatars3.githubusercontent.com/u/24703825?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ricardo</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/rohang02"><img src="https://avatars3.githubusercontent.com/u/47921164?v=4?s=100" width="100px;" alt=""/><br /><sub><b>rohang02</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://github.com/RickyM7"><img src="https://avatars3.githubusercontent.com/u/24703825?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ricardo</b></sub></a><br /><a href="https://github.com/austinhuang0131/barinsta/issues?q=author%3ARickyM7" title="Bug reports">🐛</a> <a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
+    <td align="center"><a href="https://stillu.cc/"><img src="https://avatars2.githubusercontent.com/u/5843208?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Still Hsu</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
+  </tr>
+  <tr>
     <td align="center"><a href="https://github.com/wagnim"><img src="https://avatars0.githubusercontent.com/u/30241419?s=100" width="100px;" alt=""/><br /><sub><b>wagnim</b></sub></a><br /><a href="https://crowdin.com/project/instagrabber" title="Translation">🌍</a></td>
   </tr>
 </table>

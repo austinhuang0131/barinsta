@@ -53,10 +53,12 @@ public final class CrashReporter implements Thread.UncaughtExceptionHandler {
     @Override
     public void uncaughtException(@NonNull final Thread t, @NonNull final Throwable exception) {
         final StringBuilder reportBuilder = new StringBuilder();
-        reportBuilder.append("Error report collected on: ").append(new Date().toString());
-        reportBuilder.append("\r\n\r\nInformation:\r\n==============");
+        reportBuilder.append("IMPORTANT: If sending by email, your email address and the entire content will be made public on GitHub issues.");
+        reportBuilder.append("IMPORTANT: When possible, please describe the steps leading to this crash. Thank you for your cooperation.");
+        reportBuilder.append("\r\n\r\nError report collected on: ").append(new Date().toString());
 
         reportBuilder
+                .append("\r\n\r\nInformation:\r\n==============")
                 .append("\r\nVERSION		: ").append(BuildConfig.VERSION_NAME)
                 .append("\r\nVERSION_CODE	: ").append(BuildConfig.VERSION_CODE)
                 .append("\r\nPHONE-MODEL	: ").append(Build.MODEL)
@@ -69,8 +71,6 @@ public final class CrashReporter implements Thread.UncaughtExceptionHandler {
                 .append("\r\nPRODUCT		: ").append(Build.PRODUCT)
                 .append("\r\nHOST			: ").append(Build.HOST)
                 .append("\r\nTAGS			: ").append(Build.TAGS)
-                .append("\r\nINSTRUCTION	: Please attach details on how to produce this crash. Your help is appreciated.")
-                .append("\r\nPRIVACY    	: Your email address and crash report will be made PUBLIC on the GitHub repository.");
 
         reportBuilder.append("\r\n\r\nStack:\r\n==============\r\n");
         final Writer result = new StringWriter();

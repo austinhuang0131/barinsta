@@ -250,8 +250,8 @@ public final class CommentsViewerFragment extends BottomSheetDialogFragment impl
             commentDialogList = new String[]{
                     resources.getString(R.string.open_profile),
                     resources.getString(R.string.view_pfp),
-                    resources.getString(R.string.comment_viewer_copy_user),
-                    // resources.getString(R.string.comment_viewer_copy_comment),
+//                    resources.getString(R.string.comment_viewer_copy_user),
+                    resources.getString(R.string.comment_viewer_copy_comment),
                     resources.getString(R.string.comment_viewer_reply_comment),
                     commentModel.getLiked() ? resources.getString(R.string.comment_viewer_unlike_comment)
                                             : resources.getString(R.string.comment_viewer_like_comment),
@@ -261,8 +261,8 @@ public final class CommentsViewerFragment extends BottomSheetDialogFragment impl
             commentDialogList = new String[]{
                     resources.getString(R.string.open_profile),
                     resources.getString(R.string.view_pfp),
-                    resources.getString(R.string.comment_viewer_copy_user),
-                    // resources.getString(R.string.comment_viewer_copy_comment),
+//                    resources.getString(R.string.comment_viewer_copy_user),
+                    resources.getString(R.string.comment_viewer_copy_comment),
                     resources.getString(R.string.comment_viewer_reply_comment),
                     commentModel.getLiked() ? resources.getString(R.string.comment_viewer_unlike_comment)
                                             : resources.getString(R.string.comment_viewer_like_comment),
@@ -271,8 +271,8 @@ public final class CommentsViewerFragment extends BottomSheetDialogFragment impl
             commentDialogList = new String[]{
                     resources.getString(R.string.open_profile),
                     resources.getString(R.string.view_pfp),
-                    resources.getString(R.string.comment_viewer_copy_user),
-                    // resources.getString(R.string.comment_viewer_copy_comment)
+//                    resources.getString(R.string.comment_viewer_copy_user),
+                    resources.getString(R.string.comment_viewer_copy_comment)
             };
         }
         final Context context = getContext();
@@ -294,12 +294,12 @@ public final class CommentsViewerFragment extends BottomSheetDialogFragment impl
                       .add(fragment, "profilePicDialog")
                       .commit();
                     break;
-                case 2: // copy username
-                    Utils.copyText(context, profileModel.getUsername());
+//              case 2: // copy username
+//                  Utils.copyText(context, profileModel.getUsername());
+//                  break;
+                case 2: // copy comment
+                    Utils.copyText(context, "@" + profileModel.getUsername() + ": " + commentModel.getText());
                     break;
-                // case 3: // copy comment
-                //     Utils.copyText(context, commentModel.getText().toString());
-                //     break;
                 case 3: // reply to comment
                     // final View focus = binding.rvComments.findViewWithTag(commentModel);
                     // focus.setBackgroundColor(0x80888888);

@@ -62,6 +62,7 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
     private Set<FeedModel> selectedFeedModels;
     private FeedModel downloadFeedModel;
     private int downloadChildPosition = -1;
+    private PostsLayoutPreferences layoutPreferences = PostsLayoutPreferences.fromJson(settingsHelper.getString(getPostsLayoutPreferenceKey()));
 
     private final OnBackPressedCallback onBackPressedCallback = new OnBackPressedCallback(false) {
         @Override
@@ -173,11 +174,11 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
             if (position >= 0) {
                 builder.setPosition(position);
             }
-            final PostViewV2Fragment fragment = builder
-                    .setSharedProfilePicElement(profilePicView)
-                    .setSharedMainPostElement(mainPostImage)
-                    .build();
-            fragment.show(getChildFragmentManager(), "post_view");
+            if (!layoutPreferences.isAnimationDisabled()) {
+                builder.setSharedProfilePicElement(profilePicView)
+                       .setSharedMainPostElement(mainPostImage);
+            }
+            builder.build().show(getChildFragmentManager(), "post_view");
         }
     };
     private final FeedAdapterV2.SelectionModeCallback selectionModeCallback = new FeedAdapterV2.SelectionModeCallback() {
@@ -320,7 +321,7 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
         binding.posts.setViewModelStoreOwner(this)
                      .setLifeCycleOwner(this)
                      .setPostFetchService(new SavedPostFetchService(profileId, type))
-                     .setLayoutPreferences(PostsLayoutPreferences.fromJson(settingsHelper.getString(getPostsLayoutPreferenceKey())))
+                     .setLayoutPreferences(layoutPreferences)
                      .addFetchStatusChangeListener(fetching -> updateSwipeRefreshState())
                      .setFeedItemCallback(feedItemCallback)
                      .setSelectionModeCallback(selectionModeCallback)
@@ -394,7 +395,10 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
     private void showPostsLayoutPreferences() {
         final PostsLayoutPreferencesDialogFragment fragment = new PostsLayoutPreferencesDialogFragment(
                 getPostsLayoutPreferenceKey(),
-                preferences -> new Handler().postDelayed(() -> binding.posts.setLayoutPreferences(preferences), 200));
+                preferences -> {
+                    layoutPreferences = preferences;
+                    new Handler().postDelayed(() -> binding.posts.setLayoutPreferences(preferences), 200);
+                });
         fragment.show(getChildFragmentManager(), "posts_layout_preferences");
     }
 }
