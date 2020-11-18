@@ -153,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Блокнат</string>
     <string name="dms_inbox_raven_media_suggested">Предложено</string>
     <string name="dms_inbox_raven_media_screenshot">Скриншотнато</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Неможе да се прати</string>
     <string name="dms_action_success">Одличен успех!</string>
     <string name="dms_action_leave">Ливни</string>
     <string name="dms_action_leave_question">Дали сакате да ливните од чатот?</string>
