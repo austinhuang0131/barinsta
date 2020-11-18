@@ -25,12 +25,8 @@
     <string name="title_comments">Yorumlar</string>
     <string name="title_notifications">Bildirimler</string>
     <string name="title_highlight">Öne çıkarılanlar: %s</string>
-    <string name="title_user_story">Kullanıcı Hikayesi</string>
-    <string name="title_changelog">Güncelleme Notları</string>
-    <string name="bottom_toolbar">Araç çubuğunu aşağıda göster</string>
     <string name="update_check">Güncellemeleri başlangıçta kontrol et</string>
     <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
-    <string name="autoload_posts">Kullanıcıların tüm gönderilerini otomatik yükle</string>
     <string name="mark_as_seen_setting">Hikayeleri gördükten sonra görüldü olarak işaretle</string>
     <string name="mark_as_seen_setting_summary">Hikayeyi paylaşan gördüğünüzü bilecek</string>
     <string name="dm_mark_as_seen_setting">DM\'leri gördükten sonra görüldü olarak işaretle</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">Hareketler için bildirimleri aktifleştir</string>
     <string name="error_loading_profile">Profili yüklerken hata oluştu!\nGiriş yapıp tekrar deneyin.</string>
     <string name="error_creating_folders">İndirilenler klasörü(leri) oluşturulamadı.</string>
-    <string name="show_feed">Kullanıcıların gönderilerini ana sayfada göster (sadece giriş yapıldığında çalışır)</string>
     <string name="save_to_folder">Şu klasöre kaydet:</string>
     <string name="select_folder">Klasörü seçin</string>
     <string name="theme_settings">Tema</string>
     <string name="login_settings">Sadece giriş yapılmış hesapları etkiler:</string>
     <string name="anonymous_settings">Sadece anonim hesapları etkiler:</string>
-    <string name="privacy_warning">Gizlilik</string>
     <string name="instadp_settings">Yüksek kalite profil fotoğrafları için Instadp kullan</string>
     <string name="import_export">İçe Aktar/Dışa Aktar</string>
     <string name="select_language">Dil</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s Gönderi</string>
     <string name="main_posts_followers">%s\nTakipçi</string>
     <string name="main_posts_following">%s\nTakip</string>
-    <string name="post_viewer_video_post">Videolu gönderi</string>
-    <string name="post_viewer_image_post">Resimli gönderi</string>
     <string name="post_viewer_autoplay_video">Videoları otomatik oynat</string>
     <string name="post_viewer_muted_autoplay">Videoları her zaman sustur</string>
     <string name="post_viewer_download_dialog_title">İndirmek için seçin</string>
@@ -89,16 +81,12 @@
     <string name="logout_summary">Instagram\'ı anonim olarak dolaş</string>
     <string name="remove_all_acc">Tüm hesapları kaldır</string>
     <string name="remove_all_acc_warning">Bu eklenmiş tüm hesapları uygulamadan kaldıracak!\nSadece bir hesabı kaldırmak için hesap değişimi menüsünden istediğin hesaba basılı tut.\nDevam etmek istiyor musun?</string>
-    <string name="send_logs">Hata ayıklama metnini gönder</string>
     <string name="time_settings">Tarih biçimi</string>
-    <string name="project_link">Proje Sayfasına Git</string>
     <string name="liked">Beğenilenler</string>
     <string name="saved">Kaydedilenler</string>
     <string name="tagged">Etiketlenilenler</string>
     <string name="dm_person">Mesaj</string>
-    <string name="like">Beğen (%s)</string>
     <string name="like_without_count">Beğen</string>
-    <string name="unlike">Beğenmekten Vazgeç (%s)</string>
     <string name="unlike_without_count">Beğenmekten Vazgeç</string>
     <string name="bookmark">Yer İşareti Koy</string>
     <string name="unbookmark">Yer İşaretini Kaldır</string>
@@ -137,9 +125,6 @@
     <string name="time_settings_swap_time">Saat ve Tarih konumlarını değiştir</string>
     <string name="quick_access_cannot_delete_curr">Şu an kullanımda olan hesap silinemez</string>
     <string name="quick_access_confirm_delete">Şunu silmek istediğinden emin misin?: \'%s\'</string>
-    <string name="profile_viewer_imageinfo">Genişlik: %d\nYükseklik: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nRenk derinliği:</string>
-    <string name="profile_endpoint">Profil fotoğrafının bitiş noktasını seçin\n(Etiketleri etkilemez)</string>
     <string name="open_profile">Profili aç</string>
     <string name="view_pfp">Profil fotoğrafını gör</string>
     <string name="direct_messages_you">Sen</string>
@@ -168,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Engellendi</string>
     <string name="dms_inbox_raven_media_suggested">Önerilen</string>
     <string name="dms_inbox_raven_media_screenshot">Ekran görüntüsü alındı</string>
-    <string name="dms_inbox_raven_media_cant_deliver">İletilemiyor</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">Büyük başarı!</string>
     <string name="dms_action_leave">Ayrıl</string>
     <string name="dms_action_leave_question">Bu sohbetten ayrıl?</string>
@@ -197,7 +182,6 @@
     <string name="comment_send_empty_comment">Boş yorum yapılamaz!</string>
     <string name="comment_view_mention_user_search">Kullanıcı adını aratmak istiyor musun?</string>
     <string name="comment_view_mention_hash_search">Etiketi aratmak istiyor musun?</string>
-    <string name="comment_view_mention_location_search">Konumu aratmak istiyor musun?</string>
     <string name="followers_type_followers">Takipçiler</string>
     <string name="followers_type_following">Takip Edilen</string>
     <string name="followers_compare">Takipçiler &amp; takip edilenler karşılaştırması</string>
@@ -205,7 +189,6 @@
     <string name="followers_not_following">takip etmeyen takipçiler %s</string>
     <string name="followers_not_follower">%s takip edilmeyen takipçi</string>
     <string name="login_error_loading_cookies">Çerezleri yükleme hatası</string>
-    <string name="login_success_loading_cookies">Çerezler başarıyla yüklendi!\nEğer hala gizli hesapları açamıyorsan tekrar giriş yap!</string>
     <string name="comment_hint">Yeni bir yorum yaz…</string>
     <string name="dm_hint">Yeni bir mesaj yaz…</string>
     <string name="liked_notif">Gönderini beğendi</string>
@@ -224,7 +207,6 @@
     <string name="updated">Barinsta\'yı güncellediğin için teşekkürler!</string>
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
-    <string name="use_amoled_dark_theme">\'AMOLED ekran için Koyu Tema\'yı kullan</string>
     <string name="action_notif">Hareketler</string>
     <string name="select_picture">Resim Seç</string>
     <string name="uploading">Yükleniyor…</string>
@@ -240,8 +222,6 @@
     <string name="more">Fazlası</string>
     <string name="title_dm">Mesajlar</string>
     <string name="number_selected">%d seçildi</string>
-    <string name="relogin">Tekrar giriş yap</string>
-    <string name="relogin_summary">Bir sorun oluşursa çerezleri yenile</string>
     <string name="logout_success">Başarıyla çıkış yapıldı!</string>
     <string name="dm_thread_info">Bilgi</string>
     <string name="mark_as_seen">Görüldü olarak işaretle</string>
