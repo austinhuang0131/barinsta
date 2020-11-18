@@ -25,12 +25,8 @@
     <string name="title_comments">評論</string>
     <string name="title_notifications">通知</string>
     <string name="title_highlight">標記: %s</string>
-    <string name="title_user_story">用戶限時動態</string>
-    <string name="title_changelog">變更日誌</string>
-    <string name="bottom_toolbar">在底部顯示工具欄</string>
     <string name="update_check">啟動時檢查更新</string>
     <string name="download_user_folder">將貼文下載到用戶名資料夾</string>
-    <string name="autoload_posts">自動載入用戶的所有貼文</string>
     <string name="mark_as_seen_setting">檢視完限時動態後標記為已讀</string>
     <string name="mark_as_seen_setting_summary">限時動態的作者會知道您已查看了此限時動態</string>
     <string name="dm_mark_as_seen_setting">檢視完訊息後標記為已讀</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">啟用活動通知</string>
     <string name="error_loading_profile">無法載入個人檔案！\n試著重新登入並重新搜尋。</string>
     <string name="error_creating_folders">建立下載資料夾時出錯！</string>
-    <string name="show_feed">顯示用戶動態（僅在用戶登入後有效）</string>
     <string name="save_to_folder">儲存到自定義資料夾</string>
     <string name="select_folder">選擇資料夾</string>
     <string name="theme_settings">主題</string>
     <string name="login_settings">僅影響已登入用戶：</string>
     <string name="anonymous_settings">僅影響匿名用戶：</string>
-    <string name="privacy_warning">隱私</string>
     <string name="instadp_settings">透過 Instadp 檢視高清大頭貼照</string>
     <string name="import_export">匯入/匯出</string>
     <string name="select_language">語言</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s 貼文</string>
     <string name="main_posts_followers">%s\n位追蹤者</string>
     <string name="main_posts_following">%s\n追蹤中</string>
-    <string name="post_viewer_video_post">影片貼文</string>
-    <string name="post_viewer_image_post">圖片貼文</string>
     <string name="post_viewer_autoplay_video">自動播放影片</string>
     <string name="post_viewer_muted_autoplay">永遠自動靜音影片</string>
     <string name="post_viewer_download_dialog_title">選擇要下載的內容</string>
@@ -89,16 +81,12 @@
     <string name="logout_summary">匿名瀏覽 Instagram</string>
     <string name="remove_all_acc">刪除所有帳戶</string>
     <string name="remove_all_acc_warning">此動作將會自本程式移除所有已登入的帳號！\n如果您只想要移除單一帳號，在切換用戶按鈕上長按即可。\n你確定要繼續嗎？</string>
-    <string name="send_logs">發送除錯日誌</string>
     <string name="time_settings">日期格式</string>
-    <string name="project_link">造訪專案頁面</string>
     <string name="liked">已按讚</string>
     <string name="saved">已儲存</string>
     <string name="tagged">已標記</string>
     <string name="dm_person">訊息</string>
-    <string name="like">讚 (%s)</string>
     <string name="like_without_count">讚</string>
-    <string name="unlike">收回讚 (%s)</string>
     <string name="unlike_without_count">收回讚</string>
     <string name="bookmark">書籤</string>
     <string name="unbookmark">自書籤中移除</string>
@@ -137,9 +125,6 @@
     <string name="time_settings_swap_time">交換時間和日期位置</string>
     <string name="quick_access_cannot_delete_curr">無法刪除當前正在使用的帳戶</string>
     <string name="quick_access_confirm_delete">您確定要刪除 %s 嗎？</string>
-    <string name="profile_viewer_imageinfo">寬: %d\n高: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\n顏色深度:</string>
-    <string name="profile_endpoint">選擇個人檔案圖片端點\n（不影響主題標籤）</string>
     <string name="open_profile">開啟個人檔案</string>
     <string name="view_pfp">查看大頭貼照</string>
     <string name="direct_messages_you">您</string>
@@ -168,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">已封鎖</string>
     <string name="dms_inbox_raven_media_suggested">建議</string>
     <string name="dms_inbox_raven_media_screenshot">已截圖</string>
-    <string name="dms_inbox_raven_media_cant_deliver">無法傳送</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">大功告成！</string>
     <string name="dms_action_leave">離開</string>
     <string name="dms_action_leave_question">離開此聊天室？</string>
@@ -197,7 +182,6 @@
     <string name="comment_send_empty_comment">無空評論！</string>
     <string name="comment_view_mention_user_search">您要搜尋用戶名嗎？</string>
     <string name="comment_view_mention_hash_search">您要搜尋主題標籤嗎？</string>
-    <string name="comment_view_mention_location_search">您要搜尋位置嗎？</string>
     <string name="followers_type_followers">追蹤者</string>
     <string name="followers_type_following">追蹤中</string>
     <string name="followers_compare">比較關注者和關注</string>
@@ -205,7 +189,6 @@
     <string name="followers_not_following">尚未追蹤 %s</string>
     <string name="followers_not_follower">%s 尚未追蹤</string>
     <string name="login_error_loading_cookies">載入 Cookie 時出錯</string>
-    <string name="login_success_loading_cookies">已成功載入 Cookies！\n如果仍無法打開私人頁面/貼文，請重新登入！</string>
     <string name="comment_hint">留言回應…</string>
     <string name="dm_hint">撰寫訊息…</string>
     <string name="liked_notif">對您的貼文說讚</string>
@@ -224,7 +207,6 @@
     <string name="updated">感謝您更新 Barinsta！</string>
     <string name="crash_title">程式出錯了</string>
     <string name="crash_descr">喔噢！程式當掉了！別擔心，您可以向開發人員發送錯誤報告以協助解決此問題！ (:</string>
-    <string name="use_amoled_dark_theme">針對暗黑主題使用 AMOLED 模式</string>
     <string name="action_notif">動態</string>
     <string name="select_picture">選擇圖片</string>
     <string name="uploading">上傳中…</string>
@@ -240,8 +222,6 @@
     <string name="more">更多</string>
     <string name="title_dm">訊息</string>
     <string name="number_selected">已選 %d</string>
-    <string name="relogin">重新登入</string>
-    <string name="relogin_summary">如果遇到任何問題，請刷新您的 Cookie</string>
     <string name="logout_success">已成功登出！</string>
     <string name="dm_thread_info">資訊</string>
     <string name="mark_as_seen">標記為已讀</string>
