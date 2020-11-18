@@ -28,12 +28,8 @@
     <string name="title_comments">Comments</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_highlight">Highlight: %s</string>
-    <string name="title_user_story">User Story</string>
-    <string name="title_changelog">Changelog</string>
-    <string name="bottom_toolbar">Show toolbar at bottom</string>
     <string name="update_check">Check for updates at startup</string>
     <string name="download_user_folder">Download posts to username folders</string>
-    <string name="autoload_posts">Auto-load all posts from user</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
     <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
     <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>
@@ -41,13 +37,11 @@
     <string name="activity_setting">Enable activity notifications</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
-    <string name="show_feed">Show user feed (Works only when user is logged in)</string>
     <string name="save_to_folder">Save to custom folder</string>
     <string name="select_folder">Select folder</string>
     <string name="theme_settings">Theme</string>
     <string name="login_settings">Only affects logged-in users:</string>
     <string name="anonymous_settings">Only affects anonymous users:</string>
-    <string name="privacy_warning">Privacy</string>
     <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
     <string name="import_export">Import/Export</string>
     <string name="select_language">Language</string>
@@ -55,8 +49,6 @@
     <string name="main_posts_count_inline">%s Posts</string>
     <string name="main_posts_followers">%s\nFollowers</string>
     <string name="main_posts_following">%s\nFollowing</string>
-    <string name="post_viewer_video_post">Video post</string>
-    <string name="post_viewer_image_post">Image post</string>
     <string name="post_viewer_autoplay_video">Autoplay videos</string>
     <string name="post_viewer_muted_autoplay">Always mute videos</string>
     <string name="post_viewer_download_dialog_title">Select what to download</string>
@@ -92,16 +84,12 @@
     <string name="logout_summary">Browse Instagram anonymously</string>
     <string name="remove_all_acc">Remove all accounts</string>
     <string name="remove_all_acc_warning">This will remove all added accounts from the app!\nTo remove just one account, long tap the account from the account switcher dialog.\nDo you want to continue?</string>
-    <string name="send_logs">Send Debug Logs</string>
     <string name="time_settings">Date format</string>
-    <string name="project_link">Visit Project Page</string>
     <string name="liked">Liked</string>
     <string name="saved">Saved</string>
     <string name="tagged">Tagged</string>
     <string name="dm_person">Message</string>
-    <string name="like">Like (%s)</string>
     <string name="like_without_count">Like</string>
-    <string name="unlike">Unlike (%s)</string>
     <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Bookmark</string>
     <string name="unbookmark">Unbookmark</string>
@@ -140,9 +128,6 @@
     <string name="time_settings_swap_time">Swap Time and Date positions</string>
     <string name="quick_access_cannot_delete_curr">Cannot delete currently in use account</string>
     <string name="quick_access_confirm_delete">Are you sure you want to delete \'%s\'?</string>
-    <string name="profile_viewer_imageinfo">Width: %d\nHeight: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nColor depth:</string>
-    <string name="profile_endpoint">Select profile picture endpoint\n(Does not affect hashtags)</string>
     <string name="open_profile">Open profile</string>
     <string name="view_pfp">View profile picture</string>
     <string name="direct_messages_you">You</string>
@@ -171,7 +156,7 @@
     <string name="dms_inbox_raven_media_blocked">Blocked</string>
     <string name="dms_inbox_raven_media_suggested">Suggested</string>
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot delivered</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">Great success!</string>
     <string name="dms_action_leave">Leave</string>
     <string name="dms_action_leave_question">Leave this chat?</string>
@@ -200,7 +185,6 @@
     <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Do you want to search the username?</string>
     <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
-    <string name="comment_view_mention_location_search">Do you want to search the location?</string>
     <string name="followers_type_followers">Followers</string>
     <string name="followers_type_following">Following</string>
     <string name="followers_compare">Comparing followers &amp; following</string>
@@ -208,7 +192,6 @@
     <string name="followers_not_following">not following %s</string>
     <string name="followers_not_follower">%s is not following</string>
     <string name="login_error_loading_cookies">Error loading cookies</string>
-    <string name="login_success_loading_cookies">Successfully loaded cookies!\nIf you still can\'t open private pages/posts, re-login!</string>
     <string name="comment_hint">Write a new comment…</string>
     <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Liked your post</string>
@@ -227,7 +210,6 @@
     <string name="updated">Thank you for updating Barinsta!</string>
     <string name="crash_title">App crashed</string>
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
-    <string name="use_amoled_dark_theme">Use AMOLED mode for Dark theme</string>
     <string name="action_notif">Activity</string>
     <string name="license" translatable="false">Copyright (C) 2019  AWAiS\nCopyright (C) 2020  Austin Huang, Ammar Githam\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.</string>
     <string name="liability" translatable="false">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</string>
@@ -245,8 +227,6 @@
     <string name="more">More</string>
     <string name="title_dm">DM</string>
     <string name="number_selected">%d selected</string>
-    <string name="relogin">Relogin</string>
-    <string name="relogin_summary">Refresh your cookies if facing any issues</string>
     <string name="logout_success">Successfully logged out!</string>
     <string name="dm_thread_info">Info</string>
     <string name="mark_as_seen">Mark as seen</string>
