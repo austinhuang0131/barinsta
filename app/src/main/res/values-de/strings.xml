@@ -25,12 +25,8 @@
     <string name="title_comments">Kommentare</string>
     <string name="title_notifications">Benachrichtigungen</string>
     <string name="title_highlight">Hervorheben: %s</string>
-    <string name="title_user_story">Nutzerstory</string>
-    <string name="title_changelog">Änderungsprotokoll</string>
-    <string name="bottom_toolbar">Symbolleiste unten anzeigen</string>
     <string name="update_check">Beim Start auf Aktualisierungen prüfen</string>
     <string name="download_user_folder">Beiträge in Benutzernamen-Ordner herunterladen</string>
-    <string name="autoload_posts">Alle Beiträge des Benutzers automatisch laden</string>
     <string name="mark_as_seen_setting">Stories nach dem Ansehen als gesehen markieren</string>
     <string name="mark_as_seen_setting_summary">Die Person wird wissen, dass du dir die Story angesehen hast</string>
     <string name="dm_mark_as_seen_setting">Direktnachrichten nach dem Ansehen als gesehen markieren</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">Aktivitätsbenachrichtigungen aktivieren</string>
     <string name="error_loading_profile">Fehler beim Laden des Profils!\nVersuche dich einzuloggen und erneut zu suchen.</string>
     <string name="error_creating_folders">Fehler beim Erstellen von Download-Ordner(n).</string>
-    <string name="show_feed">Nutzer-Feed anzeigen (Funktioniert nur, wenn Benutzer angemeldet ist)</string>
     <string name="save_to_folder">In benutzerdefiniertem Ordner speichern</string>
     <string name="select_folder">Ordner auswählen</string>
     <string name="theme_settings">Design</string>
     <string name="login_settings">Betrifft nur angemeldete Benutzer:</string>
     <string name="anonymous_settings">Betrifft nur anonyme Benutzer:</string>
-    <string name="privacy_warning">Datenschutz</string>
     <string name="instadp_settings">Instadp für hochauflösende Profilbilder verwenden</string>
     <string name="import_export">Importieren/Exportieren</string>
     <string name="select_language">Sprache</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s Beiträge</string>
     <string name="main_posts_followers">%s\nAbonnenten</string>
     <string name="main_posts_following">%s\nAbonniert</string>
-    <string name="post_viewer_video_post">Videobeitrag</string>
-    <string name="post_viewer_image_post">Bildbeitrag</string>
     <string name="post_viewer_autoplay_video">Videos automatisch abspielen</string>
     <string name="post_viewer_muted_autoplay">Videos immer stummschalten</string>
     <string name="post_viewer_download_dialog_title">Datei zum Download auswählen</string>
@@ -89,16 +81,12 @@
     <string name="logout_summary">Instagram anonym durchsuchen</string>
     <string name="remove_all_acc">Alle Konten entfernen</string>
     <string name="remove_all_acc_warning">Dadurch werden alle hinzugefügten Konten aus der App entfernt!\nUm nur ein Konto zu entfernen, tippe lange auf das Konto aus dem Kontowechseldialog.\nMöchtest du fortfahren?</string>
-    <string name="send_logs">Debug-Protokolle senden</string>
     <string name="time_settings">Datumsformat</string>
-    <string name="project_link">Projektseite aufrufen</string>
     <string name="liked">Gefällt mir</string>
     <string name="saved">Gespeichert</string>
     <string name="tagged">Markiert</string>
     <string name="dm_person">Nachricht</string>
-    <string name="like">Gefällt mir (%s)</string>
     <string name="like_without_count">Like</string>
-    <string name="unlike">Gefällt mir nicht mehr (%s)</string>
     <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Lesezeichen</string>
     <string name="unbookmark">Lesezeichen entfernen</string>
@@ -137,9 +125,6 @@
     <string name="time_settings_swap_time">Zeit und Datum tauschen</string>
     <string name="quick_access_cannot_delete_curr">Derzeit verwendetes Konto kann nicht gelöscht werden</string>
     <string name="quick_access_confirm_delete">Bist du sicher, dass du \'%s \' löschen möchtest?</string>
-    <string name="profile_viewer_imageinfo">Breite: %d\nHöhe: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nFarbtiefe:</string>
-    <string name="profile_endpoint">Wählen den Profilbild Endpunkt\n(wirkt sich nicht auf Hashtags aus)</string>
     <string name="open_profile">Profil öffnen</string>
     <string name="view_pfp">Profilbild ansehen</string>
     <string name="direct_messages_you">Du</string>
@@ -168,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Blockiert</string>
     <string name="dms_inbox_raven_media_suggested">Empfohlen</string>
     <string name="dms_inbox_raven_media_screenshot">Screenshot erstellt</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Kann nicht zugestellt werden</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">Großer Erfolg!</string>
     <string name="dms_action_leave">Verlassen</string>
     <string name="dms_action_leave_question">Chat verlassen?</string>
@@ -197,7 +182,6 @@
     <string name="comment_send_empty_comment">Keine leeren Kommentare!</string>
     <string name="comment_view_mention_user_search">Möchtest du nach dem Benutzernamen suchen?</string>
     <string name="comment_view_mention_hash_search">Möchtest du nach dem Hashtag suchen?</string>
-    <string name="comment_view_mention_location_search">Möchtest du nach dem Ort suchen?</string>
     <string name="followers_type_followers">Abonnenten</string>
     <string name="followers_type_following">Abonniert</string>
     <string name="followers_compare">Vergleiche Abonnenten &amp; abonnierte Accounts</string>
@@ -205,7 +189,6 @@
     <string name="followers_not_following">Hat %s nicht abonniert</string>
     <string name="followers_not_follower">Nicht von %s abonniert</string>
     <string name="login_error_loading_cookies">Fehler beim Laden der Cookies</string>
-    <string name="login_success_loading_cookies">Cookies erfolgreich geladen!\nWenn du private Seiten/Beiträge noch nicht öffnen können, melden dich erneut an!</string>
     <string name="comment_hint">Write a new comment…</string>
     <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">gefällt dein Foto.</string>
@@ -224,7 +207,6 @@
     <string name="updated">Danke für die Aktualisierung von Barinsta!</string>
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden, um ihm zu helfen, das Problem zu beheben. (:</string>
-    <string name="use_amoled_dark_theme">AMOLED-Modus für Dunkles Design verwenden</string>
     <string name="action_notif">Aktivität</string>
     <string name="select_picture">Bild auswählen</string>
     <string name="uploading">Uploading…</string>
@@ -240,8 +222,6 @@
     <string name="more">Mehr</string>
     <string name="title_dm">PN</string>
     <string name="number_selected">%d ausgewählt</string>
-    <string name="relogin">Erneut anmelden</string>
-    <string name="relogin_summary">Aktualisiere deine Cookies, wenn Probleme auftreten</string>
     <string name="logout_success">Erfolgreich abgemeldet!</string>
     <string name="dm_thread_info">Info</string>
     <string name="mark_as_seen">Als gesehen markieren</string>
