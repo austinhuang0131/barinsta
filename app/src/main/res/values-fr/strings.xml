@@ -86,7 +86,7 @@
     <string name="saved">Sauvegardé</string>
     <string name="tagged">Taggé</string>
     <string name="dm_person">Message</string>
-    <string name="like_without_count">Like</string>
+    <string name="like_without_count">J\'aime</string>
     <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Ajouter aux marque-pages</string>
     <string name="unbookmark">Retirer des marque-pages</string>
@@ -153,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Bloqué</string>
     <string name="dms_inbox_raven_media_suggested">Suggéré</string>
     <string name="dms_inbox_raven_media_screenshot">Capture d\'écran effectuée</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Impossible de distribuer</string>
     <string name="dms_action_success">Succès !</string>
     <string name="dms_action_leave">Quitter</string>
     <string name="dms_action_leave_question">Quitter cette conversation ?</string>
@@ -296,11 +296,11 @@
     <string name="disable_animation">Disable animation</string>
     <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
     <plurals name="likes_count">
-        <item quantity="one">%d like</item>
-        <item quantity="other">%d likes</item>
+        <item quantity="one">%d j\'aime</item>
+        <item quantity="other">%d j\'aimes</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="one">%d commentaire</item>
+        <item quantity="other">%d commentaires</item>
     </plurals>
 </resources>
