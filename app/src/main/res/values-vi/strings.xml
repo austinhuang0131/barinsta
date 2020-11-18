@@ -153,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Đã chặn</string>
     <string name="dms_inbox_raven_media_suggested">Gợi ý</string>
     <string name="dms_inbox_raven_media_screenshot">Đã chụp màn hình</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Không thể gửi</string>
     <string name="dms_action_success">Thành công!</string>
     <string name="dms_action_leave">Rời khỏi</string>
     <string name="dms_action_leave_question">Rời khỏi nhóm này?</string>
