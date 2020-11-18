@@ -153,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">已封鎖</string>
     <string name="dms_inbox_raven_media_suggested">建議</string>
     <string name="dms_inbox_raven_media_screenshot">已截圖</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">無法傳送</string>
     <string name="dms_action_success">大功告成！</string>
     <string name="dms_action_leave">離開</string>
     <string name="dms_action_leave_question">離開此聊天室？</string>
