@@ -25,12 +25,8 @@
     <string name="title_comments">留言</string>
     <string name="title_notifications">通知</string>
     <string name="title_highlight">精彩：%s</string>
-    <string name="title_user_story">用户快拍</string>
-    <string name="title_changelog">日志</string>
-    <string name="bottom_toolbar">下方显示工具栏</string>
     <string name="update_check">启动时检查更新</string>
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
-    <string name="autoload_posts">自动加载用户所有帖子</string>
     <string name="mark_as_seen_setting">查看快拍后将其标记为已读</string>
     <string name="mark_as_seen_setting_summary">快拍作者会知道您已看过</string>
     <string name="dm_mark_as_seen_setting">查看私信后将其标记为已读</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">启用活动通知</string>
     <string name="error_loading_profile">载入主页时出错！\n请尝试再次登录并搜索。</string>
     <string name="error_creating_folders">创建下载文件夹时出错</string>
-    <string name="show_feed">显示用户动态 (只在登录后有效)</string>
     <string name="save_to_folder">保存至自定义文件夹</string>
     <string name="select_folder">选择文件夹</string>
     <string name="theme_settings">主题</string>
     <string name="login_settings">仅影响登录用户：</string>
     <string name="anonymous_settings">仅影响匿名用户：</string>
-    <string name="privacy_warning">隐私</string>
     <string name="instadp_settings">使用 Instadp 获取高清头像</string>
     <string name="import_export">导入/导出</string>
     <string name="select_language">语言</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s 个帖子</string>
     <string name="main_posts_followers">%s\n粉丝</string>
     <string name="main_posts_following">%s\n已关注</string>
-    <string name="post_viewer_video_post">视频帖</string>
-    <string name="post_viewer_image_post">图片帖</string>
     <string name="post_viewer_autoplay_video">自动播放视频</string>
     <string name="post_viewer_muted_autoplay">视频默认静音</string>
     <string name="post_viewer_download_dialog_title">选择要下载的</string>
@@ -89,16 +81,12 @@
     <string name="logout_summary">隐身浏览Instagram</string>
     <string name="remove_all_acc">删除所有帐户</string>
     <string name="remove_all_acc_warning">这将从应用中移除所有已添加的账户！\n若要移除其中一个账户，长按账户切换对话框中的那个账户即可。\n您想要继续吗？</string>
-    <string name="send_logs">发送调试日志</string>
     <string name="time_settings">日期格式</string>
-    <string name="project_link">参观项目页面</string>
     <string name="liked">已赞</string>
     <string name="saved">已保存</string>
     <string name="tagged">已标记</string>
     <string name="dm_person">消息</string>
-    <string name="like">赞 (%s)</string>
     <string name="like_without_count">赞</string>
-    <string name="unlike">取消赞 (%s)</string>
     <string name="unlike_without_count">取消点赞</string>
     <string name="bookmark">加入收藏</string>
     <string name="unbookmark">解除收藏</string>
@@ -137,9 +125,6 @@
     <string name="time_settings_swap_time">互换时间和日期位置</string>
     <string name="quick_access_cannot_delete_curr">无法删除正在使用的账户</string>
     <string name="quick_access_confirm_delete">您确定要删除\"%s\"吗？</string>
-    <string name="profile_viewer_imageinfo">宽: %d\n高: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\n色深:</string>
-    <string name="profile_endpoint">选择高清头像服务\n（不影响标签）</string>
     <string name="open_profile">打开主页</string>
     <string name="view_pfp">查看头像</string>
     <string name="direct_messages_you">你</string>
@@ -168,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">已屏蔽</string>
     <string name="dms_inbox_raven_media_suggested">为您推荐</string>
     <string name="dms_inbox_raven_media_screenshot">已截屏</string>
-    <string name="dms_inbox_raven_media_cant_deliver">无法发送</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">非常成功!</string>
     <string name="dms_action_leave">离开</string>
     <string name="dms_action_leave_question">离开此聊天吗？</string>
@@ -197,7 +182,6 @@
     <string name="comment_send_empty_comment">评论要写字的！</string>
     <string name="comment_view_mention_user_search">要搜索用户名吗?</string>
     <string name="comment_view_mention_hash_search">要搜索标签吗?</string>
-    <string name="comment_view_mention_location_search">要搜索地点吗?</string>
     <string name="followers_type_followers">粉丝</string>
     <string name="followers_type_following">关注</string>
     <string name="followers_compare">比较粉丝和关注</string>
@@ -205,7 +189,6 @@
     <string name="followers_not_following">未关注 %s</string>
     <string name="followers_not_follower">%s 未关注</string>
     <string name="login_error_loading_cookies">载入 cookies 时出错</string>
-    <string name="login_success_loading_cookies">成功载入 cookies!\n若你仍不能查看私密页面/帖子，重新登录!</string>
     <string name="comment_hint">撰写一条新评论…</string>
     <string name="dm_hint">撰写一条新消息…</string>
     <string name="liked_notif">赞了你的帖子</string>
@@ -224,7 +207,6 @@
     <string name="updated">感谢阁下更新 Barinsta！</string>
     <string name="crash_title">应用崩溃了</string>
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
-    <string name="use_amoled_dark_theme">使用 AMOLED 夜间主题</string>
     <string name="action_notif">动态</string>
     <string name="select_picture">选择图片</string>
     <string name="uploading">上传中...</string>
@@ -240,8 +222,6 @@
     <string name="more">更多</string>
     <string name="title_dm">私信</string>
     <string name="number_selected">已选择 %d 个</string>
-    <string name="relogin">重新登录</string>
-    <string name="relogin_summary">如果遇到问题，请刷新您的 cookie</string>
     <string name="logout_success">成功退出！</string>
     <string name="dm_thread_info">信息</string>
     <string name="mark_as_seen">标记为已读</string>
