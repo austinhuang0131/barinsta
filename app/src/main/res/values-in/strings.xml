@@ -153,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Telah diblokir</string>
     <string name="dms_inbox_raven_media_suggested">Telah disarankan</string>
     <string name="dms_inbox_raven_media_screenshot">Layar tertangkap</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Tidak dapat mengirim</string>
     <string name="dms_action_success">Berhasil!</string>
     <string name="dms_action_leave">Tinggalkan</string>
     <string name="dms_action_leave_question">Tinggalkan obrolan ini?</string>
