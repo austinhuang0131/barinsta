@@ -25,12 +25,8 @@
     <string name="title_comments">دیدگاه ها</string>
     <string name="title_notifications">آگهداد</string>
     <string name="title_highlight">درخشندگی: %s</string>
-    <string name="title_user_story">استوری کاربر</string>
-    <string name="title_changelog">گزارش دگرگونی</string>
-    <string name="bottom_toolbar">نمایش نوار ابزار در پایین</string>
     <string name="update_check">بررسی بروزرسانی هنگام آغاز برنامه</string>
     <string name="download_user_folder">بارگیری پست ها در پوشه های به نام کاربر</string>
-    <string name="autoload_posts">بارگذاری خودکار همه پست‌ های کاربر</string>
     <string name="mark_as_seen_setting">نشان کرد استوری ها به عنوان دیده شده بعد از دیدن</string>
     <string name="mark_as_seen_setting_summary">نویسنده استوری می داند که شما آن را دیده اید</string>
     <string name="dm_mark_as_seen_setting">نشان کردن پیام خصوصی بعنوان دیده شده بعد از دیدن</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">روشن کردن آگهداد فعالیت ها</string>
     <string name="error_loading_profile">خطا در نمایش نمایه!\n دوباره وارد شوید و جستجو کنید.</string>
     <string name="error_creating_folders">خطا در ساخت پوشه(ها).</string>
-    <string name="show_feed">نمایش خوراک‌خوان کاربر(فقط زمانی که کاربر وارد شده باشد کار می‌کند)</string>
     <string name="save_to_folder">ذخیره در پوشه سفارشی</string>
     <string name="select_folder">انتخاب پوشه</string>
     <string name="theme_settings">پوسته</string>
     <string name="login_settings">فقط بر کاربران وارد شده اثر دارد:</string>
     <string name="anonymous_settings">فقط بر کاربران ناشناس اثر دارد:</string>
-    <string name="privacy_warning">حریم خصوصی</string>
     <string name="instadp_settings">استفاده از Instadp برای بالا بردن وضوح عکس‌های نمایه</string>
     <string name="import_export">وارد کردن/خروجی گرفتن</string>
     <string name="select_language">زبان</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s پست ها</string>
     <string name="main_posts_followers">%s\nدنبال کننده ها</string>
     <string name="main_posts_following">%s\nدنبال کننده ها</string>
-    <string name="post_viewer_video_post">پست فیلم</string>
-    <string name="post_viewer_image_post">پست عکس</string>
     <string name="post_viewer_autoplay_video">پخش خودکار فیلم ها</string>
     <string name="post_viewer_muted_autoplay">همیشه فیلم هارو بی صدا کن</string>
     <string name="post_viewer_download_dialog_title">انتخاب کن چی دانلود کنی</string>
@@ -90,16 +82,12 @@
     <string name="logout_summary">گشت و گذار ناشناس در اینستاگرام</string>
     <string name="remove_all_acc">حذف همه حساب ها</string>
     <string name="remove_all_acc_warning">این تمام حساب های اضافه شده به برنامه را حذف خواهد کرد!\n برای حذف کردن فقط یک حساب، مدت طولانی روی حساب ضربه بزنید از دیالوگ تعویض حساب.\n میخواهید ادامه دهید؟</string>
-    <string name="send_logs">فرستادن گزارش های اشکال زدایی</string>
     <string name="time_settings">فرمت تاریخ</string>
-    <string name="project_link">دیدن صفحه پروژه</string>
     <string name="liked">پسندیده شد</string>
     <string name="saved">ذخیره شد</string>
     <string name="tagged">تگ شده</string>
     <string name="dm_person">پیام</string>
-    <string name="like">لایک (%s)</string>
     <string name="like_without_count">Like</string>
-    <string name="unlike">نپسندیدن (%s)</string>
     <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">نشانک</string>
     <string name="unbookmark">حذف نشانک</string>
@@ -138,9 +126,6 @@
     <string name="time_settings_swap_time">موقعیت زمان و تاریخ را عوض کنید</string>
     <string name="quick_access_cannot_delete_curr">نمیتواند حذف شود این اکانت در حال استفاده است</string>
     <string name="quick_access_confirm_delete">آیا مطمن هستید میخواهید حذف کنید \'%s\'؟</string>
-    <string name="profile_viewer_imageinfo">عرض: %d\nارتفاع: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\n عمق رنگ:</string>
-    <string name="profile_endpoint">نقطه پایانی تصویر پروفایل را انتخاب کنید\n(روی هشتگ ها تاثیر ندارد)</string>
     <string name="open_profile">باز کردن پروفایل</string>
     <string name="view_pfp">دیدن عکس پروفایل</string>
     <string name="direct_messages_you">شما</string>
@@ -169,7 +154,7 @@
     <string name="dms_inbox_raven_media_blocked">بلاک شده</string>
     <string name="dms_inbox_raven_media_suggested">پیشنهاد شده</string>
     <string name="dms_inbox_raven_media_screenshot">اسکرین شات گرفته شده</string>
-    <string name="dms_inbox_raven_media_cant_deliver">نمیتواند ارسال شود</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">موفقیت بزرگ!</string>
     <string name="dms_action_leave">ترک کردن</string>
     <string name="dms_action_leave_question">این گفتگو را ترک میکنید؟</string>
@@ -198,7 +183,6 @@
     <string name="comment_send_empty_comment">دیدگاه های خالی نه!</string>
     <string name="comment_view_mention_user_search">ایا میخواهید نام کاربری جستوجو کنید ؟</string>
     <string name="comment_view_mention_hash_search">آیا میخواهید هشتگ جستوجو کنید؟</string>
-    <string name="comment_view_mention_location_search">آیا میخواهید مکانی را جستوجو کنید ؟</string>
     <string name="followers_type_followers">دنبال کننده ها</string>
     <string name="followers_type_following">دنبال کردن</string>
     <string name="followers_compare">مقایسه دنبال کنندگان &amp; زیر</string>
@@ -206,7 +190,6 @@
     <string name="followers_not_following">دنبال نمیکند %s</string>
     <string name="followers_not_follower">%s دنبال نمی کنند</string>
     <string name="login_error_loading_cookies">خطای بالا آوردن کوکی ها</string>
-    <string name="login_success_loading_cookies">کوکی ها با موفقیت بارگیری شده!\n اگر هنوز نمی توانید صفحه شخصی/پست ها را باز کنید، دوباره وارد حساب شوید!</string>
     <string name="comment_hint">نوشتن یک دیدگاه نو…</string>
     <string name="dm_hint">نوشتن یک پیام نو…</string>
     <string name="liked_notif">پست شمارا پسندید</string>
@@ -225,7 +208,6 @@
     <string name="updated">از شما بابت بروز رسانی Barinsta سپاسگزاریم!</string>
     <string name="crash_title">برنامه خراب شد</string>
     <string name="crash_descr">اوپسس.. برنامه خراب است، اما نگران نباشید شما میتوانید گزارش خطا را برای توسعه دهنده بفرستید برای کمک به او در درست کردن مشکل. (:</string>
-    <string name="use_amoled_dark_theme">استفاده از حالت AMOLED در پوسته تاریک</string>
     <string name="action_notif">فعالیت</string>
     <string name="select_picture">انتخاب تصویر</string>
     <string name="uploading">Uploading…</string>
@@ -241,8 +223,6 @@
     <string name="more">بیشتر</string>
     <string name="title_dm">پیام خصوصی</string>
     <string name="number_selected">%d انتخاب شده</string>
-    <string name="relogin">ورود دوباره</string>
-    <string name="relogin_summary">در صورت بروز هرگونه مشکل کوکی های خود را تازه سازی کنید</string>
     <string name="logout_success">خروج با موفقیت!</string>
     <string name="dm_thread_info">اطلاعات</string>
     <string name="mark_as_seen">نشان کردن به عنوان دیده شده</string>
