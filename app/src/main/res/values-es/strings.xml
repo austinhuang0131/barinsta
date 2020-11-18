@@ -292,9 +292,9 @@
     <string name="show_avatars">Mostrar avatares</string>
     <string name="avatar_size">Tamaño de avatar</string>
     <string name="corners">Esquinas</string>
-    <string name="show_grid_gap">Show grid gap</string>
-    <string name="disable_animation">Disable animation</string>
-    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
+    <string name="show_grid_gap">Mostrar espaciado de cuadrícula</string>
+    <string name="disable_animation">Desactivar animaciones</string>
+    <string name="follower_wait_to_load">¡Por favor, espera a que la tarea actual se complete primero!</string>
     <plurals name="likes_count">
         <item quantity="one">%d me gusta</item>
         <item quantity="other">%d me gustas</item>
