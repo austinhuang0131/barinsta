@@ -25,12 +25,8 @@
     <string name="title_comments">Commenti</string>
     <string name="title_notifications">Notifiche</string>
     <string name="title_highlight">In Evidenza: %s</string>
-    <string name="title_user_story">Storia Utente</string>
-    <string name="title_changelog">Changelog</string>
-    <string name="bottom_toolbar">Mostra barra degli strumenti in basso</string>
     <string name="update_check">Verifica per aggiornamenti all\'avvio</string>
     <string name="download_user_folder">Scarica i post nelle cartelle del nome utente</string>
-    <string name="autoload_posts">Carica automaticamente tutti i post dall\'utente</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo la visualizzazione</string>
     <string name="mark_as_seen_setting_summary">L\'autore della storia saprà che l\'hai visualizzata</string>
     <string name="dm_mark_as_seen_setting">Segna il DM come visto dopo la visualizzazione</string>
@@ -38,13 +34,11 @@
     <string name="activity_setting">Abilita notifiche attività</string>
     <string name="error_loading_profile">Errore caricando il profilo!\nProva ad accedere e cercare ancora.</string>
     <string name="error_creating_folders">Errore creando le cartelle di Download.</string>
-    <string name="show_feed">Mostra feed utente (Funziona solo quando l\'utente è connesso)</string>
     <string name="save_to_folder">Salva alla cartella personalizzata</string>
     <string name="select_folder">Seleziona cartella</string>
     <string name="theme_settings">Tema</string>
     <string name="login_settings">Influenza solo gli utenti connessi:</string>
     <string name="anonymous_settings">Influenza solo gli utenti anonimi:</string>
-    <string name="privacy_warning">Privacy</string>
     <string name="instadp_settings">Usa Instadp per immagini del profilo ad alta definizione</string>
     <string name="import_export">Importa/Esporta</string>
     <string name="select_language">Lingua</string>
@@ -52,8 +46,6 @@
     <string name="main_posts_count_inline">%s Post</string>
     <string name="main_posts_followers">%s\nSeguaci</string>
     <string name="main_posts_following">%s\nSeguiti</string>
-    <string name="post_viewer_video_post">Post video</string>
-    <string name="post_viewer_image_post">Post immagine</string>
     <string name="post_viewer_autoplay_video">Riproduzione automatica video</string>
     <string name="post_viewer_muted_autoplay">Silenzia sempre i video</string>
     <string name="post_viewer_download_dialog_title">Seleziona cosa scaricare</string>
@@ -89,16 +81,12 @@
     <string name="logout_summary">Naviga in Instagram anonimamente</string>
     <string name="remove_all_acc">Rimuovi tutti i profili</string>
     <string name="remove_all_acc_warning">Questo rimuoverà tutti i profili aggiunti dall\'app!\nPer rimuovere solo un profilo, tieni premuto il profilo dalla finestra di cambio del profilo.\nDesideri continuare?</string>
-    <string name="send_logs">Invia Registri di Debug</string>
     <string name="time_settings">Formato della Data</string>
-    <string name="project_link">Visita la Pagina del Progetto</string>
     <string name="liked">Piaciuti</string>
     <string name="saved">Salvati</string>
     <string name="tagged">Taggati</string>
     <string name="dm_person">Messaggio</string>
-    <string name="like">Mi Piace (%s)</string>
     <string name="like_without_count">Mi Piace</string>
-    <string name="unlike">Non mi Piace(%s)</string>
     <string name="unlike_without_count">Non mi Piace</string>
     <string name="bookmark">Contrassegna</string>
     <string name="unbookmark">Rimuovi dai preferiti</string>
@@ -137,9 +125,6 @@
     <string name="time_settings_swap_time">Scambia posizioni Data e Ora</string>
     <string name="quick_access_cannot_delete_curr">Impossibile eliminare il profilo correntemente in uso</string>
     <string name="quick_access_confirm_delete">Sei sicuro di voler eliminare \'%s\'?</string>
-    <string name="profile_viewer_imageinfo">Larghezza: %d\nAltezza: %d</string>
-    <string name="profile_viewer_colordepth_prefix">\nProfondità colore:</string>
-    <string name="profile_endpoint">Seleziona l\'endpoint dell\'immagine del profilo\n(Non influisce sugli hashtag)</string>
     <string name="open_profile">Apri profilo</string>
     <string name="view_pfp">Vedi immagine del profilo</string>
     <string name="direct_messages_you">Tu</string>
@@ -168,7 +153,7 @@
     <string name="dms_inbox_raven_media_blocked">Bloccato</string>
     <string name="dms_inbox_raven_media_suggested">Suggerito</string>
     <string name="dms_inbox_raven_media_screenshot">Catturato</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Impossibile consegnare</string>
+    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">Ottimo successo!</string>
     <string name="dms_action_leave">Lascia</string>
     <string name="dms_action_leave_question">Lasciare questa chat?</string>
@@ -197,7 +182,6 @@
     <string name="comment_send_empty_comment">Nessun commento vuoto!</string>
     <string name="comment_view_mention_user_search">Vuoi cercare il nome utente?</string>
     <string name="comment_view_mention_hash_search">Vuoi cercare l\'hashtag?</string>
-    <string name="comment_view_mention_location_search">Vuoi cercare la posizione?</string>
     <string name="followers_type_followers">Seguaci</string>
     <string name="followers_type_following">Seguiti</string>
     <string name="followers_compare">Confrontando seguaci e seguiti</string>
@@ -205,7 +189,6 @@
     <string name="followers_not_following">non segue %s</string>
     <string name="followers_not_follower">%s non ti segue</string>
     <string name="login_error_loading_cookies">Errore caricando i cookie</string>
-    <string name="login_success_loading_cookies">Cookie caricati correttamente!\nSe non puoi ancora aprire pagine/post privati, accedi nuovamente!</string>
     <string name="comment_hint">Scrivi un nuovo commento…</string>
     <string name="dm_hint">Scrivi un nuovo messaggio…</string>
     <string name="liked_notif">Ha messo Mi Piace al tuo post</string>
@@ -224,7 +207,6 @@
     <string name="updated">Grazie per aver aggiornato Barinsta!</string>
     <string name="crash_title">L\'app è crashata</string>
     <string name="crash_descr">Ops... l\'app è crashata, ma non preoccuparti, puoi inviare una segnalazione dell\'errore allo sviluppatore per aiutarlo a risolvere il problema. (:</string>
-    <string name="use_amoled_dark_theme">Usa la modalità AMOLED per il tema Scuro</string>
     <string name="action_notif">Attività</string>
     <string name="select_picture">Seleziona Immagine</string>
     <string name="uploading">Caricamento…</string>
@@ -240,8 +222,6 @@
     <string name="more">Altro</string>
     <string name="title_dm">DM</string>
     <string name="number_selected">%d selezionati</string>
-    <string name="relogin">Accedi ancora</string>
-    <string name="relogin_summary">Aggiorna i tuoi cookie se stai avendo problemi</string>
     <string name="logout_success">Disconnesso correttamente!</string>
     <string name="dm_thread_info">Info</string>
     <string name="mark_as_seen">Segna come letto</string>
