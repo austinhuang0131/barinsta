@@ -154,7 +154,7 @@
     <string name="dms_inbox_raven_media_blocked">अवरोधित</string>
     <string name="dms_inbox_raven_media_suggested">सुझाव</string>
     <string name="dms_inbox_raven_media_screenshot">स्क्रीनशॉट किया</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">पहुॅचा नहिं जा सकता</string>
     <string name="dms_action_success">बडा सफलता!</string>
     <string name="dms_action_leave">छोड़ दें</string>
     <string name="dms_action_leave_question">इसी बार्तालाप को छोड दें?</string>
