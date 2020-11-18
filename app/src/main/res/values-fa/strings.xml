@@ -154,7 +154,7 @@
     <string name="dms_inbox_raven_media_blocked">بلاک شده</string>
     <string name="dms_inbox_raven_media_suggested">پیشنهاد شده</string>
     <string name="dms_inbox_raven_media_screenshot">اسکرین شات گرفته شده</string>
-    <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
+    <string name="dms_inbox_raven_media_cant_deliver">نمیتواند ارسال شود</string>
     <string name="dms_action_success">موفقیت بزرگ!</string>
     <string name="dms_action_leave">ترک کردن</string>
     <string name="dms_action_leave_question">این گفتگو را ترک میکنید؟</string>
