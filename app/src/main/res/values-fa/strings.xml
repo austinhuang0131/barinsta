@@ -3,7 +3,7 @@
     <string name="action_about">درباره</string>
     <string name="action_dms">پیام‌های خصوصی</string>
     <string name="action_settings">تنظیمات</string>
-    <string name="action_download">دانلود</string>
+    <string name="action_download">بارگیری</string>
     <string name="action_search">جستجوی نام کاربری…</string>
     <string name="action_compare">مقایسه</string>
     <string name="clipboard_error">خطا هنگام کپی متن</string>
@@ -64,7 +64,7 @@
     <string name="answer_hint">پاسخ…</string>
     <string name="answered_story">جواب درست است!</string>
     <string name="reply_story">پاسخ به استوری</string>
-    <string name="reply_hint">Reply…</string>
+    <string name="reply_hint">پاسخ…</string>
     <string name="story_quiz">نظرسنجی</string>
     <string name="story_quizzed">در حال حاظر شما رای داده اید!</string>
     <string name="story_mentions">یادآوری ها</string>
@@ -289,7 +289,7 @@
     <string name="column_count">Column count</string>
     <string name="two">2</string>
     <string name="three">3</string>
-    <string name="show_names">Show names</string>
+    <string name="show_names">نمایش نام‌ها</string>
     <string name="show_avatars">Show avatars</string>
     <string name="avatar_size">Avatar size</string>
     <string name="corners">Corners</string>
