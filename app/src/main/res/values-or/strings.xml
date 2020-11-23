@@ -10,8 +10,8 @@
     <string name="clipboard_copied">କ୍ଲିପବୋର୍ଡରେ କପି କରାଗଲା!</string>
     <string name="report">ରିପୋର୍ଟ କରନ୍ତୁ</string>
     <string name="password">ପାସୱାର୍ଡ (ସର୍ବାଧିକ 32 ବର୍ଣ୍ଣ)</string>
-    <string name="set_password">Set a password (max 32 chars)</string>
-    <string name="password_no_max">Password</string>
+    <string name="set_password">ପାସୱାର୍ଡ (ସର୍ବାଧିକ 32 ବର୍ଣ୍ଣ)</string>
+    <string name="password_no_max">ପାସୱାର୍ଡ</string>
     <string name="ok">OK</string>
     <string name="yes">Yes</string>
     <string name="cancel">Cancel</string>
