@@ -12,10 +12,10 @@
     <string name="password">ପାସୱାର୍ଡ (ସର୍ବାଧିକ 32 ବର୍ଣ୍ଣ)</string>
     <string name="set_password">ପାସୱାର୍ଡ (ସର୍ବାଧିକ 32 ବର୍ଣ୍ଣ)</string>
     <string name="password_no_max">ପାସୱାର୍ଡ</string>
-    <string name="ok">OK</string>
-    <string name="yes">Yes</string>
-    <string name="cancel">Cancel</string>
-    <string name="no">No</string>
+    <string name="ok">ଠିକ୍ ଅଛି</string>
+    <string name="yes">ହଁ</string>
+    <string name="cancel">ରଦ୍ଦ କର</string>
+    <string name="no">ନାଁ</string>
     <string name="confirm">Confirm</string>
     <string name="nav_up">Up</string>
     <string name="dont_show_again">Don\'t Show Again</string>
