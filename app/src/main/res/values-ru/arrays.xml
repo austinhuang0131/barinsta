@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
-        <item>Chinese Simplified</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
-        <item>Turkish [Thanks to @faydin90]</item>
-        <item>Brazilian Portuguese [Thanks to @wagnim]</item>
-        <item>Persian [Thanks to @farzadx]</item>
-        <item>Macedonian [Thanks to @snajdovski]</item>
-        <item>Vietnamese [Thanks to @fouze555]</item>
-        <item>Chinese Traditional [Thanks to @Still34]</item>
-        <item>Hindi</item>
+        <item>Системный по умолчанию</item>
+        <item>Английский</item>
+        <item>Французский [Спасибо @kernoeb]</item>
+        <item>Испанский [Спасибо @sguinetti]</item>
+        <item>Китайский упрощённый</item>
+        <item>Индонезийский [Спасибо @Galang23]</item>
+        <item>Итальянский [Спасибо @RAR_Ramar]</item>
+        <item>Немецкий [Спасибо @peterge1998]</item>
+        <item>Польский [Спасибо @Lego8486]</item>
+        <item>Турецкий [Спасибо @faydin90]</item>
+        <item>Португальский (Бразилия) [Спасибо @wagnim]</item>
+        <item>Персидский [Спасибо @farzadx]</item>
+        <item>Македонский [Спасибо @snajdovski]</item>
+        <item>Вьетнамский [Спасибо @fouze555]</item>
+        <item>Китайский традиционный [Спасибо @Still34]</item>
+        <item>Хинди</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -37,8 +37,8 @@
     <string-array name="theme_presets">
         <item>Auto / Follow System</item>
         <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Тёмная</item>
+        <item>Светлая</item>
     </string-array>
     <string-array name="theme_presets_values">
         <item>0</item>
@@ -47,7 +47,7 @@
         <item>3</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Нет</item>
         <item>\@</item>
         <item>at</item>
         <item>on</item>
@@ -55,7 +55,7 @@
         <item>-</item>
     </string-array>
     <string-array name="discover_placeholder">
-        <item>Loading...</item>
+        <item>Загрузка...</item>
     </string-array>
     <string-array name="date_presets">
         <item>dd-MM-yyyy</item>
