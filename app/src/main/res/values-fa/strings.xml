@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_about">درباره</string>
-    <string name="action_dms">پیام‌های خصوصی</string>
-    <string name="action_settings">تنظیمات</string>
+    <string name="action_dms">پیام‌های سرراست</string>
+    <string name="action_settings">ساماندهی</string>
     <string name="action_download">بارگیری</string>
     <string name="action_search">جستجوی نام کاربری…</string>
     <string name="action_compare">مقایسه</string>
@@ -54,8 +54,8 @@
     <string name="show_stories">نمایش استوری ها</string>
     <string name="no_more_stories">استوری بیشتری نیست!</string>
     <string name="be_patient">صبور باشید!</string>
-    <string name="view_story_post">دیدن پست</string>
-    <string name="view_post">دیدن پست</string>
+    <string name="view_story_post">نگریستن پیک</string>
+    <string name="view_post">نگریستن پیک</string>
     <string name="spotify">Spotify</string>
     <string name="vote_story_poll">رای دادن</string>
     <string name="votef_story_poll">رای با موفقیت بود!</string>
@@ -87,8 +87,8 @@
     <string name="saved">ذخیره شد</string>
     <string name="tagged">تگ شده</string>
     <string name="dm_person">پیام</string>
-    <string name="like_without_count">Like</string>
-    <string name="unlike_without_count">Unlike</string>
+    <string name="like_without_count">پسند</string>
+    <string name="unlike_without_count">ناپسند</string>
     <string name="bookmark">نشانک</string>
     <string name="unbookmark">حذف نشانک</string>
     <string name="follow">دنبال کردن</string>
@@ -166,7 +166,7 @@
     <string name="direct_download_perms_ask">لطفا دسترسی بدهید و تلاش کنید دوباره دانلود کنید!</string>
     <string name="downloader_started">دانلود شروع شده</string>
     <string name="downloader_complete">دانلود کامل شده</string>
-    <string name="downloader_downloading_post">Downloading post…</string>
+    <string name="downloader_downloading_post">دریافت پیک…</string>
     <string name="downloader_downloading_media">دانلود رسانه ها</string>
     <string name="downloader_downloading_pfp">دانلود عکس پروفایل</string>
     <string name="downloader_downloaded_in_folder">فایل دانلود شده در پوشه دانلود!</string>
@@ -192,7 +192,7 @@
     <string name="login_error_loading_cookies">خطای بالا آوردن کوکی ها</string>
     <string name="comment_hint">نوشتن یک دیدگاه نو…</string>
     <string name="dm_hint">نوشتن یک پیام نو…</string>
-    <string name="liked_notif">پست شمارا پسندید</string>
+    <string name="liked_notif">پیک شما را پسندید</string>
     <string name="comment_notif">کامنت رو پست شما گذاشته:</string>
     <string name="follow_notif">شروع به دنبال کردن شما کرده</string>
     <string name="mention_notif">به شما اشاره کرده:</string>
@@ -200,7 +200,7 @@
     <string name="request_notif">درخواست دنبال کردن شما را کرده</string>
     <string name="request_approve">قبول درخواست</string>
     <string name="request_reject">رد درخواست</string>
-    <string name="share_public_post">Share this public post to…</string>
+    <string name="share_public_post">همرسانی این پیک همگانی به…</string>
     <string name="share_private_post">این پست شخصی است! آنهایی رو به اشتراک بزارید که میتوانید ببینید!</string>
     <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">یک بروزرسانی آمده است! (%s)</string>
@@ -283,7 +283,7 @@
     <string name="delete">حذف</string>
     <string name="comment">دیدگاه</string>
     <string name="layout">Layout</string>
-    <string name="opening_post">Opening post...</string>
+    <string name="opening_post">باز کردن پیک...</string>
     <string name="share">همرسانی</string>
     <string name="layout_style">Layout style</string>
     <string name="column_count">Column count</string>
