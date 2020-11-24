@@ -16,7 +16,7 @@
         <item>مقدونی [ با تشکر از snajdovski@ ]</item>
         <item>ویتنامی [ با سپاس از fouze555@ ]</item>
         <item>Chinese Traditional [Thanks to @Still34]</item>
-        <item>Hindi</item>
+        <item>هندی</item>
     </string-array>
     <string-array name="languages_values">
         <item>۰</item>
@@ -35,7 +35,7 @@
         <item>13</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>خودکار / پیروی از سیستم</item>
+        <item>خودکار / پیروی از سامانه</item>
         <item>خودکار / پیروی از باتری</item>
         <item>تیره</item>
         <item>روشن</item>
