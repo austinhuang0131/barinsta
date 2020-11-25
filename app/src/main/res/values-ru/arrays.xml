@@ -35,8 +35,8 @@
         <item>13</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
+        <item>Автоматически / Оглядка на систему</item>
+        <item>Автоматически / Оглядка на батарею</item>
         <item>Тёмная</item>
         <item>Светлая</item>
     </string-array>
@@ -49,8 +49,8 @@
     <string-array name="separator_presets">
         <item>Нет</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>в</item>
+        <item>на</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
