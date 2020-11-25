@@ -70,7 +70,7 @@
     <string name="story_mentions">Упоминания</string>
     <string name="priv_acc">Это частная учётная запись</string>
     <string name="priv_acc_confirm">Вы не сможете получить доступ к публикациям после отписки! Вы уверены?</string>
-    <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
+    <string name="no_acc">Вы можете войти через Ещё -&gt; Учётная запись в правом нижнем углу или можете просматривать публичные учётные записи без авторизации!</string>
     <string name="no_acc_logged_in">Вы можете провести пальцем влево/вправо для навигации/ленты новостей, или поиска чего-нибудь ниже!</string>
     <string name="empty_acc">У этой учётной записи нет публикаций</string>
     <string name="empty_list">Нет таких публикаций!</string>
@@ -239,7 +239,7 @@
     <string name="about_documentation">Посетить наш сайт</string>
     <string name="about_documentation_summary">Получайте поддержку, обсуждайте, встречайтесь с другими и развлекайтесь!</string>
     <string name="about_repository">Посмотреть наш исходный код на GitHub</string>
-    <string name="about_repository_summary">Audit, star, report bugs, contribute, and have fun (again)!</string>
+    <string name="about_repository_summary">Проводите ревизию, сохранения, сообщайте от ошибках, вносите свой вклад и веселитесь (снова)!</string>
     <string name="about_feedback">Отправить отзыв по электронной почте</string>
     <string name="about_category_3pt">Атрибуты сторонних производителей</string>
     <string name="about_category_3pt_summary">Используются следующие сторонние библиотеки с открытым исходным кодом:</string>
@@ -291,20 +291,20 @@
     <string name="show_names">Показать имена</string>
     <string name="show_avatars">Показывать аватары</string>
     <string name="avatar_size">Размер аватара</string>
-    <string name="corners">Corners</string>
-    <string name="show_grid_gap">Show grid gap</string>
+    <string name="corners">Углы</string>
+    <string name="show_grid_gap">Показать разрыв сетки</string>
     <string name="disable_animation">Отключить анимацию</string>
     <string name="follower_wait_to_load">Пожалуйста, дождитесь сначала выполнения текущей задачи!</string>
     <plurals name="likes_count">
-        <item quantity="one">%d like</item>
-        <item quantity="few">%d likes</item>
-        <item quantity="many">%d likes</item>
+        <item quantity="one">%d нравится</item>
+        <item quantity="few">%d нравится</item>
+        <item quantity="many">%d понравилось</item>
         <item quantity="other">%d понравилось</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d комментарий</item>
-        <item quantity="few">%d comments</item>
-        <item quantity="many">%d comments</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="few">%d комментария</item>
+        <item quantity="many">%d комментариев</item>
+        <item quantity="other">%d комментарии</item>
     </plurals>
 </resources>
