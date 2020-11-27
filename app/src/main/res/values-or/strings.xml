@@ -21,9 +21,9 @@
     <string name="dont_show_again">ପୁନର୍ବାର ଦେଖାନ୍ତୁ ନାହିଁ</string>
     <string name="selected_folder_label">ବର୍ତମାନ ଫୋଲ୍ଡର</string>
     <string name="title_favorites">ପସନ୍ଦିତ</string>
-    <string name="title_discover">Discover</string>
-    <string name="title_comments">Comments</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_discover">ଖୋଜିବା</string>
+    <string name="title_comments">ଟିପ୍ପଣୀ</string>
+    <string name="title_notifications">ସୂଚନା</string>
     <string name="title_highlight">Highlight: %s</string>
     <string name="update_check">Check for updates at startup</string>
     <string name="download_user_folder">Download posts to username folders</string>
