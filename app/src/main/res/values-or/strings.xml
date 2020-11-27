@@ -16,11 +16,11 @@
     <string name="yes">ହଁ</string>
     <string name="cancel">ରଦ୍ଦ କର</string>
     <string name="no">ନାଁ</string>
-    <string name="confirm">Confirm</string>
-    <string name="nav_up">Up</string>
-    <string name="dont_show_again">Don\'t Show Again</string>
-    <string name="selected_folder_label">Current directory</string>
-    <string name="title_favorites">Favorites</string>
+    <string name="confirm">ନିଶ୍ଚିତ କରନ୍ତୁ</string>
+    <string name="nav_up">ଉପର</string>
+    <string name="dont_show_again">ପୁନର୍ବାର ଦେଖାନ୍ତୁ ନାହିଁ</string>
+    <string name="selected_folder_label">ବର୍ତମାନ ଫୋଲ୍ଡର</string>
+    <string name="title_favorites">ପସନ୍ଦିତ</string>
     <string name="title_discover">Discover</string>
     <string name="title_comments">Comments</string>
     <string name="title_notifications">Notifications</string>
