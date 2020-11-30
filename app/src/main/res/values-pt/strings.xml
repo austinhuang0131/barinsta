@@ -295,7 +295,7 @@
     <string name="show_grid_gap">Mostrar separação das grades</string>
     <string name="disable_animation">Desativar animação</string>
     <string name="follower_wait_to_load">Por favor, espere a tarefa atual ser concluída primeiro!</string>
-    <string name="post_not_found">Post not found!</string>
+    <string name="post_not_found">Publicação não encontrada!</string>
     <plurals name="likes_count">
         <item quantity="one">%d curtida</item>
         <item quantity="other">%d curtidas</item>
