@@ -295,6 +295,7 @@
     <string name="show_grid_gap">显示网格间距</string>
     <string name="disable_animation">禁用动画</string>
     <string name="follower_wait_to_load">请等待当前任务完成！</string>
+    <string name="post_not_found">Post not found!</string>
     <plurals name="likes_count">
         <item quantity="other">%d 个赞</item>
     </plurals>
