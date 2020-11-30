@@ -295,6 +295,7 @@
     <string name="show_grid_gap">Mostra divario griglia</string>
     <string name="disable_animation">Disabilita animazione</string>
     <string name="follower_wait_to_load">Prima, sei pregato di attendere che l\'attività corrente sia completata!</string>
+    <string name="post_not_found">Post not found!</string>
     <plurals name="likes_count">
         <item quantity="one">%d Mi piace</item>
         <item quantity="other">%d Mi piace</item>
