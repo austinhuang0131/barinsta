@@ -295,6 +295,7 @@
     <string name="show_grid_gap">Afficher les lacunes de la grille</string>
     <string name="disable_animation">Désactiver les animations</string>
     <string name="follower_wait_to_load">Veuillez d\'abord attendre que la tâche en cours soit terminée !</string>
+    <string name="post_not_found">Post not found!</string>
     <plurals name="likes_count">
         <item quantity="one">%d j\'aime</item>
         <item quantity="other">%d j\'aimes</item>
