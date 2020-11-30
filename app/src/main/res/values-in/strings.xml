@@ -295,6 +295,7 @@
     <string name="show_grid_gap">Tampilkan batas kisi</string>
     <string name="disable_animation">Matikan animasi</string>
     <string name="follower_wait_to_load">Harap tunggu hingga tugas saat ini selesai!</string>
+    <string name="post_not_found">Post not found!</string>
     <plurals name="likes_count">
         <item quantity="other">%d suka</item>
     </plurals>
