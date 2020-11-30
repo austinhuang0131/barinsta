@@ -16,7 +16,8 @@
         <item>Macedoński [Podziękowania dla @snajdovski]</item>
         <item>Wietnamski [Podziękowania dla @fouze555]</item>
         <item>Chiński Tradycyjny [Podziękowania dla @Still34]</item>
-        <item>Hinduski</item>
+        <item>Catalan [Thanks to @retiolus]</item>
+        <item>Russian [Thanks to @rikishi0071]</item>
     </string-array>
     <string-array name="languages_values">
         <item>0</item>
@@ -33,6 +34,9 @@
         <item>11</item>
         <item>12</item>
         <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Ustawienia systemu</item>
