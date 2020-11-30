@@ -295,6 +295,7 @@
     <string name="show_grid_gap">Показать разрыв сетки</string>
     <string name="disable_animation">Отключить анимацию</string>
     <string name="follower_wait_to_load">Пожалуйста, дождитесь сначала выполнения текущей задачи!</string>
+    <string name="post_not_found">Post not found!</string>
     <plurals name="likes_count">
         <item quantity="one">%d нравится</item>
         <item quantity="few">%d нравится</item>
