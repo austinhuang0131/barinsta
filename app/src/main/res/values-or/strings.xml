@@ -31,7 +31,7 @@
     <string name="mark_as_seen_setting_summary">କାହାଣୀ ପ୍ରେରକ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ</string>
     <string name="dm_mark_as_seen_setting">ବାର୍ତା ଦେଖିବା ପରେ \'ଦେଖାଗଲା\' ଚିହ୍ନିତ କରନ୍ତୁ |</string>
     <string name="dm_mark_as_seen_setting_summary">ଅନ୍ୟ ସଦସ୍ୟମାନେ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ।</string>
-    <string name="activity_setting">Enable activity notifications</string>
+    <string name="activity_setting">କାର୍ଯ୍ୟକଳାପ ସୂଚନା ଦେଖାନ୍ତୁ</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
     <string name="save_to_folder">Save to custom folder</string>
