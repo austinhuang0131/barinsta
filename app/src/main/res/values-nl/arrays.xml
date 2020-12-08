@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
-        <item>English</item>
-        <item>French [Thanks to @kernoeb]</item>
-        <item>Spanish [Thanks to @sguinetti]</item>
-        <item>Chinese Simplified</item>
-        <item>Indonesian [Thanks to @Galang23]</item>
-        <item>Italian [Thanks to @RAR_Ramar]</item>
-        <item>German [Thanks to @peterge1998]</item>
-        <item>Polish [Thanks to @Lego8486]</item>
+        <item>Systeemstandaard</item>
+        <item>Engels</item>
+        <item>Frans [Met dank aan @kernoeb]</item>
+        <item>Spaans [Met dank aan @sguinetti]</item>
+        <item>Chinees (vereenvoudigd)</item>
+        <item>Indonesisch [Met dank aan @Galang23]</item>
+        <item>Italiaans [Met dank aan @RAR_Ramar]</item>
+        <item>Duits [Met dank aan @peterge1998]</item>
+        <item>Pools [Met dank aan @Lego8486]</item>
         <item>Turkish [Thanks to @faydin90]</item>
         <item>Brazilian Portuguese [Thanks to @wagnim]</item>
         <item>Persian [Thanks to @farzadx]</item>
