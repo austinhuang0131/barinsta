@@ -239,7 +239,7 @@
     <string name="about_documentation">Visita la nostra pàgina web</string>
     <string name="about_documentation_summary">Obtén suport, parla, trobat amb altres i diverteix-te!</string>
     <string name="about_repository">Veure el nostre codi font a GitHub</string>
-    <string name="about_repository_summary">Informa d\'errors, contribueix i diverteix-te (una altra vegada)!</string>
+    <string name="about_repository_summary">Inspecta, segueix, informa d\'errors, contribueix i diverteix-te (una altra vegada)!</string>
     <string name="about_feedback">Enviar comentaris per correu electrònic</string>
     <string name="about_category_3pt">Reconeixements de tercers</string>
     <string name="about_category_3pt_summary">S\'utilitzen les següents biblioteques de codi obert:</string>
@@ -296,7 +296,7 @@
     <string name="disable_animation">Desactivar l\'animació</string>
     <string name="follower_wait_to_load">Espera primer que la tasca actual s\'hagi completat!</string>
     <string name="post_not_found">Publicació no trobada!</string>
-    <string name="no_external_app_url">No app found which opens urls</string>
+    <string name="no_external_app_url">No s\'ha trobat cap aplicació que obri l\'enllaç</string>
     <plurals name="likes_count">
         <item quantity="one">%d m\'agrada</item>
         <item quantity="other">%d m\'agrades</item>
