@@ -25,8 +25,8 @@
     <string name="title_comments">Opmerkingen</string>
     <string name="title_notifications">Meldingen</string>
     <string name="title_highlight">Hoogtepunt: %s</string>
-    <string name="update_check">Check for updates at startup</string>
-    <string name="download_user_folder">Download posts to username folders</string>
+    <string name="update_check">Controleer op updates bij het opstarten</string>
+    <string name="download_user_folder">Download berichten naar gebruikersnaam mappen</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
     <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
     <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>
