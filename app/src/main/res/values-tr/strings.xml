@@ -265,22 +265,22 @@
     <string name="enter_password">Şifreyi gir</string>
     <string name="select_backup_file">Yedekleme dosyası seç (.zaai/.backup)</string>
     <string name="apply">Uygula</string>
-    <string name="save">Save</string>
-    <string name="caption">Caption</string>
-    <string name="player_timeline_desc">Video player timeline</string>
-    <string name="liking">Liking…</string>
-    <string name="like_unsuccessful">Like unsuccessful</string>
-    <string name="unlike_unsuccessful">Unlike unsuccessful</string>
-    <string name="unliking">Unliking…</string>
-    <string name="controls">Controls</string>
-    <string name="saving">Saving…</string>
-    <string name="removing">Removing…</string>
-    <string name="save_unsuccessful">Save unsuccessful</string>
-    <string name="save_remove_unsuccessful">Remove unsuccessful</string>
-    <string name="downloading">Downloading…</string>
+    <string name="save">Kaydet</string>
+    <string name="caption">Başlık</string>
+    <string name="player_timeline_desc">Video oynatıcı zaman çizelgesi</string>
+    <string name="liking">Beğeniliyor…</string>
+    <string name="like_unsuccessful">Beğenme başarısız oldu</string>
+    <string name="unlike_unsuccessful">Beğenmekten vazgeçme başarısız oldu</string>
+    <string name="unliking">Beğenmekten vazgeçiliyor…</string>
+    <string name="controls">Kontroller</string>
+    <string name="saving">Kaydediliyor…</string>
+    <string name="removing">Siliniyor…</string>
+    <string name="save_unsuccessful">Kaydetme işlemi başarısız oldu</string>
+    <string name="save_remove_unsuccessful">Silme işlemi başarısız oldu</string>
+    <string name="downloading">İndiriliyor…</string>
     <string name="downloader_downloading_child">Download item %d of %d</string>
-    <string name="delete">Delete</string>
-    <string name="comment">Comment</string>
+    <string name="delete">Sil</string>
+    <string name="comment">Yorum yap</string>
     <string name="layout">Layout</string>
     <string name="opening_post">Opening post...</string>
     <string name="share">Share</string>
@@ -289,7 +289,7 @@
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="show_names">Show names</string>
-    <string name="show_avatars">Show avatars</string>
+    <string name="show_avatars">Avatarları göster</string>
     <string name="avatar_size">Avatar size</string>
     <string name="corners">Corners</string>
     <string name="show_grid_gap">Show grid gap</string>
@@ -299,10 +299,10 @@
     <string name="no_external_app_url">No app found which opens urls</string>
     <plurals name="likes_count">
         <item quantity="one">%d like</item>
-        <item quantity="other">%d likes</item>
+        <item quantity="other">%d beğeni</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="one">%d yorum</item>
+        <item quantity="other">%d yorum</item>
     </plurals>
 </resources>
