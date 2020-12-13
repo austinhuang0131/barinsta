@@ -2,53 +2,30 @@
 <resources>
     <string-array name="languages">
         <item>پیشگزیده سامانه</item>
-        <item>انگلیسی</item>
-        <item>فرانسوی [ با سپاس از kernoeb@ ]</item>
-        <item>اسپانیایی [ با سپاس از sguinetti@ ]</item>
-        <item>چینی ساده شده</item>
-        <item>اندونزیایی [ با سپاس از Galang23@ ]</item>
-        <item>ایتالیایی [ با سپاس از RAR_Ramar@ ]</item>
-        <item>آلمانی [ با سپاس از peterge1998@ ]</item>
-        <item>لهستانی [ با سپاس از Lego8486@ ]</item>
-        <item>ترکی [ با سپاس از faydin90@ ]</item>
-        <item>برزیلی پرتغالی [ با سپاس از wagnim@ ]</item>
-        <item>پارسی [ با سپاس از Frzking@ ]</item>
-        <item>مقدونی [ با تشکر از snajdovski@ ]</item>
-        <item>ویتنامی [ با سپاس از fouze555@ ]</item>
-        <item>Chinese Traditional [Thanks to @Still34]</item>
-        <item>Catalan [Thanks to @retiolus]</item>
-        <item>Russian [Thanks to @rikishi0071]</item>
-    </string-array>
-    <string-array name="languages_values">
-        <item>۰</item>
-        <item>۱</item>
-        <item>۲</item>
-        <item>۳</item>
-        <item>۴</item>
-        <item>۵</item>
-        <item>۶</item>
-        <item>۷</item>
-        <item>۸</item>
-        <item>۹</item>
-        <item>۱۰</item>
-        <item>11</item>
-        <item>12</item>
-        <item>13</item>
-        <item>14</item>
-        <item>15</item>
-        <item>16</item>
+        <item translatable="false">انگلیسی</item>
+        <item translatable="false">Français [Merci à @kernoeb et @PierreM0]</item>
+        <item translatable="false">Español [Gracias a @sguinetti, @akrai y @retiolus]</item>
+        <item translatable="false">简体中文</item>
+        <item translatable="false">Bahasa Indonesia [Terima kasih @Galang23]</item>
+        <item translatable="false">Italiano [Grazie a @RAR_Ramar e GiorgioHerbie]</item>
+        <item translatable="false">Deutsch [Danke an @peterge1998]</item>
+        <item translatable="false">Polski [Podziękowania dla @Lego8486]</item>
+        <item translatable="false">Türkçe [@faydin90 tarafından]</item>
+        <item translatable="false">Português (Brasil) [Obrigado @wagnim, @RickyM7 e @cizordj]</item>
+        <item translatable="false">پارسی [ با سپاس از farzadx@ ]</item>
+        <item translatable="false">Македонски [Благодарност до @snajdovski]</item>
+        <item translatable="false">Tiếng Việt [bởi Yato Fouze]</item>
+        <item translatable="false">繁體中文 [感謝 @Still34]</item>
+        <item translatable="false">Català [Gràcies a @retiolus]</item>
+        <item translatable="false">Русский [Спасибо @rikishi0071]</item>
+        <item translatable="false">हिन्दी</item>
+        <item translatable="false">Nederlands [Met dank aan Lesley Natrop]</item>
     </string-array>
     <string-array name="theme_presets">
         <item>خودکار / پیروی از سامانه</item>
         <item>خودکار / پیروی از باتری</item>
         <item>تیره</item>
         <item>روشن</item>
-    </string-array>
-    <string-array name="theme_presets_values">
-        <item>۰</item>
-        <item>۱</item>
-        <item>۲</item>
-        <item>۳</item>
     </string-array>
     <string-array name="separator_presets">
         <item>هیچکدام</item>
@@ -57,53 +34,6 @@
         <item>روشن</item>
         <item>\|</item>
         <item>-</item>
-    </string-array>
-    <string-array name="discover_placeholder">
-        <item>در بارگیری...</item>
-    </string-array>
-    <string-array name="date_presets">
-        <item>dd-MM-yyyy</item>
-        <item>dd/MM/yyyy</item>
-        <item>dd.MM.yyyy</item>
-        <item>dd-MM-yy</item>
-        <item>dd/MM/yy</item>
-        <item>dd.MM.yy</item>
-        <item>dd-MMM-yyyy</item>
-        <item>dd/MMM/yyyy</item>
-        <item>dd.MMM.yyyy</item>
-        <item>dd-MMM-yy</item>
-        <item>dd/MMM/yy</item>
-        <item>dd.MMM.yy</item>
-        <item>MM-dd-yyyy</item>
-        <item>MM/dd/yyyy</item>
-        <item>MM.dd.yyyy</item>
-        <item>yyyy-MM-dd</item>
-        <item>yyyy/MM/dd</item>
-        <item>yyyy.MM.dd</item>
-        <item>MM-dd-yy</item>
-        <item>MM/dd/yy</item>
-        <item>MM.dd.yy</item>
-        <item>yy-MM-dd</item>
-        <item>yy/MM/dd</item>
-        <item>yy.MM.dd</item>
-        <item>MMM-dd-yyyy</item>
-        <item>MMM/dd/yyyy</item>
-        <item>MMM.dd.yyyy</item>
-        <item>yyyy-MMM-dd</item>
-        <item>yyyy/MMM/dd</item>
-        <item>yyyy.MMM.dd</item>
-        <item>MMM-dd-yy</item>
-        <item>MMM/dd/yy</item>
-        <item>MMM.dd.yy</item>
-        <item>yy-MMM-dd</item>
-        <item>yy/MMM/dd</item>
-        <item>yy.MMM.dd</item>
-    </string-array>
-    <string-array name="time_presets">
-        <item>hh:mm:ss a</item>
-        <item>h:mm:ss a</item>
-        <item>HH:mm:ss</item>
-        <item>H:mm:ss</item>
     </string-array>
     <string-array name="main_nav_ids_values">
         <item>@string/title_dm</item>
