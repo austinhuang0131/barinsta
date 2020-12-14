@@ -292,9 +292,9 @@
     <string name="show_avatars">顯示大頭貼</string>
     <string name="avatar_size">大頭貼大小</string>
     <string name="corners">邊角</string>
-    <string name="show_grid_gap">Show grid gap</string>
+    <string name="show_grid_gap">網格間保留間距</string>
     <string name="disable_animation">停用動畫</string>
-    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
+    <string name="follower_wait_to_load">請先等候目前的工作完成！</string>
     <string name="post_not_found">Post not found!</string>
     <string name="no_external_app_url">No app found which opens urls</string>
     <plurals name="likes_count">
