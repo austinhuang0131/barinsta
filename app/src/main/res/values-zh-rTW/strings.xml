@@ -295,7 +295,7 @@
     <string name="show_grid_gap">網格間保留間距</string>
     <string name="disable_animation">停用動畫</string>
     <string name="follower_wait_to_load">請先等候目前的工作完成！</string>
-    <string name="post_not_found">Post not found!</string>
+    <string name="post_not_found">貼文不存在！</string>
     <string name="no_external_app_url">No app found which opens urls</string>
     <plurals name="likes_count">
         <item quantity="other">%d 個讚</item>
