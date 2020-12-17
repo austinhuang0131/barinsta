@@ -63,9 +63,15 @@
     <string name="respond_story">Одговори</string>
     <string name="answer_hint">Answer…</string>
     <string name="answered_story">Одговарњето беше успешно!</string>
+    <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
+        <item quantity="one">%d response averaging %s</item>
+        <item quantity="other">%d responses averaging %s</item>
+    </plurals>
+    <string name="slider_answer">Your answer: %s</string>
     <string name="reply_story">Одговори на приказната</string>
     <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Квиз</string>
+    <string name="story_slider">Slider</string>
     <string name="story_quizzed">Вие веќе гласавте/одговоривте!</string>
     <string name="story_mentions">Спомнувања</string>
     <string name="priv_acc">Овoј корисник има приватен профил</string>
