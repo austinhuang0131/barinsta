@@ -67,7 +67,7 @@
         <item quantity="one">%d response averaging %s</item>
         <item quantity="other">%d responses averaging %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Votre réponse : %s</string>
     <string name="reply_story">Répondre à la story</string>
     <string name="reply_hint">Réponse…</string>
     <string name="story_quiz">Quiz</string>
