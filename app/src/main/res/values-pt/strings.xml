@@ -64,14 +64,14 @@
     <string name="answer_hint">Responder…</string>
     <string name="answered_story">Resposta enviada!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="one">%d response averaging %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="one">%d resposta em uma média de %s</item>
+        <item quantity="other">%d respostas em uma média de %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Sua resposta: %s</string>
     <string name="reply_story">Responder o story</string>
     <string name="reply_hint">Responder…</string>
     <string name="story_quiz">Quiz</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">Deslizante</string>
     <string name="story_quizzed">Você já respondeu!</string>
     <string name="story_mentions">Menções</string>
     <string name="priv_acc">Esta conta é privada</string>
