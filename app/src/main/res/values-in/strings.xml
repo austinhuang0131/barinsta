@@ -63,9 +63,14 @@
     <string name="respond_story">Tanggapi</string>
     <string name="answer_hint">Balasan…</string>
     <string name="answered_story">Berhasil menjawab!</string>
+    <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
+        <item quantity="other">%d responses averaging %s</item>
+    </plurals>
+    <string name="slider_answer">Your answer: %s</string>
     <string name="reply_story">Balas cerita</string>
     <string name="reply_hint">Balas…</string>
     <string name="story_quiz">Kuis</string>
+    <string name="story_slider">Slider</string>
     <string name="story_quizzed">Anda sudah menjawab!</string>
     <string name="story_mentions">Sebutan</string>
     <string name="priv_acc">Akun Ini Bersifat Pribadi</string>
