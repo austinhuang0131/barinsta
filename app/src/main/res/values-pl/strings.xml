@@ -63,9 +63,17 @@
     <string name="respond_story">Odpowiedz</string>
     <string name="answer_hint">Odpowiedz…</string>
     <string name="answered_story">Odpowiedziano pomyślnie!</string>
+    <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
+        <item quantity="one">%d response averaging %s</item>
+        <item quantity="few">%d responses averaging %s</item>
+        <item quantity="many">%d responses averaging %s</item>
+        <item quantity="other">%d responses averaging %s</item>
+    </plurals>
+    <string name="slider_answer">Your answer: %s</string>
     <string name="reply_story">Odpowiedz na relację</string>
     <string name="reply_hint">Odpowiedź…</string>
     <string name="story_quiz">Quiz</string>
+    <string name="story_slider">Slider</string>
     <string name="story_quizzed">Już odpowiedziałeś!</string>
     <string name="story_mentions">Wzmianki</string>
     <string name="priv_acc">To konto jest prywatne</string>
