@@ -63,9 +63,15 @@
     <string name="respond_story">जवाब</string>
     <string name="answer_hint">उत्तर…</string>
     <string name="answered_story">सही उत्तर</string>
+    <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
+        <item quantity="one">%d response averaging %s</item>
+        <item quantity="other">%d responses averaging %s</item>
+    </plurals>
+    <string name="slider_answer">Your answer: %s</string>
     <string name="reply_story">स्टोरि पे प्रतिक्रिया करें</string>
     <string name="reply_hint">जवाब…</string>
     <string name="story_quiz">प्रश्नोत्तरी</string>
+    <string name="story_slider">Slider</string>
     <string name="story_quizzed">आप पहले से ही उत्तर दिये हो!</string>
     <string name="story_mentions">उल्लेख</string>
     <string name="priv_acc">यह एकाउॅट निजी है</string>
