@@ -65,13 +65,13 @@
     <string name="answered_story">Has contestat amb èxit!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="other">%d mitjana de respostes %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">La teva resposta: %s</string>
     <string name="reply_story">Respon a la història</string>
     <string name="reply_hint">Resposta…</string>
     <string name="story_quiz">Qüestionari</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">Desplaçador</string>
     <string name="story_quizzed">Ja has contestat!</string>
     <string name="story_mentions">Mencions</string>
     <string name="priv_acc">Aquest compte és privat</string>
