@@ -2,7 +2,7 @@
 <resources>
     <string-array name="languages">
         <item>Predeterminat del sistema</item>
-        <item translatable="false">Anglès</item>
+        <item translatable="false">English</item>
         <item translatable="false">Français [Merci à @kernoeb et @PierreM0]</item>
         <item translatable="false">Español [Gracias a @sguinetti, @akrai y @retiolus]</item>
         <item translatable="false">简体中文</item>
