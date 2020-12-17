@@ -63,9 +63,15 @@
     <string name="respond_story">پاسخ</string>
     <string name="answer_hint">پاسخ…</string>
     <string name="answered_story">جواب درست است!</string>
+    <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
+        <item quantity="one">%d response averaging %s</item>
+        <item quantity="other">%d responses averaging %s</item>
+    </plurals>
+    <string name="slider_answer">Your answer: %s</string>
     <string name="reply_story">پاسخ به استوری</string>
     <string name="reply_hint">پاسخ…</string>
     <string name="story_quiz">نظرسنجی</string>
+    <string name="story_slider">Slider</string>
     <string name="story_quizzed">در حال حاظر شما رای داده اید!</string>
     <string name="story_mentions">یادآوری ها</string>
     <string name="priv_acc">این اکانت شخصی است</string>
