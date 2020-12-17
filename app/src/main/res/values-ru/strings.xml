@@ -63,9 +63,17 @@
     <string name="respond_story">Отреагировать</string>
     <string name="answer_hint">Ответить…</string>
     <string name="answered_story">Ответ успешно представлен!</string>
+    <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
+        <item quantity="one">%d response averaging %s</item>
+        <item quantity="few">%d responses averaging %s</item>
+        <item quantity="many">%d responses averaging %s</item>
+        <item quantity="other">%d responses averaging %s</item>
+    </plurals>
+    <string name="slider_answer">Your answer: %s</string>
     <string name="reply_story">Ответить на историю</string>
     <string name="reply_hint">Ответить…</string>
     <string name="story_quiz">Опрос</string>
+    <string name="story_slider">Slider</string>
     <string name="story_quizzed">Вы уже ответили!</string>
     <string name="story_mentions">Упоминания</string>
     <string name="priv_acc">Это частная учётная запись</string>
