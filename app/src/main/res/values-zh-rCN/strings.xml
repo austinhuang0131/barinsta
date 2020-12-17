@@ -64,13 +64,13 @@
     <string name="answer_hint">回答…</string>
     <string name="answered_story">回答成功！</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="other">%d 个回答，平均 %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">您的回答：%s</string>
     <string name="reply_story">回复快拍</string>
     <string name="reply_hint">回复…</string>
     <string name="story_quiz">测验</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">滑块</string>
     <string name="story_quizzed">您已回答过了！</string>
     <string name="story_mentions">提及</string>
     <string name="priv_acc">私密账户</string>
