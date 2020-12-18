@@ -64,13 +64,13 @@
     <string name="answer_hint">Phản hồi…</string>
     <string name="answered_story">Trả lời thành công!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="other">%d Trung bình %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Câu trả lời của bạn: %s</string>
     <string name="reply_story">Trả lời story</string>
     <string name="reply_hint">Reply…</string>
     <string name="story_quiz">Câu hỏi</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">Thanh trượt</string>
     <string name="story_quizzed">Bạn đã trả lời rồi!</string>
     <string name="story_mentions">Đề cập</string>
     <string name="priv_acc">Tài khoản này là riêng tư</string>
