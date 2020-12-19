@@ -317,4 +317,5 @@
         <item quantity="many">%d comments</item>
         <item quantity="other">%d comments</item>
     </plurals>
+    <string name="download_permission">Storage permission not granted!</string>
 </resources>
