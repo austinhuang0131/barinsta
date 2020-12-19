@@ -33,9 +33,9 @@
     <string name="dm_mark_as_seen_setting_summary">ଅନ୍ୟ ସଦସ୍ୟମାନେ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ।</string>
     <string name="activity_setting">କାର୍ଯ୍ୟକଳାପ ସୂଚନା ଦେଖାନ୍ତୁ</string>
     <string name="error_loading_profile">ପ୍ରୋଫାଇଲ୍ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି!\nପୁନର୍ବାର ଲଗ୍ ଇନ୍ କରି ଚେଷ୍ଟା କରନ୍ତୁ |</string>
-    <string name="error_creating_folders">Error creating Download folder(s).</string>
-    <string name="save_to_folder">Save to custom folder</string>
-    <string name="select_folder">Select folder</string>
+    <string name="error_creating_folders">ଡ଼ାଉନଲୋଡ଼ ଫୋଲଡ଼ର ସୃଷ୍ଟି କରିବାରେ ତ୍ରୁଟି ପରିଲକ୍ଷିତ ହେଉଛି।</string>
+    <string name="save_to_folder">ନିଜେ ସ୍ଥିର କରିଥିବା ଫୋଲଡର ରେ ରଖ।</string>
+    <string name="select_folder">ଫୋଲ୍‌ଡର୍‌ ଚୟନ କରନ୍ତୁ</string>
     <string name="theme_settings">Theme</string>
     <string name="login_settings">Only affects logged-in users:</string>
     <string name="anonymous_settings">Only affects anonymous users:</string>
