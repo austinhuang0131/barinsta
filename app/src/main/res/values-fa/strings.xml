@@ -312,4 +312,5 @@
         <item quantity="one">%d دیدگاه</item>
         <item quantity="other">%d دیدگاه</item>
     </plurals>
+    <string name="download_permission">Storage permission not granted!</string>
 </resources>
