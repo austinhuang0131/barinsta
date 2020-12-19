@@ -311,4 +311,5 @@
         <item quantity="one">%d commento</item>
         <item quantity="other">%d commenti</item>
     </plurals>
+    <string name="download_permission">Storage permission not granted!</string>
 </resources>
