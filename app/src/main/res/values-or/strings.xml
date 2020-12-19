@@ -52,12 +52,12 @@
     <string name="post_viewer_download_current">ସମ୍ପ୍ରତି</string>
     <string name="post_viewer_download_album">ସମସ୍ତ ଆଲବମ</string>
     <string name="show_stories">କାହାଣୀଗୁଡିକ ଦେଖାନ୍ତୁ</string>
-    <string name="no_more_stories">No more stories!</string>
-    <string name="be_patient">Be patient!</string>
-    <string name="view_story_post">View Post</string>
-    <string name="view_post">View Post</string>
+    <string name="no_more_stories">ଆଉ କାହାଣୀ ନାହିଁ!</string>
+    <string name="be_patient">ଧୈର୍ଯ୍ୟ ରଖନ୍ତୁ!</string>
+    <string name="view_story_post">ପୋଷ୍ଟ ଦେଖନ୍ତୁ</string>
+    <string name="view_post">ପୋଷ୍ଟ ଦେଖନ୍ତୁ</string>
     <string name="spotify">Spotify</string>
-    <string name="vote_story_poll">Vote</string>
+    <string name="vote_story_poll">ମତଦାନ କରନ୍ତୁ |</string>
     <string name="votef_story_poll">Vote successful!</string>
     <string name="voted_story_poll">You have already voted!</string>
     <string name="respond_story">Respond</string>
