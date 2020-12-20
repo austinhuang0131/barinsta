@@ -42,10 +42,15 @@
     <string name="instadp_settings">Utilitza Instadp per a les imatges del perfil d\'alta definició</string>
     <string name="import_export">Importar/Exportar</string>
     <string name="select_language">Llengua</string>
-    <string name="main_posts_count">%s\nPublicacions</string>
-    <string name="main_posts_count_inline">%s Publicacions</string>
-    <string name="main_posts_followers">%s\n Seguidors</string>
-    <string name="main_posts_following">%s\n Seguint</string>
+    <plurals name="main_posts_count_inline">
+        <item quantity="one">%s Post</item>
+        <item quantity="other">%s Posts</item>
+    </plurals>
+    <plurals name="main_posts_followers">
+        <item quantity="one">%s Follower</item>
+        <item quantity="other">%s Followers</item>
+    </plurals>
+    <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Reproduir vídeos automàticament</string>
     <string name="post_viewer_muted_autoplay">Silenciar sempre els vídeos</string>
     <string name="post_viewer_download_dialog_title">Seleccionar el que s\'ha de descarregar</string>
@@ -104,6 +109,9 @@
     <string name="unblock">Desbloquejar</string>
     <string name="restrict">Restringir</string>
     <string name="unrestrict">Deixar de restringir</string>
+    <string name="status_mutual">Following each other</string>
+    <string name="status_following">Followed by you</string>
+    <string name="status_follower">Following you</string>
     <string name="map">Mapa</string>
     <string name="dialog_export_btn_export">Exportar</string>
     <string name="dialog_export_btn_import">Importar</string>
