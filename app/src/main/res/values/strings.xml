@@ -45,10 +45,15 @@
     <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
     <string name="import_export">Import/Export</string>
     <string name="select_language">Language</string>
-    <string name="main_posts_count">%s\nPosts</string>
-    <string name="main_posts_count_inline">%s Posts</string>
-    <string name="main_posts_followers">%s\nFollowers</string>
-    <string name="main_posts_following">%s\nFollowing</string>
+    <plurals name="main_posts_count_inline">
+        <item quantity="one">%s Post</item>
+        <item quantity="other">%s Posts</item>
+    </plurals>
+    <plurals name="main_posts_followers">
+        <item quantity="one">%s Follower</item>
+        <item quantity="other">%s Followers</item>
+    </plurals>
+    <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Autoplay videos</string>
     <string name="post_viewer_muted_autoplay">Always mute videos</string>
     <string name="post_viewer_download_dialog_title">Select what to download</string>
@@ -107,6 +112,9 @@
     <string name="unblock">Unblock</string>
     <string name="restrict">Restrict</string>
     <string name="unrestrict">Unrestrict</string>
+    <string name="status_mutual">Following each other</string>
+    <string name="status_following">Followed by you</string>
+    <string name="status_follower">Following you</string>
     <string name="map">Map</string>
     <string name="dialog_export_btn_export">Export</string>
     <string name="dialog_export_btn_import">Import</string>
