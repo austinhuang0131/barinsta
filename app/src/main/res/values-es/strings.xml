@@ -50,7 +50,7 @@
         <item quantity="one">%s Follower</item>
         <item quantity="other">%s seguidores</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s seguidos </string>
     <string name="post_viewer_autoplay_video">Autorreproducir vídeos</string>
     <string name="post_viewer_muted_autoplay">Siempre silenciar vídeos</string>
     <string name="post_viewer_download_dialog_title">Seleccionar qué descargar</string>
@@ -109,9 +109,9 @@
     <string name="unblock">Desbloquear</string>
     <string name="restrict">Restringir</string>
     <string name="unrestrict">Desrestringir</string>
-    <string name="status_mutual">Following each other</string>
-    <string name="status_following">Followed by you</string>
-    <string name="status_follower">Following you</string>
+    <string name="status_mutual">Siguiéndose mutuamente</string>
+    <string name="status_following">Seguido por ti</string>
+    <string name="status_follower">Siguiéndote</string>
     <string name="map">Mapa</string>
     <string name="dialog_export_btn_export">Exportar</string>
     <string name="dialog_export_btn_import">Importar</string>
