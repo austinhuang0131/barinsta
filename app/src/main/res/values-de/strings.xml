@@ -42,10 +42,15 @@
     <string name="instadp_settings">Instadp für hochauflösende Profilbilder verwenden</string>
     <string name="import_export">Importieren/Exportieren</string>
     <string name="select_language">Sprache</string>
-    <string name="main_posts_count">%s\nBeiträge</string>
-    <string name="main_posts_count_inline">%s Beiträge</string>
-    <string name="main_posts_followers">%s\nAbonnenten</string>
-    <string name="main_posts_following">%s\nAbonniert</string>
+    <plurals name="main_posts_count_inline">
+        <item quantity="one">%s Post</item>
+        <item quantity="other">%s Posts</item>
+    </plurals>
+    <plurals name="main_posts_followers">
+        <item quantity="one">%s Follower</item>
+        <item quantity="other">%s Followers</item>
+    </plurals>
+    <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Videos automatisch abspielen</string>
     <string name="post_viewer_muted_autoplay">Videos immer stummschalten</string>
     <string name="post_viewer_download_dialog_title">Datei zum Download auswählen</string>
@@ -104,6 +109,9 @@
     <string name="unblock">Nicht mehr blockieren</string>
     <string name="restrict">Einschränken</string>
     <string name="unrestrict">Nicht mehr einschränken</string>
+    <string name="status_mutual">Following each other</string>
+    <string name="status_following">Followed by you</string>
+    <string name="status_follower">Following you</string>
     <string name="map">Karte</string>
     <string name="dialog_export_btn_export">Exportieren</string>
     <string name="dialog_export_btn_import">Importieren</string>
