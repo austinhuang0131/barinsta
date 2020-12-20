@@ -42,10 +42,15 @@
     <string name="instadp_settings">Користи Instadp за профили со висока резолуција</string>
     <string name="import_export">Увоз/Извоз</string>
     <string name="select_language">Јазик</string>
-    <string name="main_posts_count">%s\nПостови</string>
-    <string name="main_posts_count_inline">%s Постови</string>
-    <string name="main_posts_followers">%s\nСледбеници</string>
-    <string name="main_posts_following">%s\nСледбеници</string>
+    <plurals name="main_posts_count_inline">
+        <item quantity="one">%s Post</item>
+        <item quantity="other">%s Posts</item>
+    </plurals>
+    <plurals name="main_posts_followers">
+        <item quantity="one">%s Follower</item>
+        <item quantity="other">%s Followers</item>
+    </plurals>
+    <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Autoplay на видеа</string>
     <string name="post_viewer_muted_autoplay">Секогаш гледај видеа без звук</string>
     <string name="post_viewer_download_dialog_title">Селектирај што сакаш да превземеш</string>
@@ -104,6 +109,9 @@
     <string name="unblock">Одблокни</string>
     <string name="restrict">Ограничи</string>
     <string name="unrestrict">Одограничи</string>
+    <string name="status_mutual">Following each other</string>
+    <string name="status_following">Followed by you</string>
+    <string name="status_follower">Following you</string>
     <string name="map">Мапа</string>
     <string name="dialog_export_btn_export">Експорт</string>
     <string name="dialog_export_btn_import">Импорт</string>
