@@ -43,12 +43,12 @@
     <string name="import_export">导入/导出</string>
     <string name="select_language">语言</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="other">%s Posts</item>
+        <item quantity="other">%s 帖子</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="other">%s Followers</item>
+        <item quantity="other">%s 粉丝</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s 关注 </string>
     <string name="post_viewer_autoplay_video">自动播放视频</string>
     <string name="post_viewer_muted_autoplay">视频默认静音</string>
     <string name="post_viewer_download_dialog_title">选择要下载的</string>
@@ -106,9 +106,9 @@
     <string name="unblock">解禁</string>
     <string name="restrict">限制</string>
     <string name="unrestrict">放开</string>
-    <string name="status_mutual">Following each other</string>
-    <string name="status_following">Followed by you</string>
-    <string name="status_follower">Following you</string>
+    <string name="status_mutual">互相关注</string>
+    <string name="status_following">您已关注</string>
+    <string name="status_follower">关注了您</string>
     <string name="map">地图</string>
     <string name="dialog_export_btn_export">导出</string>
     <string name="dialog_export_btn_import">导入</string>
