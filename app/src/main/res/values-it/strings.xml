@@ -44,13 +44,13 @@
     <string name="select_language">Lingua</string>
     <plurals name="main_posts_count_inline">
         <item quantity="one">%s Post</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="other">%s Post</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
-        <item quantity="other">%s Followers</item>
+        <item quantity="one">%s Seguace</item>
+        <item quantity="other">%s Seguaci</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s Seguiti </string>
     <string name="post_viewer_autoplay_video">Riproduzione automatica video</string>
     <string name="post_viewer_muted_autoplay">Silenzia sempre i video</string>
     <string name="post_viewer_download_dialog_title">Seleziona cosa scaricare</string>
@@ -70,7 +70,7 @@
     <string name="answered_story">Risposta corretta!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d risposta media %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="other">%d risposte medie %s</item>
     </plurals>
     <string name="slider_answer">La tua risposta: %s</string>
     <string name="reply_story">Rispondi alla storia</string>
@@ -109,9 +109,9 @@
     <string name="unblock">Sblocca</string>
     <string name="restrict">Limita</string>
     <string name="unrestrict">Rimuovi limitazione</string>
-    <string name="status_mutual">Following each other</string>
-    <string name="status_following">Followed by you</string>
-    <string name="status_follower">Following you</string>
+    <string name="status_mutual">Si seguono a vicenda</string>
+    <string name="status_following">Seguito da te</string>
+    <string name="status_follower">Ti segue</string>
     <string name="map">Mappa</string>
     <string name="dialog_export_btn_export">Esporta</string>
     <string name="dialog_export_btn_import">Importa</string>
@@ -319,5 +319,5 @@
         <item quantity="one">%d commento</item>
         <item quantity="other">%d commenti</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">Permesso di archiviazione non garantito!</string>
 </resources>
