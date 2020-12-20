@@ -43,12 +43,12 @@
     <string name="import_export">匯入/匯出</string>
     <string name="select_language">語言</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="other">%s Posts</item>
+        <item quantity="other">%s 貼文</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="other">%s Followers</item>
+        <item quantity="other">%s 追蹤者</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s 追蹤中 </string>
     <string name="post_viewer_autoplay_video">自動播放影片</string>
     <string name="post_viewer_muted_autoplay">永遠自動靜音影片</string>
     <string name="post_viewer_download_dialog_title">選擇要下載的內容</string>
@@ -106,9 +106,9 @@
     <string name="unblock">解除封鎖</string>
     <string name="restrict">限制</string>
     <string name="unrestrict">移除限制</string>
-    <string name="status_mutual">Following each other</string>
-    <string name="status_following">Followed by you</string>
-    <string name="status_follower">Following you</string>
+    <string name="status_mutual">正彼此追蹤</string>
+    <string name="status_following">您已追蹤</string>
+    <string name="status_follower">關注了你</string>
     <string name="map">地圖</string>
     <string name="dialog_export_btn_export">匯出</string>
     <string name="dialog_export_btn_import">匯入</string>
@@ -195,7 +195,7 @@
     <string name="comment_view_mention_hash_search">您要搜尋主題標籤嗎？</string>
     <string name="followers_type_followers">追蹤者</string>
     <string name="followers_type_following">追蹤中</string>
-    <string name="followers_compare">比較關注者和關注</string>
+    <string name="followers_compare">Comparing followers &amp; following</string>
     <string name="followers_both_following">正彼此追蹤</string>
     <string name="followers_not_following">尚未追蹤 %s</string>
     <string name="followers_not_follower">%s 尚未追蹤</string>
