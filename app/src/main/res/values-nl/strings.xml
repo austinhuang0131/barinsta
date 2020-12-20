@@ -42,10 +42,15 @@
     <string name="instadp_settings">Instadp gebruiken voor hoge definitie profielfoto\'s</string>
     <string name="import_export">Importeren/Exporteren</string>
     <string name="select_language">Taal</string>
-    <string name="main_posts_count">%s\nBerichten</string>
-    <string name="main_posts_count_inline">%s Berichten</string>
-    <string name="main_posts_followers">%s\nVolgers</string>
-    <string name="main_posts_following">%s\nVolgend</string>
+    <plurals name="main_posts_count_inline">
+        <item quantity="one">%s Post</item>
+        <item quantity="other">%s Posts</item>
+    </plurals>
+    <plurals name="main_posts_followers">
+        <item quantity="one">%s Follower</item>
+        <item quantity="other">%s Followers</item>
+    </plurals>
+    <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Video\'s automatisch afspelen</string>
     <string name="post_viewer_muted_autoplay">Video\'s altijd dempen</string>
     <string name="post_viewer_download_dialog_title">Selecteer wat je wil downloaden</string>
@@ -104,6 +109,9 @@
     <string name="unblock">Deblokkeer</string>
     <string name="restrict">Beperk</string>
     <string name="unrestrict">De-restrict</string>
+    <string name="status_mutual">Following each other</string>
+    <string name="status_following">Followed by you</string>
+    <string name="status_follower">Following you</string>
     <string name="map">Kaart</string>
     <string name="dialog_export_btn_export">Exporteer</string>
     <string name="dialog_export_btn_import">Importeer</string>
