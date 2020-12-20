@@ -314,5 +314,5 @@
     <plurals name="comments_count">
         <item quantity="other">%d 条评论</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">未授予存储权限！</string>
 </resources>
