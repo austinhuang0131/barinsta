@@ -42,10 +42,15 @@
     <string name="instadp_settings">Usa Instadp per immagini del profilo ad alta definizione</string>
     <string name="import_export">Importa/Esporta</string>
     <string name="select_language">Lingua</string>
-    <string name="main_posts_count">%s\nPost</string>
-    <string name="main_posts_count_inline">%s Post</string>
-    <string name="main_posts_followers">%s\nSeguaci</string>
-    <string name="main_posts_following">%s\nSeguiti</string>
+    <plurals name="main_posts_count_inline">
+        <item quantity="one">%s Post</item>
+        <item quantity="other">%s Posts</item>
+    </plurals>
+    <plurals name="main_posts_followers">
+        <item quantity="one">%s Follower</item>
+        <item quantity="other">%s Followers</item>
+    </plurals>
+    <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Riproduzione automatica video</string>
     <string name="post_viewer_muted_autoplay">Silenzia sempre i video</string>
     <string name="post_viewer_download_dialog_title">Seleziona cosa scaricare</string>
@@ -104,6 +109,9 @@
     <string name="unblock">Sblocca</string>
     <string name="restrict">Limita</string>
     <string name="unrestrict">Rimuovi limitazione</string>
+    <string name="status_mutual">Following each other</string>
+    <string name="status_following">Followed by you</string>
+    <string name="status_follower">Following you</string>
     <string name="map">Mappa</string>
     <string name="dialog_export_btn_export">Esporta</string>
     <string name="dialog_export_btn_import">Importa</string>
