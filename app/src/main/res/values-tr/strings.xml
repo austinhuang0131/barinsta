@@ -43,14 +43,14 @@
     <string name="import_export">İçe Aktar/Dışa Aktar</string>
     <string name="select_language">Dil</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="one">%s Gönderi</item>
+        <item quantity="other">%s Gönderi</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
-        <item quantity="other">%s Followers</item>
+        <item quantity="one">%s Takipçi</item>
+        <item quantity="other">%s Takipçi</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s Takip </string>
     <string name="post_viewer_autoplay_video">Videoları otomatik oynat</string>
     <string name="post_viewer_muted_autoplay">Videoları her zaman sustur</string>
     <string name="post_viewer_download_dialog_title">İndirmek için seçin</string>
@@ -69,14 +69,14 @@
     <string name="answer_hint">Cevapla…</string>
     <string name="answered_story">Cevaplama başarılı!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="one">%d response averaging %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="one">%d yanıt ortalaması %s</item>
+        <item quantity="other">%d yanıt ortalaması %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Cevabın: %s</string>
     <string name="reply_story">Hikayeye cevap ver</string>
     <string name="reply_hint">Yanıtla…</string>
     <string name="story_quiz">Test</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">Kaydırıcı</string>
     <string name="story_quizzed">Zaten cevapladınız!</string>
     <string name="story_mentions">Etiketlenenler</string>
     <string name="priv_acc">Bu Hesap Gizlidir</string>
@@ -109,9 +109,9 @@
     <string name="unblock">Engeli kaldır</string>
     <string name="restrict">Kısıtla</string>
     <string name="unrestrict">Kısıtlamayı Kaldır</string>
-    <string name="status_mutual">Following each other</string>
-    <string name="status_following">Followed by you</string>
-    <string name="status_follower">Following you</string>
+    <string name="status_mutual">Karşılıklı takip ediliyor</string>
+    <string name="status_following">Takip ediliyor</string>
+    <string name="status_follower">Seni takip ediyor</string>
     <string name="map">Harita</string>
     <string name="dialog_export_btn_export">Dışa aktar</string>
     <string name="dialog_export_btn_import">İçe aktar</string>
@@ -312,12 +312,12 @@
     <string name="post_not_found">Gönderi bulunamadı!</string>
     <string name="no_external_app_url">Linki açabilecek uygulama bulunamadı</string>
     <plurals name="likes_count">
-        <item quantity="one">%d like</item>
+        <item quantity="one">%d beğeni</item>
         <item quantity="other">%d beğeni</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d yorum</item>
         <item quantity="other">%d yorum</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">Depolama izni verilmedi!</string>
 </resources>
