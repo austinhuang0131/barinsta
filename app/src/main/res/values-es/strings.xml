@@ -44,11 +44,11 @@
     <string name="select_language">Idioma</string>
     <plurals name="main_posts_count_inline">
         <item quantity="one">%s Post</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="other">%s publicaciones</item>
     </plurals>
     <plurals name="main_posts_followers">
         <item quantity="one">%s Follower</item>
-        <item quantity="other">%s Followers</item>
+        <item quantity="other">%s seguidores</item>
     </plurals>
     <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Autorreproducir vídeos</string>
