@@ -111,9 +111,9 @@
     <string name="unrestrict">Kısıtlamayı Kaldır</string>
     <string name="bio_copy">Copy bio</string>
     <string name="bio_translate">Translate bio</string>
-    <string name="status_mutual">Karşılıklı takip ediliyor</string>
-    <string name="status_following">Takip ediliyor</string>
-    <string name="status_follower">Seni takip ediyor</string>
+    <string name="status_mutual">Mutual</string>
+    <string name="status_following">Following</string>
+    <string name="status_follower">Follower</string>
     <string name="map">Harita</string>
     <string name="dialog_export_btn_export">Dışa aktar</string>
     <string name="dialog_export_btn_import">İçe aktar</string>
