@@ -108,9 +108,9 @@
     <string name="unrestrict">放开</string>
     <string name="bio_copy">复制简介</string>
     <string name="bio_translate">翻译简介</string>
-    <string name="status_mutual">互相关注</string>
-    <string name="status_following">您已关注</string>
-    <string name="status_follower">关注了您</string>
+    <string name="status_mutual">Mutual</string>
+    <string name="status_following">Following</string>
+    <string name="status_follower">Follower</string>
     <string name="map">地图</string>
     <string name="dialog_export_btn_export">导出</string>
     <string name="dialog_export_btn_import">导入</string>
