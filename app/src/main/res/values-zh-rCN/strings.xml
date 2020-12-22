@@ -23,7 +23,7 @@
     <string name="title_favorites">最爱</string>
     <string name="title_discover">发现</string>
     <string name="title_comments">留言</string>
-    <string name="title_notifications">通知</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">精彩：%s</string>
     <string name="update_check">启动时检查更新</string>
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
@@ -108,9 +108,9 @@
     <string name="unrestrict">放开</string>
     <string name="bio_copy">复制简介</string>
     <string name="bio_translate">翻译简介</string>
-    <string name="status_mutual">Mutual</string>
-    <string name="status_following">Following</string>
-    <string name="status_follower">Follower</string>
+    <string name="status_mutual">相互关注</string>
+    <string name="status_following">已关注</string>
+    <string name="status_follower">粉丝</string>
     <string name="map">地图</string>
     <string name="dialog_export_btn_export">导出</string>
     <string name="dialog_export_btn_import">导入</string>
