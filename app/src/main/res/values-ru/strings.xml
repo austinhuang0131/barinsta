@@ -23,7 +23,7 @@
     <string name="title_favorites">Избранное</string>
     <string name="title_discover">Подборка</string>
     <string name="title_comments">Комментарии</string>
-    <string name="title_notifications">Уведомления</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">События: %s</string>
     <string name="update_check">Проверять наличие обновлений при запуске</string>
     <string name="download_user_folder">Скачать публикации в папки с именем пользователя</string>
