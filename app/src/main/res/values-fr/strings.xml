@@ -23,7 +23,7 @@
     <string name="title_favorites">Favoris</string>
     <string name="title_discover">Découvrir</string>
     <string name="title_comments">Commentaires</string>
-    <string name="title_notifications">Activity</string>
+    <string name="title_notifications">Activité</string>
     <string name="title_highlight">Temps forts: %s</string>
     <string name="update_check">Rechercher les mises à jours au démarrage</string>
     <string name="download_user_folder">Télécharger les messages dans les dossiers des noms d\'utilisateurs</string>
