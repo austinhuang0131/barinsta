@@ -23,7 +23,7 @@
     <string name="title_favorites">علاقه مندی ها</string>
     <string name="title_discover">کاوش</string>
     <string name="title_comments">دیدگاه‌ها</string>
-    <string name="title_notifications">آگهداد</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">درخشندگی: %s</string>
     <string name="update_check">بررسی بروزرسانی هنگام آغاز برنامه</string>
     <string name="download_user_folder">بارگیری پست ها در پوشه های به نام کاربر</string>
