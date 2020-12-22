@@ -23,7 +23,7 @@
     <string name="title_favorites">最爱</string>
     <string name="title_discover">发现</string>
     <string name="title_comments">留言</string>
-    <string name="title_notifications">Activity</string>
+    <string name="title_notifications">动态</string>
     <string name="title_highlight">精彩：%s</string>
     <string name="update_check">启动时检查更新</string>
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
