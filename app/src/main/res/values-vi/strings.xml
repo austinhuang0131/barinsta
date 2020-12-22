@@ -23,7 +23,7 @@
     <string name="title_favorites">Yêu thích</string>
     <string name="title_discover">Khám phá</string>
     <string name="title_comments">Bình luận</string>
-    <string name="title_notifications">Thông báo</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">Highlight: %s</string>
     <string name="update_check">Kiểm tra cập nhật khi khởi động</string>
     <string name="download_user_folder">Tải bài viết xuống theo thư mục tên người dùng trong Downloads</string>
