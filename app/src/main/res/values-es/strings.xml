@@ -23,7 +23,7 @@
     <string name="title_favorites">Favoritos</string>
     <string name="title_discover">Explorar</string>
     <string name="title_comments">Comentarios</string>
-    <string name="title_notifications">Activity</string>
+    <string name="title_notifications">Actividad</string>
     <string name="title_highlight">Resaltar: %s</string>
     <string name="update_check">Buscar actualizaciones al inicio</string>
     <string name="download_user_folder">Descargar publicaciones en carpetas por nombre de usuario</string>
@@ -47,7 +47,7 @@
         <item quantity="other">%s publicaciones</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
+        <item quantity="one">%s seguidor</item>
         <item quantity="other">%s seguidores</item>
     </plurals>
     <string name="main_posts_following">%s seguidos </string>
