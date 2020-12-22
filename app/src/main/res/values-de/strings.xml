@@ -23,7 +23,7 @@
     <string name="title_favorites">Favoriten</string>
     <string name="title_discover">Entdecken</string>
     <string name="title_comments">Kommentare</string>
-    <string name="title_notifications">Activity</string>
+    <string name="title_notifications">Aktivität</string>
     <string name="title_highlight">Hervorheben: %s</string>
     <string name="update_check">Beim Start auf Aktualisierungen prüfen</string>
     <string name="download_user_folder">Beiträge in Benutzernamen-Ordner herunterladen</string>
