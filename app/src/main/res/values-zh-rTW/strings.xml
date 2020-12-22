@@ -23,7 +23,7 @@
     <string name="title_favorites">收藏</string>
     <string name="title_discover">探索</string>
     <string name="title_comments">評論</string>
-    <string name="title_notifications">Activity</string>
+    <string name="title_notifications">動態</string>
     <string name="title_highlight">標記: %s</string>
     <string name="update_check">啟動時檢查更新</string>
     <string name="download_user_folder">將貼文下載到用戶名資料夾</string>
