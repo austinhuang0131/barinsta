@@ -23,7 +23,7 @@
     <string name="title_favorites">Favoritos</string>
     <string name="title_discover">Descobrir</string>
     <string name="title_comments">Comentários</string>
-    <string name="title_notifications">Notificações</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">Destaque: %s</string>
     <string name="update_check">Verificar se há atualizações ao iniciar</string>
     <string name="download_user_folder">Baixar publicações para pastas com o nome de usuário</string>
