@@ -23,7 +23,7 @@
     <string name="title_favorites">Омилени</string>
     <string name="title_discover">Откриј</string>
     <string name="title_comments">Коментари</string>
-    <string name="title_notifications">Нотификации</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">Важни Приказни: %s</string>
     <string name="update_check">Провери за надоградба (ажурирање) при старт на апликацијата.</string>
     <string name="download_user_folder">Превземи постови во фолдерот со кориснички имиња</string>
