@@ -23,7 +23,7 @@
     <string name="title_favorites">Favorieten</string>
     <string name="title_discover">Ontdekken</string>
     <string name="title_comments">Opmerkingen</string>
-    <string name="title_notifications">Meldingen</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">Hoogtepunt: %s</string>
     <string name="update_check">Controleer op updates bij het opstarten</string>
     <string name="download_user_folder">Download berichten naar gebruikersnaam mappen</string>
