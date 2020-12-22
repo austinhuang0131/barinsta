@@ -23,7 +23,7 @@
     <string name="title_favorites">Ulubione</string>
     <string name="title_discover">Odkrywaj</string>
     <string name="title_comments">Komentarze</string>
-    <string name="title_notifications">Powiadomienia</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">Wyróżnione: %s</string>
     <string name="update_check">Sprawdź aktualizacje przy starcie</string>
     <string name="download_user_folder">Pobierz posty do folderów o nazwie użytkownika</string>
