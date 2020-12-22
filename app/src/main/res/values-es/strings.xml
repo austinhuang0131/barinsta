@@ -111,9 +111,9 @@
     <string name="unrestrict">Desrestringir</string>
     <string name="bio_copy">Copiar biografía</string>
     <string name="bio_translate">Traducir biografía</string>
-    <string name="status_mutual">Siguiéndose mutuamente</string>
-    <string name="status_following">Seguido por ti</string>
-    <string name="status_follower">Siguiéndote</string>
+    <string name="status_mutual">Mutual</string>
+    <string name="status_following">Following</string>
+    <string name="status_follower">Follower</string>
     <string name="map">Mapa</string>
     <string name="dialog_export_btn_export">Exportar</string>
     <string name="dialog_export_btn_import">Importar</string>
