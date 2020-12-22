@@ -23,7 +23,7 @@
     <string name="title_favorites">पसंदीदा</string>
     <string name="title_discover">खोजिए</string>
     <string name="title_comments">टिप्पणियाँ</string>
-    <string name="title_notifications">सूचनाएँ</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">विशेषताएँ: %s</string>
     <string name="update_check">खुलने पर अपडेट के लिए जाँच करें</string>
     <string name="download_user_folder">पोस्ट को ब्यबहारकारी के नाम पर किये फोल्डरस में रखें</string>
