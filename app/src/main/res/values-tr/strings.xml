@@ -23,7 +23,7 @@
     <string name="title_favorites">Favoriler</string>
     <string name="title_discover">Keşfet</string>
     <string name="title_comments">Yorumlar</string>
-    <string name="title_notifications">Bildirimler</string>
+    <string name="title_notifications">Activity</string>
     <string name="title_highlight">Öne çıkarılanlar: %s</string>
     <string name="update_check">Güncellemeleri başlangıçta kontrol et</string>
     <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
