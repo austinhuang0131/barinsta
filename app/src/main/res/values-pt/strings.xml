@@ -201,7 +201,7 @@
     <string name="comment_view_mention_hash_search">Você quer pesquisar a hashtag?</string>
     <string name="followers_type_followers">Seguidores</string>
     <string name="followers_type_following">Seguindo</string>
-    <string name="followers_compare">Comparar seguidores &amp; seguindo</string>
+    <string name="followers_compare">Comparar seguidores</string>
     <string name="followers_both_following">Ambos se seguem</string>
     <string name="followers_not_following">não segue %s</string>
     <string name="followers_not_follower">%s não segue</string>
@@ -275,7 +275,7 @@
     <string name="locations">Localizações</string>
     <string name="unknown">Desconhecido</string>
     <string name="removed_from_favs">Removido dos Favoritos</string>
-    <string name="backup_and_restore">Becape &amp; Restauração</string>
+    <string name="backup_and_restore">Becape e Restauração</string>
     <string name="create_backup">Criar</string>
     <string name="restore_backup">Restaurar</string>
     <string name="file_chosen_label">Arquivo:</string>
