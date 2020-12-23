@@ -292,6 +292,7 @@
     <string name="apply">Apply</string>
     <string name="save">Save</string>
     <string name="caption">Caption</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">Video player timeline</string>
     <string name="one_x" translatable="false">1x</string>
