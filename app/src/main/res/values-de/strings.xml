@@ -43,11 +43,11 @@
     <string name="import_export">Importieren/Exportieren</string>
     <string name="select_language">Sprache</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
+        <item quantity="one">%s Beitrag</item>
         <item quantity="other">%s Beiträge</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
+        <item quantity="one">%s Abonnent</item>
         <item quantity="other">%s Abonnenten</item>
     </plurals>
     <string name="main_posts_following">%s Abonniert </string>
