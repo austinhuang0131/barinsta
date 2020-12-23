@@ -282,6 +282,7 @@
     <string name="apply">Terapkan</string>
     <string name="save">Simpan</string>
     <string name="caption">Keterangan</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">Bilah waktu pemutar video</string>
     <string name="liking">Menyukai…</string>
