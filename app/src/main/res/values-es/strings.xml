@@ -201,7 +201,7 @@
     <string name="comment_view_mention_hash_search">¿Quieres buscar el hashtag?</string>
     <string name="followers_type_followers">Seguidores</string>
     <string name="followers_type_following">Siguiendo</string>
-    <string name="followers_compare">Comparando seguidores &amp; siguiendo</string>
+    <string name="followers_compare">Comparando seguidores &amp; seguidos</string>
     <string name="followers_both_following">Ambos se siguen mutuamente</string>
     <string name="followers_not_following">no está siguiendo %s</string>
     <string name="followers_not_follower">%s no está siguiendo</string>
