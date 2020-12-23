@@ -285,6 +285,7 @@
     <string name="apply">Applica</string>
     <string name="save">Salva</string>
     <string name="caption">Didascalia</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Traduci didascalia...</string>
     <string name="player_timeline_desc">Barra temporale del lettore video</string>
     <string name="liking">Mettendo Mi Piace…</string>
