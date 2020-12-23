@@ -72,7 +72,7 @@
         <item quantity="one">%d response averaging %s</item>
         <item quantity="other">%d responses averaging %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Deine Antwort: %s</string>
     <string name="reply_story">Auf Story antworten</string>
     <string name="reply_hint">Antworten…</string>
     <string name="story_quiz">Quiz</string>
@@ -109,8 +109,8 @@
     <string name="unblock">Nicht mehr blockieren</string>
     <string name="restrict">Einschränken</string>
     <string name="unrestrict">Nicht mehr einschränken</string>
-    <string name="bio_copy">Copy bio</string>
-    <string name="bio_translate">Translate bio</string>
+    <string name="bio_copy">Steckbrief kopieren</string>
+    <string name="bio_translate">Steckbrief übersetzen</string>
     <string name="status_mutual">Mutual</string>
     <string name="status_following">Following</string>
     <string name="status_follower">Follower</string>
@@ -285,7 +285,7 @@
     <string name="apply">Anwenden</string>
     <string name="save">Speichern</string>
     <string name="caption">Bildunterschrift</string>
-    <string name="translate_caption">Translate caption...</string>
+    <string name="translate_caption">Bildunterschrift übersetzen...</string>
     <string name="player_timeline_desc">Zeitleiste des Videoplayers</string>
     <string name="liking">Liking…</string>
     <string name="like_unsuccessful">Like unsuccessful</string>
