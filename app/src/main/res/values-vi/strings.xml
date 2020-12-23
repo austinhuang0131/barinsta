@@ -266,13 +266,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Tối</string>
     <string name="added_to_favs">Đã thêm vào mục Ưa thích</string>
-    <string name="add_to_favorites">Thêm vào Yêu thích</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
     <string name="accounts">Tài khoản</string>
     <string name="hashtags">Hashtags</string>
     <string name="locations">Địa điểm</string>
     <string name="unknown">Không rõ</string>
     <string name="removed_from_favs">Đã loại bỏ khỏi danh sách yêu thích</string>
-    <string name="backup_and_restore">Sao lưu &amp; Khôi phục</string>
+    <string name="backup_and_restore">Settings Backup</string>
     <string name="create_backup">Tạo</string>
     <string name="restore_backup">Khôi phục</string>
     <string name="file_chosen_label">Tập tin:</string>
