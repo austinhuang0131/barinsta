@@ -266,13 +266,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">咖啡棕</string>
     <string name="dark_material_dark_theme">暗黑 Material</string>
     <string name="added_to_favs">已加入至收藏夾</string>
-    <string name="add_to_favorites">加入至收藏夾</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
     <string name="accounts">帳號</string>
     <string name="hashtags">主題標籤</string>
     <string name="locations">地點</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">自收藏中刪除</string>
-    <string name="backup_and_restore">備份與還原</string>
+    <string name="backup_and_restore">Settings Backup</string>
     <string name="create_backup">建立</string>
     <string name="restore_backup">還原</string>
     <string name="file_chosen_label">檔案：</string>
