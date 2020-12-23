@@ -78,11 +78,11 @@
         <item quantity="many">%d responses averaging %s</item>
         <item quantity="other">%d responses averaging %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Twoja odpowiedź: %s</string>
     <string name="reply_story">Odpowiedz na relację</string>
     <string name="reply_hint">Odpowiedź…</string>
     <string name="story_quiz">Quiz</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">Suwak</string>
     <string name="story_quizzed">Już odpowiedziałeś!</string>
     <string name="story_mentions">Wzmianki</string>
     <string name="priv_acc">To konto jest prywatne</string>
@@ -115,8 +115,8 @@
     <string name="unblock">Odblokuj</string>
     <string name="restrict">Ogranicz</string>
     <string name="unrestrict">Nieograniczone</string>
-    <string name="bio_copy">Copy bio</string>
-    <string name="bio_translate">Translate bio</string>
+    <string name="bio_copy">Skopiuj bio</string>
+    <string name="bio_translate">Przetłumacz bio</string>
     <string name="status_mutual">Mutual</string>
     <string name="status_following">Following</string>
     <string name="status_follower">Follower</string>
@@ -319,7 +319,7 @@
     <string name="show_grid_gap">Pokaż widok siatki</string>
     <string name="disable_animation">Wyłączenie animacji</string>
     <string name="follower_wait_to_load">Poczekaj aż bieżące zadanie zostanie ukończone!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
+    <string name="follower_start_compare">W zależności od liczby użytkowników, może to chwilę potrwać. Prosimy o cierpliwość.</string>
     <string name="post_not_found">Nie znaleziono posta!</string>
     <string name="no_external_app_url">Nie znaleziono aplikacji, która otwiera adresy URL</string>
     <plurals name="likes_count">
