@@ -276,13 +276,14 @@
     <string name="light_bibliogram_theme" translatable="false">Bibliogram</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">Added to Favorites</string>
-    <string name="add_to_favorites">Add to favorites</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
     <string name="accounts">Accounts</string>
     <string name="hashtags">Hashtags</string>
     <string name="locations">Locations</string>
     <string name="unknown">Unknown</string>
     <string name="removed_from_favs">Removed from Favourites</string>
-    <string name="backup_and_restore">Backup &amp; Restore</string>
+    <string name="backup_and_restore">Settings Backup</string>
     <string name="create_backup">Create</string>
     <string name="restore_backup">Restore</string>
     <string name="file_chosen_label">File:</string>
