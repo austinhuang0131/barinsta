@@ -269,13 +269,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">Zu Favoriten hinzugefügt</string>
-    <string name="add_to_favorites">Zu Favoriten hinzufügen</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
     <string name="accounts">Konten</string>
     <string name="hashtags">Hashtags</string>
     <string name="locations">Standorte</string>
     <string name="unknown">Unbekannt</string>
     <string name="removed_from_favs">Aus Favoriten entfernt</string>
-    <string name="backup_and_restore">Sichern &amp; Wiederherstellen</string>
+    <string name="backup_and_restore">Settings Backup</string>
     <string name="create_backup">Erstellen</string>
     <string name="restore_backup">Wiederherstellen</string>
     <string name="file_chosen_label">Datei:</string>
