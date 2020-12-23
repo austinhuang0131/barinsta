@@ -291,6 +291,7 @@
     <string name="apply">Применить</string>
     <string name="save">Сохранить</string>
     <string name="caption">Заголовок</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">Лента времени видеопроигрывателя</string>
     <string name="liking">Нравится…</string>
