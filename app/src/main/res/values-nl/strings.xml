@@ -285,6 +285,7 @@
     <string name="apply">Toepassen</string>
     <string name="save">Opslaan</string>
     <string name="caption">Bijschrift</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">Videospeler tijdlijn</string>
     <string name="liking">Liken…</string>
