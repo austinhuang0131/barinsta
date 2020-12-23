@@ -291,6 +291,7 @@
     <string name="apply">Zastosuj</string>
     <string name="save">Zapisz</string>
     <string name="caption">Nagłówek</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">Oś czasu odtwarzacza wideo</string>
     <string name="liking">Przesyłanie polubienia…</string>
