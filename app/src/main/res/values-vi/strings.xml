@@ -282,6 +282,7 @@
     <string name="apply">Áp dụng</string>
     <string name="save">Lưu</string>
     <string name="caption">Chú thích</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">Thanh thời gian của trình phát video</string>
     <string name="liking">Đang thích…</string>
