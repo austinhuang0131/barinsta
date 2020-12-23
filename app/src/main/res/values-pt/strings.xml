@@ -285,6 +285,7 @@
     <string name="apply">Aplicar</string>
     <string name="save">Salvar</string>
     <string name="caption">Legenda</string>
+    <string name="edit_caption">Editar legenda...</string>
     <string name="translate_caption">Traduzir legenda...</string>
     <string name="player_timeline_desc">Barra de progresso do reprodutor de vídeo</string>
     <string name="liking">Curtindo…</string>
