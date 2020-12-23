@@ -108,9 +108,9 @@
     <string name="unrestrict">移除限制</string>
     <string name="bio_copy">Copy bio</string>
     <string name="bio_translate">Translate bio</string>
-    <string name="status_mutual">Mutual</string>
-    <string name="status_following">Following</string>
-    <string name="status_follower">Follower</string>
+    <string name="status_mutual">正彼此追蹤</string>
+    <string name="status_following">追蹤中</string>
+    <string name="status_follower">追蹤者</string>
     <string name="map">地圖</string>
     <string name="dialog_export_btn_export">匯出</string>
     <string name="dialog_export_btn_import">匯入</string>
