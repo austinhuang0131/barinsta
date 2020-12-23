@@ -269,13 +269,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Материјално Црна</string>
     <string name="added_to_favs">Додадено во Омилени</string>
-    <string name="add_to_favorites">Додади во омилени</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
     <string name="accounts">Акаунти</string>
     <string name="hashtags">Хаштагови</string>
     <string name="locations">Локации</string>
     <string name="unknown">Непознато</string>
     <string name="removed_from_favs">Отстрането од омилени</string>
-    <string name="backup_and_restore">Направете Резервна Копија &amp; Враќање</string>
+    <string name="backup_and_restore">Settings Backup</string>
     <string name="create_backup">Креирај</string>
     <string name="restore_backup">Врати</string>
     <string name="file_chosen_label">Фајл:</string>
