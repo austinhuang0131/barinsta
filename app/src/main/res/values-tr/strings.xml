@@ -285,6 +285,7 @@
     <string name="apply">Uygula</string>
     <string name="save">Kaydet</string>
     <string name="caption">Başlık</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">Video oynatıcı zaman çizelgesi</string>
     <string name="liking">Beğeniliyor…</string>
