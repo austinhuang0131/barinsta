@@ -270,13 +270,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">باریستا</string>
     <string name="dark_material_dark_theme">متریال تیره</string>
     <string name="added_to_favs">به علاقه مندی ها افزوده شد</string>
-    <string name="add_to_favorites">افزودن به علاقه ‌مندی ‌ها</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
     <string name="accounts">هساب‌ها</string>
     <string name="hashtags">هشتگ ها</string>
     <string name="locations">جاها</string>
     <string name="unknown">ناشناخته</string>
     <string name="removed_from_favs">از علاقه مندی ها حذف شده</string>
-    <string name="backup_and_restore">پشتیبان گیری &amp; بازیابی</string>
+    <string name="backup_and_restore">Settings Backup</string>
     <string name="create_backup">ساخت</string>
     <string name="restore_backup">بازیابی</string>
     <string name="file_chosen_label">پرونده:</string>
