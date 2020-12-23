@@ -282,6 +282,7 @@
     <string name="apply">应用</string>
     <string name="save">保存</string>
     <string name="caption">说明</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">翻译内容...</string>
     <string name="player_timeline_desc">视频播放器时间线</string>
     <string name="liking">正在赞…</string>
