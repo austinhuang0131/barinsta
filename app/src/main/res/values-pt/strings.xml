@@ -269,14 +269,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Escuro (Material)</string>
     <string name="added_to_favs">Adicionado aos Favoritos</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favoritado</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favoritar</string>
     <string name="accounts">Contas</string>
     <string name="hashtags">Hashtags</string>
     <string name="locations">Localizações</string>
     <string name="unknown">Desconhecido</string>
     <string name="removed_from_favs">Removido dos Favoritos</string>
-    <string name="backup_and_restore">Settings Backup</string>
+    <string name="backup_and_restore">Configurações de Becape</string>
     <string name="create_backup">Criar</string>
     <string name="restore_backup">Restaurar</string>
     <string name="file_chosen_label">Arquivo:</string>
