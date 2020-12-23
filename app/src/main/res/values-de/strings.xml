@@ -285,6 +285,7 @@
     <string name="apply">Anwenden</string>
     <string name="save">Speichern</string>
     <string name="caption">Bildunterschrift</string>
+    <string name="edit_caption">Edit caption...</string>
     <string name="translate_caption">Bildunterschrift übersetzen...</string>
     <string name="player_timeline_desc">Zeitleiste des Videoplayers</string>
     <string name="liking">Liking…</string>
