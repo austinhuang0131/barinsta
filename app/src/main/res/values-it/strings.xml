@@ -269,14 +269,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Materiale Scuro</string>
     <string name="added_to_favs">Aggiunto ai Preferiti</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorito</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorisci</string>
     <string name="accounts">Profili</string>
     <string name="hashtags">Hashtag</string>
     <string name="locations">Luoghi</string>
     <string name="unknown">Sconosciuto</string>
     <string name="removed_from_favs">Rimosso dai Preferiti</string>
-    <string name="backup_and_restore">Settings Backup</string>
+    <string name="backup_and_restore">Impostazioni Backup</string>
     <string name="create_backup">Crea</string>
     <string name="restore_backup">Ripristina</string>
     <string name="file_chosen_label">File:</string>
@@ -285,7 +285,7 @@
     <string name="apply">Applica</string>
     <string name="save">Salva</string>
     <string name="caption">Didascalia</string>
-    <string name="edit_caption">Edit caption...</string>
+    <string name="edit_caption">Modifica didascalia...</string>
     <string name="translate_caption">Traduci didascalia...</string>
     <string name="player_timeline_desc">Barra temporale del lettore video</string>
     <string name="liking">Mettendo Mi Piace…</string>
