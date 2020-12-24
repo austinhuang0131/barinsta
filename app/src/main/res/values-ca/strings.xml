@@ -48,9 +48,9 @@
     </plurals>
     <plurals name="main_posts_followers">
         <item quantity="one">%s Follower</item>
-        <item quantity="other">%s Followers</item>
+        <item quantity="other">%s Seguidors</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s Seguint</string>
     <string name="post_viewer_autoplay_video">Reproduir vídeos automàticament</string>
     <string name="post_viewer_muted_autoplay">Silenciar sempre els vídeos</string>
     <string name="post_viewer_download_dialog_title">Seleccionar el que s\'ha de descarregar</string>
@@ -109,11 +109,11 @@
     <string name="unblock">Desbloquejar</string>
     <string name="restrict">Restringir</string>
     <string name="unrestrict">Deixar de restringir</string>
-    <string name="bio_copy">Copy bio</string>
-    <string name="bio_translate">Translate bio</string>
-    <string name="status_mutual">Mutual</string>
-    <string name="status_following">Following</string>
-    <string name="status_follower">Follower</string>
+    <string name="bio_copy">Copiar bio</string>
+    <string name="bio_translate">Traduir bio</string>
+    <string name="status_mutual">Mutu</string>
+    <string name="status_following">Seguint</string>
+    <string name="status_follower">Seguidor</string>
     <string name="map">Mapa</string>
     <string name="dialog_export_btn_export">Exportar</string>
     <string name="dialog_export_btn_import">Importar</string>
@@ -194,7 +194,7 @@
     <string name="comment_viewer_reply_comment">Respondre al comentari</string>
     <string name="comment_viewer_like_comment">Donar \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_unlike_comment">Treure \"m\'agrada\" al comentari</string>
-    <string name="comment_viewer_translate_comment">Translate comment</string>
+    <string name="comment_viewer_translate_comment">Traduir comentari</string>
     <string name="comment_viewer_delete_comment">Esborrar comentari</string>
     <string name="comment_send_empty_comment">No als comentaris buits!</string>
     <string name="comment_view_mention_user_search">Vols cercar el nom d\'usuari?</string>
@@ -269,14 +269,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">S\'ha afegit als preferits</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">S\'ha agregat als favorits</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorit</string>
     <string name="accounts">Comptes</string>
     <string name="hashtags">Etiquetes</string>
     <string name="locations">Ubicacions</string>
     <string name="unknown">Desconegut</string>
     <string name="removed_from_favs">Eliminat dels preferits</string>
-    <string name="backup_and_restore">Settings Backup</string>
+    <string name="backup_and_restore"> Paràmetres de còpia de seguretat</string>
     <string name="create_backup">Crear</string>
     <string name="restore_backup">Restaurar</string>
     <string name="file_chosen_label">Arxiu:</string>
@@ -285,8 +285,8 @@
     <string name="apply">Aplicar</string>
     <string name="save">Desar</string>
     <string name="caption">Llegenda</string>
-    <string name="edit_caption">Edit caption...</string>
-    <string name="translate_caption">Translate caption...</string>
+    <string name="edit_caption">Editar llegenda...</string>
+    <string name="translate_caption">Traduir la llegenda...</string>
     <string name="player_timeline_desc">Línia de temps del reproductor de vídeo</string>
     <string name="liking">Donant m\'agrada…</string>
     <string name="like_unsuccessful">El \"m\'agrada\" ha fallat</string>
@@ -315,7 +315,7 @@
     <string name="show_grid_gap">Mostrar la separació de la graella</string>
     <string name="disable_animation">Desactivar l\'animació</string>
     <string name="follower_wait_to_load">Espera primer que la tasca actual s\'hagi completat!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
+    <string name="follower_start_compare">Depenent del nombre d\'usuaris, això pot trigar una estona a carregar-se. Si us plau, tingues paciència.</string>
     <string name="post_not_found">Publicació no trobada!</string>
     <string name="no_external_app_url">No s\'ha trobat cap aplicació que obri l\'enllaç</string>
     <plurals name="likes_count">
@@ -326,5 +326,5 @@
         <item quantity="one">%d comentari</item>
         <item quantity="other">%d comentaris</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">No s\'ha concedit el permís d\'emmagatzematge!</string>
 </resources>
