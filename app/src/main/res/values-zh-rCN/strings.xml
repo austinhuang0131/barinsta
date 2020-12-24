@@ -266,14 +266,14 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">咖啡棕</string>
     <string name="dark_material_dark_theme">Material 黑</string>
     <string name="added_to_favs">已添加至收藏夹</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">已收藏</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">收藏夹</string>
     <string name="accounts">帐户</string>
     <string name="hashtags">话题</string>
     <string name="locations">地点</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">已从收藏夹中删除</string>
-    <string name="backup_and_restore">Settings Backup</string>
+    <string name="backup_and_restore">设置备份</string>
     <string name="create_backup">创建</string>
     <string name="restore_backup">还原</string>
     <string name="file_chosen_label">文件:</string>
@@ -282,7 +282,7 @@
     <string name="apply">应用</string>
     <string name="save">保存</string>
     <string name="caption">说明</string>
-    <string name="edit_caption">Edit caption...</string>
+    <string name="edit_caption">编辑标题...</string>
     <string name="translate_caption">翻译内容...</string>
     <string name="player_timeline_desc">视频播放器时间线</string>
     <string name="liking">正在赞…</string>
