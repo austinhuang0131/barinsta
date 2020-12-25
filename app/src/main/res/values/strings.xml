@@ -145,6 +145,7 @@
     <string name="quick_access_cannot_delete_curr">Cannot delete currently in use account</string>
     <string name="quick_access_confirm_delete">Are you sure you want to delete \'%s\'?</string>
     <string name="open_profile">Open profile</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">View profile picture</string>
     <string name="direct_messages_you">You</string>
     <string name="direct_messages_sent_link">Shared a link</string>
