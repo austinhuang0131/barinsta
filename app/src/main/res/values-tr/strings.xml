@@ -142,6 +142,7 @@
     <string name="quick_access_cannot_delete_curr">Şu an kullanımda olan hesap silinemez</string>
     <string name="quick_access_confirm_delete">Şunu silmek istediğinden emin misin?: \'%s\'</string>
     <string name="open_profile">Profili aç</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Profil fotoğrafını gör</string>
     <string name="direct_messages_you">Sen</string>
     <string name="direct_messages_sent_link">Bir bağlantı paylaştı</string>
