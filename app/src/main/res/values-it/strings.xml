@@ -142,6 +142,7 @@
     <string name="quick_access_cannot_delete_curr">Impossibile eliminare il profilo correntemente in uso</string>
     <string name="quick_access_confirm_delete">Sei sicuro di voler eliminare \'%s\'?</string>
     <string name="open_profile">Apri profilo</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Vedi immagine del profilo</string>
     <string name="direct_messages_you">Tu</string>
     <string name="direct_messages_sent_link">Ha condiviso un link</string>
