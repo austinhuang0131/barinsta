@@ -142,7 +142,7 @@
     <string name="quick_access_cannot_delete_curr">Não é possível excluir a conta atualmente em uso</string>
     <string name="quick_access_confirm_delete">Tem certeza que deseja excluir %s\'?</string>
     <string name="open_profile">Abrir perfil</string>
-    <string name="view_story">View story</string>
+    <string name="view_story">Ver story</string>
     <string name="view_pfp">Ver foto de perfil</string>
     <string name="direct_messages_you">Você</string>
     <string name="direct_messages_sent_link">Compartilhou um link</string>
