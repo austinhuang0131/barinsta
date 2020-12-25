@@ -142,6 +142,7 @@
     <string name="quick_access_cannot_delete_curr">Неможе да избришите акаунт во корист</string>
     <string name="quick_access_confirm_delete">Дали сте сигурни дека сакате да избришите \'%s\'?</string>
     <string name="open_profile">Отвори Профил</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Прегладај профилната слика</string>
     <string name="direct_messages_you">Ти</string>
     <string name="direct_messages_sent_link">Сподели линк</string>
