@@ -148,6 +148,7 @@
     <string name="quick_access_cannot_delete_curr">Невозможно удалить текущую учётную запись</string>
     <string name="quick_access_confirm_delete">Вы уверены, что хотите удалить \'%s\'?</string>
     <string name="open_profile">Открыть профиль</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Просмотр изображения профиля</string>
     <string name="direct_messages_you">Вы</string>
     <string name="direct_messages_sent_link">Поделился(-лась) ссылкой</string>
