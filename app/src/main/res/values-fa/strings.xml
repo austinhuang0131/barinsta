@@ -143,6 +143,7 @@
     <string name="quick_access_cannot_delete_curr">نمیتواند حذف شود این اکانت در حال استفاده است</string>
     <string name="quick_access_confirm_delete">آیا مطمن هستید میخواهید حذف کنید \'%s\'؟</string>
     <string name="open_profile">باز کردن پروفایل</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">دیدن عکس پروفایل</string>
     <string name="direct_messages_you">شما</string>
     <string name="direct_messages_sent_link">یک لینک به اشتراک گذاشته شد</string>
