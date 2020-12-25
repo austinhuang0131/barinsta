@@ -139,6 +139,7 @@
     <string name="quick_access_cannot_delete_curr">Không thể xóa tài khoản đang được sử dụng</string>
     <string name="quick_access_confirm_delete">Bạn có chắc bạn muốn xóa \'%s\'?</string>
     <string name="open_profile">Mở hồ sơ</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Xem Ảnh Đại Diện</string>
     <string name="direct_messages_you">Bạn</string>
     <string name="direct_messages_sent_link">Đã chia sẻ liên kết</string>
