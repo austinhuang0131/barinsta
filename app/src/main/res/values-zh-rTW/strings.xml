@@ -139,6 +139,7 @@
     <string name="quick_access_cannot_delete_curr">無法刪除當前正在使用的帳戶</string>
     <string name="quick_access_confirm_delete">您確定要刪除 %s 嗎？</string>
     <string name="open_profile">開啟個人檔案</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">查看大頭貼照</string>
     <string name="direct_messages_you">您</string>
     <string name="direct_messages_sent_link">分享了一個鏈接</string>
