@@ -142,6 +142,7 @@
     <string name="quick_access_cannot_delete_curr">Kan momenteel niet het account verwijderen dat in gebruik is</string>
     <string name="quick_access_confirm_delete">Weet je zeker dat je \'%s\' wilt verwijderen?</string>
     <string name="open_profile">Open profiel</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Bekijk profielfoto</string>
     <string name="direct_messages_you">Jij</string>
     <string name="direct_messages_sent_link">Heeft een link gedeeld</string>
