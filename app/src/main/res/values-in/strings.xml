@@ -139,6 +139,7 @@
     <string name="quick_access_cannot_delete_curr">Tidak dapat menghapus akun yang sedang digunakan</string>
     <string name="quick_access_confirm_delete">Anda yakin ingin menghapus \'%s\'?</string>
     <string name="open_profile">Buka profil</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Lihat foto profil</string>
     <string name="direct_messages_you">Anda</string>
     <string name="direct_messages_sent_link">Membagikan alamat web</string>
