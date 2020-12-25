@@ -142,6 +142,7 @@
     <string name="quick_access_cannot_delete_curr">No es pot eliminar el compte actualment en ús</string>
     <string name="quick_access_confirm_delete">Esteu segur que vols suprimir \"%s\"?</string>
     <string name="open_profile">Obre el perfil</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Mostra la imatge del perfil</string>
     <string name="direct_messages_you">Tú</string>
     <string name="direct_messages_sent_link">Has compartit un enllaç</string>
