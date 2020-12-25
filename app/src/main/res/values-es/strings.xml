@@ -142,7 +142,7 @@
     <string name="quick_access_cannot_delete_curr">No se puede borrar la cuenta actualmente en uso</string>
     <string name="quick_access_confirm_delete">¿Estás seguro de que quieres borrar \'%s\'?</string>
     <string name="open_profile">Abrir perfil</string>
-    <string name="view_story">View story</string>
+    <string name="view_story">Ver historia</string>
     <string name="view_pfp">Ver foto de perfil</string>
     <string name="direct_messages_you">Tú</string>
     <string name="direct_messages_sent_link">Compartió un enlace</string>
