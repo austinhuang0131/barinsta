@@ -142,6 +142,7 @@
     <string name="quick_access_cannot_delete_curr">Derzeit verwendetes Konto kann nicht gelöscht werden</string>
     <string name="quick_access_confirm_delete">Bist du sicher, dass du \'%s \' löschen möchtest?</string>
     <string name="open_profile">Profil öffnen</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">Profilbild ansehen</string>
     <string name="direct_messages_you">Du</string>
     <string name="direct_messages_sent_link">Einen Link geteilt</string>
