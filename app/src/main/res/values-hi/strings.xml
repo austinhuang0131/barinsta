@@ -143,6 +143,7 @@
     <string name="quick_access_cannot_delete_curr">बर्तमीन ब्यबह्रत एकाउँट को मिटा नहिं सकते</string>
     <string name="quick_access_confirm_delete">क्या आप सचमुच %s मिटाना चाहते हैं?</string>
     <string name="open_profile">प्रोफाइल खुलें</string>
+    <string name="view_story">View story</string>
     <string name="view_pfp">प्रोफ़ाइल चित्र देखें</string>
     <string name="direct_messages_you">आप</string>
     <string name="direct_messages_sent_link">लिंक साझा किया</string>
