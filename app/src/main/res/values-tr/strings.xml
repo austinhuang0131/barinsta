@@ -192,6 +192,7 @@
     <string name="downloader_too_many">Tek seferde en fazla 100 gönderi indirebilirsin, açgözlü olma!</string>
     <string name="comment_viewer_copy_user">Kullanıcı adını kopyala</string>
     <string name="comment_viewer_copy_comment">Yorumu kopyala</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">Yoruma cevap ver</string>
     <string name="comment_viewer_like_comment">Yorumu beğen</string>
     <string name="comment_viewer_unlike_comment">Yorum beğenisini geri al</string>
