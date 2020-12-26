@@ -192,6 +192,7 @@
     <string name="downloader_too_many">Puoi scaricare solo 100 post per volta. Non essere troppo avido!</string>
     <string name="comment_viewer_copy_user">Copia nome utente</string>
     <string name="comment_viewer_copy_comment">Copia commento</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">Rispondi al commento</string>
     <string name="comment_viewer_like_comment">Mi Piace il commento</string>
     <string name="comment_viewer_unlike_comment">Il commento Non mi Piace Più</string>
