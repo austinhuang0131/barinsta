@@ -198,6 +198,7 @@
     <string name="downloader_too_many">Możesz pobrać tylko 100 postów jednocześnie. Nie bądź zbyt chciwy!</string>
     <string name="comment_viewer_copy_user">Skopiuj nazwę użytkownika</string>
     <string name="comment_viewer_copy_comment">Skopiuj komentarz</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">Odpowiedz na komentarz</string>
     <string name="comment_viewer_like_comment">Polub komentarz</string>
     <string name="comment_viewer_unlike_comment">Usuń polubienie komentarza</string>
