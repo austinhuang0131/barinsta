@@ -192,7 +192,7 @@
     <string name="downloader_too_many">Você só pode baixar 100 publicações por vez. Não seja tão ganancioso!</string>
     <string name="comment_viewer_copy_user">Copiar nome de usuário</string>
     <string name="comment_viewer_copy_comment">Copiar comentário</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
+    <string name="comment_viewer_see_likers">Ver quem curtiu o comentário</string>
     <string name="comment_viewer_reply_comment">Responder comentário</string>
     <string name="comment_viewer_like_comment">Curtir comentário</string>
     <string name="comment_viewer_unlike_comment">Descurtir comentário</string>
