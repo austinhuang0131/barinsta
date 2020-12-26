@@ -43,11 +43,11 @@
     <string name="import_export">Importar/Exportar</string>
     <string name="select_language">Llengua</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
+        <item quantity="one">%s Publicació</item>
         <item quantity="other">%s Publicacions</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
+        <item quantity="one">%s Seguidor</item>
         <item quantity="other">%s Seguidors</item>
     </plurals>
     <string name="main_posts_following">%s Seguint</string>
@@ -69,7 +69,7 @@
     <string name="answer_hint">Resposta…</string>
     <string name="answered_story">Has contestat amb èxit!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="one">%d response averaging %s</item>
+        <item quantity="one">%d mitjana de resposta %s</item>
         <item quantity="other">%d mitjana de respostes %s</item>
     </plurals>
     <string name="slider_answer">La teva resposta: %s</string>
@@ -142,7 +142,7 @@
     <string name="quick_access_cannot_delete_curr">No es pot eliminar el compte actualment en ús</string>
     <string name="quick_access_confirm_delete">Esteu segur que vols suprimir \"%s\"?</string>
     <string name="open_profile">Obre el perfil</string>
-    <string name="view_story">View story</string>
+    <string name="view_story">Veure història</string>
     <string name="view_pfp">Mostra la imatge del perfil</string>
     <string name="direct_messages_you">Tú</string>
     <string name="direct_messages_sent_link">Has compartit un enllaç</string>
