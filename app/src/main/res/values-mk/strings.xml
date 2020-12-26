@@ -111,7 +111,7 @@
     <string name="unrestrict">Одограничи</string>
     <string name="bio_copy">Копирај био</string>
     <string name="bio_translate">Преведи био</string>
-    <string name="status_mutual">Mutual</string>
+    <string name="status_mutual">Заеднички</string>
     <string name="status_following">Оние кои ги следиш</string>
     <string name="status_follower">Следач</string>
     <string name="map">Мапа</string>
@@ -192,7 +192,7 @@
     <string name="downloader_too_many">Можете само 100 постови наеднаш да превземите. Не бидете алчни!</string>
     <string name="comment_viewer_copy_user">Копирај username</string>
     <string name="comment_viewer_copy_comment">Копирај Коментар</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
+    <string name="comment_viewer_see_likers">Прегледај лајкови на коментар</string>
     <string name="comment_viewer_reply_comment">Одговори на коментар</string>
     <string name="comment_viewer_like_comment">Лајкни коментар</string>
     <string name="comment_viewer_unlike_comment">Одлајкни коментар</string>
@@ -307,26 +307,26 @@
     <string name="opening_post">Отварање на Објава...</string>
     <string name="share">Сподели</string>
     <string name="layout_style">Стил на изглед</string>
-    <string name="column_count">Column count</string>
+    <string name="column_count">Број на колони</string>
     <string name="two">2</string>
     <string name="three">3</string>
-    <string name="show_names">Show names</string>
-    <string name="show_avatars">Show avatars</string>
-    <string name="avatar_size">Avatar size</string>
-    <string name="corners">Corners</string>
-    <string name="show_grid_gap">Show grid gap</string>
-    <string name="disable_animation">Disable animation</string>
-    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
-    <string name="post_not_found">Post not found!</string>
-    <string name="no_external_app_url">No app found which opens urls</string>
+    <string name="show_names">Прикажи имиња</string>
+    <string name="show_avatars">Прикажи Аватар</string>
+    <string name="avatar_size">Големина на Аватар</string>
+    <string name="corners">Ќошеви</string>
+    <string name="show_grid_gap">Прикажи растојание меѓу слики</string>
+    <string name="disable_animation">Исклучи анимации</string>
+    <string name="follower_wait_to_load">Ве молиме почекајте сегашната задача да заврши прво!</string>
+    <string name="follower_start_compare">Во зависност од бројот на корисници, ова може да потрае, Ве молиме бидете трпеливи.</string>
+    <string name="post_not_found">Објавата не беше пронајдена!</string>
+    <string name="no_external_app_url">Но беше пронајдена апликација за отварање линкови</string>
     <plurals name="likes_count">
-        <item quantity="one">%d like</item>
-        <item quantity="other">%d likes</item>
+        <item quantity="one">%d лајк</item>
+        <item quantity="other">%d лајкови</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
+        <item quantity="one">%d коментар</item>
+        <item quantity="other">%d коментари</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">Нема дозвола за пристап на меморија!</string>
 </resources>
