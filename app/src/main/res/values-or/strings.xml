@@ -69,17 +69,17 @@
     <string name="answer_hint">ଉତ୍ତର…</string>
     <string name="answered_story">ଉତ୍ତର ସଫଳ!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="one">%d response averaging %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="one">%d ପ୍ରତିକ୍ରିୟା ହାରାହାରି %s</item>
+        <item quantity="other">%d ପ୍ରତିକ୍ରିୟାଗୁଡିକ ହାରାହାରି %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
-    <string name="reply_story">Reply to story</string>
-    <string name="reply_hint">Reply…</string>
-    <string name="story_quiz">Quiz</string>
-    <string name="story_slider">Slider</string>
-    <string name="story_quizzed">You have already answered!</string>
-    <string name="story_mentions">Mentions</string>
-    <string name="priv_acc">This Account is Private</string>
+    <string name="slider_answer">ଆପଣଙ୍କ ଉତ୍ତର: %s</string>
+    <string name="reply_story">କାହାଣୀକୁ ଜବାବ ଦିଅ |</string>
+    <string name="reply_hint">ଜବାବ…</string>
+    <string name="story_quiz">ପ୍ରଶ୍ନୋତ୍ତର</string>
+    <string name="story_slider">ସ୍ଲାଇଡର୍</string>
+    <string name="story_quizzed">ଆପଣ ଉତ୍ତର ଦେଇସାରିଛନ୍ତି!</string>
+    <string name="story_mentions">ଉଲ୍ଲେଖଗୁ‌‍‌‌‌‌‌‌‌‌‌‌‌ଡିକ</string>
+    <string name="priv_acc">ଏହି ଏକାଉଣ୍ଟ ଗୁପ୍ତ ଅଟେ</string>
     <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
