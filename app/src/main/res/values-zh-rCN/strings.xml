@@ -139,7 +139,7 @@
     <string name="quick_access_cannot_delete_curr">无法删除正在使用的账户</string>
     <string name="quick_access_confirm_delete">您确定要删除\"%s\"吗？</string>
     <string name="open_profile">打开主页</string>
-    <string name="view_story">View story</string>
+    <string name="view_story">查看故事</string>
     <string name="view_pfp">查看头像</string>
     <string name="direct_messages_you">你</string>
     <string name="direct_messages_sent_link">分享了</string>
