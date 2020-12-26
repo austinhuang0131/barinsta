@@ -189,6 +189,7 @@
     <string name="downloader_too_many">您一次只能下载100个帖子。切勿贪得无厌！</string>
     <string name="comment_viewer_copy_user">复制用户名</string>
     <string name="comment_viewer_copy_comment">复制评论</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">回复评论</string>
     <string name="comment_viewer_like_comment">赞评论</string>
     <string name="comment_viewer_unlike_comment">取消赞</string>
