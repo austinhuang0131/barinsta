@@ -269,13 +269,13 @@
     <string name="dark_material_dark_theme">暗黑 Material</string>
     <string name="added_to_favs">已加入至收藏夾</string>
     <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">收藏</string>
     <string name="accounts">帳號</string>
     <string name="hashtags">主題標籤</string>
     <string name="locations">地點</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">自收藏中刪除</string>
-    <string name="backup_and_restore">Settings Backup</string>
+    <string name="backup_and_restore">設定備份</string>
     <string name="create_backup">建立</string>
     <string name="restore_backup">還原</string>
     <string name="file_chosen_label">檔案：</string>
@@ -284,7 +284,7 @@
     <string name="apply">套用</string>
     <string name="save">儲存</string>
     <string name="caption">說明</string>
-    <string name="edit_caption">Edit caption...</string>
+    <string name="edit_caption">編輯說明...</string>
     <string name="translate_caption">Translate caption...</string>
     <string name="player_timeline_desc">影片播放器時間軸</string>
     <string name="liking">按讚中…</string>
@@ -323,5 +323,5 @@
     <plurals name="comments_count">
         <item quantity="other">%d 個評論</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">未授予儲存空間權限</string>
 </resources>
