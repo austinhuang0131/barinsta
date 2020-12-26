@@ -198,6 +198,7 @@
     <string name="downloader_too_many">Вы можете скачать только 100 сообщений за раз. Не будьте слишком жадным!</string>
     <string name="comment_viewer_copy_user">Копировать имя пользователя</string>
     <string name="comment_viewer_copy_comment">Копировать комментарий</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">Ответить на комментарий</string>
     <string name="comment_viewer_like_comment">Мне нравится комментарий</string>
     <string name="comment_viewer_unlike_comment">Не нравится комментарий</string>
