@@ -23,7 +23,7 @@
     <string name="title_favorites">ପସନ୍ଦିତ</string>
     <string name="title_discover">ଖୋଜିବା</string>
     <string name="title_comments">ଟିପ୍ପଣୀ</string>
-    <string name="title_notifications">Activity</string>
+    <string name="title_notifications">କାର୍ଯ୍ୟକଳାପ</string>
     <string name="title_highlight">ବିଶେଷତା: %s</string>
     <string name="update_check">ଖୋଲିବା ସମୟରେ ଅପଡେଟ ପାଇଁ ଯାଞ୍ଚ କରନ୍ତୁ</string>
     <string name="download_user_folder">ଡାଉନଲୋଡ ପୋଷ୍ଟକୁ ବ୍ୟବହାରକାରୀଙ୍କ ନାମରେ ହୋଇଥିବା ସ୍ଥାନ ରେ ରଖ</string>
@@ -43,14 +43,14 @@
     <string name="import_export">ଇମ୍ପୋର୍ଟ/ଏକ୍ସପୋର୍ଟ</string>
     <string name="select_language">ଭାଷା</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="one">%s ପୋଷ୍ଟ</item>
+        <item quantity="other">%s ପୋଷ୍ଟସ</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
-        <item quantity="other">%s Followers</item>
+        <item quantity="one">%s ଅନୁଗାମୀ</item>
+        <item quantity="other">%s ଅନୁଗାମୀଗଣ</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s ଅନୁସରଣ କରୁଛନ୍ତି </string>
     <string name="post_viewer_autoplay_video">ଭିଡ଼ିଓ ସ୍ୱତଃ ଚାଲୁ କର</string>
     <string name="post_viewer_muted_autoplay">ସର୍ବଦା ଭିଡ଼ିଓକୁ ଶବ୍ଦହୀନ ରଖ</string>
     <string name="post_viewer_download_dialog_title">ଡାଉନଲୋଡ଼ କରିବା ପାଇଁ ଚୟନ କରନ୍ତୁ</string>
@@ -63,11 +63,11 @@
     <string name="view_post">ପୋଷ୍ଟ ଦେଖନ୍ତୁ</string>
     <string name="spotify">Spotify</string>
     <string name="vote_story_poll">ମତଦାନ କରନ୍ତୁ |</string>
-    <string name="votef_story_poll">Vote successful!</string>
-    <string name="voted_story_poll">You have already voted!</string>
-    <string name="respond_story">Respond</string>
-    <string name="answer_hint">Answer…</string>
-    <string name="answered_story">Answer successful!</string>
+    <string name="votef_story_poll">ମତଦାନ ସଫଳ!</string>
+    <string name="voted_story_poll">ଆପଣ ଭୋଟ୍‌ ଦେଇସାରିଛନ୍ତି!</string>
+    <string name="respond_story">ଜବାବ ଦେବା</string>
+    <string name="answer_hint">ଉତ୍ତର…</string>
+    <string name="answered_story">ଉତ୍ତର ସଫଳ!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
         <item quantity="other">%d responses averaging %s</item>
