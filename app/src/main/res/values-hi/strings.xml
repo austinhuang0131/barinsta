@@ -193,6 +193,7 @@
     <string name="downloader_too_many">आप सिर्फ १०० पोस्टस एक बार में डाउनलोड कर सकते हैं. ज्यादा लोभी बनना हानिकारक हैं!</string>
     <string name="comment_viewer_copy_user">उपयोगकर्ता नाम की प्रतिलिपि बनाएँ</string>
     <string name="comment_viewer_copy_comment">टिप्पणी की प्रतिलिपि बनाएँ</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">टिप्पणी का जवाब दें</string>
     <string name="comment_viewer_like_comment">टिप्पणी को पसन्द करें</string>
     <string name="comment_viewer_unlike_comment">टिप्पणी को पसन्द न करें</string>
