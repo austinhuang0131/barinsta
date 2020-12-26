@@ -195,6 +195,7 @@
     <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
     <string name="comment_viewer_copy_user">Copy username</string>
     <string name="comment_viewer_copy_comment">Copy comment</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">Reply to comment</string>
     <string name="comment_viewer_like_comment">Like comment</string>
     <string name="comment_viewer_unlike_comment">Unlike comment</string>
