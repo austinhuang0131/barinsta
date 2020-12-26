@@ -192,6 +192,7 @@
     <string name="downloader_too_many">Només pots descarregar 100 publicacions alhora. No siguis massa cobdiciós!</string>
     <string name="comment_viewer_copy_user">Copiar el nom d\'usuari</string>
     <string name="comment_viewer_copy_comment">Copiar el comentari</string>
+    <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">Respondre al comentari</string>
     <string name="comment_viewer_like_comment">Donar \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_unlike_comment">Treure \"m\'agrada\" al comentari</string>
