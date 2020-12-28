@@ -160,7 +160,7 @@
     <string name="dms_inbox_raven_message_unknown"><i>Nepodporovaný typ správy</i></string>
     <string name="dms_inbox_open_link">Otvoriť odkaz</string>
     <string name="dms_inbox_copy_text">Kopírovať text</string>
-    <string name="dms_inbox_download">Download attachment</string>
+    <string name="dms_inbox_download">Stiahnuť prílohu</string>
     <string name="dms_inbox_like">Like message</string>
     <string name="dms_inbox_unlike">Unlike message</string>
     <string name="dms_inbox_unsend">Unsend message</string>
@@ -210,12 +210,12 @@
     <string name="followers_type_followers">Followers</string>
     <string name="followers_type_following">Following</string>
     <string name="followers_compare">Comparing followers &amp; following</string>
-    <string name="followers_both_following">Both following each other</string>
+    <string name="followers_both_following">Sledujú sa recipročne</string>
     <string name="followers_not_following">not following %s</string>
     <string name="followers_not_follower">%s is not following</string>
-    <string name="login_error_loading_cookies">Error loading cookies</string>
-    <string name="comment_hint">Write a new comment…</string>
-    <string name="dm_hint">Write a new message…</string>
+    <string name="login_error_loading_cookies">Chyba pri načítavaní cookies</string>
+    <string name="comment_hint">Napísať komentár…</string>
+    <string name="dm_hint">Napísať správu…</string>
     <string name="liked_notif">Liked your post</string>
     <string name="comment_notif">Commented on your post:</string>
     <string name="follow_notif">Started following you</string>
