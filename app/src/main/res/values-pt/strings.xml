@@ -279,10 +279,10 @@
     <string name="unknown">Desconhecido</string>
     <string name="removed_from_favs">Removido dos Favoritos</string>
     <string name="backup_and_restore">Becape e Restauração das Configurações do Usuário</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_summary">Faça o becape das configurações do aplicativo, informações de login da conta e/ou dados dos favoritos em um arquivo de texto simples ou arquivo de becape criptografado para restaurar posteriormente.</string>
+    <string name="backup_warning">Se você estiver fazendo o becape das informações de login, trate o arquivo como confidencial: Mantenha-o em algum lugar seguro!</string>
+    <string name="create_backup">Criar novo arquivo de becape</string>
+    <string name="restore_backup">Restaurar arquivo de becape existente</string>
     <string name="file_chosen_label">Arquivo:</string>
     <string name="enter_password">Digite a senha</string>
     <string name="select_backup_file">Selecione um arquivo de becape (.zaai/.backup)</string>
