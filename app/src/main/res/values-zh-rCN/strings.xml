@@ -52,7 +52,7 @@
     <string name="post_viewer_autoplay_video">自动播放视频</string>
     <string name="post_viewer_muted_autoplay">视频默认静音</string>
     <string name="post_viewer_download_dialog_title">选择要下载的</string>
-    <string name="post_viewer_download_current">当前</string>
+    <string name="post_viewer_download_current">当前照片</string>
     <string name="post_viewer_download_album">整个图集</string>
     <string name="show_stories">显示快拍</string>
     <string name="no_more_stories">到底啦！</string>
@@ -275,11 +275,11 @@
     <string name="locations">地点</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">已从收藏夹中删除</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_and_restore">用户设置备份及还原</string>
+    <string name="backup_summary">将应用设置，帐户登录信息，和/或收藏数据备份至纯文本或加密文本，以备日后恢复。</string>
+    <string name="backup_warning">如果您备份登录信息，请务必妥善保管您的备份文件：把它当作密码看待！</string>
+    <string name="create_backup">创建新备份文件</string>
+    <string name="restore_backup">从现有备份文件恢复</string>
     <string name="file_chosen_label">文件:</string>
     <string name="enter_password">输入密码</string>
     <string name="select_backup_file">选择备份文件(.zaai/.backup)</string>
