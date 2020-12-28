@@ -278,9 +278,11 @@
     <string name="locations">Ubicacions</string>
     <string name="unknown">Desconegut</string>
     <string name="removed_from_favs">Eliminat dels preferits</string>
-    <string name="backup_and_restore"> Paràmetres de còpia de seguretat</string>
-    <string name="create_backup">Crear</string>
-    <string name="restore_backup">Restaurar</string>
+    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
+    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
+    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
+    <string name="create_backup">Create new backup file</string>
+    <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">Arxiu:</string>
     <string name="enter_password">Introduir la contrasenya</string>
     <string name="select_backup_file">Selecciona un fitxer de còpia de seguretat (.zaai/.backup)</string>
