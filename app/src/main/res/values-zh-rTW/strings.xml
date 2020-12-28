@@ -275,9 +275,11 @@
     <string name="locations">地點</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">自收藏中刪除</string>
-    <string name="backup_and_restore">設定備份</string>
-    <string name="create_backup">建立</string>
-    <string name="restore_backup">還原</string>
+    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
+    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
+    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
+    <string name="create_backup">Create new backup file</string>
+    <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">檔案：</string>
     <string name="enter_password">輸入密碼</string>
     <string name="select_backup_file">選擇一個備份文件（.zaai / .backup）</string>
