@@ -279,10 +279,10 @@
     <string name="unknown">Desconocido</string>
     <string name="removed_from_favs">Eliminado de favoritos</string>
     <string name="backup_and_restore">Respaldar &amp; restaurar ajustes del usuario</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_summary">Respalda los ajustes de la aplicación, inicio de sesión de cuentas y/o cuentas favoritas a un archivo de texto plano o un archivo cifrado para su posterior restauración.</string>
+    <string name="backup_warning">Si está haciendo un respaldo de los inicios de sesión de cuentas, trate el archivo como confidencial: ¡Manténgalos en algún lugar seguro!</string>
+    <string name="create_backup">Crear un nuevo archivo del respaldo</string>
+    <string name="restore_backup">Restaurar desde un archivo de respaldo existente</string>
     <string name="file_chosen_label">Archivo:</string>
     <string name="enter_password">Introduzca contraseña</string>
     <string name="select_backup_file">Seleccione un archivo de respaldo (.zaai/.backup)</string>
