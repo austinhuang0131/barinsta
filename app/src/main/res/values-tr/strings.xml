@@ -278,9 +278,11 @@
     <string name="locations">Konumlar</string>
     <string name="unknown">Bilinmeyen</string>
     <string name="removed_from_favs">Favorilerden Kaldırıldı</string>
-    <string name="backup_and_restore">Settings Backup</string>
-    <string name="create_backup">Oluştur</string>
-    <string name="restore_backup">Geri Yükle</string>
+    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
+    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
+    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
+    <string name="create_backup">Create new backup file</string>
+    <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">Dosya:</string>
     <string name="enter_password">Şifreyi gir</string>
     <string name="select_backup_file">Yedekleme dosyası seç (.zaai/.backup)</string>
