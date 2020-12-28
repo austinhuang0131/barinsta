@@ -278,9 +278,11 @@
     <string name="locations">Luoghi</string>
     <string name="unknown">Sconosciuto</string>
     <string name="removed_from_favs">Rimosso dai Preferiti</string>
-    <string name="backup_and_restore">Impostazioni Backup</string>
-    <string name="create_backup">Crea</string>
-    <string name="restore_backup">Ripristina</string>
+    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
+    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
+    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
+    <string name="create_backup">Create new backup file</string>
+    <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">File:</string>
     <string name="enter_password">Inserisci password</string>
     <string name="select_backup_file">Selezionare un file di backup (.zaai/.backup)</string>
