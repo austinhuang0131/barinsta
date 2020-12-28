@@ -279,9 +279,11 @@
     <string name="locations">جاها</string>
     <string name="unknown">ناشناخته</string>
     <string name="removed_from_favs">از علاقه مندی ها حذف شده</string>
-    <string name="backup_and_restore">Settings Backup</string>
-    <string name="create_backup">ساخت</string>
-    <string name="restore_backup">بازیابی</string>
+    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
+    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
+    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
+    <string name="create_backup">Create new backup file</string>
+    <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">پرونده:</string>
     <string name="enter_password">رمز عبور را وارد کنید</string>
     <string name="select_backup_file">یک فایل پشتیبان گیری انتخاب کنید (.zaai/.backup)</string>
