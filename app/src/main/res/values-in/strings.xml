@@ -275,9 +275,11 @@
     <string name="locations">Lokasi</string>
     <string name="unknown">Tak diketahui</string>
     <string name="removed_from_favs">Dihapus dari Kesukaan</string>
-    <string name="backup_and_restore">Settings Backup</string>
-    <string name="create_backup">Buat</string>
-    <string name="restore_backup">Pulihkan</string>
+    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
+    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
+    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
+    <string name="create_backup">Create new backup file</string>
+    <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">Berkas:</string>
     <string name="enter_password">Masukkan sandi</string>
     <string name="select_backup_file">Pilih berkas cadangan (.zaai/.backup)</string>
