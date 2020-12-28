@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
+        <item>Prednastavené systémom</item>
         <item translatable="false">English</item>
         <item translatable="false">Français [Merci à @kernoeb et @PierreM0]</item>
         <item translatable="false">Español [Gracias a @sguinetti, @akrai y @retiolus]</item>
@@ -22,13 +22,13 @@
         <item translatable="false">Nederlands [Met dank aan Lesley Natrop]</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Automaticky / podľa systému</item>
+        <item>Automaticky / podľa batérie</item>
+        <item>Tmavá</item>
+        <item>Svetlá</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Žiadna</item>
         <item>\@</item>
         <item>at</item>
         <item>on</item>
