@@ -27,6 +27,11 @@
         <item>Oscuro</item>
         <item>Claro</item>
     </string-array>
+    <string-array name="story_sorts">
+        <item>Predeterminado de Instagram (no leídos, después leídos)</item>
+        <item>Del más reciente al más antiguo</item>
+        <item>Del más antiguo al más reciente</item>
+    </string-array>
     <string-array name="separator_presets">
         <item>Ninguno</item>
         <item>\@</item>
