@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Marcar DM como vista após a visualização</string>
     <string name="dm_mark_as_seen_setting_summary">Outros membros saberão que você viu</string>
     <string name="activity_setting">Ativar notificações de atividade</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Falha ao carregar o perfil!\nTente fazer login e pesquisar novamente.</string>
     <string name="error_creating_folders">Falha ao criar pasta(s) de download.</string>
     <string name="save_to_folder">Salvar em pasta personalizada</string>
