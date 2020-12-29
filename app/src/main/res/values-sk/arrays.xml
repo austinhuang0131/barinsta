@@ -30,8 +30,8 @@
     <string-array name="separator_presets">
         <item>Žiadna</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>o</item>
+        <item>v</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
