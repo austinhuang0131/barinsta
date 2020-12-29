@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">檢視完訊息後標記為已讀</string>
     <string name="dm_mark_as_seen_setting_summary">其他成員會知道您查看了此訊息</string>
     <string name="activity_setting">啟用活動通知</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">無法載入個人檔案！\n試著重新登入並重新搜尋。</string>
     <string name="error_creating_folders">建立下載資料夾時出錯！</string>
     <string name="save_to_folder">儲存到自定義資料夾</string>
