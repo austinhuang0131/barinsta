@@ -27,6 +27,11 @@
         <item>暗黑</item>
         <item>明亮</item>
     </string-array>
+    <string-array name="story_sorts">
+        <item>Instagram default (Unread then read)</item>
+        <item>From newest to oldest</item>
+        <item>From oldest to newest</item>
+    </string-array>
     <string-array name="separator_presets">
         <item>無</item>
         <item>\@</item>
