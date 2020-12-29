@@ -234,6 +234,7 @@
     <string name="crash_title">Приложение вылетело</string>
     <string name="crash_descr">Упс.. приложение вылетело, но не беспокойтесь, вы можете отправить отчёт об ошибке разработчику, чтобы помочь ему исправить эту проблему. (:</string>
     <string name="action_notif">Активность</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Выберите изображение</string>
     <string name="uploading">Загрузка…</string>
     <string name="activity_count_prefix">У вас есть:</string>
@@ -313,6 +314,7 @@
     <string name="delete">Удалить</string>
     <string name="comment">Комментировать</string>
     <string name="layout">Формат</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Открытие публикации...</string>
     <string name="share">Поделиться</string>
     <string name="layout_style">Внешний вид</string>
