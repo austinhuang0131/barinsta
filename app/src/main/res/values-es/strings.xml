@@ -228,6 +228,7 @@
     <string name="crash_title">La aplicación se ha bloqueado</string>
     <string name="crash_descr">Vaya.. La aplicación dejó de funcionar, pero no te preocupes, puedes enviar un reporte de error al desarrollador para ayudarle a arreglar el problema. (:</string>
     <string name="action_notif">Actividad</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Seleccionar imagen</string>
     <string name="uploading">Subiendo…</string>
     <string name="activity_count_prefix">Tienes:</string>
@@ -307,6 +308,7 @@
     <string name="delete">Borrar</string>
     <string name="comment">Comentario</string>
     <string name="layout">Disposición</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Abriendo publicación...</string>
     <string name="share">Compartir</string>
     <string name="layout_style">Estilo de disposición</string>
