@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">DM\'leri gördükten sonra görüldü olarak işaretle</string>
     <string name="dm_mark_as_seen_setting_summary">Diğerleri gördüğünüzü bilecek</string>
     <string name="activity_setting">Hareketler için bildirimleri aktifleştir</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Profili yüklerken hata oluştu!\nGiriş yapıp tekrar deneyin.</string>
     <string name="error_creating_folders">İndirilenler klasörü(leri) oluşturulamadı.</string>
     <string name="save_to_folder">Şu klasöre kaydet:</string>
