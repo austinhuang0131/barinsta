@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">查看私信后将其标记为已读</string>
     <string name="dm_mark_as_seen_setting_summary">其他成员会知道你看过了</string>
     <string name="activity_setting">启用活动通知</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">快拍动态排序</string>
     <string name="error_loading_profile">载入主页时出错！\n请尝试再次登录并搜索。</string>
     <string name="error_creating_folders">创建下载文件夹时出错</string>
     <string name="save_to_folder">保存至自定义文件夹</string>
@@ -225,7 +225,7 @@
     <string name="crash_title">应用崩溃了</string>
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
     <string name="action_notif">动态</string>
-    <string name="action_archive">Story archive</string>
+    <string name="action_archive">快拍回忆</string>
     <string name="select_picture">选择图片</string>
     <string name="uploading">上传中...</string>
     <string name="activity_count_prefix">您有：</string>
@@ -305,7 +305,7 @@
     <string name="delete">删除</string>
     <string name="comment">评论</string>
     <string name="layout">布局</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">快拍动态</string>
     <string name="opening_post">正在打开帖子...</string>
     <string name="share">分享</string>
     <string name="layout_style">布局样式</string>
@@ -329,7 +329,7 @@
         <item quantity="other">%d 条评论</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="other">%s stories</item>
+        <item quantity="other">%s 个故事</item>
     </plurals>
     <string name="download_permission">未授予存储权限！</string>
 </resources>
