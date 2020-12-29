@@ -24,7 +24,7 @@
     <string name="title_discover">Prezerať</string>
     <string name="title_comments">Komentáre</string>
     <string name="title_notifications">Aktivita</string>
-    <string name="title_highlight">Highlight: %s</string>
+    <string name="title_highlight">Najlepšia: %s</string>
     <string name="update_check">Kontrolovať aktualizácie pri štarte</string>
     <string name="download_user_folder">Stiahnuť príspevky do priečinka s používateľským menom</string>
     <string name="mark_as_seen_setting">Označiť príbehy po videní ako videné</string>
@@ -209,7 +209,7 @@
     <string name="comment_view_mention_hash_search">Chcete vyhľadať hashtag?</string>
     <string name="followers_type_followers">Sledovatelia</string>
     <string name="followers_type_following">Sleduje</string>
-    <string name="followers_compare">Comparing followers &amp; following</string>
+    <string name="followers_compare">Porovnanie sledovaných &amp; sledujúcich</string>
     <string name="followers_both_following">Sledujú sa recipročne</string>
     <string name="followers_not_following">nesleduje %s</string>
     <string name="followers_not_follower">%s nesleduje</string>
