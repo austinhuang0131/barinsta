@@ -28,9 +28,9 @@
         <item>明亮</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Instagram 默认 (先未读后已读)</item>
+        <item>由新到旧</item>
+        <item>由旧到新</item>
     </string-array>
     <string-array name="separator_presets">
         <item>无</item>
