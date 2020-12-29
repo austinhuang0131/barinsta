@@ -229,6 +229,7 @@
     <string name="crash_title">एप में त्रुटि हुयी।</string>
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
     <string name="action_notif">कार्यकलाप</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">चित्र का चयन करें</string>
     <string name="uploading">अपलोड हो रहा है...</string>
     <string name="activity_count_prefix">आपके पास है:</string>
@@ -308,6 +309,7 @@
     <string name="delete">Delete</string>
     <string name="comment">Comment</string>
     <string name="layout">Layout</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Opening post...</string>
     <string name="share">Share</string>
     <string name="layout_style">Layout style</string>
