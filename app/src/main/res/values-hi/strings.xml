@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">तुम देखने के बाद सीधा संदेश को \"दिखागया\" लिखा जाएगा</string>
     <string name="dm_mark_as_seen_setting_summary">अलग सदस्य जानेंगे कि तुम देखे हो</string>
     <string name="activity_setting">क्रियाकलाप सूचनाएँ दिखायें</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">रूपरेखा लोड नहिं हो रहा है!\n लग इन करके पुनः खोज करें</string>
     <string name="error_creating_folders">डाउनलोड के फोल्डर(स) बनाने में त्रुटि आ रहा है।</string>
     <string name="save_to_folder">खुद के द्बारा निर्धारित फोल्डर पे रखें</string>
