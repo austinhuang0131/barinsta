@@ -225,6 +225,7 @@
     <string name="crash_title">应用崩溃了</string>
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
     <string name="action_notif">动态</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">选择图片</string>
     <string name="uploading">上传中...</string>
     <string name="activity_count_prefix">您有：</string>
@@ -304,6 +305,7 @@
     <string name="delete">删除</string>
     <string name="comment">评论</string>
     <string name="layout">布局</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">正在打开帖子...</string>
     <string name="share">分享</string>
     <string name="layout_style">布局样式</string>
