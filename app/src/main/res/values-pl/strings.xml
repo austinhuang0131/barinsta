@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Oznacz wiadomość jako przeczytaną</string>
     <string name="dm_mark_as_seen_setting_summary">Inni użytkownicy będą wiedzieli, że to wyświetliłeś</string>
     <string name="activity_setting">Włącz powiadomienia o aktywności</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Błąd ładowania profilu!\nSpróbuj zalogować się i wyszukać ponownie.</string>
     <string name="error_creating_folders">Błąd podczas tworzenia folderu(ów) pobierania.</string>
     <string name="save_to_folder">Zapisz w folderze niestandardowym</string>
