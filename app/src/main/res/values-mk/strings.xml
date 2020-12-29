@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Означи порака како видена при отварање.</string>
     <string name="dm_mark_as_seen_setting_summary">Другите членови ќе знаат дека си ја видел содржината на чатот.</string>
     <string name="activity_setting">Овозможи нотификации</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Сортирање на објави</string>
     <string name="error_loading_profile">Фатална Грека при отварање на профилот!\nПробајте повторно да се логирате и да пребарате.</string>
     <string name="error_creating_folders">Фатална Грешка при креирање на фолдер(и).</string>
     <string name="save_to_folder">Зачувај во сопствена папка</string>
@@ -279,11 +279,11 @@
     <string name="locations">Локации</string>
     <string name="unknown">Непознато</string>
     <string name="removed_from_favs">Отстрането од омилени</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_and_restore">Зачувај &amp; Врати Кориснички Опции</string>
+    <string name="backup_summary">Зачувај опции од апликацијата, кориснички профил, и/или информации од твоите омилени профили во обичен текст или со енкрипција за подоцна да можеш да ги вратиш.</string>
+    <string name="backup_warning">Ако зачувуваш информации за најавување, третирај го генералниот фајл како многу важен, чувај го на безбедно место!</string>
+    <string name="create_backup">Креирај новa резервна копија</string>
+    <string name="restore_backup">Поврати информации од резервна копија</string>
     <string name="file_chosen_label">Фајл:</string>
     <string name="enter_password">Внесете лозинка</string>
     <string name="select_backup_file">Одбери backup фајл (.zaai/.backup)</string>
