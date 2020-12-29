@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">نشان کردن پیام خصوصی بعنوان دیده شده بعد از دیدن</string>
     <string name="dm_mark_as_seen_setting_summary">کاربران دیگر خواهند فهمید شما این را دیده اید</string>
     <string name="activity_setting">روشن کردن آگهداد فعالیت ها</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">خطا در نمایش نمایه!\n دوباره وارد شوید و جستجو کنید.</string>
     <string name="error_creating_folders">خطا در ساخت پوشه(ها).</string>
     <string name="save_to_folder">ذخیره در پوشه سفارشی</string>
