@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">ବାର୍ତା ଦେଖିବା ପରେ \'ଦେଖାଗଲା\' ଚିହ୍ନିତ କରନ୍ତୁ |</string>
     <string name="dm_mark_as_seen_setting_summary">ଅନ୍ୟ ସଦସ୍ୟମାନେ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ।</string>
     <string name="activity_setting">କାର୍ଯ୍ୟକଳାପ ସୂଚନା ଦେଖାନ୍ତୁ</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">ପ୍ରୋଫାଇଲ୍ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି!\nପୁନର୍ବାର ଲଗ୍ ଇନ୍ କରି ଚେଷ୍ଟା କରନ୍ତୁ |</string>
     <string name="error_creating_folders">ଡ଼ାଉନଲୋଡ଼ ଫୋଲଡ଼ର ସୃଷ୍ଟି କରିବାରେ ତ୍ରୁଟି ପରିଲକ୍ଷିତ ହେଉଛି।</string>
     <string name="save_to_folder">ନିଜେ ସ୍ଥିର କରିଥିବା ଫୋଲଡର ରେ ରଖ।</string>
