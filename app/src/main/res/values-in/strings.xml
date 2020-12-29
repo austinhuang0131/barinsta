@@ -225,6 +225,7 @@
     <string name="crash_title">Aplikasi berhenti bekerja…</string>
     <string name="crash_descr">Ups! Aplikasi berhenti bekerja! Jangan khawatir, anda dapat mengirimkan laporan galat/kesalahan kepada Pengembang untuk membantunya memperbaiki masalah ini. (:</string>
     <string name="action_notif">Aktivitas</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Pilih Gambar</string>
     <string name="uploading">Mengunggah…</string>
     <string name="activity_count_prefix">Anda memiliki:</string>
@@ -304,6 +305,7 @@
     <string name="delete">Hapus</string>
     <string name="comment">Komentar</string>
     <string name="layout">Tata letak</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Membuka kiriman...</string>
     <string name="share">Bagikan</string>
     <string name="layout_style">Gaya tata letak</string>
