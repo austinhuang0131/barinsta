@@ -225,6 +225,7 @@
     <string name="crash_title">Ứng dụng đã bị crash</string>
     <string name="crash_descr">Ối.. ứng dụng đã bị crash, nhưng đừng lo bạn có thể gửi báo cáo lỗi đến cho nhà phát triển để giúp anh ấy sửa vấn đề. (:</string>
     <string name="action_notif">Hoạt động</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Chọn hình ảnh</string>
     <string name="uploading">Đang tải lên…</string>
     <string name="activity_count_prefix">Bạn có:</string>
@@ -304,6 +305,7 @@
     <string name="delete">Xóa</string>
     <string name="comment">Bình luận</string>
     <string name="layout">Giao diện</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Đang mở bài đăng...</string>
     <string name="share">Chia sẻ</string>
     <string name="layout_style">Phong cach giao diện</string>
