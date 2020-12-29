@@ -228,6 +228,7 @@
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden, um ihm zu helfen, das Problem zu beheben. (:</string>
     <string name="action_notif">Aktivität</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Bild auswählen</string>
     <string name="uploading">Hochladen…</string>
     <string name="activity_count_prefix">Du hast:</string>
@@ -307,6 +308,7 @@
     <string name="delete">Löschen</string>
     <string name="comment">Kommentar</string>
     <string name="layout">Layout</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Öffne Beitrag...</string>
     <string name="share">Teilen</string>
     <string name="layout_style">Layoutstil</string>
