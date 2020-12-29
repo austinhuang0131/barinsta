@@ -234,6 +234,7 @@
     <string name="crash_title">App crashed</string>
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
     <string name="action_notif">Activity</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Select Picture</string>
     <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">You have:</string>
@@ -313,6 +314,7 @@
     <string name="delete">Delete</string>
     <string name="comment">Comment</string>
     <string name="layout">Layout</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Opening post...</string>
     <string name="share">Share</string>
     <string name="layout_style">Layout style</string>
