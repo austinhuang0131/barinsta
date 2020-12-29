@@ -328,5 +328,8 @@
     <plurals name="comments_count">
         <item quantity="other">%d 個評論</item>
     </plurals>
+    <plurals name="stories_count">
+        <item quantity="other">%s stories</item>
+    </plurals>
     <string name="download_permission">未授予儲存空間權限</string>
 </resources>
