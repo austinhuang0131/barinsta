@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Отметить ЛС как увиденные после просмотра</string>
     <string name="dm_mark_as_seen_setting_summary">Другие участники узнают, что вы просмотрели его</string>
     <string name="activity_setting">Включить уведомления об активности</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Ошибка загрузки профиля!\nПопробуйте войти в систему и повторите поиск.</string>
     <string name="error_creating_folders">Ошибка при создании каталога(ов) загрузки.</string>
     <string name="save_to_folder">Сохранить в пользовательскую папку</string>
