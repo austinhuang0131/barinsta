@@ -228,6 +228,7 @@
     <string name="crash_title">App is gecrasht</string>
     <string name="crash_descr">Oeps.. de app is gecrasht, maar geen zorgen. Je kan een foutrapportage naar de ontwikkelaar sturen om hem te helpen met oplossen. (:</string>
     <string name="action_notif">Activiteit</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Selecteer Afbeelding</string>
     <string name="uploading">Bezig met uploaden…</string>
     <string name="activity_count_prefix">Je hebt:</string>
@@ -307,6 +308,7 @@
     <string name="delete">Verwijder</string>
     <string name="comment">Reageeer</string>
     <string name="layout">Lay-out</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Bericht openen...</string>
     <string name="share">Delen</string>
     <string name="layout_style">Lay-out stijl</string>
