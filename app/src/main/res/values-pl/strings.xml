@@ -73,10 +73,10 @@
     <string name="answer_hint">Odpowiedz…</string>
     <string name="answered_story">Odpowiedziano pomyślnie!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="one">%d response averaging %s</item>
-        <item quantity="few">%d responses averaging %s</item>
-        <item quantity="many">%d responses averaging %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="one">%d odpowiedź średnio %s</item>
+        <item quantity="few">%d odpowiedzi średnio %s</item>
+        <item quantity="many">%d odpowiedzi średnio %s</item>
+        <item quantity="other">%d odpowiedzi średnio %s</item>
     </plurals>
     <string name="slider_answer">Twoja odpowiedź: %s</string>
     <string name="reply_story">Odpowiedz na relację</string>
