@@ -228,6 +228,7 @@
     <string name="crash_title">L\'app è crashata</string>
     <string name="crash_descr">Ops... l\'app è crashata, ma non preoccuparti, puoi inviare una segnalazione dell\'errore allo sviluppatore per aiutarlo a risolvere il problema. (:</string>
     <string name="action_notif">Attività</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Seleziona Immagine</string>
     <string name="uploading">Caricamento…</string>
     <string name="activity_count_prefix">Hai:</string>
@@ -307,6 +308,7 @@
     <string name="delete">Elimina</string>
     <string name="comment">Commento</string>
     <string name="layout">Disposizione</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Aprendo il post...</string>
     <string name="share">Condividi</string>
     <string name="layout_style">Stile disposizione</string>
