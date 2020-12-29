@@ -234,6 +234,7 @@
     <string name="crash_title">Aplikacja uległa awarii</string>
     <string name="crash_descr">Ups.. aplikacja uległa awarii, ale nie martw się, możesz wysłać raport o błędzie do dewelopera, aby pomóc mu rozwiązać ten problem (:</string>
     <string name="action_notif">Aktywność</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Wybierz obraz</string>
     <string name="uploading">Przesyłanie…</string>
     <string name="activity_count_prefix">Masz:</string>
@@ -313,6 +314,7 @@
     <string name="delete">Usuń</string>
     <string name="comment">Komentarz</string>
     <string name="layout">Układ</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Otwieranie wpisu...</string>
     <string name="share">Udostępnij</string>
     <string name="layout_style">Styl układu</string>
