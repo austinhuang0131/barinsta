@@ -35,6 +35,7 @@
     <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>
     <string name="dm_mark_as_seen_setting_summary">Other members will know you viewed it</string>
     <string name="activity_setting">Enable activity notifications</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
     <string name="save_to_folder">Save to custom folder</string>
