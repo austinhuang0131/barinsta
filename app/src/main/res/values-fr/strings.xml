@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Marquer les messages privés comme vus après consultation</string>
     <string name="dm_mark_as_seen_setting_summary">Les autres utilisateurs saurons que vous l\'avez vu</string>
     <string name="activity_setting">Activer les notifications d\'activités</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Erreur de chargement du profil!\nVeuillez vous reconnecter et réessayez.</string>
     <string name="error_creating_folders">Erreur de création de dossier(s) de téléchargement.</string>
     <string name="save_to_folder">Enregistrer dans un dossier personnalisé</string>
