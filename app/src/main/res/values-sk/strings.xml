@@ -87,7 +87,7 @@
     <string name="story_mentions">Zmienky</string>
     <string name="priv_acc">Tento účet je súkromný</string>
     <string name="priv_acc_confirm">Nebudeš môcť pristúpiť k príspevkom po zrušení sledovania. Si si istý?</string>
-    <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
+    <string name="no_acc">Môžete sa prihlásiť pomocou Viac -&gt; Účet na dolnom pravom rohu alebo pokračovať v sledovaní verejných profilov bez prihlásenia!</string>
     <string name="no_acc_logged_in">Na prehliadanie príspevkov môžeš potiahnuť do strán alebo môžeš vyhľadať niečo nižšie!</string>
     <string name="empty_acc">Tento účet nemá žiadne príspevky</string>
     <string name="empty_list">Žiadne príspevky!</string>
@@ -117,7 +117,7 @@
     <string name="unrestrict">Zrušiť obmedzenie</string>
     <string name="bio_copy">Skopírovať bio</string>
     <string name="bio_translate">Preložiť bio</string>
-    <string name="status_mutual">Mutual</string>
+    <string name="status_mutual">Spoločné</string>
     <string name="status_following">Sledované</string>
     <string name="status_follower">Sledovateľ</string>
     <string name="map">Mapa</string>
@@ -285,7 +285,7 @@
     <string name="unknown">Neznáme</string>
     <string name="removed_from_favs">Vymazať z obľúbených</string>
     <string name="backup_and_restore">Zálohovať &amp; Obnoviť nastavenia používateľa</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
+    <string name="backup_summary">Zálohovať nastavenia aplikácie, informácie o účtoch a obľúbené dáta do textového súboru alebo do zašifrovaného backupp súboru.</string>
     <string name="backup_warning">Ak zálohuješ informácie o prihlásení, ulož ho niekde do bezpečia!</string>
     <string name="create_backup">Vytvoriť súbor zálohy</string>
     <string name="restore_backup">Obnoviť z existujúceho súboru zálohy</string>
