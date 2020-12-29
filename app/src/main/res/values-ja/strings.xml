@@ -43,35 +43,35 @@
     <string name="import_export">インポート/エクスポート</string>
     <string name="select_language">言語</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="other">%s Posts</item>
+        <item quantity="other">%s 件</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="other">%s Followers</item>
+        <item quantity="other">%s フォロワー</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
-    <string name="post_viewer_autoplay_video">Autoplay videos</string>
-    <string name="post_viewer_muted_autoplay">Always mute videos</string>
-    <string name="post_viewer_download_dialog_title">Select what to download</string>
-    <string name="post_viewer_download_current">Current</string>
-    <string name="post_viewer_download_album">Whole Album</string>
-    <string name="show_stories">Show stories</string>
-    <string name="no_more_stories">No more stories!</string>
+    <string name="main_posts_following">%s フォロー中 </string>
+    <string name="post_viewer_autoplay_video">動画を自動再生する</string>
+    <string name="post_viewer_muted_autoplay">動画を常にミュートする</string>
+    <string name="post_viewer_download_dialog_title">ダウンロード対象を選択</string>
+    <string name="post_viewer_download_current">この画像</string>
+    <string name="post_viewer_download_album">アルバム全体</string>
+    <string name="show_stories">ストーリーを表示</string>
+    <string name="no_more_stories">これ以上のストーリーはありません！</string>
     <string name="be_patient">Be patient!</string>
     <string name="view_story_post">View Post</string>
     <string name="view_post">View Post</string>
     <string name="spotify">Spotify</string>
-    <string name="vote_story_poll">Vote</string>
-    <string name="votef_story_poll">Vote successful!</string>
-    <string name="voted_story_poll">You have already voted!</string>
-    <string name="respond_story">Respond</string>
-    <string name="answer_hint">Answer…</string>
-    <string name="answered_story">Answer successful!</string>
+    <string name="vote_story_poll">投票</string>
+    <string name="votef_story_poll">投票しました！</string>
+    <string name="voted_story_poll">すでに投票済みです！</string>
+    <string name="respond_story">返信する</string>
+    <string name="answer_hint">回答…</string>
+    <string name="answered_story">回答しました！</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="other">%d responses averaging %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
-    <string name="reply_story">Reply to story</string>
-    <string name="reply_hint">Reply…</string>
+    <string name="slider_answer">あなたの回答: %s</string>
+    <string name="reply_story">ストーリーに返信</string>
+    <string name="reply_hint">返信…</string>
     <string name="story_quiz">Quiz</string>
     <string name="story_slider">Slider</string>
     <string name="story_quizzed">You have already answered!</string>
