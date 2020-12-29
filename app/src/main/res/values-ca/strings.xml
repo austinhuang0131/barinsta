@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Marca els missatges com a vists després de visualitzar-los</string>
     <string name="dm_mark_as_seen_setting_summary">Altres membres sabran que l\'has vist</string>
     <string name="activity_setting">Habilitar les notificacions d\'activitat</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">S\'ha produït un error en carregar el perfil!\nTorna a iniciar sessió i torna a cercar.</string>
     <string name="error_creating_folders">S\'ha produït un error en crear la(es) carpeta(es) de descàrrega.</string>
     <string name="save_to_folder">Desa a una carpeta personalitzada</string>
