@@ -343,5 +343,11 @@
         <item quantity="many">%d komentáru</item>
         <item quantity="other">%d komentárov</item>
     </plurals>
+    <plurals name="stories_count">
+        <item quantity="one">%s story</item>
+        <item quantity="few">%s stories</item>
+        <item quantity="many">%s stories</item>
+        <item quantity="other">%s stories</item>
+    </plurals>
     <string name="download_permission">Povolenia na ukladanie neboli udelené!</string>
 </resources>
