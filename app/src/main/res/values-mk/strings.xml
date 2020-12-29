@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Означи порака како видена при отварање.</string>
     <string name="dm_mark_as_seen_setting_summary">Другите членови ќе знаат дека си ја видел содржината на чатот.</string>
     <string name="activity_setting">Овозможи нотификации</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Фатална Грека при отварање на профилот!\nПробајте повторно да се логирате и да пребарате.</string>
     <string name="error_creating_folders">Фатална Грешка при креирање на фолдер(и).</string>
     <string name="save_to_folder">Зачувај во сопствена папка</string>
