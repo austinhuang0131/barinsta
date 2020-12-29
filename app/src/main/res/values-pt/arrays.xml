@@ -28,9 +28,9 @@
         <item>Claro</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Padrão do Instagram (Não lido, em seguida, lido)</item>
+        <item>Do mais novo ao mais antigo</item>
+        <item>Do mais antigo ao mais novo</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Nenhum</item>
