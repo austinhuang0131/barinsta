@@ -229,6 +229,7 @@
     <string name="crash_title">برنامه خراب شد</string>
     <string name="crash_descr">اوپسس.. برنامه خراب است، اما نگران نباشید شما میتوانید گزارش خطا را برای توسعه دهنده بفرستید برای کمک به او در درست کردن مشکل. (:</string>
     <string name="action_notif">فعالیت</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">انتخاب تصویر</string>
     <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">شما باید:</string>
@@ -308,6 +309,7 @@
     <string name="delete">هذف</string>
     <string name="comment">دیدگاه</string>
     <string name="layout">Layout</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">باز کردن پیک...</string>
     <string name="share">همرسانی</string>
     <string name="layout_style">Layout style</string>
