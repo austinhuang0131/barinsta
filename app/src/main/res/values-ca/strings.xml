@@ -228,6 +228,7 @@
     <string name="crash_title">L\'aplicació ha fallat</string>
     <string name="crash_descr">Vaja... L\'aplicació ha fallat, però no et preocupis, pots enviar un informe d\'error al desenvolupador per ajudar-lo a solucionar el problema. (:</string>
     <string name="action_notif">Activitat</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Seleccionar imatge</string>
     <string name="uploading">S\'està pujant…</string>
     <string name="activity_count_prefix">Tens:</string>
@@ -307,6 +308,7 @@
     <string name="delete">Eliminar</string>
     <string name="comment">Comentar</string>
     <string name="layout">Disposició</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Obrint publicació...</string>
     <string name="share">Compartir</string>
     <string name="layout_style">Estil de disposició</string>
