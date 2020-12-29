@@ -333,5 +333,9 @@
         <item quantity="one">%d comentari</item>
         <item quantity="other">%d comentaris</item>
     </plurals>
+    <plurals name="stories_count">
+        <item quantity="one">%s story</item>
+        <item quantity="other">%s stories</item>
+    </plurals>
     <string name="download_permission">No s\'ha concedit el permís d\'emmagatzematge!</string>
 </resources>
