@@ -234,6 +234,7 @@
     <string name="crash_title">Aplikácia spadla</string>
     <string name="crash_descr">Ups... aplikácia spadla, ale neboj sa, m§žeš poslať chybové hlásenie vývojárom a pomôcť im opraviť túto chybu. (:</string>
     <string name="action_notif">Aktivita</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Vybrať fotografiu</string>
     <string name="uploading">Nahráva sa…</string>
     <string name="activity_count_prefix">Máš:</string>
@@ -313,6 +314,7 @@
     <string name="delete">Odstrániť</string>
     <string name="comment">Komentovať</string>
     <string name="layout">Rozloženie</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Otváram príspevok...</string>
     <string name="share">Zdieľať</string>
     <string name="layout_style">Štýl rozloženia</string>
