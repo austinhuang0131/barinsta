@@ -228,6 +228,7 @@
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="action_notif">Hareketler</string>
+    <string name="action_archive">Story archive</string>
     <string name="select_picture">Resim Seç</string>
     <string name="uploading">Yükleniyor…</string>
     <string name="activity_count_prefix">Sahip olduğun:</string>
@@ -307,6 +308,7 @@
     <string name="delete">Sil</string>
     <string name="comment">Yorum yap</string>
     <string name="layout">Yerleşim</string>
+    <string name="feed_stories">Feed stories</string>
     <string name="opening_post">Gönderi açılıyor...</string>
     <string name="share">Paylaş</string>
     <string name="layout_style">Yerleşim biçimi</string>
