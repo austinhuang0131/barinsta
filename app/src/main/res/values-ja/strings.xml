@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">DMを表示後に既読としてマーク</string>
     <string name="dm_mark_as_seen_setting_summary">ほかのメンバーは、あなたが閲覧したことを知ることができます。</string>
     <string name="activity_setting">アクティビティの通知を有効化</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">プロファイルの読み込みエラー！\nログインしてもう一度検索してください。</string>
     <string name="error_creating_folders">ダウンロードフォルダの作成中にエラーが発生しました。</string>
     <string name="save_to_folder">カスタムフォルダーに保存</string>
