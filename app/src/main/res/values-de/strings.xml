@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Direktnachrichten nach dem Ansehen als gesehen markieren</string>
     <string name="dm_mark_as_seen_setting_summary">Andere Mitglieder werden wissen, dass du sie gesehen hast</string>
     <string name="activity_setting">Aktivitätsbenachrichtigungen aktivieren</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Fehler beim Laden des Profils!\nVersuche dich einzuloggen und erneut zu suchen.</string>
     <string name="error_creating_folders">Fehler beim Erstellen von Download-Ordner(n).</string>
     <string name="save_to_folder">In benutzerdefiniertem Ordner speichern</string>
