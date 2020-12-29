@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Markeer privéberichten als gelezen na bekijken</string>
     <string name="dm_mark_as_seen_setting_summary">Andere gebruikers zullen het weten als je het hebt bekeken</string>
     <string name="activity_setting">Activiteitmeldingen inschakelen</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Fout tijdens het laden van profiel!\nProbeer opnieuw in te loggen en te zoeken.</string>
     <string name="error_creating_folders">Fout bij maken download map(en).</string>
     <string name="save_to_folder">Opslaan in aangepaste map</string>
