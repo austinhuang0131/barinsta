@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">Tandai DM dibaca setelah melihat</string>
     <string name="dm_mark_as_seen_setting_summary">Peserta lain akan tahu Anda melihatnya</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Galat saat memuat profil!\nCoba masuk dan cari lagi.</string>
     <string name="error_creating_folders">Galat saat membuat folder unduhan.</string>
     <string name="save_to_folder">Simpan ke folder khusus</string>
