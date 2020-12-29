@@ -26,12 +26,12 @@
     <string name="title_notifications">Aktivita</string>
     <string name="title_highlight">Highlight: %s</string>
     <string name="update_check">Kontrolovať aktualizácie pri štarte</string>
-    <string name="download_user_folder">Download posts to username folders</string>
+    <string name="download_user_folder">Stiahnuť príspevky do priečinka s používateľským menom</string>
     <string name="mark_as_seen_setting">Označiť príbehy po videní ako videné</string>
     <string name="mark_as_seen_setting_summary">Autor príbehu bude vedieť že ste ho videli</string>
     <string name="dm_mark_as_seen_setting">Po prečítaní, označiť správu ako prečítanú</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní budú vedieť že ste ho videli</string>
-    <string name="activity_setting">Enable activity notifications</string>
+    <string name="activity_setting">Zapnúť notifikácie o aktivitách</string>
     <string name="error_loading_profile">Chyba pri načítaní profilu!\nSkúste sa pripojiť a hľadať znova.</string>
     <string name="error_creating_folders">Chyba pri vytvaraní priečinku(ov).</string>
     <string name="save_to_folder">Uložiť do vlastného priečinku</string>
@@ -54,7 +54,7 @@
         <item quantity="many">%s sledovateľa</item>
         <item quantity="other">%s sledovatelia</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s Sleduje </string>
     <string name="post_viewer_autoplay_video">Automaticky prehrávať videá</string>
     <string name="post_viewer_muted_autoplay">Vždy stíšiť videá</string>
     <string name="post_viewer_download_dialog_title">Vybrať čo stiahnuť</string>
@@ -73,10 +73,10 @@
     <string name="answer_hint">Odpoveď…</string>
     <string name="answered_story">Odpoveď úspešná!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="one">%d response averaging %s</item>
-        <item quantity="few">%d responses averaging %s</item>
-        <item quantity="many">%d responses averaging %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="one">%d odpoveď s výsledkom %s</item>
+        <item quantity="few">%d odpovede s výsledkom %s</item>
+        <item quantity="many">%d odpovede s výsledkom %s</item>
+        <item quantity="other">%d odpovedí s výsledkom %s</item>
     </plurals>
     <string name="slider_answer">Tvoja odpoveď: %s</string>
     <string name="reply_story">Odpovedať na príbeh</string>
@@ -265,7 +265,7 @@
     <string name="about_documentation_summary">Získaj pomoc, diskutuj, spoznávaj a zabav sa!</string>
     <string name="about_repository">Zobraziť zdrojový kód na GitHube</string>
     <string name="about_repository_summary">Pomôž, nahlasuj chyby a zabav sa (znova)!</string>
-    <string name="about_feedback">Send feedback by email</string>
+    <string name="about_feedback">Odoslať spätnú väzbu na email</string>
     <string name="about_category_3pt">Zdroje tretích strán</string>
     <string name="about_category_3pt_summary">Nasledovné knižnice tretích strán sú použité:</string>
     <string name="reminder">Pripomienka</string>
@@ -286,7 +286,7 @@
     <string name="removed_from_favs">Vymazať z obľúbených</string>
     <string name="backup_and_restore">Zálohovať &amp; Obnoviť nastavenia používateľa</string>
     <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
+    <string name="backup_warning">Ak zálohuješ informácie o prihlásení, ulož ho niekde do bezpečia!</string>
     <string name="create_backup">Vytvoriť súbor zálohy</string>
     <string name="restore_backup">Obnoviť z existujúceho súboru zálohy</string>
     <string name="file_chosen_label">Súbor:</string>
@@ -294,10 +294,10 @@
     <string name="select_backup_file">Zvoliť súbor zálohy (.zaai/.backup)</string>
     <string name="apply">Použiť</string>
     <string name="save">Uložiť</string>
-    <string name="caption">Caption</string>
-    <string name="edit_caption">Edit caption...</string>
-    <string name="translate_caption">Translate caption...</string>
-    <string name="player_timeline_desc">Video player timeline</string>
+    <string name="caption">Popis</string>
+    <string name="edit_caption">Upraviť popis...</string>
+    <string name="translate_caption">Preložiť popis...</string>
+    <string name="player_timeline_desc">Ovládanie videa</string>
     <string name="liking">Páči sa mi to…</string>
     <string name="like_unsuccessful">\"Páči sa mi to\" neúspešné</string>
     <string name="unlike_unsuccessful">\"Nepáči sa mi to\" neúspešné</string>
