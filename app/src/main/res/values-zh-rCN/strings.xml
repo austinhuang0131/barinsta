@@ -32,6 +32,7 @@
     <string name="dm_mark_as_seen_setting">查看私信后将其标记为已读</string>
     <string name="dm_mark_as_seen_setting_summary">其他成员会知道你看过了</string>
     <string name="activity_setting">启用活动通知</string>
+    <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">载入主页时出错！\n请尝试再次登录并搜索。</string>
     <string name="error_creating_folders">创建下载文件夹时出错</string>
     <string name="save_to_folder">保存至自定义文件夹</string>
