@@ -333,5 +333,9 @@
         <item quantity="one">%d коментар</item>
         <item quantity="other">%d коментари</item>
     </plurals>
+    <plurals name="stories_count">
+        <item quantity="one">%s story</item>
+        <item quantity="other">%s stories</item>
+    </plurals>
     <string name="download_permission">Нема дозвола за пристап на меморија!</string>
 </resources>
