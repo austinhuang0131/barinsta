@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Marca els missatges com a vists després de visualitzar-los</string>
     <string name="dm_mark_as_seen_setting_summary">Altres membres sabran que l\'has vist</string>
     <string name="activity_setting">Habilitar les notificacions d\'activitat</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Ordre de les històries</string>
     <string name="error_loading_profile">S\'ha produït un error en carregar el perfil!\nTorna a iniciar sessió i torna a cercar.</string>
     <string name="error_creating_folders">S\'ha produït un error en crear la(es) carpeta(es) de descàrrega.</string>
     <string name="save_to_folder">Desa a una carpeta personalitzada</string>
@@ -193,7 +193,7 @@
     <string name="downloader_too_many">Només pots descarregar 100 publicacions alhora. No siguis massa cobdiciós!</string>
     <string name="comment_viewer_copy_user">Copiar el nom d\'usuari</string>
     <string name="comment_viewer_copy_comment">Copiar el comentari</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
+    <string name="comment_viewer_see_likers">Veure m\'agrades del comentari</string>
     <string name="comment_viewer_reply_comment">Respondre al comentari</string>
     <string name="comment_viewer_like_comment">Donar \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_unlike_comment">Treure \"m\'agrada\" al comentari</string>
@@ -228,7 +228,7 @@
     <string name="crash_title">L\'aplicació ha fallat</string>
     <string name="crash_descr">Vaja... L\'aplicació ha fallat, però no et preocupis, pots enviar un informe d\'error al desenvolupador per ajudar-lo a solucionar el problema. (:</string>
     <string name="action_notif">Activitat</string>
-    <string name="action_archive">Story archive</string>
+    <string name="action_archive">Arxiu de històries</string>
     <string name="select_picture">Seleccionar imatge</string>
     <string name="uploading">S\'està pujant…</string>
     <string name="activity_count_prefix">Tens:</string>
@@ -280,11 +280,11 @@
     <string name="locations">Ubicacions</string>
     <string name="unknown">Desconegut</string>
     <string name="removed_from_favs">Eliminat dels preferits</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_and_restore">Còpia de seguretat &amp; Restaurar els paràmetres de l\'usuari</string>
+    <string name="backup_summary">Fer una còpia de seguretat de la configuració de l\'aplicació, la informació d\'inici de sessió del compte, i/o dades preferides a un text net o arxiu de còpia de seguretat xifrat per a la restauració posterior.</string>
+    <string name="backup_warning">Si estàs fent una còpia de seguretat de la informació d\'inici de sessió, tracta l\'arxiu com a confidencial: Mantén-lo en algun lloc segur!</string>
+    <string name="create_backup">Crear un nou fitxer de còpia de seguretat</string>
+    <string name="restore_backup">Restaurar des d\'un fitxer de còpia de seguretat existent</string>
     <string name="file_chosen_label">Arxiu:</string>
     <string name="enter_password">Introduir la contrasenya</string>
     <string name="select_backup_file">Selecciona un fitxer de còpia de seguretat (.zaai/.backup)</string>
@@ -308,7 +308,7 @@
     <string name="delete">Eliminar</string>
     <string name="comment">Comentar</string>
     <string name="layout">Disposició</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Fil d\'històries</string>
     <string name="opening_post">Obrint publicació...</string>
     <string name="share">Compartir</string>
     <string name="layout_style">Estil de disposició</string>
@@ -334,8 +334,8 @@
         <item quantity="other">%d comentaris</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="one">%s story</item>
-        <item quantity="other">%s stories</item>
+        <item quantity="one">%s història</item>
+        <item quantity="other">%s històries</item>
     </plurals>
     <string name="download_permission">No s\'ha concedit el permís d\'emmagatzematge!</string>
 </resources>
