@@ -229,6 +229,7 @@
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="action_notif">Hareketler</string>
     <string name="action_archive">Story archive</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Resim Seç</string>
     <string name="uploading">Yükleniyor…</string>
     <string name="activity_count_prefix">Sahip olduğun:</string>
