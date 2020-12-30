@@ -229,6 +229,7 @@
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden, um ihm zu helfen, das Problem zu beheben. (:</string>
     <string name="action_notif">Aktivität</string>
     <string name="action_archive">Story archive</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Bild auswählen</string>
     <string name="uploading">Hochladen…</string>
     <string name="activity_count_prefix">Du hast:</string>
