@@ -56,21 +56,21 @@
         <item quantity="other">%s Followers</item>
     </plurals>
     <string name="main_posts_following">%s Following </string>
-    <string name="post_viewer_autoplay_video">Autoplay videos</string>
-    <string name="post_viewer_muted_autoplay">Always mute videos</string>
-    <string name="post_viewer_download_dialog_title">Select what to download</string>
+    <string name="post_viewer_autoplay_video">Videa spouštět automaticky</string>
+    <string name="post_viewer_muted_autoplay">Vždy ztlumit videa</string>
+    <string name="post_viewer_download_dialog_title">Vyberte, co stáhnout</string>
     <string name="post_viewer_download_current">Current</string>
     <string name="post_viewer_download_album">Whole Album</string>
-    <string name="show_stories">Show stories</string>
-    <string name="no_more_stories">No more stories!</string>
-    <string name="be_patient">Be patient!</string>
-    <string name="view_story_post">View Post</string>
-    <string name="view_post">View Post</string>
+    <string name="show_stories">Zobrazit příběhy</string>
+    <string name="no_more_stories">Žádné další příběhy!</string>
+    <string name="be_patient">Buďte trpěliví!</string>
+    <string name="view_story_post">Zobrazit příspěvek</string>
+    <string name="view_post">Zobrazit příspěvek</string>
     <string name="spotify">Spotify</string>
-    <string name="vote_story_poll">Vote</string>
-    <string name="votef_story_poll">Vote successful!</string>
-    <string name="voted_story_poll">You have already voted!</string>
-    <string name="respond_story">Respond</string>
+    <string name="vote_story_poll">Hlasovat</string>
+    <string name="votef_story_poll">Hlasování úspěšné!</string>
+    <string name="voted_story_poll">Už jste hlasoval!</string>
+    <string name="respond_story">Odpovědět</string>
     <string name="answer_hint">Answer…</string>
     <string name="answered_story">Answer successful!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
@@ -86,7 +86,7 @@
     <string name="story_slider">Slider</string>
     <string name="story_quizzed">You have already answered!</string>
     <string name="story_mentions">Mentions</string>
-    <string name="priv_acc">This Account is Private</string>
+    <string name="priv_acc">Tento účet je soukromý</string>
     <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
@@ -104,11 +104,11 @@
     <string name="saved">Saved</string>
     <string name="tagged">Tagged</string>
     <string name="dm_person">Message</string>
-    <string name="like_without_count">Like</string>
-    <string name="unlike_without_count">Unlike</string>
+    <string name="like_without_count">To se mi líbí</string>
+    <string name="unlike_without_count">Už se mi to nelíbí</string>
     <string name="bookmark">Bookmark</string>
     <string name="unbookmark">Unbookmark</string>
-    <string name="follow">Follow</string>
+    <string name="follow">Sledovat</string>
     <string name="unfollow">Unfollow</string>
     <string name="favorite_short">Favorite</string>
     <string name="unfavorite_short">Unfavorite</string>
