@@ -235,6 +235,7 @@
     <string name="crash_descr">Упс.. приложение вылетело, но не беспокойтесь, вы можете отправить отчёт об ошибке разработчику, чтобы помочь ему исправить эту проблему. (:</string>
     <string name="action_notif">Активность</string>
     <string name="action_archive">Story archive</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Выберите изображение</string>
     <string name="uploading">Загрузка…</string>
     <string name="activity_count_prefix">У вас есть:</string>
