@@ -35,23 +35,23 @@
     <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
-    <string name="save_to_folder">Save to custom folder</string>
-    <string name="select_folder">Select folder</string>
-    <string name="theme_settings">Theme</string>
+    <string name="save_to_folder">Uložit do vlastní složky</string>
+    <string name="select_folder">Vybrat adresář</string>
+    <string name="theme_settings">Motiv</string>
     <string name="login_settings">Only affects logged-in users:</string>
     <string name="anonymous_settings">Only affects anonymous users:</string>
     <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
-    <string name="import_export">Import/Export</string>
-    <string name="select_language">Language</string>
+    <string name="import_export">Importovat/exportovat</string>
+    <string name="select_language">Jazyk</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
-        <item quantity="few">%s Posts</item>
-        <item quantity="many">%s Posts</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="one">%s příspěvek</item>
+        <item quantity="few">%s příspěvky</item>
+        <item quantity="many">%s příspěvků</item>
+        <item quantity="other">%s příspěvků</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
-        <item quantity="few">%s Followers</item>
+        <item quantity="one">%s sledující</item>
+        <item quantity="few">%s sledující</item>
         <item quantity="many">%s Followers</item>
         <item quantity="other">%s Followers</item>
     </plurals>
