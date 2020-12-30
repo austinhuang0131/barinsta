@@ -230,6 +230,7 @@
     <string name="crash_descr">اوپسس.. برنامه خراب است، اما نگران نباشید شما میتوانید گزارش خطا را برای توسعه دهنده بفرستید برای کمک به او در درست کردن مشکل. (:</string>
     <string name="action_notif">فعالیت</string>
     <string name="action_archive">Story archive</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">انتخاب تصویر</string>
     <string name="uploading">Uploading…</string>
     <string name="activity_count_prefix">شما باید:</string>
