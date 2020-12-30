@@ -229,6 +229,7 @@
     <string name="crash_descr">Oups.. l\'application a planté, mais ne vous inquiétez pas, vous pouvez envoyer un rapport d\'erreur au développeur pour l\'aider à résoudre le problème :)</string>
     <string name="action_notif">Activité</string>
     <string name="action_archive">Story archive</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Sélectionnez une image</string>
     <string name="uploading">Envoi en cours…</string>
     <string name="activity_count_prefix">Vous avez :</string>
