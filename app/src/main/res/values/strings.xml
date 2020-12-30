@@ -232,7 +232,8 @@
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
     <string name="action_notif">Activity</string>
     <string name="action_archive">Story archive</string>
-    <string name="license" translatable="false">Copyright (C) 2019  AWAiS\nCopyright (C) 2020  Austin Huang, Ammar Githam\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.</string>
+    <string name="action_ayml">Suggested users</string>
+    <string name="license" translatable="false">Copyright (C) 2019-2020 AWAiS\nCopyright (C) 2020-2021 Austin Huang &amp; Ammar Githam\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.</string>
     <string name="liability" translatable="false">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</string>
     <string name="select_picture">Select Picture</string>
     <string name="uploading">Uploading…</string>
