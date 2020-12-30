@@ -329,7 +329,7 @@
         <item quantity="other">%d comments</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="other">%s stories</item>
+        <item quantity="other">%s ストーリー</item>
     </plurals>
     <string name="download_permission">Storage permission not granted!</string>
 </resources>
