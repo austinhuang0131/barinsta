@@ -235,6 +235,7 @@
     <string name="crash_descr">Ups... aplikácia spadla, ale neboj sa, m§žeš poslať chybové hlásenie vývojárom a pomôcť im opraviť túto chybu. (:</string>
     <string name="action_notif">Aktivita</string>
     <string name="action_archive">Archív príbehov</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Vybrať fotografiu</string>
     <string name="uploading">Nahráva sa…</string>
     <string name="activity_count_prefix">Máš:</string>
