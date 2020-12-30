@@ -226,6 +226,7 @@
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
     <string name="action_notif">动态</string>
     <string name="action_archive">快拍回忆</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">选择图片</string>
     <string name="uploading">上传中...</string>
     <string name="activity_count_prefix">您有：</string>
