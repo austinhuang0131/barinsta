@@ -230,6 +230,7 @@
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
     <string name="action_notif">कार्यकलाप</string>
     <string name="action_archive">Story archive</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">चित्र का चयन करें</string>
     <string name="uploading">अपलोड हो रहा है...</string>
     <string name="activity_count_prefix">आपके पास है:</string>
