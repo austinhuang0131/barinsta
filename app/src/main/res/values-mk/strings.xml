@@ -229,6 +229,7 @@
     <string name="crash_descr">аааагхххх.. апликацијаа крашна, ама не се грижете, можете да пратите листа на фатални грешки кај програмерите за да ви помогнат да се поправи проблемот. (:</string>
     <string name="action_notif">Активности</string>
     <string name="action_archive">Story archive</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Селектирај слика</string>
     <string name="uploading">Се Прикачува…</string>
     <string name="activity_count_prefix">Вие имате:</string>
