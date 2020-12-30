@@ -229,6 +229,7 @@
     <string name="crash_descr">Vaya.. La aplicación dejó de funcionar, pero no te preocupes, puedes enviar un reporte de error al desarrollador para ayudarle a arreglar el problema. (:</string>
     <string name="action_notif">Actividad</string>
     <string name="action_archive">Archivo de historias</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Seleccionar imagen</string>
     <string name="uploading">Subiendo…</string>
     <string name="activity_count_prefix">Tienes:</string>
