@@ -112,10 +112,10 @@
     <string name="unfollow">Unfollow</string>
     <string name="favorite_short">Favorite</string>
     <string name="unfavorite_short">Unfavorite</string>
-    <string name="block">Block</string>
-    <string name="unblock">Unblock</string>
-    <string name="restrict">Restrict</string>
-    <string name="unrestrict">Unrestrict</string>
+    <string name="block">Zablokovat</string>
+    <string name="unblock">Odblokovat</string>
+    <string name="restrict">Omezit</string>
+    <string name="unrestrict">Zrušit omezení</string>
     <string name="bio_copy">Copy bio</string>
     <string name="bio_translate">Translate bio</string>
     <string name="status_mutual">Mutual</string>
