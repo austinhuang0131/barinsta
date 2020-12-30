@@ -229,6 +229,7 @@
     <string name="crash_descr">Ops... o aplicativo travou, mas não se preocupe, você pode enviar um relatório de erro para o desenvolvedor para ajudá-lo a corrigir o problema. (:</string>
     <string name="action_notif">Atividade</string>
     <string name="action_archive">Arquivo de stories</string>
+    <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Selecionar imagem</string>
     <string name="uploading">Enviando…</string>
     <string name="activity_count_prefix">Você tem:</string>
