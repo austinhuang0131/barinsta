@@ -24,13 +24,13 @@
     <string-array name="theme_presets">
         <item>Auto / Follow System</item>
         <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Tmavý</item>
+        <item>Světlý</item>
     </string-array>
     <string-array name="story_sorts">
         <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Od nejnovějších po nejstarší</item>
+        <item>Od nejstarších po nejnovější</item>
     </string-array>
     <string-array name="separator_presets">
         <item>None</item>
