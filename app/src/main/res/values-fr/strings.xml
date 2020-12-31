@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Marquer les messages privés comme vus après consultation</string>
     <string name="dm_mark_as_seen_setting_summary">Les autres utilisateurs saurons que vous l\'avez vu</string>
     <string name="activity_setting">Activer les notifications d\'activités</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Tri du flux de stories</string>
     <string name="error_loading_profile">Erreur de chargement du profil!\nVeuillez vous reconnecter et réessayez.</string>
     <string name="error_creating_folders">Erreur de création de dossier(s) de téléchargement.</string>
     <string name="save_to_folder">Enregistrer dans un dossier personnalisé</string>
@@ -44,14 +44,14 @@
     <string name="import_export">Importer/Exporter</string>
     <string name="select_language">Langues</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="one">%s Publication</item>
+        <item quantity="other">%s Publications</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
-        <item quantity="other">%s Followers</item>
+        <item quantity="one">%s Abonné</item>
+        <item quantity="other">%s Abonnés</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s Abonnements </string>
     <string name="post_viewer_autoplay_video">Lecture automatique des vidéos</string>
     <string name="post_viewer_muted_autoplay">Toujours couper le son des vidéos</string>
     <string name="post_viewer_download_dialog_title">Sélectionnez ce que vous souhaitez télécharger</string>
@@ -112,9 +112,9 @@
     <string name="unrestrict">Retirer des restrictions</string>
     <string name="bio_copy">Copier la bio</string>
     <string name="bio_translate">Traduire la bio</string>
-    <string name="status_mutual">Mutual</string>
-    <string name="status_following">Following</string>
-    <string name="status_follower">Follower</string>
+    <string name="status_mutual">Mutuel</string>
+    <string name="status_following">Abonnements</string>
+    <string name="status_follower">Abonné</string>
     <string name="map">Carte</string>
     <string name="dialog_export_btn_export">Exporter</string>
     <string name="dialog_export_btn_import">Importer</string>
@@ -143,7 +143,7 @@
     <string name="quick_access_cannot_delete_curr">Impossible de supprimer le compte actuellement utilisé</string>
     <string name="quick_access_confirm_delete">Êtes-vous sûr de vouloir supprimer \'%s\' ?</string>
     <string name="open_profile">Ouvrir le profil</string>
-    <string name="view_story">View story</string>
+    <string name="view_story">Voir la story</string>
     <string name="view_pfp">Voir la photo de profil</string>
     <string name="direct_messages_you">Vous</string>
     <string name="direct_messages_sent_link">A partagé un lien</string>
@@ -193,7 +193,7 @@
     <string name="downloader_too_many">Vous ne pouvez télécharger que 100 publications à la fois. Ne soyez pas trop gourmands !</string>
     <string name="comment_viewer_copy_user">Copier le nom d\'utilisateur</string>
     <string name="comment_viewer_copy_comment">Copier le commentaire</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
+    <string name="comment_viewer_see_likers">Voir les \"j\'aime\" du commentaire</string>
     <string name="comment_viewer_reply_comment">Répondre au commentaire</string>
     <string name="comment_viewer_like_comment">Aimer le commentaire</string>
     <string name="comment_viewer_unlike_comment">Retirer le j\'aime du commentaire</string>
@@ -228,7 +228,7 @@
     <string name="crash_title">L\'application a planté</string>
     <string name="crash_descr">Oups.. l\'application a planté, mais ne vous inquiétez pas, vous pouvez envoyer un rapport d\'erreur au développeur pour l\'aider à résoudre le problème :)</string>
     <string name="action_notif">Activité</string>
-    <string name="action_archive">Story archive</string>
+    <string name="action_archive">Archive du story</string>
     <string name="action_ayml">Utilisateurs suggérés</string>
     <string name="select_picture">Sélectionnez une image</string>
     <string name="uploading">Envoi en cours…</string>
@@ -274,18 +274,18 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">Ajouté aux favoris</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Ajouté aux favoris</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Ajouter aux favoris</string>
     <string name="accounts">Comptes</string>
     <string name="hashtags">Hashtags</string>
     <string name="locations">Lieux</string>
     <string name="unknown">Inconnu</string>
     <string name="removed_from_favs">Supprimé des favoris</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_and_restore">Paramètres de sauvegarde et de restauration</string>
+    <string name="backup_summary">Sauvegardez les paramètres de l\'application, les informations de connexion du compte et/ou les données favorites sur un fichier de sauvegarde en texte brut ou chiffré pour une restauration ultérieure.</string>
+    <string name="backup_warning">Si vous sauvegardez vos informations de connexion, traitez le fichier comme confidentiel : Gardez-les quelque part en sécurité !</string>
+    <string name="create_backup">Créer un nouveau fichier de sauvegarde</string>
+    <string name="restore_backup">Restaurer à partir du fichier de sauvegarde existant</string>
     <string name="file_chosen_label">Fichier :</string>
     <string name="enter_password">Saisissez le mot de passe</string>
     <string name="select_backup_file">Sélectionnez un fichier de sauvegarde (.zaai/.backup)</string>
