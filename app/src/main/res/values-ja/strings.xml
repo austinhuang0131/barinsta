@@ -80,7 +80,7 @@
     <string name="priv_acc">このアカウントは非公開です</string>
     <string name="priv_acc_confirm">フォローを解除すると、投稿にアクセスできなくなります。よろしいですか？</string>
     <string name="no_acc">右下にある 詳細 -&gt; アカウント でログインすることができます。または、ログインせずに公開アカウントを表示することができます！</string>
-    <string name="no_acc_logged_in">You can swipe left/right for explore/feed, or search something below!</string>
+    <string name="no_acc_logged_in">左/右にスワイプして、発見/フィードを表示したり、下から検索したりできます。</string>
     <string name="empty_acc">このアカウントには投稿がありません</string>
     <string name="empty_list">投稿はありません！</string>
     <string name="curr_version">現在のバージョン: v%s</string>
@@ -247,7 +247,7 @@
     <string name="skip_update_checkbox">次回の更新まで再表示しない</string>
     <string name="version">バージョン</string>
     <string name="pref_start_screen">起動画面</string>
-    <string name="pref_category_general">基本設定</string>
+    <string name="pref_category_general">全般</string>
     <string name="pref_category_theme">テーマ</string>
     <string name="pref_category_downloads">ダウンロード</string>
     <string name="pref_category_locale">言語</string>
@@ -256,18 +256,18 @@
     <string name="add_account">アカウントを追加</string>
     <string name="about_category_license">ライセンス(英語のみ)</string>
     <string name="about_documentation">ウェブサイトを開く</string>
-    <string name="about_documentation_summary">Get support, discuss, meet others, and have fun!</string>
+    <string name="about_documentation_summary">サポートを受けて、議論して、他の人に出会って、楽しんでください！</string>
     <string name="about_repository">GitHubでソースコードを見る</string>
-    <string name="about_repository_summary">Audit, star, report bugs, contribute, and have fun (again)!</string>
-    <string name="about_feedback">Send feedback by email</string>
-    <string name="about_category_3pt">Third-Party Attributions</string>
-    <string name="about_category_3pt_summary">The following third-party open-source libraries are used:</string>
+    <string name="about_repository_summary">監査して、スターを付けて、バグ報告して、貢献して、楽しんでください(二回目)！</string>
+    <string name="about_feedback">メールでフィードバックを送信</string>
+    <string name="about_category_3pt">サードパーティ製アプリ</string>
+    <string name="about_category_3pt_summary">以下のサードパーティー製のオープンソースライブラリが使用されています:</string>
     <string name="reminder">Reminder</string>
-    <string name="reminder_summary">Please use this app responsibly. Downloaded images should only be used for purposes allowed by applicable laws.</string>
-    <string name="light_white_theme">White</string>
-    <string name="dark_black_theme">Black</string>
-    <string name="light_theme_settings">Light theme</string>
-    <string name="dark_theme_settings">Dark theme</string>
+    <string name="reminder_summary">このアプリは自己責任で使用してください。ダウンロードした画像は、適用される法律で許可されている目的の範囲内でのみ使用することができます。</string>
+    <string name="light_white_theme">ホワイト</string>
+    <string name="dark_black_theme">ブラック</string>
+    <string name="light_theme_settings">ライトテーマ</string>
+    <string name="dark_theme_settings">ダークテーマ</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">Added to Favorites</string>
