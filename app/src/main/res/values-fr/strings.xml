@@ -229,7 +229,7 @@
     <string name="crash_descr">Oups.. l\'application a planté, mais ne vous inquiétez pas, vous pouvez envoyer un rapport d\'erreur au développeur pour l\'aider à résoudre le problème :)</string>
     <string name="action_notif">Activité</string>
     <string name="action_archive">Story archive</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_ayml">Utilisateurs suggérés</string>
     <string name="select_picture">Sélectionnez une image</string>
     <string name="uploading">Envoi en cours…</string>
     <string name="activity_count_prefix">Vous avez :</string>
@@ -292,7 +292,7 @@
     <string name="apply">Appliquer</string>
     <string name="save">Sauvegarder</string>
     <string name="caption">Légende</string>
-    <string name="edit_caption">Edit caption...</string>
+    <string name="edit_caption">Modifier la légende...</string>
     <string name="translate_caption">Traduire la légende...</string>
     <string name="player_timeline_desc">Chronologie du lecteur vidéo</string>
     <string name="liking">Entrain d\'aimer…</string>
@@ -309,7 +309,7 @@
     <string name="delete">Effacer</string>
     <string name="comment">Commentaire</string>
     <string name="layout">Disposition</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Flux de stories</string>
     <string name="opening_post">Entrain d\'ouvrir la publication...</string>
     <string name="share">Partager</string>
     <string name="layout_style">Style du modèle</string>
@@ -338,5 +338,5 @@
         <item quantity="one">%s story</item>
         <item quantity="other">%s stories</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">L\'autorisation d\'accès au stockage a été refusée !</string>
 </resources>
