@@ -313,14 +313,14 @@
     <string name="opening_post">Abrindo publicação...</string>
     <string name="share">Compartilhar</string>
     <string name="layout_style">Estilo do layout</string>
-    <string name="column_count">Colunas</string>
+    <string name="column_count">Número de colunas</string>
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="show_names">Mostrar nomes</string>
     <string name="show_avatars">Mostrar avatares</string>
-    <string name="avatar_size">Avatar</string>
+    <string name="avatar_size">Tamanho do avatar</string>
     <string name="corners">Bordas</string>
-    <string name="show_grid_gap">Grades separadas</string>
+    <string name="show_grid_gap">Separar grades</string>
     <string name="disable_animation">Desativar animação</string>
     <string name="follower_wait_to_load">Por favor, espere a tarefa atual ser concluída primeiro!</string>
     <string name="follower_start_compare">Dependendo da contagem de usuários, isso pode levar um tempo para carregar. Por favor, seja paciente.</string>
