@@ -269,23 +269,23 @@
     <string name="light_theme_settings">ライトテーマ</string>
     <string name="dark_theme_settings">ダークテーマ</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
-    <string name="dark_material_dark_theme">Material Dark</string>
-    <string name="added_to_favs">Added to Favorites</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
-    <string name="accounts">Accounts</string>
-    <string name="hashtags">Hashtags</string>
-    <string name="locations">Locations</string>
-    <string name="unknown">Unknown</string>
-    <string name="removed_from_favs">Removed from Favourites</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
-    <string name="file_chosen_label">File:</string>
-    <string name="enter_password">Enter password</string>
-    <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
+    <string name="dark_material_dark_theme">マテリアルダーク</string>
+    <string name="added_to_favs">お気に入りに追加しました</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">お気に入り</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">お気に入り</string>
+    <string name="accounts">アカウント</string>
+    <string name="hashtags">ハッシュタグ</string>
+    <string name="locations">場所</string>
+    <string name="unknown">不明</string>
+    <string name="removed_from_favs">お気に入りから削除しました</string>
+    <string name="backup_and_restore">ユーザー設定のバックアップと復元</string>
+    <string name="backup_summary">アプリの設定、アカウントのログイン情報、お気に入りのデータを、プレーンテキストまたは暗号化されたバックアップファイルにバックアップし、後で復元します。</string>
+    <string name="backup_warning">ログイン情報をバックアップする場合は、ファイルを機密扱いとして安全な場所に保管してください。</string>
+    <string name="create_backup">新しいバックアップファイルを作成</string>
+    <string name="restore_backup">既存のバックアップファイルから復元</string>
+    <string name="file_chosen_label">ファイル:</string>
+    <string name="enter_password">パスワードを入力してください</string>
+    <string name="select_backup_file">バックアップ ファイルを選択してください (.zaai/.backup)</string>
     <string name="apply">適用する</string>
     <string name="save">保存</string>
     <string name="caption">キャプション</string>
