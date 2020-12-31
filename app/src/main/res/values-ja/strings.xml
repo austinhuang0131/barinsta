@@ -174,19 +174,19 @@
     <string name="dms_action_leave_question">チャットを終了しますか?</string>
     <string name="dms_action_kick">Kick</string>
     <string name="dms_left_users">Left users</string>
-    <string name="direct_download">Download directly</string>
-    <string name="direct_download_desc">Downloads posts directly to the phone!</string>
-    <string name="direct_download_loading">Fetching post(s)</string>
-    <string name="direct_download_perms_ask">Please grant permissions and try downloading again!</string>
+    <string name="direct_download">直接ダウンロードする</string>
+    <string name="direct_download_desc">投稿を直接ダウンロード！</string>
+    <string name="direct_download_loading">投稿を取得中</string>
+    <string name="direct_download_perms_ask">権限を許可して、もう一度ダウンロードしてください！</string>
     <string name="downloader_started">ダウンロード開始</string>
     <string name="downloader_complete">ダウンロードが完了しました</string>
     <string name="downloader_downloading_post">投稿をダウンロード中…</string>
     <string name="downloader_downloading_media">メディアをダウンロード中</string>
     <string name="downloader_downloading_pfp">プロフィール画像をダウンロード中</string>
-    <string name="downloader_downloaded_in_folder">File downloaded in Downloads folder!</string>
-    <string name="downloader_unknown_error">Unknown error occurred!!!</string>
-    <string name="downloader_error_creating_folder">Error creating folder!</string>
-    <string name="downloader_error_download_file">Error downloading file</string>
+    <string name="downloader_downloaded_in_folder">ダウンロードフォルダにファイルがダウンロードされました!</string>
+    <string name="downloader_unknown_error">不明なエラーが発生しました！</string>
+    <string name="downloader_error_creating_folder">フォルダの作成中にエラーが発生しました！</string>
+    <string name="downloader_error_download_file">ダウンロード中にエラーが発生しました</string>
     <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
     <string name="comment_viewer_copy_user">Copy username</string>
     <string name="comment_viewer_copy_comment">Copy comment</string>
@@ -231,10 +231,10 @@
     <string name="uploading">アップロード中…</string>
     <string name="activity_count_prefix">You have:</string>
     <string name="activity_count_relationship">%d 人のフォロワー</string>
-    <string name="activity_count_comments">%d 個のコメント</string>
+    <string name="activity_count_comments">%d コメント</string>
     <string name="activity_count_commentlikes">%d comment likes</string>
     <string name="activity_count_usertags">%d 個のユーザータグ</string>
-    <string name="activity_count_likes">%d 個のいいね！</string>
+    <string name="activity_count_likes">%d いいね！</string>
     <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
     <string name="feed">フィード</string>
     <string name="profile">プロフィール</string>
@@ -327,7 +327,7 @@
         <item quantity="other">%d いいね！</item>
     </plurals>
     <plurals name="comments_count">
-        <item quantity="other">%d 個のコメント</item>
+        <item quantity="other">%d コメント</item>
     </plurals>
     <plurals name="stories_count">
         <item quantity="other">%s ストーリー</item>
