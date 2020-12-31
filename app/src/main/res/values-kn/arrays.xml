@@ -21,6 +21,7 @@
         <item translatable="false">हिन्दी</item>
         <item translatable="false">Nederlands [Met dank aan Lesley Natrop]</item>
         <item translatable="false">Slovenčina [Vďaka @CrafterSvK]</item>
+        <item translatable="false">日本語 [協力 ysakamoto]</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Follow System</item>
