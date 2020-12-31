@@ -237,7 +237,7 @@
     <string name="activity_count_likes">%d いいね！</string>
     <string name="activity_notloggedin">この通知をクリックする前にログアウトしましたか？</string>
     <string name="feed">フィード</string>
-    <string name="profile">プロフ</string>
+    <string name="profile">ユーザー</string>
     <string name="more">詳細</string>
     <string name="title_dm">DM</string>
     <string name="number_selected">%d 件選択済み</string>
