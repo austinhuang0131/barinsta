@@ -30,9 +30,9 @@
         <item>Clair</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Instagram par défaut (Non lu puis lu)</item>
+        <item>Du plus récent au plus ancien</item>
+        <item>Du plus ancien au plus récent</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Aucun</item>
