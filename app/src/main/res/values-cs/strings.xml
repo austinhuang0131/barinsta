@@ -142,10 +142,10 @@
     <string name="desktop_2fa">Desktop Mode</string>
     <string name="time_settings_title_custom">Use custom format</string>
     <string name="time_settings_title_separator">Separator</string>
-    <string name="time_settings_title_time_format">Time Format</string>
-    <string name="time_settings_title_date_format">Date Format</string>
-    <string name="time_settings_title_preview">Preview</string>
-    <string name="time_settings_swap_time">Swap Time and Date positions</string>
+    <string name="time_settings_title_time_format">Formát času</string>
+    <string name="time_settings_title_date_format">Formát datumu</string>
+    <string name="time_settings_title_preview">Náhled</string>
+    <string name="time_settings_swap_time">Prohodit pozice času a datumu</string>
     <string name="quick_access_cannot_delete_curr">Nemůžete smazat aktuálně používaný účet</string>
     <string name="quick_access_confirm_delete">Opravdu chcete smazat \'%s\'?</string>
     <string name="open_profile">Otevřít profil</string>
@@ -179,9 +179,9 @@
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_action_success">Great success!</string>
-    <string name="dms_action_leave">Leave</string>
-    <string name="dms_action_leave_question">Leave this chat?</string>
-    <string name="dms_action_kick">Kick</string>
+    <string name="dms_action_leave">Opustit</string>
+    <string name="dms_action_leave_question">Chcete opustit tento chat?</string>
+    <string name="dms_action_kick">Vyhodit</string>
     <string name="dms_left_users">Left users</string>
     <string name="direct_download">Download directly</string>
     <string name="direct_download_desc">Downloads posts directly to the phone!</string>
