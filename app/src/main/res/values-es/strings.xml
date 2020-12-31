@@ -273,7 +273,7 @@
     <string name="dark_theme_settings">Tema oscuro</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material oscuro</string>
-    <string name="added_to_favs">Añadido a favoritos</string>
+    <string name="added_to_favs">En favoritos</string>
     <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">En favoritos</string>
     <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Agregar a favoritos</string>
     <string name="accounts">Cuentas</string>
@@ -336,7 +336,7 @@
     </plurals>
     <plurals name="stories_count">
         <item quantity="one">%s historia</item>
-        <item quantity="other">%s stories</item>
+        <item quantity="other">%s historias</item>
     </plurals>
     <string name="download_permission">¡Permiso de almacenamiento no concecido!</string>
 </resources>
