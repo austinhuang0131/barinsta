@@ -29,9 +29,9 @@
         <item>ライト</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Instagramのデフォルト(未読を上位に)</item>
+        <item>最新を上位に</item>
+        <item>古いものを上位に</item>
     </string-array>
     <string-array name="separator_presets">
         <item>なし</item>
