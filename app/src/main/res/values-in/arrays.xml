@@ -30,9 +30,9 @@
         <item>Terang</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Bawaan Instagram (Belum terbaca lalu terbaca)</item>
+        <item>Terbaru ke terlama</item>
+        <item>Terlama ke terbaru</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Tidak ada</item>
