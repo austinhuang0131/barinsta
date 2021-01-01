@@ -35,7 +35,7 @@
     <string name="story_sort_setting">Orden de las historias</string>
     <string name="error_loading_profile">¡Error al cargar el perfil!\nPrueba iniciando sesión y buscando de nuevo.</string>
     <string name="error_creating_folders">Error creando carpeta(s) de descarga.</string>
-    <string name="save_to_folder">Guardar en carpeta personalizada</string>
+    <string name="save_to_folder">Descargar en carpeta personalizada</string>
     <string name="select_folder">Seleccionar carpeta</string>
     <string name="theme_settings">Tema</string>
     <string name="login_settings">Sólo afecta a cuentas que han iniciado sesión:</string>
