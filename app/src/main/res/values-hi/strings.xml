@@ -288,7 +288,7 @@
     <string name="create_backup">Create new backup file</string>
     <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">File:</string>
-    <string name="enter_password">Enter password</string>
+    <string name="enter_password">पासवर्ड दर्ज करें</string>
     <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
     <string name="apply">Apply</string>
     <string name="save">Save</string>
