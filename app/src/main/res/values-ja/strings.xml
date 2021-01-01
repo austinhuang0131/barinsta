@@ -233,7 +233,7 @@
     <string name="activity_count_relationship">%d 人のフォロワー</string>
     <string name="activity_count_comments">%d コメント</string>
     <string name="activity_count_commentlikes">%d 個のコメントへのいいね！</string>
-    <string name="activity_count_usertags">%d 個のユーザータグ</string>
+    <string name="activity_count_usertags">%d 個のタグ付け</string>
     <string name="activity_count_likes">%d いいね！</string>
     <string name="activity_notloggedin">この通知をクリックする前にログアウトしましたか？</string>
     <string name="feed">フィード</string>
