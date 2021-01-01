@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">檢視完訊息後標記為已讀</string>
     <string name="dm_mark_as_seen_setting_summary">其他成員會知道您查看了此訊息</string>
     <string name="activity_setting">啟用活動通知</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">動態貼文排序</string>
     <string name="error_loading_profile">無法載入個人檔案！\n試著重新登入並重新搜尋。</string>
     <string name="error_creating_folders">建立下載資料夾時出錯！</string>
     <string name="save_to_folder">儲存到自定義資料夾</string>
@@ -70,7 +70,7 @@
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="other">%d responses averaging %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">你的答案: %s</string>
     <string name="reply_story">回覆限時動態</string>
     <string name="reply_hint">回覆…</string>
     <string name="story_quiz">測驗</string>
@@ -194,7 +194,7 @@
     <string name="comment_viewer_reply_comment">回覆評論</string>
     <string name="comment_viewer_like_comment">對此評論說讚</string>
     <string name="comment_viewer_unlike_comment">收回評論的讚</string>
-    <string name="comment_viewer_translate_comment">Translate comment</string>
+    <string name="comment_viewer_translate_comment">翻譯評論</string>
     <string name="comment_viewer_delete_comment">刪除評論</string>
     <string name="comment_send_empty_comment">無空評論！</string>
     <string name="comment_view_mention_user_search">您要搜尋用戶名嗎？</string>
@@ -226,7 +226,7 @@
     <string name="crash_descr">喔噢！程式當掉了！別擔心，您可以向開發人員發送錯誤報告以協助解決此問題！ (:</string>
     <string name="action_notif">動態</string>
     <string name="action_archive">Story archive</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_ayml">推薦用戶</string>
     <string name="select_picture">選擇圖片</string>
     <string name="uploading">上傳中…</string>
     <string name="activity_count_prefix">您有</string>
@@ -271,18 +271,18 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">咖啡棕</string>
     <string name="dark_material_dark_theme">暗黑 Material</string>
     <string name="added_to_favs">已加入至收藏夾</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">收藏</string>
     <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">收藏</string>
     <string name="accounts">帳號</string>
     <string name="hashtags">主題標籤</string>
     <string name="locations">地點</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">自收藏中刪除</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
+    <string name="backup_and_restore">設定備份及還原</string>
     <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
     <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="create_backup">建立備份檔</string>
+    <string name="restore_backup">以備份檔還原</string>
     <string name="file_chosen_label">檔案：</string>
     <string name="enter_password">輸入密碼</string>
     <string name="select_backup_file">選擇一個備份文件（.zaai / .backup）</string>
