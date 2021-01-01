@@ -31,8 +31,8 @@
     </string-array>
     <string-array name="story_sorts">
         <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Vom Neuesten zum Ältesten</item>
+        <item>Vom Ältesten zum Neuesten</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Kein(e)</item>
