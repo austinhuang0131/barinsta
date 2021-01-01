@@ -30,9 +30,9 @@
         <item>明亮</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Instagram 預設 (先顯示未讀、再顯示已讀)</item>
+        <item>從最新到最舊</item>
+        <item>從最舊到最新</item>
     </string-array>
     <string-array name="separator_presets">
         <item>無</item>
