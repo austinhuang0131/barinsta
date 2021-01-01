@@ -258,7 +258,7 @@
     <string name="about_documentation">造訪我們的網站</string>
     <string name="about_documentation_summary">取得支援、與他人討論、結識他人並享受樂趣！</string>
     <string name="about_repository">在 GitHub 上查看我們的開源程式碼</string>
-    <string name="about_repository_summary">審核、Star、回報錯誤、做出貢獻並從中享受樂趣 (again)！</string>
+    <string name="about_repository_summary">審核、Star、回報錯誤、做出貢獻並從中再次享受樂趣！</string>
     <string name="about_feedback">透過電子郵件發送意見</string>
     <string name="about_category_3pt">第三方程式庫</string>
     <string name="about_category_3pt_summary">我們使用了下列第三方開放原始碼程式庫：</string>
@@ -271,7 +271,7 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">咖啡棕</string>
     <string name="dark_material_dark_theme">暗黑 Material</string>
     <string name="added_to_favs">已加入至收藏夾</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">收藏</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">已收藏</string>
     <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">收藏</string>
     <string name="accounts">帳號</string>
     <string name="hashtags">主題標籤</string>
@@ -332,5 +332,5 @@
     <plurals name="stories_count">
         <item quantity="other">%s stories</item>
     </plurals>
-    <string name="download_permission">未授予儲存空間權限</string>
+    <string name="download_permission">儲存空間存取權限被拒</string>
 </resources>
