@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Tandai DM dibaca setelah melihat</string>
     <string name="dm_mark_as_seen_setting_summary">Peserta lain akan tahu Anda melihatnya</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
-    <string name="story_sort_setting">Urutan umpan story</string>
+    <string name="story_sort_setting">Urutan umpan cerita</string>
     <string name="error_loading_profile">Galat saat memuat profil!\nCoba masuk dan cari lagi.</string>
     <string name="error_creating_folders">Galat saat membuat folder unduhan.</string>
     <string name="save_to_folder">Simpan ke folder khusus</string>
@@ -55,8 +55,8 @@
     <string name="post_viewer_download_dialog_title">Pilih apa yang akan diunduh</string>
     <string name="post_viewer_download_current">Foto ini saja</string>
     <string name="post_viewer_download_album">Semua foto</string>
-    <string name="show_stories">Tampilkan story</string>
-    <string name="no_more_stories">Story sampai di sini!</string>
+    <string name="show_stories">Tampilkan cerita</string>
+    <string name="no_more_stories">Cerita sampai di sini!</string>
     <string name="be_patient">Mohon bersabar!</string>
     <string name="view_story_post">Lihat Kiriman</string>
     <string name="view_post">Lihat Kiriman</string>
@@ -68,9 +68,9 @@
     <string name="answer_hint">Balasan…</string>
     <string name="answered_story">Berhasil menjawab!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="other">%d tanggapan, rata-rata %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Tanggapan Anda: %s</string>
     <string name="reply_story">Balas cerita</string>
     <string name="reply_hint">Balas…</string>
     <string name="story_quiz">Kuis</string>
@@ -107,11 +107,11 @@
     <string name="unblock">Batalkan Blokir</string>
     <string name="restrict">Batasi</string>
     <string name="unrestrict">Hilangkan Batasan</string>
-    <string name="bio_copy">Copy bio</string>
-    <string name="bio_translate">Translate bio</string>
+    <string name="bio_copy">Salin bio</string>
+    <string name="bio_translate">Terjemahkan bio</string>
     <string name="status_mutual">Mutual</string>
-    <string name="status_following">Following</string>
-    <string name="status_follower">Follower</string>
+    <string name="status_following">Mengikuti</string>
+    <string name="status_follower">Pengikut</string>
     <string name="map">Peta</string>
     <string name="dialog_export_btn_export">Ekspor</string>
     <string name="dialog_export_btn_import">Impor</string>
@@ -140,7 +140,7 @@
     <string name="quick_access_cannot_delete_curr">Tidak dapat menghapus akun yang sedang digunakan</string>
     <string name="quick_access_confirm_delete">Anda yakin ingin menghapus \'%s\'?</string>
     <string name="open_profile">Buka profil</string>
-    <string name="view_story">View story</string>
+    <string name="view_story">Lihat cerita</string>
     <string name="view_pfp">Lihat foto profil</string>
     <string name="direct_messages_you">Anda</string>
     <string name="direct_messages_sent_link">Membagikan alamat web</string>
@@ -190,11 +190,11 @@
     <string name="downloader_too_many">Anda hanya dapat mengunduh 100 kiriman saat bersamaan. Jangan serakah-serakah!</string>
     <string name="comment_viewer_copy_user">Salin nama pengguna</string>
     <string name="comment_viewer_copy_comment">Salin komentar</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
+    <string name="comment_viewer_see_likers">Lihat penyuka komentar</string>
     <string name="comment_viewer_reply_comment">Balas komentar</string>
     <string name="comment_viewer_like_comment">Suka komentar</string>
     <string name="comment_viewer_unlike_comment">Batal suka komentar</string>
-    <string name="comment_viewer_translate_comment">Translate comment</string>
+    <string name="comment_viewer_translate_comment">Terjemahkan komentar</string>
     <string name="comment_viewer_delete_comment">Hapus komentar</string>
     <string name="comment_send_empty_comment">Ups, komentar kosong!</string>
     <string name="comment_view_mention_user_search">Apakah anda ingin mencari nama pengguna ini?</string>
@@ -225,8 +225,8 @@
     <string name="crash_title">Aplikasi berhenti bekerja…</string>
     <string name="crash_descr">Ups! Aplikasi berhenti bekerja! Jangan khawatir, anda dapat mengirimkan laporan galat/kesalahan kepada Pengembang untuk membantunya memperbaiki masalah ini. (:</string>
     <string name="action_notif">Aktivitas</string>
-    <string name="action_archive">Story archive</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_archive">Arsip cerita</string>
+    <string name="action_ayml">Pengguna yang disarankan</string>
     <string name="select_picture">Pilih Gambar</string>
     <string name="uploading">Mengunggah…</string>
     <string name="activity_count_prefix">Anda memiliki:</string>
@@ -271,26 +271,26 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">Ditambahkan ke Kesukaan</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Ditambahkan ke Favorit</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorit</string>
     <string name="accounts">Akun</string>
     <string name="hashtags">Tagar</string>
     <string name="locations">Lokasi</string>
     <string name="unknown">Tak diketahui</string>
     <string name="removed_from_favs">Dihapus dari Kesukaan</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_and_restore">Cadangkan &amp; Kembalikan Pengaturan Pengguna</string>
+    <string name="backup_summary">Cadangkan pengaturan aplikasi, informasi login akun, dan/atau data favorit ke berkas cadangan teks polos atau terenkripsi untuk dikembalikan nanti.</string>
+    <string name="backup_warning">Jika Anda mencadangkan informasi login, perlakukan berkas cadangan sebagai berkas penting: Simpan di tempat yang aman!</string>
+    <string name="create_backup">Buat berkas cadangan baru</string>
+    <string name="restore_backup">Kembalikan dari berkas cadangan yang ada</string>
     <string name="file_chosen_label">Berkas:</string>
     <string name="enter_password">Masukkan sandi</string>
     <string name="select_backup_file">Pilih berkas cadangan (.zaai/.backup)</string>
     <string name="apply">Terapkan</string>
     <string name="save">Simpan</string>
     <string name="caption">Keterangan</string>
-    <string name="edit_caption">Edit caption...</string>
-    <string name="translate_caption">Translate caption...</string>
+    <string name="edit_caption">Sunting keterangan...</string>
+    <string name="translate_caption">Terjemahkan keterangan...</string>
     <string name="player_timeline_desc">Bilah waktu pemutar video</string>
     <string name="liking">Menyukai…</string>
     <string name="like_unsuccessful">Gagal menyukai</string>
@@ -306,7 +306,7 @@
     <string name="delete">Hapus</string>
     <string name="comment">Komentar</string>
     <string name="layout">Tata letak</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Umpan cerita</string>
     <string name="opening_post">Membuka kiriman...</string>
     <string name="share">Bagikan</string>
     <string name="layout_style">Gaya tata letak</string>
@@ -320,9 +320,9 @@
     <string name="show_grid_gap">Tampilkan batas kisi</string>
     <string name="disable_animation">Matikan animasi</string>
     <string name="follower_wait_to_load">Harap tunggu hingga tugas saat ini selesai!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
-    <string name="post_not_found">Post not found!</string>
-    <string name="no_external_app_url">No app found which opens urls</string>
+    <string name="follower_start_compare">Bergantung pada akun pengguna, ini dapat memakan waktu beberapa saat. Mohon bersabar.</string>
+    <string name="post_not_found">Kiriman tidak ditemukan!</string>
+    <string name="no_external_app_url">Aplikasi untuk membuka url tidak ditemukan</string>
     <plurals name="likes_count">
         <item quantity="other">%d suka</item>
     </plurals>
@@ -330,7 +330,7 @@
         <item quantity="other">%d komentar</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="other">%s stories</item>
+        <item quantity="other">%s cerita</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">Izin penyimpanan ditolak!</string>
 </resources>
