@@ -306,7 +306,7 @@
     <string name="delete">刪除</string>
     <string name="comment">評論</string>
     <string name="layout">佈局</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">限時動態</string>
     <string name="opening_post">開啟貼文中…</string>
     <string name="share">分享</string>
     <string name="layout_style">佈局樣式</string>
