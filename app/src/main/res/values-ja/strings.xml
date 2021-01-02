@@ -262,7 +262,7 @@
     <string name="about_feedback">メールでフィードバックを送信</string>
     <string name="about_category_3pt">サードパーティ製アプリ</string>
     <string name="about_category_3pt_summary">以下のサードパーティー製のオープンソースライブラリが使用されています:</string>
-    <string name="reminder">Reminder</string>
+    <string name="reminder">注意:</string>
     <string name="reminder_summary">このアプリは自己責任で使用してください。ダウンロードした画像は、適用される法律で許可されている目的の範囲内でのみ使用することができます。</string>
     <string name="light_white_theme">ホワイト</string>
     <string name="dark_black_theme">ブラック</string>
@@ -286,7 +286,7 @@
     <string name="file_chosen_label">ファイル:</string>
     <string name="enter_password">パスワードを入力してください</string>
     <string name="select_backup_file">バックアップ ファイルを選択してください (.zaai/.backup)</string>
-    <string name="apply">適用する</string>
+    <string name="apply">適用</string>
     <string name="save">保存</string>
     <string name="caption">キャプション</string>
     <string name="edit_caption">キャプションを編集...</string>
