@@ -25,7 +25,7 @@
     </string-array>
     <string-array name="theme_presets">
         <item>自動/システム設定に従う</item>
-        <item>自動 / バッテリー設定に従う</item>
+        <item>自動/バッテリー設定に従う</item>
         <item>ダーク</item>
         <item>ライト</item>
     </string-array>
@@ -37,8 +37,8 @@
     <string-array name="separator_presets">
         <item>なし</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item></item>
+        <item></item>
         <item>\|</item>
         <item>-</item>
     </string-array>
