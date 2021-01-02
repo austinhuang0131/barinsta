@@ -84,7 +84,7 @@
     <string name="priv_acc_confirm">ଆପଣ ଅନୁସରଣ ନ କଲେ ପୋଷ୍ଟଗୁଡିକୁ ପ୍ରବେଶ କରିବାକୁ ସମର୍ଥ ହେବେ ନାହିଁ! ଆପଣ ନିଶ୍ଚିତ କି?</string>
     <string name="no_acc">ଆପଣ ନିମ୍ନ - ଡାହାଣ କୋଣରେ ଅଧିକ -&gt; ଆକାଉଣ୍ଟ୍ ମାଧ୍ୟମରେ ଲଗ୍ ଇନ୍ କରିପାରିବେ କିମ୍ବା ଆପଣ ଲଗ୍ଇନ୍ ବିନା ସର୍ବସାଧାରଣ ଆକାଉଣ୍ଟ୍ ଦେଖିପାରିବେ |!</string>
     <string name="no_acc_logged_in">ଅନୁସନ୍ଧାନ / ଫିଡ୍ ପାଇଁ ଆପଣ ବାମ / ଡାହାଣକୁ ସ୍ୱାଇପ୍ କରିପାରିବେ, କିମ୍ବା ନିମ୍ନରେ କିଛି ଖୋଜି କରିପାରିବେ!</string>
-    <string name="empty_acc">This Account has No Posts</string>
+    <string name="empty_acc">ଏହି ଆକାଉଣ୍ଟରେ କୌଣସି ପୋଷ୍ଟ ନାହିଁ |</string>
     <string name="empty_list">No Such Posts!</string>
     <string name="curr_version">Current version: v%s</string>
     <string name="read_more">read more…</string>
