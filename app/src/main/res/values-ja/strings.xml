@@ -196,7 +196,7 @@
     <string name="comment_viewer_unlike_comment">コメントのいいね！を取り消す</string>
     <string name="comment_viewer_translate_comment">コメントを翻訳</string>
     <string name="comment_viewer_delete_comment">コメントを削除</string>
-    <string name="comment_send_empty_comment">No empty comments!</string>
+    <string name="comment_send_empty_comment">メッセージが未入力です！</string>
     <string name="comment_view_mention_user_search">ユーザー名を検索しますか？</string>
     <string name="comment_view_mention_hash_search">ハッシュタグを検索しますか？</string>
     <string name="followers_type_followers">フォロワー</string>
