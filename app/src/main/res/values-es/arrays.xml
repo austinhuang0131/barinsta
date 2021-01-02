@@ -3,25 +3,25 @@
     <string-array name="languages">
         <item>Predeterminado del sistema</item>
         <item translatable="false">English</item>
-        <item translatable="false">Français [Merci à @kernoeb et @PierreM0]</item>
-        <item translatable="false">Español [Gracias a @sguinetti, @akrai y @retiolus]</item>
+        <item translatable="false">Français</item>
+        <item translatable="false">Español</item>
         <item translatable="false">简体中文</item>
-        <item translatable="false">Bahasa Indonesia [Terima kasih @Galang23]</item>
-        <item translatable="false">Italiano [Grazie a @RAR_Ramar e GiorgioHerbie]</item>
-        <item translatable="false">Deutsch [Danke an @peterge1998]</item>
-        <item translatable="false">Polski [Podziękowania dla @Lego8486]</item>
-        <item translatable="false">Türkçe [@faydin90 tarafından]</item>
-        <item translatable="false">Português (Brasil) [Obrigado @wagnim, @RickyM7 e @cizordj]</item>
-        <item translatable="false">پارسی [ با سپاس از farzadx@ ]</item>
-        <item translatable="false">Македонски [Благодарност до @snajdovski]</item>
-        <item translatable="false">Tiếng Việt [bởi Yato Fouze]</item>
-        <item translatable="false">繁體中文 [感謝 @Still34]</item>
-        <item translatable="false">Català [Gràcies a @retiolus]</item>
-        <item translatable="false">Русский [Спасибо @rikishi0071]</item>
+        <item translatable="false">Bahasa Indonesia</item>
+        <item translatable="false">Italiano</item>
+        <item translatable="false">Deutsch</item>
+        <item translatable="false">Polski</item>
+        <item translatable="false">Türkçe</item>
+        <item translatable="false">Português (Brasil)</item>
+        <item translatable="false">پارسی</item>
+        <item translatable="false">Македонски</item>
+        <item translatable="false">Tiếng Việt</item>
+        <item translatable="false">繁體中文</item>
+        <item translatable="false">Català</item>
+        <item translatable="false">Русский</item>
         <item translatable="false">हिन्दी</item>
-        <item translatable="false">Nederlands [Met dank aan Lesley Natrop]</item>
-        <item translatable="false">Slovenčina [Vďaka @CrafterSvK]</item>
-        <item translatable="false">日本語 [協力 ysakamoto]</item>
+        <item translatable="false">Nederlands</item>
+        <item translatable="false">Slovenčina</item>
+        <item translatable="false">日本語</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Auto / Seguir al sistema</item>
