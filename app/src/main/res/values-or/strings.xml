@@ -96,9 +96,9 @@
     <string name="time_settings">ଦିନାଙ୍କ ସ୍ୱରୂପ</string>
     <string name="liked">ପସନ୍ଦ କରିଛନ୍ତି</string>
     <string name="saved">ସଞ୍ଚୟ ହେଲା</string>
-    <string name="tagged">Tagged</string>
-    <string name="dm_person">Message</string>
-    <string name="like_without_count">Like</string>
+    <string name="tagged">ଟ୍ୟାଗ୍ କରିଛନ୍ତି</string>
+    <string name="dm_person">ସନ୍ଦେଶ</string>
+    <string name="like_without_count">ପସନ୍ଦ କରନ୍ତୁ</string>
     <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Bookmark</string>
     <string name="unbookmark">Unbookmark</string>
