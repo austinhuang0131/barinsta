@@ -154,7 +154,7 @@
     <string name="direct_messages_mention_story">Те спомна на приказната</string>
     <string name="dms_inbox_raven_message_unknown"><i>Овој вид на порака е неподржан</i></string>
     <string name="dms_inbox_open_link">Отвори линк</string>
-    <string name="dms_inbox_copy_text">Копрај текст</string>
+    <string name="dms_inbox_copy_text">Копирај текст</string>
     <string name="dms_inbox_download">Превземи содржина</string>
     <string name="dms_inbox_like">Лајни порака</string>
     <string name="dms_inbox_unlike">Одлајкни порака</string>
