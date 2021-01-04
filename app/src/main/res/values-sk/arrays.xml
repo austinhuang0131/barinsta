@@ -30,9 +30,9 @@
         <item>Svetlá</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Ako Instagram (Najprv neprečítané potom prečítané)</item>
+        <item>Od najnovších po najstaršie</item>
+        <item>Od najstarších po najnovšie</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Žiadna</item>
