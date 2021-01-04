@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="action_about">O</string>
+    <string name="action_about">O aplikácii</string>
     <string name="action_dms">Správy</string>
     <string name="action_settings">Nastavenia</string>
     <string name="action_download">Stiahnuť</string>
@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Po prečítaní, označiť správu ako prečítanú</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní budú vedieť že ste ho videli</string>
     <string name="activity_setting">Zapnúť notifikácie o aktivitách</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Zoradenie príbehov</string>
     <string name="error_loading_profile">Chyba pri načítaní profilu!\nSkúste sa pripojiť a hľadať znova.</string>
     <string name="error_creating_folders">Chyba pri vytvaraní priečinku(ov).</string>
     <string name="save_to_folder">Uložiť do vlastného priečinku</string>
@@ -235,7 +235,7 @@
     <string name="crash_descr">Ups... aplikácia spadla, ale neboj sa, m§žeš poslať chybové hlásenie vývojárom a pomôcť im opraviť túto chybu. (:</string>
     <string name="action_notif">Aktivita</string>
     <string name="action_archive">Archív príbehov</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_ayml">Používatelia ktorých možno poznáte</string>
     <string name="select_picture">Vybrať fotografiu</string>
     <string name="uploading">Nahráva sa…</string>
     <string name="activity_count_prefix">Máš:</string>
@@ -287,7 +287,7 @@
     <string name="locations">Miesta</string>
     <string name="unknown">Neznáme</string>
     <string name="removed_from_favs">Vymazať z obľúbených</string>
-    <string name="backup_and_restore">Zálohovať &amp; Obnoviť nastavenia používateľa</string>
+    <string name="backup_and_restore">Zálohovať/obnoviť nastavenia používateľa</string>
     <string name="backup_summary">Zálohovať nastavenia aplikácie, informácie o účtoch a obľúbené dáta do textového súboru alebo do zašifrovaného backupp súboru.</string>
     <string name="backup_warning">Ak zálohuješ informácie o prihlásení, ulož ho niekde do bezpečia!</string>
     <string name="create_backup">Vytvoriť súbor zálohy</string>
@@ -315,7 +315,7 @@
     <string name="delete">Odstrániť</string>
     <string name="comment">Komentovať</string>
     <string name="layout">Rozloženie</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Príbehy</string>
     <string name="opening_post">Otváram príspevok...</string>
     <string name="share">Zdieľať</string>
     <string name="layout_style">Štýl rozloženia</string>
