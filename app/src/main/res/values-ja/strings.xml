@@ -40,7 +40,7 @@
     <string name="theme_settings">テーマ</string>
     <string name="login_settings">ログインユーザーにのみ影響します:</string>
     <string name="anonymous_settings">匿名ユーザーにのみ影響します:</string>
-    <string name="instadp_settings">高解像度のプロフィール画像にInstadpを使用する</string>
+    <string name="instadp_settings">プロフ画像にInstadpを使用</string>
     <string name="import_export">インポート/エクスポート</string>
     <string name="select_language">言語</string>
     <plurals name="main_posts_count_inline">
