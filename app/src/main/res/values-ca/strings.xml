@@ -229,7 +229,7 @@
     <string name="crash_descr">Vaja... L\'aplicació ha fallat, però no et preocupis, pots enviar un informe d\'error al desenvolupador per ajudar-lo a solucionar el problema. (:</string>
     <string name="action_notif">Activitat</string>
     <string name="action_archive">Arxiu de històries</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_ayml">Usuaris suggerits</string>
     <string name="select_picture">Seleccionar imatge</string>
     <string name="uploading">S\'està pujant…</string>
     <string name="activity_count_prefix">Tens:</string>
