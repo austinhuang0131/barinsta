@@ -51,7 +51,7 @@
         <item quantity="one">%s Follower</item>
         <item quantity="other">%s Volgers</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s Volgend </string>
     <string name="post_viewer_autoplay_video">Video\'s automatisch afspelen</string>
     <string name="post_viewer_muted_autoplay">Video\'s altijd dempen</string>
     <string name="post_viewer_download_dialog_title">Selecteer wat je wil downloaden</string>
