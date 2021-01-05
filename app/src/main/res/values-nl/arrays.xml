@@ -30,9 +30,9 @@
         <item>Licht</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Instagram standaard (Ongelezen dan gelezen)</item>
+        <item>Sorteren van nieuw naar oud</item>
+        <item>Sorteren van oud naar nieuw</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Geen</item>
