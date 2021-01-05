@@ -167,7 +167,7 @@
     <string name="dms_inbox_raven_media_sending">送信中…</string>
     <string name="dms_inbox_raven_media_blocked">ブロック済</string>
     <string name="dms_inbox_raven_media_suggested">Suggested</string>
-    <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
+    <string name="dms_inbox_raven_media_screenshot">スクリーンショット撮影済み</string>
     <string name="dms_inbox_raven_media_cant_deliver">配信できません</string>
     <string name="dms_action_success">成功！</string>
     <string name="dms_action_leave">退出する</string>
