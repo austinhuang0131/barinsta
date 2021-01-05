@@ -116,8 +116,8 @@
     <string name="unblock">Разблокировать</string>
     <string name="restrict">Ограничить</string>
     <string name="unrestrict">Снять ограничение</string>
-    <string name="bio_copy">Copy bio</string>
-    <string name="bio_translate">Translate bio</string>
+    <string name="bio_copy">Копировать биографию</string>
+    <string name="bio_translate">Перевести биографию</string>
     <string name="status_mutual">Mutual</string>
     <string name="status_following">Following</string>
     <string name="status_follower">Follower</string>
@@ -149,7 +149,7 @@
     <string name="quick_access_cannot_delete_curr">Невозможно удалить текущую учётную запись</string>
     <string name="quick_access_confirm_delete">Вы уверены, что хотите удалить \'%s\'?</string>
     <string name="open_profile">Открыть профиль</string>
-    <string name="view_story">View story</string>
+    <string name="view_story">Просмотр истории</string>
     <string name="view_pfp">Просмотр изображения профиля</string>
     <string name="direct_messages_you">Вы</string>
     <string name="direct_messages_sent_link">Поделился(-лась) ссылкой</string>
@@ -199,11 +199,11 @@
     <string name="downloader_too_many">Вы можете скачать только 100 сообщений за раз. Не будьте слишком жадным!</string>
     <string name="comment_viewer_copy_user">Копировать имя пользователя</string>
     <string name="comment_viewer_copy_comment">Копировать комментарий</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
+    <string name="comment_viewer_see_likers">Просмотр симпатий комментария</string>
     <string name="comment_viewer_reply_comment">Ответить на комментарий</string>
     <string name="comment_viewer_like_comment">Мне нравится комментарий</string>
     <string name="comment_viewer_unlike_comment">Не нравится комментарий</string>
-    <string name="comment_viewer_translate_comment">Translate comment</string>
+    <string name="comment_viewer_translate_comment">Перевести комментарий</string>
     <string name="comment_viewer_delete_comment">Удалить комментарий</string>
     <string name="comment_send_empty_comment">Нет пустых комментариев!</string>
     <string name="comment_view_mention_user_search">Вы хотите найти имя пользователя?</string>
@@ -234,7 +234,7 @@
     <string name="crash_title">Приложение вылетело</string>
     <string name="crash_descr">Упс.. приложение вылетело, но не беспокойтесь, вы можете отправить отчёт об ошибке разработчику, чтобы помочь ему исправить эту проблему. (:</string>
     <string name="action_notif">Активность</string>
-    <string name="action_archive">Story archive</string>
+    <string name="action_archive">Архив истории</string>
     <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Выберите изображение</string>
     <string name="uploading">Загрузка…</string>
