@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Отметить ЛС как увиденные после просмотра</string>
     <string name="dm_mark_as_seen_setting_summary">Другие участники узнают, что вы просмотрели его</string>
     <string name="activity_setting">Включить уведомления об активности</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Сортировка историй ленты</string>
     <string name="error_loading_profile">Ошибка загрузки профиля!\nПопробуйте войти в систему и повторите поиск.</string>
     <string name="error_creating_folders">Ошибка при создании каталога(ов) загрузки.</string>
     <string name="save_to_folder">Сохранить в пользовательскую папку</string>
@@ -44,18 +44,18 @@
     <string name="import_export">Импорт/Экспорт</string>
     <string name="select_language">Язык</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
-        <item quantity="few">%s Posts</item>
-        <item quantity="many">%s Posts</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="one">%s Публикация</item>
+        <item quantity="few">%s Публикации</item>
+        <item quantity="many">%s Публикаций</item>
+        <item quantity="other">%s Публикации</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s Follower</item>
-        <item quantity="few">%s Followers</item>
-        <item quantity="many">%s Followers</item>
-        <item quantity="other">%s Followers</item>
+        <item quantity="one">%s Подписчик</item>
+        <item quantity="few">%s Подписчика</item>
+        <item quantity="many">%s Подписчиков</item>
+        <item quantity="other">%s Подписчики</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s Последователей </string>
     <string name="post_viewer_autoplay_video">Автовоспроизведение видео</string>
     <string name="post_viewer_muted_autoplay">Всегда заглушать видео</string>
     <string name="post_viewer_download_dialog_title">Выберите, что скачивать</string>
@@ -74,16 +74,16 @@
     <string name="answer_hint">Ответить…</string>
     <string name="answered_story">Ответ успешно представлен!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
-        <item quantity="one">%d response averaging %s</item>
-        <item quantity="few">%d responses averaging %s</item>
-        <item quantity="many">%d responses averaging %s</item>
-        <item quantity="other">%d responses averaging %s</item>
+        <item quantity="one">%d ответ в среднем %s</item>
+        <item quantity="few">%d ответа в среднем %s</item>
+        <item quantity="many">%d ответов в среднем %s</item>
+        <item quantity="other">%d ответы в среднем %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">Ваш ответ: %s</string>
     <string name="reply_story">Ответить на историю</string>
     <string name="reply_hint">Ответить…</string>
     <string name="story_quiz">Опрос</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">Ползунок</string>
     <string name="story_quizzed">Вы уже ответили!</string>
     <string name="story_mentions">Упоминания</string>
     <string name="priv_acc">Это частная учётная запись</string>
@@ -118,9 +118,9 @@
     <string name="unrestrict">Снять ограничение</string>
     <string name="bio_copy">Копировать биографию</string>
     <string name="bio_translate">Перевести биографию</string>
-    <string name="status_mutual">Mutual</string>
-    <string name="status_following">Following</string>
-    <string name="status_follower">Follower</string>
+    <string name="status_mutual">Взаимное</string>
+    <string name="status_following">Последователи</string>
+    <string name="status_follower">Подписчик</string>
     <string name="map">Карта</string>
     <string name="dialog_export_btn_export">Экспорт</string>
     <string name="dialog_export_btn_import">Импорт</string>
@@ -235,7 +235,7 @@
     <string name="crash_descr">Упс.. приложение вылетело, но не беспокойтесь, вы можете отправить отчёт об ошибке разработчику, чтобы помочь ему исправить эту проблему. (:</string>
     <string name="action_notif">Активность</string>
     <string name="action_archive">Архив истории</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_ayml">Предлагаемые пользователи</string>
     <string name="select_picture">Выберите изображение</string>
     <string name="uploading">Загрузка…</string>
     <string name="activity_count_prefix">У вас есть:</string>
@@ -280,26 +280,26 @@
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Бариста</string>
     <string name="dark_material_dark_theme">Тёмный \"осязаемый\"</string>
     <string name="added_to_favs">Добавлено в избранное</string>
-    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
-    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
+    <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Избранное</string>
+    <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">В избранное</string>
     <string name="accounts">Учётные записи</string>
     <string name="hashtags">Хэштеги</string>
     <string name="locations">Местоположения</string>
     <string name="unknown">Неизвестный</string>
     <string name="removed_from_favs">Удалено из избранного</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_and_restore">Резервное копирование &amp; Восстановление пользовательских настроек</string>
+    <string name="backup_summary">Резервное копирование настроек приложения, регистрационных данных и/или избранных данных в обычный текст или зашифрованный файл резервной копии для последующего восстановления.</string>
+    <string name="backup_warning">Если вы резервируете информацию для входа в систему, обращайтесь с файлом как с конфиденциальным: Храните где-нибудь в безопасности!</string>
+    <string name="create_backup">Создать новый файл резервной копии</string>
+    <string name="restore_backup">Восстановить из существующего файла резервной копии</string>
     <string name="file_chosen_label">Файл:</string>
     <string name="enter_password">Введите пароль</string>
     <string name="select_backup_file">Выберите файл резервной копии (.zaai/.backup)</string>
     <string name="apply">Применить</string>
     <string name="save">Сохранить</string>
     <string name="caption">Заголовок</string>
-    <string name="edit_caption">Edit caption...</string>
-    <string name="translate_caption">Translate caption...</string>
+    <string name="edit_caption">Изменить описание...</string>
+    <string name="translate_caption">Перевести подпись...</string>
     <string name="player_timeline_desc">Лента времени видеопроигрывателя</string>
     <string name="liking">Нравится…</string>
     <string name="like_unsuccessful">Нравится неудачно</string>
@@ -315,7 +315,7 @@
     <string name="delete">Удалить</string>
     <string name="comment">Комментировать</string>
     <string name="layout">Формат</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Истории ленты новостей</string>
     <string name="opening_post">Открытие публикации...</string>
     <string name="share">Поделиться</string>
     <string name="layout_style">Внешний вид</string>
@@ -329,7 +329,7 @@
     <string name="show_grid_gap">Показать разрыв сетки</string>
     <string name="disable_animation">Отключить анимацию</string>
     <string name="follower_wait_to_load">Пожалуйста, дождитесь сначала выполнения текущей задачи!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
+    <string name="follower_start_compare">В зависимости от количества пользователей, загрузка может занять некоторое время. Пожалуйста, будьте терпеливы.</string>
     <string name="post_not_found">Публикация не найдена!</string>
     <string name="no_external_app_url">Нет приложения, чтоб открыть ссылку</string>
     <plurals name="likes_count">
@@ -345,10 +345,10 @@
         <item quantity="other">%d комментарии</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="one">%s story</item>
-        <item quantity="few">%s stories</item>
-        <item quantity="many">%s stories</item>
-        <item quantity="other">%s stories</item>
+        <item quantity="one">%s история</item>
+        <item quantity="few">%s истории</item>
+        <item quantity="many">%s историй</item>
+        <item quantity="other">%s истории</item>
     </plurals>
-    <string name="download_permission">Storage permission not granted!</string>
+    <string name="download_permission">Разрешение на доступ к хранилищу не предоставлено!</string>
 </resources>
