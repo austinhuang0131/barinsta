@@ -252,7 +252,7 @@
     <string name="pref_category_downloads">ダウンロード</string>
     <string name="pref_category_locale">言語</string>
     <string name="account">アカウント</string>
-    <string name="account_hint">現在のログインが動作しませんか？アカウントを再度追加してください</string>
+    <string name="account_hint">ログインできない場合はアカウントを再度追加してください</string>
     <string name="add_account">アカウントを追加</string>
     <string name="about_category_license">ライセンス(英語のみ)</string>
     <string name="about_documentation">ウェブサイトを開く</string>
