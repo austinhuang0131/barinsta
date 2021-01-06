@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Oznacz wiadomość jako przeczytaną</string>
     <string name="dm_mark_as_seen_setting_summary">Inni użytkownicy będą wiedzieli, że to wyświetliłeś</string>
     <string name="activity_setting">Włącz powiadomienia o aktywności</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Sortowanie relacji</string>
     <string name="error_loading_profile">Błąd ładowania profilu!\nSpróbuj zalogować się i wyszukać ponownie.</string>
     <string name="error_creating_folders">Błąd podczas tworzenia folderu(ów) pobierania.</string>
     <string name="save_to_folder">Zapisz w folderze niestandardowym</string>
@@ -234,8 +234,8 @@
     <string name="crash_title">Aplikacja uległa awarii</string>
     <string name="crash_descr">Ups.. aplikacja uległa awarii, ale nie martw się, możesz wysłać raport o błędzie do dewelopera, aby pomóc mu rozwiązać ten problem (:</string>
     <string name="action_notif">Aktywność</string>
-    <string name="action_archive">Story archive</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_archive">Archiwum relacji</string>
+    <string name="action_ayml">Proponowani użytkownicy</string>
     <string name="select_picture">Wybierz obraz</string>
     <string name="uploading">Przesyłanie…</string>
     <string name="activity_count_prefix">Masz:</string>
@@ -315,7 +315,7 @@
     <string name="delete">Usuń</string>
     <string name="comment">Komentarz</string>
     <string name="layout">Układ</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Relacje</string>
     <string name="opening_post">Otwieranie wpisu...</string>
     <string name="share">Udostępnij</string>
     <string name="layout_style">Styl układu</string>
@@ -345,10 +345,10 @@
         <item quantity="other">%d komentarzy</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="one">%s story</item>
-        <item quantity="few">%s stories</item>
-        <item quantity="many">%s stories</item>
-        <item quantity="other">%s stories</item>
+        <item quantity="one">%s relacja</item>
+        <item quantity="few">%s relacji</item>
+        <item quantity="many">%s relacji</item>
+        <item quantity="other">%s relacji</item>
     </plurals>
     <string name="download_permission">Nie przyznano uprawnień do pamięci!</string>
 </resources>
