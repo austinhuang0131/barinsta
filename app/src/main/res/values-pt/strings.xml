@@ -266,7 +266,7 @@
     <string name="about_category_3pt">Atribuições de terceiros</string>
     <string name="about_category_3pt_summary">São usadas as seguintes bibliotecas de código aberto de terceiros:</string>
     <string name="reminder">Lembrete</string>
-    <string name="reminder_summary">Por favor, use este app com responsabilidade. Imagens baixadas devem ser usadas apenas para fins permitidos pelas leis aplicáveis.</string>
+    <string name="reminder_summary">Por favor, use este aplicativo de forma responsável. As imagens baixadas só devem ser usadas para fins permitidos pelas leis aplicáveis.</string>
     <string name="light_white_theme">Branco</string>
     <string name="dark_black_theme">Preto</string>
     <string name="light_theme_settings">Tema claro</string>
