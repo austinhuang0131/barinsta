@@ -30,9 +30,9 @@
         <item>Jasny</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Domyślne ustawienia</item>
+        <item>Od najnowszych do najstarszych</item>
+        <item>Od najstarszych do najnowszych</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Brak</item>
