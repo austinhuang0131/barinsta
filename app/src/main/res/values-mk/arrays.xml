@@ -32,13 +32,13 @@
     <string-array name="story_sorts">
         <item>Стандардно (Од непрочитано па прочитано)</item>
         <item>Од најнови до најстари</item>
-        <item>Од најнови до најстари</item>
+        <item>Од најстари до најнови</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Ништо</item>
         <item>\@</item>
         <item>на</item>
-        <item>уклучи</item>
+        <item>на</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
