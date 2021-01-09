@@ -51,7 +51,7 @@
         <item quantity="one">%s Следач</item>
         <item quantity="other">%s Следачи</item>
     </plurals>
-    <string name="main_posts_following">%s Следбеници </string>
+    <string name="main_posts_following">%s Следиш </string>
     <string name="post_viewer_autoplay_video">Autoplay на видеа</string>
     <string name="post_viewer_muted_autoplay">Секогаш гледај видеа без звук</string>
     <string name="post_viewer_download_dialog_title">Селектирај што сакаш да превземеш</string>
