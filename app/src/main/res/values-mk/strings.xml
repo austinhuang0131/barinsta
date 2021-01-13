@@ -89,7 +89,7 @@
     <string name="curr_version">Инсталирана верзија: v%s</string>
     <string name="read_more">прочитај повеќе…</string>
     <string name="login">Логирај се</string>
-    <string name="logout">Одлогирај се</string>
+    <string name="logout">Одјави се</string>
     <string name="logout_summary">Пребарувај инстаграм анонимно</string>
     <string name="remove_all_acc">Отстрани ги сите кориснички сметки</string>
     <string name="remove_all_acc_warning">Ова ќе ги отстране сите кориснички сметки од апликацијата!\n За да отстраните само една корисничка сметка држете со прстот на сметката\n Дали сакате да продолжите?</string>
@@ -244,7 +244,7 @@
     <string name="more">Повеќе</string>
     <string name="title_dm">Пораки</string>
     <string name="number_selected">%d селктирано</string>
-    <string name="logout_success">Успешно се одлогиравте!</string>
+    <string name="logout_success">Успешно се одјавивте!</string>
     <string name="dm_thread_info">Информации</string>
     <string name="mark_as_seen">Означи како видено(seen)</string>
     <string name="skip_update_checkbox">Прескокни надоградување</string>
