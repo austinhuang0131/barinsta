@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="languages">
+        <item>System Default</item>
+        <item translatable="false">English</item>
+        <item translatable="false">Français</item>
+        <item translatable="false">Español</item>
+        <item translatable="false">简体中文</item>
+        <item translatable="false">Bahasa Indonesia</item>
+        <item translatable="false">Italiano</item>
+        <item translatable="false">Deutsch</item>
+        <item translatable="false">Polski</item>
+        <item translatable="false">Türkçe</item>
+        <item translatable="false">Português (Brasil)</item>
+        <item translatable="false">پارسی</item>
+        <item translatable="false">Македонски</item>
+        <item translatable="false">Tiếng Việt</item>
+        <item translatable="false">繁體中文</item>
+        <item translatable="false">Català</item>
+        <item translatable="false">Русский</item>
+        <item translatable="false">हिन्दी</item>
+        <item translatable="false">Nederlands</item>
+        <item translatable="false">Slovenčina</item>
+        <item translatable="false">日本語</item>
+    </string-array>
+    <string-array name="theme_presets">
+        <item>Auto / Follow System</item>
+        <item>Auto / Follow Battery</item>
+        <item>Dark</item>
+        <item>Light</item>
+    </string-array>
+    <string-array name="story_sorts">
+        <item>Instagram default (Unread then read)</item>
+        <item>From newest to oldest</item>
+        <item>From oldest to newest</item>
+    </string-array>
+    <string-array name="separator_presets">
+        <item>None</item>
+        <item>\@</item>
+        <item>at</item>
+        <item>on</item>
+        <item>\|</item>
+        <item>-</item>
+    </string-array>
+    <string-array name="main_nav_ids_values">
+        <item>@string/title_dm</item>
+        <item>@string/feed</item>
+        <item>@string/profile</item>
+        <item>@string/title_discover</item>
+        <item>@string/more</item>
+    </string-array>
+    <string-array name="light_themes">
+        <item>@string/light_white_theme</item>
+        <item>@string/light_barinsta_theme</item>
+        <item>@string/light_bibliogram_theme</item>
+    </string-array>
+    <string-array name="light_theme_values">
+        <item>@style/AppTheme.Light.White</item>
+        <item>@style/AppTheme.Light.Barinsta</item>
+        <item>@style/AppTheme.Light.Bibliogram</item>
+    </string-array>
+    <string-array name="dark_themes">
+        <item>@string/dark_black_theme</item>
+        <item>@string/dark_material_dark_theme</item>
+    </string-array>
+    <string-array name="dark_theme_values">
+        <item>@style/AppTheme.Dark.Black</item>
+        <item>@style/AppTheme.Dark.MaterialDark</item>
+    </string-array>
+</resources>
