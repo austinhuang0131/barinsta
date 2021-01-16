@@ -385,6 +385,13 @@ public class MainActivity extends BaseLanguageActivity implements FragmentManage
             } else {
                 setBottomNavSelectedItem(R.navigation.profile_nav_graph);
             }
+        } else {
+            Integer[] listOfNavbar = {R.menu.main_bottom_navigation_menu, R.menu.main_bottom_navigation_choice_1,
+                                        R.menu.main_bottom_navigation_choice_2, R.menu.main_bottom_navigation_choice_3,
+                                        R.menu.main_button_navigation_choice_4};
+            final String mainBarNavSetting = settingsHelper.getString(Constants.APP_MAIN_NAVBAR);
+            binding.bottomNavView.getMenu().clear();
+            binding.bottomNavView.inflateMenu(listOfNavbar[Integer.parseInt(mainBarNavSetting)]);
         }
         final List<Integer> mainNavList = getMainNavList(main_nav_ids);
         if (setDefaultFromSettings) {

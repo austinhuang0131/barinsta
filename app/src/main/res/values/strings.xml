@@ -41,6 +41,7 @@
     <string name="save_to_folder">Save to custom folder</string>
     <string name="select_folder">Select folder</string>
     <string name="theme_settings">Theme</string>
+    <string name="main_navbar_settings">Main navigation bar</string>
     <string name="login_settings">Only affects logged-in users:</string>
     <string name="anonymous_settings">Only affects anonymous users:</string>
     <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
@@ -257,6 +258,7 @@
     <string name="pref_start_screen">Start screen</string>
     <string name="pref_category_general">General</string>
     <string name="pref_category_theme">Theme</string>
+    <string name="pref_category_main_nav_bar">Main navigation bar</string>
     <string name="pref_category_downloads">Downloads</string>
     <string name="pref_category_locale">Locale</string>
     <string name="account">Account</string>

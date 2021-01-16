@@ -29,6 +29,13 @@
         <item>Dark</item>
         <item>Light</item>
     </string-array>
+    <string-array name="main_navbar_presets">
+        <item>Default (DM, Feed, Profile, Discover, More)</item>
+        <item>Option 1: Feed, DM, Profile, Discover, More</item>
+        <item>Option 2: Feed, DM, Profile, More</item>
+        <item>Option 3: Profile, Feed, DM, Discover, More</item>
+        <item>Option 4: Discover, Feed, Profile, DM, More</item>
+    </string-array>
     <string-array name="story_sorts">
         <item>Instagram default (Unread then read)</item>
         <item>From newest to oldest</item>

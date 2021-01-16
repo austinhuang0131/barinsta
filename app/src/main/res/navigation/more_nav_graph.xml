@@ -81,6 +81,9 @@
         <action
             android:id="@+id/action_settingsPreferencesFragment_to_themePreferencesFragment"
             app:destination="@id/themePreferencesFragment" />
+        <action
+            android:id="@+id/action_settingsPreferencesFragment_to_mainNavigationBarPreferenceFragment"
+            app:destination="@id/mainNavigationBarPreferenceFragment" />
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
@@ -98,4 +101,8 @@
         android:id="@+id/backupPreferencesFragment"
         android:name="awais.instagrabber.fragments.settings.BackupPreferencesFragment"
         android:label="@string/backup_and_restore" />
+    <fragment
+        android:id="@+id/mainNavigationBarPreferenceFragment"
+        android:name="awais.instagrabber.fragments.settings.MainNavigationBarPreferenceFragment"
+        android:label="@string/main_navbar_settings" />
 </navigation>

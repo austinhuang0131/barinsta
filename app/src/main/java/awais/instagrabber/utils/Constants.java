@@ -7,6 +7,7 @@ public final class Constants {
     public static final String DATE_TIME_SELECTION = "date_time_selection";
     public static final String CUSTOM_DATE_TIME_FORMAT = "date_time_custom_format";
     public static final String APP_THEME = "app_theme_v19";
+    public static final String APP_MAIN_NAVBAR = "app_main_navbar_v19";
     public static final String APP_LANGUAGE = "app_language_v19";
     public static final String STORY_SORT = "story_sort";
     // int prefs

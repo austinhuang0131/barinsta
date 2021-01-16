@@ -9,6 +9,7 @@ import androidx.annotation.StringDef;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import static awais.instagrabber.utils.Constants.APP_LANGUAGE;
+import static awais.instagrabber.utils.Constants.APP_MAIN_NAVBAR;
 import static awais.instagrabber.utils.Constants.APP_THEME;
 import static awais.instagrabber.utils.Constants.AUTOPLAY_VIDEOS;
 import static awais.instagrabber.utils.Constants.CHECK_ACTIVITY;
@@ -119,7 +120,7 @@ public final class SettingsHelper {
     }
 
     @StringDef(
-            {APP_LANGUAGE, APP_THEME, COOKIE, FOLDER_PATH, DATE_TIME_FORMAT, DATE_TIME_SELECTION, CUSTOM_DATE_TIME_FORMAT,
+            {APP_LANGUAGE, APP_THEME, APP_MAIN_NAVBAR, COOKIE, FOLDER_PATH, DATE_TIME_FORMAT, DATE_TIME_SELECTION, CUSTOM_DATE_TIME_FORMAT,
                     DEVICE_UUID, SKIPPED_VERSION, DEFAULT_TAB, PREF_DARK_THEME, PREF_LIGHT_THEME, PREF_POSTS_LAYOUT,
                     PREF_PROFILE_POSTS_LAYOUT, PREF_TOPIC_POSTS_LAYOUT, PREF_HASHTAG_POSTS_LAYOUT, PREF_LOCATION_POSTS_LAYOUT,
                     PREF_LIKED_POSTS_LAYOUT, PREF_TAGGED_POSTS_LAYOUT, PREF_SAVED_POSTS_LAYOUT, STORY_SORT})

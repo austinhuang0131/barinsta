@@ -79,6 +79,7 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
             screen.addPreference(loggedInUsersPreferenceCategory);
             loggedInUsersPreferenceCategory.setIconSpaceReserved(false);
             loggedInUsersPreferenceCategory.setTitle(R.string.login_settings);
+            loggedInUsersPreferenceCategory.addPreference(getMainBottomNavigationBar(context));
             loggedInUsersPreferenceCategory.addPreference(getStorySortPreference());
             loggedInUsersPreferenceCategory.addPreference(getMarkStoriesSeenPreference());
             loggedInUsersPreferenceCategory.addPreference(getMarkDMSeenPreference());
@@ -201,6 +202,19 @@ public class SettingsPreferencesFragment extends BasePreferencesFragment {
         preference.setKey(Constants.MUTED_VIDEOS);
         preference.setTitle(R.string.post_viewer_muted_autoplay);
         preference.setIconSpaceReserved(false);
+        return preference;
+    }
+
+    private Preference getMainBottomNavigationBar(@NonNull final Context context) {
+        final Preference preference = new Preference(context);
+        preference.setTitle(R.string.pref_category_main_nav_bar);
+        // preference.setIcon(R.drawable.ic_format_paint_24);
+        preference.setIconSpaceReserved(false);
+        preference.setOnPreferenceClickListener(preference1 -> {
+            final NavDirections navDirections = SettingsPreferencesFragmentDirections.actionSettingsPreferencesFragmentToMainNavigationBarPreferenceFragment();
+            NavHostFragment.findNavController(this).navigate(navDirections);
+            return true;
+        });
         return preference;
     }
 
