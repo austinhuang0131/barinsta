@@ -30,7 +30,7 @@
         <item>Hell</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
+        <item>Instagram Standard (ungelesen, dann gelesen)</item>
         <item>Vom Neuesten zum Ältesten</item>
         <item>Vom Ältesten zum Neuesten</item>
     </string-array>
