@@ -112,7 +112,7 @@
     <string name="unrestrict">Nicht mehr einschränken</string>
     <string name="bio_copy">Steckbrief kopieren</string>
     <string name="bio_translate">Steckbrief übersetzen</string>
-    <string name="status_mutual">Mutual</string>
+    <string name="status_mutual">Gegenseitig</string>
     <string name="status_following">Abonniert</string>
     <string name="status_follower">Abonnent</string>
     <string name="map">Karte</string>
@@ -176,7 +176,7 @@
     <string name="dms_action_leave">Verlassen</string>
     <string name="dms_action_leave_question">Chat verlassen?</string>
     <string name="dms_action_kick">Entfernen</string>
-    <string name="dms_left_users">Left users</string>
+    <string name="dms_left_users">Ehemalige Benutzer</string>
     <string name="direct_download">Direkt herunterladen</string>
     <string name="direct_download_desc">Lade Posts direkt auf das Handy herunter!</string>
     <string name="direct_download_loading">Beiträgen abrufen</string>
@@ -193,7 +193,7 @@
     <string name="downloader_too_many">Du kannst nur 100 Beiträge gleichzeitig herunterladen. Sei nicht zu gierig!</string>
     <string name="comment_viewer_copy_user">Benutzername kopieren</string>
     <string name="comment_viewer_copy_comment">Kommentar kopieren</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
+    <string name="comment_viewer_see_likers">Kommentar-Liker ansehen</string>
     <string name="comment_viewer_reply_comment">Auf Kommentar antworten</string>
     <string name="comment_viewer_like_comment">Kommentar gefällt mir</string>
     <string name="comment_viewer_unlike_comment">Kommentar gefällt mir nicht mehr</string>
@@ -228,7 +228,7 @@
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden, um ihm zu helfen, das Problem zu beheben. (:</string>
     <string name="action_notif">Aktivität</string>
-    <string name="action_archive">Story archive</string>
+    <string name="action_archive">Story-Archiv</string>
     <string name="action_ayml">Vorgeschlagene Benutzer</string>
     <string name="select_picture">Bild auswählen</string>
     <string name="uploading">Hochladen…</string>
@@ -309,7 +309,7 @@
     <string name="delete">Löschen</string>
     <string name="comment">Kommentar</string>
     <string name="layout">Layout</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Storyfeed</string>
     <string name="opening_post">Öffne Beitrag...</string>
     <string name="share">Teilen</string>
     <string name="layout_style">Layoutstil</string>
@@ -335,8 +335,8 @@
         <item quantity="other">%d Kommentare</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="one">%s story</item>
-        <item quantity="other">%s stories</item>
+        <item quantity="one">%s Story</item>
+        <item quantity="other">%s Stories</item>
     </plurals>
     <string name="download_permission">Speicher-Zugriff nicht erteilt!</string>
 </resources>
