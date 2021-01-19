@@ -30,15 +30,15 @@
         <item>Světlý</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
+        <item>Výchozí chování Instagramu (nepřečteno pak přečteno)</item>
         <item>Od nejnovějších po nejstarší</item>
         <item>Od nejstarších po nejnovější</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Žádný</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>v</item>
+        <item>ze dne</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
