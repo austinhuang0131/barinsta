@@ -54,6 +54,7 @@
     <string name="main_posts_following">%s Volgend </string>
     <string name="post_viewer_autoplay_video">Video\'s automatisch afspelen</string>
     <string name="post_viewer_muted_autoplay">Video\'s altijd dempen</string>
+    <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">Selecteer wat je wil downloaden</string>
     <string name="post_viewer_download_current">Huidige</string>
     <string name="post_viewer_download_album">Volledige Album</string>
