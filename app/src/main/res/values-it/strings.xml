@@ -336,8 +336,8 @@
         <item quantity="other">%d commenti</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="one">%s story</item>
-        <item quantity="other">%s stories</item>
+        <item quantity="one">%s storia</item>
+        <item quantity="other">%s storie</item>
     </plurals>
     <string name="download_permission">Permesso di archiviazione non garantito!</string>
 </resources>
