@@ -23,7 +23,7 @@
     <string name="title_favorites">Oblíbené</string>
     <string name="title_discover">Objevit</string>
     <string name="title_comments">Komentáře</string>
-    <string name="title_notifications">Activity</string>
+    <string name="title_notifications">Aktivita</string>
     <string name="title_highlight">Zvýraznit: %s</string>
     <string name="update_check">Zkontrolovat aktualizace při spuštění</string>
     <string name="download_user_folder">Stáhnout příspěvky do složek s uživatelským jménem</string>
@@ -31,16 +31,16 @@
     <string name="mark_as_seen_setting_summary">Autor příběhu bude vědět, že jsi si ho zobrazili</string>
     <string name="dm_mark_as_seen_setting">Označovat přímou zprávu po zobrazení jako zobrazenou</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní členové uvidí, že jste si ji ji zobrazili</string>
-    <string name="activity_setting">Enable activity notifications</string>
-    <string name="story_sort_setting">Feed stories sort</string>
-    <string name="error_loading_profile">Error loading profile!\nTry logging in and search again.</string>
-    <string name="error_creating_folders">Error creating Download folder(s).</string>
+    <string name="activity_setting">Povolit oznámení o aktivitě</string>
+    <string name="story_sort_setting">Řazení příběhů feedu</string>
+    <string name="error_loading_profile">Chyba při načítání profilu!\nZkuste se znovu přihlásit a vyhledat znovu.</string>
+    <string name="error_creating_folders">Chyba při vytváření složky(ek) stahování.</string>
     <string name="save_to_folder">Uložit do vlastní složky</string>
     <string name="select_folder">Vybrat adresář</string>
     <string name="theme_settings">Motiv</string>
-    <string name="login_settings">Only affects logged-in users:</string>
-    <string name="anonymous_settings">Only affects anonymous users:</string>
-    <string name="instadp_settings">Use Instadp for high definition profile pictures</string>
+    <string name="login_settings">Týká se pouze přihlášených uživatelů:</string>
+    <string name="anonymous_settings">Týká se pouze anonymních uživatelů:</string>
+    <string name="instadp_settings">Použít Instadp pro profilové obrázky s vysokým rozlišením</string>
     <string name="import_export">Importovat/exportovat</string>
     <string name="select_language">Jazyk</string>
     <plurals name="main_posts_count_inline">
@@ -55,13 +55,13 @@
         <item quantity="many">%s sledujících</item>
         <item quantity="other">%s sledujících</item>
     </plurals>
-    <string name="main_posts_following">%s Following </string>
+    <string name="main_posts_following">%s sleduje</string>
     <string name="post_viewer_autoplay_video">Videa spouštět automaticky</string>
     <string name="post_viewer_muted_autoplay">Vždy ztlumit videa</string>
-    <string name="post_viewer_show_captions">Always show post captions</string>
+    <string name="post_viewer_show_captions">Vždy zobrazovat titulek příspěvku</string>
     <string name="post_viewer_download_dialog_title">Vyberte, co stáhnout</string>
-    <string name="post_viewer_download_current">Current</string>
-    <string name="post_viewer_download_album">Whole Album</string>
+    <string name="post_viewer_download_current">Současné</string>
+    <string name="post_viewer_download_album">Celé album</string>
     <string name="show_stories">Zobrazit příběhy</string>
     <string name="no_more_stories">Žádné další příběhy!</string>
     <string name="be_patient">Buďte trpěliví!</string>
@@ -72,8 +72,8 @@
     <string name="votef_story_poll">Hlasování úspěšné!</string>
     <string name="voted_story_poll">Už jste hlasoval!</string>
     <string name="respond_story">Odpovědět</string>
-    <string name="answer_hint">Answer…</string>
-    <string name="answered_story">Answer successful!</string>
+    <string name="answer_hint">Odpovědět…</string>
+    <string name="answered_story">Odpověď byla úspěšná!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
         <item quantity="few">%d responses averaging %s</item>
