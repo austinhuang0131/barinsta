@@ -57,6 +57,7 @@
     <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Autoplay videos</string>
     <string name="post_viewer_muted_autoplay">Always mute videos</string>
+    <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">Select what to download</string>
     <string name="post_viewer_download_current">Current</string>
     <string name="post_viewer_download_album">Whole Album</string>
