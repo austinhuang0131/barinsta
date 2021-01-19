@@ -54,6 +54,7 @@
     <string name="main_posts_following">%s ଅନୁସରଣ କରୁଛନ୍ତି </string>
     <string name="post_viewer_autoplay_video">ଭିଡ଼ିଓ ସ୍ୱତଃ ଚାଲୁ କର</string>
     <string name="post_viewer_muted_autoplay">ସର୍ବଦା ଭିଡ଼ିଓକୁ ଶବ୍ଦହୀନ ରଖ</string>
+    <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">ଡାଉନଲୋଡ଼ କରିବା ପାଇଁ ଚୟନ କରନ୍ତୁ</string>
     <string name="post_viewer_download_current">ସମ୍ପ୍ରତି</string>
     <string name="post_viewer_download_album">ସମସ୍ତ ଆଲବମ</string>
