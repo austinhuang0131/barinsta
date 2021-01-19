@@ -54,6 +54,7 @@
     <string name="main_posts_following">%s Abonnements </string>
     <string name="post_viewer_autoplay_video">Lecture automatique des vidéos</string>
     <string name="post_viewer_muted_autoplay">Toujours couper le son des vidéos</string>
+    <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">Sélectionnez ce que vous souhaitez télécharger</string>
     <string name="post_viewer_download_current">Actuel</string>
     <string name="post_viewer_download_album">Album complet</string>
