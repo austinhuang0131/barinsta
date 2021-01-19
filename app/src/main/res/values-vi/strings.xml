@@ -52,6 +52,7 @@
     <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Tự động phát video</string>
     <string name="post_viewer_muted_autoplay">Luôn luôn tắt âm thanh video</string>
+    <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">Chọn cái để tải xuống</string>
     <string name="post_viewer_download_current">Hiện tại</string>
     <string name="post_viewer_download_album">Cả album</string>
