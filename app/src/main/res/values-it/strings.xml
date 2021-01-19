@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">Segna il DM come visto dopo la visualizzazione</string>
     <string name="dm_mark_as_seen_setting_summary">Altri membri sapranno che lo hai visualizzato</string>
     <string name="activity_setting">Abilita notifiche attività</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Ordinamento storie feed</string>
     <string name="error_loading_profile">Errore caricando il profilo!\nProva ad accedere e cercare ancora.</string>
     <string name="error_creating_folders">Errore creando le cartelle di Download.</string>
     <string name="save_to_folder">Salva alla cartella personalizzata</string>
@@ -54,7 +54,7 @@
     <string name="main_posts_following">%s Seguiti </string>
     <string name="post_viewer_autoplay_video">Riproduzione automatica video</string>
     <string name="post_viewer_muted_autoplay">Silenzia sempre i video</string>
-    <string name="post_viewer_show_captions">Always show post captions</string>
+    <string name="post_viewer_show_captions">Mostra sempre le didascalie dei post</string>
     <string name="post_viewer_download_dialog_title">Seleziona cosa scaricare</string>
     <string name="post_viewer_download_current">Corrente</string>
     <string name="post_viewer_download_album">Album Intero</string>
@@ -229,8 +229,8 @@
     <string name="crash_title">L\'app è crashata</string>
     <string name="crash_descr">Ops... l\'app è crashata, ma non preoccuparti, puoi inviare una segnalazione dell\'errore allo sviluppatore per aiutarlo a risolvere il problema. (:</string>
     <string name="action_notif">Attività</string>
-    <string name="action_archive">Story archive</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_archive">Archivio storie</string>
+    <string name="action_ayml">Utenti suggeriti</string>
     <string name="select_picture">Seleziona Immagine</string>
     <string name="uploading">Caricamento…</string>
     <string name="activity_count_prefix">Hai:</string>
@@ -282,11 +282,11 @@
     <string name="locations">Luoghi</string>
     <string name="unknown">Sconosciuto</string>
     <string name="removed_from_favs">Rimosso dai Preferiti</string>
-    <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
-    <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
-    <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
-    <string name="restore_backup">Restore from existing backup file</string>
+    <string name="backup_and_restore">Salva &amp; Ripristina Impostazioni Utente</string>
+    <string name="backup_summary">Esegui il salvataggio delle impostazioni dell’app, delle informazioni di accesso dell\'account e/o dei dati preferiti in un semplice testo o in un file di backup crittografato per il ripristino successivo.</string>
+    <string name="backup_warning">Se stai effettuando il salvataggio delle informazioni di accesso, tratta il file come confidenziale: Tienilo in qualche posto al sicuro!</string>
+    <string name="create_backup">Crea un nuovo file di salvataggio</string>
+    <string name="restore_backup">Ripristina da file di salvataggio esistente</string>
     <string name="file_chosen_label">File:</string>
     <string name="enter_password">Inserisci password</string>
     <string name="select_backup_file">Selezionare un file di backup (.zaai/.backup)</string>
@@ -310,7 +310,7 @@
     <string name="delete">Elimina</string>
     <string name="comment">Commento</string>
     <string name="layout">Disposizione</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Feed storie</string>
     <string name="opening_post">Aprendo il post...</string>
     <string name="share">Condividi</string>
     <string name="layout_style">Stile disposizione</string>
