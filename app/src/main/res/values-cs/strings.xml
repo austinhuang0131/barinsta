@@ -58,6 +58,7 @@
     <string name="main_posts_following">%s Following </string>
     <string name="post_viewer_autoplay_video">Videa spouštět automaticky</string>
     <string name="post_viewer_muted_autoplay">Vždy ztlumit videa</string>
+    <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">Vyberte, co stáhnout</string>
     <string name="post_viewer_download_current">Current</string>
     <string name="post_viewer_download_album">Whole Album</string>
