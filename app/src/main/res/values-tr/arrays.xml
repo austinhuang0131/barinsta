@@ -30,9 +30,9 @@
         <item>Açık</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Instagram varsayılanı (önce görülmemişler sonra görülmüşler)</item>
+        <item>Yeniden eskiye</item>
+        <item>Eskiden yeniye</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Hiçbiri</item>
