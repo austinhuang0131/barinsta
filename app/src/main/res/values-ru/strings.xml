@@ -58,7 +58,7 @@
     <string name="main_posts_following">%s Последователей </string>
     <string name="post_viewer_autoplay_video">Автовоспроизведение видео</string>
     <string name="post_viewer_muted_autoplay">Всегда заглушать видео</string>
-    <string name="post_viewer_show_captions">Always show post captions</string>
+    <string name="post_viewer_show_captions">Всегда отображать подписи к постам</string>
     <string name="post_viewer_download_dialog_title">Выберите, что скачивать</string>
     <string name="post_viewer_download_current">Текущая</string>
     <string name="post_viewer_download_album">Целый альбом</string>
