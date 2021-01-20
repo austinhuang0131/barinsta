@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting">DM\'leri gördükten sonra görüldü olarak işaretle</string>
     <string name="dm_mark_as_seen_setting_summary">Diğerleri gördüğünüzü bilecek</string>
     <string name="activity_setting">Hareketler için bildirimleri aktifleştir</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">Hikaye akışını sınıflandır</string>
     <string name="error_loading_profile">Profili yüklerken hata oluştu!\nGiriş yapıp tekrar deneyin.</string>
     <string name="error_creating_folders">İndirilenler klasörü(leri) oluşturulamadı.</string>
     <string name="save_to_folder">Şu klasöre kaydet:</string>
@@ -229,8 +229,8 @@
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="action_notif">Hareketler</string>
-    <string name="action_archive">Story archive</string>
-    <string name="action_ayml">Suggested users</string>
+    <string name="action_archive">Hikaye arşivi</string>
+    <string name="action_ayml">Önerilen kullanıcılar</string>
     <string name="select_picture">Resim Seç</string>
     <string name="uploading">Yükleniyor…</string>
     <string name="activity_count_prefix">Sahip olduğun:</string>
@@ -310,7 +310,7 @@
     <string name="delete">Sil</string>
     <string name="comment">Yorum yap</string>
     <string name="layout">Yerleşim</string>
-    <string name="feed_stories">Feed stories</string>
+    <string name="feed_stories">Hikaye akışı</string>
     <string name="opening_post">Gönderi açılıyor...</string>
     <string name="share">Paylaş</string>
     <string name="layout_style">Yerleşim biçimi</string>
@@ -336,8 +336,8 @@
         <item quantity="other">%d yorum</item>
     </plurals>
     <plurals name="stories_count">
-        <item quantity="one">%s story</item>
-        <item quantity="other">%s stories</item>
+        <item quantity="one">%s hikaye</item>
+        <item quantity="other">%s hikaye</item>
     </plurals>
     <string name="download_permission">Depolama izni verilmedi!</string>
 </resources>
