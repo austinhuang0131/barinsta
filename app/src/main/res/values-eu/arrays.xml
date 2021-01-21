@@ -26,8 +26,8 @@
     <string-array name="theme_presets">
         <item>Auto / Follow System</item>
         <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Iluna</item>
+        <item>Argia</item>
     </string-array>
     <string-array name="story_sorts">
         <item>Instagram default (Unread then read)</item>
