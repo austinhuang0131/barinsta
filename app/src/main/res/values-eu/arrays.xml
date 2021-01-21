@@ -31,14 +31,14 @@
     </string-array>
     <string-array name="story_sorts">
         <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Berrienetik zaharrenera</item>
+        <item>Zaharrenetik berrienera</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Bat ere ez</item>
         <item>\@</item>
         <item>at</item>
-        <item>on</item>
+        <item>,</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
