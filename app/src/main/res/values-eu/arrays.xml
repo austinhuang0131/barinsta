@@ -24,20 +24,20 @@
         <item translatable="false">日本語</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
+        <item>Automatikoa / Jarraitu sistema</item>
+        <item>Automatikoa / Jarraitu bateria</item>
         <item>Iluna</item>
         <item>Argia</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
+        <item>Instagrameko lehenetsia (Ez irakurrita, gero irakurrita)</item>
         <item>Berrienetik zaharrenera</item>
         <item>Zaharrenetik berrienera</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Bat ere ez</item>
         <item>\@</item>
-        <item>at</item>
+        <item>-</item>
         <item>,</item>
         <item>\|</item>
         <item>-</item>
