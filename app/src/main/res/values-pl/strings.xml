@@ -58,7 +58,7 @@
     <string name="main_posts_following">%s obserwowanych </string>
     <string name="post_viewer_autoplay_video">Automatyczne odtwarzanie filmów</string>
     <string name="post_viewer_muted_autoplay">Zawsze wyciszaj filmy</string>
-    <string name="post_viewer_show_captions">Always show post captions</string>
+    <string name="post_viewer_show_captions">Zawsze pokazuj napisy postów</string>
     <string name="post_viewer_download_dialog_title">Wybierz, co chcesz pobrać</string>
     <string name="post_viewer_download_current">Bieżący</string>
     <string name="post_viewer_download_album">Cały album</string>
@@ -249,7 +249,7 @@
     <string name="feed">Aktualności</string>
     <string name="profile">Profil</string>
     <string name="more">Więcej</string>
-    <string name="title_dm">Wiadomość bezpośrednia</string>
+    <string name="title_dm">PW</string>
     <string name="number_selected">%d wybranych</string>
     <string name="logout_success">Wylogowano pomyślnie!</string>
     <string name="dm_thread_info">Informacje</string>
