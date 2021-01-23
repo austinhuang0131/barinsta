@@ -167,14 +167,14 @@
     <string name="dms_inbox_raven_media_replayed">再生済み</string>
     <string name="dms_inbox_raven_media_sending">送信中…</string>
     <string name="dms_inbox_raven_media_blocked">ブロック済</string>
-    <string name="dms_inbox_raven_media_suggested">Suggested</string>
+    <string name="dms_inbox_raven_media_suggested">おすすめ</string>
     <string name="dms_inbox_raven_media_screenshot">スクリーンショット撮影済み</string>
     <string name="dms_inbox_raven_media_cant_deliver">配信できません</string>
     <string name="dms_action_success">成功！</string>
     <string name="dms_action_leave">退出する</string>
     <string name="dms_action_leave_question">チャットを終了しますか?</string>
     <string name="dms_action_kick">キックする</string>
-    <string name="dms_left_users">Left users</string>
+    <string name="dms_left_users">退出したユーザー</string>
     <string name="direct_download">直接ダウンロードする</string>
     <string name="direct_download_desc">投稿を直接ダウンロード！</string>
     <string name="direct_download_loading">投稿を取得中</string>
