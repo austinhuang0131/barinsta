@@ -58,7 +58,7 @@
     <string name="main_posts_following">%s Sleduje </string>
     <string name="post_viewer_autoplay_video">Automaticky prehrávať videá</string>
     <string name="post_viewer_muted_autoplay">Vždy stíšiť videá</string>
-    <string name="post_viewer_show_captions">Always show post captions</string>
+    <string name="post_viewer_show_captions">Vždy zobraziť popis príspevku</string>
     <string name="post_viewer_download_dialog_title">Vybrať čo stiahnuť</string>
     <string name="post_viewer_download_current">Aktuálne</string>
     <string name="post_viewer_download_album">Celý album</string>
