@@ -183,7 +183,7 @@
     <string name="direct_download_loading">Се превземаат објава(ви)</string>
     <string name="direct_download_perms_ask">Ве молиме дозволете ги барањата и пробајте повторно да превземите!</string>
     <string name="downloader_started">Превзмањето започна</string>
-    <string name="downloader_complete">Превземањето е готово</string>
+    <string name="downloader_complete">Преземањето е завршено</string>
     <string name="downloader_downloading_post">Превземање на Објава…</string>
     <string name="downloader_downloading_media">Се превзема медиум</string>
     <string name="downloader_downloading_pfp">Се превзема профилната слика</string>
@@ -247,7 +247,7 @@
     <string name="number_selected">%d селктирано</string>
     <string name="logout_success">Успешно се одјавивте!</string>
     <string name="dm_thread_info">Информации</string>
-    <string name="mark_as_seen">Означи како видено(seen)</string>
+    <string name="mark_as_seen">Означи како видено</string>
     <string name="skip_update_checkbox">Прескокни ажурирање</string>
     <string name="version">Верзија</string>
     <string name="pref_start_screen">Почетна страна</string>
