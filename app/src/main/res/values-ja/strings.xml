@@ -113,7 +113,7 @@
     <string name="status_mutual">相互フォロー</string>
     <string name="status_following">フォロー中</string>
     <string name="status_follower">フォロワー</string>
-    <string name="map">Map</string>
+    <string name="map">マップ</string>
     <string name="dialog_export_btn_export">エクスポート</string>
     <string name="dialog_export_btn_import">インポート</string>
     <string name="dialog_export_logins">ログイン情報をエクスポート</string>
