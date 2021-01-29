@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>پیشگزیده سامانه</item>
+        <item>پیـشـگزیده سامانه</item>
         <item translatable="false">English</item>
         <item translatable="false">Français</item>
         <item translatable="false">Español</item>
@@ -38,7 +38,7 @@
         <item>هیچکدام</item>
         <item>\@</item>
         <item>در</item>
-        <item>روشن</item>
+        <item>در</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
