@@ -45,7 +45,7 @@
     <string name="select_language">زبان</string>
     <plurals name="main_posts_count_inline">
         <item quantity="one">%s فرسته</item>
-        <item quantity="other">%s پیک</item>
+        <item quantity="other">%s فرسته</item>
     </plurals>
     <plurals name="main_posts_followers">
         <item quantity="one">%s پیگیر</item>
@@ -61,8 +61,8 @@
     <string name="show_stories">نمایش استوری ها</string>
     <string name="no_more_stories">استوری بیشتری نیست!</string>
     <string name="be_patient">صبور باشید!</string>
-    <string name="view_story_post">نگریستن پیک</string>
-    <string name="view_post">نگریستن پیک</string>
+    <string name="view_story_post">دیدن فرسته</string>
+    <string name="view_post">دیدن فرسته</string>
     <string name="spotify">Spotify</string>
     <string name="vote_story_poll">رای دادن</string>
     <string name="votef_story_poll">رای با موفقیت بود!</string>
