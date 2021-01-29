@@ -44,7 +44,7 @@
     <string name="import_export">وارد کردن/خروجی گرفتن</string>
     <string name="select_language">زبان</string>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s پیک</item>
+        <item quantity="one">%s فرسته</item>
         <item quantity="other">%s پیک</item>
     </plurals>
     <plurals name="main_posts_followers">
