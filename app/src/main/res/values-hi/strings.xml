@@ -6,8 +6,8 @@
     <string name="action_download">डाउनलोड करें</string>
     <string name="action_search">ब्यबहारकारीयों के ब्यबहृत नाम ढुंढे...</string>
     <string name="action_compare">तुलना करें</string>
-    <string name="clipboard_error">लेखा उतारने में त्रुटि</string>
-    <string name="clipboard_copied">क्लिपबोर्ड पर नक़ल किया</string>
+    <string name="clipboard_error">लेख कॉपी करने में त्रुटि</string>
+    <string name="clipboard_copied">क्लिपबोर्ड में कॉपी हो गया है</string>
     <string name="report">रिपोर्ट करें</string>
     <string name="password">पासवर्ड (सर्बाधिक ३२ वर्ण)</string>
     <string name="set_password">पासवर्ड तैयार करें (सर्बाधिक ३२ वर्ण)</string>
@@ -18,7 +18,7 @@
     <string name="no">नहीं</string>
     <string name="confirm">पुष्टि करें</string>
     <string name="nav_up">ऊपर</string>
-    <string name="dont_show_again">फिर से मत दिखाओ</string>
+    <string name="dont_show_again">दोबारा न दिखाएं</string>
     <string name="selected_folder_label">बर्तमान फोल्डर</string>
     <string name="title_favorites">पसंदीदा</string>
     <string name="title_discover">खोजिए</string>
@@ -112,7 +112,7 @@
     <string name="unblock">अनब्ल़ॉक करें</string>
     <string name="restrict">प्रतिबंध लगाए</string>
     <string name="unrestrict">प्रतिबंध न लगाए</string>
-    <string name="bio_copy">Copy bio</string>
+    <string name="bio_copy">विवरण कॉपी करें</string>
     <string name="bio_translate">Translate bio</string>
     <string name="status_mutual">Mutual</string>
     <string name="status_following">Following</string>
@@ -156,7 +156,7 @@
     <string name="direct_messages_mention_story">स्टोरि पे आपको उल्लेख किया</string>
     <string name="dms_inbox_raven_message_unknown"><i> सन्देश प्रकार असमर्थित है</i></string>
     <string name="dms_inbox_open_link">लिंक खोलो</string>
-    <string name="dms_inbox_copy_text">पाठ की प्रतिलिपि बनाएं</string>
+    <string name="dms_inbox_copy_text">लेख कॉपी करें</string>
     <string name="dms_inbox_download">अनुलग्नक डाउनलोड करें</string>
     <string name="dms_inbox_like">सन्देश को पसन्द करें</string>
     <string name="dms_inbox_unlike">सन्देश को पसन्द न करें</string>
@@ -193,8 +193,8 @@
     <string name="downloader_error_creating_folder">फोलडर बनाने में त्रुटि!</string>
     <string name="downloader_error_download_file">फ़ाइल डाउनलोड करने में त्रुटि</string>
     <string name="downloader_too_many">आप सिर्फ १०० पोस्टस एक बार में डाउनलोड कर सकते हैं. ज्यादा लोभी बनना हानिकारक हैं!</string>
-    <string name="comment_viewer_copy_user">युज़रनेम को कॅापी करें</string>
-    <string name="comment_viewer_copy_comment">टिप्पणी को कॅापी करें</string>
+    <string name="comment_viewer_copy_user">युज़रनेम कॉपी करें</string>
+    <string name="comment_viewer_copy_comment">टिप्पणी कॉपी करें</string>
     <string name="comment_viewer_see_likers">View comment likers</string>
     <string name="comment_viewer_reply_comment">टिप्पणी का जवाब दें</string>
     <string name="comment_viewer_like_comment">टिप्पणी को पसन्द करें</string>
@@ -241,7 +241,7 @@
     <string name="activity_count_usertags">%d usertags</string>
     <string name="activity_count_likes">%d likes</string>
     <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
-    <string name="feed">Feed</string>
+    <string name="feed">फ़ीड</string>
     <string name="profile">Profile</string>
     <string name="more">More</string>
     <string name="title_dm">DM</string>
@@ -251,7 +251,7 @@
     <string name="mark_as_seen">Mark as seen</string>
     <string name="skip_update_checkbox">Do not show again until next update</string>
     <string name="version">संस्करण</string>
-    <string name="pref_start_screen">Start screen</string>
+    <string name="pref_start_screen">प्रारंभ पृष्ठ</string>
     <string name="pref_category_general">सामान्य</string>
     <string name="pref_category_theme">थीम</string>
     <string name="pref_category_downloads">डाउनलोड</string>
@@ -262,12 +262,12 @@
     <string name="about_category_license">License (English only)</string>
     <string name="about_documentation">हमारी वेबसाइट पर जाएं</string>
     <string name="about_documentation_summary">Get support, discuss, meet others, and have fun!</string>
-    <string name="about_repository">See our source code on GitHub</string>
+    <string name="about_repository">Github मे सोर्स कोड देखें</string>
     <string name="about_repository_summary">Audit, star, report bugs, contribute, and have fun (again)!</string>
     <string name="about_feedback">Send feedback by email</string>
     <string name="about_category_3pt">Third-Party Attributions</string>
     <string name="about_category_3pt_summary">The following third-party open-source libraries are used:</string>
-    <string name="reminder">Reminder</string>
+    <string name="reminder">रिमाइन्डर</string>
     <string name="reminder_summary">Please use this app responsibly. Downloaded images should only be used for purposes allowed by applicable laws.</string>
     <string name="light_white_theme">सफेद</string>
     <string name="dark_black_theme">काला</string>
@@ -278,11 +278,11 @@
     <string name="added_to_favs">Added to Favorites</string>
     <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
     <string name="add_to_favorites" comment="Here it's a verb, used for the favorite chip on profile/hashtag/location fragments, so be short">Favorite</string>
-    <string name="accounts">Accounts</string>
-    <string name="hashtags">Hashtags</string>
-    <string name="locations">Locations</string>
-    <string name="unknown">Unknown</string>
-    <string name="removed_from_favs">Removed from Favourites</string>
+    <string name="accounts">खाते</string>
+    <string name="hashtags">हैशटैग्स</string>
+    <string name="locations">स्थान</string>
+    <string name="unknown">अज्ञात</string>
+    <string name="removed_from_favs">पसंदीदा से हटाया</string>
     <string name="backup_and_restore">Backup &amp; Restore User Settings</string>
     <string name="backup_summary">Back up app settings, account login information, and/or favorites data to a plain text or encrypted backup file for later restoration.</string>
     <string name="backup_warning">If you\'re backing up login info, treat the file as confidential: Keep them somewhere safe!</string>
@@ -291,11 +291,11 @@
     <string name="file_chosen_label">File:</string>
     <string name="enter_password">पासवर्ड दर्ज करें</string>
     <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
-    <string name="apply">Apply</string>
-    <string name="save">Save</string>
-    <string name="caption">Caption</string>
-    <string name="edit_caption">Edit caption...</string>
-    <string name="translate_caption">Translate caption...</string>
+    <string name="apply">लागू करें</string>
+    <string name="save">सेव करें</string>
+    <string name="caption">कैप्शन</string>
+    <string name="edit_caption">कैप्शन का संपादन करें</string>
+    <string name="translate_caption">कैप्शन का अनुवाद करें</string>
     <string name="player_timeline_desc">Video player timeline</string>
     <string name="liking">Liking…</string>
     <string name="like_unsuccessful">Like unsuccessful</string>
@@ -306,9 +306,9 @@
     <string name="removing">Removing…</string>
     <string name="save_unsuccessful">Save unsuccessful</string>
     <string name="save_remove_unsuccessful">Remove unsuccessful</string>
-    <string name="downloading">Downloading…</string>
+    <string name="downloading">डाउनलोड हो रहा है...</string>
     <string name="downloader_downloading_child">Download item %d of %d</string>
-    <string name="delete">Delete</string>
+    <string name="delete">हटाएँ</string>
     <string name="comment">Comment</string>
     <string name="layout">Layout</string>
     <string name="feed_stories">Feed stories</string>
@@ -321,12 +321,12 @@
     <string name="show_names">Show names</string>
     <string name="show_avatars">Show avatars</string>
     <string name="avatar_size">Avatar size</string>
-    <string name="corners">Corners</string>
+    <string name="corners">कोने</string>
     <string name="show_grid_gap">Show grid gap</string>
     <string name="disable_animation">Disable animation</string>
     <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
     <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
-    <string name="post_not_found">Post not found!</string>
+    <string name="post_not_found">पोस्ट नहीं मिली</string>
     <string name="no_external_app_url">No app found which opens urls</string>
     <plurals name="likes_count">
         <item quantity="one">%d like</item>
