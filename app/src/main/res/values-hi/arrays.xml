@@ -26,7 +26,7 @@
     <string-array name="theme_presets">
         <item>सिस्टम के अनुसार</item>
         <item>बैटरी स्तर के अनुसार</item>
-        <item>काला</item>
+        <item>गहरा</item>
         <item>हल्का</item>
     </string-array>
     <string-array name="story_sorts">
