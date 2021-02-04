@@ -253,7 +253,7 @@
     <string name="version">संस्करण</string>
     <string name="pref_start_screen">Start screen</string>
     <string name="pref_category_general">General</string>
-    <string name="pref_category_theme">Theme</string>
+    <string name="pref_category_theme">थीम</string>
     <string name="pref_category_downloads">Downloads</string>
     <string name="pref_category_locale">Locale</string>
     <string name="account">Account</string>
@@ -269,11 +269,11 @@
     <string name="about_category_3pt_summary">The following third-party open-source libraries are used:</string>
     <string name="reminder">Reminder</string>
     <string name="reminder_summary">Please use this app responsibly. Downloaded images should only be used for purposes allowed by applicable laws.</string>
-    <string name="light_white_theme">White</string>
-    <string name="dark_black_theme">Black</string>
-    <string name="light_theme_settings">Light theme</string>
-    <string name="dark_theme_settings">Dark theme</string>
-    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
+    <string name="light_white_theme">सफेद</string>
+    <string name="dark_black_theme">काला</string>
+    <string name="light_theme_settings">हल्के रंग का थीम</string>
+    <string name="dark_theme_settings">गहरे रंग की थीम</string>
+    <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">कॉफ़ी</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">Added to Favorites</string>
     <string name="added_to_favs_short" comment="Here it's an adjective (equivalent to verb past tense), used for the favorite chip on profile/hashtag/location fragments, so be short">Favorited</string>
