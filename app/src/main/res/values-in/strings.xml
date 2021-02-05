@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_about">Tentang</string>
-    <string name="action_dms">Pesan Langsung</string>
+    <string name="action_dms">Pesan</string>
     <string name="action_settings">Pengaturan</string>
     <string name="action_download">Unduh</string>
-    <string name="action_search">Cari Pengguna…</string>
+    <string name="action_search">Cari pengguna…</string>
     <string name="action_compare">Bandingkan</string>
     <string name="clipboard_error">Galat menyalin tulisan</string>
     <string name="clipboard_copied">Tersalin!</string>
