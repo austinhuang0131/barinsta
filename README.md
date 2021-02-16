@@ -27,12 +27,12 @@ Version status: ![F-Droid](https://img.shields.io/f-droid/v/me.austinhuang.insta
 
 ## Screenshots
 
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.jpg" alt="Profile" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.jpg" alt="Post" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.jpg" alt="Comments" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/4.jpg" alt="Story" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/5.jpg" alt="Hashtag" width="15%"/></a>
-<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/6.jpg" alt="Discover Topics" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/1.png"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/1.png" alt="Profile" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/2.png"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/2.png" alt="Post" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/3.png"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/3.png" alt="Comments" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/4.png"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/4.png" alt="Story" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/5.png"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/5.png" alt="Hashtag" width="15%"/></a>
+<a href="https://github.com/austinhuang0131/instagrabber/blob/master/fastlane/metadata/android/en-US/images/phoneScreenshots/6.png"><img src="./fastlane/metadata/android/en-US/images/phoneScreenshots/6.png" alt="Discover Topics" width="15%"/></a>
 
 ## We need maintainers!
 
