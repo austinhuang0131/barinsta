@@ -838,8 +838,8 @@ public final class ResponseBodyUtils {
         }
         final Location location = new Location(
                 locationId,
-                locationName,
-                locationName,
+                locationName == null ? "" : locationName,
+                locationName == null ? "" : locationName,
                 null,
                 null,
                 -1,
