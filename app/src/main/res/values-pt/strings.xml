@@ -208,7 +208,7 @@
     <string name="dms_inbox_raven_media_suggested">Sugerido</string>
     <string name="dms_inbox_raven_media_screenshot">Capturado</string>
     <string name="dms_inbox_raven_media_cant_deliver">Não pode ser entregue</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
+    <string name="dms_inbox_error_null_count">Resposta do contador de não lidas é nula!</string>
     <string name="dms_thread_message_hint">Mensagem...</string>
     <string name="dms_thread_audio_hint">Aperte e segure para gravar um áudio</string>
     <string name="dms_thread_updating">Atualizando...</string>
@@ -217,8 +217,8 @@
     <string name="dms_action_leave_question">Sair deste chat?</string>
     <string name="dms_action_kick">Expulsar</string>
     <string name="dms_left_users">Usuários que saíram</string>
-    <string name="dms_ERROR_INVALID_USER">Invalid user</string>
-    <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
+    <string name="dms_ERROR_INVALID_USER">Usuário inválido</string>
+    <string name="dms_ERROR_VIDEO_TOO_LONG">O Instagram não permite o upload de vídeos com mais de 60 segundos para DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
     <string name="direct_download">Baixar diretamente</string>
     <string name="direct_download_desc">Baixar as publicações diretamente no telefone!</string>
@@ -427,7 +427,7 @@
     <string name="message">Mensagem</string>
     <string name="reply">Responder</string>
     <string name="tap_to_remove">Toque para remover</string>
-    <string name="forward">Avançar</string>
+    <string name="forward">Encaminhar</string>
     <string name="forward_outgoing">Você encaminhou uma mensagem</string>
     <string name="forward_incoming">Encaminhou uma mensagem</string>
     <string name="add">Adicionar</string>
