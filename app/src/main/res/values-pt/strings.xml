@@ -118,7 +118,7 @@
     <string name="unbookmark">Remover</string>
     <string name="follow">Seguir</string>
     <string name="unfollow">Deixar de seguir</string>
-    <string name="favorite_short" comment="Adjective, not verb">Favoritar</string>
+    <string name="favorite_short" comment="Adjective, not verb">Favorito</string>
     <string name="block">Bloquear</string>
     <string name="unblock">Desbloquear</string>
     <string name="restrict">Restringir</string>
@@ -219,7 +219,7 @@
     <string name="dms_left_users">Usuários que saíram</string>
     <string name="dms_ERROR_INVALID_USER">Usuário inválido</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">O Instagram não permite o upload de vídeos com mais de 60 segundos para DM.</string>
-    <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
+    <string name="dms_ERROR_AUDIO_TOO_LONG">O Instagram não permite o upload de áudios com mais de 60 segundos.</string>
     <string name="direct_download">Baixar diretamente</string>
     <string name="direct_download_desc">Baixar as publicações diretamente no telefone!</string>
     <string name="direct_download_loading">Buscando publicação(ões)</string>
@@ -484,7 +484,7 @@
     <string name="secs">segs</string>
     <string name="mins">mins</string>
     <string name="search_giphy">Buscar GIPHY</string>
-    <string name="generic_null_response">Response is null!</string>
-    <string name="generic_not_ok_response">Response status is not ok!</string>
-    <string name="generic_failed_request">Request failed!</string>
+    <string name="generic_null_response">A resposta é nula!</string>
+    <string name="generic_not_ok_response">O estado da resposta não está correto!</string>
+    <string name="generic_failed_request">A solicitação falhou!</string>
 </resources>
