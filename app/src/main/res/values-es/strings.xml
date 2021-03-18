@@ -25,6 +25,7 @@
     <string name="title_notifications">Actividad</string>
     <string name="title_highlight">Resaltar: %s</string>
     <string name="update_check">Buscar actualizaciones al inicio</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Usar subcarpetas con el nombre de usuario</string>
     <string name="mark_as_seen_setting">Marcar historias como vistas después de verlas</string>
     <string name="mark_as_seen_setting_summary">El autor de la historia sabrá que lo has visto</string>
