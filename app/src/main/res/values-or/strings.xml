@@ -25,6 +25,7 @@
     <string name="title_notifications">କାର୍ଯ୍ୟକଳାପ</string>
     <string name="title_highlight">ବିଶେଷତା: %s</string>
     <string name="update_check">ଖୋଲିବା ସମୟରେ ଅପଡେଟ ପାଇଁ ଯାଞ୍ଚ କରନ୍ତୁ</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">ଡାଉନଲୋଡ ପୋଷ୍ଟକୁ ବ୍ୟବହାରକାରୀଙ୍କ ନାମରେ ହୋଇଥିବା ସ୍ଥାନ ରେ ରଖ</string>
     <string name="mark_as_seen_setting">କାହାଣୀଗୁଡିକ ଦେଖିବା ପରେ \'ଦେଖାଗଲା\' ଚିହ୍ନିତ କରନ୍ତୁ |</string>
     <string name="mark_as_seen_setting_summary">କାହାଣୀ ପ୍ରେରକ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ</string>
