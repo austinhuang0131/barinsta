@@ -25,6 +25,7 @@
     <string name="title_notifications">Aktivität</string>
     <string name="title_highlight">Hervorheben: %s</string>
     <string name="update_check">Beim Start auf Aktualisierungen prüfen</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Beiträge in Benutzernamen-Ordner herunterladen</string>
     <string name="mark_as_seen_setting">Stories nach dem Ansehen als gesehen markieren</string>
     <string name="mark_as_seen_setting_summary">Die Person wird wissen, dass du dir die Story angesehen hast</string>
