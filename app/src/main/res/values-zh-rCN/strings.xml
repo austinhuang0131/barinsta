@@ -25,7 +25,7 @@
     <string name="title_notifications">动态</string>
     <string name="title_highlight">精彩：%s</string>
     <string name="update_check">启动时检查更新</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">屏蔽截图及应用预览</string>
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
     <string name="mark_as_seen_setting">查看快拍后将其标记为已读</string>
     <string name="mark_as_seen_setting_summary">快拍作者会知道您已看过</string>
