@@ -25,6 +25,7 @@
     <string name="title_notifications">Активности</string>
     <string name="title_highlight">Важни Приказни: %s</string>
     <string name="update_check">Провери за ажурирање</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Превземи објави во папката со кориснички имиња</string>
     <string name="mark_as_seen_setting">Означи ги приказните како видени</string>
     <string name="mark_as_seen_setting_summary">Авторот на приказната ќе знае дека сте ја погледнале приказната</string>
