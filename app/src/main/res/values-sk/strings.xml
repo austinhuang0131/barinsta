@@ -456,11 +456,11 @@
     <string name="replied_group">Replied to %s</string>
     <string name="replied_to_you">Replied to you</string>
     <string name="replied_to_themself">Replied to themself</string>
-    <string name="reacted_story_outgoing">You reacted to their story</string>
-    <string name="reacted_story_incoming">Reacted to your story</string>
-    <string name="mentioned_story_outgoing">You mentioned them in your story</string>
-    <string name="mentioned_story_incoming">Mentioned you in their story</string>
-    <string name="replied_story_outgoing">You replied to their story</string>
+    <string name="reacted_story_outgoing">Reagovali ste na ich príbeh</string>
+    <string name="reacted_story_incoming">Reagoval/a na tvoj príbeh</string>
+    <string name="mentioned_story_outgoing">Spomenuli ste ich vo vašom príbehu</string>
+    <string name="mentioned_story_incoming">Spomenul/a ťa v príbehu</string>
+    <string name="replied_story_outgoing">Odpovedal/a si na ich príbeh</string>
     <string name="replied_story_incoming">Replied to your story</string>
     <string name="raven_image_expired">Image has expired</string>
     <string name="raven_image_info">Image will expire when seen</string>
@@ -497,10 +497,10 @@
     <string name="enable_dm_notifications">Enable DM notifications</string>
     <string name="enable_dm_auto_refesh">Auto refresh messages</string>
     <string name="auto_refresh_every">Auto refresh every</string>
-    <string name="secs">secs</string>
-    <string name="mins">mins</string>
-    <string name="search_giphy">Search GIPHY</string>
-    <string name="generic_null_response">Response is null!</string>
+    <string name="secs">sekúnd</string>
+    <string name="mins">minút</string>
+    <string name="search_giphy">Hľadať GIPHY</string>
+    <string name="generic_null_response">Odpoveď je null!</string>
     <string name="generic_not_ok_response">Response status is not ok!</string>
     <string name="generic_failed_request">Request failed!</string>
 </resources>
