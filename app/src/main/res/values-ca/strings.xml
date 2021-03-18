@@ -25,6 +25,7 @@
     <string name="title_notifications">Activitat</string>
     <string name="title_highlight">Destaca: %s</string>
     <string name="update_check">Cerca actualitzacions a l\'inici</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Descarrega les publicacions a carpetes de nom d\'usuari</string>
     <string name="mark_as_seen_setting">Marca les històries com a vistes després de visualitzar-es</string>
     <string name="mark_as_seen_setting_summary">L\'autor de la història sabrà que l\'has vista</string>
