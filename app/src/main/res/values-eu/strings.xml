@@ -25,6 +25,7 @@
     <string name="title_notifications">Jarduera</string>
     <string name="title_highlight">Nabarmendua: %s</string>
     <string name="update_check">Bilatu eguneratzeak abioan</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Deskargatu bidalketak erabiltzaile-izena duten karpetetara</string>
     <string name="mark_as_seen_setting">Markatu istorioak ikusita gisa ikusi ondoren</string>
     <string name="mark_as_seen_setting_summary">Istorioaren egileak ikusi duzula jakingo du</string>
