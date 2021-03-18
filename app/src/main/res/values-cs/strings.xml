@@ -25,6 +25,7 @@
     <string name="title_notifications">Aktivita</string>
     <string name="title_highlight">Zvýraznit: %s</string>
     <string name="update_check">Zkontrolovat aktualizace při spuštění</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Stáhnout příspěvky do složek s uživatelským jménem</string>
     <string name="mark_as_seen_setting">Označit příběhy po zhlédnutí jako zobrazené</string>
     <string name="mark_as_seen_setting_summary">Autor příběhu bude vědět, že jsi si ho zobrazili</string>
