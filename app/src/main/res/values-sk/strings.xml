@@ -492,15 +492,15 @@
     <string name="checking_for_new_messages">Checking for new messages</string>
     <string name="pref_category_stories">Stories</string>
     <string name="pref_category_dm">DM</string>
-    <string name="pref_category_notifications">Notifications</string>
-    <string name="pref_category_post">Post</string>
-    <string name="enable_dm_notifications">Enable DM notifications</string>
-    <string name="enable_dm_auto_refesh">Auto refresh messages</string>
-    <string name="auto_refresh_every">Auto refresh every</string>
+    <string name="pref_category_notifications">Oznámenia</string>
+    <string name="pref_category_post">Príspevok</string>
+    <string name="enable_dm_notifications">Zapnúť DM oznámenia</string>
+    <string name="enable_dm_auto_refesh">Auto obnovenie správ</string>
+    <string name="auto_refresh_every">Automatické obnovenie každých</string>
     <string name="secs">sekúnd</string>
     <string name="mins">minút</string>
     <string name="search_giphy">Hľadať GIPHY</string>
     <string name="generic_null_response">Odpoveď je null!</string>
-    <string name="generic_not_ok_response">Response status is not ok!</string>
-    <string name="generic_failed_request">Request failed!</string>
+    <string name="generic_not_ok_response">Stav odpovede nie je ok!</string>
+    <string name="generic_failed_request">Požiadavka zlyhala!</string>
 </resources>
