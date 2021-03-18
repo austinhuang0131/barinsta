@@ -25,6 +25,7 @@
     <string name="title_notifications">Δραστηριότητα</string>
     <string name="title_highlight">Καλύτερες Στιγμές: %s</string>
     <string name="update_check">Έλεγχος για ενημερώσεις στο ξεκίνημα</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Λήψη δημοσίευσης στους φακέλους με ονόματα χρηστών</string>
     <string name="mark_as_seen_setting">Επισήμανση ιστοριών ως προβληθέντων μετά την προβολή</string>
     <string name="mark_as_seen_setting_summary">Ο συντάκτης της ιστορίας θα ξέρει ότι την προβάλατε</string>
