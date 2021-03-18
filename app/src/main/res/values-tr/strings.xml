@@ -25,6 +25,7 @@
     <string name="title_notifications">Hareketler</string>
     <string name="title_highlight">Öne çıkarılanlar: %s</string>
     <string name="update_check">Güncellemeleri başlangıçta kontrol et</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
     <string name="mark_as_seen_setting">Hikayeleri gördükten sonra görüldü olarak işaretle</string>
     <string name="mark_as_seen_setting_summary">Hikayeyi paylaşan gördüğünüzü bilecek</string>
