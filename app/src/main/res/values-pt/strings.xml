@@ -25,6 +25,7 @@
     <string name="title_notifications">Atividade</string>
     <string name="title_highlight">Destaque: %s</string>
     <string name="update_check">Verificar se há atualizações ao iniciar</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Baixar publicações para pastas com o nome de usuário</string>
     <string name="mark_as_seen_setting">Marcar stories como vistos após a visualização</string>
     <string name="mark_as_seen_setting_summary">O autor do story saberá que você viu</string>
