@@ -45,7 +45,7 @@
         <item>-</item>
     </string-array>
     <string-array name="dm_auto_refresh_freq_units">
-        <item>secs</item>
-        <item>mins</item>
+        <item>sekúnd</item>
+        <item>minút</item>
     </string-array>
 </resources>
