@@ -25,6 +25,7 @@
     <string name="title_notifications">Activité</string>
     <string name="title_highlight">Temps forts: %s</string>
     <string name="update_check">Rechercher les mises à jours au démarrage</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Télécharger les messages dans les dossiers des noms d\'utilisateurs</string>
     <string name="mark_as_seen_setting">Marquer les stories comme vues après consultation</string>
     <string name="mark_as_seen_setting_summary">L\'auteur de la story saura que vous l\'avez vue</string>
