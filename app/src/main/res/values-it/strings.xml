@@ -25,6 +25,7 @@
     <string name="title_notifications">Attività</string>
     <string name="title_highlight">In Evidenza: %s</string>
     <string name="update_check">Verifica per aggiornamenti all\'avvio</string>
+    <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Scarica i post nelle cartelle del nome utente</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo la visualizzazione</string>
     <string name="mark_as_seen_setting_summary">L\'autore della storia saprà che l\'hai visualizzata</string>
