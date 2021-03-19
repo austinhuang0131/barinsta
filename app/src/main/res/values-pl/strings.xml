@@ -453,19 +453,19 @@
     <string name="decline">Odrzuć</string>
     <string name="accept">Akceptuj</string>
     <string name="you">Ty</string>
-    <string name="no_pending_requests">No pending requests</string>
+    <string name="no_pending_requests">Brak oczekujących żądań</string>
     <string name="checking_for_new_messages">Sprawdzanie nowych wiadomości</string>
     <string name="pref_category_stories">Relacje</string>
     <string name="pref_category_dm">PW</string>
     <string name="pref_category_notifications">Powiadomienia</string>
     <string name="pref_category_post">Post</string>
-    <string name="enable_dm_notifications">Enable DM notifications</string>
-    <string name="enable_dm_auto_refesh">Auto refresh messages</string>
-    <string name="auto_refresh_every">Auto refresh every</string>
-    <string name="secs">secs</string>
-    <string name="mins">mins</string>
+    <string name="enable_dm_notifications">Włącz powiadomienia PW</string>
+    <string name="enable_dm_auto_refesh">Automatyczne odświeżanie wiadomości</string>
+    <string name="auto_refresh_every">Automatycznie odświeżaj co</string>
+    <string name="secs">s.</string>
+    <string name="mins">min.</string>
     <string name="search_giphy">Szukaj GIPHY</string>
     <string name="generic_null_response">Odpowiedź jest pusta!</string>
-    <string name="generic_not_ok_response">Response status is not ok!</string>
-    <string name="generic_failed_request">Request failed!</string>
+    <string name="generic_not_ok_response">Status odpowiedzi nie jest OK!</string>
+    <string name="generic_failed_request">Żądanie nie powiodło się!</string>
 </resources>
