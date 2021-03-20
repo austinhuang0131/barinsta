@@ -445,4 +445,5 @@
     <string name="generic_not_ok_response">回应状态错误！</string>
     <string name="generic_failed_request">请求失败</string>
     <string name="marked_as_seen">已标记为已读</string>
+    <string name="delete_unsuccessful">Delete unsuccessful</string>
 </resources>
