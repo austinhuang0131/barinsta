@@ -469,4 +469,5 @@
     <string name="generic_not_ok_response">Status odpowiedzi nie jest OK!</string>
     <string name="generic_failed_request">Żądanie nie powiodło się!</string>
     <string name="marked_as_seen">Marked as seen</string>
+    <string name="delete_unsuccessful">Delete unsuccessful</string>
 </resources>
