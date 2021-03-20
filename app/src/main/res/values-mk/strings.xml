@@ -452,4 +452,5 @@
     <string name="generic_null_response">Одбоворот е null!</string>
     <string name="generic_not_ok_response">Одговорот на статусот не е ок!</string>
     <string name="generic_failed_request">Барањето неуспешно!</string>
+    <string name="marked_as_seen">Marked as seen</string>
 </resources>
