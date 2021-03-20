@@ -467,4 +467,5 @@
     <string name="generic_not_ok_response">Response status is not ok!</string>
     <string name="generic_failed_request">Request failed!</string>
     <string name="marked_as_seen">Marked as seen</string>
+    <string name="delete_unsuccessful">Delete unsuccessful</string>
 </resources>
