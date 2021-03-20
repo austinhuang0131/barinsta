@@ -469,4 +469,5 @@
     <string name="generic_not_ok_response">Stav odpovede nie je ok!</string>
     <string name="generic_failed_request">Požiadavka zlyhala!</string>
     <string name="marked_as_seen">Marked as seen</string>
+    <string name="delete_unsuccessful">Delete unsuccessful</string>
 </resources>
