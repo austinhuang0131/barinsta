@@ -180,14 +180,14 @@
     <string name="dms_inbox_raven_media_screenshot">Pantaila-argazkia aterata</string>
     <string name="dms_inbox_raven_media_cant_deliver">Ez da iritsi</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Message...</string>
+    <string name="dms_thread_message_hint">Mezua...</string>
     <string name="dms_thread_audio_hint">Press and hold to record audio</string>
     <string name="dms_thread_updating">Updating...</string>
-    <string name="dms_action_leave">Leave chat</string>
+    <string name="dms_action_leave">Utzi txata</string>
     <string name="dms_action_leave_question">Utzi txat hau?</string>
     <string name="dms_action_kick">Bota</string>
     <string name="dms_left_users">Joan diren erabiltzaileak</string>
-    <string name="dms_ERROR_INVALID_USER">Invalid user</string>
+    <string name="dms_ERROR_INVALID_USER">Erabiltzaile baliogabea</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
     <string name="direct_download">Deskargatu zuzenean</string>
@@ -282,13 +282,13 @@
     <string name="dark_theme_settings">Gai iluna</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Akeita</string>
     <string name="dark_material_dark_theme">Beltz materiala</string>
-    <string name="added_to_favs">Added to Favorites!</string>
-    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="added_to_favs">Gogokoetara gehituta!</string>
+    <string name="add_to_favorites">Gehitu gogokoetara</string>
     <string name="accounts">Kontuak</string>
     <string name="hashtags">Traolak</string>
     <string name="locations">Kokalekuak</string>
     <string name="unknown">Ezezaguna</string>
-    <string name="removed_from_favs">Removed from Favourites!</string>
+    <string name="removed_from_favs">Gogokoetatik kenduta!</string>
     <string name="backup_and_restore">Backup &amp; Restore</string>
     <string name="backup_summary">Backup Barinsta app settings, account login data, and/or favorites to a plain text or encrypted backup file for later restoration.</string>
     <string name="backup_warning">If you\'re backing up account login data, treat the file as confidential and keep it somewhere safe!</string>
@@ -300,7 +300,7 @@
     <string name="apply">Ezarri</string>
     <string name="save">Gorde</string>
     <string name="caption">Argazki-oina</string>
-    <string name="edit_caption">Edit caption</string>
+    <string name="edit_caption">Editatu argazki-oina</string>
     <string name="translate_caption">Translate caption</string>
     <string name="player_timeline_desc">Video player timeline</string>
     <string name="liking">Atsegiten…</string>
