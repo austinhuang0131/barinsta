@@ -195,9 +195,9 @@
     <string name="dms_action_leave_question">Покинуть эту беседу?</string>
     <string name="dms_action_kick">Выгнать</string>
     <string name="dms_left_users">Оставшиеся пользователи</string>
-    <string name="dms_ERROR_INVALID_USER">Invalid user</string>
-    <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
-    <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
+    <string name="dms_ERROR_INVALID_USER">Недействительный пользователь</string>
+    <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram не позволяет загружать видео длиннее 60 секунд для ЛС.</string>
+    <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram не позволяет загружать звук длиннее 60 секунд.</string>
     <string name="direct_download">Скачать напрямую</string>
     <string name="direct_download_desc">Скачивает публикации прямо на телефон!</string>
     <string name="direct_download_loading">Получение публикации(ий)</string>
@@ -224,7 +224,7 @@
     <string name="followers_compare">Сравнение подписчиков &amp; последователей</string>
     <string name="followers_both_following">Оба подписаны друг на друга</string>
     <string name="followers_not_following">не подписан на %s</string>
-    <string name="followers_not_follower">%s not following</string>
+    <string name="followers_not_follower">%s не следует</string>
     <string name="login_error_loading_cookies">Ошибка при загрузке cookies</string>
     <string name="comment_hint">Написать новый комментарий…</string>
     <string name="dm_hint">Написать новое сообщение…</string>
@@ -465,8 +465,8 @@
     <string name="secs">секунды</string>
     <string name="mins">минуты</string>
     <string name="search_giphy">Поиск GIPHY</string>
-    <string name="generic_null_response">Response is null!</string>
-    <string name="generic_not_ok_response">Response status is not ok!</string>
-    <string name="generic_failed_request">Request failed!</string>
+    <string name="generic_null_response">Ответ пуст!</string>
+    <string name="generic_not_ok_response">Ответный статус не в порядке!</string>
+    <string name="generic_failed_request">Запрос не удался!</string>
     <string name="marked_as_seen">Marked as seen</string>
 </resources>
