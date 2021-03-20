@@ -452,4 +452,5 @@
     <string name="generic_null_response">A resposta é nula!</string>
     <string name="generic_not_ok_response">O estado da resposta não está correto!</string>
     <string name="generic_failed_request">A solicitação falhou!</string>
+    <string name="marked_as_seen">Marked as seen</string>
 </resources>
