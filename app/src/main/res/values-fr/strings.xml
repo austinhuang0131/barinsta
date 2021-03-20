@@ -453,4 +453,5 @@
     <string name="generic_not_ok_response">L\'état de la réponse n\'est pas correct !</string>
     <string name="generic_failed_request">La demande a échoué !</string>
     <string name="marked_as_seen">Marqué comme vu</string>
+    <string name="delete_unsuccessful">Delete unsuccessful</string>
 </resources>
