@@ -468,6 +468,11 @@
     <string name="generic_null_response">Odpowiedź jest pusta!</string>
     <string name="generic_not_ok_response">Status odpowiedzi nie jest OK!</string>
     <string name="generic_failed_request">Żądanie nie powiodło się!</string>
+    <string name="hint_keyword">Keyword</string>
+    <string name="toggle_keyword_filter">Enable keyword filter</string>
+    <string name="edit_keyword_filter">Edit keyword filters</string>
+    <string name="added_keywords">Added keyword: %s to filter list</string>
+    <string name="removed_keywords">Removed keyword: %s from filter list</string>
     <string name="marked_as_seen">Oznacz jako przeczytane</string>
     <string name="delete_unsuccessful">Usuwanie nie powiodło się</string>
 </resources>
