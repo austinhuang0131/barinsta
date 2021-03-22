@@ -452,11 +452,11 @@
     <string name="generic_null_response">¡La respuesta es nula!</string>
     <string name="generic_not_ok_response">¡El estado de la respuesta no es correcto!</string>
     <string name="generic_failed_request">¡Solicitud fallida!</string>
-    <string name="hint_keyword">Keyword</string>
-    <string name="toggle_keyword_filter">Enable keyword filter</string>
-    <string name="edit_keyword_filter">Edit keyword filters</string>
-    <string name="added_keywords">Added keyword: %s to filter list</string>
-    <string name="removed_keywords">Removed keyword: %s from filter list</string>
+    <string name="hint_keyword">Palabra clave</string>
+    <string name="toggle_keyword_filter">Activar filtro de palabras clave</string>
+    <string name="edit_keyword_filter">Editar filtros de palabras clave</string>
+    <string name="added_keywords">Palabra clave añadida: %s a la lista de filtros</string>
+    <string name="removed_keywords">Se eliminó la palabra clave: %s de la lista de filtros</string>
     <string name="marked_as_seen">Marcado como visto</string>
     <string name="delete_unsuccessful">Eliminación fallida</string>
 </resources>
