@@ -468,6 +468,11 @@
     <string name="generic_null_response">Odpoveď je null!</string>
     <string name="generic_not_ok_response">Stav odpovede nie je ok!</string>
     <string name="generic_failed_request">Požiadavka zlyhala!</string>
+    <string name="hint_keyword">Keyword</string>
+    <string name="toggle_keyword_filter">Enable keyword filter</string>
+    <string name="edit_keyword_filter">Edit keyword filters</string>
+    <string name="added_keywords">Added keyword: %s to filter list</string>
+    <string name="removed_keywords">Removed keyword: %s from filter list</string>
     <string name="marked_as_seen">Marked as seen</string>
     <string name="delete_unsuccessful">Delete unsuccessful</string>
 </resources>
