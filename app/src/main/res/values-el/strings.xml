@@ -246,8 +246,8 @@
     <string name="activity_count_commentlikes">%d επισημάνσεις \'Μου Αρέσει\' σε σχόλια</string>
     <string name="activity_count_usertags">%d ετικέτες χρήστη</string>
     <string name="activity_count_likes">%d επισημάνσεις \"Μου αρέσει\"</string>
-    <string name="activity_count_poy">%d photos of you</string>
-    <string name="activity_count_requests">%d follow requests</string>
+    <string name="activity_count_poy">%d φωτογραφίες σας</string>
+    <string name="activity_count_requests">%d αιτήματα ακολούθησης</string>
     <string name="activity_notloggedin">Αποσυνδεθήκατε πριν κάνετε κλικ σε αυτή την ειδοποίηση;!</string>
     <string name="feed">Ροή</string>
     <string name="profile">Προφίλ</string>
@@ -282,13 +282,13 @@
     <string name="dark_theme_settings">Σκοτεινό θέμα</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Σκοτεινό Material</string>
-    <string name="added_to_favs">Added to Favorites!</string>
-    <string name="add_to_favorites">Add to Favorites</string>
+    <string name="added_to_favs">Προστέθηκε στα Αγαπημένα!</string>
+    <string name="add_to_favorites">Προσθήκη στα αγαπημένα</string>
     <string name="accounts">Λογαριασμοί</string>
     <string name="hashtags">Hashtags</string>
     <string name="locations">Τοποθεσίες</string>
     <string name="unknown">Άγνωστο</string>
-    <string name="removed_from_favs">Removed from Favourites!</string>
+    <string name="removed_from_favs">Αφαίρεση από τα αγαπημένα!</string>
     <string name="backup_and_restore">Αντίγραφα ασφαλείας &amp; Επαναφορά</string>
     <string name="backup_summary">Αντίγραφο ασφαλείας ρυθμίσεων εφαρμογής Barinsta, δεδομένα σύνδεσης λογαριασμού και/ή αγαπημένα σε ένα απλό κείμενο ή κρυπτογραφημένο αρχείο αντιγράφου ασφαλείας για μεταγενέστερη επαναφορά.</string>
     <string name="backup_warning">Αν δημιουργείτε αντίγραφα ασφαλείας των δεδομένων σύνδεσης λογαριασμού, αντιμετωπίζετε το αρχείο ως απόρρητο και κρατήστε το κάπου που είναι ασφαλές!</string>
@@ -457,6 +457,6 @@
     <string name="edit_keyword_filter">Edit keyword filters</string>
     <string name="added_keywords">Added keyword: %s to filter list</string>
     <string name="removed_keywords">Removed keyword: %s from filter list</string>
-    <string name="marked_as_seen">Marked as seen</string>
-    <string name="delete_unsuccessful">Delete unsuccessful</string>
+    <string name="marked_as_seen">Σήμανθηκε ως αναγνωσμένο</string>
+    <string name="delete_unsuccessful">Η διαγραφή απέτυχε</string>
 </resources>
