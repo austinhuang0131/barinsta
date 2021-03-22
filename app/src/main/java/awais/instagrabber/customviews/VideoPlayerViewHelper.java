@@ -359,6 +359,9 @@ public class VideoPlayerViewHelper implements Player.EventListener {
     // }
 
     public void releasePlayer() {
+        if (videoPlayerCallback != null) {
+            videoPlayerCallback.onRelease();
+        }
         if (player != null) {
             player.release();
             player = null;
@@ -453,5 +456,7 @@ public class VideoPlayerViewHelper implements Player.EventListener {
         void onPlay();
 
         void onPause();
+
+        void onRelease();
     }
 }

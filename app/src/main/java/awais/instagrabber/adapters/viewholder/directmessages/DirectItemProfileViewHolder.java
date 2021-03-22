@@ -86,8 +86,7 @@ public class DirectItemProfileViewHolder extends DirectItemViewHolder {
         for (int i = 0; i < previewMedias.size(); i++) {
             final Media previewMedia = previewMedias.get(i);
             if (previewMedia == null) continue;
-            final ImageVersions2 imageVersions2 = previewMedia.getImageVersions2();
-            final String url = ResponseBodyUtils.getThumbUrl(imageVersions2);
+            final String url = ResponseBodyUtils.getThumbUrl(previewMedia);
             if (url == null) continue;
             previewViews.get(i).setImageURI(url);
         }

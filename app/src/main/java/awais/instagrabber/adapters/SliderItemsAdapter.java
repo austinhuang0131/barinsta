@@ -148,5 +148,7 @@ public final class SliderItemsAdapter extends ListAdapter<Media, SliderItemViewH
         void onPlayerPlay(int position);
 
         void onPlayerPause(int position);
+
+        void onPlayerRelease(int position);
     }
 }

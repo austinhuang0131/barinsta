@@ -11,6 +11,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 
 public interface MediaRepository {
@@ -60,4 +61,15 @@ public interface MediaRepository {
     Call<String> uploadFinish(@Header("retry_context") final String retryContext,
                               @QueryMap Map<String, String> queryParams,
                               @FieldMap final Map<String, String> signedForm);
+
+    @FormUrlEncoded
+    @POST("/api/v1/media/{mediaId}/delete/")
+    Call<String> delete(@Path("mediaId") final String mediaId,
+                        @Query("media_type") final String mediaType,
+                        @FieldMap final Map<String, String> signedForm);
+
+    @FormUrlEncoded
+    @POST("/api/v1/media/{mediaId}/archive/")
+    Call<String> archive(@Path("mediaId") final String mediaId,
+                         @FieldMap final Map<String, String> signedForm);
 }

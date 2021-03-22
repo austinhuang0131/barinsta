@@ -8,9 +8,8 @@ import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreferenceCompat;
 
 import awais.instagrabber.R;
+import awais.instagrabber.dialogs.KeywordsFilterDialog;
 import awais.instagrabber.utils.Constants;
-
-import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public class PostPreferencesFragment extends BasePreferencesFragment {
     @Override
@@ -20,6 +19,8 @@ public class PostPreferencesFragment extends BasePreferencesFragment {
         // generalCategory.addPreference(getAutoPlayVideosPreference(context));
         screen.addPreference(getAlwaysMuteVideosPreference(context));
         screen.addPreference(getShowCaptionPreference(context));
+        screen.addPreference(getToggleKeywordFilterPreference(context));
+        screen.addPreference(getEditKeywordFilterPreference(context));
     }
 
     private Preference getAutoPlayVideosPreference(@NonNull final Context context) {
@@ -44,6 +45,26 @@ public class PostPreferencesFragment extends BasePreferencesFragment {
         preference.setDefaultValue(true);
         preference.setTitle(R.string.post_viewer_show_captions);
         preference.setIconSpaceReserved(false);
+        return preference;
+    }
+
+    private Preference getToggleKeywordFilterPreference(@NonNull final Context context) {
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
+        preference.setKey(Constants.TOGGLE_KEYWORD_FILTER);
+        preference.setDefaultValue(false);
+        preference.setTitle(R.string.toggle_keyword_filter);
+        preference.setIconSpaceReserved(false);
+        return preference;
+    }
+
+    private Preference getEditKeywordFilterPreference(@NonNull final Context context){
+        final Preference preference = new Preference(context);
+        preference.setTitle(R.string.edit_keyword_filter);
+        preference.setIconSpaceReserved(false);
+        preference.setOnPreferenceClickListener(view ->{
+            new KeywordsFilterDialog().show(getParentFragmentManager(), null);
+            return true;
+        });
         return preference;
     }
 }

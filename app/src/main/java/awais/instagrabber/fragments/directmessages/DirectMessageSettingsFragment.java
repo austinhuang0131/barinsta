@@ -81,7 +81,6 @@ public class DirectMessageSettingsFragment extends Fragment implements ConfirmDi
         final AppStateViewModel appStateViewModel = new ViewModelProvider(fragmentActivity).get(AppStateViewModel.class);
         viewModel = new ViewModelProvider(this, new DirectSettingsViewModelFactory(fragmentActivity.getApplication(),
                                                                                    args.getThreadId(),
-                                                                                   args.getBackup(),
                                                                                    args.getPending(),
                                                                                    appStateViewModel.getCurrentUser()))
                 .get(DirectSettingsViewModel.class);
@@ -348,15 +347,15 @@ public class DirectMessageSettingsFragment extends Fragment implements ConfirmDi
         usersAdapter = new DirectUsersAdapter(
                 inviter != null ? inviter.getPk() : -1,
                 (position, user, selected) -> {
-                    if (!TextUtils.isEmpty(user.getFbId())) {
+                    if (TextUtils.isEmpty(user.getUsername()) && !TextUtils.isEmpty(user.getFbId())) {
                         Utils.openURL(context, "https://facebook.com/" + user.getFbId());
+                        return;
                     }
-                    else {
-                        final ProfileNavGraphDirections.ActionGlobalProfileFragment directions = ProfileNavGraphDirections
-                                .actionGlobalProfileFragment()
-                                .setUsername("@" + user.getUsername());
-                        NavHostFragment.findNavController(this).navigate(directions);
-                    }
+                    if (TextUtils.isEmpty(user.getUsername())) return;
+                    final ProfileNavGraphDirections.ActionGlobalProfileFragment directions = ProfileNavGraphDirections
+                            .actionGlobalProfileFragment()
+                            .setUsername("@" + user.getUsername());
+                    NavHostFragment.findNavController(this).navigate(directions);
                 },
                 (position, user) -> {
                     final ArrayList<Option<String>> options = viewModel.createUserOptions(user);

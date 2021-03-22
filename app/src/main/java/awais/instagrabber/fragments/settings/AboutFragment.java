@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatTextView;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceCategory;
@@ -36,15 +37,56 @@ public class AboutFragment extends BasePreferencesFragment {
         final PreferenceCategory thirdPartyCategory = new PreferenceCategory(context);
         screen.addPreference(thirdPartyCategory);
         thirdPartyCategory.setTitle(R.string.about_category_3pt);
-        //thirdPartyCategory.setSummary(R.string.about_category_3pt_summary);
         thirdPartyCategory.setIconSpaceReserved(false);
         // alphabetical order!!!
-        thirdPartyCategory.addPreference(getACIPreference());
-        thirdPartyCategory.addPreference(getAutolinkPreference());
-        thirdPartyCategory.addPreference(getExoPlayerPreference());
-        thirdPartyCategory.addPreference(getFrescoPreference());
-        thirdPartyCategory.addPreference(getMDIPreference());
-        thirdPartyCategory.addPreference(getRetrofitPreference());
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "Apache Commons Imaging",
+                "Copyright 2007-2020 The Apache Software Foundation. Apache 2.0. This product includes software developed at The Apache Software Foundation (http://www.apache.org/).",
+                "https://commons.apache.org/proper/commons-imaging/"
+        ));
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "AutoLinkTextViewV2",
+                "Copyright (C) 2019 Arman Chatikyan. Apache 2.0.",
+                "https://github.com/armcha/AutoLinkTextViewV2"
+        ));
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "ExoPlayer",
+                "Copyright (C) 2016 The Android Open Source Project. Apache 2.0.",
+                "https://exoplayer.dev"
+        ));
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "Fresco",
+                "Copyright (c) Facebook, Inc. and its affiliates. MIT License.",
+                "https://frescolib.org"
+        ));
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "GPUImage",
+                "Copyright 2018 CyberAgent, Inc. Apache 2.0.",
+                "https://github.com/cats-oss/android-gpuimage"
+        ));
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "Material Design Icons",
+                "Copyright (C) 2014 Austin Andrews & Google LLC. Apache 2.0.",
+                "https://materialdesignicons.com"
+        ));
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "Retrofit",
+                "Copyright 2013 Square, Inc. Apache 2.0.",
+                "https://square.github.io/retrofit/"
+        ));
+        thirdPartyCategory.addPreference(get3ptPreference(
+                context,
+                "uCrop",
+                "Copyright 2017 Yalantis. Apache 2.0.",
+                "https://github.com/Yalantis/uCrop"
+        ));
     }
 
     private Preference getDocsPreference() {
@@ -97,102 +139,6 @@ public class AboutFragment extends BasePreferencesFragment {
         return preference;
     }
 
-    private Preference getRetrofitPreference() {
-        final Context context = getContext();
-        if (context == null) return null;
-        final Preference preference = new Preference(context);
-        preference.setTitle("Retrofit");
-        preference.setSummary("Copyright 2013 Square, Inc. Apache 2.0.");
-        preference.setIconSpaceReserved(false);
-        preference.setOnPreferenceClickListener(p -> {
-            final Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://square.github.io/retrofit/"));
-            startActivity(intent);
-            return true;
-        });
-        return preference;
-    }
-
-    private Preference getFrescoPreference() {
-        final Context context = getContext();
-        if (context == null) return null;
-        final Preference preference = new Preference(context);
-        preference.setTitle("Fresco");
-        preference.setSummary("Copyright (c) Facebook, Inc. and its affiliates. MIT License.");
-        preference.setIconSpaceReserved(false);
-        preference.setOnPreferenceClickListener(p -> {
-            final Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://frescolib.org/"));
-            startActivity(intent);
-            return true;
-        });
-        return preference;
-    }
-
-    private Preference getExoPlayerPreference() {
-        final Context context = getContext();
-        if (context == null) return null;
-        final Preference preference = new Preference(context);
-        preference.setTitle("ExoPlayer");
-        preference.setSummary("Copyright (C) 2016 The Android Open Source Project. Apache 2.0.");
-        preference.setIconSpaceReserved(false);
-        preference.setOnPreferenceClickListener(p -> {
-            final Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://exoplayer.dev/"));
-            startActivity(intent);
-            return true;
-        });
-        return preference;
-    }
-
-    private Preference getMDIPreference() {
-        final Context context = getContext();
-        if (context == null) return null;
-        final Preference preference = new Preference(context);
-        preference.setTitle("Material Design Icons");
-        preference.setSummary("Copyright (C) 2014 Austin Andrews & Google LLC. Apache 2.0.");
-        preference.setIconSpaceReserved(false);
-        preference.setOnPreferenceClickListener(p -> {
-            final Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://materialdesignicons.com/"));
-            startActivity(intent);
-            return true;
-        });
-        return preference;
-    }
-
-    private Preference getAutolinkPreference() {
-        final Context context = getContext();
-        if (context == null) return null;
-        final Preference preference = new Preference(context);
-        preference.setTitle("AutoLinkTextViewV2");
-        preference.setSummary("Copyright (C) 2019 Arman Chatikyan. Apache 2.0.");
-        preference.setIconSpaceReserved(false);
-        preference.setOnPreferenceClickListener(p -> {
-            final Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://github.com/armcha/AutoLinkTextViewV2"));
-            startActivity(intent);
-            return true;
-        });
-        return preference;
-    }
-
-    private Preference getACIPreference() {
-        final Context context = getContext();
-        if (context == null) return null;
-        final Preference preference = new Preference(context);
-        preference.setTitle("Apache Commons Imaging");
-        preference.setSummary("Copyright 2007-2020 The Apache Software Foundation. Apache 2.0.");
-        preference.setIconSpaceReserved(false);
-        preference.setOnPreferenceClickListener(p -> {
-            final Intent intent = new Intent(Intent.ACTION_VIEW);
-            intent.setData(Uri.parse("https://commons.apache.org/proper/commons-imaging/"));
-            startActivity(intent);
-            return true;
-        });
-        return preference;
-    }
-
     private Preference getLicensePreference() {
         final Context context = getContext();
         if (context == null) return null;
@@ -212,6 +158,23 @@ public class AboutFragment extends BasePreferencesFragment {
         preference.setEnabled(false);
         preference.setIcon(R.drawable.ic_warning);
         preference.setIconSpaceReserved(true);
+        return preference;
+    }
+
+    private Preference get3ptPreference(@NonNull final Context context,
+                                        final String title,
+                                        final String summary,
+                                        final String url) {
+        final Preference preference = new Preference(context);
+        preference.setTitle(title);
+        preference.setSummary(summary);
+        preference.setIconSpaceReserved(false);
+        preference.setOnPreferenceClickListener(p -> {
+            final Intent intent = new Intent(Intent.ACTION_VIEW);
+            intent.setData(Uri.parse(url));
+            startActivity(intent);
+            return true;
+        });
         return preference;
     }
 }

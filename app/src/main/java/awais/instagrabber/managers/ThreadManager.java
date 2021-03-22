@@ -123,7 +123,6 @@ public final class ThreadManager {
 
     public static ThreadManager getInstance(@NonNull final String threadId,
                                             final boolean pending,
-                                            final DirectThread backup,
                                             @NonNull final User currentUser,
                                             @NonNull final ContentResolver contentResolver) {
         ThreadManager instance = INSTANCE_MAP.get(threadId);
@@ -131,7 +130,7 @@ public final class ThreadManager {
             synchronized (LOCK) {
                 instance = INSTANCE_MAP.get(threadId);
                 if (instance == null) {
-                    instance = new ThreadManager(threadId, pending, backup, currentUser, contentResolver);
+                    instance = new ThreadManager(threadId, pending, currentUser, contentResolver);
                     INSTANCE_MAP.put(threadId, instance);
                 }
             }
@@ -145,7 +144,6 @@ public final class ThreadManager {
 
     private ThreadManager(@NonNull final String threadId,
                           final boolean pending,
-                          final DirectThread backup,
                           @NonNull final User currentUser,
                           @NonNull final ContentResolver contentResolver) {
         final DirectMessagesManager messagesManager = DirectMessagesManager.getInstance();
@@ -164,17 +162,17 @@ public final class ThreadManager {
         service = DirectMessagesService.getInstance(csrfToken, viewerId, deviceUuid);
         mediaService = MediaService.getInstance(deviceUuid, csrfToken, viewerId);
         friendshipService = FriendshipService.getInstance(deviceUuid, csrfToken, viewerId);
-        setupTransformations(backup);
+        setupTransformations();
         // fetchChats();
     }
 
     public void moveFromPending() {
         final DirectMessagesManager messagesManager = DirectMessagesManager.getInstance();
         this.inboxManager = messagesManager.getInboxManager();
-        setupTransformations(null);
+        setupTransformations();
     }
 
-    private void setupTransformations(final DirectThread backup) {
+    private void setupTransformations() {
         // Transformations
         thread = distinctUntilChanged(map(inboxManager.getInbox(), inboxResource -> {
             if (inboxResource == null) {
@@ -188,7 +186,7 @@ public final class ThreadManager {
             final DirectThread thread = threads.stream()
                                                .filter(t -> t.getThreadId().equals(threadId))
                                                .findFirst()
-                                               .orElse(backup);
+                                               .orElse(null);
             if (thread != null) {
                 cursor = thread.getOldestCursor();
                 hasOlder = thread.hasOlder();
@@ -1799,18 +1797,23 @@ public final class ThreadManager {
         return inviter;
     }
 
-    public void markAsSeen(@NonNull final DirectItem directItem) {
+    public LiveData<Resource<Object>> markAsSeen(@NonNull final DirectItem directItem) {
+        final MutableLiveData<Resource<Object>> data = new MutableLiveData<>();
+        data.postValue(Resource.loading(null));
         final Call<DirectItemSeenResponse> request = service.markAsSeen(threadId, directItem);
         request.enqueue(new Callback<DirectItemSeenResponse>() {
             @Override
             public void onResponse(@NonNull final Call<DirectItemSeenResponse> call,
                                    @NonNull final Response<DirectItemSeenResponse> response) {
                 if (!response.isSuccessful()) {
-                    handleErrorBody(call, response, null);
+                    handleErrorBody(call, response, data);
                     return;
                 }
                 final DirectItemSeenResponse seenResponse = response.body();
-                if (seenResponse == null) return;
+                if (seenResponse == null) {
+                    data.postValue(Resource.error(R.string.generic_null_response, null));
+                    return;
+                }
                 inboxManager.fetchUnseenCount();
                 final DirectItemSeenResponsePayload payload = seenResponse.getPayload();
                 if (payload == null) return;
@@ -1822,14 +1825,17 @@ public final class ThreadManager {
                 lastSeenAt.put(currentUser.getPk(), new DirectThreadLastSeenAt(timestamp, directItem.getItemId()));
                 thread.setLastSeenAt(lastSeenAt);
                 setThread(thread, true);
+                data.postValue(Resource.success(new Object()));
             }
 
             @Override
             public void onFailure(@NonNull final Call<DirectItemSeenResponse> call,
                                   @NonNull final Throwable t) {
                 Log.e(TAG, "onFailure: ", t);
+                data.postValue(Resource.error(t.getMessage(), null));
             }
         });
+        return data;
     }
 
     private interface OnSuccessAction {

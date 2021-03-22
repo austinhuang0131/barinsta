@@ -5,6 +5,7 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 
 import org.json.JSONException;
@@ -17,6 +18,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.UUID;
 
+import awais.instagrabber.models.enums.MediaItemType;
 import awais.instagrabber.repositories.MediaRepository;
 import awais.instagrabber.repositories.requests.UploadFinishOptions;
 import awais.instagrabber.repositories.responses.LikersResponse;
@@ -33,6 +35,9 @@ import retrofit2.Retrofit;
 
 public class MediaService extends BaseService {
     private static final String TAG = "MediaService";
+    private static final List<MediaItemType> DELETABLE_ITEMS_TYPES = ImmutableList.of(MediaItemType.MEDIA_TYPE_IMAGE,
+                                                                                      MediaItemType.MEDIA_TYPE_VIDEO,
+                                                                                      MediaItemType.MEDIA_TYPE_SLIDER);
 
     private final MediaRepository repository;
     private final String deviceUuid, csrfToken;
@@ -443,5 +448,32 @@ public class MediaService extends BaseService {
         final Map<String, String> queryMap = options.getVideoOptions() != null ? ImmutableMap.of("video", "1") : Collections.emptyMap();
         final Map<String, String> signedForm = Utils.sign(formBuilder.build());
         return repository.uploadFinish(MediaUploadHelper.getRetryContextString(), queryMap, signedForm);
+    }
+
+    public Call<String> delete(@NonNull final String postId,
+                               @NonNull final MediaItemType type) {
+        if (!DELETABLE_ITEMS_TYPES.contains(type)) return null;
+        final Map<String, Object> form = new HashMap<>();
+        form.put("_csrftoken", csrfToken);
+        form.put("_uid", userId);
+        form.put("_uuid", deviceUuid);
+        form.put("igtv_feed_preview", "false");
+        form.put("media_id", postId);
+        final Map<String, String> signedForm = Utils.sign(form);
+        final String mediaType;
+        switch (type) {
+            case MEDIA_TYPE_IMAGE:
+                mediaType = "PHOTO";
+                break;
+            case MEDIA_TYPE_VIDEO:
+                mediaType = "VIDEO";
+                break;
+            case MEDIA_TYPE_SLIDER:
+                mediaType = "CAROUSEL";
+                break;
+            default:
+                return null;
+        }
+        return repository.delete(postId, mediaType, signedForm);
     }
 }

@@ -13,4 +13,7 @@ public interface GraphQLRepository {
 
     @GET("/{username}/?__a=1")
     Call<String> getUser(@Path("username") String username);
+
+    @GET("/explore/tags/{tag}/?__a=1")
+    Call<String> getTag(@Path("tag") String tag);
 }

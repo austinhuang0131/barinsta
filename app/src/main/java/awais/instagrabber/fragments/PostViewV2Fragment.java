@@ -24,7 +24,6 @@ import android.util.Log;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
@@ -48,6 +47,7 @@ import androidx.core.content.PermissionChecker;
 import androidx.core.view.ViewCompat;
 import androidx.core.widget.NestedScrollView;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.Observer;
@@ -131,8 +131,10 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
     private PostViewV2ViewModel viewModel;
     private PopupMenu optionsPopup;
     private EditTextDialogFragment editTextDialogFragment;
-
+    private boolean wasDeleted;
     private MutableLiveData<Object> backStackSavedStateResultLiveData;
+    private OnDeleteListener onDeleteListener;
+
     private final Observer<Object> backStackSavedStateObserver = result -> {
         if (result == null) return;
         if (result instanceof String) {
@@ -193,6 +195,15 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
 
     public void setOnShowListener(final DialogInterface.OnShowListener onShowListener) {
         this.onShowListener = onShowListener;
+    }
+
+    public void setOnDeleteListener(final OnDeleteListener onDeleteListener) {
+        if (onDeleteListener == null) return;
+        this.onDeleteListener = onDeleteListener;
+    }
+
+    public interface OnDeleteListener {
+        void onDelete();
     }
 
     public static class Builder {
@@ -539,7 +550,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
         viewModel.getSaved().observe(getViewLifecycleOwner(), this::setSavedResources);
         viewModel.getOptions().observe(getViewLifecycleOwner(), options -> binding.getRoot().post(() -> {
             setupOptions(options != null && !options.isEmpty());
-            createOptionsPopupMenu(options);
+            createOptionsPopupMenu();
         }));
     }
 
@@ -647,7 +658,6 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
                 navController.navigate(R.id.action_global_likesViewerFragment, bundle);
                 return true;
             }
-            Utils.displayToastAboveView(context, v, getString(R.string.like_without_count));
             return true;
         });
     }
@@ -915,7 +925,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
     }
 
     private void setupLocation(final Location location) {
-        if (location == null) {
+        if (location == null || !detailsVisible) {
             binding.location.setVisibility(View.GONE);
             return;
         }
@@ -1063,14 +1073,27 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
 
             @Override
             public void onPlayerPlay(final int position) {
+                final FragmentActivity activity = getActivity();
+                if (activity == null) return;
+                Utils.enabledKeepScreenOn(activity);
                 if (!detailsVisible || hasBeenToggled) return;
                 showPlayerControls();
             }
 
             @Override
             public void onPlayerPause(final int position) {
+                final FragmentActivity activity = getActivity();
+                if (activity == null) return;
+                Utils.disableKeepScreenOn(activity);
                 if (detailsVisible || hasBeenToggled) return;
                 toggleDetails();
+            }
+
+            @Override
+            public void onPlayerRelease(final int position) {
+                final FragmentActivity activity = getActivity();
+                if (activity == null) return;
+                Utils.disableKeepScreenOn(activity);
             }
         });
         binding.sliderParent.setAdapter(sliderItemsAdapter);
@@ -1207,7 +1230,7 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
 
             @Override
             public void onPlayerViewLoaded() {
-                binding.playerControls.getRoot().setVisibility(View.VISIBLE);
+                // binding.playerControls.getRoot().setVisibility(View.VISIBLE);
                 final ViewGroup.LayoutParams layoutParams = binding.videoPost.playerView.getLayoutParams();
                 final int requiredWidth = Utils.displayMetrics.widthPixels;
                 final int resultingHeight = NumberUtils
@@ -1219,9 +1242,26 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
 
             @Override
             public void onPlay() {
+                final FragmentActivity activity = getActivity();
+                if (activity == null) return;
+                Utils.enabledKeepScreenOn(activity);
                 if (detailsVisible) {
                     new Handler().postDelayed(() -> toggleDetails(), DETAILS_HIDE_DELAY_MILLIS);
                 }
+            }
+
+            @Override
+            public void onPause() {
+                final FragmentActivity activity = getActivity();
+                if (activity == null) return;
+                Utils.disableKeepScreenOn(activity);
+            }
+
+            @Override
+            public void onRelease() {
+                final FragmentActivity activity = getActivity();
+                if (activity == null) return;
+                Utils.disableKeepScreenOn(activity);
             }
         };
         final float aspectRatio = (float) media.getOriginalWidth() / media.getOriginalHeight();
@@ -1345,27 +1385,70 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
         });
     }
 
-    private void createOptionsPopupMenu(final List<Integer> options) {
-        if (options == null) return;
+    private void createOptionsPopupMenu() {
         if (optionsPopup == null) {
             final ContextThemeWrapper themeWrapper = new ContextThemeWrapper(context, R.style.popupMenuStyle);
             optionsPopup = new PopupMenu(themeWrapper, binding.options);
+        } else {
+            optionsPopup.getMenu().clear();
         }
         optionsPopup.getMenuInflater().inflate(R.menu.post_view_menu, optionsPopup.getMenu());
-        final Menu menu = optionsPopup.getMenu();
-        final int size = menu.size();
-        for (int i = 0; i < size; i++) {
-            final MenuItem item = menu.getItem(i);
-            if (item == null) continue;
-            if (options.contains(item.getItemId())) continue;
-            menu.removeItem(item.getItemId());
-        }
+        // final Menu menu = optionsPopup.getMenu();
+        // final int size = menu.size();
+        // for (int i = 0; i < size; i++) {
+        //     final MenuItem item = menu.getItem(i);
+        //     if (item == null) continue;
+        //     if (options.contains(item.getItemId())) continue;
+        //     menu.removeItem(item.getItemId());
+        // }
         optionsPopup.setOnMenuItemClickListener(item -> {
             int itemId = item.getItemId();
             if (itemId == R.id.edit_caption) {
                 showCaptionEditDialog();
+                return true;
+            }
+            if (itemId == R.id.delete) {
+                item.setEnabled(false);
+                final LiveData<Resource<Object>> resourceLiveData = viewModel.delete();
+                handleDeleteResource(resourceLiveData, item);
             }
             return true;
+        });
+    }
+
+    private void handleDeleteResource(final LiveData<Resource<Object>> resourceLiveData, final MenuItem item) {
+        if (resourceLiveData == null) return;
+        resourceLiveData.observe(getViewLifecycleOwner(), new Observer<Resource<Object>>() {
+            @Override
+            public void onChanged(final Resource<Object> resource) {
+                try {
+                    switch (resource.status) {
+                        case SUCCESS:
+                            wasDeleted = true;
+                            if (onDeleteListener != null) {
+                                onDeleteListener.onDelete();
+                            }
+                            break;
+                        case ERROR:
+                            if (item != null) {
+                                item.setEnabled(true);
+                            }
+                            final Snackbar snackbar = Snackbar.make(binding.getRoot(),
+                                                                    R.string.delete_unsuccessful,
+                                                                    Snackbar.LENGTH_INDEFINITE);
+                            snackbar.setAction(R.string.ok, null);
+                            snackbar.show();
+                            break;
+                        case LOADING:
+                            if (item != null) {
+                                item.setEnabled(false);
+                            }
+                            break;
+                    }
+                } finally {
+                    resourceLiveData.removeObserver(this);
+                }
+            }
         });
     }
 
@@ -1530,5 +1613,9 @@ public class PostViewV2Fragment extends SharedElementTransitionDialogFragment im
             Log.e(TAG, "navigateToProfile", e);
         }
         return navController;
+    }
+
+    public boolean wasDeleted() {
+        return wasDeleted;
     }
 }

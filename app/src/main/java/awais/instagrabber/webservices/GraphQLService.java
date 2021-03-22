@@ -14,9 +14,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import awais.instagrabber.models.enums.FollowingType;
 import awais.instagrabber.repositories.GraphQLRepository;
 import awais.instagrabber.repositories.responses.FriendshipStatus;
 import awais.instagrabber.repositories.responses.GraphQLUserListFetchResponse;
+import awais.instagrabber.repositories.responses.Hashtag;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.PostsFetchResponse;
 import awais.instagrabber.repositories.responses.User;
@@ -54,6 +56,7 @@ public class GraphQLService extends BaseService {
                        final String variables,
                        final String arg1,
                        final String arg2,
+                       final User backup,
                        final ServiceCallback<PostsFetchResponse> callback) {
         final Map<String, String> queryMap = new HashMap<>();
         queryMap.put("query_hash", queryHash);
@@ -64,7 +67,7 @@ public class GraphQLService extends BaseService {
             public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {
                 try {
                     // Log.d(TAG, "onResponse: body: " + response.body());
-                    final PostsFetchResponse postsFetchResponse = parsePostResponse(response, arg1, arg2);
+                    final PostsFetchResponse postsFetchResponse = parsePostResponse(response, arg1, arg2, backup);
                     if (callback != null) {
                         callback.onSuccess(postsFetchResponse);
                     }
@@ -94,6 +97,7 @@ public class GraphQLService extends BaseService {
                       "\"after\":\"" + (maxId == null ? "" : maxId) + "\"}",
               Constants.EXTRAS_LOCATION,
               "edge_location_to_media",
+              null,
               callback);
     }
 
@@ -106,12 +110,14 @@ public class GraphQLService extends BaseService {
                       "\"after\":\"" + (maxId == null ? "" : maxId) + "\"}",
               Constants.EXTRAS_HASHTAG,
               "edge_hashtag_to_media",
+              null,
               callback);
     }
 
     public void fetchProfilePosts(final long profileId,
                                   final int postsPerPage,
                                   final String maxId,
+                                  final User backup,
                                   final ServiceCallback<PostsFetchResponse> callback) {
         fetch("18a7b935ab438c4514b1f742d8fa07a7",
               "{\"id\":\"" + profileId + "\"," +
@@ -119,6 +125,7 @@ public class GraphQLService extends BaseService {
                       "\"after\":\"" + (maxId == null ? "" : maxId) + "\"}",
               Constants.EXTRAS_USER,
               "edge_owner_to_timeline_media",
+              backup,
               callback);
     }
 
@@ -132,21 +139,28 @@ public class GraphQLService extends BaseService {
                       "\"after\":\"" + (maxId == null ? "" : maxId) + "\"}",
               Constants.EXTRAS_USER,
               "edge_user_to_photos_of_you",
+              null,
               callback);
     }
 
     @NonNull
-    private PostsFetchResponse parsePostResponse(@NonNull final Response<String> response, @NonNull final String arg1, @NonNull final String arg2)
+    private PostsFetchResponse parsePostResponse(@NonNull final Response<String> response,
+                                                 @NonNull final String arg1,
+                                                 @NonNull final String arg2,
+                                                 final User backup)
             throws JSONException {
         if (TextUtils.isEmpty(response.body())) {
             Log.e(TAG, "parseResponse: feed response body is empty with status code: " + response.code());
             return new PostsFetchResponse(Collections.emptyList(), false, null);
         }
-        return parseResponseBody(response.body(), arg1, arg2);
+        return parseResponseBody(response.body(), arg1, arg2, backup);
     }
 
     @NonNull
-    private PostsFetchResponse parseResponseBody(@NonNull final String body, @NonNull final String arg1, @NonNull final String arg2)
+    private PostsFetchResponse parseResponseBody(@NonNull final String body,
+                                                 @NonNull final String arg1,
+                                                 @NonNull final String arg2,
+                                                 final User backup)
             throws JSONException {
         final List<Media> items = new ArrayList<>();
         final JSONObject timelineFeed = new JSONObject(body)
@@ -172,7 +186,7 @@ public class GraphQLService extends BaseService {
             if (itemJson == null) {
                 continue;
             }
-            final Media media = ResponseBodyUtils.parseGraphQLItem(itemJson);
+            final Media media = ResponseBodyUtils.parseGraphQLItem(itemJson, backup);
             if (media != null) {
                 items.add(media);
             }
@@ -343,6 +357,46 @@ public class GraphQLService extends BaseService {
                             null,
                             null,
                             null));
+                } catch (JSONException e) {
+                    Log.e(TAG, "onResponse", e);
+                    if (callback != null) {
+                        callback.onFailure(e);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull final Call<String> call, @NonNull final Throwable t) {
+                if (callback != null) {
+                    callback.onFailure(t);
+                }
+            }
+        });
+    }
+
+    public void fetchTag(final String tag,
+                         final ServiceCallback<Hashtag> callback) {
+        final Call<String> request = repository.getTag(tag);
+        request.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {
+                final String rawBody = response.body();
+                if (rawBody == null) {
+                    Log.e(TAG, "Error occurred while fetching gql tag of " + tag);
+                    callback.onSuccess(null);
+                    return;
+                }
+                try {
+                    final JSONObject body = new JSONObject(rawBody)
+                            .getJSONObject("graphql")
+                            .getJSONObject(Constants.EXTRAS_HASHTAG);
+                    final JSONObject timelineMedia = body.getJSONObject("edge_hashtag_to_media");
+                    callback.onSuccess(new Hashtag(
+                            body.getString(Constants.EXTRAS_ID),
+                            body.getString("name"),
+                            body.getString("profile_pic_url"),
+                            timelineMedia.getLong("count"),
+                            body.optBoolean("is_following") ? FollowingType.FOLLOWING : FollowingType.NOT_FOLLOWING));
                 } catch (JSONException e) {
                     Log.e(TAG, "onResponse", e);
                     if (callback != null) {

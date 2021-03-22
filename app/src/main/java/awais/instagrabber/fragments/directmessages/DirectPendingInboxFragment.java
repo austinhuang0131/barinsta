@@ -163,7 +163,7 @@ public class DirectPendingInboxFragment extends Fragment implements SwipeRefresh
             navigating = true;
             if (isAdded()) {
                 final DirectPendingInboxFragmentDirections.ActionPendingInboxToThread directions = DirectPendingInboxFragmentDirections
-                        .actionPendingInboxToThread(thread.getThreadId(), thread.getThreadTitle(), thread);
+                        .actionPendingInboxToThread(thread.getThreadId(), thread.getThreadTitle());
                 directions.setPending(true);
                 NavHostFragment.findNavController(this).navigate(directions);
             }

@@ -121,9 +121,15 @@ public class NewsService extends BaseService {
                     callback.onSuccess(null);
                     return;
                 }
-                final List<AymlUser> aymlUsers = new ArrayList<>();
-                aymlUsers.addAll(body.getNewSuggestedUsers().getSuggestions());
-                aymlUsers.addAll(body.getSuggestedUsers().getSuggestions());
+                final List<AymlUser> aymlUsers = new ArrayList<AymlUser>();
+                final List<AymlUser> newSuggestions = body.getNewSuggestedUsers().getSuggestions();
+                if (newSuggestions != null) {
+                    aymlUsers.addAll(newSuggestions);
+                }
+                final List<AymlUser> oldSuggestions = body.getSuggestedUsers().getSuggestions();
+                if (oldSuggestions != null) {
+                    aymlUsers.addAll(oldSuggestions);
+                }
 
                 final List<Notification> newsItems = aymlUsers.stream()
                         .map(i -> {

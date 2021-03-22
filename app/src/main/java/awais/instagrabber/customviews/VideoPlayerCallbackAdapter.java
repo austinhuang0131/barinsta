@@ -15,4 +15,7 @@ public class VideoPlayerCallbackAdapter implements VideoPlayerViewHelper.VideoPl
 
     @Override
     public void onPause() {}
+
+    @Override
+    public void onRelease() {}
 }

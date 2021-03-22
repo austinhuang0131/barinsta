@@ -44,7 +44,7 @@ public final class ErrorReporterActivity extends Activity implements View.OnClic
     @Override
     public void onClick(@NonNull final View v) {
         if (v == btnReport)
-            CrashReporter.get(getApplication()).startCrashEmailIntent(this, false);
+            CrashReporter.get(getApplication()).startCrashEmailIntent(this);
         finish();
         System.exit(10);
     }

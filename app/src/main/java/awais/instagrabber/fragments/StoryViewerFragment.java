@@ -87,6 +87,7 @@ import awais.instagrabber.models.stickers.SwipeUpModel;
 import awais.instagrabber.repositories.requests.StoryViewerOptions;
 import awais.instagrabber.repositories.requests.StoryViewerOptions.Type;
 import awais.instagrabber.repositories.requests.directmessages.BroadcastOptions;
+import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.StoryStickerResponse;
 import awais.instagrabber.repositories.responses.directmessages.DirectThreadBroadcastResponse;
 import awais.instagrabber.utils.Constants;
@@ -99,9 +100,10 @@ import awais.instagrabber.viewmodels.FeedStoriesViewModel;
 import awais.instagrabber.viewmodels.HighlightsViewModel;
 import awais.instagrabber.viewmodels.StoriesViewModel;
 import awais.instagrabber.webservices.DirectMessagesService;
+import awais.instagrabber.webservices.MediaService;
 import awais.instagrabber.webservices.ServiceCallback;
 import awais.instagrabber.webservices.StoriesService;
-import awaisomereport.LogCollector;
+//import awaisomereport.LogCollector;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -109,7 +111,7 @@ import retrofit2.Response;
 import static awais.instagrabber.customviews.helpers.SwipeGestureListener.SWIPE_THRESHOLD;
 import static awais.instagrabber.customviews.helpers.SwipeGestureListener.SWIPE_VELOCITY_THRESHOLD;
 import static awais.instagrabber.utils.Constants.MARK_AS_SEEN;
-import static awais.instagrabber.utils.Utils.logCollector;
+//import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public class StoryViewerFragment extends Fragment {
@@ -123,6 +125,7 @@ public class StoryViewerFragment extends Fragment {
     private SwipeEvent swipeEvent;
     private GestureDetectorCompat gestureDetector;
     private StoriesService storiesService;
+    private MediaService mediaService;
     private StoryModel currentStory;
     private int slidePos;
     private int lastSlidePos;
@@ -161,6 +164,7 @@ public class StoryViewerFragment extends Fragment {
         final String deviceId = settingsHelper.getString(Constants.DEVICE_UUID);
         fragmentActivity = (AppCompatActivity) requireActivity();
         storiesService = StoriesService.getInstance(csrfToken, userIdFromCookie, deviceId);
+        mediaService = MediaService.getInstance(null, null, 0);
         directMessagesService = DirectMessagesService.getInstance(csrfToken, userIdFromCookie, deviceId);
         setHasOptionsMenu(true);
     }
@@ -396,10 +400,10 @@ public class StoryViewerFragment extends Fragment {
                         return true;
                     }
                 } catch (final Exception e) {
-                    if (logCollector != null)
-                        logCollector.appendException(e, LogCollector.LogFile.ACTIVITY_STORY_VIEWER, "setupListeners",
-                                                     new Pair<>("swipeEvent", swipeEvent),
-                                                     new Pair<>("diffX", diffX));
+//                    if (logCollector != null)
+//                        logCollector.appendException(e, LogCollector.LogFile.ACTIVITY_STORY_VIEWER, "setupListeners",
+//                                                     new Pair<>("swipeEvent", swipeEvent),
+//                                                     new Pair<>("diffX", diffX));
                     if (BuildConfig.DEBUG) Log.e(TAG, "Error", e);
                 }
                 return false;
@@ -422,35 +426,40 @@ public class StoryViewerFragment extends Fragment {
         binding.spotify.setOnClickListener(v -> {
             final Object tag = v.getTag();
             if (tag instanceof CharSequence) {
-                final Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(tag.toString()));
-                startActivity(intent);
+                Utils.openURL(context, tag.toString());
             }
         });
         binding.swipeUp.setOnClickListener(v -> {
             final Object tag = v.getTag();
             if (tag instanceof CharSequence) {
-                final Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse(tag.toString()));
-                startActivity(intent);
+                Utils.openURL(context, tag.toString());
             }
         });
         binding.viewStoryPost.setOnClickListener(v -> {
             final Object tag = v.getTag();
             if (!(tag instanceof CharSequence)) return;
-            final String shortCode = tag.toString();
+            final String mediaId = tag.toString();
             final AlertDialog alertDialog = new AlertDialog.Builder(context)
                     .setCancelable(false)
                     .setView(R.layout.dialog_opening_post)
                     .create();
             alertDialog.show();
-            new PostFetcher(shortCode, feedModel -> {
-                final PostViewV2Fragment fragment = PostViewV2Fragment
-                        .builder(feedModel)
-                        .build();
-                fragment.setOnShowListener(dialog -> alertDialog.dismiss());
-                fragment.show(getChildFragmentManager(), "post_view");
-            }).execute();
+            mediaService.fetch(Long.valueOf(mediaId), new ServiceCallback<Media>() {
+                @Override
+                public void onSuccess(final Media feedModel) {
+                    final PostViewV2Fragment fragment = PostViewV2Fragment
+                            .builder(feedModel)
+                            .build();
+                    fragment.setOnShowListener(dialog -> alertDialog.dismiss());
+                    fragment.show(getChildFragmentManager(), "post_view");
+                }
+
+                @Override
+                public void onFailure(final Throwable t) {
+                    alertDialog.dismiss();
+                    Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+                }
+            });
         });
         final View.OnClickListener storyActionListener = v -> {
             final Object tag = v.getTag();
@@ -684,47 +693,45 @@ public class StoryViewerFragment extends Fragment {
         String currentStoryMediaId = null;
         final Type type = options.getType();
         StoryViewerOptions fetchOptions = null;
-        if (currentFeedStoryIndex >= 0) {
-            switch (type) {
-                case HIGHLIGHT: {
-                    final HighlightsViewModel highlightsViewModel = (HighlightsViewModel) viewModel;
-                    final List<HighlightModel> models = highlightsViewModel.getList().getValue();
-                    if (models == null || models.isEmpty() || currentFeedStoryIndex >= models.size()) {
-                        Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                    final HighlightModel model = models.get(currentFeedStoryIndex);
-                    currentStoryMediaId = model.getId();
-                    fetchOptions = StoryViewerOptions.forHighlight(model.getId());
-                    currentStoryUsername = model.getTitle();
-                    break;
+        switch (type) {
+            case HIGHLIGHT: {
+                final HighlightsViewModel highlightsViewModel = (HighlightsViewModel) viewModel;
+                final List<HighlightModel> models = highlightsViewModel.getList().getValue();
+                if (models == null || models.isEmpty() || currentFeedStoryIndex >= models.size() || currentFeedStoryIndex < 0) {
+                    Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+                    return;
                 }
-                case FEED_STORY_POSITION: {
-                    final FeedStoriesViewModel feedStoriesViewModel = (FeedStoriesViewModel) viewModel;
-                    final List<FeedStoryModel> models = feedStoriesViewModel.getList().getValue();
-                    if (models == null) return;
-                    final FeedStoryModel model = models.get(currentFeedStoryIndex);
-                    currentStoryMediaId = model.getStoryMediaId();
-                    currentStoryUsername = model.getProfileModel().getUsername();
-                    fetchOptions = StoryViewerOptions.forUser(Long.parseLong(currentStoryMediaId), currentStoryUsername);
-                    if (model.isLive()) {
-                        live = model.getFirstStoryModel();
-                    }
-                    break;
+                final HighlightModel model = models.get(currentFeedStoryIndex);
+                currentStoryMediaId = model.getId();
+                fetchOptions = StoryViewerOptions.forHighlight(model.getId());
+                currentStoryUsername = model.getTitle();
+                break;
+            }
+            case FEED_STORY_POSITION: {
+                final FeedStoriesViewModel feedStoriesViewModel = (FeedStoriesViewModel) viewModel;
+                final List<FeedStoryModel> models = feedStoriesViewModel.getList().getValue();
+                if (models == null || currentFeedStoryIndex >= models.size() || currentFeedStoryIndex < 0) return;
+                final FeedStoryModel model = models.get(currentFeedStoryIndex);
+                currentStoryMediaId = model.getStoryMediaId();
+                currentStoryUsername = model.getProfileModel().getUsername();
+                fetchOptions = StoryViewerOptions.forUser(Long.parseLong(currentStoryMediaId), currentStoryUsername);
+                if (model.isLive()) {
+                    live = model.getFirstStoryModel();
                 }
-                case STORY_ARCHIVE: {
-                    final ArchivesViewModel archivesViewModel = (ArchivesViewModel) viewModel;
-                    final List<HighlightModel> models = archivesViewModel.getList().getValue();
-                    if (models == null || models.isEmpty() || currentFeedStoryIndex >= models.size()) {
-                        Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
-                        return;
-                    }
-                    final HighlightModel model = models.get(currentFeedStoryIndex);
-                    currentStoryMediaId = model.getId();
-                    currentStoryUsername = model.getTitle();
-                    fetchOptions = StoryViewerOptions.forUser(Long.parseLong(currentStoryMediaId), currentStoryUsername);
-                    break;
+                break;
+            }
+            case STORY_ARCHIVE: {
+                final ArchivesViewModel archivesViewModel = (ArchivesViewModel) viewModel;
+                final List<HighlightModel> models = archivesViewModel.getList().getValue();
+                if (models == null || models.isEmpty() || currentFeedStoryIndex >= models.size() || currentFeedStoryIndex < 0) {
+                    Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+                    return;
                 }
+                final HighlightModel model = models.get(currentFeedStoryIndex);
+                currentStoryMediaId = model.getId();
+                currentStoryUsername = model.getTitle();
+                fetchOptions = StoryViewerOptions.forUser(Long.parseLong(currentStoryMediaId), currentStoryUsername);
+                break;
             }
         }
         if (type == Type.USER) {
@@ -885,7 +892,11 @@ public class StoryViewerFragment extends Fragment {
 
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setSubtitle(Utils.datetimeParser.format(new Date(currentStory.getTimestamp() * 1000L)));
+            try {
+                actionBar.setSubtitle(Utils.datetimeParser.format(new Date(currentStory.getTimestamp() * 1000L)));
+            } catch (Exception e) {
+                Log.e(TAG, "refreshStory: ", e);
+            }
         }
 
         if (settingsHelper.getBoolean(MARK_AS_SEEN))

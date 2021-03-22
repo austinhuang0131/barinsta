@@ -28,6 +28,7 @@ public class GeneralPreferencesFragment extends BasePreferencesFragment {
             screen.addPreference(getDefaultTabPreference(context));
         }
         screen.addPreference(getUpdateCheckPreference(context));
+        screen.addPreference(getFlagSecurePreference(context));
     }
 
     private Preference getDefaultTabPreference(@NonNull final Context context) {
@@ -57,5 +58,18 @@ public class GeneralPreferencesFragment extends BasePreferencesFragment {
         preference.setTitle(R.string.update_check);
         preference.setIconSpaceReserved(false);
         return preference;
+    }
+
+    private Preference getFlagSecurePreference(@NonNull final Context context) {
+        return PreferenceHelper.getSwitchPreference(
+                context,
+                Constants.FLAG_SECURE,
+                R.string.flag_secure,
+                -1,
+                false,
+                (preference, newValue) -> {
+                    shouldRecreate();
+                    return true;
+                });
     }
 }

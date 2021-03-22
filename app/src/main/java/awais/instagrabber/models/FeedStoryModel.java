@@ -16,6 +16,7 @@ public final class FeedStoryModel implements Serializable {
     private final boolean isLive, isBestie;
     private final long timestamp;
     private final int mediaCount;
+    private boolean isShown = true;
 
     public FeedStoryModel(final String storyMediaId, final User profileModel, final boolean fullyRead,
                           final long timestamp, final StoryModel firstStoryModel, final int mediaCount,
@@ -73,5 +74,13 @@ public final class FeedStoryModel implements Serializable {
 
     public boolean isBestie() {
         return isBestie;
+    }
+
+    public boolean isShown() {
+        return isShown;
+    }
+
+    public void setShown(final boolean shown) {
+        isShown = shown;
     }
 }

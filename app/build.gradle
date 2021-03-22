@@ -59,8 +59,8 @@ dependencies {
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 
     def appcompat_version = "1.2.0"
-    def nav_version = '2.3.3'
-    def exoplayer_version = '2.12.0'
+    def nav_version = '2.3.4'
+    def exoplayer_version = '2.13.2'
 
     implementation 'com.google.android.material:material:1.4.0-alpha01'
 
@@ -81,7 +81,7 @@ dependencies {
     implementation 'androidx.palette:palette:1.0.0'
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
-    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation 'com.google.guava:guava:27.1-jre'
 
     // Room
     def room_version = "2.2.6"
@@ -111,11 +111,11 @@ dependencies {
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     implementation 'org.apache.commons:commons-imaging:1.0-alpha2'
-    implementation 'com.ibm.icu:icu4j:68.1'
     implementation 'com.github.ammargitham:uCrop:2.3-native-beta-2'
     implementation 'com.github.ammargitham:android-gpuimage:2.1.1-beta4'
 
     debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
 }

@@ -32,10 +32,14 @@ import awais.instagrabber.customviews.helpers.RecyclerLazyLoaderAtEdge;
 import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.PostsLayoutPreferences;
 import awais.instagrabber.repositories.responses.Media;
+import awais.instagrabber.utils.Constants;
+import awais.instagrabber.utils.KeywordsFilterUtils;
 import awais.instagrabber.utils.ResponseBodyUtils;
 import awais.instagrabber.utils.Utils;
 import awais.instagrabber.viewmodels.MediaViewModel;
 import awais.instagrabber.workers.DownloadWorker;
+
+import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public class PostsRecyclerView extends RecyclerView {
     private static final String TAG = "PostsRecyclerView";
@@ -70,7 +74,13 @@ public class PostsRecyclerView extends RecyclerView {
             }
             final List<Media> models = mediaViewModel.getList().getValue();
             final List<Media> modelsCopy = models == null ? new ArrayList<>() : new ArrayList<>(models);
-            modelsCopy.addAll(result);
+            if (settingsHelper.getBoolean(Constants.TOGGLE_KEYWORD_FILTER)){
+                final ArrayList<String> items = new ArrayList<>(settingsHelper.getStringSet(Constants.KEYWORD_FILTERS));
+                modelsCopy.addAll(new KeywordsFilterUtils(items).filter(result));
+            }
+            else {
+                modelsCopy.addAll(result);
+            }
             mediaViewModel.getList().postValue(modelsCopy);
             dispatchFetchStatus();
         }

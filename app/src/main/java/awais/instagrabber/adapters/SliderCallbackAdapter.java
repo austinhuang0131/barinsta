@@ -12,4 +12,7 @@ public class SliderCallbackAdapter implements SliderItemsAdapter.SliderCallback 
 
     @Override
     public void onPlayerPause(final int position) {}
+
+    @Override
+    public void onPlayerRelease(final int position) {}
 }

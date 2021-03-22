@@ -74,9 +74,8 @@ public final class DirectMessagesManager {
 
     public ThreadManager getThreadManager(@NonNull final String threadId,
                                           final boolean pending,
-                                          final DirectThread backup,
                                           @NonNull final User currentUser,
                                           @NonNull final ContentResolver contentResolver) {
-        return ThreadManager.getInstance(threadId, pending, backup, currentUser, contentResolver);
+        return ThreadManager.getInstance(threadId, pending, currentUser, contentResolver);
     }
 }

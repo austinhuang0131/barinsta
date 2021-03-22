@@ -45,6 +45,7 @@ public class DirectThread implements Serializable, Cloneable {
     private boolean approvalRequiredForNewMembers;
     private int inputMode;
     private final List<ThreadContext> threadContextItems;
+    private boolean isTemp;
 
     public DirectThread(final String threadId,
                         final String threadV2Id,
@@ -290,6 +291,14 @@ public class DirectThread implements Serializable, Cloneable {
 
     public List<ThreadContext> getThreadContextItems() {
         return threadContextItems;
+    }
+
+    public boolean isTemp() {
+        return isTemp;
+    }
+
+    public void setTemp(final boolean isTemp) {
+        this.isTemp = isTemp;
     }
 
     @Nullable

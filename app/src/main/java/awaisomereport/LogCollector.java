@@ -1,4 +1,4 @@
-package awaisomereport;
+/*package awaisomereport;
 
 import android.app.Application;
 import android.os.Build;
@@ -140,4 +140,4 @@ public final class LogCollector {
         //noinspection ResultOfMethodCallIgnored
         fileOrDirectory.delete();
     }
-}
+}*/

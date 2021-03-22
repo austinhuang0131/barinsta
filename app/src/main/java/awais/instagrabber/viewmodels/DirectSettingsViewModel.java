@@ -45,7 +45,6 @@ public class DirectSettingsViewModel extends AndroidViewModel {
 
     public DirectSettingsViewModel(final Application application,
                                    @NonNull final String threadId,
-                                   final DirectThread backup,
                                    final boolean pending,
                                    @NonNull final User currentUser) {
         super(application);
@@ -59,7 +58,7 @@ public class DirectSettingsViewModel extends AndroidViewModel {
         final ContentResolver contentResolver = application.getContentResolver();
         resources = getApplication().getResources();
         final DirectMessagesManager messagesManager = DirectMessagesManager.getInstance();
-        threadManager = messagesManager.getThreadManager(threadId, pending, backup, currentUser, contentResolver);
+        threadManager = messagesManager.getThreadManager(threadId, pending, currentUser, contentResolver);
     }
 
     @NonNull

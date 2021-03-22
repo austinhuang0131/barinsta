@@ -4,6 +4,9 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
@@ -12,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavDirections;
@@ -51,8 +55,9 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
     private ArchivesViewModel archivesViewModel;
     private StoriesService storiesService;
     private Context context;
-    private String type, endCursor = null;
+    private String type, currentQuery, endCursor = null;
     private FeedStoriesListAdapter adapter;
+    private MenuItem menuSearch;
 
     private final OnFeedStoryClickListener clickListener = new OnFeedStoryClickListener() {
         @Override
@@ -119,6 +124,7 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
         fragmentActivity = (AppCompatActivity) requireActivity();
         context = getContext();
         if (context == null) return;
+        setHasOptionsMenu(true);
         storiesService = StoriesService.getInstance(null, 0L, null);
     }
 
@@ -139,6 +145,30 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
         if (!shouldRefresh) return;
         init();
         shouldRefresh = false;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(@NonNull final Menu menu, final MenuInflater inflater) {
+        inflater.inflate(R.menu.search, menu);
+        menuSearch = menu.findItem(R.id.action_search);
+        final SearchView searchView = (SearchView) menuSearch.getActionView();
+        searchView.setQueryHint(getResources().getString(R.string.action_search));
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+
+            @Override
+            public boolean onQueryTextSubmit(final String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(final String query) {
+                if (adapter != null) {
+                    currentQuery = query;
+                    adapter.getFilter().filter(query);
+                }
+                return true;
+            }
+        });
     }
 
     @Override

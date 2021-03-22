@@ -18,6 +18,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.stream.Collectors;
 
@@ -356,5 +357,16 @@ public final class InboxManager {
 
     public void setPendingRequestsTotal(final int total) {
         pendingRequestsTotal.postValue(total);
+    }
+
+    public boolean containsThread(final String threadId) {
+        if (threadId == null) return false;
+        synchronized (this.inbox) {
+            final DirectInbox currentDirectInbox = getCurrentDirectInbox();
+            if (currentDirectInbox == null) return false;
+            final List<DirectThread> threads = currentDirectInbox.getThreads();
+            if (threads == null) return false;
+            return threads.stream().anyMatch(thread -> Objects.equals(thread.getThreadId(), threadId));
+        }
     }
 }

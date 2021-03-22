@@ -103,17 +103,24 @@ public final class NotificationsViewerFragment extends Fragment implements Swipe
                                         model.getArgs().getUsername()));
                 NavHostFragment.findNavController(NotificationsViewerFragment.this).navigate(action);
             } else {
+                final AlertDialog alertDialog = new AlertDialog.Builder(context)
+                        .setCancelable(false)
+                        .setView(R.layout.dialog_opening_post)
+                        .create();
+                alertDialog.show();
                 mediaService.fetch(mediaId, new ServiceCallback<Media>() {
                     @Override
                     public void onSuccess(final Media feedModel) {
                         final PostViewV2Fragment fragment = PostViewV2Fragment
                                 .builder(feedModel)
                                 .build();
+                        fragment.setOnShowListener(dialog -> alertDialog.dismiss());
                         fragment.show(getChildFragmentManager(), "post_view");
                     }
 
                     @Override
                     public void onFailure(final Throwable t) {
+                        alertDialog.dismiss();
                         Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                     }
                 });

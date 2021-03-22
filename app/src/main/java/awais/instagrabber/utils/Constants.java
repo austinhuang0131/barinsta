@@ -9,12 +9,15 @@ public final class Constants {
     public static final String APP_THEME = "app_theme_v19";
     public static final String APP_LANGUAGE = "app_language_v19";
     public static final String STORY_SORT = "story_sort";
+    // set string prefs
+    public static final String KEYWORD_FILTERS = "keyword_filters";
     // int prefs, do not export
     public static final String PREV_INSTALL_VERSION = "prevVersion";
     public static final String BROWSER_UA_CODE = "browser_ua_code";
     public static final String APP_UA_CODE = "app_ua_code";
     // boolean prefs
     public static final String DOWNLOAD_USER_FOLDER = "download_user_folder";
+    public static final String TOGGLE_KEYWORD_FILTER = "toggle_keyword_filter";
     // deprecated: public static final String BOTTOM_TOOLBAR = "bottom_toolbar";
     public static final String FOLDER_SAVE_TO = "saved_to";
     public static final String AUTOPLAY_VIDEOS = "autoplay_videos";
@@ -30,6 +33,7 @@ public final class Constants {
     // deprecated: public static final String AMOLED_THEME = "amoled_theme";
     public static final String CHECK_ACTIVITY = "check_activity";
     public static final String CHECK_UPDATES = "check_updates";
+    public static final String FLAG_SECURE = "flag_secure";
     // never Export
     public static final String COOKIE = "cookie";
     public static final String SHOW_QUICK_ACCESS_DIALOG = "show_quick_dlg";

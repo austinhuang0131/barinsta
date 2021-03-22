@@ -89,7 +89,7 @@ public class DirectItemMediaShareViewHolder extends DirectItemViewHolder {
 
     private void setupPreview(@NonNull final Media media,
                               final MessageDirection messageDirection) {
-        final String url = ResponseBodyUtils.getThumbUrl(media.getImageVersions2());
+        final String url = ResponseBodyUtils.getThumbUrl(media);
         if (Objects.equals(url, binding.mediaPreview.getTag())) {
             return;
         }

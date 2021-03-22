@@ -24,6 +24,9 @@ import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.webservices.MediaService;
 import awais.instagrabber.webservices.ServiceCallback;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
@@ -75,6 +78,7 @@ public class PostViewV2ViewModel extends ViewModel {
         final ImmutableList.Builder<Integer> builder = ImmutableList.builder();
         if (isLoggedIn && media.getUser() != null && media.getUser().getPk() == viewerId) {
             builder.add(R.id.edit_caption);
+            builder.add(R.id.delete);
         }
         options.postValue(builder.build());
     }
@@ -289,5 +293,37 @@ public class PostViewV2ViewModel extends ViewModel {
 
     public void setViewCount(final Long viewCount) {
         this.viewCount.postValue(viewCount);
+    }
+
+    public LiveData<Resource<Object>> delete() {
+        final MutableLiveData<Resource<Object>> data = new MutableLiveData<>();
+        data.postValue(Resource.loading(null));
+        final Call<String> request = mediaService.delete(media.getId(), media.getMediaType());
+        if (request == null) {
+            data.postValue(Resource.success(new Object()));
+            return data;
+        }
+        request.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {
+                if (!response.isSuccessful()) {
+                    data.postValue(Resource.error(R.string.generic_null_response, null));
+                    return;
+                }
+                final String body = response.body();
+                if (body == null) {
+                    data.postValue(Resource.error(R.string.generic_null_response, null));
+                    return;
+                }
+                data.postValue(Resource.success(new Object()));
+            }
+
+            @Override
+            public void onFailure(@NonNull final Call<String> call, @NonNull final Throwable t) {
+                Log.e(TAG, "onFailure: ", t);
+                data.postValue(Resource.error(t.getMessage(), null));
+            }
+        });
+        return data;
     }
 }

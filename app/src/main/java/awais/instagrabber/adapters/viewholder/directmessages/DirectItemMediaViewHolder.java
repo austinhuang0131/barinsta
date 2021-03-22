@@ -66,9 +66,7 @@ public class DirectItemMediaViewHolder extends DirectItemViewHolder {
         binding.mediaPreview.requestLayout();
         binding.bgTime.getLayoutParams().width = width;
         binding.bgTime.requestLayout();
-        final ImageVersions2 imageVersions2 = media.getImageVersions2();
-        if (imageVersions2 == null) return;
-        final String thumbUrl = ResponseBodyUtils.getThumbUrl(imageVersions2);
+        final String thumbUrl = ResponseBodyUtils.getThumbUrl(media);
         binding.mediaPreview.setImageURI(thumbUrl);
     }
 

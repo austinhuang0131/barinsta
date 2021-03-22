@@ -22,9 +22,9 @@ import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.NetworkUtils;
 import awais.instagrabber.utils.TextUtils;
-import awaisomereport.LogCollector;
+//import awaisomereport.LogCollector;
 
-import static awais.instagrabber.utils.Utils.logCollector;
+//import static awais.instagrabber.utils.Utils.logCollector;
 
 public final class CommentsFetcher extends AsyncTask<Void, Void, List<CommentModel>> {
     private static final String TAG = "CommentsFetcher";
@@ -130,11 +130,11 @@ public final class CommentsFetcher extends AsyncTask<Void, Void, List<CommentMod
                 }
                 conn.disconnect();
             } catch (final Exception e) {
-                if (logCollector != null)
-                    logCollector.appendException(e,
-                                                 LogCollector.LogFile.ASYNC_COMMENTS_FETCHER,
-                                                 "getChildComments",
-                                                 new Pair<>("commentModels.size", commentModels.size()));
+//                if (logCollector != null)
+//                    logCollector.appendException(e,
+//                                                 LogCollector.LogFile.ASYNC_COMMENTS_FETCHER,
+//                                                 "getChildComments",
+//                                                 new Pair<>("commentModels.size", commentModels.size()));
                 if (BuildConfig.DEBUG) Log.e(TAG, "", e);
                 if (fetchListener != null) fetchListener.onFailure(e);
                 break;
@@ -256,9 +256,9 @@ public final class CommentsFetcher extends AsyncTask<Void, Void, List<CommentMod
 
             conn.disconnect();
         } catch (final Exception e) {
-            if (logCollector != null)
-                logCollector.appendException(e, LogCollector.LogFile.ASYNC_COMMENTS_FETCHER, "getParentComments",
-                                             new Pair<>("commentModelsList.size", commentModels.size()));
+//            if (logCollector != null)
+//                logCollector.appendException(e, LogCollector.LogFile.ASYNC_COMMENTS_FETCHER, "getParentComments",
+//                                             new Pair<>("commentModelsList.size", commentModels.size()));
             if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
             if (fetchListener != null) fetchListener.onFailure(e);
             return null;

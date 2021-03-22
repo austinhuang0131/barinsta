@@ -114,6 +114,13 @@ public class SliderVideoViewHolder extends SliderItemViewHolder {
                     sliderCallback.onPlayerPause(position);
                 }
             }
+
+            @Override
+            public void onRelease() {
+                if (sliderCallback != null) {
+                    sliderCallback.onPlayerRelease(position);
+                }
+            }
         };
         final float aspectRatio = (float) media.getOriginalWidth() / media.getOriginalHeight();
         String videoUrl = null;

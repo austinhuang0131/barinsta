@@ -49,7 +49,7 @@ public class ProfilePostFetchService implements PostFetcher.PostFetchService {
             }
         };
         if (isLoggedIn) profileService.fetchPosts(profileModel.getPk(), nextMaxId, cb);
-        else graphQLService.fetchProfilePosts(profileModel.getPk(), 30, nextMaxId, cb);
+        else graphQLService.fetchProfilePosts(profileModel.getPk(), 30, nextMaxId, profileModel, cb);
     }
 
     @Override

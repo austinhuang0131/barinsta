@@ -86,9 +86,7 @@ public class DirectItemStoryShareViewHolder extends DirectItemViewHolder {
         layoutParams.width = widthHeight.first != null ? widthHeight.first : 0;
         layoutParams.height = widthHeight.second != null ? widthHeight.second : 0;
         binding.ivMediaPreview.requestLayout();
-        final ImageVersions2 imageVersions2 = storyShareMedia.getImageVersions2();
-        if (imageVersions2 == null) return;
-        final String thumbUrl = ResponseBodyUtils.getThumbUrl(imageVersions2);
+        final String thumbUrl = ResponseBodyUtils.getThumbUrl(storyShareMedia);
         binding.ivMediaPreview.setImageURI(thumbUrl);
     }
 

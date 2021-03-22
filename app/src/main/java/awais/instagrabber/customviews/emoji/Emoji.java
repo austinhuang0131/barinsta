@@ -2,7 +2,6 @@ package awais.instagrabber.customviews.emoji;
 
 import androidx.annotation.NonNull;
 
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Objects;
 
@@ -12,10 +11,12 @@ public class Emoji {
     private final List<Emoji> variants;
     private GoogleCompatEmojiDrawable drawable;
 
-    public Emoji(final String unicode, final String name) {
+    public Emoji(final String unicode,
+                 final String name,
+                 final List<Emoji> variants) {
         this.unicode = unicode;
         this.name = name;
-        this.variants = new LinkedList<>();
+        this.variants = variants;
     }
 
     public String getUnicode() {
@@ -35,7 +36,7 @@ public class Emoji {
     }
 
     public GoogleCompatEmojiDrawable getDrawable() {
-        if (drawable == null) {
+        if (drawable == null && unicode != null) {
             drawable = new GoogleCompatEmojiDrawable(unicode);
         }
         return drawable;
@@ -60,6 +61,7 @@ public class Emoji {
         return "Emoji{" +
                 "unicode='" + unicode + '\'' +
                 ", name='" + name + '\'' +
+                ", variants=" + variants +
                 '}';
     }
 }

@@ -16,7 +16,6 @@ import com.google.common.util.concurrent.Futures;
 import com.google.common.util.concurrent.ListenableFuture;
 import com.google.common.util.concurrent.SettableFuture;
 
-import org.checkerframework.checker.nullness.compatqual.NullableDecl;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -41,10 +40,11 @@ import awais.instagrabber.db.repositories.RepositoryCallback;
 import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.enums.FavoriteType;
 import awais.instagrabber.utils.PasswordUtils.IncorrectPasswordException;
-import awaisomereport.LogCollector.LogFile;
 
-import static awais.instagrabber.utils.Utils.logCollector;
 import static awais.instagrabber.utils.Utils.settingsHelper;
+
+//import awaisomereport.LogCollector.LogFile;
+//import static awais.instagrabber.utils.Utils.logCollector;
 
 public final class ExportImportUtils {
     private static final String TAG = "ExportImportUtils";
@@ -80,8 +80,8 @@ public final class ExportImportUtils {
                     throw e;
                 } catch (final Exception e) {
                     if (fetchListener != null) fetchListener.onResult(false);
-                    if (logCollector != null)
-                        logCollector.appendException(e, LogFile.UTILS_IMPORT, "Import::pass");
+//                    if (logCollector != null)
+//                        logCollector.appendException(e, LogFile.UTILS_IMPORT, "Import::pass");
                     if (BuildConfig.DEBUG) Log.e(TAG, "Error importing backup", e);
                 }
             } else if (configType == 'Z') {
@@ -99,7 +99,7 @@ public final class ExportImportUtils {
             throw e;
         } catch (final Exception e) {
             if (fetchListener != null) fetchListener.onResult(false);
-            if (logCollector != null) logCollector.appendException(e, LogFile.UTILS_IMPORT, "Import");
+//            if (logCollector != null) logCollector.appendException(e, LogFile.UTILS_IMPORT, "Import");
             if (BuildConfig.DEBUG) Log.e(TAG, "", e);
         }
     }
@@ -122,7 +122,7 @@ public final class ExportImportUtils {
             if (fetchListener != null) fetchListener.onResult(true);
         } catch (final Exception e) {
             if (fetchListener != null) fetchListener.onResult(false);
-            if (logCollector != null) logCollector.appendException(e, LogFile.UTILS_IMPORT, "importJson");
+//            if (logCollector != null) logCollector.appendException(e, LogFile.UTILS_IMPORT, "importJson");
             if (BuildConfig.DEBUG) Log.e(TAG, "", e);
         }
     }
@@ -241,8 +241,8 @@ public final class ExportImportUtils {
                     exportBytes = PasswordUtils.enc(exportString, bytes);
                 } catch (final Exception e) {
                     if (fetchListener != null) fetchListener.onResult(false);
-                    if (logCollector != null)
-                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "Export::isPass");
+//                    if (logCollector != null)
+//                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "Export::isPass");
                     if (BuildConfig.DEBUG) Log.e(TAG, "", e);
                 }
             } else {
@@ -255,8 +255,8 @@ public final class ExportImportUtils {
                     if (fetchListener != null) fetchListener.onResult(true);
                 } catch (final Exception e) {
                     if (fetchListener != null) fetchListener.onResult(false);
-                    if (logCollector != null)
-                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "Export::notPass");
+//                    if (logCollector != null)
+//                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "Export::notPass");
                     if (BuildConfig.DEBUG) Log.e(TAG, "", e);
                 }
             } else if (fetchListener != null) fetchListener.onResult(false);
@@ -283,7 +283,7 @@ public final class ExportImportUtils {
             final ListenableFuture<List<Object>> allFutures = Futures.allAsList(futures.build());
             Futures.addCallback(allFutures, new FutureCallback<List<Object>>() {
                 @Override
-                public void onSuccess(@NullableDecl final List<Object> result) {
+                public void onSuccess(final List<Object> result) {
                     final JSONObject jsonObject = new JSONObject();
                     if (result == null) {
                         callback.onCreated(jsonObject.toString());
@@ -324,7 +324,7 @@ public final class ExportImportUtils {
             }, AppExecutors.getInstance().tasksThread());
             return;
         } catch (final Exception e) {
-            if (logCollector != null) logCollector.appendException(e, LogFile.UTILS_EXPORT, "getExportString");
+//            if (logCollector != null) logCollector.appendException(e, LogFile.UTILS_EXPORT, "getExportString");
             if (BuildConfig.DEBUG) Log.e(TAG, "", e);
         }
         callback.onCreated(null);
@@ -373,9 +373,9 @@ public final class ExportImportUtils {
                         jsonArray.put(jsonObject);
                     }
                 } catch (Exception e) {
-                    if (logCollector != null) {
-                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "getFavorites");
-                    }
+//                    if (logCollector != null) {
+//                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "getFavorites");
+//                    }
                     if (BuildConfig.DEBUG) {
                         Log.e(TAG, "Error exporting favorites", e);
                     }
@@ -409,9 +409,9 @@ public final class ExportImportUtils {
                         jsonArray.put(jsonObject);
                     }
                 } catch (Exception e) {
-                    if (logCollector != null) {
-                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "getCookies");
-                    }
+//                    if (logCollector != null) {
+//                        logCollector.appendException(e, LogFile.UTILS_EXPORT, "getCookies");
+//                    }
                     if (BuildConfig.DEBUG) {
                         Log.e(TAG, "Error exporting accounts", e);
                     }

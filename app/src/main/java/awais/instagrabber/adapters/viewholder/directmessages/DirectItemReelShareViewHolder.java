@@ -162,9 +162,7 @@ public class DirectItemReelShareViewHolder extends DirectItemViewHolder {
         binding.preview.setHierarchy(new GenericDraweeHierarchyBuilder(itemView.getResources())
                                              .setRoundingParams(roundingParams)
                                              .build());
-        final ImageVersions2 imageVersions2 = media.getImageVersions2();
-        if (imageVersions2 == null) return;
-        final String thumbUrl = ResponseBodyUtils.getThumbUrl(imageVersions2);
+        final String thumbUrl = ResponseBodyUtils.getThumbUrl(media);
         binding.preview.setImageURI(thumbUrl);
     }
 

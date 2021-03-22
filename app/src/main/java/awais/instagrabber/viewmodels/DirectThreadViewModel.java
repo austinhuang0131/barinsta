@@ -23,6 +23,7 @@ import java.util.stream.Collectors;
 
 import awais.instagrabber.customviews.emoji.Emoji;
 import awais.instagrabber.managers.DirectMessagesManager;
+import awais.instagrabber.managers.InboxManager;
 import awais.instagrabber.managers.ThreadManager;
 import awais.instagrabber.models.Resource;
 import awais.instagrabber.repositories.responses.User;
@@ -57,7 +58,6 @@ public class DirectThreadViewModel extends AndroidViewModel {
 
     public DirectThreadViewModel(@NonNull final Application application,
                                  @NonNull final String threadId,
-                                 final DirectThread backup,
                                  final boolean pending,
                                  @NonNull final User currentUser) {
         super(application);
@@ -74,7 +74,7 @@ public class DirectThreadViewModel extends AndroidViewModel {
         contentResolver = application.getContentResolver();
         recordingsDir = DirectoryUtils.getOutputMediaDirectory(application, "Recordings");
         final DirectMessagesManager messagesManager = DirectMessagesManager.getInstance();
-        threadManager = messagesManager.getThreadManager(threadId, pending, backup, currentUser, contentResolver);
+        threadManager = messagesManager.getThreadManager(threadId, pending, currentUser, contentResolver);
         threadManager.fetchPendingRequests();
     }
 
@@ -278,15 +278,24 @@ public class DirectThreadViewModel extends AndroidViewModel {
         return threadManager.declineRequest();
     }
 
-    public void markAsSeen() {
+    public LiveData<Resource<Object>> markAsSeen() {
+        if (currentUser == null) {
+            return getSuccessEventResObjectLiveData();
+        }
         final DirectThread thread = getThread().getValue();
-        if (thread == null) return;
+        if (thread == null) {
+            return getSuccessEventResObjectLiveData();
+        }
         final List<DirectItem> items = thread.getItems();
-        if (items == null || items.isEmpty()) return;
+        if (items == null || items.isEmpty()) {
+            return getSuccessEventResObjectLiveData();
+        }
         final Optional<DirectItem> itemOptional = items.stream()
                                                        .filter(item -> item.getUserId() != currentUser.getPk())
                                                        .findFirst();
-        if (!itemOptional.isPresent()) return;
+        if (!itemOptional.isPresent()) {
+            return getSuccessEventResObjectLiveData();
+        }
         final DirectItem directItem = itemOptional.get();
         final Map<Long, DirectThreadLastSeenAt> lastSeenAt = thread.getLastSeenAt();
         if (lastSeenAt != null) {
@@ -295,10 +304,29 @@ public class DirectThreadViewModel extends AndroidViewModel {
                 if (seenAt != null
                         && (Objects.equals(seenAt.getItemId(), directItem.getItemId())
                         || Long.parseLong(seenAt.getTimestamp()) >= directItem.getTimestamp())) {
-                    return;
+                    return getSuccessEventResObjectLiveData();
                 }
-            } catch (Exception ignored) {}
+            } catch (Exception ignored) {
+                return getSuccessEventResObjectLiveData();
+            }
         }
-        threadManager.markAsSeen(directItem);
+        return threadManager.markAsSeen(directItem);
     }
+
+    @NonNull
+    private MutableLiveData<Resource<Object>> getSuccessEventResObjectLiveData() {
+        final MutableLiveData<Resource<Object>> data = new MutableLiveData<>();
+        data.postValue(Resource.success(new Object()));
+        return data;
+    }
+
+    public void deleteThreadIfRequired() {
+        final DirectThread thread = getThread().getValue();
+        if (thread == null) return;
+        if (thread.isTemp() && (thread.getItems() == null || thread.getItems().isEmpty())) {
+            final InboxManager inboxManager = DirectMessagesManager.getInstance().getInboxManager();
+            inboxManager.removeThread(threadId);
+        }
+    }
+
 }

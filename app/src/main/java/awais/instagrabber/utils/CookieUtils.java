@@ -21,7 +21,7 @@ import awais.instagrabber.BuildConfig;
 import awais.instagrabber.db.datasources.AccountDataSource;
 import awais.instagrabber.db.repositories.AccountRepository;
 import awais.instagrabber.db.repositories.RepositoryCallback;
-import awaisomereport.LogCollector;
+//import awaisomereport.LogCollector;
 
 public final class CookieUtils {
     private static final String TAG = CookieUtils.class.getSimpleName();
@@ -52,8 +52,8 @@ public final class CookieUtils {
                 cookieStore.add(uri3, httpCookie);
             }
         } catch (final URISyntaxException e) {
-            if (Utils.logCollector != null)
-                Utils.logCollector.appendException(e, LogCollector.LogFile.UTILS, "setupCookies");
+//            if (Utils.logCollector != null)
+//                Utils.logCollector.appendException(e, LogCollector.LogFile.UTILS, "setupCookies");
             if (BuildConfig.DEBUG) Log.e(TAG, "", e);
         }
     }

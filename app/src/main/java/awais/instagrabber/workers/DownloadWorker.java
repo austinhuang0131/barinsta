@@ -52,11 +52,11 @@ import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.DownloadUtils;
 import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
-import awaisomereport.LogCollector;
+//import awaisomereport.LogCollector;
 
 import static awais.instagrabber.utils.Constants.DOWNLOAD_CHANNEL_ID;
 import static awais.instagrabber.utils.Constants.NOTIF_GROUP_NAME;
-import static awais.instagrabber.utils.Utils.logCollector;
+//import static awais.instagrabber.utils.Utils.logCollector;
 
 public class DownloadWorker extends Worker {
     private static final String TAG = "DownloadWorker";
@@ -260,8 +260,8 @@ public class DownloadWorker extends Worker {
                     try (final InputStream inputStream = contentResolver.openInputStream(uri)) {
                         bitmap = BitmapFactory.decodeStream(inputStream);
                     } catch (final Exception e) {
-                        if (logCollector != null)
-                            logCollector.appendException(e, LogCollector.LogFile.ASYNC_DOWNLOADER, "onPostExecute::bitmap_1");
+//                        if (logCollector != null)
+//                            logCollector.appendException(e, LogCollector.LogFile.ASYNC_DOWNLOADER, "onPostExecute::bitmap_1");
                         if (BuildConfig.DEBUG) Log.e(TAG, "", e);
                     }
                 } else if (mimeType.startsWith("video")) {
@@ -277,13 +277,13 @@ public class DownloadWorker extends Worker {
                             try {
                                 retriever.close();
                             } catch (final Exception e) {
-                                if (logCollector != null)
-                                    logCollector.appendException(e, LogCollector.LogFile.ASYNC_DOWNLOADER, "onPostExecute::bitmap_2");
+//                                if (logCollector != null)
+//                                    logCollector.appendException(e, LogCollector.LogFile.ASYNC_DOWNLOADER, "onPostExecute::bitmap_2");
                             }
                     } catch (final Exception e) {
                         if (BuildConfig.DEBUG) Log.e(TAG, "", e);
-                        if (logCollector != null)
-                            logCollector.appendException(e, LogCollector.LogFile.ASYNC_DOWNLOADER, "onPostExecute::bitmap_3");
+//                        if (logCollector != null)
+//                            logCollector.appendException(e, LogCollector.LogFile.ASYNC_DOWNLOADER, "onPostExecute::bitmap_3");
                     }
                 }
             }

@@ -140,4 +140,8 @@
         <item name="dmOutgoingBgColor">@color/deep_purple_400</item>
         <item name="dmDateHeaderBgColor">@color/deep_purple_600</item>
     </style>
+
+    <style name="AppTheme.Launcher" parent="AppTheme.Dark">
+        <item name="android:windowBackground">@drawable/launch_screen</item>
+    </style>
 </resources>

@@ -16,9 +16,9 @@ import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.LocationModel;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.NetworkUtils;
-import awaisomereport.LogCollector;
+//import awaisomereport.LogCollector;
 
-import static awais.instagrabber.utils.Utils.logCollector;
+//import static awais.instagrabber.utils.Utils.logCollector;
 
 public final class LocationFetcher extends AsyncTask<Void, Void, LocationModel> {
     private static final String TAG = "LocationFetcher";
@@ -65,8 +65,8 @@ public final class LocationFetcher extends AsyncTask<Void, Void, LocationModel> 
 
             conn.disconnect();
         } catch (final Exception e) {
-            if (logCollector != null)
-                logCollector.appendException(e, LogCollector.LogFile.ASYNC_LOCATION_FETCHER, "doInBackground");
+//            if (logCollector != null)
+//                logCollector.appendException(e, LogCollector.LogFile.ASYNC_LOCATION_FETCHER, "doInBackground");
             if (BuildConfig.DEBUG) {
                 Log.e(TAG, "", e);
             }

@@ -75,7 +75,7 @@ public class UserAgentUtils {
 
     @NonNull
     public static String generateBrowserUA(final int code) {
-        return browsers[code - 1];
+        return browsers[code];
     }
 
     @NonNull

@@ -19,8 +19,8 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
 import java.util.Date;
-import java.util.zip.ZipEntry;
-import java.util.zip.ZipOutputStream;
+//import java.util.zip.ZipEntry;
+//import java.util.zip.ZipOutputStream;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.utils.Utils;
@@ -29,7 +29,7 @@ public final class CrashReporter implements Thread.UncaughtExceptionHandler {
     private static CrashReporter reporterInstance;
     private final Application application;
     private final String email;
-    private final File crashLogsZip;
+//    private final File crashLogsZip;
     private boolean startAttempted = false;
 
     public static CrashReporter get(final Application application) {
@@ -40,7 +40,7 @@ public final class CrashReporter implements Thread.UncaughtExceptionHandler {
     private CrashReporter(@NonNull final Application application) {
         this.application = application;
         this.email = "barinsta@austinhuang.me";
-        this.crashLogsZip = new File(application.getExternalCacheDir(), "crash_logs.zip");
+//        this.crashLogsZip = new File(application.getExternalCacheDir(), "crash_logs.zip");
     }
 
     public void start() {
@@ -99,94 +99,88 @@ public final class CrashReporter implements Thread.UncaughtExceptionHandler {
 
         application.startActivity(new Intent(application, ErrorReporterActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
 
-        zipLogs();
+//        zipLogs();
 
         Process.killProcess(Process.myPid());
         System.exit(10);
     }
 
-    public synchronized CrashReporter zipLogs() {
-        final File logDir = Utils.logCollector != null ? Utils.logCollector.getLogDir() :
-                new File(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ? application.getDataDir() : application.getFilesDir(), "crashlogs");
-
-        try (final FileOutputStream fos = new FileOutputStream(crashLogsZip);
-             final ZipOutputStream zos = new ZipOutputStream(fos)) {
-
-            final File[] files = logDir.listFiles();
-
-            if (files != null) {
-                zos.setLevel(5);
-                byte[] buffer;
-                for (final File file : files) {
-                    if (file != null && file.length() > 0) {
-                        buffer = new byte[1024];
-                        try (final FileInputStream fis = new FileInputStream(file)) {
-                            zos.putNextEntry(new ZipEntry(file.getName()));
-                            int length;
-                            while ((length = fis.read(buffer)) > 0) zos.write(buffer, 0, length);
-                            zos.closeEntry();
-                        }
-                    }
-                }
-            }
-
-        } catch (final Exception e) {
-            if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
-        }
-
-        return this;
-    }
+//    public synchronized CrashReporter zipLogs() {
+//        final File logDir = Utils.logCollector != null ? Utils.logCollector.getLogDir() :
+//                new File(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ? application.getDataDir() : application.getFilesDir(), "crashlogs");
+//
+//        try (final FileOutputStream fos = new FileOutputStream(crashLogsZip);
+//             final ZipOutputStream zos = new ZipOutputStream(fos)) {
+//
+//            final File[] files = logDir.listFiles();
+//
+//            if (files != null) {
+//                zos.setLevel(5);
+//                byte[] buffer;
+//                for (final File file : files) {
+//                    if (file != null && file.length() > 0) {
+//                        buffer = new byte[1024];
+//                        try (final FileInputStream fis = new FileInputStream(file)) {
+//                            zos.putNextEntry(new ZipEntry(file.getName()));
+//                            int length;
+//                            while ((length = fis.read(buffer)) > 0) zos.write(buffer, 0, length);
+//                            zos.closeEntry();
+//                        }
+//                    }
+//                }
+//            }
+//
+//        } catch (final Exception e) {
+//            if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
+//        }
+//
+//        return this;
+//    }
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
-    public void startCrashEmailIntent(final Context context, final boolean sendZipsOnly) {
+    public void startCrashEmailIntent(final Context context) {
         try {
             final String filePath = context.getFilesDir().getAbsolutePath();
 
             String[] errorFileList;
 
-            if (sendZipsOnly) errorFileList = null;
-            else {
-                try {
-                    final File dir = new File(filePath);
-                    if (dir.exists() && !dir.isDirectory()) dir.delete();
-                    dir.mkdir();
-                    errorFileList = dir.list((d, name) -> name.endsWith(".stacktrace"));
-                } catch (final Exception e) {
-                    errorFileList = null;
-                }
+            try {
+                final File dir = new File(filePath);
+                if (dir.exists() && !dir.isDirectory()) dir.delete();
+                dir.mkdir();
+                errorFileList = dir.list((d, name) -> name.endsWith(".stacktrace"));
+            } catch (final Exception e) {
+                errorFileList = null;
             }
 
-            if ((errorFileList != null && errorFileList.length > 0) || sendZipsOnly) {
+            if (errorFileList != null && errorFileList.length > 0) {
                 final StringBuilder errorStringBuilder;
 
-                if (sendZipsOnly) errorStringBuilder = new StringBuilder("(Not a crash)\n\n");
-                else {
-                    errorStringBuilder = new StringBuilder("\r\n\r\n");
-                    final int maxSendMail = 5;
+                errorStringBuilder = new StringBuilder("\r\n\r\n");
+                final int maxSendMail = 5;
 
-                    int curIndex = 0;
-                    for (final String curString : errorFileList) {
-                        final File file = new File(filePath + '/' + curString);
+                int curIndex = 0;
+                for (final String curString : errorFileList) {
+                    final File file = new File(filePath + '/' + curString);
 
-                        if (curIndex++ <= maxSendMail) {
-                            errorStringBuilder.append("New Trace collected:\r\n=====================\r\n");
-                            try (final BufferedReader input = new BufferedReader(new FileReader(file))) {
-                                String line;
-                                while ((line = input.readLine()) != null)
-                                    errorStringBuilder.append(line).append("\r\n");
-                            }
+                    if (curIndex++ <= maxSendMail) {
+                        errorStringBuilder.append("New Trace collected:\r\n=====================\r\n");
+                        try (final BufferedReader input = new BufferedReader(new FileReader(file))) {
+                            String line;
+                            while ((line = input.readLine()) != null)
+                                errorStringBuilder.append(line).append("\r\n");
                         }
-
-                        file.delete();
                     }
 
-                    errorStringBuilder.append("\r\n\r\n");
+                    file.delete();
                 }
+
+                errorStringBuilder.append("\r\n\r\n");
 
                 context.startActivity(Intent.createChooser(new Intent(Intent.ACTION_SEND).setType("message/rfc822")
                         .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
                         .putExtra(Intent.EXTRA_EMAIL, new String[]{email})
-                        .putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(application, BuildConfig.APPLICATION_ID + ".provider", crashLogsZip))
+//                        .putExtra(Intent.EXTRA_STREAM, FileProvider.getUriForFile(application, BuildConfig.APPLICATION_ID + ".provider", crashLogsZip))
                         .putExtra(Intent.EXTRA_SUBJECT, "Barinsta Crash Report")
                         .putExtra(Intent.EXTRA_TEXT, errorStringBuilder.toString()), "Select an email app to send crash logs"));
             }

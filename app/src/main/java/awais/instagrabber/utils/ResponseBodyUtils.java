@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.models.StoryModel;
@@ -30,7 +31,7 @@ import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.MediaCandidate;
 import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.repositories.responses.VideoVersion;
-import awaisomereport.LogCollector;
+//import awaisomereport.LogCollector;
 
 public final class ResponseBodyUtils {
     private static final String TAG = "ResponseBodyUtils";
@@ -75,10 +76,10 @@ public final class ResponseBodyUtils {
             if (lastIndexMain >= 0) return sources[lastIndexMain];
             else if (lastIndexBase >= 0) return sources[lastIndexBase];
         } catch (final Exception e) {
-            if (Utils.logCollector != null)
-                Utils.logCollector.appendException(e, LogCollector.LogFile.UTILS, "getHighQualityPost",
-                                                   new Pair<>("resourcesNull", resources == null),
-                                                   new Pair<>("isVideo", isVideo));
+//            if (Utils.logCollector != null)
+//                Utils.logCollector.appendException(e, LogCollector.LogFile.UTILS, "getHighQualityPost",
+//                                                   new Pair<>("resourcesNull", resources == null),
+//                                                   new Pair<>("isVideo", isVideo));
             if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
         }
         return null;
@@ -93,9 +94,9 @@ public final class ResponseBodyUtils {
                 src = getHighQualityPost(resources.getJSONObject("image_versions2").getJSONArray("candidates"), false, true, false);
             if (src == null) return resources.getString("display_url");
         } catch (final Exception e) {
-            if (Utils.logCollector != null)
-                Utils.logCollector.appendException(e, LogCollector.LogFile.UTILS, "getHighQualityImage",
-                                                   new Pair<>("resourcesNull", resources == null));
+//            if (Utils.logCollector != null)
+//                Utils.logCollector.appendException(e, LogCollector.LogFile.UTILS, "getHighQualityImage",
+//                                                   new Pair<>("resourcesNull", resources == null));
             if (BuildConfig.DEBUG) Log.e("AWAISKING_APP", "", e);
         }
         return src;
@@ -674,7 +675,8 @@ public final class ResponseBodyUtils {
     //     return feedModelBuilder.build();
     // }
 
-    public static Media parseGraphQLItem(final JSONObject itemJson) throws JSONException {
+    // the "user" argument can be null, it's used because instagram redacts user details from responses
+    public static Media parseGraphQLItem(final JSONObject itemJson, final User backup) throws JSONException {
         if (itemJson == null) {
             return null;
         }
@@ -727,41 +729,28 @@ public final class ResponseBodyUtils {
             width = dimensions.optInt("width");
         }
         String thumbnailUrl = null;
-        try {
-            thumbnailUrl = feedItem.getJSONArray("display_resources")
-                                   .getJSONObject(0)
-                                   .getString("src");
-        } catch (JSONException ignored) {}
-        // final FeedModel.Builder feedModelBuilder = new FeedModel.Builder()
-        //         .setProfileModel(profileModel)
-        //         .setItemType(isVideo ? MediaItemType.MEDIA_TYPE_VIDEO
-        //                              : MediaItemType.MEDIA_TYPE_IMAGE)
-        //         .setViewCount(videoViews)
-        //         .setPostId(feedItem.getString(Constants.EXTRAS_ID))
-        //         .setDisplayUrl(resourceUrl)
-        //         .setThumbnailUrl(thumbnailUrl != null ? thumbnailUrl : displayUrl)
-        //         .setShortCode(feedItem.getString(Constants.EXTRAS_SHORTCODE))
-        //         .setPostCaption(captionText)
-        //         .setCommentsCount(commentsCount)
-        //         .setTimestamp(feedItem.optLong("taken_at_timestamp", -1))
-        //         .setLiked(feedItem.optBoolean("viewer_has_liked"))
-        //         .setBookmarked(feedItem.optBoolean("viewer_has_saved"))
-        //         .setLikesCount(likesCount)
-        //         .setLocationName(locationName)
-        //         .setLocationId(String.valueOf(locationId))
-        //         .setImageHeight(height)
-        //         .setImageWidth(width);
+        final JSONArray displayResources = feedItem.getJSONArray("display_resources");
+        final List<MediaCandidate> candidates = new ArrayList<MediaCandidate>();
+        for (int i = 0; i < displayResources.length(); i++) {
+            final JSONObject displayResource = displayResources.getJSONObject(i);
+            candidates.add(new MediaCandidate(
+                    displayResource.getInt("config_width"),
+                    displayResource.getInt("config_height"),
+                    displayResource.getString("src")
+            ));
+        }
+        final ImageVersions2 imageVersions2 = new ImageVersions2(candidates);
 
-        User user = null;
+        User user = backup;
         long userId = -1;
-        if (feedItem.has("owner")) {
+        if (feedItem.has("owner") && user == null) {
             final JSONObject owner = feedItem.getJSONObject("owner");
             final FriendshipStatus friendshipStatus = new FriendshipStatus(
                     false,
                     false,
                     false,
                     false,
-                    owner.optBoolean("is_private"),
+                    false,
                     false,
                     false,
                     false,
@@ -773,7 +762,7 @@ public final class ResponseBodyUtils {
                     userId,
                     owner.optString(Constants.EXTRAS_USERNAME),
                     owner.optString("full_name"),
-                    owner.optBoolean("is_private"),
+                    false,
                     owner.optString("profile_pic_url"),
                     null,
                     friendshipStatus,
@@ -782,13 +771,6 @@ public final class ResponseBodyUtils {
                     null, null, null, null);
         }
         final String id = feedItem.getString(Constants.EXTRAS_ID);
-        final ImageVersions2 imageVersions2 = new ImageVersions2(
-                Collections.singletonList(new MediaCandidate(
-                        width,
-                        height,
-                        isVideo ? thumbnailUrl : resourceUrl
-                ))
-        );
         VideoVersion videoVersion = null;
         if (isVideo) {
             videoVersion = new VideoVersion(
@@ -820,7 +802,7 @@ public final class ResponseBodyUtils {
                     for (int i = 0; i < children.length(); i++) {
                         final JSONObject child = children.optJSONObject(i);
                         if (child == null) continue;
-                        final Media media = parseGraphQLItem(child);
+                        final Media media = parseGraphQLItem(child, null);
                         media.setIsSidecarChild(true);
                         childItems.add(media);
                     }
@@ -986,7 +968,7 @@ public final class ResponseBodyUtils {
             model.setVideoUrl(ResponseBodyUtils.getHighQualityPost(videoResources, true, true, false));
 
         if (data.has("story_feed_media")) {
-            model.setTappableShortCode(data.getJSONArray("story_feed_media").getJSONObject(0).optString("media_code"));
+            model.setTappableShortCode(data.getJSONArray("story_feed_media").getJSONObject(0).optString("media_id"));
         }
 
         // TODO: this may not be limited to spotify
@@ -1094,29 +1076,24 @@ public final class ResponseBodyUtils {
     }
 
     public static String getThumbUrl(final Media media) {
-        if (media == null) {
-            return null;
-        }
-        final ImageVersions2 imageVersions2 = media.getImageVersions2();
-        return getThumbUrl(imageVersions2);
-    }
-
-    public static String getThumbUrl(final ImageVersions2 imageVersions2) {
-        if (imageVersions2 == null) return null;
-        final List<MediaCandidate> candidates = imageVersions2.getCandidates();
-        if (candidates == null || candidates.isEmpty()) return null;
-        final MediaCandidate mediaCandidate = candidates.get(candidates.size() - 1);
-        if (mediaCandidate == null) return null;
-        return mediaCandidate.getUrl();
+        return getImageCandidate(media, CandidateType.THUMBNAIL);
     }
 
     public static String getImageUrl(final Media media) {
+        return getImageCandidate(media, CandidateType.DOWNLOAD);
+    }
+
+    private static String getImageCandidate(final Media media, final CandidateType type) {
         if (media == null) return null;
         final ImageVersions2 imageVersions2 = media.getImageVersions2();
         if (imageVersions2 == null) return null;
         final List<MediaCandidate> candidates = imageVersions2.getCandidates();
         if (candidates == null || candidates.isEmpty()) return null;
-        final MediaCandidate candidate = candidates.get(0);
+        final List<MediaCandidate> sortedCandidates = candidates.stream()
+                .sorted((c1, c2) -> Integer.compare(c2.getWidth(), c1.getWidth()))
+                .filter(c -> c.getWidth() < type.getValue())
+                .collect(Collectors.toList());
+        final MediaCandidate candidate = sortedCandidates.get(0);
         if (candidate == null) return null;
         return candidate.getUrl();
     }
@@ -1132,5 +1109,20 @@ public final class ResponseBodyUtils {
                                                 false);
         model.setVideoUrl(data.getString("dash_playback_url"));
         return model;
+    }
+
+    private enum CandidateType {
+        THUMBNAIL(1000),
+        DOWNLOAD(10000);
+
+        private final int value;
+
+        CandidateType(final int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
     }
 }

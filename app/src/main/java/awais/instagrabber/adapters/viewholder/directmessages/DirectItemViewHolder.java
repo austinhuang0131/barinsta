@@ -242,10 +242,10 @@ public abstract class DirectItemViewHolder extends RecyclerView.ViewHolder imple
                 text = replied.getPlaceholder().getMessage();
                 break;
             case MEDIA:
-                url = ResponseBodyUtils.getThumbUrl(replied.getMedia().getImageVersions2());
+                url = ResponseBodyUtils.getThumbUrl(replied.getMedia());
                 break;
             case RAVEN_MEDIA:
-                url = ResponseBodyUtils.getThumbUrl(replied.getVisualMedia().getMedia().getImageVersions2());
+                url = ResponseBodyUtils.getThumbUrl(replied.getVisualMedia().getMedia());
                 break;
             case VOICE_MEDIA:
                 text = resources.getString(R.string.voice_message);
@@ -255,7 +255,7 @@ public abstract class DirectItemViewHolder extends RecyclerView.ViewHolder imple
                 if (mediaShare.getMediaType() == MediaItemType.MEDIA_TYPE_SLIDER) {
                     mediaShare = mediaShare.getCarouselMedia().get(0);
                 }
-                url = ResponseBodyUtils.getThumbUrl(mediaShare.getImageVersions2());
+                url = ResponseBodyUtils.getThumbUrl(mediaShare);
                 break;
             case REEL_SHARE:
                 text = replied.getReelShare().getText();
