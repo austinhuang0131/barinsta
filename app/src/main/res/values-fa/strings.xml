@@ -337,8 +337,8 @@
     <string name="no_external_app_url">No app found which opens urls</string>
     <string name="gallery">Gallery</string>
     <string name="camera">فرتورانداز</string>
-    <string name="all_photos">All Photos</string>
-    <string name="all_media">All Media</string>
+    <string name="all_photos">همۀ فرتورها</string>
+    <string name="all_media">همۀ رسانه‌ها</string>
     <string name="all_videos">All Videos</string>
     <string name="brightness">Brightness</string>
     <string name="contrast">Contrast</string>
@@ -390,7 +390,7 @@
     <string name="dms_action_make_admin">Make Admin</string>
     <string name="dms_action_remove_admin">Remove as Admin</string>
     <string name="edit_unsuccessful">Edit was unsuccessful</string>
-    <string name="message">Message</string>
+    <string name="message">پیام</string>
     <string name="reply">Reply</string>
     <string name="tap_to_remove">Tap to remove</string>
     <string name="forward">Forward</string>
