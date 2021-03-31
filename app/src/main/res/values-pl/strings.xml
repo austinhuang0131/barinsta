@@ -477,6 +477,6 @@
     <string name="delete_unsuccessful">Usuwanie nie powiodło się</string>
     <string name="crash_report_subject">Raport awarii Barinsta</string>
     <string name="crash_report_title">Wybierz aplikację e-mail do wysyłania dzienników awarii</string>
-    <string name="copy_caption">Copy caption</string>
-    <string name="copy_reply">Copy reply</string>
+    <string name="copy_caption">Kopiuj podpis</string>
+    <string name="copy_reply">Kopiuj odpowiedź</string>
 </resources>
