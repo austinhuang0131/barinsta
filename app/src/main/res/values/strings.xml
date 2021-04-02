@@ -475,6 +475,8 @@
     <string name="delete_unsuccessful">Delete unsuccessful</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
+    <string name="skip_update">Skip this update</string>
+    <string name="on_latest_version">You\'re already on the latest version</string>
     <string name="tab_order">Screen order</string>
     <string name="other_tabs">Other tabs</string>
     <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
