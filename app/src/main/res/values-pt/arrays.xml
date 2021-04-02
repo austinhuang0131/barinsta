@@ -44,6 +44,15 @@
         <item>\|</item>
         <item>-</item>
     </string-array>
+    <!-- Nav graphs should correspond 1-to-1 with the above nav graph ids -->
+    <!-- Titles should correspond 1-to-1 with the above nav graphs -->
+    <!-- Drawable should correspond 1-to-1 with the above titles -->
+    <!-- fragmentIds should correspond 1-to-1 with the above drawabled -->
+    <!-- these are the start destination of the corresponding nav graphs -->
+    <!--<array name="logged_out_main_nav_graphs">-->
+    <!--    <item>@navigation/profile_nav_graph</item>-->
+    <!--    <item>@navigation/more_nav_graph</item>-->
+    <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
         <item>segs</item>
         <item>mins</item>
