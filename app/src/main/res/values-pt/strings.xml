@@ -461,6 +461,10 @@
     <string name="delete_unsuccessful">Falha ao excluir</string>
     <string name="crash_report_subject">Relatório de Travamento do Barinsta</string>
     <string name="crash_report_title">Selecione um aplicativo de e-mail para enviar os registros de travamento</string>
+    <string name="tab_order">Screen order</string>
+    <string name="other_tabs">Other tabs</string>
+    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
+    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
     <string name="copy_caption">Copiar legenda</string>
     <string name="copy_reply">Copiar resposta</string>
 </resources>
