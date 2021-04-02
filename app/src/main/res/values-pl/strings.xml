@@ -477,6 +477,8 @@
     <string name="delete_unsuccessful">Usuwanie nie powiodło się</string>
     <string name="crash_report_subject">Raport awarii Barinsta</string>
     <string name="crash_report_title">Wybierz aplikację e-mail do wysyłania dzienników awarii</string>
+    <string name="skip_update">Skip this update</string>
+    <string name="on_latest_version">You\'re already on the latest version</string>
     <string name="tab_order">Screen order</string>
     <string name="other_tabs">Other tabs</string>
     <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
