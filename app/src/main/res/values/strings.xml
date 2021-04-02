@@ -28,6 +28,7 @@
     <string name="download_user_folder">Download posts to username folders</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
     <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>
     <string name="dm_mark_as_seen_setting_summary">Other members will know you viewed it</string>
     <string name="activity_setting">Enable activity notifications</string>
