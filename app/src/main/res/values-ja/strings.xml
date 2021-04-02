@@ -25,6 +25,7 @@
     <string name="download_user_folder">ユーザ名のフォルダに投稿をダウンロード</string>
     <string name="mark_as_seen_setting">ストーリーズを表示後に既読にする</string>
     <string name="mark_as_seen_setting_summary">ストーリーの作成者は、あなたが閲覧したことを知ることができます。</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">DMを表示後に既読にする</string>
     <string name="dm_mark_as_seen_setting_summary">ほかのメンバーは、あなたが閲覧したことを知ることができます。</string>
     <string name="activity_setting">アクティビティの通知を有効化</string>
