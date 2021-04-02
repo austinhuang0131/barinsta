@@ -25,6 +25,7 @@
     <string name="download_user_folder">Usar subcarpetas con el nombre de usuario</string>
     <string name="mark_as_seen_setting">Marcar historias como vistas después de verlas</string>
     <string name="mark_as_seen_setting_summary">El autor de la historia sabrá que lo has visto</string>
+    <string name="hide_muted_reels_setting">Ocultar historias silenciadas del feed</string>
     <string name="dm_mark_as_seen_setting">Marcar Mensaje Directo como visto después de verlo</string>
     <string name="dm_mark_as_seen_setting_summary">Otros miembros sabrán que lo has visto</string>
     <string name="activity_setting">Activar notificaciones de actividad</string>
