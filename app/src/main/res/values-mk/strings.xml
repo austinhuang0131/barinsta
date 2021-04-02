@@ -25,6 +25,7 @@
     <string name="download_user_folder">Превземи објави во папката со кориснички имиња</string>
     <string name="mark_as_seen_setting">Означи ги приказните како видени</string>
     <string name="mark_as_seen_setting_summary">Авторот на приказната ќе знае дека сте ја погледнале приказната</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Означи порака како видена</string>
     <string name="dm_mark_as_seen_setting_summary">Другите членови ќе знаат дека сте ја виделе содржината на пораката</string>
     <string name="activity_setting">Овозможи нотификации</string>
