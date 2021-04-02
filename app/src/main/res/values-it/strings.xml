@@ -25,7 +25,7 @@
     <string name="download_user_folder">Scarica i post nelle cartelle del nome utente</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo la visualizzazione</string>
     <string name="mark_as_seen_setting_summary">L\'autore della storia saprà che l\'hai visualizzata</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Nascondi storie silenziate dal feed</string>
     <string name="dm_mark_as_seen_setting">Segna il DM come visto dopo la visualizzazione</string>
     <string name="dm_mark_as_seen_setting_summary">Altri membri sapranno che lo hai visualizzato</string>
     <string name="activity_setting">Abilita notifiche attività</string>
@@ -462,12 +462,12 @@
     <string name="delete_unsuccessful">Eliminazione non riuscita</string>
     <string name="crash_report_subject">Rapporto sugli errori di Barinsta</string>
     <string name="crash_report_title">Selezionare un\'applicazione di posta elettronica per inviare i registri di errori</string>
-    <string name="skip_update">Skip this update</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
-    <string name="tab_order">Screen order</string>
-    <string name="other_tabs">Other tabs</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
+    <string name="skip_update">Salta questo aggiornamento</string>
+    <string name="on_latest_version">Hai già l\'ultima versione</string>
+    <string name="tab_order">Ordine schermata</string>
+    <string name="other_tabs">Altre schede</string>
+    <string name="tab_order_start_next_launch">L\'ordine delle schede sarà rifletto al prossimo avvio</string>
+    <string name="dm_remove_warning">Se salvate, tutte le funzionalità correlate a DM saranno disabilitate al prossimo avvio</string>
     <string name="copy_caption">Copia didascalia</string>
     <string name="copy_reply">Copia risposta</string>
 </resources>
