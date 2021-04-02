@@ -25,6 +25,7 @@
     <string name="download_user_folder">Download berichten naar gebruikersnaam mappen</string>
     <string name="mark_as_seen_setting">Markeer verhalen als gelezen na bekijken</string>
     <string name="mark_as_seen_setting_summary">Verhaalmaker zal het weten als je het bekeken hebt</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Markeer privéberichten als gelezen na bekijken</string>
     <string name="dm_mark_as_seen_setting_summary">Andere gebruikers zullen het weten als je het hebt bekeken</string>
     <string name="activity_setting">Activiteitmeldingen inschakelen</string>
