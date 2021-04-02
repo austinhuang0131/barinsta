@@ -453,6 +453,10 @@
     <string name="delete_unsuccessful">删除失败</string>
     <string name="crash_report_subject">Barinsta 崩溃报告</string>
     <string name="crash_report_title">选择一个电子邮件应用来发送崩溃日志</string>
+    <string name="tab_order">Screen order</string>
+    <string name="other_tabs">Other tabs</string>
+    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
+    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
     <string name="copy_caption">Copy caption</string>
     <string name="copy_reply">Copy reply</string>
 </resources>
