@@ -25,6 +25,7 @@
     <string name="download_user_folder">將貼文下載到用戶名資料夾</string>
     <string name="mark_as_seen_setting">檢視完限時動態後標記為已讀</string>
     <string name="mark_as_seen_setting_summary">限時動態的作者會知道您已查看了此限時動態</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">檢視完訊息後標記為已讀</string>
     <string name="dm_mark_as_seen_setting_summary">其他成員會知道您查看了此訊息</string>
     <string name="activity_setting">啟用活動通知</string>
