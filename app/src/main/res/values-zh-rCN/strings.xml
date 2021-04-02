@@ -25,7 +25,7 @@
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
     <string name="mark_as_seen_setting">查看快拍后将其标记为已读</string>
     <string name="mark_as_seen_setting_summary">快拍作者会知道您已看过</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">动态隐藏静音快拍</string>
     <string name="dm_mark_as_seen_setting">查看私信后将其标记为已读</string>
     <string name="dm_mark_as_seen_setting_summary">其他成员会知道你看过了</string>
     <string name="activity_setting">启用活动通知</string>
@@ -454,12 +454,12 @@
     <string name="delete_unsuccessful">删除失败</string>
     <string name="crash_report_subject">Barinsta 崩溃报告</string>
     <string name="crash_report_title">选择一个电子邮件应用来发送崩溃日志</string>
-    <string name="skip_update">Skip this update</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
-    <string name="tab_order">Screen order</string>
-    <string name="other_tabs">Other tabs</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
-    <string name="copy_caption">Copy caption</string>
-    <string name="copy_reply">Copy reply</string>
+    <string name="skip_update">跳过本次更新</string>
+    <string name="on_latest_version">您现在安装的是最新版本</string>
+    <string name="tab_order">页面顺序</string>
+    <string name="other_tabs">其它页面</string>
+    <string name="tab_order_start_next_launch">页面顺序将在下次启动时生效</string>
+    <string name="dm_remove_warning">若您如此保存，所有私信功能将会在下次启动时被禁用</string>
+    <string name="copy_caption">复制说明</string>
+    <string name="copy_reply">复制回复</string>
 </resources>
