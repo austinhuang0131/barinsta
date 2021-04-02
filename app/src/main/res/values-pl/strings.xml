@@ -25,6 +25,7 @@
     <string name="download_user_folder">Pobierz posty do folderów o nazwie użytkownika</string>
     <string name="mark_as_seen_setting">Oznacz relacje jako widoczne po wyświetleniu</string>
     <string name="mark_as_seen_setting_summary">Autor relacji będzie widział, że to wyświetliłeś</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Oznacz wiadomość jako przeczytaną</string>
     <string name="dm_mark_as_seen_setting_summary">Inni użytkownicy będą wiedzieli, że to wyświetliłeś</string>
     <string name="activity_setting">Włącz powiadomienia o aktywności</string>
