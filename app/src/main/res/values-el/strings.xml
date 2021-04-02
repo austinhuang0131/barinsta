@@ -25,6 +25,7 @@
     <string name="download_user_folder">Λήψη δημοσιεύσεων σε φακέλους ονομάτων χρηστών</string>
     <string name="mark_as_seen_setting">Επισήμανση ιστοριών ως προβληθέντων μετά την προβολή</string>
     <string name="mark_as_seen_setting_summary">Ο δημιουργός της ιστορίας θα γνωρίζει ότι προβλήθηκε</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Επισήμανση μηνυμάτων ως αναγνωσμένων μετά την προβολή</string>
     <string name="dm_mark_as_seen_setting_summary">Τα υπόλοιπα μέλη θα γνωρίζουν ότι προβλήθηκε</string>
     <string name="activity_setting">Ενεργοποίηση ειδοποιήσεων δραστηριότητας</string>
