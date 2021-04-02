@@ -25,6 +25,7 @@
     <string name="download_user_folder">Stáhnout příspěvky do složek s uživatelským jménem</string>
     <string name="mark_as_seen_setting">Označit příběhy po zhlédnutí jako zobrazené</string>
     <string name="mark_as_seen_setting_summary">Autor příběhu bude vědět, že jsi si ho zobrazili</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Označovat přímou zprávu po zobrazení jako zobrazenou</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní členové uvidí, že jste si ji ji zobrazili</string>
     <string name="activity_setting">Povolit oznámení o aktivitě</string>
