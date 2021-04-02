@@ -25,6 +25,7 @@
     <string name="download_user_folder">Ukľadať do priečinkov podľa mena</string>
     <string name="mark_as_seen_setting">Označiť príbehy po videní ako videné</string>
     <string name="mark_as_seen_setting_summary">Autor príbehu bude vedieť že ste ho videli</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Po prečítaní, označiť správu ako prečítanú</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní budú vedieť že ste ho videli</string>
     <string name="activity_setting">Zapnúť notifikácie o aktivitách</string>
