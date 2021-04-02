@@ -25,7 +25,7 @@
     <string name="download_user_folder">Pobierz posty do folderów o nazwie użytkownika</string>
     <string name="mark_as_seen_setting">Oznacz relacje jako widoczne po wyświetleniu</string>
     <string name="mark_as_seen_setting_summary">Autor relacji będzie widział, że to wyświetliłeś</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Ukryj wyciszone relacje z kanału</string>
     <string name="dm_mark_as_seen_setting">Oznacz wiadomość jako przeczytaną</string>
     <string name="dm_mark_as_seen_setting_summary">Inni użytkownicy będą wiedzieli, że to wyświetliłeś</string>
     <string name="activity_setting">Włącz powiadomienia o aktywności</string>
@@ -478,12 +478,12 @@
     <string name="delete_unsuccessful">Usuwanie nie powiodło się</string>
     <string name="crash_report_subject">Raport awarii Barinsta</string>
     <string name="crash_report_title">Wybierz aplikację e-mail do wysyłania dzienników awarii</string>
-    <string name="skip_update">Skip this update</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
-    <string name="tab_order">Screen order</string>
-    <string name="other_tabs">Other tabs</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
+    <string name="skip_update">Pomiń tę aktualizację</string>
+    <string name="on_latest_version">Posiadasz aktualną wersję</string>
+    <string name="tab_order">Kolejność na ekranie</string>
+    <string name="other_tabs">Inne karty</string>
+    <string name="tab_order_start_next_launch">Kolejność zakładek zostanie odzwierciedlona przy następnym uruchomieniu</string>
+    <string name="dm_remove_warning">Po zapisaniu wszystkie funkcje związane z PW zostaną wyłączone przy następnym uruchomieniu</string>
     <string name="copy_caption">Kopiuj podpis</string>
     <string name="copy_reply">Kopiuj odpowiedź</string>
 </resources>
