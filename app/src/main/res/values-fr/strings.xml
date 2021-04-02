@@ -461,6 +461,10 @@
     <string name="delete_unsuccessful">Suppression non réussie</string>
     <string name="crash_report_subject">Rapport d\'erreur de Barinsta</string>
     <string name="crash_report_title">Sélectionnez une application de messagerie pour envoyer les journaux d\'erreurs</string>
+    <string name="tab_order">Screen order</string>
+    <string name="other_tabs">Other tabs</string>
+    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
+    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
     <string name="copy_caption">Copie de la légende</string>
     <string name="copy_reply">Copie de la réponse</string>
 </resources>
