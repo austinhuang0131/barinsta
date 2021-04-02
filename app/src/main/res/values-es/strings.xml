@@ -461,12 +461,12 @@
     <string name="delete_unsuccessful">Eliminación fallida</string>
     <string name="crash_report_subject">Informe de fallos de Barinsta</string>
     <string name="crash_report_title">Seleccione una aplicación de correo electrónico para enviar registros de errores</string>
-    <string name="skip_update">Skip this update</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
-    <string name="tab_order">Screen order</string>
-    <string name="other_tabs">Other tabs</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
-    <string name="copy_caption">Copy caption</string>
+    <string name="skip_update">Omitir esta actualización</string>
+    <string name="on_latest_version">Ya tienes la última versión</string>
+    <string name="tab_order">Orden de pantalla</string>
+    <string name="other_tabs">Otras pestañas</string>
+    <string name="tab_order_start_next_launch">El orden de la pestaña se reflejará en el próximo lanzamiento</string>
+    <string name="dm_remove_warning">Si se guarda, todas las funcionalidades relacionadas con MDs se desactivarán en el próximo lanzamiento</string>
+    <string name="copy_caption">Copiar título</string>
     <string name="copy_reply">Copiar respuesta</string>
 </resources>
