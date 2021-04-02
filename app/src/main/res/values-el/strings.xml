@@ -461,6 +461,8 @@
     <string name="delete_unsuccessful">Η διαγραφή απέτυχε</string>
     <string name="crash_report_subject">Αναφορά Κατάρρευσης Barinsta</string>
     <string name="crash_report_title">Επιλέξτε μια εφαρμογή ηλ. ταχυδρομείου για αποστολή αρχείων καταγραφής κατάρρευσης</string>
+    <string name="skip_update">Skip this update</string>
+    <string name="on_latest_version">You\'re already on the latest version</string>
     <string name="tab_order">Screen order</string>
     <string name="other_tabs">Other tabs</string>
     <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
