@@ -25,6 +25,7 @@
     <string name="download_user_folder">Unduh kiriman ke folder nama pengguna</string>
     <string name="mark_as_seen_setting">Tandai cerita dibaca setelah melihat</string>
     <string name="mark_as_seen_setting_summary">Pembuat cerita akan tahu Anda melihatnya</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Tandai DM dibaca setelah melihat</string>
     <string name="dm_mark_as_seen_setting_summary">Peserta lain akan tahu Anda melihatnya</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
