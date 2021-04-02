@@ -25,6 +25,7 @@
     <string name="download_user_folder">ଡାଉନଲୋଡ ପୋଷ୍ଟକୁ ବ୍ୟବହାରକାରୀଙ୍କ ନାମରେ ହୋଇଥିବା ସ୍ଥାନ ରେ ରଖ</string>
     <string name="mark_as_seen_setting">କାହାଣୀଗୁଡିକ ଦେଖିବା ପରେ \'ଦେଖାଗଲା\' ଚିହ୍ନିତ କରନ୍ତୁ |</string>
     <string name="mark_as_seen_setting_summary">କାହାଣୀ ପ୍ରେରକ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">ବାର୍ତା ଦେଖିବା ପରେ \'ଦେଖାଗଲା\' ଚିହ୍ନିତ କରନ୍ତୁ |</string>
     <string name="dm_mark_as_seen_setting_summary">ଅନ୍ୟ ସଦସ୍ୟମାନେ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ।</string>
     <string name="activity_setting">କାର୍ଯ୍ୟକଳାପ ସୂଚନା ଦେଖାନ୍ତୁ</string>
