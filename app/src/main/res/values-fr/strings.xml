@@ -25,7 +25,7 @@
     <string name="download_user_folder">Télécharger les messages dans les dossiers des noms d\'utilisateurs</string>
     <string name="mark_as_seen_setting">Marquer les stories comme vues après consultation</string>
     <string name="mark_as_seen_setting_summary">L\'auteur de la story saura que vous l\'avez vue</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Masquer les stories en sourdine du flux</string>
     <string name="dm_mark_as_seen_setting">Marquer les messages privés comme vus après consultation</string>
     <string name="dm_mark_as_seen_setting_summary">Les autres utilisateurs saurons que vous l\'avez vu</string>
     <string name="activity_setting">Activer les notifications d\'activités</string>
@@ -462,12 +462,12 @@
     <string name="delete_unsuccessful">Suppression non réussie</string>
     <string name="crash_report_subject">Rapport d\'erreur de Barinsta</string>
     <string name="crash_report_title">Sélectionnez une application de messagerie pour envoyer les journaux d\'erreurs</string>
-    <string name="skip_update">Skip this update</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
-    <string name="tab_order">Screen order</string>
-    <string name="other_tabs">Other tabs</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
+    <string name="skip_update">Ignorer cette mise à jour</string>
+    <string name="on_latest_version">Vous avez déjà la dernière version</string>
+    <string name="tab_order">Ordre d\'écran</string>
+    <string name="other_tabs">Autres onglets</string>
+    <string name="tab_order_start_next_launch">L\'ordre des onglets sera reflété au prochain lancement</string>
+    <string name="dm_remove_warning">Si enregistré, toutes les fonctionnalités liées aux DM seront désactivées au prochain lancement</string>
     <string name="copy_caption">Copie de la légende</string>
     <string name="copy_reply">Copie de la réponse</string>
 </resources>
