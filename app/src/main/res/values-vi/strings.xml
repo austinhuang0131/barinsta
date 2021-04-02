@@ -25,6 +25,7 @@
     <string name="download_user_folder">Tải bài viết xuống theo thư mục tên người dùng trong Downloads</string>
     <string name="mark_as_seen_setting">Đánh dấu story là đã xem sau khi xem</string>
     <string name="mark_as_seen_setting_summary">Người đăng story sẽ biết bạn đã xem nó</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Đánh dấu DM là đã xem sau khi xem</string>
     <string name="dm_mark_as_seen_setting_summary">Những thành viên khác sẽ biết bạn đã xem nó</string>
     <string name="activity_setting">Kích hoạt thông báo hoạt động</string>
