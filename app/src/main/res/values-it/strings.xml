@@ -25,6 +25,7 @@
     <string name="download_user_folder">Scarica i post nelle cartelle del nome utente</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo la visualizzazione</string>
     <string name="mark_as_seen_setting_summary">L\'autore della storia saprà che l\'hai visualizzata</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Segna il DM come visto dopo la visualizzazione</string>
     <string name="dm_mark_as_seen_setting_summary">Altri membri sapranno che lo hai visualizzato</string>
     <string name="activity_setting">Abilita notifiche attività</string>
