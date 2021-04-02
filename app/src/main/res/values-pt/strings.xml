@@ -25,6 +25,7 @@
     <string name="download_user_folder">Baixar publicações para pastas com o nome de usuário</string>
     <string name="mark_as_seen_setting">Marcar stories como vistos após a visualização</string>
     <string name="mark_as_seen_setting_summary">O autor do story saberá que você viu</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Marcar DM como vista após a visualização</string>
     <string name="dm_mark_as_seen_setting_summary">Outros membros saberão que você viu</string>
     <string name="activity_setting">Ativar notificações de atividade</string>
