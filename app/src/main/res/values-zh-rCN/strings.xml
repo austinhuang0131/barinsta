@@ -25,6 +25,7 @@
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
     <string name="mark_as_seen_setting">查看快拍后将其标记为已读</string>
     <string name="mark_as_seen_setting_summary">快拍作者会知道您已看过</string>
+    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">查看私信后将其标记为已读</string>
     <string name="dm_mark_as_seen_setting_summary">其他成员会知道你看过了</string>
     <string name="activity_setting">启用活动通知</string>
