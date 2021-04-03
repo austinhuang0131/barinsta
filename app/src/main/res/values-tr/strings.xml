@@ -23,6 +23,7 @@
     <string name="update_check">Güncellemeleri başlangıçta kontrol et</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">İndirmeleri kullanıcı adından oluşan bir alt klasörün içine yap</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Hikayeleri gördükten sonra görüldü olarak işaretle</string>
     <string name="mark_as_seen_setting_summary">Hikayeyi paylaşan gördüğünüzü bilecek</string>
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
