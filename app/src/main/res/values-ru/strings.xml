@@ -23,6 +23,7 @@
     <string name="update_check">Проверять наличие обновлений при запуске</string>
     <string name="flag_secure">Блокировать скриншоты &amp; превью приложения</string>
     <string name="download_user_folder">Скачать публикации в папки с именем пользователя</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Отметить истории как увиденные после просмотра</string>
     <string name="mark_as_seen_setting_summary">Автор истории узнает, что вы просмотрели её</string>
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
