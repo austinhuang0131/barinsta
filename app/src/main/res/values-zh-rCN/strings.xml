@@ -453,8 +453,16 @@
     <string name="removed_keywords">已移除关键词: %s 至过滤列表</string>
     <string name="marked_as_seen">已标记为已读</string>
     <string name="delete_unsuccessful">删除失败</string>
+    <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
+    <string name="error">Error</string>
+    <string name="account_logged_out">This account has been logged out.</string>
+    <string name="login_required">Login required!</string>
+    <string name="sentry_block">Sentry block.</string>
+    <string name="inactive_user">User is inactive!</string>
     <string name="crash_report_subject">Barinsta 崩溃报告</string>
     <string name="crash_report_title">选择一个电子邮件应用来发送崩溃日志</string>
+    <string name="not_found">Not found!</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again.</string>
     <string name="skip_update">跳过本次更新</string>
     <string name="on_latest_version">您现在安装的是最新版本</string>
     <string name="tab_order">页面顺序</string>
