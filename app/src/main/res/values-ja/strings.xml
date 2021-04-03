@@ -145,7 +145,7 @@
     <string name="view_pfp">プロフィール画像を表示</string>
     <string name="dms_inbox_raven_message_unknown">Unsupported message type</string>
     <string name="dms_inbox_unsend">メッセージの送信を取り消す</string>
-    <string name="dms_inbox_giphy">View on GIPHY</string>
+    <string name="dms_inbox_giphy">GIPHYで見る</string>
     <string name="dms_inbox_shared_post">%s shared a post by @%s</string>
     <string name="dms_inbox_shared_image">%s shared an image</string>
     <string name="dms_inbox_shared_video">%s shared a video</string>
@@ -339,11 +339,11 @@
     <string name="brightness">Brightness</string>
     <string name="contrast">Contrast</string>
     <string name="vibrance">Vibrance</string>
-    <string name="saturation">Saturation</string>
-    <string name="sharpen">Sharpen</string>
-    <string name="exposure">Exposure</string>
-    <string name="center">Center</string>
-    <string name="color">Color</string>
+    <string name="saturation">彩度</string>
+    <string name="sharpen">シャープ</string>
+    <string name="exposure">露出</string>
+    <string name="center">中央</string>
+    <string name="color">色</string>
     <string name="start">Start</string>
     <string name="end">End</string>
     <string name="bilateral_blur">Bilateral Blur</string>
@@ -352,10 +352,10 @@
     <string name="sepia">セピア</string>
     <string name="clarendon">Clarendon</string>
     <string name="one977">1977</string>
-    <string name="aden">Aden</string>
+    <string name="aden">アデン</string>
     <string name="reset">リセット</string>
     <string name="crop">トリミング</string>
-    <string name="normal">Normal</string>
+    <string name="normal">ノーマル</string>
     <plurals name="likes_count">
         <item quantity="other">%d いいね！</item>
     </plurals>
@@ -363,7 +363,7 @@
         <item quantity="other">%d コメント</item>
     </plurals>
     <plurals name="views_count">
-        <item quantity="other">%d views</item>
+        <item quantity="other">%d ビュー</item>
     </plurals>
     <plurals name="stories_count">
         <item quantity="other">%s ストーリー</item>
@@ -426,7 +426,7 @@
     <string name="dms_action_end_question">End chat?</string>
     <string name="dms_action_end_description">All members will be removed from the group. They will still be able to view the chat history.</string>
     <string name="pending_requests">Pending Requests</string>
-    <string name="accept_request_from_user">Accept request from %1s (%2s)?</string>
+    <string name="accept_request_from_user">%1s (%2s) からのリクエストを承認しますか？</string>
     <string name="decline">Decline</string>
     <string name="accept">Accept</string>
     <string name="you">You</string>
