@@ -150,7 +150,7 @@ dependencies {
 
     implementation 'com.facebook.fresco:fresco:2.3.0'
     implementation 'com.facebook.fresco:animated-webp:2.3.0'
-    implementation 'com.facebook.fresco:webpsupport:2.3.0'
+    implementation 'com.facebook.fresco:webpsupport:2.4.0'
 
     implementation 'com.squareup.retrofit2:retrofit:2.9.0'
     implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
