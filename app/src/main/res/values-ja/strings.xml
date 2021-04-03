@@ -23,6 +23,7 @@
     <string name="update_check">起動時にアップデートを確認</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">ユーザ名のフォルダに投稿をダウンロード</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">ストーリーズを表示後に既読にする</string>
     <string name="mark_as_seen_setting_summary">ストーリーの作成者は、あなたが閲覧したことを知ることができます。</string>
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
