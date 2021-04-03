@@ -23,7 +23,7 @@
     <string name="update_check">Buscar actualizaciones al inicio</string>
     <string name="flag_secure">Bloquea capturas de pantalla &amp; vista previa de aplicaciones</string>
     <string name="download_user_folder">Usar subcarpetas con el nombre de usuario</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">Añadir nombre de usuario al inicio del nombre del archivo</string>
     <string name="mark_as_seen_setting">Marcar historias como vistas después de verlas</string>
     <string name="mark_as_seen_setting_summary">El autor de la historia sabrá que lo has visto</string>
     <string name="hide_muted_reels_setting">Ocultar historias silenciadas del feed</string>
