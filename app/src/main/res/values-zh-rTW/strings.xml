@@ -23,6 +23,7 @@
     <string name="update_check">啟動時檢查更新</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">將貼文下載到用戶名資料夾</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">檢視完限時動態後標記為已讀</string>
     <string name="mark_as_seen_setting_summary">限時動態的作者會知道您已查看了此限時動態</string>
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
