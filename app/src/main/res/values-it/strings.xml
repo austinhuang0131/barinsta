@@ -23,7 +23,7 @@
     <string name="update_check">Verifica per aggiornamenti all\'avvio</string>
     <string name="flag_secure">Blocca screenshot &amp; anteprima app</string>
     <string name="download_user_folder">Scarica i post nelle cartelle del nome utente</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">Anteponi Nome Utente al Nome del File</string>
     <string name="mark_as_seen_setting">Segna le storie come viste dopo la visualizzazione</string>
     <string name="mark_as_seen_setting_summary">L\'autore della storia saprà che l\'hai visualizzata</string>
     <string name="hide_muted_reels_setting">Nascondi storie silenziate dal feed</string>
