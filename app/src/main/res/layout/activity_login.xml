@@ -49,6 +49,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="Paste login link" />
+            android:text="@string/paste_login_link" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </LinearLayout>

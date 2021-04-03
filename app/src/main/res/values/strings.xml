@@ -486,4 +486,5 @@
     <string name="copy_caption">Copy caption</string>
     <string name="copy_reply">Copy reply</string>
     <string name="login_invalid_url">Please copy a valid login link</string>
+    <string name="paste_login_link">Paste login link</string>
 </resources>
