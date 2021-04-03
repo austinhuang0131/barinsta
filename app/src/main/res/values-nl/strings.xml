@@ -23,6 +23,7 @@
     <string name="update_check">Controleer op updates bij het opstarten</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Download berichten naar gebruikersnaam mappen</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Markeer verhalen als gelezen na bekijken</string>
     <string name="mark_as_seen_setting_summary">Verhaalmaker zal het weten als je het bekeken hebt</string>
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
