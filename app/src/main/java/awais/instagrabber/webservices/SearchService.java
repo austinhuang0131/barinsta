@@ -5,7 +5,6 @@ import com.google.common.collect.ImmutableMap;
 import awais.instagrabber.repositories.SearchRepository;
 import awais.instagrabber.repositories.responses.search.SearchResponse;
 import retrofit2.Call;
-import retrofit2.Retrofit;
 
 public class SearchService extends BaseService {
     private static final String TAG = "LocationService";
@@ -15,10 +14,9 @@ public class SearchService extends BaseService {
     private static SearchService instance;
 
     private SearchService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://www.instagram.com")
-                .build();
-        repository = retrofit.create(SearchRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofitWeb()
+                                    .create(SearchRepository.class);
     }
 
     public static SearchService getInstance() {
@@ -38,8 +36,8 @@ public class SearchService extends BaseService {
         builder.put("context", context);
         builder.put("count", "50");
         return repository.search(isLoggedIn
-                ? "https://i.instagram.com/api/v1/fbsearch/topsearch_flat/"
-                : "https://www.instagram.com/web/search/topsearch/",
-                builder.build());
+                                 ? "https://i.instagram.com/api/v1/fbsearch/topsearch_flat/"
+                                 : "https://www.instagram.com/web/search/topsearch/",
+                                 builder.build());
     }
 }

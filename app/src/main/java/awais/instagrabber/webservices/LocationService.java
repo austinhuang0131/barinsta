@@ -13,7 +13,6 @@ import awais.instagrabber.utils.TextUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class LocationService extends BaseService {
     private static final String TAG = "LocationService";
@@ -23,10 +22,9 @@ public class LocationService extends BaseService {
     private static LocationService instance;
 
     private LocationService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(LocationRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(LocationRepository.class);
     }
 
     public static LocationService getInstance() {

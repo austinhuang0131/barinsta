@@ -12,7 +12,6 @@ import awais.instagrabber.utils.TextUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class DiscoverService extends BaseService {
 
@@ -23,10 +22,9 @@ public class DiscoverService extends BaseService {
     private static DiscoverService instance;
 
     private DiscoverService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(DiscoverRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(DiscoverRepository.class);
     }
 
     public static DiscoverService getInstance() {

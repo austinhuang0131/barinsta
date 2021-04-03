@@ -29,7 +29,6 @@ import awais.instagrabber.utils.TextUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class GraphQLService extends BaseService {
     private static final String TAG = "GraphQLService";
@@ -40,10 +39,9 @@ public class GraphQLService extends BaseService {
     private static GraphQLService instance;
 
     private GraphQLService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://www.instagram.com")
-                .build();
-        repository = retrofit.create(GraphQLRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofitWeb()
+                                    .create(GraphQLRepository.class);
     }
 
     public static GraphQLService getInstance() {

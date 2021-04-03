@@ -32,7 +32,6 @@ import awais.instagrabber.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class StoriesService extends BaseService {
     private static final String TAG = "StoriesService";
@@ -50,10 +49,9 @@ public class StoriesService extends BaseService {
         this.csrfToken = csrfToken;
         this.userId = userId;
         this.deviceUuid = deviceUuid;
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(StoriesRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(StoriesRepository.class);
     }
 
     public String getCsrfToken() {

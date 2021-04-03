@@ -114,6 +114,7 @@ public final class Constants {
     public static final int SHOW_ACTIVITY_REQUEST_CODE = 1738;
     public static final int SHOW_DM_THREAD = 2000;
     public static final int DM_SYNC_SERVICE_REQUEST_CODE = 3000;
+    public static final int GLOBAL_NETWORK_ERROR_DIALOG_REQUEST_CODE = 7777;
 
     public static final String ACTION_SHOW_ACTIVITY = "show_activity";
     public static final String ACTION_SHOW_DM_THREAD = "show_dm_thread";

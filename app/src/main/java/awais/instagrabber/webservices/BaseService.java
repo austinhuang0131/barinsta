@@ -1,49 +1,7 @@
 package awais.instagrabber.webservices;
 
-import com.google.gson.FieldNamingPolicy;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-
-import java.io.File;
-
-import awais.instagrabber.BuildConfig;
-import awais.instagrabber.repositories.responses.Caption;
-import awais.instagrabber.utils.Utils;
-import okhttp3.Cache;
-import okhttp3.OkHttpClient;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.scalars.ScalarsConverterFactory;
-
 public abstract class BaseService {
     private static final String TAG = "BaseService";
-
-    private Retrofit.Builder builder;
-    private final int cacheSize = 10 * 1024 * 1024; // 10 MB
-    private final Cache cache = new Cache(new File(Utils.cacheDir), cacheSize);
-
-    Retrofit.Builder getRetrofitBuilder() {
-        if (builder == null) {
-            final OkHttpClient.Builder clientBuilder = new OkHttpClient.Builder()
-                    .addInterceptor(new AddCookiesInterceptor())
-                    .followRedirects(false)
-                    .followSslRedirects(false)
-                    .cache(cache);
-            if (BuildConfig.DEBUG) {
-                // clientBuilder.addInterceptor(new LoggingInterceptor());
-            }
-            final Gson gson = new GsonBuilder()
-                    .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)
-                    .registerTypeAdapter(Caption.class, new Caption.CaptionDeserializer())
-                    .setLenient()
-                    .create();
-            builder = new Retrofit.Builder()
-                    .addConverterFactory(ScalarsConverterFactory.create())
-                    .addConverterFactory(GsonConverterFactory.create(gson))
-                    .client(clientBuilder.build());
-        }
-        return builder;
-    }
 
     // protected String userBreadcrumb(final int size) {
     //     final long term = (random(2, 4) * 1000) + size + (random(15, 21) * 1000);

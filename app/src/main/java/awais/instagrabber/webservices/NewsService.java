@@ -22,7 +22,6 @@ import awais.instagrabber.utils.Constants;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class NewsService extends BaseService {
     private static final String TAG = "NewsService";
@@ -32,10 +31,9 @@ public class NewsService extends BaseService {
     private static NewsService instance;
 
     private NewsService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(NewsRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(NewsRepository.class);
     }
 
     public static NewsService getInstance() {
@@ -122,7 +120,8 @@ public class NewsService extends BaseService {
                     aymlUsers.addAll(oldSuggestions);
                 }
 
-                final List<Notification> newsItems = aymlUsers.stream()
+                final List<Notification> newsItems = aymlUsers
+                        .stream()
                         .map(i -> {
                             final User u = i.getUser();
                             return new Notification(
@@ -164,7 +163,9 @@ public class NewsService extends BaseService {
                     return;
                 }
 
-                final List<Notification> newsItems = body.getUsers().stream()
+                final List<Notification> newsItems = body
+                        .getUsers()
+                        .stream()
                         .map(u -> {
                             return new Notification(
                                     new NotificationArgs(

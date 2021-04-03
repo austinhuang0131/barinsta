@@ -1,4 +1,4 @@
-package awais.instagrabber.webservices;
+package awais.instagrabber.webservices.interceptors;
 
 import androidx.annotation.NonNull;
 

@@ -41,7 +41,6 @@ import awais.instagrabber.repositories.responses.giphy.GiphyGif;
 import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
 import retrofit2.Call;
-import retrofit2.Retrofit;
 
 public class DirectMessagesService extends BaseService {
     private static final String TAG = "DiscoverService";
@@ -59,10 +58,9 @@ public class DirectMessagesService extends BaseService {
         this.csrfToken = csrfToken;
         this.userId = userId;
         this.deviceUuid = deviceUuid;
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(DirectMessagesRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(DirectMessagesRepository.class);
     }
 
     public String getCsrfToken() {
