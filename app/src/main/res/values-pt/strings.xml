@@ -23,10 +23,10 @@
     <string name="update_check">Verificar se há atualizações ao iniciar</string>
     <string name="flag_secure">Bloquear capturas de tela e a pré-visualização do aplicativo</string>
     <string name="download_user_folder">Baixar publicações para pastas com o nome de usuário</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">Adicionar Nome de usuário ao Nome do arquivo</string>
     <string name="mark_as_seen_setting">Marcar stories como vistos após a visualização</string>
     <string name="mark_as_seen_setting_summary">O autor do story saberá que você viu</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Esconder stories silenciados do feed</string>
     <string name="dm_mark_as_seen_setting">Marcar DM como vista após a visualização</string>
     <string name="dm_mark_as_seen_setting_summary">Outros membros saberão que você viu</string>
     <string name="activity_setting">Ativar notificações de atividade</string>
@@ -463,12 +463,12 @@
     <string name="delete_unsuccessful">Falha ao excluir</string>
     <string name="crash_report_subject">Relatório de Travamento do Barinsta</string>
     <string name="crash_report_title">Selecione um aplicativo de e-mail para enviar os registros de travamento</string>
-    <string name="skip_update">Skip this update</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
-    <string name="tab_order">Screen order</string>
-    <string name="other_tabs">Other tabs</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
+    <string name="skip_update">Pular esta atualização</string>
+    <string name="on_latest_version">Você já está na versão mais recente</string>
+    <string name="tab_order">Ordem da tela</string>
+    <string name="other_tabs">Outras abas</string>
+    <string name="tab_order_start_next_launch">A ordem das abas será refletida no próximo início</string>
+    <string name="dm_remove_warning">Se salvo, todos os recursos relacionados a DM serão desativados no próximo início</string>
     <string name="copy_caption">Copiar legenda</string>
     <string name="copy_reply">Copiar resposta</string>
 </resources>
