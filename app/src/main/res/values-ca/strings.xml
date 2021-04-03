@@ -23,6 +23,7 @@
     <string name="update_check">Cerca actualitzacions a l\'inici</string>
     <string name="flag_secure">Bloca les captures de pantalla &amp; previsualització de l\'aplicació</string>
     <string name="download_user_folder">Descarrega les publicacions a carpetes de nom d\'usuari</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Marca les històries com a vistes després de visualitzar-es</string>
     <string name="mark_as_seen_setting_summary">L\'autor de la història sabrà que l\'has vista</string>
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
