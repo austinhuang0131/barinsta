@@ -485,4 +485,5 @@
     <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
     <string name="copy_caption">Copy caption</string>
     <string name="copy_reply">Copy reply</string>
+    <string name="login_invalid_url">Please copy a valid login link</string>
 </resources>

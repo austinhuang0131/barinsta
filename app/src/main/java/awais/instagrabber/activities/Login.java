@@ -1,6 +1,9 @@
 package awais.instagrabber.activities;
 
 import android.annotation.SuppressLint;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Build;
@@ -9,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
+import android.webkit.URLUtil;
 import android.webkit.WebChromeClient;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -23,6 +27,8 @@ import awais.instagrabber.databinding.ActivityLoginBinding;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.TextUtils;
+
+import static android.content.ClipDescription.MIMETYPE_TEXT_PLAIN;
 
 public final class Login extends BaseLanguageActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
     private final WebViewClient webViewClient = new WebViewClient() {
@@ -68,12 +74,32 @@ public final class Login extends BaseLanguageActivity implements View.OnClickLis
         loginBinding.desktopMode.setOnCheckedChangeListener(this);
         loginBinding.cookies.setOnClickListener(this);
         loginBinding.refresh.setOnClickListener(this);
+        loginBinding.pasteLoginLink.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(final View v) {
         if (v == loginBinding.refresh) {
             loginBinding.webView.loadUrl("https://instagram.com/");
+            return;
+        }
+        if (v == loginBinding.pasteLoginLink) {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            if (clipboard.hasPrimaryClip() && clipboard.getPrimaryClip() != null && clipboard.getPrimaryClipDescription().hasMimeType(MIMETYPE_TEXT_PLAIN)) {
+                ClipData.Item item = clipboard.getPrimaryClip().getItemAt(0);
+                if (item != null) {
+                    CharSequence loginLink = item.getText();
+                    if (!TextUtils.isEmpty(loginLink)) {
+                        String loginLinkString = loginLink.toString();
+                        if (URLUtil.isValidUrl(loginLinkString)) {
+                            loginBinding.webView.loadUrl(loginLinkString);
+                            return;
+                        }
+                    }
+                }
+            }
+            Toast.makeText(this, getString(R.string.login_invalid_url), Toast.LENGTH_SHORT).show();
             return;
         }
         if (v == loginBinding.cookies) {

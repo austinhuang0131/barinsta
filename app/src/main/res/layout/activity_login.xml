@@ -41,5 +41,14 @@
             android:layout_weight="1"
             android:gravity="center"
             android:text="@string/desktop_2fa" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/paste_login_link"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Paste login link" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </LinearLayout>
