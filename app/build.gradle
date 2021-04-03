@@ -148,7 +148,7 @@ dependencies {
 
     implementation 'me.austinhuang:AutoLinkTextViewV2:-SNAPSHOT'
 
-    implementation 'com.facebook.fresco:fresco:2.3.0'
+    implementation 'com.facebook.fresco:fresco:2.4.0'
     implementation 'com.facebook.fresco:animated-webp:2.3.0'
     implementation 'com.facebook.fresco:webpsupport:2.3.0'
 
