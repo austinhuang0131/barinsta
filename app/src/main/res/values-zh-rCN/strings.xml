@@ -23,7 +23,7 @@
     <string name="update_check">启动时检查更新</string>
     <string name="flag_secure">屏蔽截图及应用预览</string>
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">在文件名前添加用户名</string>
     <string name="mark_as_seen_setting">查看快拍后将其标记为已读</string>
     <string name="mark_as_seen_setting_summary">快拍作者会知道您已看过</string>
     <string name="hide_muted_reels_setting">动态隐藏静音快拍</string>
