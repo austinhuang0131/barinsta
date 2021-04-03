@@ -461,8 +461,16 @@
     <string name="removed_keywords">Αφαιρέθηκε λέξη-κλειδί: %s στον κατάλογο φιλτραρίσματος</string>
     <string name="marked_as_seen">Επισήμανθηκε ως αναγνωσμένο</string>
     <string name="delete_unsuccessful">Η διαγραφή απέτυχε</string>
+    <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
+    <string name="error">Error</string>
+    <string name="account_logged_out">This account has been logged out.</string>
+    <string name="login_required">Login required!</string>
+    <string name="sentry_block">Sentry block.</string>
+    <string name="inactive_user">User is inactive!</string>
     <string name="crash_report_subject">Αναφορά Κατάρρευσης Barinsta</string>
     <string name="crash_report_title">Επιλέξτε μια εφαρμογή ηλ. ταχυδρομείου για αποστολή αρχείων καταγραφής κατάρρευσης</string>
+    <string name="not_found">Not found!</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again.</string>
     <string name="skip_update">Skip this update</string>
     <string name="on_latest_version">You\'re already on the latest version</string>
     <string name="tab_order">Screen order</string>
