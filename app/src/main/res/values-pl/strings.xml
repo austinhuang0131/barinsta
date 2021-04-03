@@ -23,6 +23,7 @@
     <string name="update_check">Sprawdź aktualizacje przy starcie</string>
     <string name="flag_secure">Blokuj zrzuty ekranu &amp; podgląd aplikacji</string>
     <string name="download_user_folder">Pobierz posty do folderów o nazwie użytkownika</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Oznacz relacje jako widoczne po wyświetleniu</string>
     <string name="mark_as_seen_setting_summary">Autor relacji będzie widział, że to wyświetliłeś</string>
     <string name="hide_muted_reels_setting">Ukryj wyciszone relacje z kanału</string>
