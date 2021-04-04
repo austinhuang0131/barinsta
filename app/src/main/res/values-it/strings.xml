@@ -461,8 +461,8 @@
     <string name="removed_keywords">Parola chiave rimossa: %s dalla lista filtri</string>
     <string name="marked_as_seen">Segnato come visto</string>
     <string name="delete_unsuccessful">Eliminazione non riuscita</string>
-    <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
-    <string name="error">Error</string>
+    <string name="throttle_error">Limitato da Instagram a causa delle troppe richieste API. Aspetta un po\' prima di riprovare.</string>
+    <string name="error">Errore</string>
     <string name="account_logged_out">This account has been logged out.</string>
     <string name="login_required">Login required!</string>
     <string name="sentry_block">Sentry block.</string>
