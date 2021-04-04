@@ -461,7 +461,7 @@
     <string name="removed_keywords">Mot-clé supprimé : %s de la liste de filtres</string>
     <string name="marked_as_seen">Marqué comme vu</string>
     <string name="delete_unsuccessful">Suppression non réussie</string>
-    <string name="throttle_error">Propulsé par Instagram à cause d\'un trop grand nombre de requêtes API. Attendez un certain temps avant de réessayer.</string>
+    <string name="throttle_error">Limité par Instagram en raison d\'un trop grand nombre de requêtes API. Attendez un certain temps avant de réessayer.</string>
     <string name="error">Erreur</string>
     <string name="account_logged_out">Ce compte a été déconnecté.</string>
     <string name="login_required">Connexion requise!</string>
