@@ -2,6 +2,9 @@ package awais.instagrabber.repositories.responses;
 
 import java.util.List;
 
+import awais.instagrabber.repositories.responses.notification.Notification;
+import awais.instagrabber.repositories.responses.notification.NotificationCounts;
+
 public class NewsInboxResponse {
     private final NotificationCounts counts;
     private final List<Notification> newStories;

@@ -37,6 +37,14 @@ public class StoriesPreferencesFragment extends BasePreferencesFragment {
         return preference;
     }
 
+    private Preference getHideMutedReelsPreference(@NonNull final Context context) {
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
+        preference.setKey(Constants.HIDE_MUTED_REELS);
+        preference.setTitle(R.string.hide_muted_reels_setting);
+        preference.setIconSpaceReserved(false);
+        return preference;
+    }
+
     private Preference getMarkStoriesSeenPreference(@NonNull final Context context) {
         final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
         preference.setKey(Constants.MARK_AS_SEEN);

@@ -18,7 +18,6 @@ import awais.instagrabber.adapters.DirectItemsAdapter.DirectItemCallback;
 import awais.instagrabber.databinding.LayoutDmBaseBinding;
 import awais.instagrabber.databinding.LayoutDmProfileBinding;
 import awais.instagrabber.models.enums.DirectItemType;
-import awais.instagrabber.repositories.responses.ImageVersions2;
 import awais.instagrabber.repositories.responses.Location;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.User;
@@ -97,7 +96,13 @@ public class DirectItemProfileViewHolder extends DirectItemViewHolder {
         if (profile == null) return;
         binding.profilePic.setImageURI(profile.getProfilePicUrl());
         binding.username.setText(profile.getUsername());
-        binding.fullName.setText(profile.getFullName());
+        final String fullName = profile.getFullName();
+        if (!TextUtils.isEmpty(fullName)) {
+            binding.fullName.setVisibility(View.VISIBLE);
+            binding.fullName.setText(fullName);
+        } else {
+            binding.fullName.setVisibility(View.GONE);
+        }
         binding.isVerified.setVisibility(profile.isVerified() ? View.VISIBLE : View.GONE);
         itemView.setOnClickListener(v -> openProfile(profile.getUsername()));
     }

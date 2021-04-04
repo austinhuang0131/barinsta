@@ -47,7 +47,7 @@ public class FavoriteDataSource {
     }
 
     public final void insertOrUpdateFavorite(@NonNull final Favorite favorite) {
-        if (favorite.getId() > 0) {
+        if (favorite.getId() != 0) {
             favoriteDao.updateFavorites(favorite);
             return;
         }

@@ -16,6 +16,9 @@
     <attr name="dmIncomingBgColor" format="reference" />
     <attr name="dmOutgoingBgColor" format="reference" />
     <attr name="dmDateHeaderBgColor" format="reference" />
+    <attr name="dmWaveformBgColor" format="reference" />
+    <attr name="dmWaveformProgressColor" format="reference" />
+    <attr name="dmInputTextColor" format="reference" />
 
     <declare-styleable name="RecordView">
         <attr name="slide_to_cancel_text" format="string" />
@@ -25,5 +28,10 @@
         <attr name="slide_to_cancel_bounds" format="dimension" />
         <attr name="slide_to_cancel_arrow_color" format="reference" />
         <attr name="counter_time_color" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="WaveformSeekBar">
+        <attr name="waveformBackgroundColor" format="reference" />
+        <attr name="waveformProgressColor" format="reference" />
     </declare-styleable>
 </resources>

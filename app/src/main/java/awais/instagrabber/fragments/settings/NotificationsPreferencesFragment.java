@@ -15,7 +15,7 @@ public class NotificationsPreferencesFragment extends BasePreferencesFragment {
         final Context context = getContext();
         if (context == null) return;
         screen.addPreference(getActivityNotificationsPreference(context));
-        screen.addPreference(getDMNotificationsPreference(context));
+        // screen.addPreference(getDMNotificationsPreference(context));
     }
 
     private Preference getActivityNotificationsPreference(@NonNull final Context context) {

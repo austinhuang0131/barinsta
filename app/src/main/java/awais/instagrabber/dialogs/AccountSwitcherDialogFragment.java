@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
 import java.util.Collections;
@@ -25,8 +24,10 @@ import awais.instagrabber.db.datasources.AccountDataSource;
 import awais.instagrabber.db.entities.Account;
 import awais.instagrabber.db.repositories.AccountRepository;
 import awais.instagrabber.db.repositories.RepositoryCallback;
+import awais.instagrabber.utils.AppExecutors;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
+import awais.instagrabber.utils.ProcessPhoenix;
 import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
 
@@ -55,9 +56,14 @@ public class AccountSwitcherDialogFragment extends DialogFragment {
         }
         CookieUtils.setupCookies(model.getCookie());
         settingsHelper.putString(Constants.COOKIE, model.getCookie());
-        final FragmentActivity activity = getActivity();
-        if (activity != null) activity.recreate();
-        dismiss();
+        // final FragmentActivity activity = getActivity();
+        // if (activity != null) activity.recreate();
+        // dismiss();
+        AppExecutors.getInstance().mainThread().execute(() -> {
+            final Context context = getContext();
+            if (context == null) return;
+            ProcessPhoenix.triggerRebirth(context);
+        }, 200);
     };
 
     private final AccountSwitcherAdapter.OnAccountLongClickListener accountLongClickListener = (model, isCurrent) -> {

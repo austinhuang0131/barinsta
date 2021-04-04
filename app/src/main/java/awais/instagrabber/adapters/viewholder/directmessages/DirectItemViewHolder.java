@@ -134,7 +134,7 @@ public abstract class DirectItemViewHolder extends RecyclerView.ViewHolder imple
             containerLayoutParams.setMarginStart(0);
             containerLayoutParams.setMarginEnd(0);
         }
-        if (itemType == DirectItemType.TEXT || itemType == DirectItemType.LINK) {
+        if (itemType == DirectItemType.TEXT || itemType == DirectItemType.LINK || itemType == DirectItemType.UNKNOWN) {
             binding.messageInfo.setPadding(0, 0, dmRadius, dmRadiusSmall);
         } else {
             if (showMessageInfo()) {
@@ -543,22 +543,13 @@ public abstract class DirectItemViewHolder extends RecyclerView.ViewHolder imple
         if (thread.getInputMode() != 1 && messageDirection == MessageDirection.OUTGOING) {
             builder.add(new DirectItemContextMenu.MenuItem(R.id.unsend, R.string.dms_inbox_unsend));
         }
-        final DirectItemType itemType = item.getItemType();
-        switch (itemType) {
-            case ANIMATED_MEDIA:
-                builder.add(new DirectItemContextMenu.MenuItem(R.id.detail, R.string.dms_inbox_giphy));
-                break;
-            case VOICE_MEDIA:
-                builder.add(new DirectItemContextMenu.MenuItem(R.id.detail, R.string.action_download));
-                break;
-        }
         final boolean showReactions = thread.getInputMode() != 1 && allowReaction();
         final ImmutableList<DirectItemContextMenu.MenuItem> menuItems = builder.build();
         if (!showReactions && menuItems.isEmpty()) return;
         final DirectItemContextMenu menu = new DirectItemContextMenu(itemView.getContext(), showReactions, menuItems);
         menu.setOnDismissListener(() -> setSelected(false));
         menu.setOnReactionClickListener(emoji -> callback.onReaction(item, emoji));
-        menu.setOnOptionSelectListener(itemId -> callback.onOptionSelect(item, itemId));
+        menu.setOnOptionSelectListener((itemId, cb) -> callback.onOptionSelect(item, itemId, cb));
         menu.show(itemView, location);
     }
 

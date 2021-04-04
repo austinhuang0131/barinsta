@@ -113,6 +113,7 @@
             android:paddingEnd="@dimen/dm_message_card_radius"
             android:paddingBottom="4dp"
             android:singleLine="true"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toTopOf="@id/chat_message_layout"
             app:layout_constraintEnd_toEndOf="@id/chat_message_layout"
             app:layout_constraintHorizontal_bias="0"

@@ -29,6 +29,7 @@ public class DownloadsPreferencesFragment extends BasePreferencesFragment {
         if (context == null) return;
         screen.addPreference(getDownloadUserFolderPreference(context));
         screen.addPreference(getSaveToCustomFolderPreference(context));
+        screen.addPreference(getPrependUsernameToFilenamePreference(context));
     }
 
     private Preference getDownloadUserFolderPreference(@NonNull final Context context) {
@@ -47,6 +48,14 @@ public class DownloadsPreferencesFragment extends BasePreferencesFragment {
                     resultCallback.onResult(file.getAbsolutePath());
                 })
                 .show(getParentFragmentManager(), null));
+    }
+
+    private Preference getPrependUsernameToFilenamePreference(@NonNull final Context context) {
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
+        preference.setKey(Constants.DOWNLOAD_PREPEND_USER_NAME);
+        preference.setTitle(R.string.download_prepend_username);
+        preference.setIconSpaceReserved(false);
+        return preference;
     }
 
     public static class SaveToCustomFolderPreference extends Preference {

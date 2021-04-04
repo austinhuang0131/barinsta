@@ -20,6 +20,9 @@
         <item name="actionBarTheme">@style/ThemeOverlay.MaterialComponents.ActionBar</item>
         <!--<item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Primary</item>-->
         <item name="materialAlertDialogTheme">@style/ThemeOverlay.MaterialComponents.MaterialAlertDialog.Light</item>
+        <item name="dmIncomingBgColor">@color/grey_600</item>
+        <item name="dmOutgoingBgColor">@color/deep_purple_400</item>
+        <item name="dmDateHeaderBgColor">@color/deep_purple_600</item>
     </style>
 
     <style name="AppTheme.Light.White" parent="AppTheme.Light">
@@ -39,6 +42,12 @@
         <item name="bottomNavigationStyle">@style/Widget.BottomNavigationView.Light.White</item>
         <item name="materialButtonStyle">@style/Widget.MaterialComponents.Button.Light.White</item>
         <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Light.White</item>
+        <item name="dmIncomingBgColor">@color/grey_600</item>
+        <item name="dmOutgoingBgColor">@color/deep_purple_400</item>
+        <item name="dmDateHeaderBgColor">@color/deep_purple_600</item>
+        <item name="dmWaveformBgColor">@color/grey_600</item>
+        <item name="dmWaveformProgressColor">@color/blue_800</item>
+        <item name="dmInputTextColor">@color/black</item>
     </style>
 
     <style name="AppTheme.Light.Barinsta" parent="AppTheme.Light">
@@ -55,6 +64,7 @@
         <item name="bottomNavigationStyle">@style/Widget.BottomNavigationView.Light.Barinsta</item>
         <item name="android:textColorPrimary">@color/barinstaPrimaryTextColor</item>
         <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Light.Barinsta</item>
+        <item name="dmInputTextColor">@color/black</item>
     </style>
 
     <style name="AppTheme.Light.Bibliogram" parent="AppTheme.Light">
@@ -70,6 +80,7 @@
         <item name="bottomNavigationStyle">@style/Widget.BottomNavigationView.Light.Barinsta</item>
         <item name="android:textColorPrimary">@color/bibliogramPrimaryTextColor</item>
         <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Light.Barinsta</item>
+        <item name="dmInputTextColor">@color/black</item>
     </style>
 
 
@@ -89,6 +100,9 @@
         <item name="android:windowLightNavigationBar" tools:ignore="NewApi">false</item>
         <item name="actionBarTheme">@style/ThemeOverlay.MaterialComponents.Dark.ActionBar</item>
         <!--<item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.Primary</item>-->
+        <item name="dmWaveformBgColor">@color/white</item>
+        <item name="dmWaveformProgressColor">@color/blue_800</item>
+        <item name="dmInputTextColor">@color/white</item>
     </style>
 
     <style name="AppTheme.Dark.Black" parent="AppTheme.Dark">

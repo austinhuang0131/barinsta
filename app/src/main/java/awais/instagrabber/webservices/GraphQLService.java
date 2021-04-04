@@ -19,6 +19,7 @@ import awais.instagrabber.repositories.GraphQLRepository;
 import awais.instagrabber.repositories.responses.FriendshipStatus;
 import awais.instagrabber.repositories.responses.GraphQLUserListFetchResponse;
 import awais.instagrabber.repositories.responses.Hashtag;
+import awais.instagrabber.repositories.responses.Location;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.PostsFetchResponse;
 import awais.instagrabber.repositories.responses.User;
@@ -28,7 +29,6 @@ import awais.instagrabber.utils.TextUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class GraphQLService extends BaseService {
     private static final String TAG = "GraphQLService";
@@ -39,10 +39,9 @@ public class GraphQLService extends BaseService {
     private static GraphQLService instance;
 
     private GraphQLService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://www.instagram.com")
-                .build();
-        repository = retrofit.create(GraphQLRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofitWeb()
+                                    .create(GraphQLRepository.class);
     }
 
     public static GraphQLService getInstance() {
@@ -394,9 +393,53 @@ public class GraphQLService extends BaseService {
                     callback.onSuccess(new Hashtag(
                             body.getString(Constants.EXTRAS_ID),
                             body.getString("name"),
-                            body.getString("profile_pic_url"),
                             timelineMedia.getLong("count"),
-                            body.optBoolean("is_following") ? FollowingType.FOLLOWING : FollowingType.NOT_FOLLOWING));
+                            body.optBoolean("is_following") ? FollowingType.FOLLOWING : FollowingType.NOT_FOLLOWING,
+                            null));
+                } catch (JSONException e) {
+                    Log.e(TAG, "onResponse", e);
+                    if (callback != null) {
+                        callback.onFailure(e);
+                    }
+                }
+            }
+
+            @Override
+            public void onFailure(@NonNull final Call<String> call, @NonNull final Throwable t) {
+                if (callback != null) {
+                    callback.onFailure(t);
+                }
+            }
+        });
+    }
+
+    public void fetchLocation(final long locationId,
+                              final ServiceCallback<Location> callback) {
+        final Call<String> request = repository.getLocation(locationId);
+        request.enqueue(new Callback<String>() {
+            @Override
+            public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {
+                final String rawBody = response.body();
+                if (rawBody == null) {
+                    Log.e(TAG, "Error occurred while fetching gql location of " + locationId);
+                    callback.onSuccess(null);
+                    return;
+                }
+                try {
+                    final JSONObject body = new JSONObject(rawBody)
+                            .getJSONObject("graphql")
+                            .getJSONObject(Constants.EXTRAS_LOCATION);
+                    final JSONObject timelineMedia = body.getJSONObject("edge_location_to_media");
+                    final JSONObject address = new JSONObject(body.getString("address_json"));
+                    callback.onSuccess(new Location(
+                            body.getLong(Constants.EXTRAS_ID),
+                            body.getString("slug"),
+                            body.getString("name"),
+                            address.optString("street_address"),
+                            address.optString("city_name"),
+                            body.optDouble("lng", 0d),
+                            body.optDouble("lat", 0d)
+                    ));
                 } catch (JSONException e) {
                     Log.e(TAG, "onResponse", e);
                     if (callback != null) {

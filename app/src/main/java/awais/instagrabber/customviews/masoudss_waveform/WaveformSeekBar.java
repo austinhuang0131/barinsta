@@ -1,6 +1,7 @@
 package awais.instagrabber.customviews.masoudss_waveform;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
@@ -50,8 +51,21 @@ public final class WaveformSeekBar extends View {
 
     public WaveformSeekBar(final Context context, @Nullable final AttributeSet attrs, final int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        this.waveBackgroundColor = context.getResources().getColor(R.color.white);
-        this.waveProgressColor = context.getResources().getColor(R.color.blue_800);
+        final TypedArray a = context.getTheme().obtainStyledAttributes(
+                attrs,
+                R.styleable.WaveformSeekBar,
+                0,
+                0);
+        final int backgroundColor;
+        final int progressColor;
+        try {
+            backgroundColor = a.getResourceId(R.styleable.WaveformSeekBar_waveformBackgroundColor, R.color.white);
+            progressColor = a.getResourceId(R.styleable.WaveformSeekBar_waveformProgressColor, R.color.blue_800);
+        } finally {
+            a.recycle();
+        }
+        this.waveBackgroundColor = context.getResources().getColor(backgroundColor);
+        this.waveProgressColor = context.getResources().getColor(progressColor);
     }
 
     private float getSampleMax() {

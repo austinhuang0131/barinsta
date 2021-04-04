@@ -9,16 +9,16 @@ public class Location implements Serializable {
     private final String name;
     private final String address;
     private final String city;
-    private final float lng;
-    private final float lat;
+    private final double lng;
+    private final double lat;
 
     public Location(final long pk,
                     final String shortName,
                     final String name,
                     final String address,
                     final String city,
-                    final float lng,
-                    final float lat) {
+                    final double lng,
+                    final double lat) {
         this.pk = pk;
         this.shortName = shortName;
         this.name = name;
@@ -48,13 +48,15 @@ public class Location implements Serializable {
         return city;
     }
 
-    public float getLng() {
+    public double getLng() {
         return lng;
     }
 
-    public float getLat() {
+    public double getLat() {
         return lat;
     }
+
+    public String getGeo() { return "geo:" + lat + "," + lng + "?z=17&q=" + lat + "," + lng + "(" + name + ")"; }
 
     @Override
     public boolean equals(final Object o) {
@@ -62,8 +64,8 @@ public class Location implements Serializable {
         if (o == null || getClass() != o.getClass()) return false;
         final Location location = (Location) o;
         return pk == location.pk &&
-                Float.compare(location.lng, lng) == 0 &&
-                Float.compare(location.lat, lat) == 0 &&
+                Double.compare(location.lng, lng) == 0 &&
+                Double.compare(location.lat, lat) == 0 &&
                 Objects.equals(shortName, location.shortName) &&
                 Objects.equals(name, location.name) &&
                 Objects.equals(address, location.address) &&

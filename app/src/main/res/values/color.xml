@@ -162,7 +162,7 @@
     <color name="barinstaColorSecondaryLight">#ffddac</color>
     <color name="barinstaColorSecondaryDark">#a17c4f</color>
     <color name="barinstaPrimaryTextColor">#616161</color>
-    <color name="barinstaSecondaryTextColor">@color/white</color>
+    <!-- <color name="barinstaSecondaryTextColor">@color/white</color> unused -->
 
     <!-- Bibliogram Theme colors -->
     <color name="bibliogramColorPrimary">#d63f44</color>
@@ -172,5 +172,5 @@
     <color name="bibliogramColorSecondaryLight">#fff4e8</color>
     <color name="bibliogramColorSecondaryDark">#8e2929</color>
     <color name="bibliogramPrimaryTextColor">#000000</color>
-    <color name="bibliogramSecondaryTextColor">@color/white</color>
+    <!-- <color name="bibliogramSecondaryTextColor">@color/white</color> unused -->
 </resources>

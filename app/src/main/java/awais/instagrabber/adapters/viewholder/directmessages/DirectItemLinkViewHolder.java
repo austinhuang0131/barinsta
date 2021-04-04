@@ -5,7 +5,13 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
+import com.google.common.collect.ImmutableList;
+
+import java.util.List;
+
+import awais.instagrabber.R;
 import awais.instagrabber.adapters.DirectItemsAdapter.DirectItemCallback;
+import awais.instagrabber.customviews.DirectItemContextMenu;
 import awais.instagrabber.databinding.LayoutDmBaseBinding;
 import awais.instagrabber.databinding.LayoutDmLinkBinding;
 import awais.instagrabber.repositories.responses.User;
@@ -14,6 +20,7 @@ import awais.instagrabber.repositories.responses.directmessages.DirectItemLink;
 import awais.instagrabber.repositories.responses.directmessages.DirectItemLinkContext;
 import awais.instagrabber.repositories.responses.directmessages.DirectThread;
 import awais.instagrabber.utils.TextUtils;
+import awais.instagrabber.utils.Utils;
 
 public class DirectItemLinkViewHolder extends DirectItemViewHolder {
 
@@ -79,5 +86,17 @@ public class DirectItemLinkViewHolder extends DirectItemViewHolder {
     @Override
     protected boolean showBackground() {
         return true;
+    }
+
+    @Override
+    protected List<DirectItemContextMenu.MenuItem> getLongClickOptions() {
+        return ImmutableList.of(
+                new DirectItemContextMenu.MenuItem(R.id.copy, R.string.copy, item -> {
+                    final DirectItemLink link = item.getLink();
+                    if (link == null || TextUtils.isEmpty(link.getText())) return null;
+                    Utils.copyText(itemView.getContext(), link.getText());
+                    return null;
+                })
+        );
     }
 }

@@ -1,5 +1,15 @@
 apply plugin: 'com.android.application'
 apply plugin: "androidx.navigation.safeargs"
+apply from: 'sentry.gradle'
+
+def getGitHash = { ->
+    def stdout = new ByteArrayOutputStream()
+    exec {
+        commandLine 'git', 'rev-parse', '--short', 'HEAD'
+        standardOutput = stdout
+    }
+    return stdout.toString().trim()
+}
 
 android {
     compileSdkVersion 29
@@ -48,8 +58,44 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
-}
 
+    flavorDimensions "repo"
+
+    productFlavors {
+        github {
+            dimension "repo"
+            // versionNameSuffix "-github" // appended in assemble task
+            buildConfigField("String", "dsn", SENTRY_DSN)
+            buildConfigField("boolean", "isPre", "false")
+        }
+
+        fdroid {
+            dimension "repo"
+            versionNameSuffix "-fdroid"
+            buildConfigField("boolean", "isPre", "false")
+        }
+    }
+
+    android.applicationVariants.all { variant ->
+        if (variant.flavorName != "github") return
+        variant.outputs.all { output ->
+            def builtType = variant.buildType.name
+            def versionName = variant.versionName
+            // def versionCode = variant.versionCode
+            def flavor = variant.flavorName
+
+            def suffix = "${versionName}-${flavor}_${builtType}" // eg. 19.1.0-github_debug or release
+            if (builtType.toString() == 'release' && project.hasProperty("pre")) {
+                buildConfigField("boolean", "isPre", "true")
+                // append latest commit short hash for pre-release
+                suffix = "${versionName}.${getGitHash()}-${flavor}" // eg. 19.1.0.b123456-github
+            }
+
+            output.versionNameOverride = suffix
+            outputFileName = "barinsta_${suffix}.apk"
+        }
+    }
+}
 
 configurations.all {
     resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
@@ -62,7 +108,7 @@ dependencies {
     def nav_version = '2.3.4'
     def exoplayer_version = '2.13.2'
 
-    implementation 'com.google.android.material:material:1.4.0-alpha01'
+    implementation 'com.google.android.material:material:1.4.0-alpha02'
 
     implementation "com.google.android.exoplayer:exoplayer-core:$exoplayer_version"
     implementation "com.google.android.exoplayer:exoplayer-dash:$exoplayer_version"
@@ -70,7 +116,7 @@ dependencies {
 
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.appcompat:appcompat-resources:$appcompat_version"
-    implementation "androidx.recyclerview:recyclerview:1.2.0-beta02"
+    implementation "androidx.recyclerview:recyclerview:1.2.0-rc01"
     implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0'
     implementation "androidx.viewpager2:viewpager2:1.0.0"
     implementation "androidx.navigation:navigation-fragment:$nav_version"
@@ -81,7 +127,7 @@ dependencies {
     implementation 'androidx.palette:palette:1.0.0'
     implementation "androidx.lifecycle:lifecycle-extensions:2.2.0"
 
-    implementation 'com.google.guava:guava:27.1-jre'
+    implementation 'com.google.guava:guava:27.0.1-android'
 
     // Room
     def room_version = "2.2.6"
@@ -90,7 +136,7 @@ dependencies {
     annotationProcessor "androidx.room:room-compiler:$room_version"
 
     // CameraX
-    def camerax_version = "1.1.0-alpha02"
+    def camerax_version = "1.1.0-alpha03"
     implementation "androidx.camera:camera-camera2:$camerax_version"
     implementation "androidx.camera:camera-lifecycle:$camerax_version"
     implementation "androidx.camera:camera-view:1.0.0-alpha22"
@@ -114,8 +160,9 @@ dependencies {
     implementation 'com.github.ammargitham:uCrop:2.3-native-beta-2'
     implementation 'com.github.ammargitham:android-gpuimage:2.1.1-beta4'
 
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.6'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
 
+    githubImplementation 'io.sentry:sentry-android:4.3.0'
 
     testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
 }

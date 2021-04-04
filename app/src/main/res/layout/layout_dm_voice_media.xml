@@ -66,10 +66,12 @@
         android:layout_height="54dp"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="4dp"
+        app:waveformBackgroundColor="?dmWaveformBgColor"
         app:layout_constraintBottom_toTopOf="@id/duration"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/play_wrapper"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:waveformProgressColor="?dmWaveformProgressColor" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/duration"

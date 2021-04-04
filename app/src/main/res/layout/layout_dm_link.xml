@@ -15,6 +15,7 @@
         android:paddingEnd="@dimen/dm_message_card_radius"
         android:paddingBottom="@dimen/dm_message_card_radius_small"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textColor="@color/white"
         tools:text="Some message" />
 
     <com.facebook.drawee.view.SimpleDraweeView
@@ -35,6 +36,7 @@
         android:paddingTop="@dimen/dm_message_card_radius_small"
         android:paddingEnd="@dimen/dm_message_card_radius"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textColor="@color/white"
         tools:text="Title of the website" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -46,6 +48,7 @@
         android:paddingStart="@dimen/dm_message_card_radius"
         android:paddingTop="@dimen/dm_message_card_radius_small"
         android:paddingEnd="@dimen/dm_message_card_radius"
+        android:textColor="@color/white"
         tools:text="Some summary of the website" />
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -59,5 +62,6 @@
         android:paddingEnd="@dimen/dm_message_card_radius"
         android:paddingBottom="@dimen/dm_message_card_radius_small"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:textColor="@color/white"
         tools:text="test.com" />
 </LinearLayout>

@@ -2,7 +2,7 @@ package awais.instagrabber.repositories;
 
 import java.util.Map;
 
-import awais.instagrabber.repositories.responses.FeedFetchResponse;
+import awais.instagrabber.repositories.responses.feed.FeedFetchResponse;
 import retrofit2.Call;
 import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;

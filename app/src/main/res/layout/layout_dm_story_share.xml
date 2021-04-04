@@ -41,5 +41,6 @@
         android:layout_gravity="start|fill_horizontal"
         android:padding="8dp"
         android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+        android:textColor="@color/white"
         tools:text="Some text " />
 </LinearLayout>

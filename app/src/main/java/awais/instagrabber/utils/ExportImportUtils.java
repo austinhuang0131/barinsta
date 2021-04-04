@@ -156,12 +156,21 @@ public final class ExportImportUtils {
                     query,
                     favoriteType,
                     favsObject.optString("s"),
-                    favoriteType == FavoriteType.HASHTAG ? null
-                                                         : favsObject.optString("pic_url"),
+                    favoriteType == FavoriteType.USER ? favsObject.optString("pic_url") : null,
                     new Date(favsObject.getLong("d")));
             // Log.d(TAG, "importJson: favoriteModel: " + favoriteModel);
-            FavoriteRepository.getInstance(FavoriteDataSource.getInstance(context))
-                              .insertOrUpdateFavorite(favorite, null);
+            final FavoriteRepository favRepo = FavoriteRepository.getInstance(FavoriteDataSource.getInstance(context));
+            favRepo.getFavorite(query, favoriteType, new RepositoryCallback<Favorite>() {
+                @Override
+                public void onSuccess(final Favorite result) {
+                    // local has priority since it's more frequently updated
+                }
+
+                @Override
+                public void onDataNotAvailable() {
+                    favRepo.insertOrUpdateFavorite(favorite, null);
+                }
+            });
         }
     }
 

@@ -11,8 +11,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
@@ -27,6 +25,7 @@ import java.util.List;
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
 import awais.instagrabber.activities.Login;
+import awais.instagrabber.activities.MainActivity;
 import awais.instagrabber.databinding.PrefAccountSwitcherBinding;
 import awais.instagrabber.db.datasources.AccountDataSource;
 import awais.instagrabber.db.entities.Account;
@@ -34,10 +33,13 @@ import awais.instagrabber.db.repositories.AccountRepository;
 import awais.instagrabber.db.repositories.RepositoryCallback;
 import awais.instagrabber.dialogs.AccountSwitcherDialogFragment;
 import awais.instagrabber.repositories.responses.User;
+import awais.instagrabber.utils.AppExecutors;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.FlavorTown;
+import awais.instagrabber.utils.ProcessPhoenix;
 import awais.instagrabber.utils.TextUtils;
+import awais.instagrabber.utils.Utils;
 import awais.instagrabber.webservices.ServiceCallback;
 import awais.instagrabber.webservices.UserService;
 
@@ -55,8 +57,10 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
     void setupPreferenceScreen(final PreferenceScreen screen) {
         final String cookie = settingsHelper.getString(Constants.COOKIE);
         final boolean isLoggedIn = !TextUtils.isEmpty(cookie) && CookieUtils.getUserIdFromCookie(cookie) > 0;
+        final MainActivity activity = (MainActivity) getActivity();
         // screen.addPreference(new MoreHeaderPreference(getContext()));
         final Context context = getContext();
+        final Resources resources = context.getResources();
         if (context == null) return;
         accountRepository = AccountRepository.getInstance(AccountDataSource.getInstance(context));
         final PreferenceCategory accountCategory = new PreferenceCategory(context);
@@ -67,11 +71,15 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
             accountCategory.setSummary(R.string.account_hint);
             accountCategory.addPreference(getAccountSwitcherPreference(cookie, context));
             accountCategory.addPreference(getPreference(R.string.logout, R.string.logout_summary, R.drawable.ic_logout_24, preference -> {
-                if (getContext() == null) return false;
+                final Context context1 = getContext();
+                if (context1 == null) return false;
                 CookieUtils.setupCookies("LOGOUT");
-                shouldRecreate();
-                Toast.makeText(context, R.string.logout_success, Toast.LENGTH_SHORT).show();
+                // shouldRecreate();
+                Toast.makeText(context1, R.string.logout_success, Toast.LENGTH_SHORT).show();
                 settingsHelper.putString(Constants.COOKIE, "");
+                AppExecutors.getInstance().mainThread().execute(() -> {
+                    ProcessPhoenix.triggerRebirth(context1);
+                }, 200);
                 return true;
             }));
         }
@@ -99,9 +107,14 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
                                             CookieUtils.removeAllAccounts(context, new RepositoryCallback<Void>() {
                                                 @Override
                                                 public void onSuccess(final Void result) {
-                                                    shouldRecreate();
-                                                    Toast.makeText(context, R.string.logout_success, Toast.LENGTH_SHORT).show();
+                                                    // shouldRecreate();
+                                                    final Context context1 = getContext();
+                                                    if (context1 == null) return;
+                                                    Toast.makeText(context1, R.string.logout_success, Toast.LENGTH_SHORT).show();
                                                     settingsHelper.putString(Constants.COOKIE, "");
+                                                    AppExecutors.getInstance().mainThread().execute(() -> {
+                                                        ProcessPhoenix.triggerRebirth(context1);
+                                                    }, 200);
                                                 }
 
                                                 @Override
@@ -135,13 +148,30 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
         screen.addPreference(getDivider(context));
         final NavController navController = NavHostFragment.findNavController(this);
         if (isLoggedIn) {
-            screen.addPreference(getPreference(R.string.action_notif, R.drawable.ic_not_liked, preference -> {
-                if (isSafeToNavigate(navController)) {
-                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionGlobalNotificationsViewerFragment("notif");
-                    navController.navigate(navDirections);
-                }
-                return true;
-            }));
+            boolean showActivity = true;
+            boolean showExplore = false;
+            if (activity != null) {
+                showActivity = !Utils.isNavRootInCurrentTabs("notification_viewer_nav_graph");
+                showExplore = !Utils.isNavRootInCurrentTabs("discover_nav_graph");
+            }
+            if (showActivity) {
+                screen.addPreference(getPreference(R.string.action_notif, R.drawable.ic_not_liked, preference -> {
+                    if (isSafeToNavigate(navController)) {
+                        final NavDirections navDirections = MorePreferencesFragmentDirections.actionGlobalNotificationsViewerFragment("notif");
+                        navController.navigate(navDirections);
+                    }
+                    return true;
+                }));
+            }
+            if (showExplore) {
+                screen.addPreference(getPreference(R.string.title_discover, R.drawable.ic_explore_24, preference -> {
+                    if (isSafeToNavigate(navController)) {
+                        navController.navigate(R.id.discover_nav_graph);
+                    }
+                    return true;
+                }));
+            }
+
             screen.addPreference(getPreference(R.string.action_ayml, R.drawable.ic_suggested_users, preference -> {
                 if (isSafeToNavigate(navController)) {
                     final NavDirections navDirections = MorePreferencesFragmentDirections.actionGlobalNotificationsViewerFragment("ayml");
@@ -157,13 +187,21 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
                 return true;
             }));
         }
-        screen.addPreference(getPreference(R.string.title_favorites, R.drawable.ic_star_24, preference -> {
-            if (isSafeToNavigate(navController)) {
-                final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToFavoritesFragment();
-                navController.navigate(navDirections);
-            }
-            return true;
-        }));
+
+        // Check if favorites has been added as a tab. And if so, do not add in this list
+        boolean showFavorites = true;
+        if (activity != null) {
+            showFavorites = !Utils.isNavRootInCurrentTabs("favorites_nav_graph");
+        }
+        if (showFavorites) {
+            screen.addPreference(getPreference(R.string.title_favorites, R.drawable.ic_star_24, preference -> {
+                if (isSafeToNavigate(navController)) {
+                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToFavoritesFragment();
+                    navController.navigate(navDirections);
+                }
+                return true;
+            }));
+        }
 
         screen.addPreference(getDivider(context));
         screen.addPreference(getPreference(R.string.action_settings, R.drawable.ic_outline_settings_24, preference -> {
@@ -193,7 +231,8 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
                                            BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")",
                                            -1,
                                            preference -> {
-                                               FlavorTown.updateCheck((AppCompatActivity) requireActivity(), true);
+                                               if (BuildConfig.isPre) return true;
+                                               FlavorTown.updateCheck(activity, true);
                                                return true;
                                            }));
         screen.addPreference(getDivider(context));
@@ -235,9 +274,14 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
                                 new RepositoryCallback<Account>() {
                                     @Override
                                     public void onSuccess(final Account result) {
-                                        final FragmentActivity activity = getActivity();
-                                        if (activity == null) return;
-                                        activity.recreate();
+                                        // final FragmentActivity activity = getActivity();
+                                        // if (activity == null) return;
+                                        // activity.recreate();
+                                        AppExecutors.getInstance().mainThread().execute(() -> {
+                                            final Context context = getContext();
+                                            if (context == null) return;
+                                            ProcessPhoenix.triggerRebirth(context);
+                                        }, 200);
                                     }
 
                                     @Override

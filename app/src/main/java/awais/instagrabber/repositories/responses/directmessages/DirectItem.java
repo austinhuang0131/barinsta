@@ -41,6 +41,7 @@ public class DirectItem implements Cloneable, Serializable {
     private final DirectItem repliedToMessage;
     private final DirectItemVoiceMedia voiceMedia;
     private final Location location;
+    private final DirectItemXma xma;
     private final int hideInThread;
     private Date date;
     private boolean isPending;
@@ -72,6 +73,7 @@ public class DirectItem implements Cloneable, Serializable {
                       final DirectItem repliedToMessage,
                       final DirectItemVoiceMedia voiceMedia,
                       final Location location,
+                      final DirectItemXma xma,
                       final int hideInThread,
                       final boolean showForwardAttribution) {
         this.itemId = itemId;
@@ -99,6 +101,7 @@ public class DirectItem implements Cloneable, Serializable {
         this.repliedToMessage = repliedToMessage;
         this.voiceMedia = voiceMedia;
         this.location = location;
+        this.xma = xma;
         this.hideInThread = hideInThread;
         this.showForwardAttribution = showForwardAttribution;
     }
@@ -208,6 +211,10 @@ public class DirectItem implements Cloneable, Serializable {
         return location;
     }
 
+    public DirectItemXma getXma() {
+        return xma;
+    }
+
     public int getHideInThread() {
         return hideInThread;
     }
@@ -286,6 +293,7 @@ public class DirectItem implements Cloneable, Serializable {
                 Objects.equals(repliedToMessage, that.repliedToMessage) &&
                 Objects.equals(voiceMedia, that.voiceMedia) &&
                 Objects.equals(location, that.location) &&
+                Objects.equals(xma, that.xma) &&
                 Objects.equals(date, that.date);
     }
 
@@ -294,6 +302,6 @@ public class DirectItem implements Cloneable, Serializable {
         return Objects
                 .hash(itemId, userId, timestamp, itemType, text, like, link, clientContext, reelShare, storyShare, mediaShare, profile, placeholder,
                       media, previewMedias, actionLog, videoCallEvent, clip, felixShare, visualMedia, animatedMedia, reactions, repliedToMessage,
-                      voiceMedia, location, hideInThread, date, isPending, showForwardAttribution);
+                      voiceMedia, location, xma, hideInThread, date, isPending, showForwardAttribution);
     }
 }

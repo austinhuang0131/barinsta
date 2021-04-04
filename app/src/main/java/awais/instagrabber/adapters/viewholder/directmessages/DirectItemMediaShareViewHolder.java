@@ -12,11 +12,14 @@ import androidx.recyclerview.widget.ItemTouchHelper;
 import com.facebook.drawee.drawable.ScalingUtils;
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
+import com.google.common.collect.ImmutableList;
 
+import java.util.List;
 import java.util.Objects;
 
 import awais.instagrabber.R;
 import awais.instagrabber.adapters.DirectItemsAdapter.DirectItemCallback;
+import awais.instagrabber.customviews.DirectItemContextMenu;
 import awais.instagrabber.databinding.LayoutDmBaseBinding;
 import awais.instagrabber.databinding.LayoutDmMediaShareBinding;
 import awais.instagrabber.models.enums.DirectItemType;
@@ -30,6 +33,7 @@ import awais.instagrabber.repositories.responses.directmessages.DirectItemFelixS
 import awais.instagrabber.repositories.responses.directmessages.DirectThread;
 import awais.instagrabber.utils.NumberUtils;
 import awais.instagrabber.utils.ResponseBodyUtils;
+import awais.instagrabber.utils.Utils;
 
 public class DirectItemMediaShareViewHolder extends DirectItemViewHolder {
     private static final String TAG = DirectItemMediaShareViewHolder.class.getSimpleName();
@@ -38,6 +42,7 @@ public class DirectItemMediaShareViewHolder extends DirectItemViewHolder {
     private final RoundingParams incomingRoundingParams;
     private final RoundingParams outgoingRoundingParams;
     private DirectItemType itemType;
+    private Caption caption;
 
     public DirectItemMediaShareViewHolder(@NonNull final LayoutDmBaseBinding baseBinding,
                                           @NonNull final LayoutDmMediaShareBinding binding,
@@ -113,7 +118,7 @@ public class DirectItemMediaShareViewHolder extends DirectItemViewHolder {
     }
 
     private void setupCaption(@NonNull final Media media) {
-        final Caption caption = media.getCaption();
+        caption = media.getCaption();
         if (caption != null) {
             binding.caption.setVisibility(View.VISIBLE);
             binding.caption.setText(caption.getText());
@@ -176,5 +181,17 @@ public class DirectItemMediaShareViewHolder extends DirectItemViewHolder {
             return ItemTouchHelper.ACTION_STATE_IDLE;
         }
         return super.getSwipeDirection();
+    }
+
+    @Override
+    protected List<DirectItemContextMenu.MenuItem> getLongClickOptions() {
+        final ImmutableList.Builder<DirectItemContextMenu.MenuItem> builder = ImmutableList.builder();
+        if (caption != null && !TextUtils.isEmpty(caption.getText())) {
+            builder.add(new DirectItemContextMenu.MenuItem(R.id.copy, R.string.copy_caption, item -> {
+                Utils.copyText(itemView.getContext(), caption.getText());
+                return null;
+            }));
+        }
+        return builder.build();
     }
 }

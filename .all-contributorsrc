@@ -43,15 +43,6 @@
       ]
     },
     {
-      "login": "Zopieux",
-      "name": "Alexandre Macabies",
-      "avatar_url": "https://avatars.githubusercontent.com/u/81353?v=4",
-      "profile": "https://github.com/Zopieux",
-      "contributions": [
-        "code"
-      ]
-    },
-    {
       "login": "MeLlamoPablo",
       "name": "Pablo Rodríguez",
       "avatar_url": "https://avatars.githubusercontent.com/u/11708035?v=4",
@@ -61,10 +52,10 @@
       ]
     },
     {
-      "login": "AwaisKing",
-      "name": "AWAiS",
-      "avatar_url": "https://avatars3.githubusercontent.com/u/5278488",
-      "profile": "http://rerolledgeek.blogspot.com/",
+      "login": "Zopieux",
+      "name": "Alexandre Macabies",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81353?v=4",
+      "profile": "https://github.com/Zopieux",
       "contributions": [
         "code"
       ]
@@ -117,16 +108,6 @@
       "contributions": [
         "bug",
         "translation"
-      ]
-    },
-    {
-      "login": "e-edgren",
-      "name": "Airikr",
-      "avatar_url": "https://avatars0.githubusercontent.com/u/53869451",
-      "profile": "https://airikr.me/",
-      "contributions": [
-        "ideas",
-        "question"
       ]
     },
     {
@@ -274,6 +255,15 @@
         "translation"
       ]
     },
+     {
+       "login": "Pyrobauve",
+       "name": "Pyrobauve",
+       "avatar_url": "https://avatars.githubusercontent.com/u/48654473?v=4",
+       "profile": "https://github.com/Pyrobauve",
+       "contributions": [
+         "translation"
+       ]
+     },
     {
       "login": "RAMAR-RAR",
       "name": "RAMAR-RAR",
@@ -315,6 +305,15 @@
       "name": "Alexey Peschany",
       "avatar_url": "https://avatars.githubusercontent.com/u/17468894?v=4",
       "profile": "https://gitlab.com/sandboiii",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "Sitavi",
+      "name": "Sitavi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80586127?v=4",
+      "profile": "https://github.com/Sitavi",
       "contributions": [
         "translation"
       ]

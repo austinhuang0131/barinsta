@@ -292,7 +292,7 @@ public class CollectionPostsFragment extends Fragment implements SwipeRefreshLay
         else if (item.getItemId() == R.id.delete) {
             final Context context = getContext();
             new AlertDialog.Builder(context)
-                    .setTitle(R.string.edit_collection)
+                    .setTitle(R.string.delete_collection)
                     .setMessage(R.string.delete_collection_note)
                     .setPositiveButton(R.string.confirm, (d, w) -> {
                         collectionService.deleteCollection(

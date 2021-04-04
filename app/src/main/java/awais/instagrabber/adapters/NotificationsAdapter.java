@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
 import awais.instagrabber.adapters.viewholder.NotificationViewHolder;
 import awais.instagrabber.databinding.ItemNotificationBinding;
 import awais.instagrabber.models.enums.NotificationType;
-import awais.instagrabber.repositories.responses.Notification;
+import awais.instagrabber.repositories.responses.notification.Notification;
 
 public final class NotificationsAdapter extends ListAdapter<Notification, NotificationViewHolder> {
     private final OnNotificationClickListener notificationClickListener;

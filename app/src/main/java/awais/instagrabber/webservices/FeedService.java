@@ -12,17 +12,16 @@ import java.util.Map;
 import java.util.UUID;
 
 import awais.instagrabber.repositories.FeedRepository;
-import awais.instagrabber.repositories.responses.EndOfFeedDemarcator;
-import awais.instagrabber.repositories.responses.EndOfFeedGroup;
-import awais.instagrabber.repositories.responses.EndOfFeedGroupSet;
-import awais.instagrabber.repositories.responses.FeedFetchResponse;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.PostsFetchResponse;
+import awais.instagrabber.repositories.responses.feed.EndOfFeedDemarcator;
+import awais.instagrabber.repositories.responses.feed.EndOfFeedGroup;
+import awais.instagrabber.repositories.responses.feed.EndOfFeedGroupSet;
+import awais.instagrabber.repositories.responses.feed.FeedFetchResponse;
 import awais.instagrabber.utils.TextUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class FeedService extends BaseService {
     private static final String TAG = "FeedService";
@@ -32,10 +31,9 @@ public class FeedService extends BaseService {
     private static FeedService instance;
 
     private FeedService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(FeedRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(FeedRepository.class);
     }
 
     public static FeedService getInstance() {

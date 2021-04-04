@@ -51,6 +51,7 @@ public final class DirectItemFactory {
                 repliedToMessage,
                 null,
                 null,
+                null,
                 0,
                 false);
     }
@@ -121,6 +122,7 @@ public final class DirectItemFactory {
                 null,
                 null,
                 media,
+                null,
                 null,
                 null,
                 null,
@@ -213,6 +215,7 @@ public final class DirectItemFactory {
                 null,
                 voiceMedia,
                 null,
+                null,
                 0,
                 false);
     }
@@ -249,6 +252,7 @@ public final class DirectItemFactory {
                 null,
                 null,
                 animateMedia,
+                null,
                 null,
                 null,
                 null,

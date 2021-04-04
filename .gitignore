@@ -17,3 +17,6 @@
 .externalNativeBuild
 .cxx
 app/release
+/sentry.properties
+/app/fdroid/
+/app/github/

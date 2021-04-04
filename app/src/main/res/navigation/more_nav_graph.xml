@@ -11,6 +11,7 @@
     <include app:graph="@navigation/likes_nav_graph" />
     <include app:graph="@navigation/notification_viewer_nav_graph" />
     <include app:graph="@navigation/story_list_nav_graph" />
+    <include app:graph="@navigation/discover_nav_graph" />
 
     <action
         android:id="@+id/action_global_profileFragment"

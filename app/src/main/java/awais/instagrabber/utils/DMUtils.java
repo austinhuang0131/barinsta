@@ -44,9 +44,9 @@ public final class DMUtils {
 
     public static boolean isRead(@NonNull final DirectThread thread) {
         final boolean read;
-//        if (thread.getDirectStory() != null) {
-//            return false;
-//        }
+        // if (thread.getDirectStory() != null) {
+        //     return false;
+        // }
         final DirectItem item = thread.getFirstDirectItem();
         final long viewerId = thread.getViewerId();
         if (item != null && item.getUserId() == viewerId) {
@@ -188,6 +188,9 @@ public final class DMUtils {
                             break;
                     }
                     break;
+                case XMA:
+                    subtitle = resources.getString(R.string.dms_inbox_shared_sticker, username != null ? username : "");
+                    break;
                 default:
                     message = resources.getString(R.string.dms_inbox_raven_message_unknown);
             }
@@ -213,7 +216,14 @@ public final class DMUtils {
                                                    .filter(Objects::nonNull)
                                                    .filter(user -> user.getPk() == userId)
                                                    .findFirst();
-        return senderOptional.map(User::getUsername).orElse(null);
+        return senderOptional.map(user -> {
+            // return full name for fb users
+            final String username = user.getUsername();
+            if (TextUtils.isEmpty(username)) {
+                return user.getFullName();
+            }
+            return username;
+        }).orElse(null);
     }
 
     public static String getMediaSpecificSubtitle(final String username, final Resources resources, final MediaItemType mediaType) {

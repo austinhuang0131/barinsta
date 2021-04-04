@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.cursoradapter.widget.CursorAdapter;
 
-import awais.instagrabber.R;
 import awais.instagrabber.databinding.ItemSuggestionBinding;
 import awais.instagrabber.models.enums.SuggestionType;
 
@@ -35,12 +34,12 @@ public final class SuggestionsAdapter extends CursorAdapter {
 
     @Override
     public void bindView(@NonNull final View view, final Context context, @NonNull final Cursor cursor) {
-        // i, username, fullname, type, picUrl, verified
-        // 0, 1       , 2       , 3   , 4     , 5
+        // i, username, fullname, type, query, picUrl, verified
+        // 0, 1       , 2       , 3   , 4    , 5     , 6
         final String fullName = cursor.getString(2);
         String username = cursor.getString(1);
-        String picUrl = cursor.getString(4);
-        final boolean verified = cursor.getString(5).charAt(0) == 't';
+        String picUrl = cursor.getString(5);
+        final boolean verified = cursor.getString(6).charAt(0) == 't';
 
         final String type = cursor.getString(3);
         SuggestionType suggestionType = null;
@@ -50,22 +49,14 @@ public final class SuggestionsAdapter extends CursorAdapter {
             Log.e(TAG, "Unknown suggestion type: " + type, e);
         }
         if (suggestionType == null) return;
-        final String query;
+        String query = cursor.getString(4);
         switch (suggestionType) {
             case TYPE_USER:
                 username = '@' + username;
-                query = username;
                 break;
             case TYPE_HASHTAG:
                 username = '#' + username;
-                query = username;
                 break;
-            case TYPE_LOCATION:
-                query = fullName;
-                picUrl = "res:/" + R.drawable.ic_location;
-                break;
-            default:
-                return; // will never come here
         }
 
         if (onSuggestionClickListener != null) {
@@ -75,12 +66,8 @@ public final class SuggestionsAdapter extends CursorAdapter {
         final ItemSuggestionBinding binding = ItemSuggestionBinding.bind(view);
         binding.isVerified.setVisibility(verified ? View.VISIBLE : View.GONE);
         binding.tvUsername.setText(username);
-        if (suggestionType.equals(SuggestionType.TYPE_LOCATION)) {
-            binding.tvFullName.setVisibility(View.GONE);
-        } else {
-            binding.tvFullName.setVisibility(View.VISIBLE);
-            binding.tvFullName.setText(fullName);
-        }
+        binding.tvFullName.setVisibility(View.VISIBLE);
+        binding.tvFullName.setText(fullName);
         binding.ivProfilePic.setImageURI(picUrl);
     }
 

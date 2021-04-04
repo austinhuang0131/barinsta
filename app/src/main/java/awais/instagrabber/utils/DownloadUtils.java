@@ -1,10 +1,8 @@
 package awais.instagrabber.utils;
 
 import android.Manifest;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.pm.PackageManager;
 import android.os.Environment;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
@@ -13,8 +11,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
 import androidx.work.Constraints;
 import androidx.work.Data;
 import androidx.work.NetworkType;
@@ -90,53 +86,64 @@ public final class DownloadUtils {
         return dir;
     }
 
-//    public static void dmDownload(@NonNull final Context context,
-//                                  @Nullable final String username,
-//                                  final String modelId,
-//                                  final String url) {
-//        if (url == null) return;
-//        if (ContextCompat.checkSelfPermission(context, PERMS[0]) == PackageManager.PERMISSION_GRANTED) {
-//            dmDownloadImpl(context, username, modelId, url);
-//        } else if (context instanceof Activity) {
-//            ActivityCompat.requestPermissions((Activity) context, PERMS, 8020);
-//        }
-//    }
+    //    public static void dmDownload(@NonNull final Context context,
+    //                                  @Nullable final String username,
+    //                                  final String modelId,
+    //                                  final String url) {
+    //        if (url == null) return;
+    //        if (ContextCompat.checkSelfPermission(context, PERMS[0]) == PackageManager.PERMISSION_GRANTED) {
+    //            dmDownloadImpl(context, username, modelId, url);
+    //        } else if (context instanceof Activity) {
+    //            ActivityCompat.requestPermissions((Activity) context, PERMS, 8020);
+    //        }
+    //    }
 
-    private static void dmDownloadImpl(@NonNull final Context context,
-                                       @Nullable final String username,
-                                       final String modelId,
-                                       final String url) {
-        final File dir = getDownloadDir(context, username);
-        if (dir.exists() || dir.mkdirs()) {
-            download(context,
-                     url,
-                     getDownloadSaveFile(dir, modelId, url).getAbsolutePath());
-            return;
-        }
-        Toast.makeText(context, R.string.error_creating_folders, Toast.LENGTH_SHORT).show();
-    }
+//    private static void dmDownloadImpl(@NonNull final Context context,
+//                                       @Nullable final String username,
+//                                       final String modelId,
+//                                       final String url) {
+//        final File dir = getDownloadDir(context, username);
+//        if (dir.exists() || dir.mkdirs()) {
+//            download(context,
+//                     url,
+//                     getDownloadSaveFile(dir, modelId, url).getAbsolutePath());
+//            return;
+//        }
+//        Toast.makeText(context, R.string.error_creating_folders, Toast.LENGTH_SHORT).show();
+//    }
 
     @NonNull
     private static File getDownloadSaveFile(final File finalDir,
                                             final String postId,
                                             final String displayUrl) {
-        return getDownloadSaveFile(finalDir, postId, "", displayUrl);
+        return getDownloadSaveFile(finalDir, postId, "", displayUrl, "");
+    }
+
+    @NonNull
+    private static File getDownloadSaveFile(final File finalDir,
+                                            final String postId,
+                                            final String displayUrl,
+                                            final String username) {
+        return getDownloadSaveFile(finalDir, postId, "", displayUrl, username);
     }
 
     private static File getDownloadChildSaveFile(final File downloadDir,
                                                  final String postId,
                                                  final int childPosition,
-                                                 final String url) {
+                                                 final String url,
+                                                 final String username) {
         final String sliderPostfix = "_slide_" + childPosition;
-        return getDownloadSaveFile(downloadDir, postId, sliderPostfix, url);
+        return getDownloadSaveFile(downloadDir, postId, sliderPostfix, url, username);
     }
 
     @NonNull
     private static File getDownloadSaveFile(final File finalDir,
                                             final String postId,
                                             final String sliderPostfix,
-                                            final String displayUrl) {
-        final String fileName = postId + sliderPostfix + getFileExtensionFromUrl(displayUrl);
+                                            final String displayUrl,
+                                            final String username) {
+        final String usernamePrepend = TextUtils.isEmpty(username) ? "" : (username + "_");
+        final String fileName = usernamePrepend + postId + sliderPostfix + getFileExtensionFromUrl(displayUrl);
         return new File(finalDir, fileName);
     }
 
@@ -209,8 +216,9 @@ public final class DownloadUtils {
             case MEDIA_TYPE_IMAGE:
             case MEDIA_TYPE_VIDEO: {
                 final String url = ResponseBodyUtils.getImageUrl(media);
-                final File file = getDownloadSaveFile(downloadDir, media.getCode(), url);
-                checkList.add(file.exists());
+                final File file = getDownloadSaveFile(downloadDir, media.getCode(), url, "");
+                final File usernamePrependedFile = getDownloadSaveFile(downloadDir, media.getCode(), url, username);
+                checkList.add(file.exists() || usernamePrependedFile.exists());
                 break;
             }
             case MEDIA_TYPE_SLIDER:
@@ -219,8 +227,9 @@ public final class DownloadUtils {
                     final Media child = sliderItems.get(i);
                     if (child == null) continue;
                     final String url = ResponseBodyUtils.getImageUrl(child);
-                    final File file = getDownloadChildSaveFile(downloadDir, media.getCode(), i + 1, url);
-                    checkList.add(file.exists());
+                    final File file = getDownloadChildSaveFile(downloadDir, media.getCode(), i + 1, url, "");
+                    final File usernamePrependedFile = getDownloadChildSaveFile(downloadDir, media.getCode(), i + 1, url, username);
+                    checkList.add(file.exists() || usernamePrependedFile.exists());
                 }
                 break;
             default:
@@ -266,10 +275,12 @@ public final class DownloadUtils {
         final String url = storyModel.getItemType() == MediaItemType.MEDIA_TYPE_VIDEO
                            ? storyModel.getVideoUrl()
                            : storyModel.getStoryUrl();
+        final String baseFileName = storyModel.getStoryMediaId() + "_"
+                + storyModel.getTimestamp() + DownloadUtils.getFileExtensionFromUrl(url);
+        final String usernamePrepend = Utils.settingsHelper.getBoolean(Constants.DOWNLOAD_PREPEND_USER_NAME)
+                && storyModel.getUsername() != null ? storyModel.getUsername() + "_" : "";
         final File saveFile = new File(downloadDir,
-                                       storyModel.getStoryMediaId()
-                                               + "_" + storyModel.getTimestamp()
-                                               + DownloadUtils.getFileExtensionFromUrl(url));
+                 usernamePrepend + baseFileName);
         download(context, url, saveFile.getAbsolutePath());
     }
 
@@ -294,22 +305,32 @@ public final class DownloadUtils {
                                  final int childPositionIfSingle) {
         final Map<String, String> map = new HashMap<>();
         for (final Media media : feedModels) {
-            final File downloadDir = getDownloadDir(context, "@" + media.getUser().getUsername());
+            final User mediaUser = media.getUser();
+            final File downloadDir = getDownloadDir(context, mediaUser == null ? "" : mediaUser.getUsername());
             if (downloadDir == null) return;
             switch (media.getMediaType()) {
                 case MEDIA_TYPE_IMAGE:
                 case MEDIA_TYPE_VIDEO: {
                     final String url = getUrlOfType(media);
-                    final File file = getDownloadSaveFile(downloadDir, media.getCode(), url);
+                    String fileName = media.getId();
+                    if (mediaUser != null && TextUtils.isEmpty(media.getCode())) {
+                        fileName = mediaUser.getUsername() + "_" + fileName;
+                    }
+                    if (!TextUtils.isEmpty(media.getCode())) {
+                        fileName = media.getCode();
+                        if (Utils.settingsHelper.getBoolean(Constants.DOWNLOAD_PREPEND_USER_NAME) && mediaUser != null) {
+                            fileName = mediaUser.getUsername() + "_" + fileName;
+                        }
+                    }
+                    final File file = getDownloadSaveFile(downloadDir, fileName, url);
                     map.put(url, file.getAbsolutePath());
                     break;
                 }
                 case MEDIA_TYPE_VOICE: {
                     final String url = getUrlOfType(media);
                     String fileName = media.getId();
-                    final User user = media.getUser();
-                    if (user != null) {
-                        fileName = user.getUsername() + "_" + fileName;
+                    if (mediaUser != null) {
+                        fileName = mediaUser.getUsername() + "_" + fileName;
                     }
                     final File file = getDownloadSaveFile(downloadDir, fileName, url);
                     map.put(url, file.getAbsolutePath());
@@ -323,7 +344,8 @@ public final class DownloadUtils {
                         }
                         final Media child = sliderItems.get(i);
                         final String url = getUrlOfType(child);
-                        final File file = getDownloadChildSaveFile(downloadDir, media.getCode(), i + 1, url);
+                        final String usernamePrepend = Utils.settingsHelper.getBoolean(Constants.DOWNLOAD_PREPEND_USER_NAME) && mediaUser != null ? mediaUser.getUsername() : "";
+                        final File file = getDownloadChildSaveFile(downloadDir, media.getCode(), i + 1, url, usernamePrepend);
                         map.put(url, file.getAbsolutePath());
                     }
                     break;

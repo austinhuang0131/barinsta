@@ -1,104 +1,72 @@
 package awais.instagrabber.utils;
 
-import android.annotation.SuppressLint;
-import android.content.ActivityNotFoundException;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.pm.PackageInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.Signature;
-import android.content.res.Resources;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+import java.util.Objects;
 import java.util.concurrent.ThreadLocalRandom;
-
-import javax.security.cert.CertificateException;
-import javax.security.cert.X509Certificate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
-import awais.instagrabber.databinding.DialogUpdateBinding;
 
 import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public final class FlavorTown {
     private static final String TAG = "FlavorTown";
-    private static final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
-    private static AlertDialog dialog;
+    private static final UpdateChecker UPDATE_CHECKER = UpdateChecker.getInstance();
+    private static final Pattern VERSION_NAME_PATTERN = Pattern.compile("v?(\\d+\\.\\d+\\.\\d+)(?:_?)(\\w*)(?:-?)(\\w*)");
+
+    private static boolean checking = false;
 
     public static void updateCheck(@NonNull final AppCompatActivity context) {
         updateCheck(context, false);
     }
 
-    @SuppressLint("PackageManagerGetSignatures")
-    public static void updateCheck(@NonNull final AppCompatActivity context, final boolean force) {
-        boolean isInstalledFromFdroid = false;
-        final PackageInfo packageInfo;
-        try {
-            packageInfo = context.getPackageManager().getPackageInfo(context.getPackageName(), PackageManager.GET_SIGNATURES);
-            for (Signature signature : packageInfo.signatures) {
-                final X509Certificate cert = X509Certificate.getInstance(signature.toByteArray());
-                final String fingerprint = bytesToHex(MessageDigest.getInstance("SHA-1").digest(cert.getEncoded()));
-                isInstalledFromFdroid = fingerprint.equals(Constants.FDROID_SHA1_FINGERPRINT);
-                // Log.d(TAG, "fingerprint:" + fingerprint);
-            }
-        } catch (PackageManager.NameNotFoundException | NoSuchAlgorithmException | CertificateException e) {
-            Log.e(TAG, "Error", e);
-        }
-        if (isInstalledFromFdroid) return;
-        final DialogUpdateBinding binding = DialogUpdateBinding.inflate(context.getLayoutInflater(), null, false);
-        binding.skipUpdate.setOnCheckedChangeListener((buttonView, isChecked) -> {
-            if (dialog == null) return;
-            dialog.getButton(DialogInterface.BUTTON_POSITIVE).setEnabled(!isChecked);
-        });
-        Resources res = context.getResources();
-        new UpdateChecker(version -> {
-            if (force && version.equals(BuildConfig.VERSION_NAME)) {
-                Toast.makeText(context, "You're already on the latest version", Toast.LENGTH_SHORT).show();
+    public static void updateCheck(@NonNull final AppCompatActivity context,
+                                   final boolean force) {
+        if (checking) return;
+        checking = true;
+        AppExecutors.getInstance().networkIO().execute(() -> {
+            final String onlineVersionName = UPDATE_CHECKER.getLatestVersion();
+            if (onlineVersionName == null) return;
+            final String onlineVersion = getVersion(onlineVersionName);
+            final String localVersion = getVersion(BuildConfig.VERSION_NAME);
+            if (Objects.equals(onlineVersion, localVersion)) {
+                if (force) {
+                    AppExecutors.getInstance().mainThread().execute(() -> {
+                        final Context applicationContext = context.getApplicationContext();
+                        // Check if app was closed or crashed before reaching here
+                        if (applicationContext == null) return;
+                        // Show toast if version number preference was tapped
+                        Toast.makeText(applicationContext, R.string.on_latest_version, Toast.LENGTH_SHORT).show();
+                    });
+                }
                 return;
             }
-            final String skippedVersion = settingsHelper.getString(Constants.SKIPPED_VERSION);
-            final boolean shouldShowDialog = force || (!version.equals(BuildConfig.VERSION_NAME) && !BuildConfig.DEBUG && !skippedVersion
-                    .equals(version));
+            final boolean shouldShowDialog = UpdateCheckCommon.shouldShowUpdateDialog(force, onlineVersionName);
             if (!shouldShowDialog) return;
-            dialog = new AlertDialog.Builder(context)
-                    .setTitle(res.getString(R.string.update_available, version))
-                    .setView(binding.getRoot())
-                    .setNeutralButton(R.string.cancel, (dialog, which) -> {
-                        if (binding.skipUpdate.isChecked()) {
-                            settingsHelper.putString(Constants.SKIPPED_VERSION, version);
-                        }
-                        dialog.dismiss();
-                    })
-                    .setPositiveButton(R.string.action_github, (dialog1, which) -> {
-                        try {
-                            context.startActivity(new Intent(Intent.ACTION_VIEW).setData(
-                                    Uri.parse("https://github.com/austinhuang0131/instagrabber/releases/latest")));
-                        } catch (final ActivityNotFoundException e) {
-                            // do nothing
-                        }
-                    })
-                    // if we don't show dialog for fdroid users, is the below required?
-                    .setNegativeButton(R.string.action_fdroid, (dialog, which) -> {
-                        try {
-                            context.startActivity(new Intent(Intent.ACTION_VIEW).setData(
-                                    Uri.parse("https://f-droid.org/packages/me.austinhuang.instagrabber/")));
-                        } catch (final ActivityNotFoundException e) {
-                            // do nothing
-                        }
-                    })
-                    .show();
-        }).executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+            UpdateCheckCommon.showUpdateDialog(context, onlineVersionName, (dialog, which) -> {
+                UPDATE_CHECKER.onDownload(context);
+                dialog.dismiss();
+            });
+        });
+    }
+
+    private static String getVersion(@NonNull final String versionName) {
+        final Matcher matcher = VERSION_NAME_PATTERN.matcher(versionName);
+        if (!matcher.matches()) return versionName;
+        try {
+            return matcher.group(1);
+        } catch (Exception e) {
+            Log.e(TAG, "getVersion: ", e);
+        }
+        return versionName;
     }
 
     public static void changelogCheck(@NonNull final Context context) {
@@ -120,15 +88,5 @@ public final class FlavorTown {
             Toast.makeText(context, R.string.updated, Toast.LENGTH_SHORT).show();
             settingsHelper.putInteger(Constants.PREV_INSTALL_VERSION, BuildConfig.VERSION_CODE);
         }
-    }
-
-    public static String bytesToHex(byte[] bytes) {
-        char[] hexChars = new char[bytes.length * 2];
-        for (int j = 0; j < bytes.length; j++) {
-            int v = bytes[j] & 0xFF;
-            hexChars[j * 2] = HEX_ARRAY[v >>> 4];
-            hexChars[j * 2 + 1] = HEX_ARRAY[v & 0x0F];
-        }
-        return new String(hexChars);
     }
 }

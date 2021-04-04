@@ -32,7 +32,6 @@ import awais.instagrabber.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class StoriesService extends BaseService {
     private static final String TAG = "StoriesService";
@@ -50,10 +49,9 @@ public class StoriesService extends BaseService {
         this.csrfToken = csrfToken;
         this.userId = userId;
         this.deviceUuid = deviceUuid;
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(StoriesRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(StoriesRepository.class);
     }
 
     public String getCsrfToken() {
@@ -95,7 +93,7 @@ public class StoriesService extends BaseService {
                 }
                 try {
                     final JSONObject itemJson = new JSONObject(body).getJSONArray("items").getJSONObject(0);
-                    callback.onSuccess(ResponseBodyUtils.parseStoryItem(itemJson, false, false, null));
+                    callback.onSuccess(ResponseBodyUtils.parseStoryItem(itemJson, false, null));
                 } catch (JSONException e) {
                     callback.onFailure(e);
                 }
@@ -137,7 +135,7 @@ public class StoriesService extends BaseService {
             final JSONArray feedStoriesReel = new JSONObject(body).getJSONArray("tray");
             for (int i = 0; i < feedStoriesReel.length(); ++i) {
                 final JSONObject node = feedStoriesReel.getJSONObject(i);
-                if (node.optBoolean("hide_from_feed_unit")) continue;
+                if (node.optBoolean("hide_from_feed_unit") && Utils.settingsHelper.getBoolean(Constants.HIDE_MUTED_REELS)) continue;
                 final JSONObject userJson = node.getJSONObject(node.has("user") ? "user" : "owner");
                 try {
                     final User user = new User(userJson.getLong("pk"),
@@ -179,17 +177,22 @@ public class StoriesService extends BaseService {
                                                null,
                                                null
                     );
-                    final String id = node.getString("id");
                     final long timestamp = node.getLong("latest_reel_media");
-                    final int mediaCount = node.getInt("media_count");
                     final boolean fullyRead = !node.isNull("seen") && node.getLong("seen") == timestamp;
                     final JSONObject itemJson = node.has("items") ? node.getJSONArray("items").optJSONObject(0) : null;
-                    final boolean isBestie = node.optBoolean("has_besties_media", false);
                     StoryModel firstStoryModel = null;
                     if (itemJson != null) {
-                        firstStoryModel = ResponseBodyUtils.parseStoryItem(itemJson, false, false, null);
+                        firstStoryModel = ResponseBodyUtils.parseStoryItem(itemJson, false, null);
                     }
-                    feedStoryModels.add(new FeedStoryModel(id, user, fullyRead, timestamp, firstStoryModel, mediaCount, false, isBestie));
+                    feedStoryModels.add(new FeedStoryModel(
+                            node.getString("id"),
+                            user,
+                            fullyRead,
+                            timestamp,
+                            firstStoryModel,
+                            node.getInt("media_count"),
+                            false,
+                            node.optBoolean("has_besties_media")));
                 }
                 catch (Exception e) {} // to cover promotional reels with non-long user pk's
             }
@@ -242,13 +245,16 @@ public class StoriesService extends BaseService {
                                            null,
                                            null
                 );
-                final String id = node.getString("id");
-                final long timestamp = node.getLong("published_time");
-                // final JSONObject itemJson = node.has("items") ? node.getJSONArray("items").getJSONObject(0) : null;
-                final StoryModel firstStoryModel = ResponseBodyUtils.parseBroadcastItem(node);
-                // if (itemJson != null) {
-                // }
-                feedStoryModels.add(new FeedStoryModel(id, user, false, timestamp, firstStoryModel, 1, true, false));
+                feedStoryModels.add(new FeedStoryModel(
+                        node.getString("id"),
+                        user,
+                        false,
+                        node.getLong("published_time"),
+                        ResponseBodyUtils.parseBroadcastItem(node),
+                        1,
+                        true,
+                        false
+                ));
             }
             callback.onSuccess(sort(feedStoryModels));
         } catch (JSONException e) {
@@ -364,9 +370,8 @@ public class StoriesService extends BaseService {
                              final ServiceCallback<List<StoryModel>> callback) {
         final String url = buildUrl(options);
         final Call<String> userStoryCall = repository.getUserStory(url);
-        final boolean isLoc = options.getType() == StoryViewerOptions.Type.LOCATION;
-        final boolean isHashtag = options.getType() == StoryViewerOptions.Type.HASHTAG;
-        final boolean isHighlight = options.getType() == StoryViewerOptions.Type.HIGHLIGHT;
+        final boolean isLocOrHashtag = options.getType() == StoryViewerOptions.Type.LOCATION || options.getType() == StoryViewerOptions.Type.HASHTAG;
+        final boolean isHighlight = options.getType() == StoryViewerOptions.Type.HIGHLIGHT || options.getType() == StoryViewerOptions.Type.STORY_ARCHIVE;
         userStoryCall.enqueue(new Callback<String>() {
             @Override
             public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {
@@ -380,7 +385,7 @@ public class StoriesService extends BaseService {
                     data = new JSONObject(body);
 
                     if (!isHighlight) {
-                        data = data.optJSONObject((isLoc || isHashtag) ? "story" : "reel");
+                        data = data.optJSONObject((isLocOrHashtag) ? "story" : "reel");
                     } else {
                         data = data.getJSONObject("reels").optJSONObject(options.getName());
                     }
@@ -388,8 +393,7 @@ public class StoriesService extends BaseService {
                     String username = null;
                     if (data != null
                             // && localUsername == null
-                            && !isLoc
-                            && !isHashtag) {
+                            && !isLocOrHashtag) {
                         username = data.getJSONObject("user").getString("username");
                     }
 
@@ -397,12 +401,11 @@ public class StoriesService extends BaseService {
                     if (data != null
                             && (media = data.optJSONArray("items")) != null
                             && media.length() > 0 && media.optJSONObject(0) != null) {
-
                         final int mediaLen = media.length();
                         final List<StoryModel> models = new ArrayList<>();
                         for (int i = 0; i < mediaLen; ++i) {
                             data = media.getJSONObject(i);
-                            models.add(ResponseBodyUtils.parseStoryItem(data, isLoc, isHashtag, username));
+                            models.add(ResponseBodyUtils.parseStoryItem(data, isLocOrHashtag, username));
                         }
                         callback.onSuccess(models);
                     } else {
@@ -543,6 +546,7 @@ public class StoriesService extends BaseService {
                 id = String.valueOf(options.getId());
                 break;
             case HIGHLIGHT:
+            case STORY_ARCHIVE:
                 builder.append("feed/reels_media/?user_ids=");
                 id = options.getName();
                 break;
@@ -550,15 +554,12 @@ public class StoriesService extends BaseService {
                 break;
             // case FEED_STORY_POSITION:
             //     break;
-            // case STORY_ARCHIVE:
-            //     break;
         }
         if (id == null) {
             return null;
         }
-        final String userId = id.replace(":", "%3A");
-        builder.append(userId);
-        if (type != StoryViewerOptions.Type.HIGHLIGHT) {
+        builder.append(id);
+        if (type != StoryViewerOptions.Type.HIGHLIGHT && type != StoryViewerOptions.Type.STORY_ARCHIVE) {
             builder.append("/story/");
         }
         return builder.toString();

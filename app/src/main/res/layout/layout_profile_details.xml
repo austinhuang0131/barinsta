@@ -36,6 +36,7 @@
         app:chipIconTint="@color/deep_purple_200"
         app:layout_constraintBottom_toTopOf="@id/fav_chip"
         app:layout_constraintStart_toEndOf="@id/mainProfileImage"
+        app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/purple_200"
         tools:visibility="visible" />
 
@@ -50,6 +51,7 @@
         app:chipBackgroundColor="@null"
         app:layout_constraintBottom_toTopOf="@id/fav_chip"
         app:layout_constraintStart_toEndOf="@id/btnFollow"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="omg what do u expect"
         tools:visibility="visible" />
 
@@ -66,6 +68,7 @@
         app:chipIconTint="@color/blue_700"
         app:layout_constraintBottom_toTopOf="@id/fav_chip"
         app:layout_constraintStart_toEndOf="@id/mainStatus"
+        app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/blue_A400"
         tools:visibility="visible" />
 
@@ -81,6 +84,7 @@
         app:chipIconTint="@color/red_600"
         app:layout_constraintBottom_toTopOf="@id/fav_chip"
         app:layout_constraintStart_toEndOf="@id/btnSaved"
+        app:layout_constraintTop_toTopOf="parent"
         app:rippleColor="@color/red_300"
         tools:visibility="visible" />
 
@@ -109,6 +113,7 @@
         app:chipBackgroundColor="@null"
         app:chipIcon="@drawable/ic_outline_person_pin_24"
         app:chipIconTint="@color/deep_orange_800"
+        app:layout_constraintBottom_toTopOf="@+id/mainFullName"
         app:layout_constraintStart_toEndOf="@id/mainProfileImage"
         app:layout_constraintTop_toBottomOf="@id/fav_chip"
         app:rippleColor="@color/deep_orange_400"
@@ -124,6 +129,7 @@
         app:chipBackgroundColor="@null"
         app:chipIcon="@drawable/ic_round_send_24"
         app:chipIconTint="@color/green"
+        app:layout_constraintBottom_toTopOf="@+id/mainFullName"
         app:layout_constraintStart_toEndOf="@id/btnTagged"
         app:layout_constraintTop_toBottomOf="@id/fav_chip"
         app:rippleColor="@color/green"
@@ -159,6 +165,23 @@
         app:layout_constraintStart_toEndOf="@id/mainFullName"
         app:layout_constraintTop_toBottomOf="@id/btnTagged"
         app:srcCompat="@drawable/verified"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/isPrivate"
+        android:layout_width="25dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:adjustViewBounds="true"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp"
+        android:scaleType="fitCenter"
+        android:tint="@color/red_500"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/mainFullName"
+        app:layout_constraintStart_toEndOf="@id/isVerified"
+        app:layout_constraintTop_toBottomOf="@id/btnTagged"
+        app:srcCompat="@drawable/lock"
         tools:visibility="visible" />
 
     <CheckBox
@@ -303,6 +326,7 @@
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/highlights_barrier"
         android:layout_width="wrap_content"
+        app:constraint_referenced_ids="mainPostCount, mainFollowers, mainFollowing"
         android:layout_height="wrap_content"
         app:barrierDirection="bottom" />
 

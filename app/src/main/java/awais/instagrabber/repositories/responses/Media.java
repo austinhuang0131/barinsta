@@ -9,6 +9,7 @@ import java.util.Map;
 import java.util.Objects;
 
 import awais.instagrabber.models.enums.MediaItemType;
+import awais.instagrabber.repositories.responses.feed.EndOfFeedDemarcator;
 import awais.instagrabber.utils.Utils;
 
 public class Media implements Serializable {

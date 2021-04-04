@@ -5,23 +5,16 @@
     android:id="@+id/notification_viewer_nav_graph"
     app:startDestination="@id/notificationsViewer">
 
-    <fragment
-        android:id="@+id/notificationsViewer"
-        android:name="awais.instagrabber.fragments.NotificationsViewerFragment"
-        android:label="@string/title_notifications"
-        tools:layout="@layout/fragment_notifications_viewer">
+    <include app:graph="@navigation/profile_nav_graph" />
+
+    <action
+        android:id="@+id/action_global_profileFragment"
+        app:destination="@id/profile_nav_graph">
         <argument
-            android:name="type"
+            android:name="username"
             app:argType="string"
-            app:nullable="false" />
-        <argument
-            android:name="targetId"
-            android:defaultValue="0L"
-            app:argType="long" />
-        <action
-            android:id="@+id/action_notificationsViewerFragment_to_storyViewerFragment"
-            app:destination="@id/storyViewerFragment" />
-    </fragment>
+            app:nullable="true" />
+    </action>
 
     <action
         android:id="@+id/action_global_notificationsViewerFragment"
@@ -87,5 +80,24 @@
         <argument
             android:name="options"
             app:argType="awais.instagrabber.repositories.requests.StoryViewerOptions" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationsViewer"
+        android:name="awais.instagrabber.fragments.NotificationsViewerFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications_viewer">
+        <argument
+            android:name="type"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue="notif"/>
+        <argument
+            android:name="targetId"
+            android:defaultValue="0L"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_notifications_to_story"
+            app:destination="@id/storyViewerFragment" />
     </fragment>
 </navigation>

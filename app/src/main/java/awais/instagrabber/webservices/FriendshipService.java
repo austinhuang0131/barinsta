@@ -25,7 +25,6 @@ import awais.instagrabber.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class FriendshipService extends BaseService {
     private static final String TAG = "FriendshipService";
@@ -42,10 +41,9 @@ public class FriendshipService extends BaseService {
         this.deviceUuid = deviceUuid;
         this.csrfToken = csrfToken;
         this.userId = userId;
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(FriendshipRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(FriendshipRepository.class);
     }
 
     public String getCsrfToken() {
@@ -168,8 +166,8 @@ public class FriendshipService extends BaseService {
         form.put("_uuid", deviceUuid);
         form.put(story ? "target_reel_author_id" : "target_posts_author_id", String.valueOf(targetUserId));
         final Call<FriendshipChangeResponse> request = repository.changeMute(unmute ?
-                                                                                "unmute_posts_or_story_from_follow" :
-                                                                                "mute_posts_or_story_from_follow",
+                                                                             "unmute_posts_or_story_from_follow" :
+                                                                             "mute_posts_or_story_from_follow",
                                                                              form);
         request.enqueue(new Callback<FriendshipChangeResponse>() {
             @Override
@@ -198,8 +196,8 @@ public class FriendshipService extends BaseService {
         if (maxId != null) queryMap.put("max_id", maxId);
         final Call<String> request = repository.getList(
                 targetUserId,
-                                                        follower ? "followers" : "following",
-                                                        queryMap);
+                follower ? "followers" : "following",
+                queryMap);
         request.enqueue(new Callback<String>() {
             @Override
             public void onResponse(@NonNull final Call<String> call, @NonNull final Response<String> response) {

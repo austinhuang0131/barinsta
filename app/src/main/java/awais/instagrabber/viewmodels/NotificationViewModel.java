@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.List;
 
-import awais.instagrabber.repositories.responses.Notification;
+import awais.instagrabber.repositories.responses.notification.Notification;
 
 public class NotificationViewModel extends ViewModel {
     private MutableLiveData<List<Notification>> list;

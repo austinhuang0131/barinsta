@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
+import java.util.function.Function;
 
 import awais.instagrabber.adapters.viewholder.directmessages.DirectItemActionLogViewHolder;
 import awais.instagrabber.adapters.viewholder.directmessages.DirectItemAnimatedMediaViewHolder;
@@ -34,6 +35,7 @@ import awais.instagrabber.adapters.viewholder.directmessages.DirectItemTextViewH
 import awais.instagrabber.adapters.viewholder.directmessages.DirectItemVideoCallEventViewHolder;
 import awais.instagrabber.adapters.viewholder.directmessages.DirectItemViewHolder;
 import awais.instagrabber.adapters.viewholder.directmessages.DirectItemVoiceMediaViewHolder;
+import awais.instagrabber.adapters.viewholder.directmessages.DirectItemXmaViewHolder;
 import awais.instagrabber.customviews.emoji.Emoji;
 import awais.instagrabber.databinding.LayoutDmActionLogBinding;
 import awais.instagrabber.databinding.LayoutDmAnimatedMediaBinding;
@@ -207,6 +209,11 @@ public final class DirectItemsAdapter extends RecyclerView.Adapter<RecyclerView.
                 final LayoutDmRavenMediaBinding binding = LayoutDmRavenMediaBinding.inflate(layoutInflater, baseBinding.message, false);
                 return new DirectItemRavenMediaViewHolder(baseBinding, binding, currentUser, thread, callback);
             }
+            case XMA: {
+                final LayoutDmAnimatedMediaBinding binding = LayoutDmAnimatedMediaBinding.inflate(layoutInflater, baseBinding.message, false);
+                return new DirectItemXmaViewHolder(baseBinding, binding, currentUser, thread, callback);
+            }
+            case UNKNOWN:
             default: {
                 final LayoutDmTextBinding binding = LayoutDmTextBinding.inflate(layoutInflater, baseBinding.message, false);
                 return new DirectItemDefaultViewHolder(baseBinding, binding, currentUser, thread, callback);
@@ -240,7 +247,11 @@ public final class DirectItemsAdapter extends RecyclerView.Adapter<RecyclerView.
         if (itemOrHeader.isHeader()) {
             return -1;
         }
-        return itemOrHeader.item.getItemType().getId();
+        final DirectItemType itemType = itemOrHeader.item.getItemType();
+        if (itemType == null) {
+            return 0;
+        }
+        return itemType.getId();
     }
 
     @Override
@@ -394,7 +405,7 @@ public final class DirectItemsAdapter extends RecyclerView.Adapter<RecyclerView.
 
         void onReactionClick(DirectItem item, int position);
 
-        void onOptionSelect(DirectItem item, @IdRes int itemId);
+        void onOptionSelect(DirectItem item, @IdRes int itemId, final Function<DirectItem, Void> callback);
     }
 
     public interface DirectItemInternalLongClickListener {

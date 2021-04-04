@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.IntentFilter;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -19,8 +20,6 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelStoreOwner;
-import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -28,7 +27,6 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.badge.BadgeUtils;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.util.List;
@@ -65,9 +63,7 @@ public class DirectMessageInboxFragment extends Fragment implements SwipeRefresh
         super.onCreate(savedInstanceState);
         fragmentActivity = (MainActivity) getActivity();
         if (fragmentActivity != null) {
-            final NavController navController = NavHostFragment.findNavController(this);
-            final ViewModelStoreOwner viewModelStoreOwner = navController.getViewModelStoreOwner(R.id.direct_messages_nav_graph);
-            viewModel = new ViewModelProvider(viewModelStoreOwner).get(DirectInboxViewModel.class);
+            viewModel = new ViewModelProvider(fragmentActivity).get(DirectInboxViewModel.class);
         }
         setHasOptionsMenu(true);
     }
@@ -100,10 +96,16 @@ public class DirectMessageInboxFragment extends Fragment implements SwipeRefresh
         }
     }
 
+    @SuppressLint("UnsafeExperimentalUsageError")
     @Override
     public void onPause() {
         super.onPause();
         unregisterReceiver();
+        isPendingRequestTotalBadgeAttached = false;
+        if (pendingRequestTotalBadgeDrawable != null) {
+            BadgeUtils.detachBadgeDrawable(pendingRequestTotalBadgeDrawable, fragmentActivity.getToolbar(), pendingRequestsMenuItem.getItemId());
+            pendingRequestTotalBadgeDrawable = null;
+        }
     }
 
     @Override
@@ -124,21 +126,13 @@ public class DirectMessageInboxFragment extends Fragment implements SwipeRefresh
     public void onDestroyView() {
         super.onDestroyView();
         unregisterReceiver();
-        isPendingRequestTotalBadgeAttached = false;
-        if (pendingRequestTotalBadgeDrawable != null) {
-            BadgeUtils.detachBadgeDrawable(pendingRequestTotalBadgeDrawable, fragmentActivity.getToolbar(), pendingRequestsMenuItem.getItemId());
-            pendingRequestTotalBadgeDrawable = null;
-        }
     }
 
     @Override
     public void onCreateOptionsMenu(@NonNull final Menu menu, @NonNull final MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        pendingRequestsMenuItem = menu.add(Menu.NONE, R.id.pending_requests, Menu.NONE, "Pending requests");
-        pendingRequestsMenuItem.setIcon(R.drawable.ic_account_clock_24)
-                               .setVisible(false)
-                               .setShowAsActionFlags(MenuItem.SHOW_AS_ACTION_ALWAYS);
-        attachPendingRequestsBadge(viewModel.getPendingRequestsTotal().getValue());
+        inflater.inflate(R.menu.dm_inbox_menu, menu);
+        pendingRequestsMenuItem = menu.findItem(R.id.pending_requests);
+        pendingRequestsMenuItem.setVisible(isPendingRequestTotalBadgeAttached);
     }
 
     @Override
@@ -203,17 +197,16 @@ public class DirectMessageInboxFragment extends Fragment implements SwipeRefresh
                     break;
             }
         });
-        viewModel.getUnseenCount().observe(getViewLifecycleOwner(), unseenCountResource -> {
-            if (unseenCountResource == null) return;
-            final Integer unseenCount = unseenCountResource.data;
-            setBottomNavBarBadge(unseenCount == null ? 0 : unseenCount);
-        });
         viewModel.getPendingRequestsTotal().observe(getViewLifecycleOwner(), this::attachPendingRequestsBadge);
     }
 
     @SuppressLint("UnsafeExperimentalUsageError")
     private void attachPendingRequestsBadge(@Nullable final Integer count) {
-        if (pendingRequestsMenuItem == null) return;
+        if (pendingRequestsMenuItem == null) {
+            final Handler handler = new Handler();
+            handler.postDelayed(() -> attachPendingRequestsBadge(count), 500);
+            return;
+        }
         if (pendingRequestTotalBadgeDrawable == null) {
             final Context context = getContext();
             if (context == null) return;
@@ -269,21 +262,5 @@ public class DirectMessageInboxFragment extends Fragment implements SwipeRefresh
             viewModel.fetchInbox();
         });
         binding.inboxList.addOnScrollListener(lazyLoader);
-    }
-
-    private void setBottomNavBarBadge(final int unseenCount) {
-        final BottomNavigationView bottomNavView = fragmentActivity.getBottomNavView();
-        final BadgeDrawable badge = bottomNavView.getOrCreateBadge(R.id.direct_messages_nav_graph);
-        if (badge == null) return;
-        if (unseenCount == 0) {
-            badge.setVisible(false);
-            badge.clearNumber();
-            return;
-        }
-        if (badge.getVerticalOffset() != 10) {
-            badge.setVerticalOffset(10);
-        }
-        badge.setNumber(unseenCount);
-        badge.setVisible(true);
     }
 }

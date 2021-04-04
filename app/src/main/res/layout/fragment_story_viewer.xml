@@ -9,8 +9,7 @@
         android:id="@+id/story_container"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        app:layout_constraintBottom_toTopOf="@id/storiesList"
+        app:layout_constraintBottom_toTopOf="@id/postActions"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -37,93 +36,98 @@
             android:layout_gravity="center"
             android:visibility="gone" />
 
-        <androidx.appcompat.widget.LinearLayoutCompat
-            android:id="@+id/postActions"
+    </FrameLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/postActions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintTop_toBottomOf="@id/story_container"
+        app:layout_constraintBottom_toTopOf="@id/storiesList"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="#0000">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/viewStoryPost"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:background="#0000">
+            android:layout_weight="1"
+            android:text="@string/view_story_post"
+            android:textColor="@color/btn_green_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_green_background" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/viewStoryPost"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/view_story_post"
-                android:textColor="@color/btn_green_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_green_background" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/poll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/vote_story_poll"
+            android:textColor="@color/btn_blue_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_blue_background" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/poll"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/vote_story_poll"
-                android:textColor="@color/btn_blue_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_blue_background" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/answer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/respond_story"
+            android:textColor="@color/btn_blue_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_blue_background" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/answer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/respond_story"
-                android:textColor="@color/btn_blue_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_blue_background" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/quiz"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/story_quiz"
+            android:textColor="@color/btn_blue_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_blue_background" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/quiz"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/story_quiz"
-                android:textColor="@color/btn_blue_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_blue_background" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/story_slider"
+            android:textColor="@color/btn_blue_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_blue_background" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/slider"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/story_slider"
-                android:textColor="@color/btn_blue_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_blue_background" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/swipeUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SAMPLE TEXT"
+            android:textColor="@color/btn_blue_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_blue_background" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/mention"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/story_mentions"
+            android:textColor="@color/btn_orange_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_orange_background" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/swipeUp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="SAMPLE TEXT"
-                android:textColor="@color/btn_blue_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_blue_background" />
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/mention"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/story_mentions"
-                android:textColor="@color/btn_orange_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_orange_background" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/spotify"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/spotify"
-                android:textColor="@color/btn_green_text_color"
-                android:visibility="gone"
-                app:backgroundTint="@color/btn_green_background" />
-        </androidx.appcompat.widget.LinearLayoutCompat>
-    </FrameLayout>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/spotify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/spotify"
+            android:textColor="@color/btn_green_text_color"
+            android:visibility="gone"
+            app:backgroundTint="@color/btn_green_background" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnBackward"
@@ -144,7 +148,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        app:layout_constraintTop_toBottomOf="@id/story_container"
+        app:layout_constraintTop_toBottomOf="@id/postActions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnForward"
         app:layout_constraintStart_toEndOf="@id/btnBackward" />

@@ -44,7 +44,7 @@ public class DirectItemActionLog implements Serializable {
         return Objects.hash(description, bold, textAttributes);
     }
 
-    public static class TextRange {
+    public static class TextRange implements Serializable {
         private final int start;
         private final int end;
         private final String color;

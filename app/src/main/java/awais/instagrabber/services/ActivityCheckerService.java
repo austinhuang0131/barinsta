@@ -18,12 +18,10 @@ import java.util.List;
 
 import awais.instagrabber.R;
 import awais.instagrabber.activities.MainActivity;
-import awais.instagrabber.repositories.responses.NotificationCounts;
+import awais.instagrabber.repositories.responses.notification.NotificationCounts;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.webservices.NewsService;
 import awais.instagrabber.webservices.ServiceCallback;
-
-import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public class ActivityCheckerService extends Service {
     private static final String TAG = "ActivityCheckerService";

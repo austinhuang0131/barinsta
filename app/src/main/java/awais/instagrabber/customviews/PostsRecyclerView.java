@@ -22,6 +22,7 @@ import androidx.work.WorkManager;
 import com.google.common.collect.ImmutableList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -74,11 +75,10 @@ public class PostsRecyclerView extends RecyclerView {
             }
             final List<Media> models = mediaViewModel.getList().getValue();
             final List<Media> modelsCopy = models == null ? new ArrayList<>() : new ArrayList<>(models);
-            if (settingsHelper.getBoolean(Constants.TOGGLE_KEYWORD_FILTER)){
+            if (settingsHelper.getBoolean(Constants.TOGGLE_KEYWORD_FILTER)) {
                 final ArrayList<String> items = new ArrayList<>(settingsHelper.getStringSet(Constants.KEYWORD_FILTERS));
                 modelsCopy.addAll(new KeywordsFilterUtils(items).filter(result));
-            }
-            else {
+            } else {
                 modelsCopy.addAll(result);
             }
             mediaViewModel.getList().postValue(modelsCopy);
@@ -194,7 +194,9 @@ public class PostsRecyclerView extends RecyclerView {
     private void initSelf() {
         mediaViewModel = new ViewModelProvider(viewModelStoreOwner).get(MediaViewModel.class);
         mediaViewModel.getList().observe(lifeCycleOwner, list -> {
-            if (list.size() > 0) feedAdapter.submitList(list, () -> {
+            if (list.size() <= 0) return;
+            feedAdapter.submitList(list, () -> {
+                // postDelayed(this::fetchMoreIfPossible, 1000);
                 if (!shouldScrollToTop) return;
                 smoothScrollToPosition(0);
                 shouldScrollToTop = false;
@@ -213,6 +215,20 @@ public class PostsRecyclerView extends RecyclerView {
             }
         });
         addOnScrollListener(lazyLoader);
+        postFetcher.fetch();
+        dispatchFetchStatus();
+    }
+
+    private void fetchMoreIfPossible() {
+        if (!postFetcher.hasMore()) return;
+        if (feedAdapter.getItemCount() == 0) return;
+        final LayoutManager layoutManager = getLayoutManager();
+        if (!(layoutManager instanceof StaggeredGridLayoutManager)) return;
+        final int[] itemPositions = ((StaggeredGridLayoutManager) layoutManager).findLastCompletelyVisibleItemPositions(null);
+        final boolean allNoPosition = Arrays.stream(itemPositions).allMatch(position -> position == RecyclerView.NO_POSITION);
+        if (allNoPosition) return;
+        final boolean match = Arrays.stream(itemPositions).anyMatch(position -> position == feedAdapter.getItemCount() - 1);
+        if (!match) return;
         postFetcher.fetch();
         dispatchFetchStatus();
     }

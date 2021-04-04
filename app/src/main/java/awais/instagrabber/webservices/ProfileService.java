@@ -23,7 +23,6 @@ import awais.instagrabber.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class ProfileService extends BaseService {
     private static final String TAG = "ProfileService";
@@ -33,10 +32,9 @@ public class ProfileService extends BaseService {
     private static ProfileService instance;
 
     private ProfileService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(ProfileRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(ProfileRepository.class);
     }
 
     public static ProfileService getInstance() {
@@ -104,9 +102,9 @@ public class ProfileService extends BaseService {
                     posts = Collections.emptyList();
                 } else {
                     posts = items.stream()
-                            .map(WrappedMedia::getMedia)
-                            .filter(Objects::nonNull)
-                            .collect(Collectors.toList());
+                                 .map(WrappedMedia::getMedia)
+                                 .filter(Objects::nonNull)
+                                 .collect(Collectors.toList());
                 }
                 callback.onSuccess(new PostsFetchResponse(
                         posts,

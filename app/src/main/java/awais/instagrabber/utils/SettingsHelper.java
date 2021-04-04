@@ -15,6 +15,8 @@ import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_ENABLE_D
 import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_ENABLE_DM_AUTO_REFRESH_FREQ_NUMBER;
 import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_ENABLE_DM_AUTO_REFRESH_FREQ_UNIT;
 import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_ENABLE_DM_NOTIFICATIONS;
+import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_ENABLE_SENTRY;
+import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_TAB_ORDER;
 import static awais.instagrabber.utils.Constants.APP_LANGUAGE;
 import static awais.instagrabber.utils.Constants.APP_THEME;
 import static awais.instagrabber.utils.Constants.APP_UA;
@@ -32,16 +34,18 @@ import static awais.instagrabber.utils.Constants.DATE_TIME_SELECTION;
 import static awais.instagrabber.utils.Constants.DEFAULT_TAB;
 import static awais.instagrabber.utils.Constants.DEVICE_UUID;
 import static awais.instagrabber.utils.Constants.DM_MARK_AS_SEEN;
+import static awais.instagrabber.utils.Constants.DOWNLOAD_PREPEND_USER_NAME;
 import static awais.instagrabber.utils.Constants.DOWNLOAD_USER_FOLDER;
 import static awais.instagrabber.utils.Constants.FLAG_SECURE;
 import static awais.instagrabber.utils.Constants.FOLDER_PATH;
 import static awais.instagrabber.utils.Constants.FOLDER_SAVE_TO;
+import static awais.instagrabber.utils.Constants.HIDE_MUTED_REELS;
+import static awais.instagrabber.utils.Constants.KEYWORD_FILTERS;
 import static awais.instagrabber.utils.Constants.MARK_AS_SEEN;
 import static awais.instagrabber.utils.Constants.MUTED_VIDEOS;
 import static awais.instagrabber.utils.Constants.PREF_DARK_THEME;
 import static awais.instagrabber.utils.Constants.PREF_EMOJI_VARIANTS;
 import static awais.instagrabber.utils.Constants.PREF_HASHTAG_POSTS_LAYOUT;
-import static awais.instagrabber.utils.Constants.KEYWORD_FILTERS;
 import static awais.instagrabber.utils.Constants.PREF_LIGHT_THEME;
 import static awais.instagrabber.utils.Constants.PREF_LIKED_POSTS_LAYOUT;
 import static awais.instagrabber.utils.Constants.PREF_LOCATION_POSTS_LAYOUT;
@@ -145,18 +149,22 @@ public final class SettingsHelper {
         if (sharedPreferences != null) sharedPreferences.edit().putBoolean(key, val).apply();
     }
 
+    public boolean hasPreference(final String key) {
+        return sharedPreferences != null && sharedPreferences.contains(key);
+    }
+
     @StringDef(
             {APP_LANGUAGE, APP_THEME, APP_UA, BROWSER_UA, COOKIE, FOLDER_PATH, DATE_TIME_FORMAT, DATE_TIME_SELECTION,
                     CUSTOM_DATE_TIME_FORMAT, DEVICE_UUID, SKIPPED_VERSION, DEFAULT_TAB, PREF_DARK_THEME, PREF_LIGHT_THEME,
                     PREF_POSTS_LAYOUT, PREF_PROFILE_POSTS_LAYOUT, PREF_TOPIC_POSTS_LAYOUT, PREF_HASHTAG_POSTS_LAYOUT,
                     PREF_LOCATION_POSTS_LAYOUT, PREF_LIKED_POSTS_LAYOUT, PREF_TAGGED_POSTS_LAYOUT, PREF_SAVED_POSTS_LAYOUT,
-                    STORY_SORT, PREF_EMOJI_VARIANTS, PREF_REACTIONS, PREF_ENABLE_DM_AUTO_REFRESH_FREQ_UNIT})
+                    STORY_SORT, PREF_EMOJI_VARIANTS, PREF_REACTIONS, PREF_ENABLE_DM_AUTO_REFRESH_FREQ_UNIT, PREF_TAB_ORDER})
     public @interface StringSettings {}
 
-    @StringDef({DOWNLOAD_USER_FOLDER, FOLDER_SAVE_TO, AUTOPLAY_VIDEOS, SHOW_QUICK_ACCESS_DIALOG, MUTED_VIDEOS,
+    @StringDef({DOWNLOAD_USER_FOLDER, DOWNLOAD_PREPEND_USER_NAME, FOLDER_SAVE_TO, AUTOPLAY_VIDEOS, SHOW_QUICK_ACCESS_DIALOG, MUTED_VIDEOS,
                        SHOW_CAPTIONS, CUSTOM_DATE_TIME_FORMAT_ENABLED, MARK_AS_SEEN, DM_MARK_AS_SEEN, CHECK_ACTIVITY,
                        CHECK_UPDATES, SWAP_DATE_TIME_FORMAT_ENABLED, PREF_ENABLE_DM_NOTIFICATIONS, PREF_ENABLE_DM_AUTO_REFRESH,
-                       FLAG_SECURE, TOGGLE_KEYWORD_FILTER})
+                       FLAG_SECURE, TOGGLE_KEYWORD_FILTER, PREF_ENABLE_SENTRY, HIDE_MUTED_REELS})
     public @interface BooleanSettings {}
 
     @StringDef({PREV_INSTALL_VERSION, BROWSER_UA_CODE, APP_UA_CODE, PREF_ENABLE_DM_AUTO_REFRESH_FREQ_NUMBER})

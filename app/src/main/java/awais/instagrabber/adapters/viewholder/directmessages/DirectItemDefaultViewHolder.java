@@ -24,12 +24,18 @@ public class DirectItemDefaultViewHolder extends DirectItemViewHolder {
                                        final DirectItemCallback callback) {
         super(baseBinding, currentUser, thread, callback);
         this.binding = binding;
+        setItemView(binding.getRoot());
     }
 
     @Override
     public void bindItem(final DirectItem directItemModel, final MessageDirection messageDirection) {
         final Context context = itemView.getContext();
         binding.tvMessage.setText(context.getText(R.string.dms_inbox_raven_message_unknown));
+    }
+
+    @Override
+    protected boolean showBackground() {
+        return true;
     }
 
     @Override

@@ -130,6 +130,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".activities.MainActivity" />
         </activity>
+        <activity
+            android:name=".utils.ProcessPhoenix"
+            android:theme="@style/Theme.AppCompat.Translucent" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

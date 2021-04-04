@@ -8,13 +8,16 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.facebook.drawee.generic.GenericDraweeHierarchyBuilder;
 import com.facebook.drawee.generic.RoundingParams;
+import com.google.common.collect.ImmutableList;
+
+import java.util.List;
 
 import awais.instagrabber.R;
 import awais.instagrabber.adapters.DirectItemsAdapter.DirectItemCallback;
+import awais.instagrabber.customviews.DirectItemContextMenu;
 import awais.instagrabber.databinding.LayoutDmBaseBinding;
 import awais.instagrabber.databinding.LayoutDmReelShareBinding;
 import awais.instagrabber.models.enums.MediaItemType;
-import awais.instagrabber.repositories.responses.ImageVersions2;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.repositories.responses.directmessages.DirectItem;
@@ -22,10 +25,12 @@ import awais.instagrabber.repositories.responses.directmessages.DirectItemReelSh
 import awais.instagrabber.repositories.responses.directmessages.DirectThread;
 import awais.instagrabber.utils.ResponseBodyUtils;
 import awais.instagrabber.utils.TextUtils;
+import awais.instagrabber.utils.Utils;
 
 public class DirectItemReelShareViewHolder extends DirectItemViewHolder {
 
     private final LayoutDmReelShareBinding binding;
+    private String type;
 
     public DirectItemReelShareViewHolder(@NonNull final LayoutDmBaseBinding baseBinding,
                                          @NonNull final LayoutDmReelShareBinding binding,
@@ -40,7 +45,7 @@ public class DirectItemReelShareViewHolder extends DirectItemViewHolder {
     @Override
     public void bindItem(final DirectItem item, final MessageDirection messageDirection) {
         final DirectItemReelShare reelShare = item.getReelShare();
-        final String type = reelShare.getType();
+        type = reelShare.getType();
         if (type == null) return;
         final boolean isSelf = isSelf(item);
         final Media media = reelShare.getMedia();
@@ -169,5 +174,21 @@ public class DirectItemReelShareViewHolder extends DirectItemViewHolder {
     @Override
     protected boolean canForward() {
         return false;
+    }
+
+    @Override
+    protected List<DirectItemContextMenu.MenuItem> getLongClickOptions() {
+        final ImmutableList.Builder<DirectItemContextMenu.MenuItem> builder = ImmutableList.builder();
+        if (type != null && type.equals("reply")) {
+            builder.add(new DirectItemContextMenu.MenuItem(R.id.copy, R.string.copy_reply, item -> {
+                final DirectItemReelShare reelShare = item.getReelShare();
+                if (reelShare == null) return null;
+                final String text = reelShare.getText();
+                if (TextUtils.isEmpty(text)) return null;
+                Utils.copyText(itemView.getContext(), text);
+                return null;
+            }));
+        }
+        return builder.build();
     }
 }

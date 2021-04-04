@@ -29,12 +29,14 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.core.util.Pair;
 
 import java.util.List;
+import java.util.function.Function;
 
 import awais.instagrabber.R;
 import awais.instagrabber.animations.RoundedRectRevealOutlineProvider;
 import awais.instagrabber.customviews.emoji.Emoji;
 import awais.instagrabber.customviews.emoji.ReactionsManager;
 import awais.instagrabber.databinding.LayoutDirectItemOptionsBinding;
+import awais.instagrabber.repositories.responses.directmessages.DirectItem;
 
 import static android.view.View.MeasureSpec.makeMeasureSpec;
 
@@ -345,7 +347,7 @@ public class DirectItemContextMenu extends PopupWindow {
             textView.setText(context.getString(menuItem.getTitleRes()));
             textView.setOnClickListener(v -> {
                 if (onOptionSelectListener != null) {
-                    onOptionSelectListener.onSelect(menuItem.getItemId());
+                    onOptionSelectListener.onSelect(menuItem.getItemId(), menuItem.getCallback());
                 }
                 dismiss();
             });
@@ -397,9 +399,19 @@ public class DirectItemContextMenu extends PopupWindow {
         @StringRes
         private final int titleRes;
 
+        /**
+         * Callback function
+         */
+        private final Function<DirectItem, Void> callback;
+
         public MenuItem(@IdRes final int itemId, @StringRes final int titleRes) {
+            this(itemId, titleRes, null);
+        }
+
+        public MenuItem(@IdRes final int itemId, @StringRes final int titleRes, @Nullable final Function<DirectItem, Void> callback) {
             this.itemId = itemId;
             this.titleRes = titleRes;
+            this.callback = callback;
         }
 
         public int getItemId() {
@@ -409,10 +421,14 @@ public class DirectItemContextMenu extends PopupWindow {
         public int getTitleRes() {
             return titleRes;
         }
+
+        public Function<DirectItem, Void> getCallback() {
+            return callback;
+        }
     }
 
     public interface OnOptionSelectListener {
-        void onSelect(int itemId);
+        void onSelect(int itemId, @Nullable Function<DirectItem, Void> callback);
     }
 
     public interface OnReactionClickListener {

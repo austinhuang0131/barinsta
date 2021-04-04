@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="profile_info_container_bottom_space">8dp</dimen>
-    <dimen name="private_page_margins">@dimen/profile_picture_size</dimen>
+    <dimen name="private_page_margins">30dp</dimen>
+    <dimen name="private_page_size">90dp</dimen>
 
     <dimen name="profile_picture_size">90dp</dimen>
     <dimen name="profile_chip_size">40dp</dimen>

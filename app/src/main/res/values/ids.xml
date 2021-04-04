@@ -4,5 +4,5 @@
     <item name="unsend" type="id" />
     <item name="forward" type="id" />
     <item name="detail" type="id" />
-    <item name="pending_requests" type="id" />
+    <item name="copy" type="id" />
 </resources>

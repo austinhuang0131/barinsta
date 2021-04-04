@@ -5,13 +5,14 @@ import androidx.annotation.NonNull;
 import com.google.common.collect.ImmutableMap;
 
 import awais.instagrabber.repositories.LocationRepository;
+import awais.instagrabber.repositories.responses.Location;
 import awais.instagrabber.repositories.responses.LocationFeedResponse;
+import awais.instagrabber.repositories.responses.Place;
 import awais.instagrabber.repositories.responses.PostsFetchResponse;
 import awais.instagrabber.utils.TextUtils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class LocationService extends BaseService {
     private static final String TAG = "LocationService";
@@ -21,10 +22,9 @@ public class LocationService extends BaseService {
     private static LocationService instance;
 
     private LocationService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(LocationRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(LocationRepository.class);
     }
 
     public static LocationService getInstance() {
@@ -69,34 +69,24 @@ public class LocationService extends BaseService {
         });
     }
 
-    // private PostsFetchResponse parseResponse(@NonNull final String body) throws JSONException {
-    //     final JSONObject root = new JSONObject(body);
-    //     final boolean moreAvailable = root.optBoolean("more_available");
-    //     final String nextMaxId = root.optString("next_max_id");
-    //     final JSONArray itemsJson = root.optJSONArray("items");
-    //     final List<FeedModel> items = parseItems(itemsJson);
-    //     return new PostsFetchResponse(
-    //             items,
-    //             moreAvailable,
-    //             nextMaxId
-    //     );
-    // }
+    public void fetch(@NonNull final long locationId,
+                      final ServiceCallback<Location> callback) {
+        final Call<Place> request = repository.fetch(locationId);
+        request.enqueue(new Callback<Place>() {
+            @Override
+            public void onResponse(@NonNull final Call<Place> call, @NonNull final Response<Place> response) {
+                if (callback == null) {
+                    return;
+                }
+                callback.onSuccess(response.body() == null ? null : response.body().getLocation());
+            }
 
-    // private List<FeedModel> parseItems(final JSONArray items) throws JSONException {
-    //     if (items == null) {
-    //         return Collections.emptyList();
-    //     }
-    //     final List<FeedModel> feedModels = new ArrayList<>();
-    //     for (int i = 0; i < items.length(); i++) {
-    //         final JSONObject itemJson = items.optJSONObject(i);
-    //         if (itemJson == null) {
-    //             continue;
-    //         }
-    //         final FeedModel feedModel = ResponseBodyUtils.parseItem(itemJson);
-    //         if (feedModel != null) {
-    //             feedModels.add(feedModel);
-    //         }
-    //     }
-    //     return feedModels;
-    // }
+            @Override
+            public void onFailure(@NonNull final Call<Place> call, @NonNull final Throwable t) {
+                if (callback != null) {
+                    callback.onFailure(t);
+                }
+            }
+        });
+    }
 }

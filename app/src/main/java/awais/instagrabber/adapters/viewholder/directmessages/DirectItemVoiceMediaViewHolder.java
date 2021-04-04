@@ -12,12 +12,14 @@ import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.SimpleExoPlayer;
 import com.google.android.exoplayer2.source.ProgressiveMediaSource;
 import com.google.android.exoplayer2.upstream.DefaultDataSourceFactory;
+import com.google.common.collect.ImmutableList;
 import com.google.common.primitives.Floats;
 
 import java.util.List;
 
 import awais.instagrabber.R;
 import awais.instagrabber.adapters.DirectItemsAdapter.DirectItemCallback;
+import awais.instagrabber.customviews.DirectItemContextMenu;
 import awais.instagrabber.databinding.LayoutDmBaseBinding;
 import awais.instagrabber.databinding.LayoutDmVoiceMediaBinding;
 import awais.instagrabber.repositories.responses.Audio;
@@ -172,6 +174,13 @@ public class DirectItemVoiceMediaViewHolder extends DirectItemViewHolder {
     @Override
     protected boolean canForward() {
         return false;
+    }
+
+    @Override
+    protected List<DirectItemContextMenu.MenuItem> getLongClickOptions() {
+        return ImmutableList.of(
+                new DirectItemContextMenu.MenuItem(R.id.download, R.string.action_download)
+        );
     }
 
     private static class AudioItemState {

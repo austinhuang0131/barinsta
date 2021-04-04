@@ -2,8 +2,6 @@ package awais.instagrabber.utils;
 
 import android.content.Context;
 import android.text.SpannableString;
-import android.text.SpannableStringBuilder;
-import android.text.Spanned;
 import android.text.format.DateFormat;
 import android.text.format.DateUtils;
 import android.text.style.URLSpan;
@@ -11,17 +9,12 @@ import android.util.Patterns;
 
 import androidx.annotation.NonNull;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.Locale;
 import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import awais.instagrabber.customviews.CommentMentionClickSpan;
 
 public final class TextUtils {
     // extracted from String class
@@ -69,7 +62,7 @@ public final class TextUtils {
             str = str.trim();
             return "".equals(str) || "null".equals(str) || str.isEmpty();
         }
-        return "null".contentEquals(charSequence) || "".contentEquals(charSequence) || charSequence.length() < 1;
+        return "null".contentEquals(charSequence) || "".contentEquals(charSequence);
     }
 
     public static String millisToTimeString(final long millis) {

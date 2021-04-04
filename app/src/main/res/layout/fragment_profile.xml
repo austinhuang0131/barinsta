@@ -50,8 +50,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/privatePage1"
-            android:layout_width="@dimen/private_page_margins"
-            android:layout_height="@dimen/private_page_margins"
+            android:layout_width="@dimen/private_page_size"
+            android:layout_height="@dimen/private_page_size"
             app:srcCompat="@drawable/lock" />
 
         <androidx.appcompat.widget.AppCompatTextView

@@ -1,6 +1,8 @@
 package awais.instagrabber.utils;
 
 public final class Constants {
+    public static final String CRASH_REPORT_EMAIL = "barinsta@austinhuang.me";
+
     // string prefs
     public static final String FOLDER_PATH = "custom_path";
     public static final String DATE_TIME_FORMAT = "date_time_format";
@@ -18,6 +20,7 @@ public final class Constants {
     // boolean prefs
     public static final String DOWNLOAD_USER_FOLDER = "download_user_folder";
     public static final String TOGGLE_KEYWORD_FILTER = "toggle_keyword_filter";
+    public static final String DOWNLOAD_PREPEND_USER_NAME = "download_user_name";
     // deprecated: public static final String BOTTOM_TOOLBAR = "bottom_toolbar";
     public static final String FOLDER_SAVE_TO = "saved_to";
     public static final String AUTOPLAY_VIDEOS = "autoplay_videos";
@@ -26,6 +29,7 @@ public final class Constants {
     public static final String CUSTOM_DATE_TIME_FORMAT_ENABLED = "data_time_custom_enabled";
     public static final String SWAP_DATE_TIME_FORMAT_ENABLED = "swap_date_time_enabled";
     public static final String MARK_AS_SEEN = "mark_as_seen";
+    public static final String HIDE_MUTED_REELS = "hide_muted_reels";
     public static final String DM_MARK_AS_SEEN = "dm_mark_as_seen";
     // deprecated: public static final String INSTADP = "instadp";
     // deprecated: public static final String STORIESIG = "storiesig";
@@ -77,7 +81,6 @@ public final class Constants {
 //    public static final String SIGNATURE_KEY = "9193488027538fd3450b83b7d05286d4ca9599a0f7eeed90d8c85925698a05dc";
     public static final String BREADCRUMB_KEY = "iN4$aGr0m";
     public static final int LOGIN_RESULT_CODE = 5000;
-    public static final String FDROID_SHA1_FINGERPRINT = "C1661EB8FD09F618307E687786D5E5056F65084D";
     public static final String SKIPPED_VERSION = "skipped_version";
     public static final String DEFAULT_TAB = "default_tab";
     public static final String PREF_DARK_THEME = "dark_theme";
@@ -111,6 +114,7 @@ public final class Constants {
     public static final int SHOW_ACTIVITY_REQUEST_CODE = 1738;
     public static final int SHOW_DM_THREAD = 2000;
     public static final int DM_SYNC_SERVICE_REQUEST_CODE = 3000;
+    public static final int GLOBAL_NETWORK_ERROR_DIALOG_REQUEST_CODE = 7777;
 
     public static final String ACTION_SHOW_ACTIVITY = "show_activity";
     public static final String ACTION_SHOW_DM_THREAD = "show_dm_thread";

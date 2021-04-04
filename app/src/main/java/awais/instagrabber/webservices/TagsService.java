@@ -21,7 +21,6 @@ import awais.instagrabber.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class TagsService extends BaseService {
 
@@ -32,10 +31,9 @@ public class TagsService extends BaseService {
     private final TagsRepository repository;
 
     private TagsService() {
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com/")
-                .build();
-        repository = retrofit.create(TagsRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(TagsRepository.class);
     }
 
     public static TagsService getInstance() {

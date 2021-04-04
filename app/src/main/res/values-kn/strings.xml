@@ -23,6 +23,7 @@
     <string name="update_check">Check for updates at startup</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Download posts to username folders</string>
+    <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Mark stories as seen after viewing</string>
     <string name="mark_as_seen_setting_summary">Story author will know you viewed it</string>
     <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>

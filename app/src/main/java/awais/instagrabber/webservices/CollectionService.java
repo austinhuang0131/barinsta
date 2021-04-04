@@ -1,5 +1,7 @@
 package awais.instagrabber.webservices;
 
+import android.text.TextUtils;
+
 import androidx.annotation.NonNull;
 
 import java.util.HashMap;
@@ -14,7 +16,6 @@ import awais.instagrabber.utils.Utils;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
 
 public class CollectionService extends BaseService {
     private static final String TAG = "ProfileService";
@@ -31,10 +32,9 @@ public class CollectionService extends BaseService {
         this.deviceUuid = deviceUuid;
         this.csrfToken = csrfToken;
         this.userId = userId;
-        final Retrofit retrofit = getRetrofitBuilder()
-                .baseUrl("https://i.instagram.com")
-                .build();
-        repository = retrofit.create(CollectionRepository.class);
+        repository = RetrofitFactory.getInstance()
+                                    .getRetrofit()
+                                    .create(CollectionRepository.class);
     }
 
     public String getCsrfToken() {
@@ -66,10 +66,10 @@ public class CollectionService extends BaseService {
         form.put("module_name", "feed_saved_add_to_collection");
         final List<String> ids;
         ids = posts.stream()
-                .map(Media::getPk)
-                .filter(Objects::nonNull)
-                .collect(Collectors.toList());
-        form.put("added_media_ids", "[" + String.join(",", ids) + "]");
+                   .map(Media::getPk)
+                   .filter(Objects::nonNull)
+                   .collect(Collectors.toList());
+        form.put("added_media_ids", "[" + TextUtils.join(",", ids) + "]");
         changeCollection(collectionId, "edit", form, callback);
     }
 

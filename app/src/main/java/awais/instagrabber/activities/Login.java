@@ -24,7 +24,7 @@ import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.TextUtils;
 
-public final class Login extends BaseLanguageActivity implements View.OnClickListener, CompoundButton.OnCheckedChangeListener {
+public final class Login extends BaseLanguageActivity implements View.OnClickListener {
     private final WebViewClient webViewClient = new WebViewClient() {
         @Override
         public void onPageStarted(final WebView view, final String url, final Bitmap favicon) {
@@ -53,7 +53,7 @@ public final class Login extends BaseLanguageActivity implements View.OnClickLis
     }
 
     private final WebChromeClient webChromeClient = new WebChromeClient();
-    private String webViewUrl, defaultUserAgent;
+    private String webViewUrl;
     private boolean ready = false;
     private ActivityLoginBinding loginBinding;
 
@@ -65,7 +65,6 @@ public final class Login extends BaseLanguageActivity implements View.OnClickLis
 
         initWebView();
 
-        loginBinding.desktopMode.setOnCheckedChangeListener(this);
         loginBinding.cookies.setOnClickListener(this);
         loginBinding.refresh.setOnClickListener(this);
     }
@@ -86,23 +85,6 @@ public final class Login extends BaseLanguageActivity implements View.OnClickLis
         }
     }
 
-    @Override
-    public void onCheckedChanged(final CompoundButton buttonView, final boolean isChecked) {
-        final WebSettings webSettings = loginBinding.webView.getSettings();
-
-        final String newUserAgent = isChecked
-                                    ? "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36"
-                                    : defaultUserAgent;
-
-        webSettings.setUserAgentString(newUserAgent);
-        webSettings.setUseWideViewPort(isChecked);
-        webSettings.setLoadWithOverviewMode(isChecked);
-        webSettings.setSupportZoom(isChecked);
-        webSettings.setBuiltInZoomControls(isChecked);
-
-        loginBinding.webView.loadUrl("https://instagram.com/");
-    }
-
     @SuppressLint("SetJavaScriptEnabled")
     private void initWebView() {
         if (loginBinding != null) {
@@ -110,7 +92,7 @@ public final class Login extends BaseLanguageActivity implements View.OnClickLis
             loginBinding.webView.setWebViewClient(webViewClient);
             final WebSettings webSettings = loginBinding.webView.getSettings();
             if (webSettings != null) {
-                if (defaultUserAgent == null) defaultUserAgent = webSettings.getUserAgentString();
+                webSettings.setUserAgentString("Mozilla/5.0 (Linux; Android 10) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/89.0.4389.105 Mobile Safari/537.36");
                 webSettings.setJavaScriptEnabled(true);
                 webSettings.setDomStorageEnabled(true);
                 webSettings.setSupportZoom(true);

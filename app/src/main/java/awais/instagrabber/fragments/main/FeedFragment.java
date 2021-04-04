@@ -83,9 +83,12 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             new FeedStoriesAdapter.OnFeedStoryClickListener() {
                 @Override
                 public void onFeedStoryClick(FeedStoryModel model, int position) {
-                    final NavDirections action = FeedFragmentDirections
-                            .actionFeedFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStoryPosition(position));
-                    NavHostFragment.findNavController(FeedFragment.this).navigate(action);
+                    final NavController navController = NavHostFragment.findNavController(FeedFragment.this);
+                    if (isSafeToNavigate(navController)) {
+                        final NavDirections action = FeedFragmentDirections
+                                .actionFeedFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStoryPosition(position));
+                        navController.navigate(action);
+                    }
                 }
 
                 @Override
@@ -436,5 +439,10 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     public void scrollToTop() {
         binding.feedRecyclerView.smoothScrollToPosition(0);
         // binding.storiesContainer.setExpanded(true);
+    }
+
+    private boolean isSafeToNavigate(final NavController navController) {
+        return navController.getCurrentDestination() != null
+                && navController.getCurrentDestination().getId() == R.id.feedFragment;
     }
 }

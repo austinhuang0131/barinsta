@@ -1,6 +1,9 @@
 package awais.instagrabber.utils.emoji;
 
+import android.content.Context;
 import android.util.Log;
+
+import androidx.annotation.NonNull;
 
 import com.google.common.collect.ImmutableList;
 import com.google.gson.FieldNamingPolicy;
@@ -18,6 +21,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import awais.instagrabber.R;
 import awais.instagrabber.customviews.emoji.Emoji;
 import awais.instagrabber.customviews.emoji.EmojiCategory;
 import awais.instagrabber.customviews.emoji.EmojiCategoryType;
@@ -33,25 +37,25 @@ public final class EmojiParser {
     private Map<EmojiCategoryType, EmojiCategory> categoryMap = Collections.emptyMap();
     private ImmutableList<EmojiCategory> categories;
 
-    public static EmojiParser getInstance() {
+    public static void setup(@NonNull final Context context) {
         if (instance == null) {
             synchronized (LOCK) {
                 if (instance == null) {
-                    instance = new EmojiParser();
+                    instance = new EmojiParser(context);
                 }
             }
+        }
+    }
+
+    public static EmojiParser getInstance() {
+        if (instance == null) {
+            throw new RuntimeException("Setup not done!");
         }
         return instance;
     }
 
-    private EmojiParser() {
-        final String file = "res/raw/emojis.json";
-        final ClassLoader classLoader = getClass().getClassLoader();
-        if (classLoader == null) {
-            Log.e(TAG, "Emoji: classLoader is null");
-            return;
-        }
-        try (final InputStream in = classLoader.getResourceAsStream(file)) {
+    private EmojiParser(final Context context) {
+        try (final InputStream in = context.getResources().openRawResource(R.raw.emojis)) {
             final String json = NetworkUtils.readFromInputStream(in);
             final Gson gson = new GsonBuilder()
                     .setFieldNamingPolicy(FieldNamingPolicy.LOWER_CASE_WITH_UNDERSCORES)

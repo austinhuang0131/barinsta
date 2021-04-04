@@ -13,8 +13,6 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelStoreOwner;
-import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -24,7 +22,6 @@ import com.google.android.material.snackbar.Snackbar;
 import java.util.Collections;
 import java.util.List;
 
-import awais.instagrabber.R;
 import awais.instagrabber.activities.MainActivity;
 import awais.instagrabber.adapters.DirectMessageInboxAdapter;
 import awais.instagrabber.customviews.helpers.RecyclerLazyLoaderAtEdge;
@@ -51,9 +48,7 @@ public class DirectPendingInboxFragment extends Fragment implements SwipeRefresh
         super.onCreate(savedInstanceState);
         fragmentActivity = (MainActivity) getActivity();
         if (fragmentActivity != null) {
-            final NavController navController = NavHostFragment.findNavController(this);
-            final ViewModelStoreOwner viewModelStoreOwner = navController.getViewModelStoreOwner(R.id.direct_messages_nav_graph);
-            viewModel = new ViewModelProvider(viewModelStoreOwner).get(DirectPendingInboxViewModel.class);
+            viewModel = new ViewModelProvider(fragmentActivity).get(DirectPendingInboxViewModel.class);
         }
     }
 

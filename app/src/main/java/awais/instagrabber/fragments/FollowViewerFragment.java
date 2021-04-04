@@ -2,7 +2,6 @@ package awais.instagrabber.fragments;
 
 import android.content.Context;
 import android.content.res.Resources;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -57,7 +56,6 @@ public final class FollowViewerFragment extends Fragment implements SwipeRefresh
     private FollowAdapter adapter;
     private View.OnClickListener clickListener;
     private FragmentFollowersViewerBinding binding;
-    private AsyncTask<Void, Void, FollowModel[]> currentlyExecuting;
     private SwipeRefreshLayout root;
     private FriendshipService friendshipService;
     private AppCompatActivity fragmentActivity;

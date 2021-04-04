@@ -58,6 +58,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.function.Function;
 
 import awais.instagrabber.ProfileNavGraphDirections;
 import awais.instagrabber.R;
@@ -258,7 +259,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         }
 
         @Override
-        public void onOptionSelect(final DirectItem item, final int itemId) {
+        public void onOptionSelect(final DirectItem item, final int itemId, final Function<DirectItem, Void> cb) {
             if (itemId == R.id.unsend) {
                 handleSentMessage(viewModel.unsend(item));
                 return;
@@ -275,21 +276,17 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
                 final NavController navController = NavHostFragment.findNavController(DirectMessageThreadFragment.this);
                 navController.navigate(actionGlobalUserSearch);
             }
-            if (itemId == R.id.detail) {
-                final Context context = getContext();
-                if (context == null) return;
-                final DirectItemType itemType = item.getItemType();
-                switch (itemType) {
-                    case ANIMATED_MEDIA:
-                        Utils.openURL(context, "https://giphy.com/gifs/" + item.getAnimatedMedia().getId());
-                        break;
-                    case VOICE_MEDIA:
-                        downloadItem(item.getVoiceMedia() == null ? null : item.getVoiceMedia().getMedia(), context);
-                        break;
-                }
+            if (itemId == R.id.download) {
+                downloadItem(item);
+                return;
+            }
+            // otherwise call callback if present
+            if (cb != null) {
+                cb.apply(item);
             }
         }
     };
+
     private final DirectItemLongClickListener directItemLongClickListener = position -> {
         // viewModel.setSelectedPosition(position);
     };
@@ -319,6 +316,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     };
     private final MutableLiveData<Integer> inputLength = new MutableLiveData<>(0);
     private MenuItem markAsSeenMenuItem;
+    private Media tempMedia;
 
     @Override
     public void onCreate(@Nullable final Bundle savedInstanceState) {
@@ -329,11 +327,13 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         final Bundle arguments = getArguments();
         if (arguments == null) return;
         final DirectMessageThreadFragmentArgs fragmentArgs = DirectMessageThreadFragmentArgs.fromBundle(arguments);
-        viewModel = new ViewModelProvider(this, new DirectThreadViewModelFactory(fragmentActivity.getApplication(),
-                                                                                 fragmentArgs.getThreadId(),
-                                                                                 fragmentArgs.getPending(),
-                                                                                 appStateViewModel.getCurrentUser()))
-                .get(DirectThreadViewModel.class);
+        final DirectThreadViewModelFactory viewModelFactory = new DirectThreadViewModelFactory(
+                fragmentActivity.getApplication(),
+                fragmentArgs.getThreadId(),
+                fragmentArgs.getPending(),
+                appStateViewModel.getCurrentUser()
+        );
+        viewModel = new ViewModelProvider(this, viewModelFactory).get(DirectThreadViewModel.class);
         setHasOptionsMenu(true);
     }
 
@@ -454,7 +454,9 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         final Context context = getContext();
         if (context == null) return;
         if (requestCode == STORAGE_PERM_REQUEST_CODE && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-            // downloadItem(context);
+            if (tempMedia == null) return;
+            downloadItem(context, tempMedia);
+            return;
         }
         if (requestCode == AUDIO_RECORD_PERM_REQUEST_CODE) {
             if (PermissionUtils.hasAudioRecordPerms(context)) {
@@ -1227,7 +1229,10 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         if (!isEmojiPickerShown) {
             binding.emojiPicker.setAlpha(0);
         }
-        imm.showSoftInput(binding.input, InputMethodManager.SHOW_IMPLICIT);
+        final boolean shown = imm.showSoftInput(binding.input, InputMethodManager.SHOW_IMPLICIT);
+        if (!shown) {
+            Log.e(TAG, "showKeyboard: System did not display the keyboard");
+        }
         if (!isEmojiPickerShown) {
             animatePan(keyboardHeight);
         }
@@ -1314,108 +1319,32 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         appExecutors.mainThread().execute(prevTitleRunnable, 1000);
     }
 
-    // currently ONLY for voice
-    private void downloadItem(final Media media, final Context context) {
-        if (media == null) {
-            Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
-        } else {
-            if (ContextCompat.checkSelfPermission(context, DownloadUtils.PERMS[0]) == PackageManager.PERMISSION_GRANTED) {
-                DownloadUtils.download(context, media);
-            } else {
-                requestPermissions(DownloadUtils.PERMS, STORAGE_PERM_REQUEST_CODE);
-            }
-            Toast.makeText(context, R.string.downloader_downloading_media, Toast.LENGTH_SHORT).show();
+    private void downloadItem(final DirectItem item) {
+        final Context context = getContext();
+        if (context == null) return;
+        final DirectItemType itemType = item.getItemType();
+        //noinspection SwitchStatementWithTooFewBranches
+        switch (itemType) {
+            case VOICE_MEDIA:
+                downloadItem(context, item.getVoiceMedia() == null ? null : item.getVoiceMedia().getMedia());
+                break;
         }
     }
 
-    // private void sendText(final String text, final String itemId, final boolean delete) {
-    //     DirectThreadBroadcaster.TextBroadcastOptions textOptions = null;
-    //     DirectThreadBroadcaster.ReactionBroadcastOptions reactionOptions = null;
-    //     if (text != null) {
-    //         try {
-    //             textOptions = new DirectThreadBroadcaster.TextBroadcastOptions(text);
-    //         } catch (UnsupportedEncodingException e) {
-    //             Log.e(TAG, "Error", e);
-    //             return;
-    //         }
-    //     } else {
-    //         reactionOptions = new DirectThreadBroadcaster.ReactionBroadcastOptions(itemId, delete);
-    //     }
-    //     broadcast(text != null ? textOptions : reactionOptions, result -> {
-    //         final Context context = getContext();
-    //         if (context == null) return;
-    //         if (result == null || result.getResponseCode() != HttpURLConnection.HTTP_OK) {
-    //             Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
-    //             return;
-    //         }
-    //         if (text != null) {
-    //             // binding.commentText.setText("");
-    //         } else {
-    //             // final View viewWithTag = binding.messageList.findViewWithTag(directItemModel);
-    //             // if (viewWithTag != null) {
-    //             //     final ViewParent dim = viewWithTag.getParent();
-    //             //     if (dim instanceof View) {
-    //             //         final View dimView = (View) dim;
-    //             // final View likedContainer = dimView.findViewById(R.id.liked_container);
-    //             // if (likedContainer != null) {
-    //             //     likedContainer.setVisibility(delete ? View.GONE : View.VISIBLE);
-    //             // }
-    //             // }
-    //             // }
-    //             // directItemModel.setLiked();
-    //         }
-    //         context.sendBroadcast(new Intent(DMRefreshBroadcastReceiver.ACTION_REFRESH_DM));
-    //         hasSentSomething = true;
-    //         // new DirectMessageInboxThreadFetcher(threadId, UserInboxDirection.OLDER, null, fetchListener)
-    //         //         .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-    //     });
-    // }
-
-    // private void sendImage(final Uri imageUri) {
-    //     final Context context = getContext();
-    //     if (context == null) return;
-    //     try (InputStream inputStream = context.getContentResolver().openInputStream(imageUri)) {
-    //         final Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
-    //         Toast.makeText(context, R.string.uploading, Toast.LENGTH_SHORT).show();
-    //         // Upload Image
-    //         final ImageUploader imageUploader = new ImageUploader();
-    //         imageUploader.setOnTaskCompleteListener(response -> {
-    //             if (response == null || response.getResponseCode() != HttpURLConnection.HTTP_OK) {
-    //                 Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
-    //                 if (response != null && response.getResponse() != null) {
-    //                     Log.e(TAG, response.getResponse().toString());
-    //                 }
-    //                 return;
-    //             }
-    //             final JSONObject responseJson = response.getResponse();
-    //             try {
-    //                 final String uploadId = responseJson.getString("upload_id");
-    //                 // Broadcast
-    //                 final DirectThreadBroadcaster.ImageBroadcastOptions options = new DirectThreadBroadcaster.ImageBroadcastOptions(true, uploadId);
-    //                 hasSentSomething = true;
-    //                 broadcast(options,
-    //                           broadcastResponse -> {
-    //                               // new DirectMessageInboxThreadFetcher(threadId, UserInboxDirection.OLDER, null, fetchListener)
-    //                               //         .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-    //                           });
-    //             } catch (JSONException e) {
-    //                 Log.e(TAG, "Error parsing json response", e);
-    //             }
-    //         });
-    //         final ImageUploadOptions options = ImageUploadOptions.builder(bitmap).build();
-    //         imageUploader.execute(options);
-    //     } catch (IOException e) {
-    //         Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
-    //         Log.e(TAG, "Error opening file", e);
-    //     }
-    // }
-
-    // private void broadcast(final DirectThreadBroadcaster.BroadcastOptions broadcastOptions,
-    //                        final DirectThreadBroadcaster.OnBroadcastCompleteListener listener) {
-    //     final DirectThreadBroadcaster broadcaster = new DirectThreadBroadcaster(threadId);
-    //     broadcaster.setOnTaskCompleteListener(listener);
-    //     broadcaster.execute(broadcastOptions);
-    // }
+    // currently ONLY for voice
+    private void downloadItem(@NonNull final Context context, final Media media) {
+        if (media == null) {
+            Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        if (ContextCompat.checkSelfPermission(context, DownloadUtils.PERMS[0]) == PackageManager.PERMISSION_GRANTED) {
+            DownloadUtils.download(context, media);
+            Toast.makeText(context, R.string.downloader_downloading_media, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        tempMedia = media;
+        requestPermissions(DownloadUtils.PERMS, STORAGE_PERM_REQUEST_CODE);
+    }
 
     @NonNull
     private User getUser(final long userId) {
@@ -1425,58 +1354,6 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         }
         return null;
     }
-
-    // private void searchUsername(final String text) {
-    //     final Bundle bundle = new Bundle();
-    //     bundle.putString("username", "@" + text);
-    //     NavHostFragment.findNavController(this).navigate(R.id.action_global_profileFragment, bundle);
-    // }
-
-    // class ThreadAction extends AsyncTask<String, Void, Void> {
-    //     String action, argument;
-    //
-    //     protected Void doInBackground(String... rawAction) {
-    //         action = rawAction[0];
-    //         argument = rawAction[1];
-    //         final String url = "https://i.instagram.com/api/v1/direct_v2/threads/" + threadId + "/items/" + argument + "/" + action + "/";
-    //         try {
-    //             String urlParameters = "_csrftoken=" + COOKIE.split("csrftoken=")[1].split(";")[0]
-    //                     + "&_uuid=" + Utils.settingsHelper.getString(Constants.DEVICE_UUID);
-    //             final HttpURLConnection urlConnection = (HttpURLConnection) new URL(url).openConnection();
-    //             urlConnection.setRequestMethod("POST");
-    //             urlConnection.setUseCaches(false);
-    //             urlConnection.setRequestProperty("User-Agent", Constants.I_USER_AGENT);
-    //             urlConnection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
-    //             urlConnection.setRequestProperty("Content-Length", Integer.toString(urlParameters.getBytes().length));
-    //             urlConnection.setDoOutput(true);
-    //             DataOutputStream wr = new DataOutputStream(urlConnection.getOutputStream());
-    //             wr.writeBytes(urlParameters);
-    //             wr.flush();
-    //             wr.close();
-    //             urlConnection.connect();
-    //             if (urlConnection.getResponseCode() == HttpURLConnection.HTTP_OK) {
-    //                 if (action.equals("delete")) {
-    //                     hasDeletedSomething = true;
-    //                 } else if (action.equals("seen")) {
-    //                     // context.sendBroadcast(new Intent(DMRefreshBroadcastReceiver.ACTION_REFRESH_DM));
-    //                 }
-    //             }
-    //             urlConnection.disconnect();
-    //         } catch (Throwable ex) {
-    //             Log.e("austin_debug", action + ": " + ex);
-    //         }
-    //         return null;
-    //     }
-    //
-    //     @Override
-    //     protected void onPostExecute(Void result) {
-    //         if (hasDeletedSomething) {
-    //             // directItemModel = null;
-    //             // new DirectMessageInboxThreadFetcher(threadId, UserInboxDirection.OLDER, null, fetchListener)
-    //             //         .executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
-    //         }
-    //     }
-    // }
 
     private void setupKbHeightProvider() {
         if (heightProvider != null) return;

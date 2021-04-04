@@ -4,7 +4,7 @@ import java.util.List;
 
 import awais.instagrabber.customviews.helpers.PostFetcher;
 import awais.instagrabber.interfaces.FetchListener;
-import awais.instagrabber.models.LocationModel;
+import awais.instagrabber.repositories.responses.Location;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.PostsFetchResponse;
 import awais.instagrabber.webservices.GraphQLService;
@@ -14,12 +14,12 @@ import awais.instagrabber.webservices.ServiceCallback;
 public class LocationPostFetchService implements PostFetcher.PostFetchService {
     private final LocationService locationService;
     private final GraphQLService graphQLService;
-    private final LocationModel locationModel;
+    private final Location locationModel;
     private String nextMaxId;
     private boolean moreAvailable;
     private final boolean isLoggedIn;
 
-    public LocationPostFetchService(final LocationModel locationModel, final boolean isLoggedIn) {
+    public LocationPostFetchService(final Location locationModel, final boolean isLoggedIn) {
         this.locationModel = locationModel;
         this.isLoggedIn = isLoggedIn;
         locationService = isLoggedIn ? LocationService.getInstance() : null;
@@ -47,8 +47,8 @@ public class LocationPostFetchService implements PostFetcher.PostFetchService {
                 }
             }
         };
-        if (isLoggedIn) locationService.fetchPosts(locationModel.getId(), nextMaxId, cb);
-        else graphQLService.fetchLocationPosts(locationModel.getId(), nextMaxId, cb);
+        if (isLoggedIn) locationService.fetchPosts(locationModel.getPk(), nextMaxId, cb);
+        else graphQLService.fetchLocationPosts(locationModel.getPk(), nextMaxId, cb);
     }
 
     @Override

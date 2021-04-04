@@ -7,6 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public enum DirectItemType implements Serializable {
+    UNKNOWN(0),
     @SerializedName("text")
     TEXT(1),
     @SerializedName("like")
@@ -40,7 +41,9 @@ public enum DirectItemType implements Serializable {
     @SerializedName("felix_share")
     FELIX_SHARE(16), // media_share but igtv
     @SerializedName("location")
-    LOCATION(17);
+    LOCATION(17),
+    @SerializedName("xma")
+    XMA(18); // self avatar stickers
 
     private final int id;
     private static final Map<Integer, DirectItemType> map = new HashMap<>();
@@ -60,6 +63,7 @@ public enum DirectItemType implements Serializable {
     }
 
     public static DirectItemType valueOf(final int id) {
+        if (!map.containsKey(id)) return DirectItemType.UNKNOWN;
         return map.get(id);
     }
 

@@ -9,8 +9,8 @@ import awais.instagrabber.R;
 import awais.instagrabber.adapters.NotificationsAdapter.OnNotificationClickListener;
 import awais.instagrabber.databinding.ItemNotificationBinding;
 import awais.instagrabber.models.enums.NotificationType;
-import awais.instagrabber.repositories.responses.Notification;
-import awais.instagrabber.repositories.responses.NotificationArgs;
+import awais.instagrabber.repositories.responses.notification.Notification;
+import awais.instagrabber.repositories.responses.notification.NotificationArgs;
 
 public final class NotificationViewHolder extends RecyclerView.ViewHolder {
     private final ItemNotificationBinding binding;

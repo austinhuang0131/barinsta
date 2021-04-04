@@ -71,11 +71,9 @@
             app:argType="long" />
     </action>
 
-    <include app:graph="@navigation/notification_viewer_nav_graph" />
-
     <action
         android:id="@+id/action_global_notificationsViewerFragment"
-        app:destination="@id/notification_viewer_nav_graph">
+        app:destination="@id/notificationsViewer">
         <argument
             android:name="type"
             app:argType="string"
@@ -85,6 +83,22 @@
             android:defaultValue="0L"
             app:argType="long" />
     </action>
+
+    <fragment
+        android:id="@+id/notificationsViewer"
+        android:name="awais.instagrabber.fragments.NotificationsViewerFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notifications_viewer">
+        <argument
+            android:name="type"
+            app:argType="string"
+            app:nullable="false"
+            android:defaultValue="notif"/>
+        <argument
+            android:name="targetId"
+            android:defaultValue="0L"
+            app:argType="long" />
+    </fragment>
 
     <include app:graph="@navigation/saved_nav_graph" />
 

@@ -65,6 +65,8 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import awais.instagrabber.BuildConfig;
 import awais.instagrabber.R;
@@ -135,14 +137,14 @@ public class StoryViewerFragment extends Fragment {
     private String[] mentions;
     private QuizModel quiz;
     private SliderModel slider;
-    private MenuItem menuDownload;
-    private MenuItem menuDm;
+    private MenuItem menuDownload, menuDm, menuProfile;
     private SimpleExoPlayer player;
     // private boolean isHashtag;
     // private boolean isLoc;
     // private String highlight;
-    private String actionBarTitle;
+    private String actionBarTitle, actionBarSubtitle;
     private boolean fetching = false, sticking = false, shouldRefresh = true;
+    private boolean downloadVisible = false, dmVisible = false, profileVisible = true;
     private int currentFeedStoryIndex;
     private double sliderValue;
     private StoriesViewModel storiesViewModel;
@@ -193,8 +195,10 @@ public class StoryViewerFragment extends Fragment {
         menuInflater.inflate(R.menu.story_menu, menu);
         menuDownload = menu.findItem(R.id.action_download);
         menuDm = menu.findItem(R.id.action_dms);
-        menuDownload.setVisible(false);
-        menuDm.setVisible(false);
+        menuProfile = menu.findItem(R.id.action_profile);
+        menuDownload.setVisible(downloadVisible);
+        menuDm.setVisible(dmVisible);
+        menuProfile.setVisible(profileVisible);
     }
 
     @Override
@@ -213,7 +217,8 @@ public class StoryViewerFragment extends Fragment {
             else
                 ActivityCompat.requestPermissions(requireActivity(), DownloadUtils.PERMS, 8020);
             return true;
-        } else if (itemId == R.id.action_dms) {
+        }
+        if (itemId == R.id.action_dms) {
             final EditText input = new EditText(context);
             input.setHint(R.string.reply_hint);
             new AlertDialog.Builder(context)
@@ -257,6 +262,9 @@ public class StoryViewerFragment extends Fragment {
                     .show();
             return true;
         }
+        if (itemId == R.id.action_profile) {
+            openProfile("@" + currentStory.getUsername());
+        }
         return false;
     }
 
@@ -279,7 +287,9 @@ public class StoryViewerFragment extends Fragment {
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();
         if (actionBar != null) {
             actionBar.setTitle(actionBarTitle);
+            actionBar.setSubtitle(actionBarSubtitle);
         }
+        setHasOptionsMenu(true);
     }
 
     @Override
@@ -304,11 +314,18 @@ public class StoryViewerFragment extends Fragment {
         // isNotification = fragmentArgs.getIsNotification();
         final Type type = options.getType();
         if (currentFeedStoryIndex >= 0) {
-            viewModel = type == Type.HIGHLIGHT
-                        ? type == Type.STORY_ARCHIVE
-                          ? new ViewModelProvider(fragmentActivity).get(ArchivesViewModel.class)
-                          : new ViewModelProvider(fragmentActivity).get(HighlightsViewModel.class)
-                        : new ViewModelProvider(fragmentActivity).get(FeedStoriesViewModel.class);
+            switch (type) {
+                case HIGHLIGHT:
+                    viewModel = new ViewModelProvider(fragmentActivity).get(HighlightsViewModel.class);
+                    break;
+                case STORY_ARCHIVE:
+                    viewModel = new ViewModelProvider(fragmentActivity).get(ArchivesViewModel.class);
+                    break;
+                default:
+                case FEED_STORY_POSITION:
+                    viewModel = new ViewModelProvider(fragmentActivity).get(FeedStoriesViewModel.class);
+                    break;
+            }
         }
         setupStories();
     }
@@ -688,6 +705,10 @@ public class StoryViewerFragment extends Fragment {
         lastSlidePos = 0;
         if (menuDownload != null) menuDownload.setVisible(false);
         if (menuDm != null) menuDm.setVisible(false);
+        if (menuProfile != null) menuProfile.setVisible(false);
+        downloadVisible = false;
+        dmVisible = false;
+        profileVisible = false;
         binding.imageViewer.setController(null);
         releasePlayer();
         String currentStoryMediaId = null;
@@ -728,9 +749,9 @@ public class StoryViewerFragment extends Fragment {
                     return;
                 }
                 final HighlightModel model = models.get(currentFeedStoryIndex);
-                currentStoryMediaId = model.getId();
+                currentStoryMediaId = parseStoryMediaId(model.getId());
                 currentStoryUsername = model.getTitle();
-                fetchOptions = StoryViewerOptions.forUser(Long.parseLong(currentStoryMediaId), currentStoryUsername);
+                fetchOptions = StoryViewerOptions.forStoryArchive(model.getId());
                 break;
             }
         }
@@ -837,7 +858,6 @@ public class StoryViewerFragment extends Fragment {
 
         final MediaItemType itemType = currentStory.getItemType();
 
-        if (menuDownload != null) menuDownload.setVisible(false);
         url = itemType == MediaItemType.MEDIA_TYPE_IMAGE ? currentStory.getStoryUrl() : currentStory.getVideoUrl();
 
         if (itemType != MediaItemType.MEDIA_TYPE_LIVE) {
@@ -891,9 +911,10 @@ public class StoryViewerFragment extends Fragment {
         else setupImage();
 
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();
+        actionBarSubtitle = Utils.datetimeParser.format(new Date(currentStory.getTimestamp() * 1000L));
         if (actionBar != null) {
             try {
-                actionBar.setSubtitle(Utils.datetimeParser.format(new Date(currentStory.getTimestamp() * 1000L)));
+                actionBar.setSubtitle(actionBarSubtitle);
             } catch (Exception e) {
                 Log.e(TAG, "refreshStory: ", e);
             }
@@ -939,10 +960,16 @@ public class StoryViewerFragment extends Fragment {
                                                                                   final ImageInfo imageInfo,
                                                                                   final Animatable animatable) {
                                                           if (menuDownload != null) {
+                                                              downloadVisible = true;
                                                               menuDownload.setVisible(true);
                                                           }
                                                           if (currentStory.canReply() && menuDm != null) {
+                                                              dmVisible = true;
                                                               menuDm.setVisible(true);
+                                                          }
+                                                          if (!TextUtils.isEmpty(currentStory.getUsername())) {
+                                                              profileVisible = true;
+                                                              menuProfile.setVisible(true);
                                                           }
                                                           binding.progressView.setVisibility(View.GONE);
                                                       }
@@ -973,9 +1000,18 @@ public class StoryViewerFragment extends Fragment {
                                         @Nullable final MediaSource.MediaPeriodId mediaPeriodId,
                                         @NonNull final LoadEventInfo loadEventInfo,
                                         @NonNull final MediaLoadData mediaLoadData) {
-                if (menuDownload != null) menuDownload.setVisible(true);
-                if (currentStory.canReply() && menuDm != null)
+                if (menuDownload != null) {
+                    downloadVisible = true;
+                    menuDownload.setVisible(true);
+                }
+                if (currentStory.canReply() && menuDm != null) {
+                    dmVisible = true;
                     menuDm.setVisible(true);
+                }
+                if (!TextUtils.isEmpty(currentStory.getUsername()) && menuProfile != null) {
+                    profileVisible = true;
+                    menuProfile.setVisible(true);
+                }
                 binding.progressView.setVisibility(View.GONE);
             }
 
@@ -984,9 +1020,18 @@ public class StoryViewerFragment extends Fragment {
                                       @Nullable final MediaSource.MediaPeriodId mediaPeriodId,
                                       @NonNull final LoadEventInfo loadEventInfo,
                                       @NonNull final MediaLoadData mediaLoadData) {
-                if (menuDownload != null) menuDownload.setVisible(true);
-                if (currentStory.canReply() && menuDm != null)
+                if (menuDownload != null) {
+                    downloadVisible = true;
+                    menuDownload.setVisible(true);
+                }
+                if (currentStory.canReply() && menuDm != null) {
+                    dmVisible = true;
                     menuDm.setVisible(true);
+                }
+                if (!TextUtils.isEmpty(currentStory.getUsername()) && menuProfile != null) {
+                    profileVisible = true;
+                    menuProfile.setVisible(true);
+                }
                 binding.progressView.setVisibility(View.VISIBLE);
             }
 
@@ -1005,8 +1050,18 @@ public class StoryViewerFragment extends Fragment {
                                     @NonNull final MediaLoadData mediaLoadData,
                                     @NonNull final IOException error,
                                     final boolean wasCanceled) {
-                if (menuDownload != null) menuDownload.setVisible(false);
-                if (menuDm != null) menuDm.setVisible(false);
+                if (menuDownload != null) {
+                    downloadVisible = false;
+                    menuDownload.setVisible(false);
+                }
+                if (menuDm != null) {
+                    dmVisible = false;
+                    menuDm.setVisible(false);
+                }
+                if (menuProfile != null) {
+                    profileVisible = false;
+                    menuProfile.setVisible(false);
+                }
                 binding.progressView.setVisibility(View.GONE);
             }
         });
@@ -1138,5 +1193,21 @@ public class StoryViewerFragment extends Fragment {
             currentFeedStoryIndex = backward ? (currentFeedStoryIndex - 1) : (currentFeedStoryIndex + 1);
             resetView();
         }
+    }
+
+    /**
+     * Parses the Story's media ID. For user stories this is a number, but for archive stories
+     * this is "archiveDay:" plus a number.
+     */
+    private static String parseStoryMediaId(String rawId) {
+        final String regex = "(?:archiveDay:)?(.+)";
+        final Pattern pattern = Pattern.compile(regex);
+        final Matcher matcher = pattern.matcher(rawId);
+
+        if (matcher.matches() && matcher.groupCount() >= 1) {
+            return matcher.group(1);
+        }
+
+        return rawId;
     }
 }

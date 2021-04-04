@@ -1,9 +1,12 @@
 package awais.instagrabber.viewmodels;
 
 import android.app.Application;
+import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
+import androidx.lifecycle.LiveData;
+import androidx.lifecycle.MutableLiveData;
 
 import awais.instagrabber.db.datasources.AccountDataSource;
 import awais.instagrabber.db.repositories.AccountRepository;
@@ -21,8 +24,8 @@ public class AppStateViewModel extends AndroidViewModel {
 
     private final String cookie;
     private final boolean isLoggedIn;
+    private final MutableLiveData<User> currentUser = new MutableLiveData<>();
 
-    private User currentUser;
     private AccountRepository accountRepository;
     private UserService userService;
 
@@ -38,6 +41,10 @@ public class AppStateViewModel extends AndroidViewModel {
     }
 
     public User getCurrentUser() {
+        return currentUser.getValue();
+    }
+
+    public LiveData<User> getCurrentUserLiveData() {
         return currentUser;
     }
 
@@ -46,11 +53,13 @@ public class AppStateViewModel extends AndroidViewModel {
         userService.getUserInfo(uid, new ServiceCallback<User>() {
             @Override
             public void onSuccess(final User user) {
-                currentUser = user;
+                currentUser.postValue(user);
             }
 
             @Override
-            public void onFailure(final Throwable t) {}
+            public void onFailure(final Throwable t) {
+                Log.e(TAG, "onFailure: ", t);
+            }
         });
     }
 }

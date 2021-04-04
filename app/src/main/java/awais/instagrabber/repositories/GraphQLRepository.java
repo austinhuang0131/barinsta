@@ -16,4 +16,7 @@ public interface GraphQLRepository {
 
     @GET("/explore/tags/{tag}/?__a=1")
     Call<String> getTag(@Path("tag") String tag);
+
+    @GET("/explore/locations/{locationId}/?__a=1")
+    Call<String> getLocation(@Path("locationId") long locationId);
 }

@@ -17,7 +17,7 @@ import java.util.Map;
 
 import awais.instagrabber.models.UploadPhotoOptions;
 import awais.instagrabber.models.UploadVideoOptions;
-import awais.instagrabber.webservices.AddCookiesInterceptor;
+import awais.instagrabber.webservices.interceptors.AddCookiesInterceptor;
 import okhttp3.Call;
 import okhttp3.Headers;
 import okhttp3.MediaType;
