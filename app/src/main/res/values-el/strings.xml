@@ -23,7 +23,7 @@
     <string name="update_check">Έλεγχος για ενημερώσεις κατά την εκκίνηση</string>
     <string name="flag_secure">Παρεμπόδιση στιγμιοτύπων οθόνης &amp; προεπισκόπησης εφαρμογής</string>
     <string name="download_user_folder">Λήψη δημοσιεύσεων σε φακέλους ονομάτων χρηστών</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">Προσθέστε το όνομα χρήστη πριν από το όνομα του αρχείου</string>
     <string name="mark_as_seen_setting">Επισήμανση ιστοριών ως προβληθέντων μετά την προβολή</string>
     <string name="mark_as_seen_setting_summary">Ο δημιουργός της ιστορίας θα γνωρίζει ότι προβλήθηκε</string>
     <string name="hide_muted_reels_setting">Απόκρυψη ιστοριών που βρίσκονται σε σίγαση από τη ροή</string>
