@@ -26,7 +26,7 @@
     <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Επισήμανση ιστοριών ως προβληθέντων μετά την προβολή</string>
     <string name="mark_as_seen_setting_summary">Ο δημιουργός της ιστορίας θα γνωρίζει ότι προβλήθηκε</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Απόκρυψη ιστοριών που βρίσκονται σε σίγαση από τη ροή</string>
     <string name="dm_mark_as_seen_setting">Επισήμανση μηνυμάτων ως αναγνωσμένων μετά την προβολή</string>
     <string name="dm_mark_as_seen_setting_summary">Τα υπόλοιπα μέλη θα γνωρίζουν ότι προβλήθηκε</string>
     <string name="activity_setting">Ενεργοποίηση ειδοποιήσεων δραστηριότητας</string>
@@ -461,11 +461,11 @@
     <string name="removed_keywords">Αφαιρέθηκε λέξη-κλειδί: %s στον κατάλογο φιλτραρίσματος</string>
     <string name="marked_as_seen">Επισήμανθηκε ως αναγνωσμένο</string>
     <string name="delete_unsuccessful">Η διαγραφή απέτυχε</string>
-    <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
+    <string name="throttle_error">Περιορίστηκατε από το Instagram λόγω υπερβολικών αιτήσεων API. Περιμένετε ορισμένη ώρα προτού προσπαθήσετε ξανά.</string>
     <string name="error">Σφάλμα</string>
     <string name="account_logged_out">Αυτός ο λογαριασμός έχει αποσυνδεθεί.</string>
     <string name="login_required">Απαιτείται σύνδεση!</string>
-    <string name="sentry_block">Sentry block.</string>
+    <string name="sentry_block">Φραγή Sentry.</string>
     <string name="inactive_user">Ο χρήστης είναι ανενεργός!</string>
     <string name="crash_report_subject">Αναφορά Κατάρρευσης Barinsta</string>
     <string name="crash_report_title">Επιλέξτε μια εφαρμογή ηλ. ταχυδρομείου για αποστολή αρχείων καταγραφής κατάρρευσης</string>
@@ -473,10 +473,10 @@
     <string name="rate_limit">Η διεύθυνση IP σας έχει περιοριστεί από το Instagram. Περιμένετε για μία ώρα και μετά προσπαθήστε ξανά.</string>
     <string name="skip_update">Παράλειψη της ενημέρωσης</string>
     <string name="on_latest_version">Η εφαρμογή είναι ήδη στην τελευταία έκδοση</string>
-    <string name="tab_order">Screen order</string>
+    <string name="tab_order">Σειρά της οθόνης</string>
     <string name="other_tabs">Λοιπές καρτέλες</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
+    <string name="tab_order_start_next_launch">Η σειρά των καρτελών θα ισχύσει από την επόμενη εκκίνηση</string>
+    <string name="dm_remove_warning">Εάν αποθηκευτεί, όλες οι λειτουργίες που είναι σχετικές με τα Μηνύματα, θα είναι απενεργοποιημένες στην επόμενη εκκίνηση</string>
     <string name="copy_caption">Αντιγραφή λεζάντας</string>
     <string name="copy_reply">Αντιγραφή απάντησης</string>
 </resources>
