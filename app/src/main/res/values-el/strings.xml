@@ -32,7 +32,7 @@
     <string name="activity_setting">Ενεργοποίηση ειδοποιήσεων δραστηριότητας</string>
     <string name="story_sort_setting">Ταξινόμηση ροής ιστορίων</string>
     <string name="error_loading_profile">Σφάλμα κατά τη φόρτωση προφίλ! Είναι το όνομα χρήστη έγκυρο; Αν ναι, μπορεί να είστε περιορισμένος.</string>
-    <string name="error_loading_profile_loggedin">Σφάλμα κατά τη φόρτωση λογαριασμού! Είναι το όνομα χρήστη έγκυρο; Μήπως σας έχει μπλοκάρει;</string>
+    <string name="error_loading_profile_loggedin">Σφάλμα κατά τη φόρτωση λογαριασμού! Είναι το όνομα χρήστη έγκυρο; Μήπως ο χρήστης σας έχει μπλοκάρει;</string>
     <string name="error_loading_hashtag">Σφάλμα κατά τη φόρτωση hashtag! Είναι το όνομα έγκυρο;</string>
     <string name="error_loading_location">Σφάλμα κατά την φόρτωση τοποθεσίας! Είναι η διεύθυνση έγκυρη;</string>
     <string name="error_creating_folders">Σφάλμα κατά τη δημιουργία φακέλου/-ων λήψης.</string>
@@ -283,7 +283,7 @@
     <string name="light_theme_settings">Φωτεινό θέμα</string>
     <string name="dark_theme_settings">Σκούρο θέμα</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Κόκκοι καφέ</string>
-    <string name="dark_material_dark_theme">Ουσιώδες σκούρο</string>
+    <string name="dark_material_dark_theme">Σκουρόχρωμο</string>
     <string name="added_to_favs">Προστέθηκε στα Αγαπημένα!</string>
     <string name="add_to_favorites">Στα αγαπημένα</string>
     <string name="accounts">Λογαριασμοί</string>
@@ -292,7 +292,7 @@
     <string name="unknown">Άγνωστο</string>
     <string name="removed_from_favs">Αφαίρεση από τα αγαπημένα!</string>
     <string name="backup_and_restore">Αντίγραφα ασφαλείας &amp; Επαναφορά</string>
-    <string name="backup_summary">Δημιουργία αντιγράφου ασφαλείας των ρυθμίσεων της εφαρμογής, των δεδομένων σύνδεσης λογαριασμού και/ή αγαπημένα σε απλό κείμενο ή κρυπτογραφημένο αρχείο για μεταγενέστερη επαναφορά.</string>
+    <string name="backup_summary">Δημιουργία αντιγράφου ασφαλείας των ρυθμίσεων της εφαρμογής, των δεδομένων σύνδεσης του λογαριασμού και/ή των αγαπημένων, σε ακρυπτογράφητο ή κρυπτογραφημένο αρχείο για μεταγενέστερη επαναφορά.</string>
     <string name="backup_warning">Αν δημιουργείτε αντίγραφα ασφαλείας των δεδομένων σύνδεσης λογαριασμού, αντιμετωπίστε το αρχείο ως απόρρητο και κρατήστε το σε ασφαλές μέρος!</string>
     <string name="create_backup">Δημιουργία νέου αρχείου αντιγράφου ασφαλείας</string>
     <string name="restore_backup">Επαναφορά από υπάρχον αρχείο αντιγράφου ασφαλείας</string>
