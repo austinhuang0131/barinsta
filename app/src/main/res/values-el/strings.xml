@@ -255,7 +255,7 @@
     <string name="profile">Προφίλ</string>
     <string name="more">Λοιπά</string>
     <string name="title_dm">Μηνύματα</string>
-    <string name="number_selected">%d επιλέχθηκε</string>
+    <string name="number_selected">Επιλέχθηκαν %d</string>
     <string name="logout_success">Η αποσύνδεση ήταν επιτυχής!</string>
     <string name="dm_thread_info">Πληροφορίες</string>
     <string name="mark_as_seen">Σήμανση ως αναγνωσμένο</string>
