@@ -93,7 +93,7 @@
     <string name="logout">Αποσύνδεση</string>
     <string name="logout_summary">Ανώνυμη περιήγηση στο Instagram</string>
     <string name="remove_all_acc">Αφαίρεση όλων των λογαριασμών</string>
-    <string name="remove_all_acc_warning">Αυτό θα αφαιρέσει όλους τους λογαριασμούς που έχουν προστεθεί στην εφαρμογή!\nΓια να αφαιρέσετε μόνο έναν λογαριασμό, πατήστε παρατεταμένα τον λογαριασμό από τον διάλογο εναλλαγής λογαριασμών.\nΘέλετε να συνεχίσετε;</string>
+    <string name="remove_all_acc_warning">Έτσι, θα αφαιρεθούν όλοι οι λογαριασμοί που έχουν προστεθεί στην εφαρμογή!\nΓια να αφαιρέσετε μόνο έναν λογαριασμό, πατήστε τον παρατεταμένα από τον διάλογο εναλλαγής λογαριασμών.\nΘέλετε να συνεχίσετε;</string>
     <string name="time_settings">Μορφή ημερομηνίας</string>
     <string name="saved_create_collection">Δημιουργία νέας συλλογής</string>
     <string name="edit_collection">Επεξεργασία ονόματος συλλογής</string>
@@ -283,7 +283,7 @@
     <string name="light_theme_settings">Φωτεινό θέμα</string>
     <string name="dark_theme_settings">Σκούρο θέμα</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Κόκκοι καφέ</string>
-    <string name="dark_material_dark_theme">Ουσιώδες Σκούρο</string>
+    <string name="dark_material_dark_theme">Ουσιώδες σκούρο</string>
     <string name="added_to_favs">Προστέθηκε στα Αγαπημένα!</string>
     <string name="add_to_favorites">Στα αγαπημένα</string>
     <string name="accounts">Λογαριασμοί</string>
