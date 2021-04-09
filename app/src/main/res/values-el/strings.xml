@@ -102,9 +102,9 @@
     <string name="delete_collection_note">Όλα τα πολυμέσα που περιέχονται θα παραμείνουν σε άλλες συλλογές.</string>
     <string name="add_to_collection">Προσθήκη στη συλλογή...</string>
     <string name="remove_from_collection">Αφαίρεση από τη συλλογή</string>
-    <string name="liked">Επισημασμένο ως \"Μου αρέσει\"</string>
+    <string name="liked">Μ\'αρέσουν</string>
     <string name="saved">Αποθηκευμένα</string>
-    <string name="tagged">Σε αυτήν τη φωτογραφία</string>
+    <string name="tagged">Ετικέτες</string>
     <string name="dm_person">Μήνυμα</string>
     <string name="like_without_count">Μου αρέσει</string>
     <string name="unlike_without_count">Δε μου αρέσει</string>
@@ -240,7 +240,7 @@
     <string name="action_notif">Δραστηριότητα</string>
     <string name="action_archive">Αρχειοθήκη ιστοριών</string>
     <string name="action_ayml">Προτεινόμενοι χρήστες</string>
-    <string name="select_picture">Επιλέξτε Εικόνα</string>
+    <string name="select_picture">Επιλογή εικόνας</string>
     <string name="uploading">Μεταφόρτωση…</string>
     <string name="activity_count_prefix">Έχετε:</string>
     <string name="activity_count_relationship">%d ακόλουθοι</string>
@@ -327,8 +327,8 @@
     <string name="two">2</string>
     <string name="three">3</string>
     <string name="show_names">Εμφάνιση ονομάτων</string>
-    <string name="show_avatars">Εμφάνιση άβαταρ</string>
-    <string name="avatar_size">Μέγεθος άβαταρ</string>
+    <string name="show_avatars">Εμφάνιση εικόνας προφίλ</string>
+    <string name="avatar_size">Μέγεθος εικόνας προφίλ</string>
     <string name="corners">Γωνίες</string>
     <string name="show_grid_gap">Εμφάνιση κενού πλέγματος</string>
     <string name="disable_animation">Απενεργοποίηση κινουμένων σχεδίων</string>
