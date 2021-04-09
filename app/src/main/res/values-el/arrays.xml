@@ -39,8 +39,8 @@
     <string-array name="separator_presets">
         <item>Κανένα</item>
         <item>\@</item>
-        <item>στο</item>
-        <item>πάνω</item>
+        <item>στις</item>
+        <item>στις</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
