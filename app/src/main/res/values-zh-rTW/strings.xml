@@ -9,7 +9,7 @@
     <string name="clipboard_error">複製文字時出錯</string>
     <string name="clipboard_copied">已複製至剪貼簿！</string>
     <string name="report">回報</string>
-    <string name="set_password">Protect file with password</string>
+    <string name="set_password">使用密碼保護備份</string>
     <string name="password_no_max">密碼</string>
     <string name="ok">確定</string>
     <string name="yes">是</string>
@@ -21,20 +21,20 @@
     <string name="title_comments">評論</string>
     <string name="title_notifications">動態</string>
     <string name="update_check">啟動時檢查更新</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">阻擋截圖 &amp; 應用程式預覽</string>
     <string name="download_user_folder">將貼文下載到用戶名資料夾</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">在檔案名稱前添加用戶名</string>
     <string name="mark_as_seen_setting">檢視完限時動態後標記為已讀</string>
     <string name="mark_as_seen_setting_summary">限時動態的作者會知道您已查看了此限時動態</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">隱藏已靜音的限時動態</string>
     <string name="dm_mark_as_seen_setting">檢視完訊息後標記為已讀</string>
     <string name="dm_mark_as_seen_setting_summary">其他成員會知道您查看了此訊息</string>
     <string name="activity_setting">啟用活動通知</string>
     <string name="story_sort_setting">動態貼文排序</string>
-    <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
-    <string name="error_loading_profile_loggedin">Error loading profile! Is the username valid? Or did they block you?</string>
-    <string name="error_loading_hashtag">Error loading hashtag! Is the name valid?</string>
-    <string name="error_loading_location">Error loading location! Is the URL valid?</string>
+    <string name="error_loading_profile">加載用戶資料時出錯！請檢查輸入的用戶名是否無誤。如果無誤的話，您的 Instagram 功能可能已被暫時受限。</string>
+    <string name="error_loading_profile_loggedin">加載用戶資料時出錯！請檢查輸入的用戶名是否無誤。如果無誤的話，您可能已被對方封鎖。</string>
+    <string name="error_loading_hashtag">載入 Hashtag 時出錯。請檢查此名稱是否有誤。</string>
+    <string name="error_loading_location">載入此位置時出錯。請檢查該連結是否有誤。</string>
     <string name="error_creating_folders">建立下載資料夾時出錯！</string>
     <string name="save_to_folder">儲存到自定義資料夾</string>
     <string name="select_folder">選擇資料夾</string>
@@ -53,8 +53,8 @@
     </plurals>
     <string name="main_posts_following">%s\n追蹤中</string>
     <string name="post_viewer_autoplay_video">自動播放影片</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">於背景繼續播放影片</string>
+    <string name="post_viewer_background_play_summary">隱藏應用程式 (如鎖屏、切換應用程式) 時，繼續播放影片</string>
     <string name="post_viewer_muted_autoplay">永遠自動靜音影片</string>
     <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">選擇要下載的內容</string>
