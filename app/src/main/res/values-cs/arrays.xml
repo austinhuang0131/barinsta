@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>Podle nastavení systému</item>
+        <item>Podle systému</item>
         <item translatable="false">English</item>
         <item translatable="false">Français</item>
         <item translatable="false">Español</item>
@@ -32,7 +32,7 @@
         <item>Světlý</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Výchozí chování Instagramu (nepřečteno pak přečteno)</item>
+        <item>Výchozí chování Instagramu (nepřečtené pak přečtené)</item>
         <item>Od nejnovějších po nejstarší</item>
         <item>Od nejstarších po nejnovější</item>
     </string-array>
@@ -54,7 +54,7 @@
     <!--    <item>@navigation/more_nav_graph</item>-->
     <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
-        <item>secs</item>
-        <item>mins</item>
+        <item>sekundy</item>
+        <item>minuty</item>
     </string-array>
 </resources>
