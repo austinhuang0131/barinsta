@@ -53,6 +53,8 @@
     </plurals>
     <string name="main_posts_following">%s\nフォロー中</string>
     <string name="post_viewer_autoplay_video">動画を自動再生する</string>
+    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">動画を常にミュートする</string>
     <string name="post_viewer_show_captions">キャプションを常に表示</string>
     <string name="post_viewer_download_dialog_title">ダウンロード対象を選択</string>
