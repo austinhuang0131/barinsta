@@ -53,6 +53,8 @@
     </plurals>
     <string name="main_posts_following">%s\nĐang theo dõi</string>
     <string name="post_viewer_autoplay_video">Tự động phát video</string>
+    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">Luôn luôn tắt âm thanh video</string>
     <string name="post_viewer_show_captions">Luôn hiển thị tiêu đề của bài viết</string>
     <string name="post_viewer_download_dialog_title">Chọn mục tải xuống</string>
