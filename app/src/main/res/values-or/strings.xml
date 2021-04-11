@@ -56,6 +56,8 @@
     </plurals>
     <string name="main_posts_following">%s\nଅନୁସରଣ କରୁଛନ୍ତି</string>
     <string name="post_viewer_autoplay_video">ଭିଡ଼ିଓ ସ୍ୱତଃ ଚାଲୁ କର</string>
+    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">ସର୍ବଦା ଭିଡ଼ିଓକୁ ଶବ୍ଦହୀନ ରଖ</string>
     <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">ଡାଉନଲୋଡ଼ କରିବା ପାଇଁ ଚୟନ କରନ୍ତୁ</string>
