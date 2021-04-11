@@ -53,6 +53,8 @@
     </plurals>
     <string name="main_posts_following">%s\ndiikuti</string>
     <string name="post_viewer_autoplay_video">Otomatis putar video</string>
+    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">Selalu bisukan video</string>
     <string name="post_viewer_show_captions">Selalu tampilkan keterangan kiriman</string>
     <string name="post_viewer_download_dialog_title">Pilih apa yang akan diunduh</string>
