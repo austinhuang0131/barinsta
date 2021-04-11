@@ -56,6 +56,8 @@
     </plurals>
     <string name="main_posts_following">%s\n Seguint</string>
     <string name="post_viewer_autoplay_video">Reproduir vídeos automàticament</string>
+    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">Silenciar sempre els vídeos</string>
     <string name="post_viewer_show_captions">Mostrar sempre els subtítols</string>
     <string name="post_viewer_download_dialog_title">Seleccionar el que s\'ha de descarregar</string>
