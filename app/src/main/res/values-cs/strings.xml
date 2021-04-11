@@ -9,7 +9,7 @@
     <string name="clipboard_error">Chyba při kopírování textu</string>
     <string name="clipboard_copied">Zkopírováno do schránky!</string>
     <string name="report">Nahlásit</string>
-    <string name="set_password">Protect file with password</string>
+    <string name="set_password">Chránit soubor heslem</string>
     <string name="password_no_max">Heslo</string>
     <string name="ok">OK</string>
     <string name="yes">Ano</string>
@@ -21,20 +21,20 @@
     <string name="title_comments">Komentáře</string>
     <string name="title_notifications">Aktivita</string>
     <string name="update_check">Zkontrolovat aktualizace při spuštění</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">Blokovat snímky obrazovky a náhled aplikace</string>
     <string name="download_user_folder">Stáhnout příspěvky do složek s uživatelským jménem</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">Připojit uživatelské jméno k názvu souboru</string>
     <string name="mark_as_seen_setting">Označit příběhy po zhlédnutí jako zobrazené</string>
     <string name="mark_as_seen_setting_summary">Autor příběhu bude vědět, že jsi si ho zobrazili</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Skrýt ztlumené příběhy z kanálu</string>
     <string name="dm_mark_as_seen_setting">Označovat přímou zprávu po zobrazení jako zobrazenou</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní členové uvidí, že jste si ji ji zobrazili</string>
     <string name="activity_setting">Povolit oznámení o aktivitě</string>
     <string name="story_sort_setting">Řazení příběhů feedu</string>
-    <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
-    <string name="error_loading_profile_loggedin">Error loading profile! Is the username valid? Or did they block you?</string>
-    <string name="error_loading_hashtag">Error loading hashtag! Is the name valid?</string>
-    <string name="error_loading_location">Error loading location! Is the URL valid?</string>
+    <string name="error_loading_profile">Chyba při načítání profilu! Je uživatelské jméno platné? Pokud ano, jste možná omezeni Instagramem.</string>
+    <string name="error_loading_profile_loggedin">Chyba při načítání profilu! Je uživatelské jméno platné? Nebo vás zablokovali?</string>
+    <string name="error_loading_hashtag">Chyba při načítání hashtagu! Je název platný?</string>
+    <string name="error_loading_location">Chyba při načítání polohy! Je URL platná?</string>
     <string name="error_creating_folders">Chyba při vytváření složky(ek) stahování.</string>
     <string name="save_to_folder">Uložit do vlastní složky</string>
     <string name="select_folder">Vybrat adresář</string>
@@ -62,8 +62,8 @@
     </plurals>
     <string name="main_posts_following">%s\nSleduje</string>
     <string name="post_viewer_autoplay_video">Videa spouštět automaticky</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">Pokračovat v přehrávání na pozadí</string>
+    <string name="post_viewer_background_play_summary">Nepozastavovat videa při opuštění aplikace</string>
     <string name="post_viewer_muted_autoplay">Vždy ztlumit videa</string>
     <string name="post_viewer_show_captions">Vždy zobrazovat titulek příspěvku</string>
     <string name="post_viewer_download_dialog_title">Vyberte, co stáhnout</string>
@@ -105,7 +105,7 @@
     <string name="remove_all_acc">Odstranit všechny účty</string>
     <string name="remove_all_acc_warning">Tato akce odstraní všechny přidané účty z aplikace!\nChcete-li odstranit jen jeden účet, dlouze ho podržte v přepínači účtů.\nChcete stále pokračovat?</string>
     <string name="time_settings">Formát data</string>
-    <string name="saved_create_collection">Create new collection</string>
+    <string name="saved_create_collection">Vytvořit novou kolekci</string>
     <string name="edit_collection">Edit collection name</string>
     <string name="delete_collection">Delete collection</string>
     <string name="delete_collection_confirm">Are you sure you want to delete this collection?</string>
