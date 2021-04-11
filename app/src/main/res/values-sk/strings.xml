@@ -62,6 +62,8 @@
     </plurals>
     <string name="main_posts_following">%s\nSleduje</string>
     <string name="post_viewer_autoplay_video">Automaticky prehrávať videá</string>
+    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">Vždy stíšiť videá</string>
     <string name="post_viewer_show_captions">Vždy zobraziť popis príspevku</string>
     <string name="post_viewer_download_dialog_title">Vybrať čo stiahnuť</string>
