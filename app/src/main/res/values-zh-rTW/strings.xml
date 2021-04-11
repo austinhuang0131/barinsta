@@ -53,6 +53,8 @@
     </plurals>
     <string name="main_posts_following">%s\n追蹤中</string>
     <string name="post_viewer_autoplay_video">自動播放影片</string>
+    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">永遠自動靜音影片</string>
     <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">選擇要下載的內容</string>
