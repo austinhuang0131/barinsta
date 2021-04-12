@@ -4,7 +4,7 @@
     <string name="action_dms">Přímé Zprávy</string>
     <string name="action_settings">Nastavení</string>
     <string name="action_download">Stáhnout</string>
-    <string name="action_search">Vyhledat uživatelské jméno…</string>
+    <string name="action_search">Hledat uživatele…</string>
     <string name="action_compare">Porovnat</string>
     <string name="clipboard_error">Chyba při kopírování textu</string>
     <string name="clipboard_copied">Zkopírováno do schránky!</string>
