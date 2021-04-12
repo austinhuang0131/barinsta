@@ -157,7 +157,7 @@
     <string name="quick_access_confirm_delete">Opravdu chcete smazat \'%s\'?</string>
     <string name="open_profile">Otevřít profil</string>
     <string name="view_story">Zobrazit příběh</string>
-    <string name="view_pfp">Zobrazit profilovou fotku</string>
+    <string name="view_pfp">Zobrazit obrázek profilu</string>
     <string name="dms_inbox_raven_message_unknown">Nepodporovaný typ zprávy</string>
     <string name="dms_inbox_unsend">Zrušit odeslání zprávy</string>
     <string name="dms_inbox_giphy">Zobrazit na GIPHY</string>
@@ -286,7 +286,7 @@
     <string name="about_repository_summary">Auditujte, označte hvězdou, nahlaste chyby, přispívejte a bavte se (znovu)!</string>
     <string name="about_feedback">Poslat zpětnou vazbu e-mailem</string>
     <string name="about_category_3pt">Zdroje třetích stran</string>
-    <string name="reminder">Připomenutí</string>
+    <string name="reminder">Upozornění</string>
     <string name="reminder_summary">Používejte tuto aplikaci odpovědně. Stažené obrázky by měly být použity pouze pro účely povolené platnými zákony.</string>
     <string name="light_white_theme">Bílá</string>
     <string name="dark_black_theme">Černá</string>
@@ -494,7 +494,7 @@
     <string name="tab_order">Pořadí obrazovek</string>
     <string name="other_tabs">Další karty</string>
     <string name="tab_order_start_next_launch">Nové pořadí karet se projeví při příštím spuštění</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
+    <string name="dm_remove_warning">Po uložení budou při příštím spuštění vypnuty všechny funkce související s posíláním zpráv</string>
     <string name="copy_caption">Kopírovat popisek</string>
     <string name="copy_reply">Kopírovat odpověď</string>
 </resources>
