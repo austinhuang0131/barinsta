@@ -172,7 +172,7 @@
     <string name="dms_inbox_shared_highlight">%s sdílel(a) zvýrazněný příběh od @%s</string>
     <string name="dms_inbox_shared_story">%s sdílel(a) příběh od @%s</string>
     <string name="dms_inbox_shared_voice">%s poslal(a) hlasovou zprávu</string>
-    <string name="dms_inbox_shared_clip">%s sdílel(a) klip od @%s</string>
+    <string name="dms_inbox_shared_clip">%s sdílel(a) sekvenci od @%s</string>
     <string name="dms_inbox_shared_igtv">%s sdílel(a) IGTV video od @%s</string>
     <string name="dms_inbox_replied_story_outgoing">Odpověděli jste na příběh: %s</string>
     <string name="dms_inbox_replied_story_incoming">%s odpověděl(a) na váš příběh: %s</string>
