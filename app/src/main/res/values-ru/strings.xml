@@ -62,8 +62,8 @@
     </plurals>
     <string name="main_posts_following">%s\nПоследователей</string>
     <string name="post_viewer_autoplay_video">Автовоспроизведение видео</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">Воспроизведение видео в фоновом режиме</string>
+    <string name="post_viewer_background_play_summary">Не приостанавливать видео, когда приложение свернуто</string>
     <string name="post_viewer_muted_autoplay">Всегда заглушать видео</string>
     <string name="post_viewer_show_captions">Всегда отображать подписи к постам</string>
     <string name="post_viewer_download_dialog_title">Выберите, что скачивать</string>
