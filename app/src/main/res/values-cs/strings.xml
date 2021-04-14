@@ -80,7 +80,7 @@
     <string name="voted_story_poll">Již jste hlasovali!</string>
     <string name="respond_story">Odpovědět</string>
     <string name="answer_hint">Odpovědět…</string>
-    <string name="answered_story">Odpověď byla úspěšná!</string>
+    <string name="answered_story">Odpověď úspěšně odeslána!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d odpověď, průměrně %s</item>
         <item quantity="few">%d odpovědí, průměrně %s</item>
