@@ -56,7 +56,7 @@
     </plurals>
     <string name="main_posts_following">%s\nSeguiti</string>
     <string name="post_viewer_autoplay_video">Riproduzione automatica video</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play">Continua i video in sfondo</string>
     <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">Silenzia sempre i video</string>
     <string name="post_viewer_show_captions">Mostra sempre le didascalie dei post</string>
