@@ -326,7 +326,7 @@
     <string name="save_remove_unsuccessful">Odstranění se nezdařilo</string>
     <string name="downloading">Stahování…</string>
     <string name="downloader_downloading_child">Stahuje se %1$d z %2$d</string>
-    <string name="delete">Vymazat</string>
+    <string name="delete">Smazat</string>
     <string name="comment">Komentovat</string>
     <string name="layout">Rozložení</string>
     <string name="feed_stories">Kanál příběhů</string>
