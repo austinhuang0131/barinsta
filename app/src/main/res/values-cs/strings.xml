@@ -264,7 +264,7 @@
     <string name="feed">Kanál</string>
     <string name="profile">Profil</string>
     <string name="more">Více</string>
-    <string name="title_dm">DM</string>
+    <string name="title_dm">Zprávy</string>
     <string name="number_selected">%d vybráno</string>
     <string name="logout_success">Odhlášení proběhlo úspěšně!</string>
     <string name="dm_thread_info">Informace</string>
@@ -363,7 +363,7 @@
     <string name="end">Konec</string>
     <string name="bilateral_blur">Bilaterální rozostření</string>
     <string name="vignette">Vinětace</string>
-    <string name="box_blur">Box blur</string>
+    <string name="box_blur">Hranaté rozmazání</string>
     <string name="sepia">Sépie</string>
     <string name="clarendon">Clarendon</string>
     <string name="one977">1977</string>
@@ -460,7 +460,7 @@
     <string name="no_pending_requests">Žádné nevyřízené žádosti</string>
     <string name="checking_for_new_messages">Zjišťování nových zpráv</string>
     <string name="pref_category_stories">Příběhy</string>
-    <string name="pref_category_dm">DM</string>
+    <string name="pref_category_dm">Zprávy</string>
     <string name="pref_category_notifications">Upozornění</string>
     <string name="pref_category_post">Příspěvky</string>
     <string name="enable_dm_notifications">Zapnout upozornění na zprávy</string>
