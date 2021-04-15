@@ -122,7 +122,7 @@
     <string name="unbookmark">Odebrat záložku</string>
     <string name="follow">Sledovat</string>
     <string name="unfollow">Přestat sledovat</string>
-    <string name="favorite_short" comment="Adjective, not verb">Přidat do oblíbených</string>
+    <string name="favorite_short" comment="Adjective, not verb">Oblíbené</string>
     <string name="block">Zablokovat</string>
     <string name="unblock">Odblokovat</string>
     <string name="restrict">Omezit</string>
@@ -257,7 +257,7 @@
     <string name="activity_count_comments">%d komentářů</string>
     <string name="activity_count_commentlikes">%d lajků komentáře</string>
     <string name="activity_count_usertags">%d uživatelských štítků</string>
-    <string name="activity_count_likes">%d líbí se</string>
+    <string name="activity_count_likes">%d se líbí</string>
     <string name="activity_count_poy">%d fotek s vámi</string>
     <string name="activity_count_requests">%d žádostí o sledování</string>
     <string name="activity_notloggedin">Odhlásili jste se před kliknutím na toto oznámení?</string>
