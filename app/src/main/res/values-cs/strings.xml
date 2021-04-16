@@ -181,7 +181,7 @@
     <string name="dms_inbox_mentioned_story_outgoing">Zmínili jste @%s ve svém příběhu</string>
     <string name="dms_inbox_mentioned_story_incoming">%s vás zmínil(a) ve svém příběhu</string>
     <string name="dms_inbox_raven_media_unknown"><i>Neznámý typ médií</i></string>
-    <string name="dms_inbox_raven_media_expired">Média vypršela!</string>
+    <string name="dms_inbox_raven_media_expired">Platnost média vypršela!</string>
     <string name="dms_inbox_raven_media_delivered">Doručeno</string>
     <string name="dms_inbox_raven_media_sent">Odesláno</string>
     <string name="dms_inbox_raven_media_opened">Otevřeno</string>
@@ -431,11 +431,11 @@
     <string name="mentioned_story_incoming">Zmínili vás ve svém příběhu</string>
     <string name="replied_story_outgoing">Odpověděli jste na jejich příběh</string>
     <string name="replied_story_incoming">Odpověděli na váš příběh</string>
-    <string name="raven_image_expired">Obrázek vypršel</string>
+    <string name="raven_image_expired">Platnost obrázku vypršela</string>
     <string name="raven_image_info">Obrázek zmizí po zobrazení</string>
-    <string name="raven_video_expired">Video vypršelo</string>
+    <string name="raven_video_expired">Platnost videa vypršela</string>
     <string name="raven_video_info">Video zmizí po zobrazení</string>
-    <string name="raven_msg_expired">Zpráva vypršela</string>
+    <string name="raven_msg_expired">Platnost zprávy vypršela</string>
     <string name="raven_msg_info">Zpráva zmizí po zobrazení</string>
     <string name="story_share">Příběh @%s</string>
     <string name="story_share_highlight">Zvýrazněný příběh @%s</string>
