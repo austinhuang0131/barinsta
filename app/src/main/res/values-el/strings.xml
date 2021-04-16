@@ -56,8 +56,8 @@
     </plurals>
     <string name="main_posts_following">%s\nΑκολουθείτε</string>
     <string name="post_viewer_autoplay_video">Αυτόματη αναπαραγωγή των βίντεο</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">Συνέχεια βίντεο στο παρασκήνιο</string>
+    <string name="post_viewer_background_play_summary">Να μην γίνεται παύση των βίντεο όταν η εφαρμογή είναι εκτός εστίασης</string>
     <string name="post_viewer_muted_autoplay">Μόνιμη σίγαση των βίντεο</string>
     <string name="post_viewer_show_captions">Μόνιμη εμφάνιση των λεζαντών των δημοσιεύσεων</string>
     <string name="post_viewer_download_dialog_title">Επιλογή δημοσιεύσεων για λήψη</string>
