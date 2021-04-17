@@ -180,7 +180,7 @@
     <string name="dms_inbox_raven_media_replayed">Αναπαράχθηκε ξανά</string>
     <string name="dms_inbox_raven_media_sending">Γίνεται Αποστολή…</string>
     <string name="dms_inbox_raven_media_blocked">Αποκλείστηκε</string>
-    <string name="dms_inbox_raven_media_suggested">Προτεινόμενη</string>
+    <string name="dms_inbox_raven_media_suggested">Προτεινόμενα</string>
     <string name="dms_inbox_raven_media_screenshot">Λήφθηκε στιγμιότυπο οθόνης</string>
     <string name="dms_inbox_raven_media_cant_deliver">Αδυναμία παράδοσης</string>
     <string name="dms_inbox_error_null_count">Η απόκριση καταμέτρησης μη προβληθέντων είναι άκυρη!</string>
