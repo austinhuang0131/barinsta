@@ -4,7 +4,7 @@
     <string name="action_dms">Μηνύματα</string>
     <string name="action_settings">Ρυθμίσεις</string>
     <string name="action_download">Λήψη</string>
-    <string name="action_search">Αναζήτηση ονόματος χρήστη...</string>
+    <string name="action_search">Αναζήτηση ονόματος χρήστη…</string>
     <string name="action_compare">Σύγκριση</string>
     <string name="clipboard_error">Σφάλμα κατά την αντιγραφή κειμένου</string>
     <string name="clipboard_copied">Αντιγράφηκε στο πρόχειρο!</string>
