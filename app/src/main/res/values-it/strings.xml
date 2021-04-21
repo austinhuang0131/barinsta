@@ -20,7 +20,7 @@
     <string name="title_discover">Scopri</string>
     <string name="title_comments">Commenti</string>
     <string name="title_notifications">Attività</string>
-    <string name="update_check">Verifica per aggiornamenti all\'avvio</string>
+    <string name="update_check">Verifica aggiornamenti all\'avvio</string>
     <string name="flag_secure">Blocca screenshot &amp; anteprima app</string>
     <string name="download_user_folder">Scarica i post nelle cartelle del nome utente</string>
     <string name="download_prepend_username">Anteponi Nome Utente al Nome del File</string>
@@ -56,7 +56,7 @@
     </plurals>
     <string name="main_posts_following">%s\nSeguiti</string>
     <string name="post_viewer_autoplay_video">Riproduzione automatica video</string>
-    <string name="post_viewer_background_play">Continua i video in sfondo</string>
+    <string name="post_viewer_background_play">Continua i video in sottofondo</string>
     <string name="post_viewer_background_play_summary">Non mettere in pausa i video quando l\'applicazione è inattiva</string>
     <string name="post_viewer_muted_autoplay">Silenzia sempre i video</string>
     <string name="post_viewer_show_captions">Mostra sempre le didascalie dei post</string>
@@ -74,7 +74,7 @@
     <string name="voted_story_poll">Hai già votato!</string>
     <string name="respond_story">Rispondi</string>
     <string name="answer_hint">Rispondi…</string>
-    <string name="answered_story">Risposta corretta!</string>
+    <string name="answered_story">Risposta riuscita!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d risposta media %s</item>
         <item quantity="other">%d risposte medie %s</item>
@@ -93,7 +93,7 @@
     <string name="empty_list">Nessun Post Simile!</string>
     <string name="login">Accedi</string>
     <string name="logout">Disconettiti</string>
-    <string name="logout_summary">Naviga in Instagram anonimamente</string>
+    <string name="logout_summary">Naviga su Instagram anonimamente</string>
     <string name="remove_all_acc">Rimuovi tutti i profili</string>
     <string name="remove_all_acc_warning">Questo rimuoverà tutti i profili aggiunti dall\'app!\nPer rimuovere solo un profilo, tieni premuto il profilo dalla finestra di cambio del profilo.\nDesideri continuare?</string>
     <string name="time_settings">Formato della Data</string>
@@ -158,7 +158,7 @@
     <string name="dms_inbox_shared_video">%s ha condiviso un video</string>
     <string name="dms_inbox_shared_message">%s ha inviato un messaggio</string>
     <string name="dms_inbox_shared_gif">%s ha condiviso una gif</string>
-    <string name="dms_inbox_shared_sticker">%s ha condiviso uno sticker</string>
+    <string name="dms_inbox_shared_sticker">%s hai condiviso uno sticker</string>
     <string name="dms_inbox_shared_profile">%s ha condiviso un profilo: @%s</string>
     <string name="dms_inbox_shared_location">%s ha condiviso una posizione: %s</string>
     <string name="dms_inbox_shared_highlight">%s ha condiviso una storia evidenziata di @%s</string>
