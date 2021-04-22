@@ -411,7 +411,7 @@
     <string name="edit_unsuccessful">Úprava se nezdařila</string>
     <string name="message">Zpráva</string>
     <string name="reply">Odpověď</string>
-    <string name="tap_to_remove">Klepnutím smažete</string>
+    <string name="tap_to_remove">Klepnutím odebrat</string>
     <string name="forward">Přeposlat</string>
     <string name="forward_outgoing">Přeposlali jste zprávu</string>
     <string name="forward_incoming">Přeposlal(a) zprávu</string>
