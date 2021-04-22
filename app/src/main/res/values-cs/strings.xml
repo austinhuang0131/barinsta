@@ -304,7 +304,7 @@
     <string name="backup_and_restore">Záloha a obnovení</string>
     <string name="backup_summary">Zálohujte nastavení aplikace Barinsta, přihlašovací údaje a/nebo oblíbené položky do prostého textu nebo šifrovaného souboru pro pozdější obnovu.</string>
     <string name="backup_warning">Pokud zálohujete přihlašovací údaje, zacházejte se souborem jako s důvěrným a uchovejte ho bezpečně!</string>
-    <string name="create_backup">Vytvořit nový soubor zálohy</string>
+    <string name="create_backup">Vytvořit novou zálohu</string>
     <string name="restore_backup">Obnovit z existující zálohy</string>
     <string name="file_chosen_label">Soubor:</string>
     <string name="enter_password">Zadejte heslo</string>
@@ -470,7 +470,7 @@
     <string name="mins">minuty</string>
     <string name="search_giphy">Prohledat GIPHY</string>
     <string name="generic_null_response">Response is null!</string>
-    <string name="generic_not_ok_response">Response status is not ok!</string>
+    <string name="generic_not_ok_response">Stav odpovědi není v pořádku!</string>
     <string name="generic_failed_request">Žádost selhala!</string>
     <string name="hint_keyword">Klíčové slovo</string>
     <string name="toggle_keyword_filter">Povolit filtr klíčových slov</string>
