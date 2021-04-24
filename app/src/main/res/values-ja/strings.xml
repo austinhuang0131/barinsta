@@ -21,12 +21,12 @@
     <string name="title_comments">コメント</string>
     <string name="title_notifications">アクティビティ</string>
     <string name="update_check">起動時にアップデートを確認</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">スクリーンショットとアプリプレビューをブロック</string>
     <string name="download_user_folder">ユーザ名のフォルダに投稿をダウンロード</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">ファイル名の先頭にユーザー名を追加</string>
     <string name="mark_as_seen_setting">ストーリーズを表示後に既読にする</string>
     <string name="mark_as_seen_setting_summary">ストーリーの作成者は、あなたが閲覧したことを知ることができます。</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">ミュートされたストーリーをフィードから隠す</string>
     <string name="dm_mark_as_seen_setting">DMを表示後に既読にする</string>
     <string name="dm_mark_as_seen_setting_summary">ほかのメンバーは、あなたが閲覧したことを知ることができます。</string>
     <string name="activity_setting">アクティビティの通知を有効化</string>
@@ -53,7 +53,7 @@
     </plurals>
     <string name="main_posts_following">%s\nフォロー中</string>
     <string name="post_viewer_autoplay_video">動画を自動再生する</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
+    <string name="post_viewer_background_play">バックグラウンドでビデオの再生を続ける</string>
     <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">動画を常にミュートする</string>
     <string name="post_viewer_show_captions">キャプションを常に表示</string>
