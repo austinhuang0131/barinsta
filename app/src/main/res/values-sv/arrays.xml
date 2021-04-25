@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>System Default</item>
+        <item>Systemstandard</item>
         <item translatable="false">English</item>
         <item translatable="false">Français</item>
         <item translatable="false">Español</item>
@@ -26,21 +26,21 @@
         <item translatable="false">Euskara</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
-        <item>Dark</item>
-        <item>Light</item>
+        <item>Auto / Följ system</item>
+        <item>Auto / Följ batteri</item>
+        <item>Mörk</item>
+        <item>Ljus</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>Instagram-standard (Olästa, sedan lästa)</item>
+        <item>Från nyaste till äldsta</item>
+        <item>Från äldsta till nyaste</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>Ingen</item>
         <item>\@</item>
-        <item>at</item>
-        <item>on</item>
+        <item>vid</item>
+        <item>den</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
@@ -54,7 +54,7 @@
     <!--    <item>@navigation/more_nav_graph</item>-->
     <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
-        <item>secs</item>
-        <item>mins</item>
+        <item>sekunder</item>
+        <item>minuter</item>
     </string-array>
 </resources>
