@@ -118,7 +118,7 @@ dependencies {
     coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
 
     def appcompat_version = "1.2.0"
-    def nav_version = '2.3.4'
+    def nav_version = '2.3.5'
     def exoplayer_version = '2.13.3'
 
     implementation 'com.google.android.material:material:1.4.0-alpha02'
