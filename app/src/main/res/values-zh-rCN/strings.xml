@@ -473,4 +473,7 @@
     <string name="dm_remove_warning">若您如此保存，所有私信功能将会在下次启动时被禁用</string>
     <string name="copy_caption">复制说明</string>
     <string name="copy_reply">复制回复</string>
+    <string name="top">Top</string>
+    <string name="recent">Recent</string>
+    <string name="clear">Clear</string>
 </resources>
