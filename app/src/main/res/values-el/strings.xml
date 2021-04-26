@@ -481,4 +481,7 @@
     <string name="dm_remove_warning">Εάν αποθηκευτεί, όλες οι λειτουργίες που είναι σχετικές με τα Μηνύματα, θα είναι απενεργοποιημένες στην επόμενη εκκίνηση</string>
     <string name="copy_caption">Αντιγραφή λεζάντας</string>
     <string name="copy_reply">Αντιγραφή απάντησης</string>
+    <string name="top">Top</string>
+    <string name="recent">Recent</string>
+    <string name="clear">Clear</string>
 </resources>
