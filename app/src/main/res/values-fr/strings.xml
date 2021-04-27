@@ -482,6 +482,6 @@
     <string name="copy_caption">Copie de la légende</string>
     <string name="copy_reply">Copie de la réponse</string>
     <string name="top">Top</string>
-    <string name="recent">Recent</string>
-    <string name="clear">Clear</string>
+    <string name="recent">Récent</string>
+    <string name="clear">Nettoyer</string>
 </resources>
