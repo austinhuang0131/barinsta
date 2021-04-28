@@ -37,14 +37,14 @@
     <string name="error_loading_location">Fel uppstod när platsen laddades! Är URL:en giltig?</string>
     <string name="error_creating_folders">Fel inträffade när mapp(arna) för nerladdning skapades.</string>
     <string name="save_to_folder">Spara till en anpassad mapp</string>
-    <string name="select_folder">Select folder</string>
-    <string name="theme_settings">Theme</string>
-    <string name="login_settings">Only affects logged-in users:</string>
-    <string name="anonymous_settings">Only affects anonymous users:</string>
-    <string name="select_language">Language</string>
+    <string name="select_folder">Välj mapp</string>
+    <string name="theme_settings">Tema</string>
+    <string name="login_settings">Påverkar endast inloggade användare:</string>
+    <string name="anonymous_settings">Påverkar endast anonyma användare:</string>
+    <string name="select_language">Språk</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPost</item>
-        <item quantity="other">%s\nPosts</item>
+        <item quantity="other">%s\nInläggen</item>
     </plurals>
     <plurals name="main_posts_count_inline">
         <item quantity="one">%s Post</item>
@@ -54,8 +54,8 @@
         <item quantity="one">%s\nFollower</item>
         <item quantity="other">%s\nFollowers</item>
     </plurals>
-    <string name="main_posts_following">%s\nFollowing</string>
-    <string name="post_viewer_autoplay_video">Autoplay videos</string>
+    <string name="main_posts_following">%s\nFöljer</string>
+    <string name="post_viewer_autoplay_video">Spela upp videor automatiskt</string>
     <string name="post_viewer_background_play">Continue videos in background</string>
     <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
     <string name="post_viewer_muted_autoplay">Always mute videos</string>
