@@ -484,4 +484,5 @@
     <string name="top">Início</string>
     <string name="recent">Recente</string>
     <string name="clear">Limpar</string>
+    <string name="no_external_map_app">No Map app found!</string>
 </resources>
