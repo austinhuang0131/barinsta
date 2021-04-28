@@ -484,4 +484,5 @@
     <string name="top">Arriba</string>
     <string name="recent">Reciente</string>
     <string name="clear">Eliminar</string>
+    <string name="no_external_map_app">¡No se encontró una aplicación de mapa!</string>
 </resources>
