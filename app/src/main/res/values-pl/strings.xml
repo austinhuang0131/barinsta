@@ -498,7 +498,7 @@
     <string name="copy_caption">Kopiuj podpis</string>
     <string name="copy_reply">Kopiuj odpowiedź</string>
     <string name="top">Top</string>
-    <string name="recent">Recent</string>
-    <string name="clear">Clear</string>
+    <string name="recent">Najnowsze</string>
+    <string name="clear">Wyczyść</string>
     <string name="no_external_map_app">No Map app found!</string>
 </resources>
