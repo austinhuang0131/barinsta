@@ -497,8 +497,8 @@
     <string name="dm_remove_warning">Po uložení budou při příštím spuštění vypnuty všechny funkce související s posíláním zpráv</string>
     <string name="copy_caption">Kopírovat popisek</string>
     <string name="copy_reply">Kopírovat odpověď</string>
-    <string name="top">Top</string>
-    <string name="recent">Recent</string>
-    <string name="clear">Clear</string>
+    <string name="top">Populární</string>
+    <string name="recent">Nedávné</string>
+    <string name="clear">Vymazat</string>
     <string name="no_external_map_app">Nemáte žádnou aplikaci pro mapy!</string>
 </resources>
