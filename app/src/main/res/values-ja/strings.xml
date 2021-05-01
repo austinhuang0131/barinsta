@@ -476,5 +476,5 @@
     <string name="top">Top</string>
     <string name="recent">Recent</string>
     <string name="clear">Clear</string>
-    <string name="no_external_map_app">No Map app found!</string>
+    <string name="no_external_map_app">有効な地図アプリが見つかりません</string>
 </resources>
