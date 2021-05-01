@@ -269,7 +269,7 @@
     <string name="pref_category_downloads">Downloads</string>
     <string name="pref_category_locale">Sprache</string>
     <string name="account">Account</string>
-    <string name="account_hint">Aktueller Login funktioniert nicht? Fügen das Konto erneut hinzu.</string>
+    <string name="account_hint">Aktueller Login funktioniert nicht? Füge das Konto erneut hinzu.</string>
     <string name="add_account">Account hinzufügen</string>
     <string name="about_category_license">Lizenz (nur auf Englisch)</string>
     <string name="about_documentation">Besuche unsere Webseite</string>
