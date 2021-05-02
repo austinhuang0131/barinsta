@@ -368,8 +368,8 @@
         <item quantity="other">Αρέσει σε %d</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="one">%d απάντηση</item>
+        <item quantity="other">%d απαντήσεις</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d σχόλιο</item>
