@@ -34,7 +34,7 @@
     <string-array name="story_sorts">
         <item>인스타그램 기본 설정</item>
         <item>최신순</item>
-        <item>From oldest to newest</item>
+        <item>오래된순</item>
     </string-array>
     <string-array name="separator_presets">
         <item>없음</item>
