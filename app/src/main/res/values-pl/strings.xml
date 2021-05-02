@@ -219,7 +219,7 @@
     <string name="comment_viewer_like_comment">Polub komentarz</string>
     <string name="comment_viewer_unlike_comment">Usuń polubienie komentarza</string>
     <string name="comment_viewer_translate_comment">Tłumacz komentarz</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Brak komentarzy!</string>
     <string name="comment_view_mention_user_search">Czy chcesz wyszukać przy pomocy nazwy użytkownika?</string>
     <string name="comment_view_mention_hash_search">Czy chcesz wyszukać przy pomocy hashtag\'a?</string>
