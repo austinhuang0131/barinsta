@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Aimer le commentaire</string>
     <string name="comment_viewer_unlike_comment">Retirer le j\'aime du commentaire</string>
     <string name="comment_viewer_translate_comment">Traduire le commentaire</string>
-    <string name="comment_viewer_delete_comment">Supprimer le commentaire</string>
+    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
     <string name="comment_send_empty_comment">Aucun commentaire vide !</string>
     <string name="comment_view_mention_user_search">Souhaitez-vous faire une recherche sur le nom d\'utilisateur ?</string>
     <string name="comment_view_mention_hash_search">Souhaitez-vous faire une recherch sur le hashtag ?</string>
@@ -366,6 +366,10 @@
     <plurals name="likes_count">
         <item quantity="one">%d j\'aime</item>
         <item quantity="other">%d j\'aimes</item>
+    </plurals>
+    <plurals name="replies_count">
+        <item quantity="one">%d reply</item>
+        <item quantity="other">%d replies</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d commentaire</item>
