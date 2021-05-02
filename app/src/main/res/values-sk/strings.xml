@@ -219,7 +219,7 @@
     <string name="comment_viewer_like_comment">Páči sa mi</string>
     <string name="comment_viewer_unlike_comment">Nepáči sa mi</string>
     <string name="comment_viewer_translate_comment">Preložiť komentár</string>
-    <string name="comment_viewer_delete_comment">Odstrániť komentár</string>
+    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
     <string name="comment_send_empty_comment">Komentár je prázdny!</string>
     <string name="comment_view_mention_user_search">Chcete vyhľadať používeteľské meno?</string>
     <string name="comment_view_mention_hash_search">Chcete vyhľadať hashtag?</string>
@@ -376,6 +376,12 @@
         <item quantity="few">%d sa páči</item>
         <item quantity="many">%d sa páči</item>
         <item quantity="other">%d sa páči</item>
+    </plurals>
+    <plurals name="replies_count">
+        <item quantity="one">%d reply</item>
+        <item quantity="few">%d replies</item>
+        <item quantity="many">%d replies</item>
+        <item quantity="other">%d replies</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d komentár</item>
