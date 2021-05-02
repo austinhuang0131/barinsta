@@ -212,7 +212,7 @@
     <string name="comment_viewer_like_comment">پسندیدن دیدگاه</string>
     <string name="comment_viewer_unlike_comment">نپسندیدن دیدگاه</string>
     <string name="comment_viewer_translate_comment">گرداندن دیدگاه</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">بدون دیدگاه تهی!</string>
     <string name="comment_view_mention_user_search">ایا میخواهید نام کاربری جستوجو کنید ؟</string>
     <string name="comment_view_mention_hash_search">آیا میخواهید هشتگ جستوجو کنید؟</string>
