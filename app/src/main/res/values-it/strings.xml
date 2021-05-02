@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Mi Piace il commento</string>
     <string name="comment_viewer_unlike_comment">Il commento Non mi Piace Più</string>
     <string name="comment_viewer_translate_comment">Traduci commento</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Elimina commento</string>
     <string name="comment_send_empty_comment">Nessun commento vuoto!</string>
     <string name="comment_view_mention_user_search">Vuoi cercare il nome utente?</string>
     <string name="comment_view_mention_hash_search">Vuoi cercare l\'hashtag?</string>
@@ -368,8 +368,8 @@
         <item quantity="other">%d Mi piace</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="one">%d risposta</item>
+        <item quantity="other">%d risposte</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d commento</item>
