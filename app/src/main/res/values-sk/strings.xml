@@ -219,7 +219,7 @@
     <string name="comment_viewer_like_comment">Páči sa mi</string>
     <string name="comment_viewer_unlike_comment">Nepáči sa mi</string>
     <string name="comment_viewer_translate_comment">Preložiť komentár</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Komentár je prázdny!</string>
     <string name="comment_view_mention_user_search">Chcete vyhľadať používeteľské meno?</string>
     <string name="comment_view_mention_hash_search">Chcete vyhľadať hashtag?</string>
