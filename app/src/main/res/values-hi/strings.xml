@@ -212,7 +212,7 @@
     <string name="comment_viewer_like_comment">टिप्पणी को पसन्द करें</string>
     <string name="comment_viewer_unlike_comment">टिप्पणी को पसन्द न करें</string>
     <string name="comment_viewer_translate_comment">Translate comment</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">रिक्त टिप्पणी न करें!</string>
     <string name="comment_view_mention_user_search">युज़रनेम को ढूंढ़ना चाहते हैं?</string>
     <string name="comment_view_mention_hash_search">हैशटैग को ढूंढ़ना चाहते हैं?</string>
