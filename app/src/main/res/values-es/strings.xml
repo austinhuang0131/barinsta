@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Dar me gusta a comentario</string>
     <string name="comment_viewer_unlike_comment">Quitar me gusta a comentario</string>
     <string name="comment_viewer_translate_comment">Traducir comentario</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">¡No hay comentarios vacíos!</string>
     <string name="comment_view_mention_user_search">¿Quieres buscar el nombre de usuario?</string>
     <string name="comment_view_mention_hash_search">¿Quieres buscar el hashtag?</string>
