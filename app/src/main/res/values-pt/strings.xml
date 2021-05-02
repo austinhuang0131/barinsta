@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Curtir comentário</string>
     <string name="comment_viewer_unlike_comment">Descurtir comentário</string>
     <string name="comment_viewer_translate_comment">Traduzir comentário</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Excluir comentário</string>
     <string name="comment_send_empty_comment">Comentário em branco!</string>
     <string name="comment_view_mention_user_search">Você quer buscar o nome de usuário?</string>
     <string name="comment_view_mention_hash_search">Você quer buscar a hashtag?</string>
@@ -368,8 +368,8 @@
         <item quantity="other">%d curtidas</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="one">%d resposta</item>
+        <item quantity="other">%d respostas</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d comentário</item>
