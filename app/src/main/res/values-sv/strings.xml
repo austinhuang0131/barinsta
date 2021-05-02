@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Gilla kommentaren</string>
     <string name="comment_viewer_unlike_comment">Sluta gilla kommentaren</string>
     <string name="comment_viewer_translate_comment">Översätt kommentaren</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Inga tomma kommentarer!</string>
     <string name="comment_view_mention_user_search">Vill du söka på användarnamnet?</string>
     <string name="comment_view_mention_hash_search">Vill du söka på hash-taggen?</string>
