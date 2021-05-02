@@ -219,7 +219,7 @@
     <string name="comment_viewer_like_comment">Označit komentář lajkem</string>
     <string name="comment_viewer_unlike_comment">Odebrat lajk z komentáře</string>
     <string name="comment_viewer_translate_comment">Přeložit komentář</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Odstranit komentář</string>
     <string name="comment_send_empty_comment">Žádné prázdné komentáře!</string>
     <string name="comment_view_mention_user_search">Chcete vyhledat uživatelské jméno?</string>
     <string name="comment_view_mention_hash_search">Chcete vyhledat hashtag?</string>
