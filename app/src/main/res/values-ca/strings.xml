@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Donar \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_unlike_comment">Treure \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_translate_comment">Traduir comentari</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">No als comentaris buits!</string>
     <string name="comment_view_mention_user_search">Vols cercar el nom d\'usuari?</string>
     <string name="comment_view_mention_hash_search">Vols cercar l\'etiqueta?</string>
