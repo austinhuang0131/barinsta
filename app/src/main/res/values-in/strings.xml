@@ -207,7 +207,7 @@
     <string name="comment_viewer_like_comment">Suka komentar</string>
     <string name="comment_viewer_unlike_comment">Batal suka komentar</string>
     <string name="comment_viewer_translate_comment">Terjemahkan komentar</string>
-    <string name="comment_viewer_delete_comment">Hapus komentar</string>
+    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
     <string name="comment_send_empty_comment">Ups, komentar kosong!</string>
     <string name="comment_view_mention_user_search">Apakah anda ingin mencari nama pengguna ini?</string>
     <string name="comment_view_mention_hash_search">Apakah anda ingin mencari tagar ini?</string>
@@ -361,6 +361,9 @@
     <string name="normal">Normal</string>
     <plurals name="likes_count">
         <item quantity="other">%d suka</item>
+    </plurals>
+    <plurals name="replies_count">
+        <item quantity="other">%d replies</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="other">%d komentar</item>
