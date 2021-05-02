@@ -32,12 +32,12 @@
         <item>라이트 모드</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
+        <item>인스타그램 기본 설정</item>
+        <item>최신순</item>
         <item>From oldest to newest</item>
     </string-array>
     <string-array name="separator_presets">
-        <item>None</item>
+        <item>없음</item>
         <item>\@</item>
         <item>에</item>
         <item>에</item>
