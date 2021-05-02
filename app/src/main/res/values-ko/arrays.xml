@@ -26,8 +26,8 @@
         <item translatable="false">Euskara</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Auto / Follow System</item>
-        <item>Auto / Follow Battery</item>
+        <item>오토 / 시스템 따르기</item>
+        <item>오토 / 배터리 따르기</item>
         <item>다크 모드</item>
         <item>라이트 모드</item>
     </string-array>
