@@ -95,7 +95,7 @@
     <string name="logout">Abmelden</string>
     <string name="logout_summary">Instagram anonym durchsuchen</string>
     <string name="remove_all_acc">Alle Konten entfernen</string>
-    <string name="remove_all_acc_warning">Dadurch werden alle hinzugefügten Konten aus der App entfernt!\nUm nur ein Konto zu entfernen, tippe lange auf das Konto aus dem Kontowechseldialog.\nMöchtest du fortfahren?</string>
+    <string name="remove_all_acc_warning">Dadurch werden alle hinzugefügten Konten aus der App entfernt!\nUm nur ein Konto zu entfernen, tippe lange auf das Konto im Dialogfeld für den Kontowechsel.\nMöchtest du fortfahren?</string>
     <string name="time_settings">Datumsformat</string>
     <string name="saved_create_collection">Neue Sammlung anlegen</string>
     <string name="edit_collection">Sammlungsname bearbeiten</string>
