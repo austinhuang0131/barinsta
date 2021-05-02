@@ -119,9 +119,9 @@
     <string name="mute_posts">게시물 음소거하기</string>
     <string name="unmute_stories">Unmute stories</string>
     <string name="unmute_posts">Unmute posts</string>
-    <string name="bio_copy">Copy bio</string>
+    <string name="bio_copy">소개 복사</string>
     <string name="bio_translate">소개 번역</string>
-    <string name="status_mutual">Mutual</string>
+    <string name="status_mutual">서로친구</string>
     <string name="status_following">팔로잉</string>
     <string name="status_follower">팔로워</string>
     <string name="map">맵</string>
