@@ -219,7 +219,7 @@
     <string name="comment_viewer_like_comment">Мне нравится комментарий</string>
     <string name="comment_viewer_unlike_comment">Не нравится комментарий</string>
     <string name="comment_viewer_translate_comment">Перевести комментарий</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Нет пустых комментариев!</string>
     <string name="comment_view_mention_user_search">Вы хотите найти имя пользователя?</string>
     <string name="comment_view_mention_hash_search">Вы хотите найти хештэг?</string>
