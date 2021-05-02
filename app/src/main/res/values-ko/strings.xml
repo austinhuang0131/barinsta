@@ -20,7 +20,7 @@
     <string name="title_discover">발견</string>
     <string name="title_comments">댓글</string>
     <string name="title_notifications">활동</string>
-    <string name="update_check">Check for updates at startup</string>
+    <string name="update_check">시작시 업데이트 확인</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
     <string name="download_user_folder">Download posts to username folders</string>
     <string name="download_prepend_username">Prepend Username to Filename</string>
@@ -37,25 +37,25 @@
     <string name="error_loading_location">Error loading location! Is the URL valid?</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
     <string name="save_to_folder">Save to custom folder</string>
-    <string name="select_folder">Select folder</string>
-    <string name="theme_settings">Theme</string>
+    <string name="select_folder">폴더 선택</string>
+    <string name="theme_settings">테마</string>
     <string name="login_settings">Only affects logged-in users:</string>
     <string name="anonymous_settings">Only affects anonymous users:</string>
-    <string name="select_language">Language</string>
+    <string name="select_language">언어</string>
     <plurals name="main_posts_count">
-        <item quantity="other">%s\nPosts</item>
+        <item quantity="other">%s\n게시물</item>
     </plurals>
     <plurals name="main_posts_count_inline">
-        <item quantity="other">%s Posts</item>
+        <item quantity="other">%s 게시물</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="other">%s\nFollowers</item>
+        <item quantity="other">%s\n팔로워</item>
     </plurals>
-    <string name="main_posts_following">%s\nFollowing</string>
-    <string name="post_viewer_autoplay_video">Autoplay videos</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
-    <string name="post_viewer_muted_autoplay">Always mute videos</string>
+    <string name="main_posts_following">%s\n팔로잉</string>
+    <string name="post_viewer_autoplay_video">비디오 자동 재생</string>
+    <string name="post_viewer_background_play">백그라운드에서 비디오 계속</string>
+    <string name="post_viewer_background_play_summary">앱의 초점이 맞지 않을 때 비디오를 일시 중지하지 않음</string>
+    <string name="post_viewer_muted_autoplay">항상 비디오 음소거하기</string>
     <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">Select what to download</string>
     <string name="post_viewer_download_current">Current</string>
@@ -98,13 +98,13 @@
     <string name="delete_collection">Delete collection</string>
     <string name="delete_collection_confirm">Are you sure you want to delete this collection?</string>
     <string name="delete_collection_note">All contained media will remain in other collections.</string>
-    <string name="add_to_collection">Add to collection...</string>
-    <string name="remove_from_collection">Remove from collection</string>
-    <string name="liked">Liked</string>
-    <string name="saved">Saved</string>
+    <string name="add_to_collection">컬렉션에 저장...</string>
+    <string name="remove_from_collection">컬렉션에서 제거</string>
+    <string name="liked">좋아하는 게시물</string>
+    <string name="saved">저장됨</string>
     <string name="tagged">Tagged</string>
-    <string name="dm_person">Message</string>
-    <string name="like_without_count">Like</string>
+    <string name="dm_person">메시지</string>
+    <string name="like_without_count">좋아요</string>
     <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Bookmark</string>
     <string name="unbookmark">Unbookmark</string>
