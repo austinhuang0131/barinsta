@@ -207,7 +207,7 @@
     <string name="comment_viewer_like_comment">Thích bình luận</string>
     <string name="comment_viewer_unlike_comment">Bỏ thích bình luận</string>
     <string name="comment_viewer_translate_comment">Translate comment</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Không được để trống bình luận!</string>
     <string name="comment_view_mention_user_search">Bạn có muốn tìm tên người dùng không?</string>
     <string name="comment_view_mention_hash_search">Bạn có muốn tìm hashtag không?</string>
