@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Yorumu beğen</string>
     <string name="comment_viewer_unlike_comment">Yorum beğenisini geri al</string>
     <string name="comment_viewer_translate_comment">Yorumu çevir</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Boş yorum yapılamaz!</string>
     <string name="comment_view_mention_user_search">Kullanıcı adını aratmak istiyor musun?</string>
     <string name="comment_view_mention_hash_search">Etiketi aratmak istiyor musun?</string>
