@@ -219,7 +219,7 @@
     <string name="comment_viewer_like_comment">Мне нравится комментарий</string>
     <string name="comment_viewer_unlike_comment">Не нравится комментарий</string>
     <string name="comment_viewer_translate_comment">Перевести комментарий</string>
-    <string name="comment_viewer_delete_comment">Удалить комментарий</string>
+    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
     <string name="comment_send_empty_comment">Нет пустых комментариев!</string>
     <string name="comment_view_mention_user_search">Вы хотите найти имя пользователя?</string>
     <string name="comment_view_mention_hash_search">Вы хотите найти хештэг?</string>
@@ -376,6 +376,12 @@
         <item quantity="few">%d нравится</item>
         <item quantity="many">%d понравилось</item>
         <item quantity="other">%d понравилось</item>
+    </plurals>
+    <plurals name="replies_count">
+        <item quantity="one">%d reply</item>
+        <item quantity="few">%d replies</item>
+        <item quantity="many">%d replies</item>
+        <item quantity="other">%d replies</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d комментарий</item>
