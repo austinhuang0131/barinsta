@@ -214,7 +214,7 @@
     <string name="comment_viewer_like_comment">Like comment</string>
     <string name="comment_viewer_unlike_comment">Unlike comment</string>
     <string name="comment_viewer_translate_comment">Translate comment</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Do you want to search the username?</string>
     <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
