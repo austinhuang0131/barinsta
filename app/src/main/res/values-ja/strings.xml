@@ -207,7 +207,7 @@
     <string name="comment_viewer_like_comment">コメントに いいね！</string>
     <string name="comment_viewer_unlike_comment">コメントのいいね！を取り消す</string>
     <string name="comment_viewer_translate_comment">コメントを翻訳</string>
-    <string name="comment_viewer_delete_comment">コメントを削除</string>
+    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
     <string name="comment_send_empty_comment">メッセージが未入力です！</string>
     <string name="comment_view_mention_user_search">ユーザー名を検索しますか？</string>
     <string name="comment_view_mention_hash_search">ハッシュタグを検索しますか？</string>
@@ -361,6 +361,9 @@
     <string name="normal">ノーマル</string>
     <plurals name="likes_count">
         <item quantity="other">%d いいね！</item>
+    </plurals>
+    <plurals name="replies_count">
+        <item quantity="other">%d replies</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="other">%d コメント</item>
