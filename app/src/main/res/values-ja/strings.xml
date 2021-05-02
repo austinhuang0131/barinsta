@@ -363,7 +363,7 @@
         <item quantity="other">%d いいね！</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="other">%d replies</item>
+        <item quantity="other">%d 件の返信</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="other">%d コメント</item>
@@ -476,8 +476,8 @@
     <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
     <string name="copy_caption">Copy caption</string>
     <string name="copy_reply">Copy reply</string>
-    <string name="top">Top</string>
-    <string name="recent">Recent</string>
-    <string name="clear">Clear</string>
+    <string name="top">関連</string>
+    <string name="recent">最近</string>
+    <string name="clear">クリア</string>
     <string name="no_external_map_app">有効な地図アプリが見つかりません</string>
 </resources>
