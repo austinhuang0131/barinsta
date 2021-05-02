@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Επισήμανση ως «Μου Αρέσει»</string>
     <string name="comment_viewer_unlike_comment">Κατάργηση του «Μου Αρέσει»</string>
     <string name="comment_viewer_translate_comment">Μετάφραση σχολίου</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Όχι κενά σχόλια!</string>
     <string name="comment_view_mention_user_search">Θέλετε να αναζητήσετε το όνομα χρήστη;</string>
     <string name="comment_view_mention_hash_search">Θέλετε να αναζητήσετε το hashtag;</string>
