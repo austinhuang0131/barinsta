@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Vind reactie leuk</string>
     <string name="comment_viewer_unlike_comment">Vind reactie niet meer leuk</string>
     <string name="comment_viewer_translate_comment">Translate comment</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Geen lege reacties!</string>
     <string name="comment_view_mention_user_search">Wil je de gebruikersnaam zoeken?</string>
     <string name="comment_view_mention_hash_search">Wil je de hashtag zoeken?</string>
