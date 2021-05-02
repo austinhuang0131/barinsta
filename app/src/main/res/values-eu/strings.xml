@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Atsegin iruzkina</string>
     <string name="comment_viewer_unlike_comment">Ez dut atsegin</string>
     <string name="comment_viewer_translate_comment">Itzuli iruzkina</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Iruzkin hutsik ez!</string>
     <string name="comment_view_mention_user_search">Erabiltzaile-izena bilatu nahi duzu?</string>
     <string name="comment_view_mention_hash_search">Traol-hitza bilatu nahi duzu?</string>
