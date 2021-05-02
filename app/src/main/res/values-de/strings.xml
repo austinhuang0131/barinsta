@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Kommentar gefällt mir</string>
     <string name="comment_viewer_unlike_comment">Kommentar gefällt mir nicht mehr</string>
     <string name="comment_viewer_translate_comment">Kommentar übersetzen</string>
-    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
+    <string name="comment_viewer_delete_comment">Delete comment</string>
     <string name="comment_send_empty_comment">Keine leeren Kommentare!</string>
     <string name="comment_view_mention_user_search">Möchtest du nach dem Benutzernamen suchen?</string>
     <string name="comment_view_mention_hash_search">Möchtest du nach dem Hashtag suchen?</string>
