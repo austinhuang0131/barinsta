@@ -63,12 +63,12 @@
     <string name="show_stories">스토리 보임</string>
     <string name="no_more_stories">새 스토리 없음</string>
     <string name="be_patient">기다려주세요.</string>
-    <string name="view_story_post">View Post</string>
-    <string name="view_post">View Post</string>
+    <string name="view_story_post">게시물 보기</string>
+    <string name="view_post">게시물 보기</string>
     <string name="spotify">Spotify</string>
-    <string name="vote_story_poll">Vote</string>
-    <string name="votef_story_poll">Vote successful!</string>
-    <string name="voted_story_poll">You have already voted!</string>
+    <string name="vote_story_poll">투표</string>
+    <string name="votef_story_poll">투표 성공!</string>
+    <string name="voted_story_poll">이미 투표하셨습니다</string>
     <string name="respond_story">Respond</string>
     <string name="answer_hint">Answer…</string>
     <string name="answered_story">Answer successful!</string>
