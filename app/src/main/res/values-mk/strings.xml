@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Лајкни коментар</string>
     <string name="comment_viewer_unlike_comment">Одлајкни коментар</string>
     <string name="comment_viewer_translate_comment">Преведи коментар</string>
-    <string name="comment_viewer_delete_comment">Избриши коментар</string>
+    <!--<string name="comment_viewer_delete_comment">Delete comment</string>-->
     <string name="comment_send_empty_comment">Не смее празни коментари!</string>
     <string name="comment_view_mention_user_search">Дали сакате да го пребарате ова корисничко име?</string>
     <string name="comment_view_mention_hash_search">Дали сакате да го пребарате овај хаштаг?</string>
@@ -366,6 +366,10 @@
     <plurals name="likes_count">
         <item quantity="one">%d лајк</item>
         <item quantity="other">%d лајкови</item>
+    </plurals>
+    <plurals name="replies_count">
+        <item quantity="one">%d reply</item>
+        <item quantity="other">%d replies</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d коментар</item>
