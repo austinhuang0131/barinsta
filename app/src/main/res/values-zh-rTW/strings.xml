@@ -21,7 +21,7 @@
     <string name="title_comments">評論</string>
     <string name="title_notifications">動態</string>
     <string name="update_check">啟動時檢查更新</string>
-    <string name="flag_secure">阻擋截圖 &amp; 應用程式預覽</string>
+    <string name="flag_secure">阻擋截圖及應用程式預覽</string>
     <string name="download_user_folder">將貼文下載到用戶名資料夾</string>
     <string name="download_prepend_username">在檔案名稱前添加用戶名</string>
     <string name="mark_as_seen_setting">檢視完限時動態後標記為已讀</string>
@@ -115,10 +115,10 @@
     <string name="unblock">解除封鎖</string>
     <string name="restrict">限制</string>
     <string name="unrestrict">移除限制</string>
-    <string name="mute_stories">隱藏此用戶的限時動態</string>
-    <string name="mute_posts">隱藏此用戶的貼文</string>
-    <string name="unmute_stories">取消隱藏此用戶的限時動態</string>
-    <string name="unmute_posts">取消隱藏此用戶的貼文</string>
+    <string name="mute_stories">隱藏限時動態</string>
+    <string name="mute_posts">隱藏貼文</string>
+    <string name="unmute_stories">取消隱藏限時動態</string>
+    <string name="unmute_posts">取消隱藏貼文</string>
     <string name="bio_copy">複製簡介</string>
     <string name="bio_translate">翻譯簡介</string>
     <string name="status_mutual">正彼此追蹤</string>
@@ -289,9 +289,9 @@
     <string name="locations">地點</string>
     <string name="unknown">未知</string>
     <string name="removed_from_favs">已從收藏中移除!</string>
-    <string name="backup_and_restore">備份 &amp; 還原</string>
+    <string name="backup_and_restore">備份與還原</string>
     <string name="backup_summary">備份 Barinsta 的設定、登入資料、及收藏中的內容至純文字或加密後的檔案，以便日後還原。</string>
-    <string name="backup_warning">如果您選擇備份登入相關資訊，請將此檔案視為密碼看待並妥善保存！</string>
+    <string name="backup_warning">如果您選擇備份登入相關資訊，請將此檔案視為密碼看待，並妥善保存！</string>
     <string name="create_backup">建立備份檔</string>
     <string name="restore_backup">以備份檔還原</string>
     <string name="file_chosen_label">檔案：</string>
@@ -300,7 +300,7 @@
     <string name="apply">套用</string>
     <string name="save">儲存</string>
     <string name="caption">說明</string>
-    <string name="edit_caption">編輯貼文</string>
+    <string name="edit_caption">編輯說明</string>
     <string name="translate_caption">翻譯說明</string>
     <string name="player_timeline_desc">影片播放器時間軸</string>
     <string name="liking">按讚中…</string>
