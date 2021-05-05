@@ -59,7 +59,7 @@
     <string name="post_viewer_background_play">Videos im Hintergrund fortführen</string>
     <string name="post_viewer_background_play_summary">Videos nicht pausieren, wenn die App nicht aktiv ist</string>
     <string name="post_viewer_muted_autoplay">Videos immer stummschalten</string>
-    <string name="post_viewer_show_captions">Bildtext immer anzeigen</string>
+    <string name="post_viewer_show_captions">Bildunterschrift immer anzeigen</string>
     <string name="post_viewer_download_dialog_title">Datei zum Download auswählen</string>
     <string name="post_viewer_download_current">Aktuell</string>
     <string name="post_viewer_download_album">Gesamtes Album</string>
@@ -158,7 +158,7 @@
     <string name="dms_inbox_shared_video">%s hat ein Video geteilt</string>
     <string name="dms_inbox_shared_message">%s hat eine Nachricht gesendet</string>
     <string name="dms_inbox_shared_gif">%s hat ein GIF geteilt</string>
-    <string name="dms_inbox_shared_sticker">%s shared a sticker</string>
+    <string name="dms_inbox_shared_sticker">%s hat einen Sticker geteilt</string>
     <string name="dms_inbox_shared_profile">%s hat ein Profil geteilt: @%s</string>
     <string name="dms_inbox_shared_location">%s hat einen Standort geteilt: %s</string>
     <string name="dms_inbox_shared_highlight">%s teilte ein Story Highlight von @%s</string>
@@ -211,7 +211,7 @@
     <string name="comment_viewer_like_comment">Kommentar gefällt mir</string>
     <string name="comment_viewer_unlike_comment">Kommentar gefällt mir nicht mehr</string>
     <string name="comment_viewer_translate_comment">Kommentar übersetzen</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Kommentar löschen</string>
     <string name="comment_send_empty_comment">Keine leeren Kommentare!</string>
     <string name="comment_view_mention_user_search">Möchtest du nach dem Benutzernamen suchen?</string>
     <string name="comment_view_mention_hash_search">Möchtest du nach dem Hashtag suchen?</string>
@@ -349,7 +349,7 @@
     <string name="saturation">Sättigung</string>
     <string name="sharpen">Schärfe</string>
     <string name="exposure">Belichtung</string>
-    <string name="center">Center</string>
+    <string name="center">Zentrieren</string>
     <string name="color">Farbe</string>
     <string name="start">Beginn</string>
     <string name="end">Ende</string>
@@ -368,8 +368,8 @@
         <item quantity="other">%d Personen gefällt das</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="one">%d Antwort</item>
+        <item quantity="other">%d Antworten</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d Kommentar</item>
@@ -446,7 +446,7 @@
     <string name="accept">Aktzeptieren</string>
     <string name="you">Du</string>
     <string name="no_pending_requests">Keine ausstehenden Anfragen</string>
-    <string name="checking_for_new_messages">Checking for new messages</string>
+    <string name="checking_for_new_messages">Auf neue Nachrichten prüfen</string>
     <string name="pref_category_stories">Stories</string>
     <string name="pref_category_dm">PN</string>
     <string name="pref_category_notifications">Benachrichtigungen</string>
@@ -478,15 +478,15 @@
     <string name="not_found">Nicht gefunden!</string>
     <string name="rate_limit">Instagram hat die Zugriffe mit deiner IP begrenzt. Warte eine Stunde lang und versuche es erneut.</string>
     <string name="skip_update">Dieses Update überspringen</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
+    <string name="on_latest_version">Du bist bereits auf der neuesten Version</string>
     <string name="tab_order">Reihenfolge der Anzeige</string>
     <string name="other_tabs">Andere Registerkarten</string>
     <string name="tab_order_start_next_launch">Die Reihenfolge der Registerkarten wird beim nächsten Start übernommen</string>
     <string name="dm_remove_warning">Wenn übernommen, werden alle PN-bezogenen Funktionen beim nächsten Start deaktiviert</string>
-    <string name="copy_caption">Copy caption</string>
-    <string name="copy_reply">Copy reply</string>
+    <string name="copy_caption">Bildunterschrift kopieren</string>
+    <string name="copy_reply">Antwort kopieren</string>
     <string name="top">Top</string>
     <string name="recent">Recent</string>
     <string name="clear">Clear</string>
-    <string name="no_external_map_app">No Map app found!</string>
+    <string name="no_external_map_app">Keine Karten-App gefunden!</string>
 </resources>
