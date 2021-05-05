@@ -250,8 +250,8 @@
     <string name="activity_count_commentlikes">%d gelikte Kommentare</string>
     <string name="activity_count_usertags">%d Benutzertags</string>
     <string name="activity_count_likes">%d Likes</string>
-    <string name="activity_count_poy">%d photos of you</string>
-    <string name="activity_count_requests">%d follow requests</string>
+    <string name="activity_count_poy">%d Fotos von dir</string>
+    <string name="activity_count_requests">%d Anfragen dir zu folgen</string>
     <string name="activity_notloggedin">Hast du dich abgemeldet, bevor du auf diese Benachrichtigung geklickt hast?</string>
     <string name="feed">Feed</string>
     <string name="profile">Profil</string>
@@ -441,7 +441,7 @@
     <string name="dms_action_end_question">Chat beenden?</string>
     <string name="dms_action_end_description">Alle Mitglieder werden aus der Gruppe entfernt. Sie werden weiterhin in der Lage sein, den Chatverlauf anzuzeigen.</string>
     <string name="pending_requests">Ausstehende Anfragen</string>
-    <string name="accept_request_from_user">Accept request from %1s (%2s)?</string>
+    <string name="accept_request_from_user">Anfrage von %1s (%2s) akzeptieren?</string>
     <string name="decline">Ablehnen</string>
     <string name="accept">Aktzeptieren</string>
     <string name="you">Du</string>
@@ -486,7 +486,7 @@
     <string name="copy_caption">Bildunterschrift kopieren</string>
     <string name="copy_reply">Antwort kopieren</string>
     <string name="top">Top</string>
-    <string name="recent">Recent</string>
+    <string name="recent">Neueste</string>
     <string name="clear">Clear</string>
     <string name="no_external_map_app">Keine Karten-App gefunden!</string>
 </resources>
