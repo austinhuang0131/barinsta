@@ -274,14 +274,14 @@
     <string name="about_repository_summary">Audit, star, report bugs, contribute, and have fun (again)!</string>
     <string name="about_feedback">Send feedback by email</string>
     <string name="about_category_3pt">Third-Party Attributions</string>
-    <string name="reminder">Reminder</string>
+    <string name="reminder">알람</string>
     <string name="reminder_summary">Please use this app responsibly. Downloaded images should only be used for purposes allowed by applicable laws.</string>
     <string name="light_white_theme">흰색</string>
     <string name="dark_black_theme">검은색</string>
     <string name="light_theme_settings">라이트테마</string>
     <string name="dark_theme_settings">다크테마</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
-    <string name="dark_material_dark_theme">Material Dark</string>
+    <string name="dark_material_dark_theme">머티리얼 다크</string>
     <string name="added_to_favs">즐겨찾기에 추가되었습니다!</string>
     <string name="add_to_favorites">즐겨찾기에 추가</string>
     <string name="accounts">계정</string>
@@ -297,7 +297,7 @@
     <string name="file_chosen_label">파일:</string>
     <string name="enter_password">비밀번호를 입력하세요</string>
     <string name="select_backup_file">Select a backup file (.zaai/.backup)</string>
-    <string name="apply">Apply</string>
+    <string name="apply">적용</string>
     <string name="save">저장</string>
     <string name="caption">문구</string>
     <string name="edit_caption">문구 수정</string>
@@ -313,7 +313,7 @@
     <string name="save_unsuccessful">저장 실패</string>
     <string name="save_remove_unsuccessful">제거 실패</string>
     <string name="downloading">다운로드 중...</string>
-    <string name="downloader_downloading_child">Download item %1$d of %2$d</string>
+    <string name="downloader_downloading_child">%2$d중에 %1$d 다운로드</string>
     <string name="delete">삭제</string>
     <string name="comment">댓글 달기</string>
     <string name="layout">레이아웃</string>
@@ -324,10 +324,10 @@
     <string name="column_count">Column count</string>
     <string name="two">2</string>
     <string name="three">3</string>
-    <string name="show_names">Show names</string>
-    <string name="show_avatars">Show avatars</string>
-    <string name="avatar_size">Avatar size</string>
-    <string name="corners">Corners</string>
+    <string name="show_names">이름 표시</string>
+    <string name="show_avatars">아바타 표시</string>
+    <string name="avatar_size">아바타 크기</string>
+    <string name="corners">모서리</string>
     <string name="show_grid_gap">Show grid gap</string>
     <string name="disable_animation">Disable animation</string>
     <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
