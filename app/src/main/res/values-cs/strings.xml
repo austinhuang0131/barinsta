@@ -507,4 +507,5 @@
     <string name="recent">Nedávné</string>
     <string name="clear">Vymazat</string>
     <string name="no_external_map_app">Nemáte žádnou aplikaci pro mapy!</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
