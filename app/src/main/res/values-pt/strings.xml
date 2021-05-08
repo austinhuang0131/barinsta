@@ -489,5 +489,5 @@
     <string name="recent">Recente</string>
     <string name="clear">Limpar</string>
     <string name="no_external_map_app">Nenhum aplicativo de mapa foi encontrado!</string>
-    <string name="click_to_show_full">Click to view full count</string>
+    <string name="click_to_show_full">Clique para ver a contagem completa</string>
 </resources>
