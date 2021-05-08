@@ -489,4 +489,5 @@
     <string name="recent">Neueste</string>
     <string name="clear">Clear</string>
     <string name="no_external_map_app">Keine Karten-App gefunden!</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
