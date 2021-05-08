@@ -507,4 +507,5 @@
     <string name="recent">Недавние</string>
     <string name="clear">Очистить</string>
     <string name="no_external_map_app">Не найдено картографического приложения!</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
