@@ -503,4 +503,5 @@
     <string name="recent">Recent</string>
     <string name="clear">Clear</string>
     <string name="no_external_map_app">No Map app found!</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
