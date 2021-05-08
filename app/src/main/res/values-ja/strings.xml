@@ -480,4 +480,5 @@
     <string name="recent">最近</string>
     <string name="clear">クリア</string>
     <string name="no_external_map_app">有効な地図アプリが見つかりません</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
