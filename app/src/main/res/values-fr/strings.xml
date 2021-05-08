@@ -489,4 +489,5 @@
     <string name="recent">Récent</string>
     <string name="clear">Nettoyer</string>
     <string name="no_external_map_app">Aucune application de carte trouvée!</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
