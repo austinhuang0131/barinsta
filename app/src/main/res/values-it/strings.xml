@@ -489,4 +489,5 @@
     <string name="recent">Recente</string>
     <string name="clear">Pulisci</string>
     <string name="no_external_map_app">Nessuna app mappa trovata!</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
