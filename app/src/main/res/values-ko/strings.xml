@@ -480,4 +480,5 @@
     <string name="recent">최근</string>
     <string name="clear">치우기</string>
     <string name="no_external_map_app">지도 앱이 없습니다!</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
