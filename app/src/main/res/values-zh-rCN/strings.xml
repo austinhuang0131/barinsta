@@ -480,4 +480,5 @@
     <string name="recent">近期搜索</string>
     <string name="clear">清空</string>
     <string name="no_external_map_app">未找到地图应用！</string>
+    <string name="click_to_show_full">Click to view full count</string>
 </resources>
