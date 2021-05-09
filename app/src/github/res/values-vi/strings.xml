@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="enable_sentry">Enable Sentry</string>
-    <string name="sentry_summary">Sentry is a listener/handler for errors that asynchronously sends out the error/event to Sentry.io</string>
-    <string name="sentry_start_next_launch">Sentry will start on next launch</string>
+    <string name="enable_sentry">Bật Sentry</string>
+    <string name="sentry_summary">Sentry là một thiết bị nghe/giải quyết cho những lỗi mà gửi những lỗi/sự kiện đến Sentry.io một cách tách biệt</string>
+    <string name="sentry_start_next_launch">Sentry sẽ được bật vào lần khởi động kế tiếp</string>
 </resources>
