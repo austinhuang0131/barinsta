@@ -481,4 +481,5 @@
     <string name="clear">Xóa</string>
     <string name="no_external_map_app">Không tìm thấy ứng dụng bản đồ!</string>
     <string name="click_to_show_full">Click để xem tất cả số</string>
+    <string name="no_profile_pic_found">No profile pic found!</string>
 </resources>
