@@ -508,4 +508,5 @@
     <string name="clear">Vymazat</string>
     <string name="no_external_map_app">Nemáte žádnou aplikaci pro mapy!</string>
     <string name="click_to_show_full">Click to view full count</string>
+    <string name="no_profile_pic_found">No profile pic found!</string>
 </resources>
