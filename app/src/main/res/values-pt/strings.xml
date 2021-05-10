@@ -490,4 +490,5 @@
     <string name="clear">Limpar</string>
     <string name="no_external_map_app">Nenhum aplicativo de mapa foi encontrado!</string>
     <string name="click_to_show_full">Clique para ver a contagem completa</string>
+    <string name="no_profile_pic_found">No profile pic found!</string>
 </resources>
