@@ -471,7 +471,7 @@
     <string name="error">Fehler</string>
     <string name="account_logged_out">Dieses Konto wurde abgemeldet.</string>
     <string name="login_required">Anmeldung erforderlich!</string>
-    <string name="sentry_block">Wächter-Block.</string>
+    <string name="sentry_block">Sentry Block.</string>
     <string name="inactive_user">Benutzer ist inaktiv!</string>
     <string name="crash_report_subject">Barinsta Absturzbericht</string>
     <string name="crash_report_title">Wähle eine E-Mail-App zum Senden von Absturzprotokollen</string>
@@ -487,8 +487,8 @@
     <string name="copy_reply">Antwort kopieren</string>
     <string name="top">Anfang</string>
     <string name="recent">Neueste</string>
-    <string name="clear">Clear</string>
+    <string name="clear">Leeren</string>
     <string name="no_external_map_app">Keine Karten-App gefunden!</string>
     <string name="click_to_show_full">Click to view full count</string>
-    <string name="no_profile_pic_found">No profile pic found!</string>
+    <string name="no_profile_pic_found">Kein Profilbild gefunden!</string>
 </resources>
