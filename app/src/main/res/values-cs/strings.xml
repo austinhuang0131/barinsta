@@ -61,7 +61,7 @@
         <item quantity="other">%s\nSledujících</item>
     </plurals>
     <string name="main_posts_following">%s\nSleduje</string>
-    <string name="post_viewer_autoplay_video">Videa spouštět automaticky</string>
+    <string name="post_viewer_autoplay_video">Automaticky přehrávat videa</string>
     <string name="post_viewer_background_play">Pokračovat v přehrávání na pozadí</string>
     <string name="post_viewer_background_play_summary">Nepozastavovat videa při opuštění aplikace</string>
     <string name="post_viewer_muted_autoplay">Vždy ztlumit videa</string>
@@ -83,7 +83,7 @@
     <string name="answered_story">Odpověď úspěšně odeslána!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d odpověď, průměrně %s</item>
-        <item quantity="few">%d odpovědí, průměrně %s</item>
+        <item quantity="few">%d odpovědi, průměrně %s</item>
         <item quantity="many">%d odpovědí, průměrně %s</item>
         <item quantity="other">%d odpovědí, průměrně %s</item>
     </plurals>
@@ -114,7 +114,7 @@
     <string name="remove_from_collection">Odebrat ze sbírky</string>
     <string name="liked">Líbí se</string>
     <string name="saved">Uložené</string>
-    <string name="tagged">Označeno</string>
+    <string name="tagged">Označení</string>
     <string name="dm_person">Zpráva</string>
     <string name="like_without_count">To se mi líbí</string>
     <string name="unlike_without_count">Už se mi to nelíbí</string>
@@ -154,7 +154,7 @@
     <string name="time_settings_title_preview">Náhled</string>
     <string name="time_settings_swap_time">Prohodit pozice času a data</string>
     <string name="quick_access_cannot_delete_curr">Nemůžete smazat aktuálně používaný účet</string>
-    <string name="quick_access_confirm_delete">Opravdu chcete smazat \'%s\'?</string>
+    <string name="quick_access_confirm_delete">Opravdu chcete smazat \"%s\"?</string>
     <string name="open_profile">Otevřít profil</string>
     <string name="view_story">Zobrazit příběh</string>
     <string name="view_pfp">Zobrazit obrázek profilu</string>
