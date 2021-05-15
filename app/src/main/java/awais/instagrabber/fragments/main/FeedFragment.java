@@ -86,7 +86,7 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                     final NavController navController = NavHostFragment.findNavController(FeedFragment.this);
                     if (isSafeToNavigate(navController)) {
                         final NavDirections action = FeedFragmentDirections
-                                .actionFeedFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStoryPosition(position));
+                                .actionFeedFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStory(position));
                         navController.navigate(action);
                     }
                 }
@@ -432,7 +432,7 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
             @Override
             public void onSuccess(final List<FeedStoryModel> result) {
                 storiesFetching = false;
-                feedStoriesViewModel.getList().postValue(result);
+                feedStoriesViewModel.setList(result);
                 feedStoriesAdapter.submitList(result);
                 if (storyListMenu != null) storyListMenu.setVisible(true);
                 updateSwipeRefreshState();

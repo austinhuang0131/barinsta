@@ -1,5 +1,6 @@
 package awais.instagrabber.fragments.main;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
@@ -539,7 +540,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
             usernameSettingHandler.removeCallbacks(usernameSettingRunnable);
         }
         if (highlightsViewModel != null) {
-            highlightsViewModel.getList().postValue(Collections.emptyList());
+            highlightsViewModel.setList(Collections.emptyList());
         }
     }
 
@@ -666,8 +667,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
         if (!isReallyPrivate()) {
             if (!postsSetupDone) {
                 setupPosts();
-            }
-            else {
+            } else {
                 binding.postsRecyclerView.refresh();
             }
             if (isLoggedIn) {
@@ -1025,7 +1025,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
                                            public void onSuccess(final List<HighlightModel> result) {
                                                if (result != null) {
                                                    profileDetailsBinding.highlightsList.setVisibility(View.VISIBLE);
-                                                   highlightsViewModel.getList().postValue(result);
+                                                   highlightsViewModel.setList(result);
                                                } else profileDetailsBinding.highlightsList.setVisibility(View.GONE);
                                            }
 
@@ -1160,7 +1160,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
     }
 
     private void showSnackbar(final String message) {
-        final Snackbar snackbar = Snackbar.make(root, message, BaseTransientBottomBar.LENGTH_LONG);
+        @SuppressLint("ShowToast") final Snackbar snackbar = Snackbar.make(root, message, BaseTransientBottomBar.LENGTH_LONG);
         snackbar.setAction(R.string.ok, v -> snackbar.dismiss())
                 .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE)
                 .setAnchorView(fragmentActivity.getBottomNavView())
@@ -1219,7 +1219,7 @@ public class ProfileFragment extends Fragment implements SwipeRefreshLayout.OnRe
         highlightsViewModel = new ViewModelProvider(fragmentActivity).get(HighlightsViewModel.class);
         highlightsAdapter = new HighlightsAdapter((model, position) -> {
             final StoryViewerOptions options = StoryViewerOptions.forHighlight(model.getTitle());
-            options.setCurrentFeedStoryIndex(position);
+            options.setStoryIndex(position);
             final NavDirections action = ProfileFragmentDirections.actionProfileFragmentToStoryViewerFragment(options);
             NavHostFragment.findNavController(this).navigate(action);
         });

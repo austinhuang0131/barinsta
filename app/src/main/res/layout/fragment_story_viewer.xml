@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -14,14 +15,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.google.android.exoplayer2.ui.PlayerView
+        <com.google.android.exoplayer2.ui.StyledPlayerView
             android:id="@+id/playerView"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="gone"
             app:auto_show="true"
-            app:controller_layout_id="@layout/layout_controls"
-            app:repeat_toggle_modes="none" />
+            app:repeat_toggle_modes="none"
+            app:show_timeout="1500" />
 
         <awais.instagrabber.customviews.drawee.ZoomableDraweeView
             android:id="@+id/imageViewer"
@@ -43,11 +44,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:layout_constraintTop_toBottomOf="@id/story_container"
-        app:layout_constraintBottom_toTopOf="@id/storiesList"
+        android:background="#0000"
+        app:layout_constraintBottom_toTopOf="@id/current_story_items"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:background="#0000">
+        app:layout_constraintTop_toBottomOf="@id/story_container">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/viewStoryPost"
@@ -108,6 +109,7 @@
             android:textColor="@color/btn_blue_text_color"
             android:visibility="gone"
             app:backgroundTint="@color/btn_blue_background" />
+
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/mention"
             android:layout_width="match_parent"
@@ -139,19 +141,22 @@
         app:iconGravity="textStart"
         app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/storiesList"
+        app:layout_constraintEnd_toStartOf="@id/current_story_items"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/storiesList" />
+        app:layout_constraintTop_toTopOf="@id/current_story_items" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/storiesList"
+        android:id="@+id/current_story_items"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:clipToPadding="false"
-        app:layout_constraintTop_toBottomOf="@id/postActions"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/btnForward"
-        app:layout_constraintStart_toEndOf="@id/btnBackward" />
+        app:layout_constraintStart_toEndOf="@id/btnBackward"
+        app:layout_constraintTop_toBottomOf="@id/postActions"
+        tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_story"
+        tools:orientation="horizontal" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnForward"
@@ -164,6 +169,6 @@
         app:iconPadding="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/storiesList"
-        app:layout_constraintTop_toTopOf="@id/storiesList" />
+        app:layout_constraintStart_toEndOf="@id/current_story_items"
+        app:layout_constraintTop_toTopOf="@id/current_story_items" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -73,7 +73,7 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
             final int position = Iterables.indexOf(feedStoryModels, feedStoryModel -> feedStoryModel != null
                     && Objects.equals(feedStoryModel.getStoryMediaId(), model.getStoryMediaId()));
             final NavDirections action = StoryListViewerFragmentDirections
-                    .actionStoryListFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStoryPosition(position));
+                    .actionStoryListFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStory(position));
             NavHostFragment.findNavController(StoryListViewerFragment.this).navigate(action);
         }
 
@@ -112,7 +112,7 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
                 final List<HighlightModel> models = archivesViewModel.getList().getValue();
                 final List<HighlightModel> modelsCopy = models == null ? new ArrayList<>() : new ArrayList<>(models);
                 modelsCopy.addAll(result.getResult());
-                archivesViewModel.getList().postValue(modelsCopy);
+                archivesViewModel.setList(modelsCopy);
             }
         }
 
@@ -187,7 +187,7 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
 
     @Override
     public void onDestroy() {
-        if (archivesViewModel != null) archivesViewModel.getList().postValue(null);
+        if (archivesViewModel != null) archivesViewModel.setList(null);
         super.onDestroy();
     }
 
@@ -242,7 +242,7 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
             storiesService.getFeedStories(new ServiceCallback<List<FeedStoryModel>>() {
                 @Override
                 public void onSuccess(final List<FeedStoryModel> result) {
-                    feedStoriesViewModel.getList().postValue(result);
+                    feedStoriesViewModel.setList(result);
                     adapter.submitList(result);
                     binding.swipeRefreshLayout.setRefreshing(false);
                 }

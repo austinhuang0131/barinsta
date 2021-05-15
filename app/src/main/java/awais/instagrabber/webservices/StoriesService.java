@@ -193,18 +193,12 @@ public class StoriesService extends BaseService {
                             node.getInt("media_count"),
                             false,
                             node.optBoolean("has_besties_media")));
-                } catch (Exception e) {} // to cover promotional reels with non-long user pk's
+                } catch (Exception ignored) {} // to cover promotional reels with non-long user pk's
             }
             final JSONArray broadcasts = new JSONObject(body).getJSONArray("broadcasts");
             for (int i = 0; i < broadcasts.length(); ++i) {
                 final JSONObject node = broadcasts.getJSONObject(i);
                 final JSONObject userJson = node.getJSONObject("broadcast_owner");
-                // final ProfileModel profileModel = new ProfileModel(false, false, false,
-                //         userJson.getString("pk"),
-                //         userJson.getString("username"),
-                //         null, null, null,
-                //         userJson.getString("profile_pic_url"),
-                //         null, 0, 0, 0, false, false, false, false, false);
                 final User user = new User(userJson.getLong("pk"),
                                            userJson.getString("username"),
                                            userJson.optString("full_name"),

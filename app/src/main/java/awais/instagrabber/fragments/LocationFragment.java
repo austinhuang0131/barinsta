@@ -1,5 +1,6 @@
 package awais.instagrabber.fragments;
 
+import android.annotation.SuppressLint;
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -557,7 +558,7 @@ public class LocationFragment extends Fragment implements SwipeRefreshLayout.OnR
     }
 
     private void showSnackbar(final String message) {
-        final Snackbar snackbar = Snackbar.make(root, message, BaseTransientBottomBar.LENGTH_LONG);
+        @SuppressLint("ShowToast") final Snackbar snackbar = Snackbar.make(root, message, BaseTransientBottomBar.LENGTH_LONG);
         snackbar.setAction(R.string.ok, v1 -> snackbar.dismiss())
                 .setAnimationMode(BaseTransientBottomBar.ANIMATION_MODE_SLIDE)
                 .setAnchorView(fragmentActivity.getBottomNavView())

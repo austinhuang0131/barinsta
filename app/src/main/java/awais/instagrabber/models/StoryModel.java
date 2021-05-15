@@ -28,11 +28,17 @@ public final class StoryModel implements Serializable {
     private SwipeUpModel swipeUp;
     private String[] mentions;
     private int position;
-    private boolean isCurrentSlide = false;
+    // private boolean isCurrentSlide = false;
     private final boolean canReply;
 
-    public StoryModel(final String storyMediaId, final String storyUrl, final String thumbnail, final MediaItemType itemType,
-                      final long timestamp, final String username, final long userId, final boolean canReply) {
+    public StoryModel(final String storyMediaId,
+                      final String storyUrl,
+                      final String thumbnail,
+                      final MediaItemType itemType,
+                      final long timestamp,
+                      final String username,
+                      final long userId,
+                      final boolean canReply) {
         this.storyMediaId = storyMediaId;
         this.storyUrl = storyUrl;
         this.thumbnail = thumbnail;
@@ -93,9 +99,9 @@ public final class StoryModel implements Serializable {
         return mentions;
     }
 
-    public int getPosition() {
-        return position;
-    }
+    // public int getPosition() {
+    //     return position;
+    // }
 
     public void setThumbnail(final String thumbnail) {
         this.thumbnail = thumbnail;
@@ -141,17 +147,17 @@ public final class StoryModel implements Serializable {
         this.swipeUp = swipeUp;
     }
 
-    public void setPosition(final int position) {
-        this.position = position;
-    }
+    // public void setPosition(final int position) {
+    //     this.position = position;
+    // }
 
-    public void setCurrentSlide(final boolean currentSlide) {
-        this.isCurrentSlide = currentSlide;
-    }
-
-    public boolean isCurrentSlide() {
-        return isCurrentSlide;
-    }
+    // public void setCurrentSlide(final boolean currentSlide) {
+    //     this.isCurrentSlide = currentSlide;
+    // }
+    //
+    // public boolean isCurrentSlide() {
+    //     return isCurrentSlide;
+    // }
 
     public boolean canReply() {
         return canReply;

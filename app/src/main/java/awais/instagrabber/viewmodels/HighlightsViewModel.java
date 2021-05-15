@@ -1,5 +1,6 @@
 package awais.instagrabber.viewmodels;
 
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
@@ -7,13 +8,15 @@ import java.util.List;
 
 import awais.instagrabber.models.HighlightModel;
 
-public class HighlightsViewModel extends ViewModel {
-    private MutableLiveData<List<HighlightModel>> list;
+public class HighlightsViewModel extends ViewModel implements StoriesViewModel<HighlightModel> {
+    private final MutableLiveData<List<HighlightModel>> list = new MutableLiveData<>();
 
-    public MutableLiveData<List<HighlightModel>> getList() {
-        if (list == null) {
-            list = new MutableLiveData<>();
-        }
+    public LiveData<List<HighlightModel>> getList() {
         return list;
+    }
+
+    @Override
+    public void setList(final List<HighlightModel> result) {
+        list.postValue(result);
     }
 }

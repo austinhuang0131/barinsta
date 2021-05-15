@@ -26,6 +26,7 @@ public final class StoriesAdapter extends ListAdapter<StoryModel, StoriesAdapter
             return oldItem.getStoryMediaId().equals(newItem.getStoryMediaId());
         }
     };
+    private int activeIndex;
 
     public StoriesAdapter(final OnItemClickListener onItemClickListener) {
         super(diffCallback);
@@ -37,28 +38,39 @@ public final class StoriesAdapter extends ListAdapter<StoryModel, StoriesAdapter
     public StoryViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
         final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         final ItemStoryBinding binding = ItemStoryBinding.inflate(layoutInflater, parent, false);
-        return new StoryViewHolder(binding);
+        return new StoryViewHolder(binding, onItemClickListener);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final StoryViewHolder holder, final int position) {
         final StoryModel storyModel = getItem(position);
-        holder.bind(storyModel, position, onItemClickListener);
+        holder.bind(storyModel, position, activeIndex == position);
+    }
+
+    public void setActiveIndex(final int activeIndex) {
+        int prevActiveIndex = this.activeIndex;
+        this.activeIndex = activeIndex;
+        // notify prev and current
+        notifyItemChanged(prevActiveIndex);
+        notifyItemChanged(activeIndex);
     }
 
     public final static class StoryViewHolder extends RecyclerView.ViewHolder {
         private final ItemStoryBinding binding;
+        private final OnItemClickListener clickListener;
 
-        public StoryViewHolder(final ItemStoryBinding binding) {
+        public StoryViewHolder(final ItemStoryBinding binding,
+                               final OnItemClickListener clickListener) {
             super(binding.getRoot());
             this.binding = binding;
+            this.clickListener = clickListener;
         }
 
         public void bind(final StoryModel model,
                          final int position,
-                         final OnItemClickListener clickListener) {
+                         final boolean isActive) {
             if (model == null) return;
-            model.setPosition(position);
+            // model.setPosition(position);
 
             itemView.setTag(model);
             itemView.setOnClickListener(v -> {
@@ -66,11 +78,8 @@ public final class StoriesAdapter extends ListAdapter<StoryModel, StoriesAdapter
                 clickListener.onItemClick(model, position);
             });
 
-            binding.selectedView.setVisibility(model.isCurrentSlide() ? View.VISIBLE : View.GONE);
+            binding.selectedView.setVisibility(isActive ? View.VISIBLE : View.GONE);
             binding.icon.setImageURI(model.getStoryUrl());
-            // Glide.with(itemView).load(model.getStoryUrl())
-            //      .apply(new RequestOptions().override(width, height))
-            //      .into(holder.icon);
         }
     }
 

@@ -1,19 +1,11 @@
 package awais.instagrabber.viewmodels;
 
-import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.LiveData;
 
 import java.util.List;
 
-import awais.instagrabber.models.StoryModel;
+public interface StoriesViewModel<T> {
+    LiveData<List<T>> getList();
 
-public class StoriesViewModel extends ViewModel {
-    private MutableLiveData<List<StoryModel>> list;
-
-    public MutableLiveData<List<StoryModel>> getList() {
-        if (list == null) {
-            list = new MutableLiveData<>();
-        }
-        return list;
-    }
+    void setList(List<T> result);
 }

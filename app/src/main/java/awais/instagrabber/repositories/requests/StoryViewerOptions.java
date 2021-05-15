@@ -6,12 +6,12 @@ public class StoryViewerOptions implements Serializable {
     private final long id;
     private final String name;
     private final Type type;
-    private int currentFeedStoryIndex;
+    private int storyIndex;
 
     private StoryViewerOptions(final int position, final Type type) {
         id = 0;
         name = null;
-        this.currentFeedStoryIndex = position;
+        this.storyIndex = position;
         this.type = type;
     }
 
@@ -42,7 +42,7 @@ public class StoryViewerOptions implements Serializable {
     }
 
     public static StoryViewerOptions forUser(final long id, final String name) {
-        return new StoryViewerOptions(id, name,Type.USER);
+        return new StoryViewerOptions(id, name, Type.USER);
     }
 
     public static StoryViewerOptions forHighlight(final String highlight) {
@@ -53,8 +53,8 @@ public class StoryViewerOptions implements Serializable {
         return new StoryViewerOptions(mediaId, username, Type.STORY);
     }
 
-    public static StoryViewerOptions forFeedStoryPosition(final int position) {
-        return new StoryViewerOptions(position, Type.FEED_STORY_POSITION);
+    public static StoryViewerOptions forFeedStory(final int position) {
+        return new StoryViewerOptions(position, Type.FEED_STORY);
     }
 
     public static StoryViewerOptions forStoryArchive(final String id) {
@@ -73,12 +73,12 @@ public class StoryViewerOptions implements Serializable {
         return type;
     }
 
-    public int getCurrentFeedStoryIndex() {
-        return currentFeedStoryIndex;
+    public int getStoryIndex() {
+        return storyIndex;
     }
 
-    public void setCurrentFeedStoryIndex(final int index) {
-        this.currentFeedStoryIndex = index;
+    public void setStoryIndex(final int index) {
+        this.storyIndex = index;
     }
 
     public enum Type {
@@ -87,7 +87,7 @@ public class StoryViewerOptions implements Serializable {
         USER,
         HIGHLIGHT,
         STORY,
-        FEED_STORY_POSITION,
+        FEED_STORY,
         STORY_ARCHIVE
     }
 }
