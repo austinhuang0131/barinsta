@@ -368,7 +368,7 @@
         <item quantity="other">%d j\'aimes</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
+        <item quantity="one">%d réponse</item>
         <item quantity="other">%d réponses</item>
     </plurals>
     <plurals name="comments_count">
