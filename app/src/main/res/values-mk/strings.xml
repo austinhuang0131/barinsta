@@ -232,7 +232,7 @@
     <string name="request_approve">Одобри барање</string>
     <string name="request_reject">Не одобрувај барање</string>
     <string name="share_public_post">Сподели ја оваа јавна објава до…</string>
-    <string name="share_private_post">Оваја објава е приватна! Споделете ја со оние кои можат да ја видат!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Оваа категорија е празна…</string>
     <string name="update_available">Нова надоградба е присутна! (%s)</string>
     <string name="update_notice">Потсетник: Ако ја имате превземено оваа апликација со F-Droid, морате од таму да надоградите! Истото важи и за верзиите од GitHub.</string>
@@ -264,6 +264,7 @@
     <string name="skip_update_checkbox">Прескокни ажурирање</string>
     <string name="version">Верзија</string>
     <string name="pref_start_screen">Почетна страна</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Општо</string>
     <string name="pref_category_theme">Изглед</string>
     <string name="pref_category_downloads">Превземања</string>
