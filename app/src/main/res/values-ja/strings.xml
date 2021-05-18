@@ -228,7 +228,7 @@
     <string name="request_approve">リクエストを承認</string>
     <string name="request_reject">リクエストを拒否</string>
     <string name="share_public_post">シェア先…</string>
-    <string name="share_private_post">これはプライベートな投稿です！閲覧できる人に共有してください！</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">このカテゴリは空です…</string>
     <string name="update_available">アップデートが利用可能です！ (%s)</string>
     <string name="update_notice">注意: F-Droidからダウンロードした場合は、そちらからアップデートする必要があります。GitHubでも同様です。</string>
@@ -260,6 +260,7 @@
     <string name="skip_update_checkbox">次回の更新まで再表示しない</string>
     <string name="version">バージョン</string>
     <string name="pref_start_screen">起動画面</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">全般</string>
     <string name="pref_category_theme">テーマ</string>
     <string name="pref_category_downloads">ダウンロード</string>
