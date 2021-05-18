@@ -233,7 +233,7 @@
     <string name="request_approve">قبول درخواست</string>
     <string name="request_reject">رد درخواست</string>
     <string name="share_public_post">همرسانی این پیک همگانی به…</string>
-    <string name="share_private_post">این پست شخصی است! آنهایی رو به اشتراک بزارید که میتوانید ببینید!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">یک بروزرسانی آمده است! (%s)</string>
     <string name="update_notice">یادآور: اگه شما از F-Droid دانلود کرده اید، شما باید از همانجا بروزرسانی کنید! برای GitHub هم همینطور.</string>
@@ -265,6 +265,7 @@
     <string name="skip_update_checkbox">دوباره نمایش نده تا بروزرسانی بعدی</string>
     <string name="version">نگارش</string>
     <string name="pref_start_screen">صفحه آغازین</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">فراگیر</string>
     <string name="pref_category_theme">پوسته</string>
     <string name="pref_category_downloads">دریافت‌ها</string>
