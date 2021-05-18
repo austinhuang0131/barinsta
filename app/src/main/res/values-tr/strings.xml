@@ -232,7 +232,7 @@
     <string name="request_approve">İsteği onayla</string>
     <string name="request_reject">İsteği reddet</string>
     <string name="share_public_post">Bu genel gönderiyi paylaş…</string>
-    <string name="share_private_post">Bu gizli bir gönderi! Onu görebilen kişilerle paylaş!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Bu kategori nasıl oluyorsa boş…</string>
     <string name="update_available">Yeni bir güncelleme mevcut! (%s)</string>
     <string name="update_notice">Hatırlatıcı: Eğer F-Droid kullanarak kurduysanız güncellemeyi oradan yapmalısınız. Aynısı GitHub için de geçerli.</string>
@@ -264,6 +264,7 @@
     <string name="skip_update_checkbox">Sonraki güncellemeye kadar gösterme</string>
     <string name="version">Sürüm</string>
     <string name="pref_start_screen">Başlangıç ekranı</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Genel</string>
     <string name="pref_category_theme">Tema</string>
     <string name="pref_category_downloads">İndirmeler</string>
