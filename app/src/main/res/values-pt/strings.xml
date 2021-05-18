@@ -232,7 +232,7 @@
     <string name="request_approve">Aprovar pedido</string>
     <string name="request_reject">Rejeitar pedido</string>
     <string name="share_public_post">Compartilhar esta publicação pública com…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Este é um posto privado! Compartilhe com aqueles que podem vê-lo.</string>
     <string name="discover_empty">Esta categoria está vazia…</string>
     <string name="update_available">Uma atualização está disponível! (%s)</string>
     <string name="update_notice">Lembrete: se você baixou do F-Droid, você deve atualizar a partir dele! O mesmo se aplica ao GitHub.</string>
@@ -264,7 +264,7 @@
     <string name="skip_update_checkbox">Não mostrar novamente até a próxima atualização</string>
     <string name="version">Versão</string>
     <string name="pref_start_screen">Tela inicial</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Mostrar teclado na busca</string>
     <string name="pref_category_general">Geral</string>
     <string name="pref_category_theme">Tema</string>
     <string name="pref_category_downloads">Downloads</string>
@@ -492,5 +492,5 @@
     <string name="no_external_map_app">Nenhum aplicativo de mapa foi encontrado!</string>
     <string name="click_to_show_full">Clique para ver a contagem completa</string>
     <string name="no_profile_pic_found">Nenhuma foto de perfil encontrada!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
+    <string name="swipe_up_confirmation">Tem certeza que quer abrir este link?</string>
 </resources>
