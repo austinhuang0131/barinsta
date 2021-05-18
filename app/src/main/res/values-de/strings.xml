@@ -492,4 +492,5 @@
     <string name="no_external_map_app">Keine Karten-App gefunden!</string>
     <string name="click_to_show_full">Click to view full count</string>
     <string name="no_profile_pic_found">Kein Profilbild gefunden!</string>
+    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
 </resources>
