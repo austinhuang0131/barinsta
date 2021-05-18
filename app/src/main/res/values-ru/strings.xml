@@ -510,4 +510,5 @@
     <string name="no_external_map_app">Не найдено картографического приложения!</string>
     <string name="click_to_show_full">Нажмите для просмотра полного количества</string>
     <string name="no_profile_pic_found">Картинка профиля не найдена!</string>
+    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
 </resources>
