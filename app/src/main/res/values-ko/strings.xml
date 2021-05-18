@@ -228,7 +228,7 @@
     <string name="request_approve">Approve request</string>
     <string name="request_reject">Reject request</string>
     <string name="share_public_post">Share this public post to…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view them!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">An update is available! (%s)</string>
     <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
@@ -260,6 +260,7 @@
     <string name="skip_update_checkbox">Do not show again until next update</string>
     <string name="version">Version</string>
     <string name="pref_start_screen">시작 화면</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">일반</string>
     <string name="pref_category_theme">테마</string>
     <string name="pref_category_downloads">다운로드</string>
