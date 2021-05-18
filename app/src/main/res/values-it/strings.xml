@@ -232,7 +232,7 @@
     <string name="request_approve">Approva richiesta</string>
     <string name="request_reject">Rifiuta richiesta</string>
     <string name="share_public_post">Condividi questo post pubblico a…</string>
-    <string name="share_private_post">Questo è un post privato! Condividilo con chi può visualizzarlo!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Questa categoria è in qualche modo vuota…</string>
     <string name="update_available">Un aggiornamento è disponibile! (%s)</string>
     <string name="update_notice">Promemoria: Se hai scaricato da F-Droid, devi aggiornare da lì! Lo stesso vale per GitHub.</string>
@@ -264,6 +264,7 @@
     <string name="skip_update_checkbox">Non mostrare più fino al prossimo aggiornamento</string>
     <string name="version">Versione</string>
     <string name="pref_start_screen">Schermata iniziale</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Generale</string>
     <string name="pref_category_theme">Tema</string>
     <string name="pref_category_downloads">Scaricati</string>
