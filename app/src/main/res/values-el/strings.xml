@@ -492,4 +492,5 @@
     <string name="no_external_map_app">Δε βρέθηκε εφαρμογή για χάρτες!</string>
     <string name="click_to_show_full">Κάντε κλικ για να δείτε πλήρη αριθμό</string>
     <string name="no_profile_pic_found">Δε βρέθηκε εικόνα προφίλ!</string>
+    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
 </resources>
