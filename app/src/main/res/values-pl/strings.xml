@@ -240,7 +240,7 @@
     <string name="request_approve">Potwierdź</string>
     <string name="request_reject">Odrzuć</string>
     <string name="share_public_post">Udostępnij ten publiczny post do…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">To jest prywatny post! Udostępnij wszystkim, którzy mogą go zobaczyć.</string>
     <string name="discover_empty">Ta kategoria jest jakoś pusta…</string>
     <string name="update_available">Aktualizacja jest dostępna! (%s)</string>
     <string name="update_notice">Przypomnienie: Jeśli pobrałeś z F-Droid, musisz go zaktualizować! To samo dotyczy GitHub.</string>
@@ -510,5 +510,5 @@
     <string name="no_external_map_app">No Map app found!</string>
     <string name="click_to_show_full">Click to view full count</string>
     <string name="no_profile_pic_found">Nie znaleziono zdjęcia profilowego!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
+    <string name="swipe_up_confirmation">Czy na pewno chcesz otworzyć ten link?</string>
 </resources>
