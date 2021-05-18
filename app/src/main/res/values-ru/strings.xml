@@ -240,7 +240,7 @@
     <string name="request_approve">Одобрить запрос</string>
     <string name="request_reject">Отклонить запрос</string>
     <string name="share_public_post">Поделиться публичной записью с…</string>
-    <string name="share_private_post">Это личная запись! Поделитесь с теми, кто может их просматривать!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Эта категория каким-то образом пуста…</string>
     <string name="update_available">Доступно обновление! (%s)</string>
     <string name="update_notice">Напоминание: Если вы скачали с F-Droid, вы должны обновлять с него! Это же относится и к GitHub.</string>
@@ -272,6 +272,7 @@
     <string name="skip_update_checkbox">Не показывать снова до следующего обновления</string>
     <string name="version">Версия</string>
     <string name="pref_start_screen">Начальный экран</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Общее</string>
     <string name="pref_category_theme">Тема</string>
     <string name="pref_category_downloads">Загрузки</string>
