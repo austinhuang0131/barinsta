@@ -232,7 +232,7 @@
     <string name="request_approve">Aprovar la sol·licitud</string>
     <string name="request_reject">Rebutjar la sol·licitud</string>
     <string name="share_public_post">Comparteix aquesta publicació pública a…</string>
-    <string name="share_private_post">Aquesta és una publicació privada! Comparteix-la amb aquells que la puguin veure!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Aquesta categoria està buida d\'alguna manera…</string>
     <string name="update_available">Hi ha disponible una actualització! (%s)</string>
     <string name="update_notice">Recordatori: Si has baixat l\'app des de F-Droid, l\'has d\'actualitzar des d\'allà! El mateix s\'aplica a GitHub.</string>
@@ -264,6 +264,7 @@
     <string name="skip_update_checkbox">No ho tornis a mostrar fins a la propera actualització</string>
     <string name="version">Versió</string>
     <string name="pref_start_screen">Pantalla d\'inici</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">General</string>
     <string name="pref_category_theme">Tema</string>
     <string name="pref_category_downloads">Descàrregues</string>
