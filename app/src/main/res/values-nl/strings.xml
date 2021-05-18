@@ -232,7 +232,7 @@
     <string name="request_approve">Verzoek accepteren</string>
     <string name="request_reject">Verzoek afwijzen</string>
     <string name="share_public_post">Deel dit openbare bericht met…</string>
-    <string name="share_private_post">Dit is een privébericht! Deel het met mensen die hem kunnen zien!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Deze categorie is op de een of andere manier leeg…</string>
     <string name="update_available">Een update is beschikbaar(%s)</string>
     <string name="update_notice">Herinnering: Als je via F-Droid hebt gedownload, moet je ook updaten via F-Droid! Hetzelfde geldt voor GitHub.</string>
@@ -264,6 +264,7 @@
     <string name="skip_update_checkbox">Niet meer weergeven tot de volgende update</string>
     <string name="version">Versie</string>
     <string name="pref_start_screen">Startscherm</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Algemeen</string>
     <string name="pref_category_theme">Thema</string>
     <string name="pref_category_downloads">Downloads</string>
