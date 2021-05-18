@@ -232,7 +232,7 @@
     <string name="request_approve">Έγκριση αιτήματος</string>
     <string name="request_reject">Απόρριψη αιτήματος</string>
     <string name="share_public_post">Κοινοποιήστε αυτή τη δημόσια δημοσίευση στο…</string>
-    <string name="share_private_post">Αυτή είναι ιδιωτική δημοσίευση! Κοινοποιήστε τη σε εκείνους που μπορούν να τη δουν!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Αυτή η κατηγορία είναι κατά κάποιον τρόπο κενή…</string>
     <string name="update_available">Υπάρχει διαθέσιμη ενημέρωση! (%s)</string>
     <string name="update_notice">Υπενθύμιση: Εάν η εγκατάσταση έγινε από το F-Droid, από εκεί θα χρειαστεί να γίνουν κι οι ενημερώσεις! Το ίδιο ισχύει και για το GitHub.</string>
@@ -264,6 +264,7 @@
     <string name="skip_update_checkbox">Να μην εμφανιστεί ξανά μέχρι την επόμενη ενημέρωση</string>
     <string name="version">Έκδοση</string>
     <string name="pref_start_screen">Οθόνη εκκίνησης</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Γενικά</string>
     <string name="pref_category_theme">Θέμα</string>
     <string name="pref_category_downloads">Λήψεις</string>
