@@ -492,4 +492,5 @@
     <string name="no_external_map_app">Geen Kaartapp gevonden!</string>
     <string name="click_to_show_full">Klik om de volledige telling te zien</string>
     <string name="no_profile_pic_found">Geen profielfoto gevonden!</string>
+    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
 </resources>
