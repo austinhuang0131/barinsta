@@ -240,7 +240,7 @@
     <string name="request_approve">Schváliť žiadosť</string>
     <string name="request_reject">Odmietnuť žiadosť</string>
     <string name="share_public_post">Zdieľať tento príspevok…</string>
-    <string name="share_private_post">Toto je súkromný príspevok! Zdieľaj iba tým ktorý ho môžu vidieť!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Táto kategória je nejaká prázdna…</string>
     <string name="update_available">Aktualizácia je pripravená! (%s)</string>
     <string name="update_notice">Upomienka: Ak si sťahoval/a z F-Droid, musíš aktualizovať z nej! To platí aj pre GitHub.</string>
@@ -272,6 +272,7 @@
     <string name="skip_update_checkbox">Neukazovať do ďalšej aktualizácie</string>
     <string name="version">Verzia</string>
     <string name="pref_start_screen">Úvodná obrazovka</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Všeobecné</string>
     <string name="pref_category_theme">Téma</string>
     <string name="pref_category_downloads">Stiahnuté</string>
