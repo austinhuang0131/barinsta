@@ -232,7 +232,7 @@
     <string name="request_approve">Godkänn begäran</string>
     <string name="request_reject">Neka begäran</string>
     <string name="share_public_post">Dela det här publika inlägget till…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view them!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Den här kategorin är på något sätt tom…</string>
     <string name="update_available">En uppdatering är tillgänglig! (%s)</string>
     <string name="update_notice">Påminnelse: Om du har laddat ner från F-Droid så måste du uppdatera från det! Samma gäller från GitHub.</string>
@@ -264,6 +264,7 @@
     <string name="skip_update_checkbox">Do not show again until next update</string>
     <string name="version">Version</string>
     <string name="pref_start_screen">Startskärm</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Generellt</string>
     <string name="pref_category_theme">Tema</string>
     <string name="pref_category_downloads">Nerladdningar</string>
