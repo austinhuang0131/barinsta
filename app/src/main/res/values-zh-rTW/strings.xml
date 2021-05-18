@@ -228,7 +228,7 @@
     <string name="request_approve">接受要求</string>
     <string name="request_reject">略過要求</string>
     <string name="share_public_post">分享這則公開貼文給…</string>
-    <string name="share_private_post">這個是私人貼文！分享給可以查看的人！</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">這個類別是空的…</string>
     <string name="update_available">有可用的更新！ （%s）</string>
     <string name="update_notice">提醒：如果您是從F-Droid 下載的，您必須透過其進行更新！ GitHub 也是如此。</string>
@@ -260,6 +260,7 @@
     <string name="skip_update_checkbox">在下次更新之前不再顯示</string>
     <string name="version">版本</string>
     <string name="pref_start_screen">開始畫面</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">一般</string>
     <string name="pref_category_theme">主題</string>
     <string name="pref_category_downloads">下載</string>
