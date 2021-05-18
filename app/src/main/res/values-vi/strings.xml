@@ -228,7 +228,7 @@
     <string name="request_approve">Duyệt yêu cầu</string>
     <string name="request_reject">Từ chối yêu cầu</string>
     <string name="share_public_post">Chia sẻ bài viết công khai này đến…</string>
-    <string name="share_private_post">Đây là một bài viết riêng tư! Hãy chia sẻ đến những ai có thể xem chúng!</string>
+    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Mục này đang bị bỏ trống…</string>
     <string name="update_available">Đã có bản cập nhật! (%s)</string>
     <string name="update_notice">Nhắc nhở: Nếu bạn tải về từ F-Droid, bạn phải cập nhật từ nó! Điều tương tự cho GitHub.</string>
@@ -260,6 +260,7 @@
     <string name="skip_update_checkbox">Không hiện lại cho đến cập nhật tiếp theo</string>
     <string name="version">Phiên bản</string>
     <string name="pref_start_screen">Màn hình khởi động</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
     <string name="pref_category_general">Chung</string>
     <string name="pref_category_theme">Giao diện</string>
     <string name="pref_category_downloads">Tải xuống</string>
