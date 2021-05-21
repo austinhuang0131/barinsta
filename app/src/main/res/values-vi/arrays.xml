@@ -24,6 +24,8 @@
         <item translatable="false">日本語</item>
         <item translatable="false">Ελληνικά</item>
         <item translatable="false">Euskara</item>
+        <item translatable="false">Svenska</item>
+        <item translatable="false">한국어</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Tự động / Theo hệ thống</item>
