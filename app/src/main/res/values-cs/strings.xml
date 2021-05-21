@@ -131,6 +131,7 @@
     <string name="mute_posts">Ztlumit příspěvky</string>
     <string name="unmute_stories">Zrušit ztlumení příběhů</string>
     <string name="unmute_posts">Zrušit ztlumení příspěvků</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Kopírovat životopis</string>
     <string name="bio_translate">Přeložit životopis</string>
     <string name="status_mutual">Vzájemní</string>
