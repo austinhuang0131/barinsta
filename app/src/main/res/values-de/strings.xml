@@ -123,6 +123,7 @@
     <string name="mute_posts">Beiträge stummschalten</string>
     <string name="unmute_stories">Stummschaltung von Stories aufheben</string>
     <string name="unmute_posts">Stummschaltung von Beiträgen aufheben</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Steckbrief kopieren</string>
     <string name="bio_translate">Steckbrief übersetzen</string>
     <string name="status_mutual">Gegenseitig</string>
