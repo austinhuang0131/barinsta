@@ -119,6 +119,7 @@
     <string name="mute_posts">隱藏貼文</string>
     <string name="unmute_stories">取消隱藏限時動態</string>
     <string name="unmute_posts">取消隱藏貼文</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">複製簡介</string>
     <string name="bio_translate">翻譯簡介</string>
     <string name="status_mutual">正彼此追蹤</string>
