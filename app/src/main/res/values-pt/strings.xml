@@ -491,7 +491,7 @@
     <string name="recent">Recente</string>
     <string name="clear">Limpar</string>
     <string name="no_external_map_app">Nenhum aplicativo de mapa foi encontrado!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Clique para mostrar a contagem completa de curtidas</string>
     <string name="no_profile_pic_found">Nenhuma foto de perfil encontrada!</string>
     <string name="swipe_up_confirmation">Tem certeza que quer abrir este link?</string>
 </resources>
