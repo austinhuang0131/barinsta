@@ -491,7 +491,7 @@
     <string name="recent">Recente</string>
     <string name="clear">Pulisci</string>
     <string name="no_external_map_app">Nessuna app mappa trovata!</string>
-    <string name="click_to_show_full">Clicca per vedere il conteggio completo</string>
+    <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">Nessuna foto profilo trovata!</string>
     <string name="swipe_up_confirmation">Sei sicuro di voler aprire questo link?</string>
 </resources>
