@@ -119,6 +119,7 @@
     <string name="mute_posts">投稿をミュート</string>
     <string name="unmute_stories">ストーリーズのミュートを解除</string>
     <string name="unmute_posts">投稿のミュートを解除</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">プロフィールをコピー</string>
     <string name="bio_translate">プロフィールを翻訳する</string>
     <string name="status_mutual">相互フォロー</string>
