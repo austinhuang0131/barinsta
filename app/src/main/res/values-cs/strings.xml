@@ -509,7 +509,7 @@
     <string name="recent">Nedávné</string>
     <string name="clear">Vymazat</string>
     <string name="no_external_map_app">Nemáte žádnou aplikaci pro mapy!</string>
-    <string name="click_to_show_full">Click to view full count</string>
+    <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">Nebyl nalezen žádný obrázek profilu!</string>
     <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
 </resources>
