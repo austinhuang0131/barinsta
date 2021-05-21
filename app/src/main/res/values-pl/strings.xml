@@ -131,6 +131,7 @@
     <string name="mute_posts">Wycisz posty</string>
     <string name="unmute_stories">Wyłącz wyciszenie relacji</string>
     <string name="unmute_posts">Wyłącz wyciszenie postów</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Skopiuj bio</string>
     <string name="bio_translate">Przetłumacz bio</string>
     <string name="status_mutual">Wspólne</string>
