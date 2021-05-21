@@ -123,6 +123,7 @@
     <string name="mute_posts">Σίγαση δημοσιεύσεων</string>
     <string name="unmute_stories">Άρση σίγασης ιστοριών</string>
     <string name="unmute_posts">Άρση σίγασης δημοσιεύσεων</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Αντιγραφή βιογραφικού</string>
     <string name="bio_translate">Μετάφραση βιογραφικού</string>
     <string name="status_mutual">Κοινά</string>
