@@ -123,6 +123,7 @@
     <string name="mute_posts">Mute posts</string>
     <string name="unmute_stories">Unmute stories</string>
     <string name="unmute_posts">Unmute posts</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Kopiatu biografia</string>
     <string name="bio_translate">Itzuli biografia</string>
     <string name="status_mutual">Alde bikoa</string>
