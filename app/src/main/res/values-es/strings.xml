@@ -123,7 +123,7 @@
     <string name="mute_posts">Silenciar publicaciones</string>
     <string name="unmute_stories">Quitar silencio a historias</string>
     <string name="unmute_posts">Quitar silencio a publicaciones</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Quitar seguidor</string>
     <string name="bio_copy">Copiar biografía</string>
     <string name="bio_translate">Traducir biografía</string>
     <string name="status_mutual">Mutuo</string>
