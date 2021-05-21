@@ -119,6 +119,7 @@
     <string name="mute_posts">Mute posts</string>
     <string name="unmute_stories">Unmute stories</string>
     <string name="unmute_posts">Unmute posts</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Salin bio</string>
     <string name="bio_translate">Terjemahkan bio</string>
     <string name="status_mutual">Mutual</string>
