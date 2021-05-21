@@ -123,6 +123,7 @@
     <string name="mute_posts">Mute les publications</string>
     <string name="unmute_stories">Démute les stories</string>
     <string name="unmute_posts">Démutez les publications</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Copier la bio</string>
     <string name="bio_translate">Traduire la bio</string>
     <string name="status_mutual">Mutuel</string>
