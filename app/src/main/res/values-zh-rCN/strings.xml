@@ -119,6 +119,7 @@
     <string name="mute_posts">隐藏ta的帖子</string>
     <string name="unmute_stories">取消隐藏ta的快拍</string>
     <string name="unmute_posts">取消隐藏ta的帖子</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">复制简介</string>
     <string name="bio_translate">翻译简介</string>
     <string name="status_mutual">相互关注</string>
