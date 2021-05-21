@@ -482,7 +482,7 @@
     <string name="recent">近期搜索</string>
     <string name="clear">清空</string>
     <string name="no_external_map_app">未找到地图应用！</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">点击显示完整点赞计数</string>
     <string name="no_profile_pic_found">未找到用户头像！</string>
     <string name="swipe_up_confirmation">您确定要打开此链接吗？</string>
 </resources>
