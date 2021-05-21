@@ -119,6 +119,7 @@
     <string name="mute_posts">Chặn bài đăng</string>
     <string name="unmute_stories">Bỏ chặn story</string>
     <string name="unmute_posts">Bỏ chặn bài đăng</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Sao chép thông tin</string>
     <string name="bio_translate">Dịch thông tin</string>
     <string name="status_mutual">Chung</string>
