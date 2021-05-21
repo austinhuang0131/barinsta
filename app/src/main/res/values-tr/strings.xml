@@ -123,6 +123,7 @@
     <string name="mute_posts">Gönderileri sustur</string>
     <string name="unmute_stories">Hikayelerin sesini aç</string>
     <string name="unmute_posts">Gönderilerin sesini aç</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Biyoyu kopyala</string>
     <string name="bio_translate">Biyoyu çevir</string>
     <string name="status_mutual">Karşılıklı</string>
