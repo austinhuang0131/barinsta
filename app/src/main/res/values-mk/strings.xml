@@ -123,6 +123,7 @@
     <string name="mute_posts">Игнорирај Објави</string>
     <string name="unmute_stories">Одигнорирај приказни</string>
     <string name="unmute_posts">Одигнорирај Објави</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Копирај био</string>
     <string name="bio_translate">Преведи био</string>
     <string name="status_mutual">Блиски</string>
