@@ -119,7 +119,7 @@
     <string name="mute_posts">隐藏ta的帖子</string>
     <string name="unmute_stories">取消隐藏ta的快拍</string>
     <string name="unmute_posts">取消隐藏ta的帖子</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">移除粉丝</string>
     <string name="bio_copy">复制简介</string>
     <string name="bio_translate">翻译简介</string>
     <string name="status_mutual">相互关注</string>
@@ -229,7 +229,7 @@
     <string name="request_approve">同意请求</string>
     <string name="request_reject">拒绝请求</string>
     <string name="share_public_post">分享公开帖...</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">这是一个私密帖！请确定分享对象能查看本帖。</string>
     <string name="discover_empty">这个板块居然是空的...</string>
     <string name="update_available">检测到有新版本！ (%s)</string>
     <string name="update_notice">注意：若您下载的是F-Droid版本，那您还得在F-Droid更新！GitHub版本也是如此。</string>
@@ -261,7 +261,7 @@
     <string name="skip_update_checkbox">在下次更新之前不再显示</string>
     <string name="version">版本</string>
     <string name="pref_start_screen">初始界面</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">搜索时显示键盘</string>
     <string name="pref_category_general">常规设置</string>
     <string name="pref_category_theme">主题</string>
     <string name="pref_category_downloads">下载</string>
@@ -482,7 +482,7 @@
     <string name="recent">近期搜索</string>
     <string name="clear">清空</string>
     <string name="no_external_map_app">未找到地图应用！</string>
-    <string name="click_to_show_full">Click to view full count</string>
+    <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">未找到用户头像！</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
+    <string name="swipe_up_confirmation">您确定要打开此链接吗？</string>
 </resources>
