@@ -509,7 +509,7 @@
     <string name="recent">Najnowsze</string>
     <string name="clear">Wyczyść</string>
     <string name="no_external_map_app">No Map app found!</string>
-    <string name="click_to_show_full">Click to view full count</string>
+    <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">Nie znaleziono zdjęcia profilowego!</string>
     <string name="swipe_up_confirmation">Czy na pewno chcesz otworzyć ten link?</string>
 </resources>
