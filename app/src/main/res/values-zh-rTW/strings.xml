@@ -402,7 +402,7 @@
     <string name="replying_to_user">回覆 %s</string>
     <string name="replied_to_yourself">您回覆了自己</string>
     <string name="replied_you">您回覆了</string>
-    <string name="replied_you_group">你回覆了 %s 的限時動態</string>
+    <string name="replied_you_group">您回覆了 %s</string>
     <string name="replied_group">回覆了 %s 的限時動態</string>
     <string name="replied_to_you">回覆給您</string>
     <string name="replied_to_themself">回覆給他自己</string>
