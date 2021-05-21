@@ -119,6 +119,7 @@
     <string name="mute_posts">게시물 음소거</string>
     <string name="unmute_stories">스토리 음소거 해제</string>
     <string name="unmute_posts">게시물 음소거 해제</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">소개 복사</string>
     <string name="bio_translate">소개 번역</string>
     <string name="status_mutual">서로친구</string>
