@@ -123,6 +123,7 @@
     <string name="mute_posts">Berichten dempen</string>
     <string name="unmute_stories">Verhalen uitzetten</string>
     <string name="unmute_posts">Berichten uitschakelen</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Bio kopiëren</string>
     <string name="bio_translate">Bio vertalen</string>
     <string name="status_mutual">Wederzijds</string>
