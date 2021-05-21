@@ -131,6 +131,7 @@
     <string name="mute_posts">Заглушить публикации</string>
     <string name="unmute_stories">Включить звук историй</string>
     <string name="unmute_posts">Включить звук публикаций</string>
+    <string name="remove_follower">Remove follower</string>
     <string name="bio_copy">Копировать биографию</string>
     <string name="bio_translate">Перевести биографию</string>
     <string name="status_mutual">Взаимное</string>
