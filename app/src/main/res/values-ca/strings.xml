@@ -26,7 +26,7 @@
     <string name="download_prepend_username">Anteposa el nom d\'usuari al nom de fitxer</string>
     <string name="mark_as_seen_setting">Marca les històries com a vistes després de visualitzar-es</string>
     <string name="mark_as_seen_setting_summary">L\'autor de la història sabrà que l\'has vista</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Amaga les històries silenciades del canal</string>
     <string name="dm_mark_as_seen_setting">Marca els missatges com a vists després de visualitzar-los</string>
     <string name="dm_mark_as_seen_setting_summary">Altres membres sabran que l\'has vist</string>
     <string name="activity_setting">Habilitar les notificacions d\'activitat</string>
@@ -56,8 +56,8 @@
     </plurals>
     <string name="main_posts_following">%s\n Seguint</string>
     <string name="post_viewer_autoplay_video">Reproduir vídeos automàticament</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">Continua reproduint els vídeos en segon pla</string>
+    <string name="post_viewer_background_play_summary">No posis en pausa els vídeos quan l\'aplicació estigui fora del focus</string>
     <string name="post_viewer_muted_autoplay">Silenciar sempre els vídeos</string>
     <string name="post_viewer_show_captions">Mostrar sempre els subtítols</string>
     <string name="post_viewer_download_dialog_title">Seleccionar el que s\'ha de descarregar</string>
@@ -123,7 +123,7 @@
     <string name="mute_posts">Silenciar publicacions</string>
     <string name="unmute_stories">No silenciar les històries</string>
     <string name="unmute_posts">No silenciar les publicacions</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Elimina el seguidor</string>
     <string name="bio_copy">Copiar bio</string>
     <string name="bio_translate">Traduir bio</string>
     <string name="status_mutual">Mutu</string>
@@ -212,7 +212,7 @@
     <string name="comment_viewer_like_comment">Donar \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_unlike_comment">Treure \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_translate_comment">Traduir comentari</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Esborrar comentari</string>
     <string name="comment_send_empty_comment">No als comentaris buits!</string>
     <string name="comment_view_mention_user_search">Vols cercar el nom d\'usuari?</string>
     <string name="comment_view_mention_hash_search">Vols cercar l\'etiqueta?</string>
@@ -233,7 +233,7 @@
     <string name="request_approve">Aprovar la sol·licitud</string>
     <string name="request_reject">Rebutjar la sol·licitud</string>
     <string name="share_public_post">Comparteix aquesta publicació pública a…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Aquesta és una publicació privada! Comparteix-la amb aquells que la puguin veure.</string>
     <string name="discover_empty">Aquesta categoria està buida d\'alguna manera…</string>
     <string name="update_available">Hi ha disponible una actualització! (%s)</string>
     <string name="update_notice">Recordatori: Si has baixat l\'app des de F-Droid, l\'has d\'actualitzar des d\'allà! El mateix s\'aplica a GitHub.</string>
@@ -265,7 +265,7 @@
     <string name="skip_update_checkbox">No ho tornis a mostrar fins a la propera actualització</string>
     <string name="version">Versió</string>
     <string name="pref_start_screen">Pantalla d\'inici</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Mostra el teclat al cercar</string>
     <string name="pref_category_general">General</string>
     <string name="pref_category_theme">Tema</string>
     <string name="pref_category_downloads">Descàrregues</string>
@@ -370,8 +370,8 @@
         <item quantity="other">%d m\'agrades</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="one">%d resposta</item>
+        <item quantity="other">%d respostes</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d comentari</item>
@@ -469,29 +469,29 @@
     <string name="removed_keywords">S\'ha eliminat la paraula clau: %s de la llista de filtres</string>
     <string name="marked_as_seen">Marcat com a vist</string>
     <string name="delete_unsuccessful">Suprimeix sense èxit</string>
-    <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
+    <string name="throttle_error">Restringit per Instagram a causa de massa sol·licituds a l\'API. Espera un temps abans de tornar a intentar-ho.</string>
     <string name="error">Error</string>
-    <string name="account_logged_out">This account has been logged out.</string>
-    <string name="login_required">Login required!</string>
-    <string name="sentry_block">Sentry block.</string>
-    <string name="inactive_user">User is inactive!</string>
+    <string name="account_logged_out">S\'ha desconnectat aquest compte.</string>
+    <string name="login_required">Es requereix iniciar la sessió!</string>
+    <string name="sentry_block">Bloc de dades.</string>
+    <string name="inactive_user">L\'usuari està inactiu!</string>
     <string name="crash_report_subject">Informe d\'error de Barinsta</string>
     <string name="crash_report_title">Selecciona una aplicació de correu electrònic per enviar registres d\'error</string>
-    <string name="not_found">Not found!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again.</string>
-    <string name="skip_update">Skip this update</string>
-    <string name="on_latest_version">You\'re already on the latest version</string>
-    <string name="tab_order">Screen order</string>
-    <string name="other_tabs">Other tabs</string>
-    <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
-    <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
-    <string name="copy_caption">Copy caption</string>
-    <string name="copy_reply">Copy reply</string>
-    <string name="top">Top</string>
+    <string name="not_found">No s\'ha trobat!</string>
+    <string name="rate_limit">La vostra IP ha estat limitada per Instagram. Espera una hora i torna-ho a provar.</string>
+    <string name="skip_update">Omet aquesta actualització</string>
+    <string name="on_latest_version">Ja esteu a la darrera versió</string>
+    <string name="tab_order">Ordre de la pantalla</string>
+    <string name="other_tabs">Altres pestanyes</string>
+    <string name="tab_order_start_next_launch">L\'ordre de les pestanyes es reflectirà en el següent llançament</string>
+    <string name="dm_remove_warning">Si es desa, totes les característiques relacionades amb els MD es desactivaran en el següent llançament</string>
+    <string name="copy_caption">Copia la llegenda</string>
+    <string name="copy_reply">Copia la resposta</string>
+    <string name="top">Part superior</string>
     <string name="recent">Recent</string>
-    <string name="clear">Clear</string>
-    <string name="no_external_map_app">No Map app found!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
-    <string name="no_profile_pic_found">No profile pic found!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
+    <string name="clear">Netejar</string>
+    <string name="no_external_map_app">No s\'ha trobat cap aplicació de navegació!</string>
+    <string name="click_to_show_full">Feu clic per mostrar el recompte complet de m\'agrada</string>
+    <string name="no_profile_pic_found">No s\'ha trobat cap imatge de perfil!</string>
+    <string name="swipe_up_confirmation">Esteu segur que voleu obrir aquest enllaç?</string>
 </resources>
