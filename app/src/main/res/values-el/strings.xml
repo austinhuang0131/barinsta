@@ -491,7 +491,7 @@
     <string name="recent">Πρόσφατα</string>
     <string name="clear">Εκκαθάριση</string>
     <string name="no_external_map_app">Δε βρέθηκε εφαρμογή για χάρτες!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Σε πόσους ακριβώς αρέσει</string>
     <string name="no_profile_pic_found">Δε βρέθηκε εικόνα προφίλ!</string>
     <string name="swipe_up_confirmation">Είστε βέβαιος για το άνοιγμα αυτού του συνδέσμου;</string>
 </resources>
