@@ -123,7 +123,7 @@
     <string name="mute_posts">Σίγαση δημοσιεύσεων</string>
     <string name="unmute_stories">Άρση σίγασης ιστοριών</string>
     <string name="unmute_posts">Άρση σίγασης δημοσιεύσεων</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Αφαίρεση ακόλουθου</string>
     <string name="bio_copy">Αντιγραφή βιογραφικού</string>
     <string name="bio_translate">Μετάφραση βιογραφικού</string>
     <string name="status_mutual">Κοινά</string>
@@ -233,7 +233,7 @@
     <string name="request_approve">Έγκριση αιτήματος</string>
     <string name="request_reject">Απόρριψη αιτήματος</string>
     <string name="share_public_post">Κοινοποιήστε αυτή τη δημόσια δημοσίευση στο…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Ιδιωτική δημοσίευση! Κοινοποιήστε την σε όσους μπορούν να τη δουν.</string>
     <string name="discover_empty">Αυτή η κατηγορία είναι κατά κάποιον τρόπο κενή…</string>
     <string name="update_available">Υπάρχει διαθέσιμη ενημέρωση! (%s)</string>
     <string name="update_notice">Υπενθύμιση: Εάν η εγκατάσταση έγινε από το F-Droid, από εκεί θα χρειαστεί να γίνουν κι οι ενημερώσεις! Το ίδιο ισχύει και για το GitHub.</string>
@@ -265,7 +265,7 @@
     <string name="skip_update_checkbox">Να μην εμφανιστεί ξανά μέχρι την επόμενη ενημέρωση</string>
     <string name="version">Έκδοση</string>
     <string name="pref_start_screen">Οθόνη εκκίνησης</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Εμφάνιση πληκτρολογίου στην αναζήτηση</string>
     <string name="pref_category_general">Γενικά</string>
     <string name="pref_category_theme">Θέμα</string>
     <string name="pref_category_downloads">Λήψεις</string>
@@ -493,5 +493,5 @@
     <string name="no_external_map_app">Δε βρέθηκε εφαρμογή για χάρτες!</string>
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">Δε βρέθηκε εικόνα προφίλ!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
+    <string name="swipe_up_confirmation">Είστε βέβαιος για το άνοιγμα αυτού του συνδέσμου;</string>
 </resources>
