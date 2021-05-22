@@ -123,7 +123,7 @@
     <string name="mute_posts">Silenzia post</string>
     <string name="unmute_stories">Riattiva storie</string>
     <string name="unmute_posts">Riattiva i post</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Rimuovi seguace</string>
     <string name="bio_copy">Copia bio</string>
     <string name="bio_translate">Traduci bio</string>
     <string name="status_mutual">Interesse reciproco</string>
@@ -491,7 +491,7 @@
     <string name="recent">Recente</string>
     <string name="clear">Pulisci</string>
     <string name="no_external_map_app">Nessuna app mappa trovata!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Clicca per mostrare il conteggio completo</string>
     <string name="no_profile_pic_found">Nessuna foto profilo trovata!</string>
     <string name="swipe_up_confirmation">Sei sicuro di voler aprire questo link?</string>
 </resources>
