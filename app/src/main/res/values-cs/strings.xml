@@ -132,8 +132,8 @@
     <string name="unmute_stories">Zrušit ztlumení příběhů</string>
     <string name="unmute_posts">Zrušit ztlumení příspěvků</string>
     <string name="remove_follower">Odebrat sledujícího</string>
-    <string name="bio_copy">Kopírovat životopis</string>
-    <string name="bio_translate">Přeložit životopis</string>
+    <string name="bio_copy">Kopírovat bio</string>
+    <string name="bio_translate">Přeložit bio</string>
     <string name="status_mutual">Vzájemní</string>
     <string name="status_following">Sleduje</string>
     <string name="status_follower">Sledující</string>
