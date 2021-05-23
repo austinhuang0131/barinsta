@@ -119,7 +119,7 @@
     <string name="mute_posts">隱藏貼文</string>
     <string name="unmute_stories">取消隱藏限時動態</string>
     <string name="unmute_posts">取消隱藏貼文</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">移除追蹤者</string>
     <string name="bio_copy">複製簡介</string>
     <string name="bio_translate">翻譯簡介</string>
     <string name="status_mutual">正彼此追蹤</string>
@@ -261,7 +261,7 @@
     <string name="skip_update_checkbox">在下次更新之前不再顯示</string>
     <string name="version">版本</string>
     <string name="pref_start_screen">開始畫面</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">搜尋時顯示鍵盤</string>
     <string name="pref_category_general">一般</string>
     <string name="pref_category_theme">主題</string>
     <string name="pref_category_downloads">下載</string>
@@ -365,7 +365,7 @@
         <item quantity="other">%d 個讚</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="other">%d replies</item>
+        <item quantity="other">%d 則回覆</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="other">%d 個評論</item>
@@ -479,13 +479,13 @@
     <string name="copy_caption">Copy caption</string>
     <string name="copy_reply">複製回覆</string>
     <string name="top">Top</string>
-    <string name="recent">Recent</string>
-    <string name="clear">Clear</string>
-    <string name="no_external_map_app">No Map app found!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
-    <string name="no_profile_pic_found">No profile pic found!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="recent">最近</string>
+    <string name="clear">清空</string>
+    <string name="no_external_map_app">找不到可用的地圖應用程式</string>
+    <string name="click_to_show_full">點選以顯示完整的按讚數量</string>
+    <string name="no_profile_pic_found">找不到大頭貼照</string>
+    <string name="swipe_up_confirmation">您確定要打開此連結嗎？</string>
+    <string name="sending">傳送中…</string>
+    <string name="share_via_dm">透過私訊分享</string>
+    <string name="share_link">分享連結</string>
 </resources>
