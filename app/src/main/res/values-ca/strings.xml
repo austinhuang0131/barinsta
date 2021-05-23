@@ -494,4 +494,7 @@
     <string name="click_to_show_full">Feu clic per mostrar el recompte complet de m\'agrada</string>
     <string name="no_profile_pic_found">No s\'ha trobat cap imatge de perfil!</string>
     <string name="swipe_up_confirmation">Esteu segur que voleu obrir aquest enllaç?</string>
+    <string name="sending">Sending...</string>
+    <string name="share_via_dm">Share via DM</string>
+    <string name="share_link">Share link…</string>
 </resources>
