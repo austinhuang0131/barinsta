@@ -494,4 +494,7 @@
     <string name="click_to_show_full">Σε πόσους ακριβώς αρέσει</string>
     <string name="no_profile_pic_found">Δε βρέθηκε εικόνα προφίλ!</string>
     <string name="swipe_up_confirmation">Είστε βέβαιος για το άνοιγμα αυτού του συνδέσμου;</string>
+    <string name="sending">Sending...</string>
+    <string name="share_via_dm">Share via DM</string>
+    <string name="share_link">Share link…</string>
 </resources>
