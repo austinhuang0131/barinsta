@@ -494,7 +494,7 @@
     <string name="click_to_show_full">Clique para mostrar a contagem completa de curtidas</string>
     <string name="no_profile_pic_found">Nenhuma foto de perfil encontrada!</string>
     <string name="swipe_up_confirmation">Tem certeza que quer abrir este link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="sending">Enviando...</string>
+    <string name="share_via_dm">Compartilhar via DM</string>
+    <string name="share_link">Compartilhar link…</string>
 </resources>
