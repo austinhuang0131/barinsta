@@ -131,7 +131,7 @@
     <string name="mute_posts">Заглушить публикации</string>
     <string name="unmute_stories">Включить звук историй</string>
     <string name="unmute_posts">Включить звук публикаций</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Удалить подписчика</string>
     <string name="bio_copy">Копировать биографию</string>
     <string name="bio_translate">Перевести биографию</string>
     <string name="status_mutual">Взаимное</string>
@@ -241,7 +241,7 @@
     <string name="request_approve">Одобрить запрос</string>
     <string name="request_reject">Отклонить запрос</string>
     <string name="share_public_post">Поделиться публичной записью с…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Это личная запись! Делитесь с теми, кто может её видеть.</string>
     <string name="discover_empty">Эта категория каким-то образом пуста…</string>
     <string name="update_available">Доступно обновление! (%s)</string>
     <string name="update_notice">Напоминание: Если вы скачали с F-Droid, вы должны обновлять с него! Это же относится и к GitHub.</string>
@@ -273,7 +273,7 @@
     <string name="skip_update_checkbox">Не показывать снова до следующего обновления</string>
     <string name="version">Версия</string>
     <string name="pref_start_screen">Начальный экран</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Показывать клавиатуру при поиске</string>
     <string name="pref_category_general">Общее</string>
     <string name="pref_category_theme">Тема</string>
     <string name="pref_category_downloads">Загрузки</string>
@@ -496,7 +496,7 @@
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Выберите приложение для отправки логов ошибки</string>
     <string name="not_found">Не найдено!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Ваш IP-адрес был ограничен Instagram. Повторите попытку через час. &lt;a href=\"https://redd.it/msxlko\"&gt;Узнать больше.&lt;/a&gt;</string>
     <string name="skip_update">Пропустить это обновление</string>
     <string name="on_latest_version">Вы уже используете последнюю версию</string>
     <string name="tab_order">Порядок экрана</string>
@@ -509,10 +509,10 @@
     <string name="recent">Недавние</string>
     <string name="clear">Очистить</string>
     <string name="no_external_map_app">Не найдено картографического приложения!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Нажмите, чтобы показать полное число лайков</string>
     <string name="no_profile_pic_found">Картинка профиля не найдена!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="swipe_up_confirmation">Вы действительно хотите открыть эту ссылку?</string>
+    <string name="sending">Отправляю...</string>
+    <string name="share_via_dm">Поделиться в ЛС</string>
+    <string name="share_link">Поделиться ссылкой…</string>
 </resources>
