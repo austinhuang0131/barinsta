@@ -494,4 +494,7 @@
     <string name="click_to_show_full">Clicca per mostrare il conteggio completo</string>
     <string name="no_profile_pic_found">Nessuna foto profilo trovata!</string>
     <string name="swipe_up_confirmation">Sei sicuro di voler aprire questo link?</string>
+    <string name="sending">Sending...</string>
+    <string name="share_via_dm">Share via DM</string>
+    <string name="share_link">Share link…</string>
 </resources>
