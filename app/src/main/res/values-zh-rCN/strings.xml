@@ -485,4 +485,7 @@
     <string name="click_to_show_full">点击显示完整点赞计数</string>
     <string name="no_profile_pic_found">未找到用户头像！</string>
     <string name="swipe_up_confirmation">您确定要打开此链接吗？</string>
+    <string name="sending">Sending...</string>
+    <string name="share_via_dm">Share via DM</string>
+    <string name="share_link">Share link…</string>
 </resources>
