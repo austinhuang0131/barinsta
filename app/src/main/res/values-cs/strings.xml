@@ -511,8 +511,8 @@
     <string name="no_external_map_app">Nemáte žádnou aplikaci pro mapy!</string>
     <string name="click_to_show_full">Klepnutím zobrazíte přesný počet \"to se mi líbí\"</string>
     <string name="no_profile_pic_found">Nebyl nalezen žádný obrázek profilu!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="swipe_up_confirmation">Opravdu chcete otevřít tento odkaz?</string>
+    <string name="sending">Odesílání...</string>
+    <string name="share_via_dm">Sdílet do zprávy</string>
+    <string name="share_link">Sdílet odkaz…</string>
 </resources>
