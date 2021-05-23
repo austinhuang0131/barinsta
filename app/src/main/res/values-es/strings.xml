@@ -494,7 +494,7 @@
     <string name="click_to_show_full">Clic para ver el recuento completo de me gustas</string>
     <string name="no_profile_pic_found">¡No se encontró foto de perfil!</string>
     <string name="swipe_up_confirmation">¿Está seguro de querer abrir este enlace?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="sending">Enviando...</string>
+    <string name="share_via_dm">Compartir por MD</string>
+    <string name="share_link">Compartir enlace…</string>
 </resources>
