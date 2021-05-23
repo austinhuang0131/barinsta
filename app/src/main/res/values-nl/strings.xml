@@ -478,7 +478,7 @@
     <string name="crash_report_subject">Barinsta Crash Rapport</string>
     <string name="crash_report_title">Selecteer een email app om crashlogs te verzenden</string>
     <string name="not_found">Niet gevonden!</string>
-    <string name="rate_limit">Uw IP is beperkt door Instagram. Wacht een uur en probeer het opnieuw.</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Deze update overslaan</string>
     <string name="on_latest_version">Je bent al op de nieuwste versie</string>
     <string name="tab_order">Scherm volgorde</string>
