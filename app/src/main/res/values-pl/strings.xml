@@ -273,7 +273,7 @@
     <string name="skip_update_checkbox">Nie pokazuj ponownie do następnej aktualizacji</string>
     <string name="version">Wersja</string>
     <string name="pref_start_screen">Ekran startowy</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Pokaż klawiaturę przy wyszukiwaniu</string>
     <string name="pref_category_general">Ogólne</string>
     <string name="pref_category_theme">Motyw</string>
     <string name="pref_category_downloads">Pobieranie</string>
@@ -509,10 +509,10 @@
     <string name="recent">Najnowsze</string>
     <string name="clear">Wyczyść</string>
     <string name="no_external_map_app">No Map app found!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Kliknij, aby wyświetlić pełną liczbę polubień</string>
     <string name="no_profile_pic_found">Nie znaleziono zdjęcia profilowego!</string>
     <string name="swipe_up_confirmation">Czy na pewno chcesz otworzyć ten link?</string>
-    <string name="sending">Sending...</string>
+    <string name="sending">Wysyłanie...</string>
     <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="share_link">Udostępnij link…</string>
 </resources>
