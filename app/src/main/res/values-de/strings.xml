@@ -123,7 +123,7 @@
     <string name="mute_posts">Beiträge stummschalten</string>
     <string name="unmute_stories">Stummschaltung von Stories aufheben</string>
     <string name="unmute_posts">Stummschaltung von Beiträgen aufheben</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Abonnent entfernen</string>
     <string name="bio_copy">Steckbrief kopieren</string>
     <string name="bio_translate">Steckbrief übersetzen</string>
     <string name="status_mutual">Gegenseitig</string>
@@ -233,10 +233,10 @@
     <string name="request_approve">Anfrage annehmen</string>
     <string name="request_reject">Anfrage ablehnen</string>
     <string name="share_public_post">Diesen öffentlichen Beitrag teilen mit…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Dies ist ein privater Beitrag! Teile ihn mit denen, die ihn sehen können.</string>
     <string name="discover_empty">Diese Kategorie ist leer…</string>
     <string name="update_available">Ein Update ist verfügbar! (%s)</string>
-    <string name="update_notice">Erinnerung: Wenn du die App von F-Droid heruntergeladen hast, musst du sie dort aktualisieren! Das gilt auch für GitHub.</string>
+    <string name="update_notice">Erinnerung: Wenn du die App aus F-Droid heruntergeladen hast, musst du sie dort aktualisieren! Das gilt auch für GitHub.</string>
     <string name="updated">Danke für die Aktualisierung von Barinsta!</string>
     <string name="crash_title">App abgestürzt</string>
     <string name="crash_descr">Hoppla.. die App ist abgestürzt, aber keine Sorge — du kannst Fehlerberichte an den Entwickler senden, um ihm zu helfen, das Problem zu beheben. (:</string>
@@ -337,7 +337,7 @@
     <string name="show_grid_gap">Rasterabstand anzeigen</string>
     <string name="disable_animation">Animationen deaktivieren</string>
     <string name="follower_wait_to_load">Bitte warte bis die aktuelle Aufgabe abgeschlossen ist!</string>
-    <string name="follower_start_compare">Abhängig von der Anzahl der Benutzer kann dies eine Weile dauern. Bitte haben Sie etwas Geduld.</string>
+    <string name="follower_start_compare">Abhängig von der Anzahl der Benutzer kann das Laden eine Weile dauern. Bitte habe etwas Geduld.</string>
     <string name="post_not_found">Beitrag nicht gefunden!</string>
     <string name="no_external_app_url">Keine App gefunden, die URLs öffnet</string>
     <string name="gallery">Galerie</string>
@@ -441,7 +441,7 @@
     <string name="admin_approval_required_description">Eine Admin-Genehmigung wird benötigt, um neue Mitglieder zur Gruppe hinzuzufügen</string>
     <string name="dms_action_end">Chat beenden</string>
     <string name="dms_action_end_question">Chat beenden?</string>
-    <string name="dms_action_end_description">Alle Mitglieder werden aus der Gruppe entfernt. Sie werden weiterhin in der Lage sein, den Chatverlauf anzuzeigen.</string>
+    <string name="dms_action_end_description">Alle Mitglieder werden aus der Gruppe entfernt. Sie können jedoch weiterhin den Chatverlauf einsehen.</string>
     <string name="pending_requests">Ausstehende Anfragen</string>
     <string name="accept_request_from_user">Anfrage von %1s (%2s) akzeptieren?</string>
     <string name="decline">Ablehnen</string>
@@ -478,7 +478,7 @@
     <string name="crash_report_subject">Barinsta Absturzbericht</string>
     <string name="crash_report_title">Wähle eine E-Mail-App zum Senden von Absturzprotokollen</string>
     <string name="not_found">Nicht gefunden!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Deine IP wurde von Instagram beschränkt. Warte eine Stunde und probiere es dann erneut. &lt;a href=\"https://redd.it/msxlko\"&gt;Mehr erfahren.&lt;/a&gt;</string>
     <string name="skip_update">Dieses Update überspringen</string>
     <string name="on_latest_version">Du bist bereits auf der neuesten Version</string>
     <string name="tab_order">Reihenfolge der Anzeige</string>
@@ -491,10 +491,10 @@
     <string name="recent">Neueste</string>
     <string name="clear">Leeren</string>
     <string name="no_external_map_app">Keine Karten-App gefunden!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Klicken, um die gesamte Anzahl der Likes anzuzeigen</string>
     <string name="no_profile_pic_found">Kein Profilbild gefunden!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="swipe_up_confirmation">Bist du sicher, dass du diesen Link öffnen möchtest?</string>
+    <string name="sending">Wird gesendet...</string>
+    <string name="share_via_dm">Über PN teilen</string>
+    <string name="share_link">Link teilen…</string>
 </resources>
