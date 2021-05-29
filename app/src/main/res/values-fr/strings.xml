@@ -123,7 +123,7 @@
     <string name="mute_posts">Mute les publications</string>
     <string name="unmute_stories">Démute les stories</string>
     <string name="unmute_posts">Démutez les publications</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Retirer l\'abonné</string>
     <string name="bio_copy">Copier la bio</string>
     <string name="bio_translate">Traduire la bio</string>
     <string name="status_mutual">Mutuel</string>
@@ -233,7 +233,7 @@
     <string name="request_approve">Approuver la demande</string>
     <string name="request_reject">Refuser la demande</string>
     <string name="share_public_post">Partage cette publication publique…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">C\'est post privé ! Partagez avec ceux qui peuvent le voir.</string>
     <string name="discover_empty">Cette catégorie est en quelque sorte vide…</string>
     <string name="update_available">Une mise-à-jour est disponible! (%s)</string>
     <string name="update_notice">Rappel : Si vous avez téléchargé l\'application à partir de F-Droid, vous devez la mettre à jour depuis là ! Il en va de même pour GitHub.</string>
@@ -265,7 +265,7 @@
     <string name="skip_update_checkbox">Ne plus afficher jusqu\'à la prochaine mise à jour</string>
     <string name="version">Version</string>
     <string name="pref_start_screen">Écran d\'accueil</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Afficher le clavier lors de la recherche</string>
     <string name="pref_category_general">Général</string>
     <string name="pref_category_theme">Thème</string>
     <string name="pref_category_downloads">Téléch.</string>
@@ -478,7 +478,7 @@
     <string name="crash_report_subject">Rapport d\'erreur de Barinsta</string>
     <string name="crash_report_title">Sélectionnez une application de messagerie pour envoyer les journaux d\'erreurs</string>
     <string name="not_found">Aucun résultat!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Votre adresse IP a été limitée par Instagram. Attendez une heure et réessayez. &lt;a href=\"https://redd.it/msxlko\"&gt;En savoir plus.&lt;/a&gt;</string>
     <string name="skip_update">Ignorer cette mise à jour</string>
     <string name="on_latest_version">Vous avez déjà la dernière version</string>
     <string name="tab_order">Ordre d\'écran</string>
@@ -491,10 +491,10 @@
     <string name="recent">Récent</string>
     <string name="clear">Nettoyer</string>
     <string name="no_external_map_app">Aucune application de carte trouvée!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Cliquez pour voir le compte complet de j\'aimes</string>
     <string name="no_profile_pic_found">Aucune photo de profil trouvée !</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="swipe_up_confirmation">Êtes-vous sûr de vouloir ouvrir ce lien ?</string>
+    <string name="sending">En cours d\'envoi...</string>
+    <string name="share_via_dm">Partager via MP</string>
+    <string name="share_link">Partager le lien…</string>
 </resources>
