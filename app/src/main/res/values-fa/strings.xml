@@ -9,7 +9,7 @@
     <string name="clipboard_error">خطا هنگام کپی متن</string>
     <string name="clipboard_copied">در بریده‌دان رونوشت شد!</string>
     <string name="report">گزارش</string>
-    <string name="set_password">Protect file with password</string>
+    <string name="set_password">محافظت از پوشه با گذرواژه</string>
     <string name="password_no_max">گذرواژه</string>
     <string name="ok">خوب</string>
     <string name="yes">بله</string>
