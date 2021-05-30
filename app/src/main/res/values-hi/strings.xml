@@ -9,7 +9,7 @@
     <string name="clipboard_error">लेख कॉपी करने में त्रुटि</string>
     <string name="clipboard_copied">क्लिपबोर्ड में कॉपी हो गया है</string>
     <string name="report">रिपोर्ट करें</string>
-    <string name="set_password">Protect file with password</string>
+    <string name="set_password">पासवर्ड के साथ फ़ाइल को सुरक्षित रखें</string>
     <string name="password_no_max">पासवर्ड</string>
     <string name="ok">ठीक है</string>
     <string name="yes">हाँ</string>
@@ -21,20 +21,20 @@
     <string name="title_comments">टिप्पणियाँ</string>
     <string name="title_notifications">कार्यकलाप</string>
     <string name="update_check">खुलने पर अपडेट के लिए जाँच करें</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">स्क्रीनशॉट को ब्लॉक करें &amp; ऐप प्रीव्यू</string>
     <string name="download_user_folder">पोस्ट को ब्यबहारकारी के नाम पर किये फोल्डरस में रखें</string>
     <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">स्टोरि को दिखने के बाद \"दिखा गया\" दिखादें</string>
     <string name="mark_as_seen_setting_summary">सटोरि के लेखक जानेगा कि तुम देखे हो इसको</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">फ़ीड से म्यूट की गई स्टोरीस छिपाएं</string>
     <string name="dm_mark_as_seen_setting">तुम देखने के बाद सीधा संदेश को \"दिखागया\" लिखा जाएगा</string>
     <string name="dm_mark_as_seen_setting_summary">अलग सदस्य जानेंगे कि तुम देखे हो</string>
     <string name="activity_setting">क्रियाकलाप सूचनाएँ दिखायें</string>
     <string name="story_sort_setting">Feed stories sort</string>
-    <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
-    <string name="error_loading_profile_loggedin">Error loading profile! Is the username valid? Or did they block you?</string>
-    <string name="error_loading_hashtag">Error loading hashtag! Is the name valid?</string>
-    <string name="error_loading_location">Error loading location! Is the URL valid?</string>
+    <string name="error_loading_profile">प्रोफ़ाइल लोड करने में एरर! क्या यूजरनाम मान्य है? यदि हां, तो आप सीमित हो सकते हैं.</string>
+    <string name="error_loading_profile_loggedin">प्रोफ़ाइल लोड करने में एरर! क्या यूजरनाम मान्य है? या उन्होंने आपको ब्लॉक किया है?</string>
+    <string name="error_loading_hashtag">हैशटैग लोड करने में एरर! क्या नाम मान्य है?</string>
+    <string name="error_loading_location">स्थान लोड करने में एरर! क्या यूआरएल मान्य है?</string>
     <string name="error_creating_folders">डाउनलोड के फोल्डर(स) बनाने में त्रुटि आ रहा है।</string>
     <string name="save_to_folder">खुद के द्बारा निर्धारित फोल्डर पे रखें</string>
     <string name="select_folder">फोल्डर का चयन करें</string>
@@ -56,10 +56,10 @@
     </plurals>
     <string name="main_posts_following">%s\nFollowing</string>
     <string name="post_viewer_autoplay_video">वीडियो ऑटोप्ले करें</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">बैकग्राउंड में वीडियो जारी रखें</string>
+    <string name="post_viewer_background_play_summary">ऐप के फोकस से बाहर होने पर वीडियो को पॉज न करें</string>
     <string name="post_viewer_muted_autoplay">सर्बदा वीडियो को शब्दहिन रखें</string>
-    <string name="post_viewer_show_captions">Always show post captions</string>
+    <string name="post_viewer_show_captions">हमेशा पोस्ट कैप्शन दिखाएं</string>
     <string name="post_viewer_download_dialog_title">डाउनलोड करने के लिए चयन करें</string>
     <string name="post_viewer_download_current">वर्तमान</string>
     <string name="post_viewer_download_album">सम्पूर्ण आलबम</string>
@@ -101,8 +101,8 @@
     <string name="saved_create_collection">Create new collection</string>
     <string name="edit_collection">Edit collection name</string>
     <string name="delete_collection">Delete collection</string>
-    <string name="delete_collection_confirm">Are you sure you want to delete this collection?</string>
-    <string name="delete_collection_note">All contained media will remain in other collections.</string>
+    <string name="delete_collection_confirm">क्या आप इस संग्रह को मिटाना चाहते हैं?</string>
+    <string name="delete_collection_note">सभी निहित मीडिया अन्य संग्रहों में बने रहेंगे।</string>
     <string name="add_to_collection">Add to collection...</string>
     <string name="remove_from_collection">Remove from collection</string>
     <string name="liked">पसंद किये</string>
@@ -194,8 +194,8 @@
     <string name="dms_action_kick">बाहर निकालें</string>
     <string name="dms_left_users">अवशेष ब्यबहारकारी</string>
     <string name="dms_ERROR_INVALID_USER">Invalid user</string>
-    <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
-    <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
+    <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram DM के लिए 60 सेकंड से अधिक के वीडियो अपलोड करने की अनुमति नहीं देता है।</string>
+    <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram 60 सेकंड से अधिक समय तक ऑडियो अपलोड करने की अनुमति नहीं देता है।</string>
     <string name="direct_download">सीधे डाउनलोड करें</string>
     <string name="direct_download_desc">पोस्ट को सिधे अपने फोन पर डाउनलोड करें</string>
     <string name="direct_download_loading">पोस्ट(स्) ला रहे हैं</string>
@@ -212,8 +212,8 @@
     <string name="comment_viewer_reply_comment">टिप्पणी का जवाब दें</string>
     <string name="comment_viewer_like_comment">टिप्पणी को पसन्द करें</string>
     <string name="comment_viewer_unlike_comment">टिप्पणी को पसन्द न करें</string>
-    <string name="comment_viewer_translate_comment">Translate comment</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_translate_comment">टिप्पणी का अनुवाद करें</string>
+    <string name="comment_viewer_delete_comment">टिप्पणी हटाएं</string>
     <string name="comment_send_empty_comment">रिक्त टिप्पणी न करें!</string>
     <string name="comment_view_mention_user_search">युज़रनेम को ढूंढ़ना चाहते हैं?</string>
     <string name="comment_view_mention_hash_search">हैशटैग को ढूंढ़ना चाहते हैं?</string>
@@ -234,7 +234,7 @@
     <string name="request_approve">निवेदन को ग्रहण करें</string>
     <string name="request_reject">अनुरोध प्रत्याख्यान करें</string>
     <string name="share_public_post">इसी सार्वजनिक पोस्ट को भेजें...</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">यह एक निजी पोस्ट है! जो इसे देख सकते हैं उन्हें शेयर करें।</string>
     <string name="discover_empty">यह वर्ग रिक्त है...</string>
     <string name="update_available">नया संस्करण उपलब्ध है! (%s)</string>
     <string name="update_notice">याद रखें: अगर आपने f-droid से डाउनलोड किया है तो उसी से ही अपडेट करें! Github के लिये भी बही।</string>
@@ -254,7 +254,7 @@
     <string name="activity_count_likes">%d likes</string>
     <string name="activity_count_poy">%d photos of you</string>
     <string name="activity_count_requests">%d follow requests</string>
-    <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
+    <string name="activity_notloggedin">इस अधिसूचना पर क्लिक करने से पहले आपने लॉग आउट किया?!</string>
     <string name="feed">फ़ीड</string>
     <string name="profile">Profile</string>
     <string name="more">More</string>
@@ -272,7 +272,7 @@
     <string name="pref_category_downloads">डाउनलोड</string>
     <string name="pref_category_locale">Locale</string>
     <string name="account">खाता</string>
-    <string name="account_hint">Current login not working? Simply add the account again.</string>
+    <string name="account_hint">वर्तमान लॉगिन काम नहीं कर रहा है? बस फिर से खाता जोड़ें।</string>
     <string name="add_account">खाता जोड़ें</string>
     <string name="about_category_license">License (English only)</string>
     <string name="about_documentation">हमारी वेबसाइट पर जाएं</string>
@@ -479,7 +479,7 @@
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
     <string name="not_found">Not found!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again.</string>
     <string name="skip_update">Skip this update</string>
     <string name="on_latest_version">You\'re already on the latest version</string>
     <string name="tab_order">Screen order</string>
