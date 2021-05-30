@@ -441,7 +441,7 @@
     <string name="admin_approval_required_description">Eine Admin-Genehmigung wird benötigt, um neue Mitglieder zur Gruppe hinzuzufügen</string>
     <string name="dms_action_end">Chat beenden</string>
     <string name="dms_action_end_question">Chat beenden?</string>
-    <string name="dms_action_end_description">Alle Mitglieder werden aus der Gruppe entfernt. Sie können jedoch weiterhin den Chatverlauf einsehen.</string>
+    <string name="dms_action_end_description">Alle Mitglieder werden aus der Gruppe entfernt, jedoch können sie den Chatverlauf weiterhin einsehen.</string>
     <string name="pending_requests">Ausstehende Anfragen</string>
     <string name="accept_request_from_user">Anfrage von %1s (%2s) akzeptieren?</string>
     <string name="decline">Ablehnen</string>
