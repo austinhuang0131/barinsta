@@ -23,14 +23,14 @@
     <string name="update_check">खुलने पर अपडेट के लिए जाँच करें</string>
     <string name="flag_secure">स्क्रीनशॉट को ब्लॉक करें &amp; ऐप प्रीव्यू</string>
     <string name="download_user_folder">पोस्ट को ब्यबहारकारी के नाम पर किये फोल्डरस में रखें</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">फ़ाइल के नाम के लिए यूजर का नाम डाल दे</string>
     <string name="mark_as_seen_setting">स्टोरि को दिखने के बाद \"दिखा गया\" दिखादें</string>
     <string name="mark_as_seen_setting_summary">सटोरि के लेखक जानेगा कि तुम देखे हो इसको</string>
     <string name="hide_muted_reels_setting">फ़ीड से म्यूट की गई स्टोरीस छिपाएं</string>
     <string name="dm_mark_as_seen_setting">तुम देखने के बाद सीधा संदेश को \"दिखागया\" लिखा जाएगा</string>
     <string name="dm_mark_as_seen_setting_summary">अलग सदस्य जानेंगे कि तुम देखे हो</string>
     <string name="activity_setting">क्रियाकलाप सूचनाएँ दिखायें</string>
-    <string name="story_sort_setting">Feed stories sort</string>
+    <string name="story_sort_setting">फ़ीड स्टोरीज क्रमबद्ध करें</string>
     <string name="error_loading_profile">प्रोफ़ाइल लोड करने में एरर! क्या यूजरनाम मान्य है? यदि हां, तो आप सीमित हो सकते हैं.</string>
     <string name="error_loading_profile_loggedin">प्रोफ़ाइल लोड करने में एरर! क्या यूजरनाम मान्य है? या उन्होंने आपको ब्लॉक किया है?</string>
     <string name="error_loading_hashtag">हैशटैग लोड करने में एरर! क्या नाम मान्य है?</string>
@@ -43,18 +43,18 @@
     <string name="anonymous_settings">गुमनामी लोगों के लिये</string>
     <string name="select_language">भाषा</string>
     <plurals name="main_posts_count">
-        <item quantity="one">%s\nPost</item>
+        <item quantity="one">%s\nपोस्ट</item>
         <item quantity="other">%s\nPosts</item>
     </plurals>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
+        <item quantity="one">%s पोस्ट</item>
         <item quantity="other">%s Posts</item>
     </plurals>
     <plurals name="main_posts_followers">
-        <item quantity="one">%s\nFollower</item>
+        <item quantity="one">%s\nफोल्लोवेर</item>
         <item quantity="other">%s\nFollowers</item>
     </plurals>
-    <string name="main_posts_following">%s\nFollowing</string>
+    <string name="main_posts_following">%s\nफोल्लोविंग</string>
     <string name="post_viewer_autoplay_video">वीडियो ऑटोप्ले करें</string>
     <string name="post_viewer_background_play">बैकग्राउंड में वीडियो जारी रखें</string>
     <string name="post_viewer_background_play_summary">ऐप के फोकस से बाहर होने पर वीडियो को पॉज न करें</string>
@@ -79,11 +79,11 @@
         <item quantity="one">%d response averaging %s</item>
         <item quantity="other">%d responses averaging %s</item>
     </plurals>
-    <string name="slider_answer">Your answer: %s</string>
+    <string name="slider_answer">आपके उत्तर: %s</string>
     <string name="reply_story">स्टोरि पे प्रतिक्रिया करें</string>
     <string name="reply_hint">जवाब…</string>
     <string name="story_quiz">प्रश्नोत्तरी</string>
-    <string name="story_slider">Slider</string>
+    <string name="story_slider">स्लाइडर</string>
     <string name="story_quizzed">आप पहले से ही उत्तर दिये हो!</string>
     <string name="story_mentions">उल्लेख</string>
     <string name="priv_acc">यह एकाउॅट निजी है</string>
@@ -98,13 +98,13 @@
     <string name="remove_all_acc">समस्त खाता हटाएं</string>
     <string name="remove_all_acc_warning">अब एप से सब आड हुआ एकाउॅट मिट जाएगा!\nसिर्फ एक एकाउॅट को मिटाने के लिये, एकाउॅट स्बिचर डाइलग से बही एकाउॅट को देर तक टैप करें।\nआप आगे बढने के लिये चाहते हैं?</string>
     <string name="time_settings">दिनांक स्वरूप</string>
-    <string name="saved_create_collection">Create new collection</string>
-    <string name="edit_collection">Edit collection name</string>
-    <string name="delete_collection">Delete collection</string>
+    <string name="saved_create_collection">नया संग्रह बनाएँ</string>
+    <string name="edit_collection">संग्रह का नाम संपादित करें</string>
+    <string name="delete_collection">संग्रह हटाएं</string>
     <string name="delete_collection_confirm">क्या आप इस संग्रह को मिटाना चाहते हैं?</string>
     <string name="delete_collection_note">सभी निहित मीडिया अन्य संग्रहों में बने रहेंगे।</string>
-    <string name="add_to_collection">Add to collection...</string>
-    <string name="remove_from_collection">Remove from collection</string>
+    <string name="add_to_collection">संग्रह में जोड़ें...</string>
+    <string name="remove_from_collection">संग्रह से निकालें</string>
     <string name="liked">पसंद किये</string>
     <string name="saved">सेव किया</string>
     <string name="tagged">टैग किये</string>
@@ -120,7 +120,7 @@
     <string name="unblock">अनब्ल़ॉक करें</string>
     <string name="restrict">प्रतिबंध लगाए</string>
     <string name="unrestrict">प्रतिबंध न लगाए</string>
-    <string name="mute_stories">Mute stories</string>
+    <string name="mute_stories">म्यूट स्टोरीज</string>
     <string name="mute_posts">Mute posts</string>
     <string name="unmute_stories">Unmute stories</string>
     <string name="unmute_posts">Unmute posts</string>
