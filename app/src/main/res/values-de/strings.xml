@@ -21,7 +21,7 @@
     <string name="title_comments">Kommentare</string>
     <string name="title_notifications">Aktivität</string>
     <string name="update_check">Beim Start auf Updates prüfen</string>
-    <string name="flag_secure">Bildschirmfotos &amp; App-Voschau verhindern</string>
+    <string name="flag_secure">Bildschirmfotos &amp; App-Vorschau verhindern</string>
     <string name="download_user_folder">Beiträge in Benutzernamen-Ordner herunterladen</string>
     <string name="download_prepend_username">Benutzername dem Dateinamen voranstellen</string>
     <string name="mark_as_seen_setting">Stories nach dem Ansehen als gesehen markieren</string>
@@ -284,8 +284,8 @@
     <string name="reminder_summary">Bitte verwende diese App verantwortungsvoll. Heruntergeladene Bilder sollten nur für Zwecke verwendet werden, die durch die geltenden Gesetze erlaubt sind.</string>
     <string name="light_white_theme">Weiß</string>
     <string name="dark_black_theme">Schwarz</string>
-    <string name="light_theme_settings">Helles Theme</string>
-    <string name="dark_theme_settings">Dunkles Theme</string>
+    <string name="light_theme_settings">Helles Design</string>
+    <string name="dark_theme_settings">Dunkles Design</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
     <string name="added_to_favs">Zu Favoriten hinzugefügt!</string>
