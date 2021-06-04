@@ -44,20 +44,20 @@
     <string name="select_language">Język</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\npost</item>
-        <item quantity="few">%s\nPosts</item>
-        <item quantity="many">%s\nPosts</item>
+        <item quantity="few">%s\npostów</item>
+        <item quantity="many">%s\npostów</item>
         <item quantity="other">%s\npostów</item>
     </plurals>
     <plurals name="main_posts_count_inline">
         <item quantity="one">%s post</item>
-        <item quantity="few">%s Posts</item>
-        <item quantity="many">%s Posts</item>
+        <item quantity="few">%s postów</item>
+        <item quantity="many">%s postów</item>
         <item quantity="other">%s postów</item>
     </plurals>
     <plurals name="main_posts_followers">
         <item quantity="one">%s\nobserwujący</item>
-        <item quantity="few">%s\nFollowers</item>
-        <item quantity="many">%s\nFollowers</item>
+        <item quantity="few">%s\nobserwujących</item>
+        <item quantity="many">%s\nobserwujących</item>
         <item quantity="other">%s\nobserwujących</item>
     </plurals>
     <string name="main_posts_following">%s\nobserwowanych</string>
@@ -112,8 +112,8 @@
     <string name="delete_collection_note">Wszystkie media pozostaną w innych kolekcjach.</string>
     <string name="add_to_collection">Dodaj do kolekcji...</string>
     <string name="remove_from_collection">Usuń z kolekcji</string>
-    <string name="liked">Polubiono</string>
-    <string name="saved">Zapisano</string>
+    <string name="liked">Polubione</string>
+    <string name="saved">Zapisane</string>
     <string name="tagged">Oznaczono</string>
     <string name="dm_person">Message</string>
     <string name="like_without_count">Polub</string>
@@ -277,7 +277,7 @@
     <string name="pref_category_general">Ogólne</string>
     <string name="pref_category_theme">Motyw</string>
     <string name="pref_category_downloads">Pobieranie</string>
-    <string name="pref_category_locale">Lokalne</string>
+    <string name="pref_category_locale">Język</string>
     <string name="account">Konto</string>
     <string name="account_hint">Bieżące logowanie nie działa? Po prostu dodaj konto ponownie.</string>
     <string name="add_account">Dodaj konto</string>
