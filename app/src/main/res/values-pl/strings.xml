@@ -259,7 +259,7 @@
     <string name="activity_count_commentlikes">%d polubionych komentarzy</string>
     <string name="activity_count_usertags">%d tagów użytkowników</string>
     <string name="activity_count_likes">%d polubień</string>
-    <string name="activity_count_poy">%d photos of you</string>
+    <string name="activity_count_poy">%d zdjęć z Tobą</string>
     <string name="activity_count_requests">%d próśb o o obserwowanie</string>
     <string name="activity_notloggedin">Wylogowałeś się przed kliknięciem tego powiadomienia?!</string>
     <string name="feed">Aktualności</string>
@@ -380,10 +380,10 @@
         <item quantity="other">%d polubień</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
+        <item quantity="one">%d odpowiedź</item>
         <item quantity="few">%d replies</item>
         <item quantity="many">%d replies</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="other">%d odpowiedzi</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d komentarz</item>
@@ -450,7 +450,7 @@
     <string name="photo">Zdjęcie</string>
     <string name="video">Film</string>
     <string name="voice_message">Wiadomość głosowa</string>
-    <string name="post">Post</string>
+    <string name="post">Publikuj</string>
     <string name="approval_required_for_new_members">Zatwierdź prośbę o dołączenie</string>
     <string name="requests">Zapytania</string>
     <string name="admins_only">Tylko administratorzy</string>
@@ -496,7 +496,7 @@
     <string name="crash_report_subject">Raport awarii Barinsta</string>
     <string name="crash_report_title">Wybierz aplikację e-mail do wysyłania dzienników awarii</string>
     <string name="not_found">Nie znaleziono!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Twój adres IP został ograniczony przez Instagrama. Poczekaj godzinę i spróbuj ponownie. &lt;a href=\"https://redd.it/msxlko\"&gt;Dowiedz się więcej.&lt;/a&gt;</string>
     <string name="skip_update">Pomiń tę aktualizację</string>
     <string name="on_latest_version">Posiadasz aktualną wersję</string>
     <string name="tab_order">Kolejność na ekranie</string>
@@ -505,14 +505,14 @@
     <string name="dm_remove_warning">Po zapisaniu wszystkie funkcje związane z PW zostaną wyłączone przy następnym uruchomieniu</string>
     <string name="copy_caption">Kopiuj podpis</string>
     <string name="copy_reply">Kopiuj odpowiedź</string>
-    <string name="top">Top</string>
+    <string name="top">Najlepsze</string>
     <string name="recent">Najnowsze</string>
     <string name="clear">Wyczyść</string>
-    <string name="no_external_map_app">No Map app found!</string>
+    <string name="no_external_map_app">Nie znaleziono aplikacji do obsługi mapy!</string>
     <string name="click_to_show_full">Kliknij, aby wyświetlić pełną liczbę polubień</string>
     <string name="no_profile_pic_found">Nie znaleziono zdjęcia profilowego!</string>
     <string name="swipe_up_confirmation">Czy na pewno chcesz otworzyć ten link?</string>
     <string name="sending">Wysyłanie...</string>
-    <string name="share_via_dm">Share via DM</string>
+    <string name="share_via_dm">Udostępnij przez PW</string>
     <string name="share_link">Udostępnij link…</string>
 </resources>
