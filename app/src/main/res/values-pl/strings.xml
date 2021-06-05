@@ -487,7 +487,7 @@
     <string name="removed_keywords">Usunięto słowo kluczowe: %s z listy filtrów</string>
     <string name="marked_as_seen">Oznacz jako przeczytane</string>
     <string name="delete_unsuccessful">Usuwanie nie powiodło się</string>
-    <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
+    <string name="throttle_error">Tłumacz został ograniczony z powodu zbyt wielu żądań API. Poczekaj chwilę i spróbuj ponownie.</string>
     <string name="error">Błąd</string>
     <string name="account_logged_out">To konto zostało wylogowane.</string>
     <string name="login_required">Wymagane logowanie!</string>
