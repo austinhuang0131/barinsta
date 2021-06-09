@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enable_sentry">تمكين الحراسة</string>
+    <string name="sentry_summary">الحراسة هي مستمع/معالج للأخطاء الذي يرسل الخطأ/الاحداث إلى Sentry.io</string>
+    <string name="sentry_start_next_launch">ستبدأ الحراسة عند التشغيل التالي</string>
+</resources>
