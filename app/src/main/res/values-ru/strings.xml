@@ -60,7 +60,7 @@
         <item quantity="many">%s\nПодписчиков</item>
         <item quantity="other">%s\nПодписчиков</item>
     </plurals>
-    <string name="main_posts_following">%s\nПоследователей</string>
+    <string name="main_posts_following">%s\nПодписок</string>
     <string name="post_viewer_autoplay_video">Автовоспроизведение видео</string>
     <string name="post_viewer_background_play">Воспроизведение видео в фоновом режиме</string>
     <string name="post_viewer_background_play_summary">Не приостанавливать видео, когда приложение свернуто</string>
@@ -135,7 +135,7 @@
     <string name="bio_copy">Копировать биографию</string>
     <string name="bio_translate">Перевести биографию</string>
     <string name="status_mutual">Взаимное</string>
-    <string name="status_following">Последователи</string>
+    <string name="status_following">Подписки</string>
     <string name="status_follower">Подписчик</string>
     <string name="map">Карта</string>
     <string name="dialog_export_accounts">Учётные записи</string>
@@ -225,8 +225,8 @@
     <string name="comment_view_mention_user_search">Вы хотите найти имя пользователя?</string>
     <string name="comment_view_mention_hash_search">Вы хотите найти хештэг?</string>
     <string name="followers_type_followers">Подписчики</string>
-    <string name="followers_type_following">Последователи</string>
-    <string name="followers_compare">Сравнение подписчиков &amp; последователей</string>
+    <string name="followers_type_following">Подписки</string>
+    <string name="followers_compare">Сравнение подписчиков &amp; подписок</string>
     <string name="followers_both_following">Оба подписаны друг на друга</string>
     <string name="followers_not_following">не подписан на %s</string>
     <string name="followers_not_follower">%s не следует</string>
