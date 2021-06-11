@@ -21,7 +21,7 @@
     <string name="title_comments">Коментари</string>
     <string name="title_notifications">Активности</string>
     <string name="update_check">Провери за ажурирање</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">Блокирај слики од екранот &amp; преглед на апликацијата</string>
     <string name="download_user_folder">Превземи објави во папката со кориснички имиња</string>
     <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Означи ги приказните како видени</string>
@@ -472,14 +472,14 @@
     <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
     <string name="error">Грешка</string>
     <string name="account_logged_out">Оваа сметка е одјавена.</string>
-    <string name="login_required">Login required!</string>
+    <string name="login_required">Потребна е најава!</string>
     <string name="sentry_block">Sentry block.</string>
-    <string name="inactive_user">User is inactive!</string>
+    <string name="inactive_user">Корисникот е неактивен!</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
     <string name="not_found">Not found!</string>
     <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
-    <string name="skip_update">Skip this update</string>
+    <string name="skip_update">Прескокни го ова ажурирање</string>
     <string name="on_latest_version">You\'re already on the latest version</string>
     <string name="tab_order">Screen order</string>
     <string name="other_tabs">Other tabs</string>
