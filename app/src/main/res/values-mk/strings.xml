@@ -485,16 +485,16 @@
     <string name="other_tabs">Other tabs</string>
     <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
     <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
-    <string name="copy_caption">Copy caption</string>
-    <string name="copy_reply">Copy reply</string>
+    <string name="copy_caption">Копирај наслов</string>
+    <string name="copy_reply">Копирај одговор</string>
     <string name="top">Top</string>
-    <string name="recent">Recent</string>
-    <string name="clear">Clear</string>
+    <string name="recent">Најнови</string>
+    <string name="clear">Исчисти</string>
     <string name="no_external_map_app">No Map app found!</string>
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">No profile pic found!</string>
     <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="sending">Се испраќа...</string>
+    <string name="share_via_dm">Сподели преку ДП</string>
+    <string name="share_link">Сподели линк…</string>
 </resources>
