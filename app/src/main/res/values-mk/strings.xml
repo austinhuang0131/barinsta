@@ -123,7 +123,7 @@
     <string name="mute_posts">Игнорирај Објави</string>
     <string name="unmute_stories">Одигнорирај приказни</string>
     <string name="unmute_posts">Одигнорирај Објави</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Отстрани следбеник</string>
     <string name="bio_copy">Копирај био</string>
     <string name="bio_translate">Преведи био</string>
     <string name="status_mutual">Блиски</string>
@@ -212,7 +212,7 @@
     <string name="comment_viewer_like_comment">Лајкни коментар</string>
     <string name="comment_viewer_unlike_comment">Одлајкни коментар</string>
     <string name="comment_viewer_translate_comment">Преведи коментар</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Избриши коментар</string>
     <string name="comment_send_empty_comment">Не смее празни коментари!</string>
     <string name="comment_view_mention_user_search">Дали сакате да го пребарате ова корисничко име?</string>
     <string name="comment_view_mention_hash_search">Дали сакате да го пребарате овај хаштаг?</string>
@@ -370,8 +370,8 @@
         <item quantity="other">%d лајкови</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="one">%d одговор</item>
+        <item quantity="other">%d одговори</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">%d коментар</item>
@@ -462,7 +462,7 @@
     <string name="generic_null_response">Одбоворот е null!</string>
     <string name="generic_not_ok_response">Одговорот на статусот не е ок!</string>
     <string name="generic_failed_request">Барањето неуспешно!</string>
-    <string name="hint_keyword">Keyword</string>
+    <string name="hint_keyword">Клучен збор</string>
     <string name="toggle_keyword_filter">Enable keyword filter</string>
     <string name="edit_keyword_filter">Edit keyword filters</string>
     <string name="added_keywords">Added keyword: %s to filter list</string>
@@ -470,8 +470,8 @@
     <string name="marked_as_seen">Marked as seen</string>
     <string name="delete_unsuccessful">Delete unsuccessful</string>
     <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
-    <string name="error">Error</string>
-    <string name="account_logged_out">This account has been logged out.</string>
+    <string name="error">Грешка</string>
+    <string name="account_logged_out">Оваа сметка е одјавена.</string>
     <string name="login_required">Login required!</string>
     <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">User is inactive!</string>
