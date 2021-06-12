@@ -34,7 +34,7 @@
         <item>روشن</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
+        <item>پیش‌فرض اینستاگرام (خوانده نشده سپس خوانده شده)</item>
         <item>از نو به کهنـترین</item>
         <item>از کهنـترین به نو</item>
     </string-array>
@@ -56,7 +56,7 @@
     <!--    <item>@navigation/more_nav_graph</item>-->
     <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
-        <item>secs</item>
-        <item>mins</item>
+        <item>ثانیه</item>
+        <item>دقیقه</item>
     </string-array>
 </resources>
