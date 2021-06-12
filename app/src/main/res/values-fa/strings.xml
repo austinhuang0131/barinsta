@@ -30,11 +30,11 @@
     <string name="dm_mark_as_seen_setting">نشان کردن پیام خصوصی بعنوان دیده شده بعد از دیدن</string>
     <string name="dm_mark_as_seen_setting_summary">کاربران دیگر خواهند فهمید شما این را دیده اید</string>
     <string name="activity_setting">روشن کردن آگهداد فعالیت ها</string>
-    <string name="story_sort_setting">Feed stories sort</string>
-    <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
-    <string name="error_loading_profile_loggedin">Error loading profile! Is the username valid? Or did they block you?</string>
-    <string name="error_loading_hashtag">Error loading hashtag! Is the name valid?</string>
-    <string name="error_loading_location">Error loading location! Is the URL valid?</string>
+    <string name="story_sort_setting">مرتب کردن خوراک‌خوان داستان‌ها</string>
+    <string name="error_loading_profile">خطای بارگذاری نمایه! آیا نام کاربری درست است؟ اگر بله، ممکن است که محدود شده باشید.</string>
+    <string name="error_loading_profile_loggedin">خطای بارگذاری نمایه! آیا نام کاربری معتبر است؟ یا شما را مسدود کرده‌اند؟</string>
+    <string name="error_loading_hashtag">خطای بارگذاری هشتگ! آیا نام معتبر است؟</string>
+    <string name="error_loading_location">خطای بارگذاری مکان! URL معتبر است؟</string>
     <string name="error_creating_folders">خطا در ساخت پوشه(ها).</string>
     <string name="save_to_folder">ذخیره در پوشه سفارشی</string>
     <string name="select_folder">انتخاب پوشه</string>
@@ -43,8 +43,8 @@
     <string name="anonymous_settings">فقط بر کاربران ناشناس اثر دارد:</string>
     <string name="select_language">زبان</string>
     <plurals name="main_posts_count">
-        <item quantity="one">%s\nPost</item>
-        <item quantity="other">%s\nPosts</item>
+        <item quantity="one">%s\n پست</item>
+        <item quantity="other">%s\nپست‌ها</item>
     </plurals>
     <plurals name="main_posts_count_inline">
         <item quantity="one">%s فرسته</item>
@@ -56,8 +56,8 @@
     </plurals>
     <string name="main_posts_following">%s\nدنبال کننده ها</string>
     <string name="post_viewer_autoplay_video">پخش خودکار فیلم ها</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">ادامه‌ی ویدئوها در پشت‌صفحه</string>
+    <string name="post_viewer_background_play_summary">زمانی که برنامه خارج از تمرکز است مکث ویدئو را نزنید</string>
     <string name="post_viewer_muted_autoplay">همیشه فیلم هارو بی صدا کن</string>
     <string name="post_viewer_show_captions">Always show post captions</string>
     <string name="post_viewer_download_dialog_title">انتخاب کن چی دانلود کنی</string>
