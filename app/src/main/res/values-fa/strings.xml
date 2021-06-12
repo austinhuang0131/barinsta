@@ -21,12 +21,12 @@
     <string name="title_comments">دیدگاه‌ها</string>
     <string name="title_notifications">فعالیت</string>
     <string name="update_check">بررسی بروزرسانی هنگام آغاز برنامه</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">مسدود کردن تصویر از صفحه&amp; پیش‌نمایش برنامه</string>
     <string name="download_user_folder">بارگیری پست ها در پوشه های به نام کاربر</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">چسباندن نام کاربری به ابتدای نام پوشه</string>
     <string name="mark_as_seen_setting">نشان کرد استوری ها به عنوان دیده شده بعد از دیدن</string>
     <string name="mark_as_seen_setting_summary">نویسنده استوری می داند که شما آن را دیده اید</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">پنهان کردن داستان‌های بی‌صدا شده از خوراک‌خوان</string>
     <string name="dm_mark_as_seen_setting">نشان کردن پیام خصوصی بعنوان دیده شده بعد از دیدن</string>
     <string name="dm_mark_as_seen_setting_summary">کاربران دیگر خواهند فهمید شما این را دیده اید</string>
     <string name="activity_setting">روشن کردن آگهداد فعالیت ها</string>
