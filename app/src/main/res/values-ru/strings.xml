@@ -507,14 +507,14 @@
     <string name="copy_reply">Копировать ответ</string>
     <string name="restore">Восстановление</string>
     <string name="backup">Резервное копирование</string>
-    <string name="dir_select_default_message">Выберите папку, куда Barinsta следует сохранять загрузки и временные файлы.\n\nВы сможете изменить это позже в Больше &gt; Настройки &gt; Загрузки.</string>
+    <string name="dir_select_default_message">Выберите папку, куда Barinsta следует сохранять загрузки и временные файлы.\n\nВы сможете изменить это позже в меню Ещё &gt; Настройки &gt; Загрузки.</string>
     <string name="dir_select_reselect_message">Android изменил способ доступа к файлам и каталогам на накопителе. В настоящее время Barinsta не имеет разрешения на доступ к следующей папке:</string>
     <string name="dir_select_permission_revoked_message">Разрешения для ранее выбранной папки были отозваны системой:</string>
     <string name="dir_select_folder_not_exist">Выбранная ранее папка не существует:</string>
     <string name="dir_select_message2">Выберите папку заново, нажав на кнопку ниже.</string>
     <string name="select_a_folder">Папка не выбрана!</string>
     <string name="dir_select_success_message">Успех! Пожалуйста, подождите. Приложение запускается…</string>
-    <string name="barinsta_folder">Barinsta folder</string>
+    <string name="barinsta_folder">Папка Barinsta</string>
     <string name="top">В лидерах</string>
     <string name="recent">Недавние</string>
     <string name="clear">Очистить</string>
