@@ -523,6 +523,16 @@
     <string name="dm_remove_warning">إذا تم الحفظ، سيتم تعطيل جميع ميزات DM ذات الصلة في التشغيل التالي</string>
     <string name="copy_caption">نسخ التوضيحات</string>
     <string name="copy_reply">انسخ الرد</string>
+    <string name="restore">Restore</string>
+    <string name="backup">Backup</string>
+    <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
+    <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
+    <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
+    <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
+    <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
+    <string name="select_a_folder">No folder selected!</string>
+    <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
+    <string name="barinsta_folder">Barinsta folder</string>
     <string name="top">أعلى</string>
     <string name="recent">حديثة</string>
     <string name="clear">امسح</string>
