@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_about">Σχετικά με</string>
-    <string name="action_dms">Μηνύματα</string>
+    <string name="action_dms">Απευθείας Μηνύματα</string>
     <string name="action_settings">Ρυθμίσεις</string>
     <string name="action_download">Λήψη</string>
     <string name="action_search">Αναζήτηση ονόματος χρήστη…</string>
@@ -496,7 +496,7 @@
     <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
     <string name="select_a_folder">Δεν επιλέχθηκε φάκελος!</string>
     <string name="dir_select_success_message">Επιτυχία! Παρακαλώ περιμένετε. Εκκίνηση εφαρμογής…</string>
-    <string name="barinsta_folder">Barinsta folder</string>
+    <string name="barinsta_folder">Φάκελος Barinsta</string>
     <string name="top">Κορυφή</string>
     <string name="recent">Πρόσφατα</string>
     <string name="clear">Εκκαθάριση</string>
