@@ -487,9 +487,9 @@
     <string name="dm_remove_warning">Se salvate, tutte le funzionalità correlate a DM saranno disabilitate al prossimo avvio</string>
     <string name="copy_caption">Copia didascalia</string>
     <string name="copy_reply">Copia risposta</string>
-    <string name="restore">Restore</string>
+    <string name="restore">Ripristina</string>
     <string name="backup">Backup</string>
-    <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
+    <string name="dir_select_default_message">Seleziona una cartella in cui Barinsta può memorizzare i download e i file temporanei.\n\nPuoi modificarla in seguito in Altro &gt; Impostazioni &gt; Scaricati.</string>
     <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
     <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
     <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
