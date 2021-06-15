@@ -497,5 +497,5 @@
     <string name="swipe_up_confirmation">您确定要打开此链接吗？</string>
     <string name="sending">Sending...</string>
     <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
+    <string name="share_link">分享链接…</string>
 </resources>
