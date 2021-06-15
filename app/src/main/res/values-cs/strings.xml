@@ -505,8 +505,8 @@
     <string name="dm_remove_warning">Po uložení budou při příštím spuštění vypnuty všechny funkce související s posíláním zpráv</string>
     <string name="copy_caption">Kopírovat popisek</string>
     <string name="copy_reply">Kopírovat odpověď</string>
-    <string name="restore">Restore</string>
-    <string name="backup">Backup</string>
+    <string name="restore">Obnovit</string>
+    <string name="backup">Zálohovat</string>
     <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
     <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
     <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
