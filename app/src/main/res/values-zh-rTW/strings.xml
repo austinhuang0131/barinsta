@@ -150,7 +150,7 @@
     <string name="dms_inbox_raven_message_unknown">未支援的訊息類型</string>
     <string name="dms_inbox_unsend">收回訊息</string>
     <string name="dms_inbox_giphy">在 GIPHY 上檢視</string>
-    <string name="dms_inbox_shared_post">%s 分享了 @%s 的文章</string>
+    <string name="dms_inbox_shared_post">%s 分享了 @%s 的貼文</string>
     <string name="dms_inbox_shared_image">%s 分享了一張圖片</string>
     <string name="dms_inbox_shared_video">%s 分享了一段影片</string>
     <string name="dms_inbox_shared_message">%s 傳送了一則訊息</string>
@@ -315,7 +315,7 @@
     <string name="save_unsuccessful">儲存失敗</string>
     <string name="save_remove_unsuccessful">刪除失敗</string>
     <string name="downloading">下載中…</string>
-    <string name="downloader_downloading_child">下載 %1$d 中的 %2$d</string>
+    <string name="downloader_downloading_child">下載 %2$d 中的 %1$d</string>
     <string name="delete">刪除</string>
     <string name="comment">評論</string>
     <string name="layout">佈局</string>
@@ -403,13 +403,13 @@
     <string name="replied_to_yourself">您回覆了自己</string>
     <string name="replied_you">您回覆了</string>
     <string name="replied_you_group">您回覆了 %s</string>
-    <string name="replied_group">回覆了 %s 的限時動態</string>
+    <string name="replied_group">回覆了 %s</string>
     <string name="replied_to_you">回覆給您</string>
     <string name="replied_to_themself">回覆給他自己</string>
     <string name="reacted_story_outgoing">你對對方的限時動態傳達了心情</string>
     <string name="reacted_story_incoming">對你的限時動態傳達了心情</string>
     <string name="mentioned_story_outgoing">你在限時動態中提及了他</string>
-    <string name="mentioned_story_incoming">他在限時動態中提及了你</string>
+    <string name="mentioned_story_incoming">在限時動態中提及了你</string>
     <string name="replied_story_outgoing">你回覆了對方的限時動態</string>
     <string name="replied_story_incoming">回覆了你的限時動態</string>
     <string name="raven_image_expired">圖片已過期</string>
@@ -443,7 +443,7 @@
     <string name="pref_category_stories">限時動態</string>
     <string name="pref_category_dm">私訊</string>
     <string name="pref_category_notifications">通知</string>
-    <string name="pref_category_post">文章</string>
+    <string name="pref_category_post">貼文</string>
     <string name="enable_dm_notifications">啟用私訊通知</string>
     <string name="enable_dm_auto_refesh">自動刷新私訊</string>
     <string name="auto_refresh_every">自動刷新間隔</string>
