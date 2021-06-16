@@ -381,8 +381,8 @@
     </plurals>
     <plurals name="replies_count">
         <item quantity="one">%d odpowiedź</item>
-        <item quantity="few">%d replies</item>
-        <item quantity="many">%d replies</item>
+        <item quantity="few">%d odpowiedzi</item>
+        <item quantity="many">%d odpowiedzi</item>
         <item quantity="other">%d odpowiedzi</item>
     </plurals>
     <plurals name="comments_count">
