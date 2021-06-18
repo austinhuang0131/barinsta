@@ -507,4 +507,5 @@
     <string name="sending">Enviant...</string>
     <string name="share_via_dm">Comparteix via MD</string>
     <string name="share_link">Comparteix l\'enllaç...</string>
+    <string name="slide_to_cancel">Slide to Cancel</string>
 </resources>
