@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Elimina com a administrador</string>
     <string name="edit_unsuccessful">L\'edició no ha tingut èxit</string>
     <string name="message">Missatge</string>
-    <string name="reply">Contestar</string>
     <string name="tap_to_remove">Toca per eliminar</string>
     <string name="forward">Reenviar</string>
     <string name="forward_outgoing">Has reenviat un missatge</string>
@@ -478,7 +477,6 @@
     <string name="error">Error</string>
     <string name="account_logged_out">S\'ha desconnectat aquest compte.</string>
     <string name="login_required">Es requereix iniciar la sessió!</string>
-    <string name="sentry_block">Bloc de dades.</string>
     <string name="inactive_user">L\'usuari està inactiu!</string>
     <string name="crash_report_subject">Informe d\'error de Barinsta</string>
     <string name="crash_report_title">Selecciona una aplicació de correu electrònic per enviar registres d\'error</string>
