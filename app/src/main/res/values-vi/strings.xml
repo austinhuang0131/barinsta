@@ -292,6 +292,11 @@
     <string name="unknown">Không rõ</string>
     <string name="removed_from_favs">Đã loại bỏ khỏi danh sách yêu thích!</string>
     <string name="backup_and_restore">Sao lưu &amp; Khôi phục</string>
+    <string name="auto_backup">Auto Backup</string>
+    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
+    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
+    <string name="auto_backup_setting">Enable Auto Backup</string>
+    <string name="manual_backup">Manual Backup</string>
     <string name="backup_summary">Sao lưu cài đặt của ứng dụng Barinsta, thông tin đăng nhập, và/hoặc mục yêu thích thành một tệp chữ hoặc được mã hóa cho những lần khôi phục sau.</string>
     <string name="backup_warning">Nếu bạn đang sao lưu thông tin đăng nhập, hãy xem tệp tin đó như tối mật và hãy giữ nó nơi nào đó an toàn!</string>
     <string name="create_backup">Tạo tệp sao lưu mới</string>
