@@ -292,6 +292,11 @@
     <string name="unknown">不明</string>
     <string name="removed_from_favs">お気に入りから削除しました!</string>
     <string name="backup_and_restore">バックアップと復元</string>
+    <string name="auto_backup">Auto Backup</string>
+    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
+    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
+    <string name="auto_backup_setting">Enable Auto Backup</string>
+    <string name="manual_backup">Manual Backup</string>
     <string name="backup_summary">Barinstaの設定、アカウントのログインデータ、お気に入りをテキストまたは暗号化ファイルにバックアップして、あとで復元できるようにします。</string>
     <string name="backup_warning">アカウントのログインデータをバックアップする場合は、ファイルを機密として扱い、安全な場所に保管してください!</string>
     <string name="create_backup">新しいバックアップファイルを作成</string>
