@@ -441,7 +441,6 @@
     <string name="dms_action_remove_admin">إزالة كمشرف</string>
     <string name="edit_unsuccessful">لم ينجح التعديل</string>
     <string name="message">الرسالة</string>
-    <string name="reply">الرد</string>
     <string name="tap_to_remove">انقر للإزالة</string>
     <string name="forward">إعادة توجيه</string>
     <string name="forward_outgoing">لقد قمت بإعادة إرسال رسالة</string>
@@ -514,7 +513,6 @@
     <string name="error">خطأ</string>
     <string name="account_logged_out">تم تسجيل الخروج من هذا الحساب.</string>
     <string name="login_required">تسجيل الدخول مطلوب!</string>
-    <string name="sentry_block">كتلة الحراسة.</string>
     <string name="inactive_user">المستخدم غير نشط!</string>
     <string name="crash_report_subject">تقرير انهيار Barinsta</string>
     <string name="crash_report_title">حدد تطبيق البريد الإلكتروني لإرسال سجلات الأعطال</string>
