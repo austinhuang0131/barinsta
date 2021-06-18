@@ -487,16 +487,16 @@
     <string name="dm_remove_warning">Si enregistré, toutes les fonctionnalités liées aux DM seront désactivées au prochain lancement</string>
     <string name="copy_caption">Copie de la légende</string>
     <string name="copy_reply">Copie de la réponse</string>
-    <string name="restore">Restore</string>
-    <string name="backup">Backup</string>
-    <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
-    <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
-    <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
-    <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
-    <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
-    <string name="select_a_folder">No folder selected!</string>
-    <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
-    <string name="barinsta_folder">Barinsta folder</string>
+    <string name="restore">Restaurer</string>
+    <string name="backup">Sauvegarde</string>
+    <string name="dir_select_default_message">Sélectionnez un dossier où Barinsta peut stocker les téléchargements et les fichiers temporaires.\n\nVous pouvez modifier cela plus tard dans Plus &gt; Paramètres &gt; Téléchargements.</string>
+    <string name="dir_select_reselect_message">Android a modifié la façon dont les applications peuvent accéder aux fichiers et répertoires sur le stockage. Actuellement Barinsta n\'a pas la permission d\'accéder au dossier suivant:</string>
+    <string name="dir_select_permission_revoked_message">Les autorisations pour le dossier précédemment sélectionné ont été révoquées par le système :</string>
+    <string name="dir_select_folder_not_exist">Le dossier sélectionné précédemment n\'existe pas :</string>
+    <string name="dir_select_message2">Ré-sélectionnez le répertoire ou sélectionnez un nouveau répertoire en cliquant sur le bouton ci-dessous.</string>
+    <string name="select_a_folder">Aucun dossier sélectionné!</string>
+    <string name="dir_select_success_message">Succès ! Veuillez patienter. Démarrage de l\'application…</string>
+    <string name="barinsta_folder">Dossier Barinsta</string>
     <string name="top">Retour vers le haut</string>
     <string name="recent">Récent</string>
     <string name="clear">Nettoyer</string>
@@ -507,5 +507,5 @@
     <string name="sending">En cours d\'envoi...</string>
     <string name="share_via_dm">Partager via MP</string>
     <string name="share_link">Partager le lien…</string>
-    <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="slide_to_cancel">Glisser pour annuler</string>
 </resources>
