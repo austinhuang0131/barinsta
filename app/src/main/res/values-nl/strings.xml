@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Verwijderen als Admin</string>
     <string name="edit_unsuccessful">Bewerken is mislukt</string>
     <string name="message">Bericht</string>
-    <string name="reply">Antwoorden</string>
     <string name="tap_to_remove">Tik om te verwijderen</string>
     <string name="forward">Doorsturen</string>
     <string name="forward_outgoing">U heeft een bericht doorgestuurd</string>
@@ -478,7 +477,6 @@
     <string name="error">Error</string>
     <string name="account_logged_out">Deze account is afgemeld.</string>
     <string name="login_required">Inloggen verplicht!</string>
-    <string name="sentry_block">Sentry blok.</string>
     <string name="inactive_user">Gebruiker is inactief!</string>
     <string name="crash_report_subject">Barinsta Crash Rapport</string>
     <string name="crash_report_title">Selecteer een email app om crashlogs te verzenden</string>
