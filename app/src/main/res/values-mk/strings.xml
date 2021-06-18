@@ -507,4 +507,5 @@
     <string name="sending">Се испраќа...</string>
     <string name="share_via_dm">Сподели преку ДП</string>
     <string name="share_link">Сподели линк…</string>
+    <string name="slide_to_cancel">Slide to Cancel</string>
 </resources>
