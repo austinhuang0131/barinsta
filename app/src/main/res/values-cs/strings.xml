@@ -304,11 +304,11 @@
     <string name="unknown">Neznámý</string>
     <string name="removed_from_favs">Odebráno z Oblíbených!</string>
     <string name="backup_and_restore">Záloha a obnovení</string>
-    <string name="auto_backup">Auto Backup</string>
+    <string name="auto_backup">Automatické zálohování</string>
     <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
     <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup_setting">Povolit automatické zálohování</string>
+    <string name="manual_backup">Ruční zálohování</string>
     <string name="backup_summary">Zálohujte nastavení aplikace Barinsta, přihlašovací údaje a/nebo oblíbené položky do prostého textu nebo šifrovaného souboru pro pozdější obnovu.</string>
     <string name="backup_warning">Pokud zálohujete přihlašovací údaje, zacházejte se souborem jako s důvěrným a uchovejte ho bezpečně!</string>
     <string name="create_backup">Vytvořit novou zálohu</string>
