@@ -396,7 +396,6 @@
     <string name="dms_action_remove_admin">移除管理员</string>
     <string name="edit_unsuccessful">编辑失败</string>
     <string name="message">消息</string>
-    <string name="reply">回复</string>
     <string name="tap_to_remove">点击删除</string>
     <string name="forward">转发</string>
     <string name="forward_outgoing">您转发了一条消息</string>
@@ -469,7 +468,6 @@
     <string name="error">错误</string>
     <string name="account_logged_out">您已经退出。</string>
     <string name="login_required">需要登录！</string>
-    <string name="sentry_block">Sentry 故障。</string>
     <string name="inactive_user">账户已冻结！</string>
     <string name="crash_report_subject">Barinsta 崩溃报告</string>
     <string name="crash_report_title">选择一个电子邮件应用来发送崩溃日志</string>
