@@ -296,6 +296,11 @@
     <string name="unknown">Непознато</string>
     <string name="removed_from_favs">Одстрането од Омилени!</string>
     <string name="backup_and_restore">Направете Резервна Копија &amp; Враќање</string>
+    <string name="auto_backup">Auto Backup</string>
+    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
+    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
+    <string name="auto_backup_setting">Enable Auto Backup</string>
+    <string name="manual_backup">Manual Backup</string>
     <string name="backup_summary">Зачувај опции од апликацијата, кориснички профил, и/или информации од твоите омилени профили во обичен текст или со енкрипција за подоцна да можеш да ги вратиш.</string>
     <string name="backup_warning">Ако зачувуваш информации за најавување, третирај го генералниот фајл како многу важен, чувај го на безбедно место!</string>
     <string name="create_backup">Креирај новa резервна копија</string>
