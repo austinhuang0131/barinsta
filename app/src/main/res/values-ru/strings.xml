@@ -423,7 +423,6 @@
     <string name="dms_action_remove_admin">Удалить администратора</string>
     <string name="edit_unsuccessful">Не удалось изменить</string>
     <string name="message">Сообщение</string>
-    <string name="reply">Ответить</string>
     <string name="tap_to_remove">Нажмите для удаления</string>
     <string name="forward">Переслать</string>
     <string name="forward_outgoing">Вы переслали сообщение</string>
@@ -496,7 +495,6 @@
     <string name="error">Ошибка</string>
     <string name="account_logged_out">Эта учётная запись вышла из системы.</string>
     <string name="login_required">Требуется вход в систему!</string>
-    <string name="sentry_block">Блокировка \"часового\".</string>
     <string name="inactive_user">Пользователь неактивен!</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Выберите приложение для отправки логов ошибки</string>
