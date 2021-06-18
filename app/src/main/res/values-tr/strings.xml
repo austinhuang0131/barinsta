@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Yöneticiliği Kaldır</string>
     <string name="edit_unsuccessful">Düzenleme başarısız oldu</string>
     <string name="message">Mesaj</string>
-    <string name="reply">Yanıtla</string>
     <string name="tap_to_remove">Silmek için dokun</string>
     <string name="forward">İlet</string>
     <string name="forward_outgoing">Bir mesaj ilettin</string>
@@ -478,7 +477,6 @@
     <string name="error">Error</string>
     <string name="account_logged_out">This account has been logged out.</string>
     <string name="login_required">Login required!</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">User is inactive!</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
