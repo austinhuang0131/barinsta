@@ -296,11 +296,11 @@
     <string name="unknown">Desconhecido</string>
     <string name="removed_from_favs">Removido dos Favoritos!</string>
     <string name="backup_and_restore">Becape e Restauração</string>
-    <string name="auto_backup">Auto Backup</string>
-    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
-    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup">Backup Automático</string>
+    <string name="auto_backup_summary">A partir do Android 6, o recurso de Backup Automático do Android carregará todas as configurações do aplicativo, dados de login da conta e favoritos no Google Drive, que pode ser restaurado reinstalando o aplicativo após a desinstalação.</string>
+    <string name="auto_backup_warning">Essa preferência não tem efeito se o Google Play Services não estiver presente ou se o Backup Automático estiver desativado das configurações do dispositivo. Desativar aqui não apaga backups existentes.</string>
+    <string name="auto_backup_setting">Ativar Backup Automático</string>
+    <string name="manual_backup">Backup Manual</string>
     <string name="backup_summary">Faça o becape das configurações de aplicativo do Barinsta, dados de login da conta e/ou favoritos para um texto simples ou arquivo de becape criptografado para restauração posterior.</string>
     <string name="backup_warning">Se você estiver fazendo o becape dos dados de login da conta, trate o arquivo como confidencial e mantenha-o em algum lugar seguro!</string>
     <string name="create_backup">Criar novo arquivo de becape</string>
@@ -510,5 +510,5 @@
     <string name="sending">Enviando...</string>
     <string name="share_via_dm">Compartilhar via DM</string>
     <string name="share_link">Compartilhar link…</string>
-    <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="slide_to_cancel">Deslize para Cancelar</string>
 </resources>
