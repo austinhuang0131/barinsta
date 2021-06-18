@@ -26,6 +26,7 @@
         <item translatable="false">Euskara</item>
         <item translatable="false">Svenska</item>
         <item translatable="false">한국어</item>
+        <item translatable="false">العربية</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Automatico / Basato sul Sistema</item>
