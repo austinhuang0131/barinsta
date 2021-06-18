@@ -396,7 +396,6 @@
     <string name="dms_action_remove_admin">관리자 제거</string>
     <string name="edit_unsuccessful">Edit was unsuccessful</string>
     <string name="message">메시지</string>
-    <string name="reply">답장</string>
     <string name="tap_to_remove">제거하려면 탭하세요</string>
     <string name="forward">전달</string>
     <string name="forward_outgoing">회원님이 메시지를 전달했습니다.</string>
@@ -469,7 +468,6 @@
     <string name="error">오류</string>
     <string name="account_logged_out">This account has been logged out.</string>
     <string name="login_required">Login required!</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">User is inactive!</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
