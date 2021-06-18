@@ -396,7 +396,6 @@
     <string name="dms_action_remove_admin">移除管理員權限</string>
     <string name="edit_unsuccessful">編輯失敗</string>
     <string name="message">訊息</string>
-    <string name="reply">回覆</string>
     <string name="tap_to_remove">點擊即可刪除</string>
     <string name="forward">轉發</string>
     <string name="forward_outgoing">您轉發了一條訊息</string>
@@ -469,7 +468,6 @@
     <string name="error">錯誤</string>
     <string name="account_logged_out">此帳戶已被登出。</string>
     <string name="login_required">需要登入！</string>
-    <string name="sentry_block">Sentry 故障。</string>
     <string name="inactive_user">此用戶已被停用！</string>
     <string name="crash_report_subject">Barinsta 錯誤報告</string>
     <string name="crash_report_title">選擇任一電子郵件應用程式回傳錯誤報告</string>
