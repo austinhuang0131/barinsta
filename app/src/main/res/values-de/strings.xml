@@ -465,8 +465,8 @@
     <string name="hint_keyword">Suchbegriff</string>
     <string name="toggle_keyword_filter">Aktiviere Suchbegriff-Filter</string>
     <string name="edit_keyword_filter">Suchbegriff-Filter bearbeiten</string>
-    <string name="added_keywords">Added keyword: %s to filter list</string>
-    <string name="removed_keywords">Removed keyword: %s from filter list</string>
+    <string name="added_keywords">Suchbegriff: %s zur Filterliste hinzugefügt</string>
+    <string name="removed_keywords">Suchbegriff: %s aus der Filterliste entfernt</string>
     <string name="marked_as_seen">Als gesehen markieren</string>
     <string name="delete_unsuccessful">Löschen fehlgeschlagen</string>
     <string name="throttle_error">Aufgrund von zu vielen API-Anfragen von Instagram gedrosselt. Warte eine Zeit lang, bevor du es erneut versuchst.</string>
@@ -478,7 +478,7 @@
     <string name="crash_report_subject">Barinsta Absturzbericht</string>
     <string name="crash_report_title">Wähle eine E-Mail-App zum Senden von Absturzprotokollen</string>
     <string name="not_found">Nicht gefunden!</string>
-    <string name="rate_limit">Deine IP wurde von Instagram beschränkt. Warte eine Stunde und probiere es dann erneut. &lt;a href=\"https://redd.it/msxlko\"&gt;Mehr erfahren.&lt;/a&gt;</string>
+    <string name="rate_limit">Instagram hat die Zugriffe mit deiner IP beschränkt. Warte eine Stunde und probiere es dann erneut. &lt;a href=\"https://redd.it/msxlko\"&gt;Mehr erfahren.&lt;/a&gt;</string>
     <string name="skip_update">Dieses Update überspringen</string>
     <string name="on_latest_version">Du bist bereits auf der neuesten Version</string>
     <string name="tab_order">Reihenfolge der Anzeige</string>
@@ -495,8 +495,8 @@
     <string name="dir_select_folder_not_exist">Der zuvor ausgewählte Ordner existiert nicht mehr:</string>
     <string name="dir_select_message2">Wähle das Verzeichnis erneut aus oder wähle ein neues Verzeichnis, indem du unten auf die Schaltfläche klickst.</string>
     <string name="select_a_folder">Kein Ordner ausgewählt!</string>
-    <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
-    <string name="barinsta_folder">Barinsta folder</string>
+    <string name="dir_select_success_message">Erfolg! Bitte warten. App wird gestartet…</string>
+    <string name="barinsta_folder">Barinsta-Ordner</string>
     <string name="top">Anfang</string>
     <string name="recent">Neueste</string>
     <string name="clear">Leeren</string>
@@ -507,5 +507,5 @@
     <string name="sending">Wird gesendet...</string>
     <string name="share_via_dm">Über PN teilen</string>
     <string name="share_link">Link teilen…</string>
-    <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="slide_to_cancel">Zum Abbrechen wischen</string>
 </resources>
