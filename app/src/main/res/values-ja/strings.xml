@@ -396,7 +396,6 @@
     <string name="dms_action_remove_admin">管理者権限を削除</string>
     <string name="edit_unsuccessful">編集に失敗しました</string>
     <string name="message">メッセージ</string>
-    <string name="reply">返信</string>
     <string name="tap_to_remove">タップして削除</string>
     <string name="forward">転送</string>
     <string name="forward_outgoing">メッセージを転送しました</string>
@@ -469,7 +468,6 @@
     <string name="error">エラー</string>
     <string name="account_logged_out">このアカウントはログアウトされました。</string>
     <string name="login_required">ログインが必要です！</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">ユーザーは無効です！</string>
     <string name="crash_report_subject">Barinstaクラッシュレポート</string>
     <string name="crash_report_title">クラッシュログを送信するメールアプリを選択してください</string>
