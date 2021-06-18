@@ -525,4 +525,5 @@
     <string name="sending">Wysyłanie...</string>
     <string name="share_via_dm">Udostępnij przez PW</string>
     <string name="share_link">Udostępnij link…</string>
+    <string name="slide_to_cancel">Slide to Cancel</string>
 </resources>
