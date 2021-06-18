@@ -419,7 +419,6 @@
     <string name="dms_action_remove_admin">Remove as Admin</string>
     <string name="edit_unsuccessful">Edit was unsuccessful</string>
     <string name="message">Message</string>
-    <string name="reply">Reply</string>
     <string name="tap_to_remove">Tap to remove</string>
     <string name="forward">Forward</string>
     <string name="forward_outgoing">You forwarded a message</string>
@@ -492,7 +491,6 @@
     <string name="error">Error</string>
     <string name="account_logged_out">This account has been logged out.</string>
     <string name="login_required">Login required!</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">User is inactive!</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
