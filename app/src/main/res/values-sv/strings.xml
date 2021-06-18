@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Ta bort som admin</string>
     <string name="edit_unsuccessful">Redigeringen lyckades inte</string>
     <string name="message">Meddelande</string>
-    <string name="reply">Svara</string>
     <string name="tap_to_remove">Tryck för att ta bort</string>
     <string name="forward">Vidarebefordra</string>
     <string name="forward_outgoing">Du vidarebefordrade ett meddelande</string>
@@ -478,7 +477,6 @@
     <string name="error">Fel</string>
     <string name="account_logged_out">Det här kontot har blivit utloggat.</string>
     <string name="login_required">Inloggning krävs!</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">Användaren är inaktiv!</string>
     <string name="crash_report_subject">Kraschrapport för Barinsta</string>
     <string name="crash_report_title">Välj en e-postapplikation för att skicka kraschloggar</string>
