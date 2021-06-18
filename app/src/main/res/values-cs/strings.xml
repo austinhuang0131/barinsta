@@ -525,5 +525,5 @@
     <string name="sending">Odesílání...</string>
     <string name="share_via_dm">Sdílet do zprávy</string>
     <string name="share_link">Sdílet odkaz…</string>
-    <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="slide_to_cancel">Posunutím zrušíte</string>
 </resources>
