@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Κατάργηση ως Διαχειριστής</string>
     <string name="edit_unsuccessful">Η επεξεργασία απέτυχε</string>
     <string name="message">Μήνυμα</string>
-    <string name="reply">Απάντηση</string>
     <string name="tap_to_remove">Πατήστε για αφαίρεση</string>
     <string name="forward">Προώθηση</string>
     <string name="forward_outgoing">Προωθήσατε ένα μήνυμα</string>
@@ -478,7 +477,6 @@
     <string name="error">Σφάλμα</string>
     <string name="account_logged_out">Αυτός ο λογαριασμός έχει αποσυνδεθεί.</string>
     <string name="login_required">Απαιτείται σύνδεση!</string>
-    <string name="sentry_block">Φραγή Sentry.</string>
     <string name="inactive_user">Ο χρήστης είναι ανενεργός!</string>
     <string name="crash_report_subject">Αναφορά Κατάρρευσης Barinsta</string>
     <string name="crash_report_title">Επιλέξτε μια εφαρμογή ηλ. ταχυδρομείου για αποστολή αρχείων καταγραφής κατάρρευσης</string>
