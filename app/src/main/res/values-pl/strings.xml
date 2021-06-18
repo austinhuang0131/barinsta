@@ -423,7 +423,6 @@
     <string name="dms_action_remove_admin">Usuń uprawnienia administratora</string>
     <string name="edit_unsuccessful">Edycja nie powiodła się</string>
     <string name="message">Wiadomość</string>
-    <string name="reply">Odpowiedz</string>
     <string name="tap_to_remove">Dotknij, aby usunąć</string>
     <string name="forward">Przekaż dalej</string>
     <string name="forward_outgoing">Przesłano wiadomość</string>
@@ -496,7 +495,6 @@
     <string name="error">Błąd</string>
     <string name="account_logged_out">To konto zostało wylogowane.</string>
     <string name="login_required">Wymagane logowanie!</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">Użytkownik jest nieaktywny!</string>
     <string name="crash_report_subject">Raport awarii Barinsta</string>
     <string name="crash_report_title">Wybierz aplikację e-mail do wysyłania dzienników awarii</string>
