@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Retirar administrador</string>
     <string name="edit_unsuccessful">La edición no tuvo éxito</string>
     <string name="message">Mensaje</string>
-    <string name="reply">Responder</string>
     <string name="tap_to_remove">Toca para eliminar</string>
     <string name="forward">Reenviar</string>
     <string name="forward_outgoing">Has reenviado un mensaje</string>
@@ -478,7 +477,6 @@
     <string name="error">Error</string>
     <string name="account_logged_out">Esta cuenta ha sido desconectada.</string>
     <string name="login_required">¡Inicio de sesión requerido!</string>
-    <string name="sentry_block">Bloqueo de Sentry.</string>
     <string name="inactive_user">¡Usuario inactivo!</string>
     <string name="crash_report_subject">Informe de fallos de Barinsta</string>
     <string name="crash_report_title">Seleccione una aplicación de correo electrónico para enviar registros de errores</string>
