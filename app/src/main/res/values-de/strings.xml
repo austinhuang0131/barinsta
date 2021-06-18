@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Als Administrator entfernen</string>
     <string name="edit_unsuccessful">Bearbeiten fehlgeschlagen</string>
     <string name="message">Nachricht</string>
-    <string name="reply">Antworten</string>
     <string name="tap_to_remove">Tippe zum Entfernen</string>
     <string name="forward">Weiterleiten</string>
     <string name="forward_outgoing">Du hast eine Nachricht weitergeleitet</string>
@@ -478,7 +477,6 @@
     <string name="error">Fehler</string>
     <string name="account_logged_out">Dieses Konto wurde abgemeldet.</string>
     <string name="login_required">Anmeldung erforderlich!</string>
-    <string name="sentry_block">Sentry Block.</string>
     <string name="inactive_user">Benutzer ist inaktiv!</string>
     <string name="crash_report_subject">Barinsta Absturzbericht</string>
     <string name="crash_report_title">Wähle eine E-Mail-App zum Senden von Absturzprotokollen</string>
