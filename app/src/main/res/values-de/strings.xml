@@ -507,4 +507,5 @@
     <string name="sending">Wird gesendet...</string>
     <string name="share_via_dm">Über PN teilen</string>
     <string name="share_link">Link teilen…</string>
+    <string name="slide_to_cancel">Slide to Cancel</string>
 </resources>
