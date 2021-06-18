@@ -507,5 +507,5 @@
     <string name="sending">Invio in corso...</string>
     <string name="share_via_dm">Condividi tramite DM</string>
     <string name="share_link">Condivisione link…</string>
-    <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="slide_to_cancel">Trascinare per cancellare</string>
 </resources>
