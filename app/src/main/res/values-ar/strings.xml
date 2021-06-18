@@ -543,4 +543,5 @@
     <string name="sending">جار الإرسال...</string>
     <string name="share_via_dm">مشاركة عبر DM</string>
     <string name="share_link">مشاركة الرابط…</string>
+    <string name="slide_to_cancel">Slide to Cancel</string>
 </resources>
