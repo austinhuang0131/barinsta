@@ -396,7 +396,6 @@
     <string name="dms_action_remove_admin">Xóa quyền quản trị</string>
     <string name="edit_unsuccessful">Chỉnh sửa thành công</string>
     <string name="message">Tin nhắn</string>
-    <string name="reply">Trả lời</string>
     <string name="tap_to_remove">Chạm Để Gỡ</string>
     <string name="forward">Chuyển tiếp</string>
     <string name="forward_outgoing">Bạn đã chuyển tiếp một tin nhắn</string>
@@ -469,7 +468,6 @@
     <string name="error">Lỗi</string>
     <string name="account_logged_out">Tài khoản này đã đăng xuất.</string>
     <string name="login_required">Yêu cầu đăng nhập!</string>
-    <string name="sentry_block">Chặn Sentry.</string>
     <string name="inactive_user">Người dùng đang không hoạt động!</string>
     <string name="crash_report_subject">Báo cáo crash Barinsta</string>
     <string name="crash_report_title">Chọn một app email để gửi báo cáo</string>
