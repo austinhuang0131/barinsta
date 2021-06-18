@@ -521,4 +521,5 @@
     <string name="sending">Sending...</string>
     <string name="share_via_dm">Share via DM</string>
     <string name="share_link">Share link…</string>
+    <string name="slide_to_cancel">Slide to Cancel</string>
 </resources>
