@@ -296,6 +296,11 @@
     <string name="unknown">Desconegut</string>
     <string name="removed_from_favs">Eliminat dels preferits!</string>
     <string name="backup_and_restore">Fer còpia de seguretat &amp; restaurar</string>
+    <string name="auto_backup">Auto Backup</string>
+    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
+    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
+    <string name="auto_backup_setting">Enable Auto Backup</string>
+    <string name="manual_backup">Manual Backup</string>
     <string name="backup_summary">Fer una còpia de seguretat de la configuració de l\'aplicació Barinsta, la informació d\'inici de sessió del compte, i/o dades preferides a un text net o arxiu de còpia de seguretat xifrat per a la restauració posterior.</string>
     <string name="backup_warning">Si estàs fent una còpia de seguretat de les dades d\'inici de sessió del compte, considera el fitxer com a confidencial i mentén-lo segur en algun lloc!</string>
     <string name="create_backup">Crear un nou fitxer de còpia de seguretat</string>
