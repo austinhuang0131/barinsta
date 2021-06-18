@@ -405,7 +405,6 @@
     <string name="dms_action_remove_admin">Одстрани од Администратор</string>
     <string name="edit_unsuccessful">Уредувањето беше неуспешно</string>
     <string name="message">Порака</string>
-    <string name="reply">Одговори</string>
     <string name="tap_to_remove">Допри за да одтсраниш</string>
     <string name="forward">Препрати</string>
     <string name="forward_outgoing">Ти препрати порака</string>
@@ -478,7 +477,6 @@
     <string name="error">Грешка</string>
     <string name="account_logged_out">Оваа сметка е одјавена.</string>
     <string name="login_required">Потребна е најава!</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">Корисникот е неактивен!</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
