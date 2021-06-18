@@ -423,7 +423,6 @@
     <string name="dms_action_remove_admin">Odebrat jako správce</string>
     <string name="edit_unsuccessful">Úprava se nezdařila</string>
     <string name="message">Zpráva</string>
-    <string name="reply">Odpověď</string>
     <string name="tap_to_remove">Klepnutím odebrat</string>
     <string name="forward">Přeposlat</string>
     <string name="forward_outgoing">Přeposlali jste zprávu</string>
@@ -496,7 +495,6 @@
     <string name="error">Chyba</string>
     <string name="account_logged_out">Tento účet byl odhlášen.</string>
     <string name="login_required">Vyžadováno přihlášení!</string>
-    <string name="sentry_block">Sentry block.</string>
     <string name="inactive_user">Uživatel je neaktivní!</string>
     <string name="crash_report_subject">Hlášení o pádu Barinsta</string>
     <string name="crash_report_title">Vyberte aplikaci e-mailu pro odeslání protokolů o selhání</string>
