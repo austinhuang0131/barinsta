@@ -296,6 +296,11 @@
     <string name="unknown">Άγνωστο</string>
     <string name="removed_from_favs">Αφαίρεση από τα αγαπημένα!</string>
     <string name="backup_and_restore">Αντίγραφα ασφαλείας &amp; Επαναφορά</string>
+    <string name="auto_backup">Auto Backup</string>
+    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
+    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
+    <string name="auto_backup_setting">Enable Auto Backup</string>
+    <string name="manual_backup">Manual Backup</string>
     <string name="backup_summary">Δημιουργία αντιγράφου ασφαλείας των ρυθμίσεων της εφαρμογής, των δεδομένων σύνδεσης του λογαριασμού και/ή των αγαπημένων, σε ακρυπτογράφητο ή κρυπτογραφημένο αρχείο για μεταγενέστερη επαναφορά.</string>
     <string name="backup_warning">Αν δημιουργείτε αντίγραφα ασφαλείας των δεδομένων σύνδεσης λογαριασμού, αντιμετωπίστε το αρχείο ως απόρρητο και κρατήστε το σε ασφαλές μέρος!</string>
     <string name="create_backup">Δημιουργία νέου αρχείου αντιγράφου ασφαλείας</string>
