@@ -9,7 +9,7 @@
     <string name="clipboard_error">Errorea testua kopiatzean</string>
     <string name="clipboard_copied">Arbelera kopiatu da!</string>
     <string name="report">Salatu</string>
-    <string name="set_password">Protect file with password</string>
+    <string name="set_password">Babestu fitxategia pasahitzarekin</string>
     <string name="password_no_max">Pasahitza</string>
     <string name="ok">Ados</string>
     <string name="yes">Bai</string>
@@ -98,9 +98,9 @@
     <string name="remove_all_acc_warning">This will remove all added accounts from the app!\nTo remove just one account, long tap the account from the account switcher dialog.\nDo you want to continue?</string>
     <string name="time_settings">Data-formatua</string>
     <string name="saved_create_collection">Create new collection</string>
-    <string name="edit_collection">Edit collection name</string>
-    <string name="delete_collection">Delete collection</string>
-    <string name="delete_collection_confirm">Are you sure you want to delete this collection?</string>
+    <string name="edit_collection">Editatu bildumaren izena</string>
+    <string name="delete_collection">Ezabatu bilduma</string>
+    <string name="delete_collection_confirm">Ziur zaude bilduma hau ezabatu nahi duzula?</string>
     <string name="delete_collection_note">All contained media will remain in other collections.</string>
     <string name="add_to_collection">Add to collection...</string>
     <string name="remove_from_collection">Remove from collection</string>
@@ -119,11 +119,11 @@
     <string name="unblock">Desblokeatu</string>
     <string name="restrict">Mugatu</string>
     <string name="unrestrict">Muga kendu</string>
-    <string name="mute_stories">Mute stories</string>
-    <string name="mute_posts">Mute posts</string>
-    <string name="unmute_stories">Unmute stories</string>
-    <string name="unmute_posts">Unmute posts</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="mute_stories">Mututu istorioak</string>
+    <string name="mute_posts">Mututu bidalketak</string>
+    <string name="unmute_stories">Desmututu istorioak</string>
+    <string name="unmute_posts">Desmututu bidalketak</string>
+    <string name="remove_follower">Kendu jarraitzailea</string>
     <string name="bio_copy">Kopiatu biografia</string>
     <string name="bio_translate">Itzuli biografia</string>
     <string name="status_mutual">Alde bikoa</string>
@@ -295,12 +295,12 @@
     <string name="locations">Kokalekuak</string>
     <string name="unknown">Ezezaguna</string>
     <string name="removed_from_favs">Gogokoetatik kenduta!</string>
-    <string name="backup_and_restore">Backup &amp; Restore</string>
-    <string name="auto_backup">Auto Backup</string>
+    <string name="backup_and_restore">Babeskopia eta leheneratzea</string>
+    <string name="auto_backup">Babeskopia automatikoa</string>
     <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
     <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup_setting">Gaitu babeskopia automatikoa</string>
+    <string name="manual_backup">Eskuzko babeskopia</string>
     <string name="backup_summary">Backup Barinsta app settings, account login data, and/or favorites to a plain text or encrypted backup file for later restoration.</string>
     <string name="backup_warning">If you\'re backing up account login data, treat the file as confidential and keep it somewhere safe!</string>
     <string name="create_backup">Create new backup file</string>
@@ -375,8 +375,8 @@
         <item quantity="other">%d atsegite</item>
     </plurals>
     <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
+        <item quantity="one">Erantzun %d</item>
+        <item quantity="other">%d erantzun</item>
     </plurals>
     <plurals name="comments_count">
         <item quantity="one">Iruzkin %d</item>
@@ -391,22 +391,22 @@
         <item quantity="other">%s istorio</item>
     </plurals>
     <string name="download_permission">Biltegiratze-baimenik ez da eman!</string>
-    <string name="details">Details</string>
+    <string name="details">Xehetasunak</string>
     <string name="title">Izenburua</string>
     <string name="members">Kideak</string>
     <string name="admin">Administratzailea</string>
     <string name="inviter">Inviter</string>
-    <string name="mute_messages">Mute messages</string>
-    <string name="mute_mentions">Mute mentions</string>
+    <string name="mute_messages">Mututu mezuak</string>
+    <string name="mute_mentions">Mututu aipamenak</string>
     <string name="add_members">Gehitu kideak</string>
     <string name="search">Bilatu</string>
     <string name="done">Eginda</string>
     <string name="dms_action_make_admin">Ezarri Admin</string>
-    <string name="dms_action_remove_admin">Remove as Admin</string>
+    <string name="dms_action_remove_admin">Kendu administratzailea</string>
     <string name="edit_unsuccessful">Edit was unsuccessful</string>
     <string name="message">Mezua</string>
     <string name="reply">Reply</string>
-    <string name="tap_to_remove">Tap to remove</string>
+    <string name="tap_to_remove">Ukitu kentzeko</string>
     <string name="forward">Birbidali</string>
     <string name="forward_outgoing">You forwarded a message</string>
     <string name="forward_incoming">Forwarded a message</string>
