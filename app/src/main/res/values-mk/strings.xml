@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Означи порака како видена</string>
     <string name="dm_mark_as_seen_setting_summary">Другите членови ќе знаат дека сте ја виделе содржината на пораката</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Овозможи нотификации</string>
     <string name="story_sort_setting">Сортирање на објави</string>
     <string name="error_loading_profile">Грешка при вчитување на профилот! Проверете дали корисничкото име е валидно?</string>
