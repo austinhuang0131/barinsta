@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Masquer les stories en sourdine du flux</string>
     <string name="dm_mark_as_seen_setting">Marquer les messages privés comme vus après consultation</string>
     <string name="dm_mark_as_seen_setting_summary">Les autres utilisateurs saurons que vous l\'avez vu</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Activer les notifications d\'activités</string>
     <string name="story_sort_setting">Tri du flux de stories</string>
     <string name="error_loading_profile">Erreur lors du chargement du profil! Le nom d\'utilisateur est-il valide? Si c\'est le cas, vous êtes peut-être limité à un débit.</string>
