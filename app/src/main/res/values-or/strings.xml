@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">ବାର୍ତା ଦେଖିବା ପରେ \'ଦେଖାଗଲା\' ଚିହ୍ନିତ କରନ୍ତୁ |</string>
     <string name="dm_mark_as_seen_setting_summary">ଅନ୍ୟ ସଦସ୍ୟମାନେ ଜାଣିବେ ତୁମେ ଏହାକୁ ଦେଖିଛ।</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">କାର୍ଯ୍ୟକଳାପ ସୂଚନା ଦେଖାନ୍ତୁ</string>
     <string name="story_sort_setting">କାହାଣୀଗୁଡିକ ଶ୍ରେଣୀବଦ୍ଧ କରନ୍ତୁ</string>
     <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
