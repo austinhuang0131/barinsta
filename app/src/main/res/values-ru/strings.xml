@@ -238,7 +238,7 @@
     <string name="comment_notif">Прокомментировал вашу публикацию:</string>
     <string name="follow_notif">Подписался на вас</string>
     <string name="tagged_notif">Отметил вас в публикации</string>
-    <string name="request_notif">Запрашивается подписаться</string>
+    <string name="request_notif">Запрашивает подписаться на вас</string>
     <string name="request_approve">Одобрить запрос</string>
     <string name="request_reject">Отклонить запрос</string>
     <string name="share_public_post">Поделиться публичной записью с…</string>
@@ -443,7 +443,7 @@
     <string name="mentioned_story_outgoing">Вы упомянули их в Вашей истории</string>
     <string name="mentioned_story_incoming">Упомянули Вас в их истории</string>
     <string name="replied_story_outgoing">Вы ответили на их историю</string>
-    <string name="replied_story_incoming">Ответ на Вашу историю</string>
+    <string name="replied_story_incoming">Ответил(а) на Вашу историю</string>
     <string name="raven_image_expired">Истёк срок действия изображения</string>
     <string name="raven_image_info">Срок действия изображения истечёт, будучи увиденным</string>
     <string name="raven_video_expired">Срок действия видео истёк</string>
