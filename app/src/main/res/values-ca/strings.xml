@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Amaga les històries silenciades del canal</string>
     <string name="dm_mark_as_seen_setting">Marca els missatges com a vists després de visualitzar-los</string>
     <string name="dm_mark_as_seen_setting_summary">Altres membres sabran que l\'has vist</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Habilitar les notificacions d\'activitat</string>
     <string name="story_sort_setting">Ordre de les històries</string>
     <string name="error_loading_profile">S\'ha produït un error en carregar el perfil! El nom d\'usuari és vàlid? Si és així, és possible que se t\'hagi restringit.</string>
