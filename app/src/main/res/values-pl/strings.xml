@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Ukryj wyciszone relacje z kanału</string>
     <string name="dm_mark_as_seen_setting">Oznacz wiadomość jako przeczytaną</string>
     <string name="dm_mark_as_seen_setting_summary">Inni użytkownicy będą wiedzieli, że to wyświetliłeś</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Włącz powiadomienia o aktywności</string>
     <string name="story_sort_setting">Sortowanie relacji</string>
     <string name="error_loading_profile">Błąd ładowania profilu! Czy nazwa użytkownika jest prawidłowa? Jeśli tak, możesz być ograniczony.</string>
