@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Ẩn những story đã chặn khỏi bảng tin</string>
     <string name="dm_mark_as_seen_setting">Đánh dấu DM là đã xem sau khi xem</string>
     <string name="dm_mark_as_seen_setting_summary">Những thành viên khác sẽ biết bạn đã xem nó</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Kích hoạt thông báo hoạt động</string>
     <string name="story_sort_setting">Sắp xếp câu chuyện trên bảng tin</string>
     <string name="error_loading_profile">Tải hồ sơ thất bại! Tên người dùng có đúng chưa? Nếu đúng, có thể bạn đã bị giới hạn.</string>
