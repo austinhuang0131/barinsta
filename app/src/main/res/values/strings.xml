@@ -32,6 +32,7 @@
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Mark DM as seen after viewing</string>
     <string name="dm_mark_as_seen_setting_summary">Other members will know you viewed it</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Enable activity notifications</string>
     <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
