@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Скрыть заглушённые истории из ленты новостей</string>
     <string name="dm_mark_as_seen_setting">Отметить ЛС как увиденные после просмотра</string>
     <string name="dm_mark_as_seen_setting_summary">Другие участники узнают, что вы просмотрели его</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Включить уведомления об активности</string>
     <string name="story_sort_setting">Сортировка историй ленты</string>
     <string name="error_loading_profile">Ошибка при загрузке профиля! Верно ли имя пользователя? Если это так, то ваш запрос мог быть ограничен сервером.</string>
