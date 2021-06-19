@@ -29,7 +29,7 @@
     <string name="hide_muted_reels_setting">Esconder stories silenciados do feed</string>
     <string name="dm_mark_as_seen_setting">Marcar DM como vista após a visualização</string>
     <string name="dm_mark_as_seen_setting_summary">Outros membros saberão que você viu</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Reproduzir vídeos dos stories automaticamente</string>
     <string name="activity_setting">Ativar notificações de atividade</string>
     <string name="story_sort_setting">Ordenação dos stories</string>
     <string name="error_loading_profile">Erro ao carregar perfil! O nome de usuário é válido? Se sim, você pode ter sido limitado pelo Instagram.</string>
