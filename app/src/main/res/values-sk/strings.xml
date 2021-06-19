@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
     <string name="dm_mark_as_seen_setting">Po prečítaní, označiť správu ako prečítanú</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní budú vedieť že ste ho videli</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Zapnúť notifikácie o aktivitách</string>
     <string name="story_sort_setting">Zoradenie príbehov</string>
     <string name="error_loading_profile">Chyba pri načítavaní profilu! Je používateľské meno správne? Ak áno môžete byť obmedzený limitami Instagramu.</string>
