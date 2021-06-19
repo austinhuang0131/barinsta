@@ -29,7 +29,7 @@
     <string name="hide_muted_reels_setting">Ocultar historias silenciadas del feed</string>
     <string name="dm_mark_as_seen_setting">Marcar Mensaje Directo como visto después de verlo</string>
     <string name="dm_mark_as_seen_setting_summary">Otros miembros sabrán que lo has visto</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Autorreproducir vídeohistorias</string>
     <string name="activity_setting">Activar notificaciones de actividad</string>
     <string name="story_sort_setting">Orden de las historias</string>
     <string name="error_loading_profile">¡Error al cargar el perfil! ¿Es el nombre de usuario válido? Si es así, puede que su conexión esté baneada en el servidor.</string>
