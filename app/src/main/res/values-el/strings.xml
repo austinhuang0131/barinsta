@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">Απόκρυψη ιστοριών που βρίσκονται σε σίγαση από τη ροή</string>
     <string name="dm_mark_as_seen_setting">Επισήμανση μηνυμάτων ως αναγνωσμένων μετά την προβολή</string>
     <string name="dm_mark_as_seen_setting_summary">Τα υπόλοιπα μέλη θα γνωρίζουν ότι προβλήθηκε</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">Ενεργοποίηση ειδοποιήσεων δραστηριότητας</string>
     <string name="story_sort_setting">Ταξινόμηση ροής ιστορίων</string>
     <string name="error_loading_profile">Σφάλμα κατά τη φόρτωση προφίλ! Είναι το όνομα χρήστη έγκυρο; Αν ναι, μπορεί να είστε περιορισμένος.</string>
