@@ -29,6 +29,7 @@
     <string name="hide_muted_reels_setting">إخفاء القصص المكتومة من الخلاصة</string>
     <string name="dm_mark_as_seen_setting">تحديد DM كما هو بعد المشاهدة</string>
     <string name="dm_mark_as_seen_setting_summary">الأعضاء الآخرون سيعلمون أنك شاهدتها</string>
+    <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">تمكين تنبيهات النشاط</string>
     <string name="story_sort_setting">تصنيف قصص التغذية</string>
     <string name="error_loading_profile">خطأ في تحميل الملف الشخصي! هل اسم المستخدم صحيح؟ إذا كان الأمر كذلك، قد تكون مقيدا.</string>
