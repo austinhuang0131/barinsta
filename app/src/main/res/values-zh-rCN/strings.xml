@@ -382,7 +382,6 @@
     <plurals name="stories_count">
         <item quantity="other">%s 个故事</item>
     </plurals>
-    <string name="download_permission">未授予存储权限！</string>
     <string name="details">详情</string>
     <string name="title">标题</string>
     <string name="members">成员</string>
