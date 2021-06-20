@@ -382,7 +382,6 @@
     <plurals name="stories_count">
         <item quantity="other">%s ストーリー</item>
     </plurals>
-    <string name="download_permission">ストレージへのアクセス権限がありません</string>
     <string name="details">詳細</string>
     <string name="title">タイトル</string>
     <string name="members">メンバー</string>
