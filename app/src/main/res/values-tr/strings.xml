@@ -391,7 +391,6 @@
         <item quantity="one">%s hikaye</item>
         <item quantity="other">%s hikaye</item>
     </plurals>
-    <string name="download_permission">Depolama izni verilmedi!</string>
     <string name="details">Detaylar</string>
     <string name="title">Başlık</string>
     <string name="members">Üyeler</string>
