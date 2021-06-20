@@ -120,7 +120,7 @@
     <string name="mute_posts">投稿をミュート</string>
     <string name="unmute_stories">ストーリーズのミュートを解除</string>
     <string name="unmute_posts">投稿のミュートを解除</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">フォロワーを削除する</string>
     <string name="bio_copy">プロフィールをコピー</string>
     <string name="bio_translate">プロフィールを翻訳する</string>
     <string name="status_mutual">相互フォロー</string>
@@ -230,7 +230,7 @@
     <string name="request_approve">リクエストを承認</string>
     <string name="request_reject">リクエストを拒否</string>
     <string name="share_public_post">シェア先…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">これはプライベートな投稿です！閲覧できる人にシェアしてください。</string>
     <string name="discover_empty">このカテゴリは空です…</string>
     <string name="update_available">アップデートが利用可能です！ (%s)</string>
     <string name="update_notice">注意: F-Droidからダウンロードした場合は、そちらからアップデートする必要があります。GitHubでも同様です。</string>
@@ -262,7 +262,7 @@
     <string name="skip_update_checkbox">次回の更新まで再表示しない</string>
     <string name="version">バージョン</string>
     <string name="pref_start_screen">起動画面</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">検索時にキーボードを表示</string>
     <string name="pref_category_general">全般</string>
     <string name="pref_category_theme">テーマ</string>
     <string name="pref_category_downloads">ダウンロード</string>
@@ -293,11 +293,11 @@
     <string name="unknown">不明</string>
     <string name="removed_from_favs">お気に入りから削除しました!</string>
     <string name="backup_and_restore">バックアップと復元</string>
-    <string name="auto_backup">Auto Backup</string>
-    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
-    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup">自動バックアップ</string>
+    <string name="auto_backup_summary">Android 6 から、Android の自動バックアップ機能は、すべてのアプリ設定、アカウントのログインデータ、お気に入りをGoogleドライブにアップロードします。アプリのアンインストール後に再インストールすると、復元することができます。</string>
+    <string name="auto_backup_warning">この設定は、Google Playサービスが存在しない場合、またはデバイスの設定から自動バックアップが無効になっている場合には影響しません。 ここで無効にしても既存のバックアップは消去されません。</string>
+    <string name="auto_backup_setting">自動バックアップを有効化</string>
+    <string name="manual_backup">手動バックアップ</string>
     <string name="backup_summary">Barinstaの設定、アカウントのログインデータ、お気に入りをテキストまたは暗号化ファイルにバックアップして、あとで復元できるようにします。</string>
     <string name="backup_warning">アカウントのログインデータをバックアップする場合は、ファイルを機密として扱い、安全な場所に保管してください!</string>
     <string name="create_backup">新しいバックアップファイルを作成</string>
@@ -482,16 +482,16 @@
     <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
     <string name="copy_caption">キャプションをコピー</string>
     <string name="copy_reply">返信をコピー</string>
-    <string name="restore">Restore</string>
-    <string name="backup">Backup</string>
-    <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
-    <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
-    <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
-    <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
-    <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
-    <string name="select_a_folder">No folder selected!</string>
-    <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
-    <string name="barinsta_folder">Barinsta folder</string>
+    <string name="restore">復元</string>
+    <string name="backup">バックアップ</string>
+    <string name="dir_select_default_message">Barinstaがダウンロードと一時ファイルを保存できるフォルダを選択してください。\n\n後ほど &gt; 設定 &gt; ダウンロードから変更できます。</string>
+    <string name="dir_select_reselect_message">Androidは、アプリがストレージ上のファイルやディレクトリにアクセスする方法を変更しました。Barinstaは次のフォルダにアクセスする権限を持っていません。</string>
+    <string name="dir_select_permission_revoked_message">以前に選択したフォルダの権限はシステムによって取り消されました:</string>
+    <string name="dir_select_folder_not_exist">以前に選択したフォルダは現在存在しません:</string>
+    <string name="dir_select_message2">ディレクトリを再度選択するか、下のボタンをクリックして新しいディレクトリを選択してください。</string>
+    <string name="select_a_folder">フォルダーが選択されていません！</string>
+    <string name="dir_select_success_message">成功！お待ちください。アプリを起動しています…</string>
+    <string name="barinsta_folder">Barinstaフォルダ</string>
     <string name="top">関連</string>
     <string name="recent">最近</string>
     <string name="clear">クリア</string>
