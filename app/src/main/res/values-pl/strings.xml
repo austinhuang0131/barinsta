@@ -409,7 +409,6 @@
         <item quantity="many">%s relacji</item>
         <item quantity="other">%s relacji</item>
     </plurals>
-    <string name="download_permission">Nie przyznano uprawnień do pamięci!</string>
     <string name="details">Szczegóły</string>
     <string name="title">Tytuł</string>
     <string name="members">Członkowie</string>
