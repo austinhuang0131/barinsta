@@ -382,7 +382,6 @@
     <plurals name="stories_count">
         <item quantity="other">%s cerita</item>
     </plurals>
-    <string name="download_permission">Izin penyimpanan ditolak!</string>
     <string name="details">Detail</string>
     <string name="title">Judul</string>
     <string name="members">Anggota</string>
