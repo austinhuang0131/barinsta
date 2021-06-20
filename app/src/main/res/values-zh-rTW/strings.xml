@@ -382,7 +382,6 @@
     <plurals name="stories_count">
         <item quantity="other">%s 個動態</item>
     </plurals>
-    <string name="download_permission">儲存空間存取權限被拒</string>
     <string name="details">詳情</string>
     <string name="title">標題</string>
     <string name="members">成員</string>
