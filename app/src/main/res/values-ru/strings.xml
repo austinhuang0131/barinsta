@@ -409,7 +409,6 @@
         <item quantity="many">%s историй</item>
         <item quantity="other">%s истории</item>
     </plurals>
-    <string name="download_permission">Разрешение на доступ к хранилищу не предоставлено!</string>
     <string name="details">Подробнее</string>
     <string name="title">Заголовок</string>
     <string name="members">Участники</string>
