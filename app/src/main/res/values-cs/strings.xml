@@ -409,7 +409,6 @@
         <item quantity="many">%s příběhů</item>
         <item quantity="other">%s příběhů</item>
     </plurals>
-    <string name="download_permission">Přístup k úložišti nebyl udělen!</string>
     <string name="details">Podrobnosti</string>
     <string name="title">Název</string>
     <string name="members">Členové</string>
