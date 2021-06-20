@@ -391,7 +391,6 @@
         <item quantity="one">%s historia</item>
         <item quantity="other">%s historias</item>
     </plurals>
-    <string name="download_permission">¡Permiso de almacenamiento no concecido!</string>
     <string name="details">Detalles</string>
     <string name="title">Título</string>
     <string name="members">Miembros</string>
