@@ -391,7 +391,6 @@
         <item quantity="one">%s història</item>
         <item quantity="other">%s històries</item>
     </plurals>
-    <string name="download_permission">No s\'ha concedit el permís d\'emmagatzematge!</string>
     <string name="details">Detalls</string>
     <string name="title">Títol</string>
     <string name="members">Membres</string>
