@@ -391,7 +391,6 @@
         <item quantity="one">%s приказна</item>
         <item quantity="other">%s приказни</item>
     </plurals>
-    <string name="download_permission">Нема дозвола за пристап до меморија!</string>
     <string name="details">Детали</string>
     <string name="title">Наслов</string>
     <string name="members">Членови</string>
