@@ -391,7 +391,6 @@
         <item quantity="one">%s story</item>
         <item quantity="other">%s stories</item>
     </plurals>
-    <string name="download_permission">L\'autorisation d\'accès au stockage a été refusée !</string>
     <string name="details">Détails</string>
     <string name="title">Titre</string>
     <string name="members">Membres</string>
