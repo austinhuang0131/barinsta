@@ -391,7 +391,6 @@
         <item quantity="one">Istorio %s</item>
         <item quantity="other">%s istorio</item>
     </plurals>
-    <string name="download_permission">Biltegiratze-baimenik ez da eman!</string>
     <string name="details">Xehetasunak</string>
     <string name="title">Izenburua</string>
     <string name="members">Kideak</string>
