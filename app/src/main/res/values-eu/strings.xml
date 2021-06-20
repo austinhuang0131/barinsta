@@ -21,7 +21,7 @@
     <string name="title_comments">Iruzkinak</string>
     <string name="title_notifications">Jarduera</string>
     <string name="update_check">Bilatu eguneratzeak abioan</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">Blokeatu pantaila-argazkiak eta aplikazioaren aurrebista</string>
     <string name="download_user_folder">Deskargatu bidalketak erabiltzaile-izena duten karpetetara</string>
     <string name="download_prepend_username">Prepend Username to Filename</string>
     <string name="mark_as_seen_setting">Markatu istorioak ikusita gisa ikusi ondoren</string>
