@@ -409,7 +409,6 @@
         <item quantity="many">%s príbehu</item>
         <item quantity="other">%s príbehov</item>
     </plurals>
-    <string name="download_permission">Povolenia na ukladanie neboli udelené!</string>
     <string name="details">Detaily</string>
     <string name="title">Nadpis</string>
     <string name="members">Členovia</string>
