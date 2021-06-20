@@ -391,7 +391,6 @@
         <item quantity="one">%s verhaal</item>
         <item quantity="other">%s verhalen</item>
     </plurals>
-    <string name="download_permission">Opslag toestemming niet verleend!</string>
     <string name="details">Details</string>
     <string name="title">Titel</string>
     <string name="members">Members</string>
