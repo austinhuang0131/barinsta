@@ -427,7 +427,6 @@
         <item quantity="many">%s stories</item>
         <item quantity="other">%s stories</item>
     </plurals>
-    <string name="download_permission">لا يوجد إذن للوصول إلى ذاكرة التخزين!</string>
     <string name="details">التفاصيل</string>
     <string name="title">العنوان</string>
     <string name="members">الأعضاء</string>
