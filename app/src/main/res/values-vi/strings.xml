@@ -382,7 +382,6 @@
     <plurals name="stories_count">
         <item quantity="other">%s story</item>
     </plurals>
-    <string name="download_permission">Chưa cấp quyền bộ nhớ!</string>
     <string name="details">Chi tiết</string>
     <string name="title">Tiêu đề</string>
     <string name="members">Thành viên</string>
