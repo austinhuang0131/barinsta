@@ -29,7 +29,7 @@
     <string name="hide_muted_reels_setting">Stummgeschaltete Stories im Feed ausblenden</string>
     <string name="dm_mark_as_seen_setting">Direktnachrichten nach dem Ansehen als gesehen markieren</string>
     <string name="dm_mark_as_seen_setting_summary">Andere Mitglieder werden wissen, dass du sie gesehen hast</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Videos in Stories automatisch wiedergeben</string>
     <string name="activity_setting">Aktivitätsbenachrichtigungen aktivieren</string>
     <string name="story_sort_setting">Sortierung des Storyfeeds</string>
     <string name="error_loading_profile">Fehler beim Laden des Profils! Ist der Benutzername gültig? Wenn ja, könnte es sein, dass deine Zugriffe begrenzt werden.</string>
@@ -297,11 +297,11 @@
     <string name="unknown">Unbekannt</string>
     <string name="removed_from_favs">Aus Favoriten entfernt!</string>
     <string name="backup_and_restore">Sichern &amp; Wiederherstellen</string>
-    <string name="auto_backup">Auto Backup</string>
-    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
-    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup">Automatische Sicherung</string>
+    <string name="auto_backup_summary">Seit Android 6 lädt die automatische Sicherungsfunktion von Android alle App-Einstellungen, Konto-Anmeldedaten und Favoriten auf dein Google Drive hoch, die nach der Deinstallation durch eine Neuinstallation der App wiederhergestellt werden können.</string>
+    <string name="auto_backup_warning">Diese Einstellung hat keine Auswirkung, wenn Google Play Services nicht vorhanden ist oder wenn die automatische Sicherung in den Geräteeinstellungen deaktiviert ist. Wenn du diese Einstellung deaktivierst, werden vorhandene Sicherungen nicht gelöscht.</string>
+    <string name="auto_backup_setting">Automatische Sicherung aktivieren</string>
+    <string name="manual_backup">Manuelle Sicherung</string>
     <string name="backup_summary">Sichere die Einstellungen der Barinsta-App, die Anmeldedaten des Kontos und/oder die Favoriten in einer Klartext- oder verschlüsselten Sicherungsdatei zur späteren Wiederherstellung.</string>
     <string name="backup_warning">Wenn du die Anmeldedaten eines Kontos sicherst, behandle die Datei vertraulich und bewahre sie an einem sicheren Ort auf!</string>
     <string name="create_backup">Neue Sicherungsdatei erstellen</string>
