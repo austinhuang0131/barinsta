@@ -489,7 +489,7 @@
     <string name="dir_select_folder_not_exist">之前选择的文件夹已不存在：</string>
     <string name="dir_select_message2">请点击下面的按钮，来重新选择该目录或选择一个新目录。</string>
     <string name="select_a_folder">未选择文件夹！</string>
-    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
+    <string name="dir_select_no_download_folder">请选择设备存储中的一个目录，而不是侧边栏上的类别。</string>
     <string name="dir_select_success_message">设置成功！请稍候。应用程序启动中…</string>
     <string name="barinsta_folder">Barinsta 文件夹</string>
     <string name="top">热门</string>
