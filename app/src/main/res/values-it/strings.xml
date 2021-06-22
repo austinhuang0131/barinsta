@@ -498,6 +498,7 @@
     <string name="dir_select_folder_not_exist">La cartella precedentemente selezionata non esiste ora:</string>
     <string name="dir_select_message2">Riselezionare la cartella o selezionare una nuova cartella facendo clic sul pulsante qui sotto.</string>
     <string name="select_a_folder">Nessuna cartella selezionata!</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
     <string name="dir_select_success_message">Successo! Attendere prego. Avvio app…</string>
     <string name="barinsta_folder">Cartella di Barinsta</string>
     <string name="top">Torna su</string>
