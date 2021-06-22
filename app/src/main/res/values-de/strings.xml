@@ -498,6 +498,7 @@
     <string name="dir_select_folder_not_exist">Der zuvor ausgewählte Ordner existiert nicht mehr:</string>
     <string name="dir_select_message2">Wähle das Verzeichnis erneut aus oder wähle ein neues Verzeichnis, indem du unten auf die Schaltfläche klickst.</string>
     <string name="select_a_folder">Kein Ordner ausgewählt!</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
     <string name="dir_select_success_message">Erfolg! Bitte warten. App wird gestartet…</string>
     <string name="barinsta_folder">Barinsta-Ordner</string>
     <string name="top">Anfang</string>
