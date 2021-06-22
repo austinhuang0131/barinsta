@@ -516,6 +516,7 @@
     <string name="dir_select_folder_not_exist">Poprzednio wybrany folder nie istnieje:</string>
     <string name="dir_select_message2">Wybierz ponownie folder lub wybierz now klikając przycisk poniżej.</string>
     <string name="select_a_folder">Nie wybrano folderu!</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
     <string name="dir_select_success_message">Sukces! Proszę czekać. Uruchamianie aplikacji…</string>
     <string name="barinsta_folder">Folder Barinsta</string>
     <string name="top">Najlepsze</string>
