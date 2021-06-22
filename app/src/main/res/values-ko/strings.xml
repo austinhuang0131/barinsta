@@ -489,6 +489,7 @@
     <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
     <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
     <string name="select_a_folder">No folder selected!</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
     <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
     <string name="barinsta_folder">Barinsta folder</string>
     <string name="top">상단</string>
