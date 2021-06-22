@@ -516,6 +516,7 @@
     <string name="dir_select_folder_not_exist">Выбранная ранее папка не существует:</string>
     <string name="dir_select_message2">Выберите папку заново, нажав на кнопку ниже.</string>
     <string name="select_a_folder">Папка не выбрана!</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
     <string name="dir_select_success_message">Успех! Пожалуйста, подождите. Приложение запускается…</string>
     <string name="barinsta_folder">Папка Barinsta</string>
     <string name="top">В лидерах</string>
