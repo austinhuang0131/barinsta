@@ -489,6 +489,7 @@
     <string name="dir_select_folder_not_exist">以前に選択したフォルダは現在存在しません:</string>
     <string name="dir_select_message2">ディレクトリを再度選択するか、下のボタンをクリックして新しいディレクトリを選択してください。</string>
     <string name="select_a_folder">フォルダーが選択されていません！</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
     <string name="dir_select_success_message">成功！お待ちください。アプリを起動しています…</string>
     <string name="barinsta_folder">Barinstaフォルダ</string>
     <string name="top">関連</string>
