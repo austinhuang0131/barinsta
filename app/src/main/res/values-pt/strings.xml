@@ -498,6 +498,7 @@
     <string name="dir_select_folder_not_exist">A pasta selecionada anteriormente não existe agora:</string>
     <string name="dir_select_message2">Selecione novamente o diretório ou selecione um novo diretório clicando no botão abaixo.</string>
     <string name="select_a_folder">Nenhuma pasta selecionada!</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
     <string name="dir_select_success_message">Sucesso! Por favor, aguarde. Iniciando o aplicativo…</string>
     <string name="barinsta_folder">Pasta Barinsta</string>
     <string name="top">Início</string>
