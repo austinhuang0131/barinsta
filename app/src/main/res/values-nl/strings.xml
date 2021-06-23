@@ -29,7 +29,7 @@
     <string name="hide_muted_reels_setting">Verberg gedempte verhalen uit feed</string>
     <string name="dm_mark_as_seen_setting">Markeer privéberichten als gelezen na bekijken</string>
     <string name="dm_mark_as_seen_setting_summary">Andere gebruikers zullen het weten als je het hebt bekeken</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Videoverhalen automatisch afspelen</string>
     <string name="activity_setting">Activiteitmeldingen inschakelen</string>
     <string name="story_sort_setting">Feedverhalen sorteren</string>
     <string name="error_loading_profile">Fout bij het laden van profiel! Is de gebruikersnaam geldig? Zo ja, dan kan je geratelimiteerd zijn.</string>
@@ -124,7 +124,7 @@
     <string name="mute_posts">Berichten dempen</string>
     <string name="unmute_stories">Verhalen uitzetten</string>
     <string name="unmute_posts">Berichten uitschakelen</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="remove_follower">Volger verwijderen</string>
     <string name="bio_copy">Bio kopiëren</string>
     <string name="bio_translate">Bio vertalen</string>
     <string name="status_mutual">Wederzijds</string>
@@ -234,7 +234,7 @@
     <string name="request_approve">Verzoek accepteren</string>
     <string name="request_reject">Verzoek afwijzen</string>
     <string name="share_public_post">Deel dit openbare bericht met…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Dit is een privé bericht! Deel dit met degenen die het kunnen bekijken.</string>
     <string name="discover_empty">Deze categorie is op de een of andere manier leeg…</string>
     <string name="update_available">Een update is beschikbaar(%s)</string>
     <string name="update_notice">Herinnering: Als je via F-Droid hebt gedownload, moet je ook updaten via F-Droid! Hetzelfde geldt voor GitHub.</string>
@@ -266,7 +266,7 @@
     <string name="skip_update_checkbox">Niet meer weergeven tot de volgende update</string>
     <string name="version">Versie</string>
     <string name="pref_start_screen">Startscherm</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Toon toetsenbord bij zoeken</string>
     <string name="pref_category_general">Algemeen</string>
     <string name="pref_category_theme">Thema</string>
     <string name="pref_category_downloads">Downloads</string>
@@ -297,11 +297,11 @@
     <string name="unknown">Onbekend</string>
     <string name="removed_from_favs">Verwijderd uit Favorieten!</string>
     <string name="backup_and_restore">Backup &amp; Herstel</string>
-    <string name="auto_backup">Auto Backup</string>
-    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
-    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup">Automatische back-up</string>
+    <string name="auto_backup_summary">Vanaf Android 6, zal Android\'s Auto Backup functie alle app instellingen, account login gegevens, en favorieten uploaden naar uw Google Drive, die kan worden hersteld door het opnieuw installeren van de app na de-installatie.</string>
+    <string name="auto_backup_warning">Deze voorkeur heeft geen effect als Google Play Services niet aanwezig is, of als Auto Backup is uitgeschakeld in uw toestelinstellingen. Als u dit uitschakelt, worden bestaande back-ups niet gewist.</string>
+    <string name="auto_backup_setting">Automatische back-up inschakelen</string>
+    <string name="manual_backup">Handmatige back-up</string>
     <string name="backup_summary">Back-up maken van Barinsta app-instellingen, accountloggegevens en/of favorieten naar een platte tekst of versleuteld back-up bestand voor later herstellen.</string>
     <string name="backup_warning">Als u een back-up van accountaanmeldgegevens maakt, het bestand vertrouwelijk behandelt en ergens veilig houdt!</string>
     <string name="create_backup">Nieuw back-upbestand maken</string>
@@ -481,7 +481,7 @@
     <string name="crash_report_subject">Barinsta Crash Rapport</string>
     <string name="crash_report_title">Selecteer een email app om crashlogs te verzenden</string>
     <string name="not_found">Niet gevonden!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Je IP is beperkt tot Instagram. Wacht een uur en probeer het opnieuw. &lt;a href=\"https://redd.it/msxlko\"&gt;Meer informatie.&lt;/a&gt;</string>
     <string name="skip_update">Deze update overslaan</string>
     <string name="on_latest_version">Je bent al op de nieuwste versie</string>
     <string name="tab_order">Scherm volgorde</string>
@@ -490,26 +490,26 @@
     <string name="dm_remove_warning">Indien opgeslagen, zullen alle DM gerelateerde functies worden uitgeschakeld bij volgende start</string>
     <string name="copy_caption">Kopieer opschrift</string>
     <string name="copy_reply">Antwoord kopiëren</string>
-    <string name="restore">Restore</string>
+    <string name="restore">Herstel</string>
     <string name="backup">Backup</string>
-    <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
-    <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
-    <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
-    <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
-    <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
-    <string name="select_a_folder">No folder selected!</string>
-    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
-    <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
-    <string name="barinsta_folder">Barinsta folder</string>
+    <string name="dir_select_default_message">Selecteer een map waar Barinsta downloads en tijdelijke bestanden kan opslaan.\n\nJe kunt dit later wijzigen in meer &gt; Instellingen &gt; Downloads.</string>
+    <string name="dir_select_reselect_message">Android heeft de manier veranderd waarop apps toegang hebben tot bestanden en mappen op de opslag. Op dit moment heeft Barinsta geen toestemming om toegang te krijgen tot de volgende map:</string>
+    <string name="dir_select_permission_revoked_message">De machtigingen voor de eerder geselecteerde map zijn door het systeem ingetrokken:</string>
+    <string name="dir_select_folder_not_exist">De eerder geselecteerde map bestaat nu niet meer:</string>
+    <string name="dir_select_message2">Kies de directory opnieuw of kies een nieuwe directory door op de knop hieronder te klikken.</string>
+    <string name="select_a_folder">Geen map geselecteerd!</string>
+    <string name="dir_select_no_download_folder">Kies a. u. b. een map uit uw opslag, niet een categorie op de zijbalk.</string>
+    <string name="dir_select_success_message">Succes! Even geduld aub. Start app…</string>
+    <string name="barinsta_folder">Barinsta map</string>
     <string name="top">Top</string>
     <string name="recent">Recent</string>
     <string name="clear">Wissen</string>
     <string name="no_external_map_app">Geen Kaartapp gevonden!</string>
-    <string name="click_to_show_full">Click to show full like count</string>
+    <string name="click_to_show_full">Klik om volledige like count te tonen</string>
     <string name="no_profile_pic_found">Geen profielfoto gevonden!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
-    <string name="share_via_dm">Share via DM</string>
-    <string name="share_link">Share link…</string>
-    <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="swipe_up_confirmation">Ben je zeker dat je deze link wilt openen?</string>
+    <string name="sending">Aan het verzenden...</string>
+    <string name="share_via_dm">Delen via DM</string>
+    <string name="share_link">Link delen…</string>
+    <string name="slide_to_cancel">Schuif om te annuleren</string>
 </resources>
