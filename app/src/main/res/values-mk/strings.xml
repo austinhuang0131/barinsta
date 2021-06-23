@@ -23,13 +23,13 @@
     <string name="update_check">Провери за ажурирање</string>
     <string name="flag_secure">Блокирај слики од екранот &amp; преглед на апликацијата</string>
     <string name="download_user_folder">Превземи објави во папката со кориснички имиња</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">Додади корисничко име при зачувување</string>
     <string name="mark_as_seen_setting">Означи ги приказните како видени</string>
     <string name="mark_as_seen_setting_summary">Авторот на приказната ќе знае дека сте ја погледнале приказната</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Сокриј замолчени приказни</string>
     <string name="dm_mark_as_seen_setting">Означи порака како видена</string>
     <string name="dm_mark_as_seen_setting_summary">Другите членови ќе знаат дека сте ја виделе содржината на пораката</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Автоматски гледај видео приказни</string>
     <string name="activity_setting">Овозможи нотификации</string>
     <string name="story_sort_setting">Сортирање на објави</string>
     <string name="error_loading_profile">Грешка при вчитување на профилот! Проверете дали корисничкото име е валидно?</string>
@@ -57,8 +57,8 @@
     </plurals>
     <string name="main_posts_following">%s\nСледбеници</string>
     <string name="post_viewer_autoplay_video">Autoplay на видеа</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">Овозможи играње на видео во позадина</string>
+    <string name="post_viewer_background_play_summary">Не паузирај видеа кога апликацијата е надвор од фокус</string>
     <string name="post_viewer_muted_autoplay">Секогаш гледај видеа без звук</string>
     <string name="post_viewer_show_captions">Секогаш прикажувај наслов</string>
     <string name="post_viewer_download_dialog_title">Одбери што сакаш да превземеш</string>
