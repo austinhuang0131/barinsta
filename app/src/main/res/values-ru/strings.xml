@@ -29,7 +29,7 @@
     <string name="hide_muted_reels_setting">Скрыть заглушённые истории из ленты новостей</string>
     <string name="dm_mark_as_seen_setting">Отметить ЛС как увиденные после просмотра</string>
     <string name="dm_mark_as_seen_setting_summary">Другие участники узнают, что вы просмотрели его</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Автозапуск видео историй</string>
     <string name="activity_setting">Включить уведомления об активности</string>
     <string name="story_sort_setting">Сортировка историй ленты</string>
     <string name="error_loading_profile">Ошибка при загрузке профиля! Верно ли имя пользователя? Если это так, то ваш запрос мог быть ограничен сервером.</string>
@@ -305,11 +305,11 @@
     <string name="unknown">Неизвестный</string>
     <string name="removed_from_favs">Удалено из избранного!</string>
     <string name="backup_and_restore">Резервное копирование &amp; Восстановление</string>
-    <string name="auto_backup">Auto Backup</string>
-    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
-    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup">Автобэкап</string>
+    <string name="auto_backup_summary">Начиная с Android 6, функция автоматического резервного копирования Android будет загружать все настройки приложения, данные для входа в аккаунт, и избранное на диск Google, которые можно восстановить, переустановив приложение после удаления.</string>
+    <string name="auto_backup_warning">Эта настройка не имеет эффекта, если службы Google Play отсутствуют, или если Автобэкап отключен в настройках вашего устройства. Отключение не стирает существующие резервные копии.</string>
+    <string name="auto_backup_setting">Включить Автобэкап</string>
+    <string name="manual_backup">Ручной бэкап</string>
     <string name="backup_summary">Резервное копирование настроек приложения Barinsta, учётных данных, и/или избранного в виде обычного текста или зашифрованного файла резервной копии для последующего восстановления.</string>
     <string name="backup_warning">Если вы делаете резервное копирование данных для входа в учётную запись, считайте файл конфиденциальным и храните его где-то в безопасности!</string>
     <string name="create_backup">Создать новый файл резервной копии</string>
@@ -516,7 +516,7 @@
     <string name="dir_select_folder_not_exist">Выбранная ранее папка не существует:</string>
     <string name="dir_select_message2">Выберите папку заново, нажав на кнопку ниже.</string>
     <string name="select_a_folder">Папка не выбрана!</string>
-    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.</string>
+    <string name="dir_select_no_download_folder">Пожалуйста, выберите папку из вашего хранилища, а не категорию на боковой панели.</string>
     <string name="dir_select_success_message">Успех! Пожалуйста, подождите. Приложение запускается…</string>
     <string name="barinsta_folder">Папка Barinsta</string>
     <string name="top">В лидерах</string>
