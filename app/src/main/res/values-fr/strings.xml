@@ -498,7 +498,7 @@
     <string name="dir_select_folder_not_exist">Le dossier sélectionné précédemment n\'existe pas :</string>
     <string name="dir_select_message2">Ré-sélectionnez le répertoire ou sélectionnez un nouveau répertoire en cliquant sur le bouton ci-dessous.</string>
     <string name="select_a_folder">Aucun dossier sélectionné!</string>
-    <string name="dir_select_no_download_folder">Veuillez choisir un répertoire dans votre espace de stockage, et non une catégorie dans la barre latérale.</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
     <string name="dir_select_success_message">Succès ! Veuillez patienter. Démarrage de l\'application…</string>
     <string name="barinsta_folder">Dossier Barinsta</string>
     <string name="top">Retour vers le haut</string>
