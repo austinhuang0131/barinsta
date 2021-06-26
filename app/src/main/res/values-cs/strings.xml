@@ -516,7 +516,7 @@
     <string name="dir_select_folder_not_exist">Dříve vybraná složka už neexistuje:</string>
     <string name="dir_select_message2">Znovu vyberte adresář nebo vyberte nový adresář kliknutím na tlačítko níže.</string>
     <string name="select_a_folder">Není vybrána žádná složka!</string>
-    <string name="dir_select_no_download_folder">Vyberte prosím adresář z vašeho úložiště, nikoli kategorii na postranním panelu.</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
     <string name="dir_select_success_message">Úspěch! Počkejte prosím. Spouštění aplikace…</string>
     <string name="barinsta_folder">Složka Barinsta</string>
     <string name="top">Nejlepší</string>
