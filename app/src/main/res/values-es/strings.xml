@@ -498,7 +498,7 @@
     <string name="dir_select_folder_not_exist">La carpeta seleccionada anteriormente no existe ahora:</string>
     <string name="dir_select_message2">Vuelva a seleccionar el directorio o seleccione un nuevo directorio haciendo clic en el botón de abajo.</string>
     <string name="select_a_folder">¡Ninguna carpeta seleccionada!</string>
-    <string name="dir_select_no_download_folder">Por favor, elija un directorio de su almacenamiento, no una categoría en la barra lateral.</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
     <string name="dir_select_success_message">¡Éxito! Por favor espere. Iniciando aplicación…</string>
     <string name="barinsta_folder">Carpeta Barinsta</string>
     <string name="top">Arriba</string>
