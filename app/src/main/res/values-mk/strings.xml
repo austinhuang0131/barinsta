@@ -498,7 +498,7 @@
     <string name="dir_select_folder_not_exist">Претходно одбраниот фолдер не постои:</string>
     <string name="dir_select_message2">Одберете пак директориум или направете нов со притскање на копчето подолу.</string>
     <string name="select_a_folder">Немате одберено фолдер!</string>
-    <string name="dir_select_no_download_folder">Одберете директориум од вашата меморија, а НЕ категорија од странично.</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
     <string name="dir_select_success_message">Успешно! Почекајте...</string>
     <string name="barinsta_folder">Barinsta фолдер</string>
     <string name="top">Врв</string>
