@@ -498,7 +498,7 @@
     <string name="dir_select_folder_not_exist">De eerder geselecteerde map bestaat nu niet meer:</string>
     <string name="dir_select_message2">Kies de directory opnieuw of kies een nieuwe directory door op de knop hieronder te klikken.</string>
     <string name="select_a_folder">Geen map geselecteerd!</string>
-    <string name="dir_select_no_download_folder">Kies a. u. b. een map uit uw opslag, niet een categorie op de zijbalk.</string>
+    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
     <string name="dir_select_success_message">Succes! Even geduld aub. Start app…</string>
     <string name="barinsta_folder">Barinsta map</string>
     <string name="top">Top</string>
