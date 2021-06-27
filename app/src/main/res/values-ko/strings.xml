@@ -144,11 +144,11 @@
     <string name="time_settings_title_preview">미리 보기</string>
     <string name="time_settings_swap_time">Swap Time and Date positions</string>
     <string name="quick_access_cannot_delete_curr">Cannot delete currently in use account</string>
-    <string name="quick_access_confirm_delete">Are you sure you want to delete \'%s\'?</string>
+    <string name="quick_access_confirm_delete">\"%s\"을(를) 삭제하시겠습니까?</string>
     <string name="open_profile">프로필 보기</string>
     <string name="view_story">스토리 보기</string>
     <string name="view_pfp">프로필 사진 보기</string>
-    <string name="dms_inbox_raven_message_unknown">Unsupported message type</string>
+    <string name="dms_inbox_raven_message_unknown">지원되지 않는 메시지 유형</string>
     <string name="dms_inbox_unsend">보내기 취소</string>
     <string name="dms_inbox_giphy">GIPHY에서 보기</string>
     <string name="dms_inbox_shared_post">%s shared a post by @%s</string>
