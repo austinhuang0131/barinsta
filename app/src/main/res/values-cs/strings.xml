@@ -306,7 +306,7 @@
     <string name="removed_from_favs">Odebráno z Oblíbených!</string>
     <string name="backup_and_restore">Záloha a obnovení</string>
     <string name="auto_backup">Automatické zálohování</string>
-    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
+    <string name="auto_backup_summary">Od Android 6 bude funkce zálohování Androidu automaticky nahrávat všechna nastavení aplikace, přihlašovací údaje a oblíbené na Disk Google. Tato záloha může být obnovena po opětovném nainstalování aplikace.</string>
     <string name="auto_backup_warning">Toto nastavení nemá žádný účinek, pokud nejsou přítomny služby Google Play nebo pokud je automatické zálohování zakázáno v nastavení zařízení. Zakázání zde nevymaže existující zálohy.</string>
     <string name="auto_backup_setting">Povolit automatické zálohování</string>
     <string name="manual_backup">Ruční zálohování</string>
