@@ -19,6 +19,7 @@
     <string name="title_favorites">Favoriler</string>
     <string name="title_discover">Keşfet</string>
     <string name="title_comments">Yorumlar</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Hareketler</string>
     <string name="update_check">Güncellemeleri başlangıçta kontrol et</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
