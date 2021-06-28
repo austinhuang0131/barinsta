@@ -19,6 +19,7 @@
     <string name="title_favorites">收藏</string>
     <string name="title_discover">探索</string>
     <string name="title_comments">評論</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">動態</string>
     <string name="update_check">啟動時檢查更新</string>
     <string name="flag_secure">阻擋截圖及應用程式預覽</string>
