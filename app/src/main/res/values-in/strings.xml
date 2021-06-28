@@ -19,6 +19,7 @@
     <string name="title_favorites">Favorit</string>
     <string name="title_discover">Temukan</string>
     <string name="title_comments">Komentar</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Aktivitas</string>
     <string name="update_check">Cek pembaruan saat memulai</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
