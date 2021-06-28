@@ -19,6 +19,7 @@
     <string name="title_favorites">Favorieten</string>
     <string name="title_discover">Ontdekken</string>
     <string name="title_comments">Opmerkingen</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Activiteit</string>
     <string name="update_check">Controleer op updates bij het opstarten</string>
     <string name="flag_secure">Screenshots &amp; app voorbeeld blokkeren</string>
