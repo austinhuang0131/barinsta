@@ -19,6 +19,7 @@
     <string name="title_favorites">Favoritos</string>
     <string name="title_discover">Explorar</string>
     <string name="title_comments">Comentarios</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Actividad</string>
     <string name="update_check">Buscar actualizaciones al inicio</string>
     <string name="flag_secure">Bloquea capturas de pantalla &amp; vista previa de aplicaciones</string>
