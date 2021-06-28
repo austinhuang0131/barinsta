@@ -19,6 +19,7 @@
     <string name="title_favorites">Омилени</string>
     <string name="title_discover">Откриј</string>
     <string name="title_comments">Коментари</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Активности</string>
     <string name="update_check">Провери за ажурирање</string>
     <string name="flag_secure">Блокирај слики од екранот &amp; преглед на апликацијата</string>
