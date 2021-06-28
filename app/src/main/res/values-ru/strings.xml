@@ -19,6 +19,7 @@
     <string name="title_favorites">Избранное</string>
     <string name="title_discover">Подборка</string>
     <string name="title_comments">Комментарии</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Активность</string>
     <string name="update_check">Проверять наличие обновлений при запуске</string>
     <string name="flag_secure">Блокировать скриншоты &amp; превью приложения</string>
