@@ -19,6 +19,7 @@
     <string name="title_favorites">Preferiti</string>
     <string name="title_discover">Scopri</string>
     <string name="title_comments">Commenti</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Attività</string>
     <string name="update_check">Verifica aggiornamenti all\'avvio</string>
     <string name="flag_secure">Blocca screenshot &amp; anteprima app</string>
