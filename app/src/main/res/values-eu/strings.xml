@@ -19,6 +19,7 @@
     <string name="title_favorites">Gogokoak</string>
     <string name="title_discover">Aurkitu</string>
     <string name="title_comments">Iruzkinak</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Jarduera</string>
     <string name="update_check">Bilatu eguneratzeak abioan</string>
     <string name="flag_secure">Blokeatu pantaila-argazkiak eta aplikazioaren aurrebista</string>
