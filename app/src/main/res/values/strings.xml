@@ -22,6 +22,7 @@
     <string name="title_favorites">Favorites</string>
     <string name="title_discover">Discover</string>
     <string name="title_comments">Comments</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Activity</string>
     <string name="update_check">Check for updates at startup</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
