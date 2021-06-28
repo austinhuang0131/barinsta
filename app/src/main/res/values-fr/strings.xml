@@ -19,6 +19,7 @@
     <string name="title_favorites">Favoris</string>
     <string name="title_discover">Découvrir</string>
     <string name="title_comments">Commentaires</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Activité</string>
     <string name="update_check">Rechercher les mises à jours au démarrage</string>
     <string name="flag_secure">Bloquer les captures d\'écran &amp; l\'aperçu de l\'application</string>
