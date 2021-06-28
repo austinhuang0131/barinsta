@@ -19,6 +19,7 @@
     <string name="title_favorites">Favoriter</string>
     <string name="title_discover">Upptäck</string>
     <string name="title_comments">Kommentarer</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Aktivitet</string>
     <string name="update_check">Sök efter uppdatering vid uppstart</string>
     <string name="flag_secure">Blockera skärmdumpar &amp; förhandsgranskning av appen</string>
