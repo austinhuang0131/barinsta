@@ -19,6 +19,7 @@
     <string name="title_favorites">Obľúbené</string>
     <string name="title_discover">Prezerať</string>
     <string name="title_comments">Komentáre</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Aktivita</string>
     <string name="update_check">Kontrolovať aktualizácie pri štarte</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
