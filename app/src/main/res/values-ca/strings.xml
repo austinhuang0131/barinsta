@@ -19,6 +19,7 @@
     <string name="title_favorites">Preferits</string>
     <string name="title_discover">Descobrir</string>
     <string name="title_comments">Comentaris</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Activitat</string>
     <string name="update_check">Cerca actualitzacions a l\'inici</string>
     <string name="flag_secure">Bloca les captures de pantalla &amp; previsualització de l\'aplicació</string>
