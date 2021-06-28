@@ -19,6 +19,7 @@
     <string name="title_favorites">お気に入り</string>
     <string name="title_discover">発見</string>
     <string name="title_comments">コメント</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">アクティビティ</string>
     <string name="update_check">起動時にアップデートを確認</string>
     <string name="flag_secure">スクリーンショットとアプリプレビューをブロック</string>
