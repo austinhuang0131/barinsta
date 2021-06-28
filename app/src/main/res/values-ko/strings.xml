@@ -19,6 +19,7 @@
     <string name="title_favorites">즐겨찾기</string>
     <string name="title_discover">발견</string>
     <string name="title_comments">댓글</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">활동</string>
     <string name="update_check">시작시 업데이트 확인</string>
     <string name="flag_secure">Block screenshots &amp; app preview</string>
