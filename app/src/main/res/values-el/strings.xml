@@ -19,6 +19,7 @@
     <string name="title_favorites">Αγαπημένα</string>
     <string name="title_discover">Ανακαλύψτε</string>
     <string name="title_comments">Σχόλια</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Δραστηριότητα</string>
     <string name="update_check">Έλεγχος για ενημερώσεις κατά την εκκίνηση</string>
     <string name="flag_secure">Παρεμπόδιση στιγμιοτύπων οθόνης &amp; προεπισκόπησης εφαρμογής</string>
