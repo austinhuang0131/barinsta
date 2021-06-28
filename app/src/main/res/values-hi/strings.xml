@@ -19,6 +19,7 @@
     <string name="title_favorites">पसंदीदा</string>
     <string name="title_discover">खोजिए</string>
     <string name="title_comments">टिप्पणियाँ</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">कार्यकलाप</string>
     <string name="update_check">खुलने पर अपडेट के लिए जाँच करें</string>
     <string name="flag_secure">स्क्रीनशॉट को ब्लॉक करें &amp; ऐप प्रीव्यू</string>
