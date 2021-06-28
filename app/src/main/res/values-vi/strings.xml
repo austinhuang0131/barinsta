@@ -19,6 +19,7 @@
     <string name="title_favorites">Yêu thích</string>
     <string name="title_discover">Khám phá</string>
     <string name="title_comments">Bình luận</string>
+    <string name="title_replies">Replies</string>
     <string name="title_notifications">Hoạt động</string>
     <string name="update_check">Kiểm tra cập nhật khi khởi động</string>
     <string name="flag_secure">Chặn chụp ảnh màn hình &amp; xem trước ứng dụng</string>
