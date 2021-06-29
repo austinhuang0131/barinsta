@@ -98,6 +98,7 @@
     <string name="story_mentions">Zmienky</string>
     <string name="priv_acc">Tento účet je súkromný</string>
     <string name="priv_acc_confirm">Nebudeš môcť pristúpiť k príspevkom po zrušení sledovania. Si si istý?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Môžete sa prihlásiť pomocou Viac -&gt; Účet na dolnom pravom rohu alebo pokračovať v sledovaní verejných profilov bez prihlásenia!</string>
     <string name="empty_acc">Tento účet nemá žiadne príspevky</string>
     <string name="empty_list">Žiadne príspevky!</string>
