@@ -19,7 +19,7 @@
     <string name="title_favorites">Gogokoak</string>
     <string name="title_discover">Aurkitu</string>
     <string name="title_comments">Iruzkinak</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">Erantzunak</string>
     <string name="title_notifications">Jarduera</string>
     <string name="update_check">Bilatu eguneratzeak abioan</string>
     <string name="flag_secure">Blokeatu pantaila-argazkiak eta aplikazioaren aurrebista</string>
@@ -90,7 +90,7 @@
     <string name="story_mentions">Aipamenak</string>
     <string name="priv_acc">Kontu hau pribatua da</string>
     <string name="priv_acc_confirm">Ezingo dituzu bidalketak ikusi jarraitzeari utzi ondoren. Ziur zaude?</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">Ziur zaude?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="empty_acc">Kontu honek bidalketarik ez du</string>
     <string name="empty_list">Bidalketarik ez!</string>
@@ -158,15 +158,15 @@
     <string name="dms_inbox_unsend">Ezabatu mezua</string>
     <string name="dms_inbox_giphy">Ikusi GIPHYn</string>
     <string name="dms_inbox_shared_post">%s shared a post by @%s</string>
-    <string name="dms_inbox_shared_image">%s shared an image</string>
-    <string name="dms_inbox_shared_video">%s shared a video</string>
-    <string name="dms_inbox_shared_message">%s sent a message</string>
-    <string name="dms_inbox_shared_gif">%s shared a gif</string>
-    <string name="dms_inbox_shared_sticker">%s shared a sticker</string>
-    <string name="dms_inbox_shared_profile">%s shared a profile: @%s</string>
-    <string name="dms_inbox_shared_location">%s shared a location: %s</string>
+    <string name="dms_inbox_shared_image">%s(e)k irudia partekatu du</string>
+    <string name="dms_inbox_shared_video">%s(e)k bideoa partekatu du</string>
+    <string name="dms_inbox_shared_message">%s(e)k mezua bidali du</string>
+    <string name="dms_inbox_shared_gif">%s(e)k gifa partekatu du</string>
+    <string name="dms_inbox_shared_sticker">%s(e)k eranskina partekatu du</string>
+    <string name="dms_inbox_shared_profile">%s(e)k profila partekatu du: @%s</string>
+    <string name="dms_inbox_shared_location">%s(e)k kokalekua partekatu du: %s</string>
     <string name="dms_inbox_shared_highlight">%s shared a story highlight by @%s</string>
-    <string name="dms_inbox_shared_story">%s shared a story by @%s</string>
+    <string name="dms_inbox_shared_story">%s(e)k @%s(r)en istorioa partekatu du</string>
     <string name="dms_inbox_shared_voice">%s sent a voice message</string>
     <string name="dms_inbox_shared_clip">%s shared a clip by @%s</string>
     <string name="dms_inbox_shared_igtv">%s shared an IGTV video by @%s</string>
@@ -215,7 +215,7 @@
     <string name="comment_viewer_like_comment">Atsegin iruzkina</string>
     <string name="comment_viewer_unlike_comment">Ez dut atsegin</string>
     <string name="comment_viewer_translate_comment">Itzuli iruzkina</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Ezabatu iruzkina</string>
     <string name="comment_send_empty_comment">Iruzkin hutsik ez!</string>
     <string name="comment_view_mention_user_search">Erabiltzaile-izena bilatu nahi duzu?</string>
     <string name="comment_view_mention_hash_search">Traol-hitza bilatu nahi duzu?</string>
@@ -236,7 +236,7 @@
     <string name="request_approve">Onartu eskaera</string>
     <string name="request_reject">Baztertu eskaera</string>
     <string name="share_public_post">Partekatu bidalketa publiko hau…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Bidalketa pribatua da. Partekatu ikus dezaketen horiekin.</string>
     <string name="discover_empty">Kategoria hau hutsik dago…</string>
     <string name="update_available">Eguneratze bat eskuragarri dago (%s)</string>
     <string name="update_notice">F-Droidetik deskargatu baduzu, bertatik eguneratu behar duzu. GitHubekin ere hori egin behar da.</string>
@@ -255,7 +255,7 @@
     <string name="activity_count_usertags">%d erabiltzaile-etiketak</string>
     <string name="activity_count_likes">%d atsegite</string>
     <string name="activity_count_poy">%d photos of you</string>
-    <string name="activity_count_requests">%d follow requests</string>
+    <string name="activity_count_requests">%d jarraipen-eskari</string>
     <string name="activity_notloggedin">You logged out before clicking this notification?!</string>
     <string name="feed">Jarioa</string>
     <string name="profile">Profila</string>
@@ -268,7 +268,7 @@
     <string name="skip_update_checkbox">Ez erakutsi hurrengo eguneratzera arte</string>
     <string name="version">Bertsioa</string>
     <string name="pref_start_screen">Hasierako pantaila</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Erakutsi teklatua bilaketan</string>
     <string name="pref_category_general">Orokorra</string>
     <string name="pref_category_theme">Gaia</string>
     <string name="pref_category_downloads">Deskargak</string>
