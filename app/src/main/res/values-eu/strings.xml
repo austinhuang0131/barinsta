@@ -90,6 +90,7 @@
     <string name="story_mentions">Aipamenak</string>
     <string name="priv_acc">Kontu hau pribatua da</string>
     <string name="priv_acc_confirm">Ezingo dituzu bidalketak ikusi jarraitzeari utzi ondoren. Ziur zaude?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="empty_acc">Kontu honek bidalketarik ez du</string>
     <string name="empty_list">Bidalketarik ez!</string>
