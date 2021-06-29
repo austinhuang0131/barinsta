@@ -90,6 +90,7 @@
     <string name="story_mentions">Menciones</string>
     <string name="priv_acc">Esta cuenta es privada</string>
     <string name="priv_acc_confirm">¡No podrás acceder a sus publicaciones después de dejar de seguirle! ¿Estás seguro?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">¡Puedes iniciar sesión a través de Más -&gt; Cuenta en la esquina inferior derecha o puedes ver cuentas públicas sin iniciar sesión!</string>
     <string name="empty_acc">Esta cuenta no tiene publicaciones</string>
     <string name="empty_list">¡No existen tales publicaciones!</string>
