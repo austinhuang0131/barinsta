@@ -91,6 +91,7 @@
     <string name="priv_acc">यह एकाउॅट निजी है</string>
     <string name="priv_acc_confirm">अनफलो चे बाद आप पोस्ट तक पहुंच नहिं पाओगे!
 आप निश्चित हैं?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">आप लग इन और तरिकें के साथ कर सकते हो -&gt; दक्षिण के निचे कोने में एकाउॅट पर या आप सार्बजनीन एकाउॅट को बिना लग इन के देख सकते हो!</string>
     <string name="empty_acc">इसी एकाउॅट में कोई पोस्ट नहीं है।</string>
     <string name="empty_list">एसे कोई पोस्ट नहीं है!</string>
