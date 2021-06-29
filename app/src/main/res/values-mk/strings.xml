@@ -90,6 +90,7 @@
     <string name="story_mentions">Спомнувања</string>
     <string name="priv_acc">Корисникот има приватен профил</string>
     <string name="priv_acc_confirm">Наме да можете да гледате објави и приказни од овој корисник ако го Одследите! Дали сте сигурни?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Можете да се најавите преку Повеќе -&gt; Корисничата сметка која се наоѓа долу десно или само можете да гледате Отворени профили без да се логирате!</string>
     <string name="empty_acc">Овој корисник нема објави</string>
     <string name="empty_list">Не постојат такви објави!</string>
