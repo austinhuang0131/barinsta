@@ -19,7 +19,7 @@
     <string name="title_favorites">Αγαπημένα</string>
     <string name="title_discover">Ανακαλύψτε</string>
     <string name="title_comments">Σχόλια</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">Απαντήσεις</string>
     <string name="title_notifications">Δραστηριότητα</string>
     <string name="update_check">Έλεγχος για ενημερώσεις κατά την εκκίνηση</string>
     <string name="flag_secure">Παρεμπόδιση στιγμιοτύπων οθόνης &amp; προεπισκόπησης εφαρμογής</string>
@@ -90,6 +90,7 @@
     <string name="story_mentions">Αναφορές</string>
     <string name="priv_acc">Ιδιωτικός λογαριασμός</string>
     <string name="priv_acc_confirm">Δε θα έχετε πρόσβαση στις δημοσιεύσεις μετά την άρση ακολούθησης! Είστε βέβαιος;</string>
+    <string name="are_you_sure">Είστε σίγουρος;</string>
     <string name="no_acc">Μπορείτε να συνδεθείτε μέσω του Περισσότερα-&gt; Λογαριασμός στην κάτω δεξιά γωνία ή μπορείτε να δείτε δημόσιους λογαριασμούς χωρίς σύνδεση!</string>
     <string name="empty_acc">Αυτός ο λογαριασμός δεν έχει δημοσιεύσεις</string>
     <string name="empty_list">Δεν Υπάρχουν Τέτοιες Δημοσιεύσεις!</string>
