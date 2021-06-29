@@ -91,6 +91,7 @@
     <string name="priv_acc">این اکانت شخصی است</string>
     <string name="priv_acc_confirm">شما امکان دسترسی به پست ها را بعد از آنفالو کردن ندارید!
 مطمن هستید؟</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">می توانید توسط (بیشتر) وارد شوید -&gt; حساب در گوشه پایین سمت راست یا می توانید حساب های عمومی را بدون ورود به سیستم ببینید!</string>
     <string name="empty_acc">این اکانت پستی ندارد</string>
     <string name="empty_list">چنین پست هایی نیست!</string>
