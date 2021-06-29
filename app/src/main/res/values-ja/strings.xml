@@ -86,6 +86,7 @@
     <string name="story_mentions">メンション</string>
     <string name="priv_acc">このアカウントは非公開です</string>
     <string name="priv_acc_confirm">フォローを解除すると、投稿にアクセスできなくなります。よろしいですか？</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">右下にある 詳細 -&gt; アカウント でログインすることができます。または、ログインせずに公開アカウントを表示することができます！</string>
     <string name="empty_acc">このアカウントには投稿がありません</string>
     <string name="empty_list">投稿はありません！</string>
