@@ -90,6 +90,7 @@
     <string name="story_mentions">Etiketlenenler</string>
     <string name="priv_acc">Bu Hesap Gizlidir</string>
     <string name="priv_acc_confirm">Takipten çıkarsan gönderilere erişemeyeceksin! Emin misin?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Hesabınıza giriş yapmak için sağ alttan Daha Fazla -&gt; Hesap yolunu takip edebilir ya da giriş yapmadan herkese açık profilleri dolaşabilirsin!</string>
     <string name="empty_acc">Bu Hesabın Gönderisi Yok</string>
     <string name="empty_list">Öyle Bir Gönderi Yok!</string>
