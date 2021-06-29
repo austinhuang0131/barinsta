@@ -86,6 +86,7 @@
     <string name="story_mentions">提及</string>
     <string name="priv_acc">私密账户</string>
     <string name="priv_acc_confirm">取消关注后，您将无法访问帖子！您确定吗？</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">你可以通过右下角的 更多-&gt; 账户 来登录，或者您无须登录即可查看公开账户！</string>
     <string name="empty_acc">暂未发帖</string>
     <string name="empty_list">无此类帖！</string>
