@@ -86,6 +86,7 @@
     <string name="story_mentions">Đề cập</string>
     <string name="priv_acc">Tài khoản này là riêng tư</string>
     <string name="priv_acc_confirm">Bạn sẽ không thể truy cập vào bài đăng sau khi bỏ theo dõi? Bạn chắc chứ?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Bạn có thể đăng nhập bằng Thêm -&gt; Tài khoản ở góc phải dưới hoặc bạn có thể xem tài khoản công khai mà không cần đăng nhập!</string>
     <string name="empty_acc">Tài khoản này không có bài viết nào</string>
     <string name="empty_list">Không có bài đăng đó!</string>
