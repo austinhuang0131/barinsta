@@ -90,6 +90,7 @@
     <string name="story_mentions">Vermeldingen</string>
     <string name="priv_acc">Dit Account is Privé</string>
     <string name="priv_acc_confirm">Je zal geen toegang meer hebben tot berichten na het ontvolgen! Weet je het zeker?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Je kunt inloggen via Meer -&gt; Rechtsonder in je account, of je kunt openbare accounts bekijken zonder in te loggen!</string>
     <string name="empty_acc">Dit Account heeft Geen Berichten</string>
     <string name="empty_list">Geen dergelijke berichten!</string>
