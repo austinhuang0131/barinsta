@@ -90,6 +90,7 @@
     <string name="story_mentions">ଉଲ୍ଲେଖଗୁ‌‍‌‌‌‌‌‌‌‌‌‌‌ଡିକ</string>
     <string name="priv_acc">ଏହି ଏକାଉଣ୍ଟ ଗୁପ୍ତ ଅଟେ</string>
     <string name="priv_acc_confirm">ଆପଣ ଅନୁସରଣ ନ କଲେ ପୋଷ୍ଟଗୁଡିକୁ ପ୍ରବେଶ କରିବାକୁ ସମର୍ଥ ହେବେ ନାହିଁ! ଆପଣ ନିଶ୍ଚିତ କି?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">ଆପଣ ନିମ୍ନ - ଡାହାଣ କୋଣରେ ଅଧିକ -&gt; ଆକାଉଣ୍ଟ୍ ମାଧ୍ୟମରେ ଲଗ୍ ଇନ୍ କରିପାରିବେ କିମ୍ବା ଆପଣ ଲଗ୍ଇନ୍ ବିନା ସର୍ବସାଧାରଣ ଆକାଉଣ୍ଟ୍ ଦେଖିପାରିବେ |!</string>
     <string name="empty_acc">ଏହି ଆକାଉଣ୍ଟରେ କୌଣସି ପୋଷ୍ଟ ନାହିଁ |</string>
     <string name="empty_list">ଏପରି କୌଣସି ପୋଷ୍ଟ ନାହିଁ!</string>
