@@ -93,6 +93,7 @@
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">This Account is Private</string>
     <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="empty_acc">This Account has No Posts</string>
     <string name="empty_list">No Such Posts!</string>
