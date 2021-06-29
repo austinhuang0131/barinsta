@@ -98,6 +98,7 @@
     <string name="story_mentions">Упоминания</string>
     <string name="priv_acc">Это частная учётная запись</string>
     <string name="priv_acc_confirm">Вы не сможете получить доступ к публикациям после отписки! Вы уверены?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Вы можете войти через Ещё -&gt; Учётная запись в правом нижнем углу или можете просматривать публичные учётные записи без авторизации!</string>
     <string name="empty_acc">У этой учётной записи нет публикаций</string>
     <string name="empty_list">Нет таких публикаций!</string>
