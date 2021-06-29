@@ -86,6 +86,7 @@
     <string name="story_mentions">Sebutan</string>
     <string name="priv_acc">Akun Ini Bersifat Pribadi</string>
     <string name="priv_acc_confirm">Anda tidak akan dapat mengakses kiriman setelah berhenti mengikuti! Anda yakin?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Anda bisa masuk melalui Lebih-&gt; Akun di pojok kanan bawah. Atau anda dapat melihat akun publik tanpa masuk!</string>
     <string name="empty_acc">Akun ini tidak memiliki kiriman</string>
     <string name="empty_list">Kiriman tidak ditemukan!</string>
