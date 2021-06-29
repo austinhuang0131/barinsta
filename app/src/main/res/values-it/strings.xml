@@ -90,6 +90,7 @@
     <string name="story_mentions">Menzioni</string>
     <string name="priv_acc">Questo Profilo è Privato</string>
     <string name="priv_acc_confirm">Non potrai accederei ai post dopo aver smesso di seguire! Sei sicuro?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Puoi accedere tramite Altro -&gt; Profilo nell\'angolo in basso a destra o puoi visualizzare i profili pubblici senza accedere!</string>
     <string name="empty_acc">Questo Profilo Non ha Post</string>
     <string name="empty_list">Nessun Post Simile!</string>
