@@ -86,6 +86,7 @@
     <string name="story_mentions">언급</string>
     <string name="priv_acc">비공개 계정입니다</string>
     <string name="priv_acc_confirm">언팔로우하면 게시물을 볼 수 없겠습니다. 확실합니까?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="empty_acc">계정에 게시물이 없음</string>
     <string name="empty_list">게시물 없음</string>
