@@ -90,6 +90,7 @@
     <string name="story_mentions">Erwähnungen</string>
     <string name="priv_acc">Dieser Account ist privat</string>
     <string name="priv_acc_confirm">Du wirst nicht mehr auf Beiträge zugreifen können, wenn du entfolgst! Bist du sicher?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Du kannst dich unten rechts über Mehr -&gt; anmelden, oder öffentliche Konten ohne Anmeldung ansehen!</string>
     <string name="empty_acc">Dieses Konto hat keine Beiträge</string>
     <string name="empty_list">Keine derartigen Posts!</string>
