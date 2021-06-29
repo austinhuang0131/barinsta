@@ -98,6 +98,7 @@
     <string name="story_mentions">Wzmianki</string>
     <string name="priv_acc">To konto jest prywatne</string>
     <string name="priv_acc_confirm">Nie będziesz mieć dostępu do postów po anulowaniu obserwowania! Jesteś pewny?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Możesz zalogować się za pomocą \"Więcej\" - &gt; \"Konto\" w prawym dolnym rogu lub możesz zobaczyć konta publiczne bez logowania!</string>
     <string name="empty_acc">To konto nie zawiera postów</string>
     <string name="empty_list">Nie ma więcej postów!</string>
