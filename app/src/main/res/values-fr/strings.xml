@@ -90,6 +90,7 @@
     <string name="story_mentions">Mentions</string>
     <string name="priv_acc">Compte privé</string>
     <string name="priv_acc_confirm">Vous ne pourrez plus accéder aux messages après avoir été désabonné! Êtes-vous sûr(e) ?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Vous pouvez vous connecter via Plus -&gt; de Compte en bas à droite ou vous pouvez consulter les comptes publics sans vous connecter !</string>
     <string name="empty_acc">Ce compte ne contient pas de posts</string>
     <string name="empty_list">Aucun post de ce genre !</string>
