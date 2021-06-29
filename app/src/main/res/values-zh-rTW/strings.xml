@@ -86,6 +86,7 @@
     <string name="story_mentions">提及</string>
     <string name="priv_acc">此帳戶為私人帳戶</string>
     <string name="priv_acc_confirm">取消關注後，您將無法閱讀人家的貼文！你確定嗎？</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">您可以透過右下角的 「更多」 -&gt; 「新增帳號」 來登入您的帳號，或者以匿名的身分查看公共帳戶！</string>
     <string name="empty_acc">此帳戶尚未張貼任何文章</string>
     <string name="empty_list">找不到此貼文！</string>
