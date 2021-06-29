@@ -90,6 +90,7 @@
     <string name="story_mentions">Omnämnanden</string>
     <string name="priv_acc">Det här kontot är Privat</string>
     <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="empty_acc">Det här kontot har inga inlägg</string>
     <string name="empty_list">Inga sådana inlägg!</string>
