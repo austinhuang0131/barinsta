@@ -90,6 +90,7 @@
     <string name="story_mentions">Mencions</string>
     <string name="priv_acc">Aquest compte és privat</string>
     <string name="priv_acc_confirm">Després de deixar de seguir, no podràs accedir a les publicacions. Estàs segur?</string>
+    <string name="are_you_sure">Are you sure?</string>
     <string name="no_acc">Pots iniciar la sessió a través de Més -&gt;; El teu compte és a l\'extrem inferior dret o pots veure comptes públics sense iniciar una sessió!</string>
     <string name="empty_acc">Aquest compte no té publicacions</string>
     <string name="empty_list">No existeixen publicacions d\'aquest tipus!</string>
