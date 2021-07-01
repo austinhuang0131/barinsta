@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_about">Σχετικά με</string>
-    <string name="action_dms">Απευθείας Μηνύματα</string>
+    <string name="action_dms">Μηνύματα</string>
     <string name="action_settings">Ρυθμίσεις</string>
     <string name="action_download">Λήψη</string>
     <string name="action_search">Αναζήτηση ονόματος χρήστη…</string>
@@ -510,8 +510,8 @@
     <string name="click_to_show_full">Σε πόσους ακριβώς αρέσει</string>
     <string name="no_profile_pic_found">Δε βρέθηκε εικόνα προφίλ!</string>
     <string name="swipe_up_confirmation">Είστε βέβαιος για το άνοιγμα αυτού του συνδέσμου;</string>
-    <string name="sending">Γίνεται αποστολή...</string>
-    <string name="share_via_dm">Κοινοποίηση μέσω</string>
+    <string name="sending">Αποστέλλεται...</string>
+    <string name="share_via_dm">Κοινοποίηση μέσω μηνύματος</string>
     <string name="share_link">Κοινοποίηση συνδέσμου…</string>
     <string name="slide_to_cancel">Σύρετε για ακύρωση</string>
 </resources>
