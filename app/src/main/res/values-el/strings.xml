@@ -30,7 +30,7 @@
     <string name="hide_muted_reels_setting">Απόκρυψη ιστοριών που βρίσκονται σε σίγαση από τη ροή</string>
     <string name="dm_mark_as_seen_setting">Επισήμανση μηνυμάτων ως αναγνωσμένων μετά την προβολή</string>
     <string name="dm_mark_as_seen_setting_summary">Τα υπόλοιπα μέλη θα γνωρίζουν ότι προβλήθηκε</string>
-    <string name="autoplay_stories_setting">Αυτόματη αναπαραγωγή βίντεο ιστοριών</string>
+    <string name="autoplay_stories_setting">Αυτόματη αναπαραγωγή ιστοριών με βίντεο</string>
     <string name="activity_setting">Ενεργοποίηση ειδοποιήσεων δραστηριότητας</string>
     <string name="story_sort_setting">Ταξινόμηση ροής ιστορίων</string>
     <string name="error_loading_profile">Σφάλμα κατά τη φόρτωση προφίλ! Είναι το όνομα χρήστη έγκυρο; Αν ναι, μπορεί να είστε περιορισμένος.</string>
@@ -299,8 +299,8 @@
     <string name="unknown">Άγνωστο</string>
     <string name="removed_from_favs">Αφαίρεση από τα αγαπημένα!</string>
     <string name="backup_and_restore">Αντίγραφα ασφαλείας &amp; Επαναφορά</string>
-    <string name="auto_backup">Αυτόματο αντίγραφο ασφαλείας</string>
-    <string name="auto_backup_summary">Ξεκινώντας από το Android 6, το χαρακτηριστικό Auto Backup του Android θα ανεβάσει όλες τις ρυθμίσεις εφαρμογών, δεδομένα σύνδεσης λογαριασμού, και τα αγαπημένα σας στο Google Drive, τα οποία μπορούν να επαναφερθούν με την επανεγκατάσταση της εφαρμογής μετά την απεγκατάσταση.</string>
+    <string name="auto_backup">Αυτόματη δημιουργία αντιγράφων ασφαλείας</string>
+    <string name="auto_backup_summary">Από το Android 6 κι έπειτα, το χαρακτηριστικό αυτόματης δημιουργίας αντιγράφων ασφαλείας του Android, θα αναφορτώνει όλες τις ρυθμίσεις της εφαρμογής, τα δεδομένα σύνδεσης του λογαριασμού και τα αγαπημένα στο Google Drive σας. Έτσι, θα μπορούν να επαναφερθούν με την επανεγκατάσταση της εφαρμογής μετά την απεγκατάσταση.</string>
     <string name="auto_backup_warning">Αυτή η προτίμηση δεν έχει καμία επίδραση εάν οι υπηρεσίες Google Play δεν είναι παρούσες, ή εάν το αυτόματο αντίγραφο ασφαλείας είναι απενεργοποιημένο από τις ρυθμίσεις της συσκευής σας. Η απενεργοποίηση εδώ δεν διαγράφει τα υπάρχοντα αντίγραφα.</string>
     <string name="auto_backup_setting">Ενεργοποίηση Αυτόματης Δημιουργίας Αντιγράφων Ασφαλείας</string>
     <string name="manual_backup">Μη αυτόματη δημιουργία αντιγράφων ασφαλείας</string>
@@ -494,7 +494,7 @@
     <string name="copy_reply">Αντιγραφή απάντησης</string>
     <string name="restore">Ανάκτηση</string>
     <string name="backup">Αντίγραφο ασφαλείας</string>
-    <string name="dir_select_default_message">Επιλέξτε ένα φάκελο όπου Barinsta μπορεί να αποθηκεύσει λήψεις και προσωρινά αρχεία.\n\nΜπορείτε να το αλλάξετε αργότερα σε Περισσότερες &gt; Ρυθμίσεις &gt; Λήψεις.</string>
+    <string name="dir_select_default_message">Επιλέξτε έναν φάκελο όπου εκεί θα αποθηκεύονται οι λήψεις και τα προσωρινά αρχεία του Barinsta.\n\nΗ επιλογή σας μπορεί να αλλαχθεί στο Λοιπά&gt; Ρυθμίσεις&gt; Λήψεις.</string>
     <string name="dir_select_reselect_message">Το Android έχει αλλάξει τον τρόπο με τον οποίο οι εφαρμογές μπορούν να έχουν πρόσβαση σε αρχεία και καταλόγους στον αποθηκευτικό χώρο. Αυτή τη στιγμή η Barinsta δεν έχει άδεια πρόσβασης στον ακόλουθο φάκελο:</string>
     <string name="dir_select_permission_revoked_message">Τα δικαιώματα για τον προηγουμένως επιλεγμένο φάκελο ανακλήθηκαν από το σύστημα:</string>
     <string name="dir_select_folder_not_exist">Ο προηγουμένως επιλεγμένος φάκελος δεν υπάρχει τώρα:</string>
