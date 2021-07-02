@@ -41,8 +41,6 @@
     <string name="save_to_folder">Desa a una carpeta personalitzada</string>
     <string name="select_folder">Selecciona la carpeta</string>
     <string name="theme_settings">Tema</string>
-    <string name="login_settings">Només afecta als usuaris amb sessió iniciada:</string>
-    <string name="anonymous_settings">Només afecta als usuaris anònims:</string>
     <string name="select_language">Llengua</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPublicació</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Sigues pacient!</string>
     <string name="view_story_post">Mostrar l\'entrada</string>
     <string name="view_post">Mostrar l\'entrada</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Votar</string>
     <string name="votef_story_poll">Has votat amb èxit!</string>
     <string name="voted_story_poll">Ja has votat!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Desat</string>
     <string name="tagged">Etiquetat</string>
     <string name="dm_person">Missatge</string>
-    <string name="like_without_count">M\'agrada</string>
-    <string name="unlike_without_count">Desfer \"m\'agrada\"</string>
     <string name="bookmark">Marcador</string>
-    <string name="unbookmark">Desfer marcador</string>
     <string name="follow">Seguir</string>
     <string name="unfollow">Deixar de seguir</string>
     <string name="favorite_short" comment="Adjective, not verb">Preferit</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">No s\'ha pogut exportar!</string>
     <string name="refresh">Actualitzar</string>
     <string name="get_cookies">Obtenir cookies</string>
-    <string name="desktop_2fa">Mode escriptori</string>
     <string name="time_settings_title_custom">Utilitza un format personalitzat</string>
     <string name="time_settings_title_separator">Separador</string>
     <string name="time_settings_title_time_format">Format d\'hora</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Descarregar publicacions directament al telèfon!</string>
     <string name="direct_download_loading">S\'estan recuperant les noves publicacions</string>
     <string name="downloader_complete">S\'ha completat la descàrrega</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Descarregant publicació…</string>
     <string name="downloader_downloading_media">Descarregant multimèdia</string>
     <string name="downloader_downloading_pfp">Descarregant la imatge de perfil</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">S\'ha produït un error en crear la carpeta!</string>
     <string name="downloader_error_download_file">S\'ha produït un error en descarregar l\'arxiu</string>
     <string name="downloader_too_many">Només pots descarregar 100 publicacions alhora. No siguis massa cobdiciós!</string>
-    <string name="comment_viewer_copy_comment">Copiar el comentari</string>
-    <string name="comment_viewer_see_likers">Veure m\'agrades del comentari</string>
-    <string name="comment_viewer_reply_comment">Respondre al comentari</string>
-    <string name="comment_viewer_like_comment">Donar \"m\'agrada\" al comentari</string>
-    <string name="comment_viewer_unlike_comment">Treure \"m\'agrada\" al comentari</string>
     <string name="comment_viewer_translate_comment">Traduir comentari</string>
     <string name="comment_viewer_delete_comment">Esborrar comentari</string>
-    <string name="comment_send_empty_comment">No als comentaris buits!</string>
     <string name="comment_view_mention_user_search">Vols cercar el nom d\'usuari?</string>
     <string name="comment_view_mention_hash_search">Vols cercar l\'etiqueta?</string>
     <string name="followers_type_followers">Seguidors</string>
