@@ -41,8 +41,6 @@
     <string name="save_to_folder">Зачувај во друга папка</string>
     <string name="select_folder">Одбери папка</string>
     <string name="theme_settings">Тема</string>
-    <string name="login_settings">Влијае само на корисниците кои се најавени:</string>
-    <string name="anonymous_settings">Влијае на анонимните корисници:</string>
     <string name="select_language">Јазик</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nОбјава</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Биди трпелив!</string>
     <string name="view_story_post">Прегледај Објава</string>
     <string name="view_post">Погледни Објава</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Гласај</string>
     <string name="votef_story_poll">Гласањето беше успешно!</string>
     <string name="voted_story_poll">Вие веќе гласавте!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Зачувано</string>
     <string name="tagged">Означен</string>
     <string name="dm_person">Порака</string>
-    <string name="like_without_count">Лајк</string>
-    <string name="unlike_without_count">Дислајк</string>
     <string name="bookmark">Обележи</string>
-    <string name="unbookmark">Одобележи</string>
     <string name="follow">Следи</string>
     <string name="unfollow">Одследи</string>
     <string name="favorite_short" comment="Adjective, not verb">Омилен</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Неуспешно експортиање!</string>
     <string name="refresh">Обнови</string>
     <string name="get_cookies">Превземи колачиња</string>
-    <string name="desktop_2fa">Десктоп изглед</string>
     <string name="time_settings_title_custom">Користи свој формат</string>
     <string name="time_settings_title_separator">Разделувач</string>
     <string name="time_settings_title_time_format">Формат на време</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Превземи објави во твојот телефон!</string>
     <string name="direct_download_loading">Се превземаат објава(ви)</string>
     <string name="downloader_complete">Преземањето е завршено</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Превземање на Објава…</string>
     <string name="downloader_downloading_media">Се превзема медиум</string>
     <string name="downloader_downloading_pfp">Се превзема профилната слика</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Фатална грешка при креирање папка!</string>
     <string name="downloader_error_download_file">Фатална грешка при превзамање фајл</string>
     <string name="downloader_too_many">Можете само 100 постови наеднаш да превземите. Не бидете алчни!</string>
-    <string name="comment_viewer_copy_comment">Копирај Коментар</string>
-    <string name="comment_viewer_see_likers">Прегледај лајкови на коментар</string>
-    <string name="comment_viewer_reply_comment">Одговори на коментар</string>
-    <string name="comment_viewer_like_comment">Лајкни коментар</string>
-    <string name="comment_viewer_unlike_comment">Одлајкни коментар</string>
     <string name="comment_viewer_translate_comment">Преведи коментар</string>
     <string name="comment_viewer_delete_comment">Избриши коментар</string>
-    <string name="comment_send_empty_comment">Не смее празни коментари!</string>
     <string name="comment_view_mention_user_search">Дали сакате да го пребарате ова корисничко име?</string>
     <string name="comment_view_mention_hash_search">Дали сакате да го пребарате овај хаштаг?</string>
     <string name="followers_type_followers">Следачи</string>
