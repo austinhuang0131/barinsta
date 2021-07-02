@@ -35,9 +35,9 @@
         <item>ହାଲୁକା</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>Instagram default (Unread then read)</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>ଇନଷ୍ଟାଗ୍ରାମ ଅନୁଯାୟୀ ‌(ପ୍ରଥମେ ଦେଖି ନ ଥିବା ଓ ପରେ ଦେଖିଥିବା)</item>
+        <item>ନୂତନ ରୁ ପୁରାତନ</item>
+        <item>ପୁରାତନ ରୁ ନୂତନ</item>
     </string-array>
     <string-array name="separator_presets">
         <item>କିଛି ନୁହେଁ</item>
@@ -57,7 +57,7 @@
     <!--    <item>@navigation/more_nav_graph</item>-->
     <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
-        <item>secs</item>
-        <item>mins</item>
+        <item>ସେକେଣ୍ଡ</item>
+        <item>ମିନିଟ୍</item>
     </string-array>
 </resources>
