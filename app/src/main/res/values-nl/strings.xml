@@ -41,8 +41,6 @@
     <string name="save_to_folder">Opslaan in aangepaste map</string>
     <string name="select_folder">Selecteer map</string>
     <string name="theme_settings">Thema</string>
-    <string name="login_settings">Heeft alleen invloed op ingelogde gebruikers:</string>
-    <string name="anonymous_settings">Heeft alleen invloed op anonieme gebruikers:</string>
     <string name="select_language">Taal</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPost</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Wees geduldig!</string>
     <string name="view_story_post">Bekijk Bericht</string>
     <string name="view_post">Bekijk Bericht</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Stem</string>
     <string name="votef_story_poll">Stem succesvol!</string>
     <string name="voted_story_poll">Je hebt al gestemd!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Opgeslagen</string>
     <string name="tagged">Getagd</string>
     <string name="dm_person">Bericht</string>
-    <string name="like_without_count">Vind ik leuk</string>
-    <string name="unlike_without_count">Vind ik niet meer leuk</string>
     <string name="bookmark">Toevoegen aan favorieten</string>
-    <string name="unbookmark">Verwijderen uit favorieten</string>
     <string name="follow">Volg</string>
     <string name="unfollow">Ontvolg</string>
     <string name="favorite_short" comment="Adjective, not verb">Toevoegen aan favorieten</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Exporteren mislukt!</string>
     <string name="refresh">Ververs</string>
     <string name="get_cookies">Cookies ophalen</string>
-    <string name="desktop_2fa">Desktop Modus</string>
     <string name="time_settings_title_custom">Aangepaste indeling gebruiken</string>
     <string name="time_settings_title_separator">Scheidingsteken</string>
     <string name="time_settings_title_time_format">Tijdnotatie</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Download rechtstreeks naar het apparaat!</string>
     <string name="direct_download_loading">Post(s) ophalen</string>
     <string name="downloader_complete">Download voltooid</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Bericht downloaden…</string>
     <string name="downloader_downloading_media">Media downloaden</string>
     <string name="downloader_downloading_pfp">Profielfoto downloaden</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Fout bij aanmaken map!</string>
     <string name="downloader_error_download_file">Fout bij downloaden bestand</string>
     <string name="downloader_too_many">Je kunt slechts 100 berichten per keer downloaden. Wees niet te hebberig!</string>
-    <string name="comment_viewer_copy_comment">Kopieer reactie</string>
-    <string name="comment_viewer_see_likers">Bekijk reacties likers</string>
-    <string name="comment_viewer_reply_comment">Reageer op opmerking</string>
-    <string name="comment_viewer_like_comment">Vind reactie leuk</string>
-    <string name="comment_viewer_unlike_comment">Vind reactie niet meer leuk</string>
     <string name="comment_viewer_translate_comment">Reactie vertalen</string>
     <string name="comment_viewer_delete_comment">Verwijder reactie</string>
-    <string name="comment_send_empty_comment">Geen lege reacties!</string>
     <string name="comment_view_mention_user_search">Wil je de gebruikersnaam zoeken?</string>
     <string name="comment_view_mention_hash_search">Wil je de hashtag zoeken?</string>
     <string name="followers_type_followers">Volgers</string>
