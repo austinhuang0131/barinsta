@@ -203,7 +203,7 @@
     <string name="direct_download_desc">Stahuje příspěvky přímo do telefonu!</string>
     <string name="direct_download_loading">Načítání příspěvků</string>
     <string name="downloader_complete">Stahování bylo dokončeno</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Připravuje se stahování…</string>
     <string name="downloader_downloading_post">Stahování příspěvku…</string>
     <string name="downloader_downloading_media">Stahování médií</string>
     <string name="downloader_downloading_pfp">Stahování profilového obrázku</string>
