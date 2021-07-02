@@ -41,8 +41,6 @@
     <string name="save_to_folder">Zapisz w folderze niestandardowym</string>
     <string name="select_folder">Wybierz folder</string>
     <string name="theme_settings">Motyw</string>
-    <string name="login_settings">Dotyczy tylko zalogowanych użytkowników:</string>
-    <string name="anonymous_settings">Dotyczy tylko anonimowych użytkowników:</string>
     <string name="select_language">Język</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\npost</item>
@@ -76,7 +74,6 @@
     <string name="be_patient">Bądź cierpliwy!</string>
     <string name="view_story_post">Zobacz post</string>
     <string name="view_post">Zobacz post</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Głosuj</string>
     <string name="votef_story_poll">Zagłosowano pomyślnie!</string>
     <string name="voted_story_poll">Już głosowałeś!</string>
@@ -119,10 +116,7 @@
     <string name="saved">Zapisane</string>
     <string name="tagged">Oznaczono</string>
     <string name="dm_person">Message</string>
-    <string name="like_without_count">Polub</string>
-    <string name="unlike_without_count">Cofnij polubienie</string>
     <string name="bookmark">Zapisz</string>
-    <string name="unbookmark">Usuń z zapisanych</string>
     <string name="follow">Obserwuj</string>
     <string name="unfollow">Przestań obserwować</string>
     <string name="favorite_short" comment="Adjective, not verb">Ulubiony</string>
@@ -150,7 +144,6 @@
     <string name="dialog_export_failed">Eksportowanie nie powiodło się!</string>
     <string name="refresh">Odśwież</string>
     <string name="get_cookies">Pobierz ciasteczka</string>
-    <string name="desktop_2fa">Tryb PC</string>
     <string name="time_settings_title_custom">Niestandardowy format</string>
     <string name="time_settings_title_separator">Separator</string>
     <string name="time_settings_title_time_format">Format czasu</string>
@@ -210,6 +203,7 @@
     <string name="direct_download_desc">Pobiera posty bezpośrednio na telefon!</string>
     <string name="direct_download_loading">Pobieranie post(ów)</string>
     <string name="downloader_complete">Pobieranie zakończone</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Pobieranie wpisu…</string>
     <string name="downloader_downloading_media">Pobieranie multimediów</string>
     <string name="downloader_downloading_pfp">Pobieranie zdjęcia profilowego</string>
@@ -217,14 +211,8 @@
     <string name="downloader_error_creating_folder">Błąd podczas tworzenia folderu!</string>
     <string name="downloader_error_download_file">Błąd podczas pobierania pliku</string>
     <string name="downloader_too_many">Możesz pobrać tylko 100 postów jednocześnie. Nie bądź zbyt chciwy!</string>
-    <string name="comment_viewer_copy_comment">Skopiuj komentarz</string>
-    <string name="comment_viewer_see_likers">Wyświetl polubienia komentarzy</string>
-    <string name="comment_viewer_reply_comment">Odpowiedz na komentarz</string>
-    <string name="comment_viewer_like_comment">Polub komentarz</string>
-    <string name="comment_viewer_unlike_comment">Usuń polubienie komentarza</string>
     <string name="comment_viewer_translate_comment">Tłumacz komentarz</string>
     <string name="comment_viewer_delete_comment">Usuń komentarz</string>
-    <string name="comment_send_empty_comment">Brak komentarzy!</string>
     <string name="comment_view_mention_user_search">Czy chcesz wyszukać przy pomocy nazwy użytkownika?</string>
     <string name="comment_view_mention_hash_search">Czy chcesz wyszukać przy pomocy hashtag\'a?</string>
     <string name="followers_type_followers">Obserwujący</string>
