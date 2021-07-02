@@ -191,7 +191,7 @@
     <string name="direct_download_desc">直接下载至手机!</string>
     <string name="direct_download_loading">读取帖子</string>
     <string name="downloader_complete">下载完成</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">正在准备下载...</string>
     <string name="downloader_downloading_post">帖子下载中…</string>
     <string name="downloader_downloading_media">媒体下载中</string>
     <string name="downloader_downloading_pfp">大头贴下载中</string>
