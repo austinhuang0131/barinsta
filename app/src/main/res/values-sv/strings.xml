@@ -41,8 +41,6 @@
     <string name="save_to_folder">Spara till en anpassad mapp</string>
     <string name="select_folder">Välj mapp</string>
     <string name="theme_settings">Tema</string>
-    <string name="login_settings">Påverkar endast inloggade användare:</string>
-    <string name="anonymous_settings">Påverkar endast anonyma användare:</string>
     <string name="select_language">Språk</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPost</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Håll dig lugn!</string>
     <string name="view_story_post">Visa inlägg</string>
     <string name="view_post">Visa inlägg</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Rösta</string>
     <string name="votef_story_poll">Röstningen lyckades!</string>
     <string name="voted_story_poll">Du har redan röstat!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Sparade</string>
     <string name="tagged">Taggade</string>
     <string name="dm_person">Meddelande</string>
-    <string name="like_without_count">Gilla</string>
-    <string name="unlike_without_count">Sluta gilla</string>
     <string name="bookmark">Bokmärk</string>
-    <string name="unbookmark">Ta bort bokmärke</string>
     <string name="follow">Följ</string>
     <string name="unfollow">Sluta följa</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorit</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Misslyckades med exportering!</string>
     <string name="refresh">Uppdatera</string>
     <string name="get_cookies">Hämta kakor</string>
-    <string name="desktop_2fa">Skrivbordsläge</string>
     <string name="time_settings_title_custom">Använd anpassat format</string>
     <string name="time_settings_title_separator">Avskiljare</string>
     <string name="time_settings_title_time_format">Tidsformat</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Laddar ner inläggen direkt till telefonen!</string>
     <string name="direct_download_loading">Hämtar inlägg(en)</string>
     <string name="downloader_complete">Nerladdningen är färdig</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Laddar ner inlägg…</string>
     <string name="downloader_downloading_media">Laddar ner media</string>
     <string name="downloader_downloading_pfp">Laddar ner profilbild</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Error creating folder!</string>
     <string name="downloader_error_download_file">Error downloading file</string>
     <string name="downloader_too_many">Du kan endast ladda ner 100 inlägg åt gången. Var inte för girig!</string>
-    <string name="comment_viewer_copy_comment">Kopiera kommentaren</string>
-    <string name="comment_viewer_see_likers">Visa gillare av kommentaren</string>
-    <string name="comment_viewer_reply_comment">Svara till kommentaren</string>
-    <string name="comment_viewer_like_comment">Gilla kommentaren</string>
-    <string name="comment_viewer_unlike_comment">Sluta gilla kommentaren</string>
     <string name="comment_viewer_translate_comment">Översätt kommentaren</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_send_empty_comment">Inga tomma kommentarer!</string>
     <string name="comment_view_mention_user_search">Vill du söka på användarnamnet?</string>
     <string name="comment_view_mention_hash_search">Vill du söka på hash-taggen?</string>
     <string name="followers_type_followers">Följare</string>
