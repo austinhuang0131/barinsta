@@ -195,7 +195,7 @@
     <string name="direct_download_desc">Baixar as publicações diretamente no telefone!</string>
     <string name="direct_download_loading">Buscando publicação(ões)</string>
     <string name="downloader_complete">Download concluído</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Preparando o download…</string>
     <string name="downloader_downloading_post">Baixando publicação…</string>
     <string name="downloader_downloading_media">Baixando mídia</string>
     <string name="downloader_downloading_pfp">Baixando foto do perfil</string>
