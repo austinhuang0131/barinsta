@@ -41,8 +41,6 @@
     <string name="save_to_folder">Αποθήκευση σε προσαρμοσμένο φάκελο</string>
     <string name="select_folder">Επιλογή φακέλου</string>
     <string name="theme_settings">Θέμα</string>
-    <string name="login_settings">Επηρεάζει μόνο τους συνδεδεμένους χρήστες:</string>
-    <string name="anonymous_settings">Επηρεάζει μόνο τους ανώνυμους χρήστες:</string>
     <string name="select_language">Γλώσσα</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nΔημοσίευση</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Κάντε υπομονή!</string>
     <string name="view_story_post">Προβολή Δημοσίευσης</string>
     <string name="view_post">Προβολή Δημοσίευσης</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Ψηφίστε</string>
     <string name="votef_story_poll">Η ψήφος ήταν επιτυχής!</string>
     <string name="voted_story_poll">Έχετε ήδη ψηφίσει!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Αποθηκευμένα</string>
     <string name="tagged">Ετικέτες</string>
     <string name="dm_person">Μήνυμα</string>
-    <string name="like_without_count">Μου αρέσει</string>
-    <string name="unlike_without_count">Δε μου αρέσει</string>
     <string name="bookmark">Αποθήκευση σαν σελιδοδείκτης</string>
-    <string name="unbookmark">Διαγραφή σελιδοδείκτη</string>
     <string name="follow">Ακολουθήστε</string>
     <string name="unfollow">Να μην ακολουθώ</string>
     <string name="favorite_short" comment="Adjective, not verb">Αγαπημένα</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Η εξαγωγή απέτυχε!</string>
     <string name="refresh">Ανανέωση</string>
     <string name="get_cookies">Λήψη cookies</string>
-    <string name="desktop_2fa">Λειτουργία Επιφάνειας Εργασίας</string>
     <string name="time_settings_title_custom">Χρήση προσαρμοσμένης μορφής</string>
     <string name="time_settings_title_separator">Διαχωριστικό</string>
     <string name="time_settings_title_time_format">Μορφή Ώρας</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Γίνεται λήψη των δημοσιεύσεων απευθείας στο τηλέφωνο!</string>
     <string name="direct_download_loading">Ανάκτηση δημοσίευσης/-εων</string>
     <string name="downloader_complete">Η λήψη ολοκληρώθηκε</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Γίνεται λήψη της δημοσίευσης…</string>
     <string name="downloader_downloading_media">Γίνεται λήψη πολυμέσων</string>
     <string name="downloader_downloading_pfp">Γίνεται λήψη εικόνας προφίλ</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Σφάλμα κατά τη δημιουργία φακέλου!</string>
     <string name="downloader_error_download_file">Σφάλμα λήψης αρχείου</string>
     <string name="downloader_too_many">Μπορείτε να καταφορτώσετε μόνο 100 δημοσιεύσεις τη φορά. Μην είστε τόσο άπληστος!</string>
-    <string name="comment_viewer_copy_comment">Αντιγραφή σχολίου</string>
-    <string name="comment_viewer_see_likers">Προβολή όσων δήλωσαν ότι τους αρέσει το σχόλιο</string>
-    <string name="comment_viewer_reply_comment">Απάντηση στο σχόλιο</string>
-    <string name="comment_viewer_like_comment">Επισήμανση ως «Μου Αρέσει»</string>
-    <string name="comment_viewer_unlike_comment">Κατάργηση του «Μου Αρέσει»</string>
     <string name="comment_viewer_translate_comment">Μετάφραση σχολίου</string>
     <string name="comment_viewer_delete_comment">Διαγραφή σχολίου</string>
-    <string name="comment_send_empty_comment">Όχι κενά σχόλια!</string>
     <string name="comment_view_mention_user_search">Θέλετε να αναζητήσετε το όνομα χρήστη;</string>
     <string name="comment_view_mention_hash_search">Θέλετε να αναζητήσετε το hashtag;</string>
     <string name="followers_type_followers">Ακόλουθοι</string>
