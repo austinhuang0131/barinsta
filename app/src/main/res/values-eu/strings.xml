@@ -41,8 +41,6 @@
     <string name="save_to_folder">Gorde pertsonalizatutako karpetan</string>
     <string name="select_folder">Hautatu karpeta</string>
     <string name="theme_settings">Gaia</string>
-    <string name="login_settings">Saioa hasi duten erabiltzaileei soilik eragiten die:</string>
-    <string name="anonymous_settings">Erabiltzaile anonimoei soilik eragiten die:</string>
     <string name="select_language">Hizkuntza</string>
     <plurals name="main_posts_count">
         <item quantity="one">Bidalketa\n%s</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Itxaron</string>
     <string name="view_story_post">Ikusi bidalketa</string>
     <string name="view_post">Ikusi bidalketa</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Bozkatu</string>
     <string name="votef_story_poll">Bozka ongi bidali da!</string>
     <string name="voted_story_poll">Jada bozkatu duzu!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Gordeta</string>
     <string name="tagged">Etiketatuta</string>
     <string name="dm_person">Mezua</string>
-    <string name="like_without_count">Atsegitea</string>
-    <string name="unlike_without_count">Ez dut atsegin</string>
     <string name="bookmark">Laster-marka</string>
-    <string name="unbookmark">Laster-marka kendu</string>
     <string name="follow">Jarraitu</string>
     <string name="unfollow">Jarraitzeari utzi</string>
     <string name="favorite_short" comment="Adjective, not verb">Gogokoa</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Esportatzeak huts egin du!</string>
     <string name="refresh">Freskatu</string>
     <string name="get_cookies">Eskuratu cookieak</string>
-    <string name="desktop_2fa">Mahaigaineko modua</string>
     <string name="time_settings_title_custom">Erabili pertsonalizatutako formatua</string>
     <string name="time_settings_title_separator">Bereizlea</string>
     <string name="time_settings_title_time_format">Ordu-formatua</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Bidalketak telefonora zuzenean deskargatzen ditu</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="downloader_complete">Deskarga burutu da</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Bidalketa deskargatzen…</string>
     <string name="downloader_downloading_media">Multimedia deskargatzen</string>
     <string name="downloader_downloading_pfp">Profil-irudia deskargatzen</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Errorea karpeta sortzean!</string>
     <string name="downloader_error_download_file">Errorea fitxategia deskargatzean</string>
     <string name="downloader_too_many">100 bidalketa deskargatu ditzakezu une berean. Ez izan gutiziatsu!</string>
-    <string name="comment_viewer_copy_comment">Kopiatu iruzkina</string>
-    <string name="comment_viewer_see_likers">Ikusi iruzkinen atsegiteak</string>
-    <string name="comment_viewer_reply_comment">Erantzun iruzkinari</string>
-    <string name="comment_viewer_like_comment">Atsegin iruzkina</string>
-    <string name="comment_viewer_unlike_comment">Ez dut atsegin</string>
     <string name="comment_viewer_translate_comment">Itzuli iruzkina</string>
     <string name="comment_viewer_delete_comment">Ezabatu iruzkina</string>
-    <string name="comment_send_empty_comment">Iruzkin hutsik ez!</string>
     <string name="comment_view_mention_user_search">Erabiltzaile-izena bilatu nahi duzu?</string>
     <string name="comment_view_mention_hash_search">Traol-hitza bilatu nahi duzu?</string>
     <string name="followers_type_followers">Jarraitzaileak</string>
