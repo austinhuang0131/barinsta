@@ -41,8 +41,6 @@
     <string name="save_to_folder">Salvar em pasta personalizada</string>
     <string name="select_folder">Selecionar pasta</string>
     <string name="theme_settings">Tema</string>
-    <string name="login_settings">Afeta apenas usuários logados:</string>
-    <string name="anonymous_settings">Afeta apenas usuários anônimos:</string>
     <string name="select_language">Idioma</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPublicação</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Tenha paciência!</string>
     <string name="view_story_post">Ver Publicação</string>
     <string name="view_post">Ver Publicação</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Votar</string>
     <string name="votef_story_poll">Voto enviado!</string>
     <string name="voted_story_poll">Você já votou!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Salvo</string>
     <string name="tagged">Marcado</string>
     <string name="dm_person">Mensagem</string>
-    <string name="like_without_count">Curtir</string>
-    <string name="unlike_without_count">Descurtir</string>
     <string name="bookmark">Salvar</string>
-    <string name="unbookmark">Remover</string>
     <string name="follow">Seguir</string>
     <string name="unfollow">Deixar de seguir</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorito</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Falha ao exportar!</string>
     <string name="refresh">Atualizar</string>
     <string name="get_cookies">Obter cookies</string>
-    <string name="desktop_2fa">Modo Desktop</string>
     <string name="time_settings_title_custom">Usar formato personalizado</string>
     <string name="time_settings_title_separator">Separador</string>
     <string name="time_settings_title_time_format">Formato de hora</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Baixar as publicações diretamente no telefone!</string>
     <string name="direct_download_loading">Buscando publicação(ões)</string>
     <string name="downloader_complete">Download concluído</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Baixando publicação…</string>
     <string name="downloader_downloading_media">Baixando mídia</string>
     <string name="downloader_downloading_pfp">Baixando foto do perfil</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Erro ao criar pasta!</string>
     <string name="downloader_error_download_file">Erro ao baixar arquivo</string>
     <string name="downloader_too_many">Você só pode baixar 100 publicações por vez. Não seja tão ganancioso!</string>
-    <string name="comment_viewer_copy_comment">Copiar comentário</string>
-    <string name="comment_viewer_see_likers">Ver quem curtiu o comentário</string>
-    <string name="comment_viewer_reply_comment">Responder comentário</string>
-    <string name="comment_viewer_like_comment">Curtir comentário</string>
-    <string name="comment_viewer_unlike_comment">Descurtir comentário</string>
     <string name="comment_viewer_translate_comment">Traduzir comentário</string>
     <string name="comment_viewer_delete_comment">Excluir comentário</string>
-    <string name="comment_send_empty_comment">Comentário em branco!</string>
     <string name="comment_view_mention_user_search">Você quer buscar o nome de usuário?</string>
     <string name="comment_view_mention_hash_search">Você quer buscar a hashtag?</string>
     <string name="followers_type_followers">Seguidores</string>
