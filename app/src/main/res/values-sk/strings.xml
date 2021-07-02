@@ -41,8 +41,6 @@
     <string name="save_to_folder">Uložiť do vlastného priečinku</string>
     <string name="select_folder">Vybrať priečinok</string>
     <string name="theme_settings">Téma</string>
-    <string name="login_settings">Platí iba pre prihlásených užívateľov:</string>
-    <string name="anonymous_settings">Platí iba pre neprihlásených užívateľov:</string>
     <string name="select_language">Jazyk</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPríspevok</item>
@@ -76,7 +74,6 @@
     <string name="be_patient">Buďte trpezlivý!</string>
     <string name="view_story_post">Zobraziť príspevok</string>
     <string name="view_post">Zobraziť príspevok</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Hlasovať</string>
     <string name="votef_story_poll">Hlasovanie bolo úspešné!</string>
     <string name="voted_story_poll">Už si hlasoval!</string>
@@ -119,10 +116,7 @@
     <string name="saved">Uložené</string>
     <string name="tagged">Označené</string>
     <string name="dm_person">Správa</string>
-    <string name="like_without_count">Páči sa</string>
-    <string name="unlike_without_count">Nepáči sa</string>
     <string name="bookmark">Záložka</string>
-    <string name="unbookmark">Zrušiť záložku</string>
     <string name="follow">Sledovať</string>
     <string name="unfollow">Zrušiť sledovanie</string>
     <string name="favorite_short" comment="Adjective, not verb">Obľúbené</string>
@@ -150,7 +144,6 @@
     <string name="dialog_export_failed">Export zlyhal!</string>
     <string name="refresh">Obnoviť</string>
     <string name="get_cookies">Získať cookies</string>
-    <string name="desktop_2fa">Režim desktop</string>
     <string name="time_settings_title_custom">Použiť vlastný formát</string>
     <string name="time_settings_title_separator">Oddeľovač</string>
     <string name="time_settings_title_time_format">Formát času</string>
@@ -210,6 +203,7 @@
     <string name="direct_download_desc">Stiahnuť príspevky priamo do telefónu!</string>
     <string name="direct_download_loading">Získavam príspevky</string>
     <string name="downloader_complete">Sťahovanie bolo dokončené</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Sťahujem príspevok…</string>
     <string name="downloader_downloading_media">Sťahujem médiá</string>
     <string name="downloader_downloading_pfp">Sťahujem profilovú fotku</string>
@@ -217,14 +211,8 @@
     <string name="downloader_error_creating_folder">Chyba pri vytváraní priečinka!</string>
     <string name="downloader_error_download_file">Chyba pri sťahovaní súboru</string>
     <string name="downloader_too_many">Môžeš stiahnuť len 100 príspevkov v jeden čas. Nebuď chamtivý/á!</string>
-    <string name="comment_viewer_copy_comment">Kopírovať komentár</string>
-    <string name="comment_viewer_see_likers">Ľudia čo označili \"páči sa mi\"</string>
-    <string name="comment_viewer_reply_comment">Odpovedať na komentár</string>
-    <string name="comment_viewer_like_comment">Páči sa mi</string>
-    <string name="comment_viewer_unlike_comment">Nepáči sa mi</string>
     <string name="comment_viewer_translate_comment">Preložiť komentár</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_send_empty_comment">Komentár je prázdny!</string>
     <string name="comment_view_mention_user_search">Chcete vyhľadať používeteľské meno?</string>
     <string name="comment_view_mention_hash_search">Chcete vyhľadať hashtag?</string>
     <string name="followers_type_followers">Sledovatelia</string>
