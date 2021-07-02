@@ -41,8 +41,6 @@
     <string name="save_to_folder">Uložit do vlastní složky</string>
     <string name="select_folder">Vybrat složku</string>
     <string name="theme_settings">Motiv</string>
-    <string name="login_settings">Týká se pouze přihlášených uživatelů:</string>
-    <string name="anonymous_settings">Týká se pouze anonymních uživatelů:</string>
     <string name="select_language">Jazyk</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPříspěvek</item>
@@ -76,7 +74,6 @@
     <string name="be_patient">Buďte trpěliví!</string>
     <string name="view_story_post">Zobrazit příspěvek</string>
     <string name="view_post">Zobrazit příspěvek</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Hlasovat</string>
     <string name="votef_story_poll">Hlasování úspěšné!</string>
     <string name="voted_story_poll">Již jste hlasovali!</string>
@@ -119,10 +116,7 @@
     <string name="saved">Uložené</string>
     <string name="tagged">Označení</string>
     <string name="dm_person">Zpráva</string>
-    <string name="like_without_count">To se mi líbí</string>
-    <string name="unlike_without_count">Už se mi to nelíbí</string>
     <string name="bookmark">Přidat do záložek</string>
-    <string name="unbookmark">Odebrat záložku</string>
     <string name="follow">Sledovat</string>
     <string name="unfollow">Přestat sledovat</string>
     <string name="favorite_short" comment="Adjective, not verb">Oblíbené</string>
@@ -150,7 +144,6 @@
     <string name="dialog_export_failed">Export se nezdařil!</string>
     <string name="refresh">Načíst znovu</string>
     <string name="get_cookies">Získat cookies</string>
-    <string name="desktop_2fa">Režim počítače</string>
     <string name="time_settings_title_custom">Použít vlastní formát</string>
     <string name="time_settings_title_separator">Oddělovač</string>
     <string name="time_settings_title_time_format">Formát času</string>
@@ -210,6 +203,7 @@
     <string name="direct_download_desc">Stahuje příspěvky přímo do telefonu!</string>
     <string name="direct_download_loading">Načítání příspěvků</string>
     <string name="downloader_complete">Stahování bylo dokončeno</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Stahování příspěvku…</string>
     <string name="downloader_downloading_media">Stahování médií</string>
     <string name="downloader_downloading_pfp">Stahování profilového obrázku</string>
@@ -217,14 +211,8 @@
     <string name="downloader_error_creating_folder">Chyba při vytváření složky!</string>
     <string name="downloader_error_download_file">Chyba při stahování souboru</string>
     <string name="downloader_too_many">Můžete stahovat pouze 100 příspěvků najednou. Nebuďte příliš chamtiví!</string>
-    <string name="comment_viewer_copy_comment">Kopírovat komentář</string>
-    <string name="comment_viewer_see_likers">Zobrazit, komu se komentář líbí</string>
-    <string name="comment_viewer_reply_comment">Odpovědět na komentář</string>
-    <string name="comment_viewer_like_comment">Označit komentář lajkem</string>
-    <string name="comment_viewer_unlike_comment">Odebrat lajk z komentáře</string>
     <string name="comment_viewer_translate_comment">Přeložit komentář</string>
     <string name="comment_viewer_delete_comment">Odstranit komentář</string>
-    <string name="comment_send_empty_comment">Žádné prázdné komentáře!</string>
     <string name="comment_view_mention_user_search">Chcete vyhledat uživatelské jméno?</string>
     <string name="comment_view_mention_hash_search">Chcete vyhledat hashtag?</string>
     <string name="followers_type_followers">Sledující</string>
