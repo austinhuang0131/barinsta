@@ -203,7 +203,7 @@
     <string name="direct_download_desc">Pobiera posty bezpośrednio na telefon!</string>
     <string name="direct_download_loading">Pobieranie post(ów)</string>
     <string name="downloader_complete">Pobieranie zakończone</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Przygotowywanie do pobrania…</string>
     <string name="downloader_downloading_post">Pobieranie wpisu…</string>
     <string name="downloader_downloading_media">Pobieranie multimediów</string>
     <string name="downloader_downloading_pfp">Pobieranie zdjęcia profilowego</string>
