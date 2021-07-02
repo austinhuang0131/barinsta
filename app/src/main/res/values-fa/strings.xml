@@ -41,8 +41,6 @@
     <string name="save_to_folder">ذخیره در پوشه سفارشی</string>
     <string name="select_folder">انتخاب پوشه</string>
     <string name="theme_settings">پوسته</string>
-    <string name="login_settings">فقط بر کاربران وارد شده اثر دارد:</string>
-    <string name="anonymous_settings">فقط بر کاربران ناشناس اثر دارد:</string>
     <string name="select_language">زبان</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\n پست</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">صبور باشید!</string>
     <string name="view_story_post">دیدن فرسته</string>
     <string name="view_post">دیدن فرسته</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">رای دادن</string>
     <string name="votef_story_poll">رای با موفقیت بود!</string>
     <string name="voted_story_poll">در حال حاظر شما رای داده اید!</string>
@@ -112,10 +109,7 @@
     <string name="saved">ذخیره شد</string>
     <string name="tagged">تگ شده</string>
     <string name="dm_person">پیام</string>
-    <string name="like_without_count">پسند</string>
-    <string name="unlike_without_count">ناپسند</string>
     <string name="bookmark">نشانک</string>
-    <string name="unbookmark">حذف نشانک</string>
     <string name="follow">پی‌گرفتن</string>
     <string name="unfollow">پایان پی‌گرفتن</string>
     <string name="favorite_short" comment="Adjective, not verb">برگزیده‌</string>
@@ -143,7 +137,6 @@
     <string name="dialog_export_failed">پشتبان گیری با موفقیت نبود!</string>
     <string name="refresh">تازه سازی</string>
     <string name="get_cookies">گرفتن کوکی ها</string>
-    <string name="desktop_2fa">حالت دسکتاپ</string>
     <string name="time_settings_title_custom">استفاده از فرمت سفارشی</string>
     <string name="time_settings_title_separator">تفکیک کننده</string>
     <string name="time_settings_title_time_format">فرمت زمان</string>
@@ -203,6 +196,7 @@
     <string name="direct_download_desc">دانلود مستقیم پست ها در موبایل!</string>
     <string name="direct_download_loading">آوردن پست (ها)</string>
     <string name="downloader_complete">دانلود کامل شده</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">دریافت پیک…</string>
     <string name="downloader_downloading_media">دانلود رسانه ها</string>
     <string name="downloader_downloading_pfp">دانلود عکس پروفایل</string>
@@ -210,14 +204,8 @@
     <string name="downloader_error_creating_folder">خطا در ایجاد پوشه!</string>
     <string name="downloader_error_download_file">خطا در دانلود فایل</string>
     <string name="downloader_too_many">شما فقط 100 پست در یک زمان میتوانید دانلود کنید. خیلی حریص نباشید!</string>
-    <string name="comment_viewer_copy_comment">کپی دیدگاه</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
-    <string name="comment_viewer_reply_comment">پاسخ به دیدگاه</string>
-    <string name="comment_viewer_like_comment">پسندیدن دیدگاه</string>
-    <string name="comment_viewer_unlike_comment">نپسندیدن دیدگاه</string>
     <string name="comment_viewer_translate_comment">گرداندن دیدگاه</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_send_empty_comment">بدون دیدگاه تهی!</string>
     <string name="comment_view_mention_user_search">ایا میخواهید نام کاربری جستوجو کنید ؟</string>
     <string name="comment_view_mention_hash_search">آیا میخواهید هشتگ جستوجو کنید؟</string>
     <string name="followers_type_followers">پیگیران</string>
