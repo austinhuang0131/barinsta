@@ -41,8 +41,6 @@
     <string name="save_to_folder">Lưu vào thư mục tùy chọn</string>
     <string name="select_folder">Chọn thư mục</string>
     <string name="theme_settings">Giao diện</string>
-    <string name="login_settings">Chỉ ảnh hưởng người dùng đã đăng nhập:</string>
-    <string name="anonymous_settings">Chỉ ảnh hưởng người dùng ẩn danh:</string>
     <string name="select_language">Ngôn ngữ</string>
     <plurals name="main_posts_count">
         <item quantity="other">%s\nBài đăng</item>
@@ -67,7 +65,6 @@
     <string name="be_patient">Hãy kiên nhẫn!</string>
     <string name="view_story_post">Xem Bài đăng</string>
     <string name="view_post">Xem Bài đăng</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Bình chọn</string>
     <string name="votef_story_poll">Bình chọn thành công!</string>
     <string name="voted_story_poll">Bạn đã bình chọn rồi!</string>
@@ -107,10 +104,7 @@
     <string name="saved">Đã lưu</string>
     <string name="tagged">Đã gắn thẻ</string>
     <string name="dm_person">Tin nhắn</string>
-    <string name="like_without_count">Thích</string>
-    <string name="unlike_without_count">Bỏ thích</string>
     <string name="bookmark">Dấu trang</string>
-    <string name="unbookmark">Gỡ dấu trang</string>
     <string name="follow">Theo dõi</string>
     <string name="unfollow">Bỏ theo dõi</string>
     <string name="favorite_short" comment="Adjective, not verb">Yêu thích</string>
@@ -138,7 +132,6 @@
     <string name="dialog_export_failed">Xuất dữ liệu thất bại!</string>
     <string name="refresh">Làm mới</string>
     <string name="get_cookies">Lấy cookies</string>
-    <string name="desktop_2fa">Chế độ máy tính</string>
     <string name="time_settings_title_custom">Dùng định dạng tuỳ chỉnh</string>
     <string name="time_settings_title_separator">Phân cách</string>
     <string name="time_settings_title_time_format">Định dạng Thời gian</string>
@@ -198,6 +191,7 @@
     <string name="direct_download_desc">Tải bài viết xuống trực tiếp về điện thoại!</string>
     <string name="direct_download_loading">Đang nạp bài viết</string>
     <string name="downloader_complete">Tải xuống hoàn tất</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Đang tải xuống bài viết…</string>
     <string name="downloader_downloading_media">Đang tải xuống phương tiện</string>
     <string name="downloader_downloading_pfp">Đang tải xuống ảnh đại diện</string>
@@ -205,14 +199,8 @@
     <string name="downloader_error_creating_folder">Lỗi khi tạo thư mục!</string>
     <string name="downloader_error_download_file">Lỗi khi tải xuống tệp</string>
     <string name="downloader_too_many">Bạn chỉ có thể tải xuống 100 bài cùng một lúc. Đừng tham lam quá!</string>
-    <string name="comment_viewer_copy_comment">Sao chép bình luận</string>
-    <string name="comment_viewer_see_likers">Xem những người đã thích bình luận</string>
-    <string name="comment_viewer_reply_comment">Trả lời bình luận</string>
-    <string name="comment_viewer_like_comment">Thích bình luận</string>
-    <string name="comment_viewer_unlike_comment">Bỏ thích bình luận</string>
     <string name="comment_viewer_translate_comment">Dịch bình luận</string>
     <string name="comment_viewer_delete_comment">Xóa bình luận</string>
-    <string name="comment_send_empty_comment">Không được để trống bình luận!</string>
     <string name="comment_view_mention_user_search">Bạn có muốn tìm tên người dùng không?</string>
     <string name="comment_view_mention_hash_search">Bạn có muốn tìm hashtag không?</string>
     <string name="followers_type_followers">Người theo dõi</string>
