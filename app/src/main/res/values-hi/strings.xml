@@ -41,8 +41,6 @@
     <string name="save_to_folder">खुद के द्बारा निर्धारित फोल्डर पे रखें</string>
     <string name="select_folder">फोल्डर का चयन करें</string>
     <string name="theme_settings">थीम</string>
-    <string name="login_settings">सिर्फ लग इन किए हुए ब्यबहारकारी के लिये</string>
-    <string name="anonymous_settings">गुमनामी लोगों के लिये</string>
     <string name="select_language">भाषा</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nपोस्ट</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">धैर्य रखें!</string>
     <string name="view_story_post">पोस्ट देखें</string>
     <string name="view_post">पोस्ट देखें</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">मत दें</string>
     <string name="votef_story_poll">मतदान सफल!</string>
     <string name="voted_story_poll">आप पहले से ही मत दिये हो!</string>
@@ -112,10 +109,7 @@
     <string name="saved">सेव किया</string>
     <string name="tagged">टैग किये</string>
     <string name="dm_person">संदेश</string>
-    <string name="like_without_count">पसन्द</string>
-    <string name="unlike_without_count">नापसंद</string>
     <string name="bookmark">बुकमार्क</string>
-    <string name="unbookmark">बुकमार्क न करें</string>
     <string name="follow">अनुसरण करे</string>
     <string name="unfollow">अनुसरण ना करें</string>
     <string name="favorite_short" comment="Adjective, not verb">पसंदीदा</string>
@@ -143,7 +137,6 @@
     <string name="dialog_export_failed">निर्यात करने में विफल!</string>
     <string name="refresh">ताज़ा करें:</string>
     <string name="get_cookies">कुकिज पायें</string>
-    <string name="desktop_2fa">डेस्कटप मोड करें</string>
     <string name="time_settings_title_custom">कस्टम फर्माट ब्यबहार करें</string>
     <string name="time_settings_title_separator">सेपरेटर</string>
     <string name="time_settings_title_time_format">समय का स्बरुप</string>
@@ -203,6 +196,7 @@
     <string name="direct_download_desc">पोस्ट को सिधे अपने फोन पर डाउनलोड करें</string>
     <string name="direct_download_loading">पोस्ट(स्) ला रहे हैं</string>
     <string name="downloader_complete">डाउनलोड समाप्त हुआ</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">डाउनलोड जारी है…</string>
     <string name="downloader_downloading_media">मिडीया डाउनलोड हो रहा है</string>
     <string name="downloader_downloading_pfp">प्रोफाइल चित्र डाउनलोड करें</string>
@@ -210,14 +204,8 @@
     <string name="downloader_error_creating_folder">फोलडर बनाने में त्रुटि!</string>
     <string name="downloader_error_download_file">फ़ाइल डाउनलोड करने में त्रुटि</string>
     <string name="downloader_too_many">आप सिर्फ १०० पोस्टस एक बार में डाउनलोड कर सकते हैं. ज्यादा लोभी बनना हानिकारक हैं!</string>
-    <string name="comment_viewer_copy_comment">टिप्पणी कॉपी करें</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
-    <string name="comment_viewer_reply_comment">टिप्पणी का जवाब दें</string>
-    <string name="comment_viewer_like_comment">टिप्पणी को पसन्द करें</string>
-    <string name="comment_viewer_unlike_comment">टिप्पणी को पसन्द न करें</string>
     <string name="comment_viewer_translate_comment">टिप्पणी का अनुवाद करें</string>
     <string name="comment_viewer_delete_comment">टिप्पणी हटाएं</string>
-    <string name="comment_send_empty_comment">रिक्त टिप्पणी न करें!</string>
     <string name="comment_view_mention_user_search">युज़रनेम को ढूंढ़ना चाहते हैं?</string>
     <string name="comment_view_mention_hash_search">हैशटैग को ढूंढ़ना चाहते हैं?</string>
     <string name="followers_type_followers">अनुयायी</string>
