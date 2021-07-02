@@ -41,8 +41,6 @@
     <string name="save_to_folder">Descargar en carpeta personalizada</string>
     <string name="select_folder">Seleccionar carpeta</string>
     <string name="theme_settings">Tema</string>
-    <string name="login_settings">Sólo afecta a cuentas que han iniciado sesión:</string>
-    <string name="anonymous_settings">Sólo afecta a usuarios anónimos:</string>
     <string name="select_language">Idioma</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPublicación</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">¡Sea paciente!</string>
     <string name="view_story_post">Ver publicación</string>
     <string name="view_post">Ver publicación</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Votar</string>
     <string name="votef_story_poll">¡Votación exitosa!</string>
     <string name="voted_story_poll">¡Ya ha votado!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Guardado</string>
     <string name="tagged">Etiquetado</string>
     <string name="dm_person">Mensaje</string>
-    <string name="like_without_count">Me gusta</string>
-    <string name="unlike_without_count">No me gusta</string>
     <string name="bookmark">Añadir marcador</string>
-    <string name="unbookmark">Quitar marcador</string>
     <string name="follow">Seguir</string>
     <string name="unfollow">Dejar de seguir</string>
     <string name="favorite_short" comment="Adjective, not verb">Agregar a favoritos</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">¡Falló la exportación!</string>
     <string name="refresh">Actualizar</string>
     <string name="get_cookies">Obtener cookies</string>
-    <string name="desktop_2fa">Modo escritorio</string>
     <string name="time_settings_title_custom">Usar formato personalizado</string>
     <string name="time_settings_title_separator">Separador</string>
     <string name="time_settings_title_time_format">Formato de tiempo</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">¡Descarga los mensajes directamente al teléfono!</string>
     <string name="direct_download_loading">Obteniendo publicación(es)</string>
     <string name="downloader_complete">Descarga completada</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Descargando publicación…</string>
     <string name="downloader_downloading_media">Descargando multimedia</string>
     <string name="downloader_downloading_pfp">Descargando foto de perfil</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">¡Error al crear carpeta!</string>
     <string name="downloader_error_download_file">Error al descargar archivo</string>
     <string name="downloader_too_many">Sólo puedes descargar 100 publicaciones a la vez. ¡No seas abaricioso!</string>
-    <string name="comment_viewer_copy_comment">Copiar comentario</string>
-    <string name="comment_viewer_see_likers">Ver me gustas del comentario</string>
-    <string name="comment_viewer_reply_comment">Responder a comentario</string>
-    <string name="comment_viewer_like_comment">Dar me gusta a comentario</string>
-    <string name="comment_viewer_unlike_comment">Quitar me gusta a comentario</string>
     <string name="comment_viewer_translate_comment">Traducir comentario</string>
     <string name="comment_viewer_delete_comment">Eliminar comentario</string>
-    <string name="comment_send_empty_comment">¡No hay comentarios vacíos!</string>
     <string name="comment_view_mention_user_search">¿Quieres buscar el nombre de usuario?</string>
     <string name="comment_view_mention_hash_search">¿Quieres buscar el hashtag?</string>
     <string name="followers_type_followers">Seguidores</string>
