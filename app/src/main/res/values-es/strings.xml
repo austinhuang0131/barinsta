@@ -195,7 +195,7 @@
     <string name="direct_download_desc">¡Descarga los mensajes directamente al teléfono!</string>
     <string name="direct_download_loading">Obteniendo publicación(es)</string>
     <string name="downloader_complete">Descarga completada</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Preparando para descargar…</string>
     <string name="downloader_downloading_post">Descargando publicación…</string>
     <string name="downloader_downloading_media">Descargando multimedia</string>
     <string name="downloader_downloading_pfp">Descargando foto de perfil</string>
