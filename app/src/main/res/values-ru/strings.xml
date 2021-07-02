@@ -41,8 +41,6 @@
     <string name="save_to_folder">Сохранить в пользовательскую папку</string>
     <string name="select_folder">Выбрать папку</string>
     <string name="theme_settings">Тема</string>
-    <string name="login_settings">Затрагивает только авторизованных пользователей:</string>
-    <string name="anonymous_settings">Затрагивает только анонимных пользователей:</string>
     <string name="select_language">Язык</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nПубликация</item>
@@ -76,7 +74,6 @@
     <string name="be_patient">Будьте терпеливы!</string>
     <string name="view_story_post">Посмотреть публикацию</string>
     <string name="view_post">Посмотреть публикацию</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Голосовать</string>
     <string name="votef_story_poll">Голосование успешно!</string>
     <string name="voted_story_poll">Вы уже проголосовали!</string>
@@ -119,10 +116,7 @@
     <string name="saved">Сохранено</string>
     <string name="tagged">Отмечено</string>
     <string name="dm_person">Сообщение</string>
-    <string name="like_without_count">Нравится</string>
-    <string name="unlike_without_count">Не нравится</string>
     <string name="bookmark">Закладка</string>
-    <string name="unbookmark">Снять закладку</string>
     <string name="follow">Подписаться</string>
     <string name="unfollow">Отписаться</string>
     <string name="favorite_short" comment="Adjective, not verb">В избранное</string>
@@ -150,7 +144,6 @@
     <string name="dialog_export_failed">Не удалось экспортировать!</string>
     <string name="refresh">Обновить</string>
     <string name="get_cookies">Получить файлы cookie</string>
-    <string name="desktop_2fa">Режим настольного ПК</string>
     <string name="time_settings_title_custom">Использовать пользовательский формат</string>
     <string name="time_settings_title_separator">Разделитель</string>
     <string name="time_settings_title_time_format">Формат времени</string>
@@ -210,6 +203,7 @@
     <string name="direct_download_desc">Скачивает публикации прямо на телефон!</string>
     <string name="direct_download_loading">Получение публикации(ий)</string>
     <string name="downloader_complete">Скачивание завершено</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Скачивание публикации…</string>
     <string name="downloader_downloading_media">Загрузка медиафайлов</string>
     <string name="downloader_downloading_pfp">Загрузка изображения профиля</string>
@@ -217,14 +211,8 @@
     <string name="downloader_error_creating_folder">Ошибка при создании папки!</string>
     <string name="downloader_error_download_file">Ошибка при скачивании файла</string>
     <string name="downloader_too_many">Вы можете скачать только 100 сообщений за раз. Не будьте слишком жадным!</string>
-    <string name="comment_viewer_copy_comment">Копировать комментарий</string>
-    <string name="comment_viewer_see_likers">Просмотр симпатий комментария</string>
-    <string name="comment_viewer_reply_comment">Ответить на комментарий</string>
-    <string name="comment_viewer_like_comment">Мне нравится комментарий</string>
-    <string name="comment_viewer_unlike_comment">Не нравится комментарий</string>
     <string name="comment_viewer_translate_comment">Перевести комментарий</string>
     <string name="comment_viewer_delete_comment">Удалить комментарий</string>
-    <string name="comment_send_empty_comment">Нет пустых комментариев!</string>
     <string name="comment_view_mention_user_search">Вы хотите найти имя пользователя?</string>
     <string name="comment_view_mention_hash_search">Вы хотите найти хештэг?</string>
     <string name="followers_type_followers">Подписчики</string>
