@@ -195,7 +195,7 @@
     <string name="direct_download_desc">Γίνεται λήψη των δημοσιεύσεων απευθείας στο τηλέφωνο!</string>
     <string name="direct_download_loading">Ανάκτηση δημοσίευσης/-εων</string>
     <string name="downloader_complete">Η λήψη ολοκληρώθηκε</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Προετοιμασία για λήψη…</string>
     <string name="downloader_downloading_post">Γίνεται λήψη της δημοσίευσης…</string>
     <string name="downloader_downloading_media">Γίνεται λήψη πολυμέσων</string>
     <string name="downloader_downloading_pfp">Γίνεται λήψη εικόνας προφίλ</string>
