@@ -19,7 +19,7 @@
     <string name="title_favorites">Preferiti</string>
     <string name="title_discover">Scopri</string>
     <string name="title_comments">Commenti</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">Risposte</string>
     <string name="title_notifications">Attività</string>
     <string name="update_check">Verifica aggiornamenti all\'avvio</string>
     <string name="flag_secure">Blocca screenshot &amp; anteprima app</string>
@@ -87,7 +87,7 @@
     <string name="story_mentions">Menzioni</string>
     <string name="priv_acc">Questo Profilo è Privato</string>
     <string name="priv_acc_confirm">Non potrai accederei ai post dopo aver smesso di seguire! Sei sicuro?</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">Sei sicuro?</string>
     <string name="no_acc">Puoi accedere tramite Altro -&gt; Profilo nell\'angolo in basso a destra o puoi visualizzare i profili pubblici senza accedere!</string>
     <string name="empty_acc">Questo Profilo Non ha Post</string>
     <string name="empty_list">Nessun Post Simile!</string>
@@ -195,7 +195,7 @@
     <string name="direct_download_desc">Scarica i post direttamente sul telefono!</string>
     <string name="direct_download_loading">Recuperando i post</string>
     <string name="downloader_complete">Download completato</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Preparazione al download…</string>
     <string name="downloader_downloading_post">Scaricando il post…</string>
     <string name="downloader_downloading_media">Download del media</string>
     <string name="downloader_downloading_pfp">Scaricando l\'immagine del profilo</string>
