@@ -41,8 +41,6 @@
     <string name="save_to_folder">Simpan ke folder khusus</string>
     <string name="select_folder">Pilih folder</string>
     <string name="theme_settings">Tema</string>
-    <string name="login_settings">Hanya memengaruhi pengguna yang sudah masuk:</string>
-    <string name="anonymous_settings">Hanya memengaruhi pengguna anonim:</string>
     <string name="select_language">Bahasa</string>
     <plurals name="main_posts_count">
         <item quantity="other">%s\nKiriman</item>
@@ -67,7 +65,6 @@
     <string name="be_patient">Mohon bersabar!</string>
     <string name="view_story_post">Lihat Kiriman</string>
     <string name="view_post">Lihat Kiriman</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Pilih</string>
     <string name="votef_story_poll">Berhasil memilih!</string>
     <string name="voted_story_poll">Anda sudah memilih!</string>
@@ -107,10 +104,7 @@
     <string name="saved">Tersimpan</string>
     <string name="tagged">Ditandai</string>
     <string name="dm_person">Pesan</string>
-    <string name="like_without_count">Suka</string>
-    <string name="unlike_without_count">Batal Suka</string>
     <string name="bookmark">Markah</string>
-    <string name="unbookmark">Batalkan Markah</string>
     <string name="follow">Ikuti</string>
     <string name="unfollow">Batal Ikuti</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorit</string>
@@ -138,7 +132,6 @@
     <string name="dialog_export_failed">Gagal mengekspor!</string>
     <string name="refresh">Muat ulang</string>
     <string name="get_cookies">Dapatkan cookies</string>
-    <string name="desktop_2fa">Desktop Mode\nuntuk 2FA</string>
     <string name="time_settings_title_custom">Gunakan format suaian</string>
     <string name="time_settings_title_separator">Pemisah</string>
     <string name="time_settings_title_time_format">Format Jam</string>
@@ -198,6 +191,7 @@
     <string name="direct_download_desc">Langsung unduh kiriman ke ponsel!</string>
     <string name="direct_download_loading">Mendapatkan kiriman…</string>
     <string name="downloader_complete">Unduhan selesai</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Mengunduh kiriman…</string>
     <string name="downloader_downloading_media">Mengunduh media</string>
     <string name="downloader_downloading_pfp">Mengunduh foto profil</string>
@@ -205,14 +199,8 @@
     <string name="downloader_error_creating_folder">Galat membuat folder!</string>
     <string name="downloader_error_download_file">Galat mengunduh berkas</string>
     <string name="downloader_too_many">Anda hanya dapat mengunduh 100 kiriman saat bersamaan. Jangan serakah-serakah!</string>
-    <string name="comment_viewer_copy_comment">Salin komentar</string>
-    <string name="comment_viewer_see_likers">Lihat penyuka komentar</string>
-    <string name="comment_viewer_reply_comment">Balas komentar</string>
-    <string name="comment_viewer_like_comment">Suka komentar</string>
-    <string name="comment_viewer_unlike_comment">Batal suka komentar</string>
     <string name="comment_viewer_translate_comment">Terjemahkan komentar</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_send_empty_comment">Ups, komentar kosong!</string>
     <string name="comment_view_mention_user_search">Apakah anda ingin mencari nama pengguna ini?</string>
     <string name="comment_view_mention_hash_search">Apakah anda ingin mencari tagar ini?</string>
     <string name="followers_type_followers">Pengikut</string>
