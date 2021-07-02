@@ -41,8 +41,6 @@
     <string name="save_to_folder">ନିଜେ ସ୍ଥିର କରିଥିବା ଫୋଲଡର ରେ ରଖ।</string>
     <string name="select_folder">ଫୋଲ୍‌ଡର୍‌ ଚୟନ କରନ୍ତୁ</string>
     <string name="theme_settings">ଥିମ</string>
-    <string name="login_settings">କେବଳ ଲଗ ଇନ ହୋଇଥିବା ବ୍ୟବହାରକାରୀଙ୍କ ପାଇଁ:</string>
-    <string name="anonymous_settings">କେବଳ ଲଗ ଇନ ହୋଇନଥିବା ବ୍ୟବହାରକାରୀଙ୍କ ପାଇଁ:</string>
     <string name="select_language">ଭାଷା</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPost</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">ଧୈର୍ଯ୍ୟ ରଖନ୍ତୁ!</string>
     <string name="view_story_post">ପୋଷ୍ଟ ଦେଖନ୍ତୁ</string>
     <string name="view_post">ପୋଷ୍ଟ ଦେଖନ୍ତୁ</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">ମତଦାନ କରନ୍ତୁ |</string>
     <string name="votef_story_poll">ମତଦାନ ସଫଳ!</string>
     <string name="voted_story_poll">ଆପଣ ଭୋଟ୍‌ ଦେଇସାରିଛନ୍ତି!</string>
@@ -111,10 +108,7 @@
     <string name="saved">ସଞ୍ଚୟ ହେଲା</string>
     <string name="tagged">ଟ୍ୟାଗ୍ କରିଛନ୍ତି</string>
     <string name="dm_person">ସନ୍ଦେଶ</string>
-    <string name="like_without_count">ପସନ୍ଦ କରନ୍ତୁ</string>
-    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Bookmark</string>
-    <string name="unbookmark">Unbookmark</string>
     <string name="follow">Follow</string>
     <string name="unfollow">Unfollow</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorite</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Failed to export!</string>
     <string name="refresh">Refresh</string>
     <string name="get_cookies">Get cookies</string>
-    <string name="desktop_2fa">Desktop Mode</string>
     <string name="time_settings_title_custom">Use custom format</string>
     <string name="time_settings_title_separator">Separator</string>
     <string name="time_settings_title_time_format">Time Format</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Downloads posts directly to the phone!</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="downloader_complete">Download completed</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Downloading media</string>
     <string name="downloader_downloading_pfp">Downloading profile picture</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Error creating folder!</string>
     <string name="downloader_error_download_file">Error downloading file</string>
     <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
-    <string name="comment_viewer_copy_comment">Copy comment</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
-    <string name="comment_viewer_reply_comment">Reply to comment</string>
-    <string name="comment_viewer_like_comment">Like comment</string>
-    <string name="comment_viewer_unlike_comment">Unlike comment</string>
     <string name="comment_viewer_translate_comment">Translate comment</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Do you want to search the username?</string>
     <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
     <string name="followers_type_followers">Followers</string>
