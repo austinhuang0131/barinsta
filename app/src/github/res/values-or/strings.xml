@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="enable_sentry">Enable Sentry</string>
-    <string name="sentry_summary">Sentry is a listener/handler for errors that asynchronously sends out the error/event to Sentry.io</string>
-    <string name="sentry_start_next_launch">Sentry will start on next launch</string>
+    <string name="enable_sentry">Sentryକୁ ସକ୍ଷମ କରନ୍ତୁ</string>
+    <string name="sentry_summary">ତ୍ରୁଟି ପାଇଁ ସେଣ୍ଟ୍ରି ହେଉଛି ଏକ ଶ୍ରୋତା ଯାହା ତ୍ରୁଟି / ଘଟଣାକୁ Sentry.io କୁ ପଠାଏ |</string>
+    <string name="sentry_start_next_launch">ପରବର୍ତ୍ତୀ ଲଞ୍ଚଠାରୁ ସେଣ୍ଟ୍ରି ଆରମ୍ଭ ହେବ |</string>
 </resources>
