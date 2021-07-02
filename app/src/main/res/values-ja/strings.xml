@@ -41,8 +41,6 @@
     <string name="save_to_folder">カスタムフォルダーに保存</string>
     <string name="select_folder">フォルダーを選択</string>
     <string name="theme_settings">テーマ</string>
-    <string name="login_settings">ログインユーザーにのみ影響します:</string>
-    <string name="anonymous_settings">匿名ユーザーにのみ影響します:</string>
     <string name="select_language">言語</string>
     <plurals name="main_posts_count">
         <item quantity="other">%s\n件</item>
@@ -67,7 +65,6 @@
     <string name="be_patient">お待ちください</string>
     <string name="view_story_post">投稿を表示</string>
     <string name="view_post">投稿を表示</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">投票</string>
     <string name="votef_story_poll">投票しました！</string>
     <string name="voted_story_poll">すでに投票済みです！</string>
@@ -107,10 +104,7 @@
     <string name="saved">保存</string>
     <string name="tagged">タグ付き</string>
     <string name="dm_person">メッセージ</string>
-    <string name="like_without_count">いいね！</string>
-    <string name="unlike_without_count">いいね！を取り消す</string>
     <string name="bookmark">ブックマーク</string>
-    <string name="unbookmark">ブックマークを解除する</string>
     <string name="follow">フォローする</string>
     <string name="unfollow">フォローを解除</string>
     <string name="favorite_short" comment="Adjective, not verb">お気に入り</string>
@@ -138,7 +132,6 @@
     <string name="dialog_export_failed">エクスポートに失敗しました！</string>
     <string name="refresh">更新</string>
     <string name="get_cookies">Cookie を取得する</string>
-    <string name="desktop_2fa">デスクトップモード</string>
     <string name="time_settings_title_custom">カスタム形式を使用する</string>
     <string name="time_settings_title_separator">区切り記号</string>
     <string name="time_settings_title_time_format">時刻形式</string>
@@ -198,6 +191,7 @@
     <string name="direct_download_desc">投稿を直接ダウンロード！</string>
     <string name="direct_download_loading">投稿を取得中</string>
     <string name="downloader_complete">ダウンロードが完了しました</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">投稿をダウンロード中…</string>
     <string name="downloader_downloading_media">メディアをダウンロード中</string>
     <string name="downloader_downloading_pfp">プロフィール画像をダウンロード中</string>
@@ -205,14 +199,8 @@
     <string name="downloader_error_creating_folder">フォルダの作成中にエラーが発生しました！</string>
     <string name="downloader_error_download_file">ダウンロード中にエラーが発生しました</string>
     <string name="downloader_too_many">一度に100個までの投稿しかダウンロードできません。取り過ぎ注意！</string>
-    <string name="comment_viewer_copy_comment">コメントをコピー</string>
-    <string name="comment_viewer_see_likers">コメントにいいね！したユーザーを表示</string>
-    <string name="comment_viewer_reply_comment">コメントに返信</string>
-    <string name="comment_viewer_like_comment">コメントに いいね！</string>
-    <string name="comment_viewer_unlike_comment">コメントのいいね！を取り消す</string>
     <string name="comment_viewer_translate_comment">コメントを翻訳</string>
     <string name="comment_viewer_delete_comment">コメントを削除</string>
-    <string name="comment_send_empty_comment">メッセージが未入力です！</string>
     <string name="comment_view_mention_user_search">ユーザー名を検索しますか？</string>
     <string name="comment_view_mention_hash_search">ハッシュタグを検索しますか？</string>
     <string name="followers_type_followers">フォロワー</string>
