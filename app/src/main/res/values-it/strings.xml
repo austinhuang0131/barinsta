@@ -41,8 +41,6 @@
     <string name="save_to_folder">Salva alla cartella personalizzata</string>
     <string name="select_folder">Seleziona cartella</string>
     <string name="theme_settings">Tema</string>
-    <string name="login_settings">Influenza solo gli utenti connessi:</string>
-    <string name="anonymous_settings">Influenza solo gli utenti anonimi:</string>
     <string name="select_language">Lingua</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPubblicazione</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Sii paziente!</string>
     <string name="view_story_post">Visualizza Post</string>
     <string name="view_post">Visualizza Post</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Vota</string>
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Salvati</string>
     <string name="tagged">Taggati</string>
     <string name="dm_person">Messaggio</string>
-    <string name="like_without_count">Mi Piace</string>
-    <string name="unlike_without_count">Non mi Piace</string>
     <string name="bookmark">Contrassegna</string>
-    <string name="unbookmark">Rimuovi dai preferiti</string>
     <string name="follow">Segui</string>
     <string name="unfollow">Non Seguire Più</string>
     <string name="favorite_short" comment="Adjective, not verb">Preferito</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Impossibile esportare!</string>
     <string name="refresh">Ricarica</string>
     <string name="get_cookies">Ottieni cookie</string>
-    <string name="desktop_2fa">Modalità Desktop</string>
     <string name="time_settings_title_custom">Usa formato personalizzato</string>
     <string name="time_settings_title_separator">Separatore</string>
     <string name="time_settings_title_time_format">Formato Ora</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Scarica i post direttamente sul telefono!</string>
     <string name="direct_download_loading">Recuperando i post</string>
     <string name="downloader_complete">Download completato</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Scaricando il post…</string>
     <string name="downloader_downloading_media">Download del media</string>
     <string name="downloader_downloading_pfp">Scaricando l\'immagine del profilo</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Errore creando la cartella!</string>
     <string name="downloader_error_download_file">Errore scaricando il file</string>
     <string name="downloader_too_many">Puoi scaricare solo 100 post per volta. Non essere troppo avido!</string>
-    <string name="comment_viewer_copy_comment">Copia commento</string>
-    <string name="comment_viewer_see_likers">Visualizza i mi piace del commento</string>
-    <string name="comment_viewer_reply_comment">Rispondi al commento</string>
-    <string name="comment_viewer_like_comment">Mi Piace il commento</string>
-    <string name="comment_viewer_unlike_comment">Il commento Non mi Piace Più</string>
     <string name="comment_viewer_translate_comment">Traduci commento</string>
     <string name="comment_viewer_delete_comment">Elimina commento</string>
-    <string name="comment_send_empty_comment">Nessun commento vuoto!</string>
     <string name="comment_view_mention_user_search">Vuoi cercare il nome utente?</string>
     <string name="comment_view_mention_hash_search">Vuoi cercare l\'hashtag?</string>
     <string name="followers_type_followers">Seguaci</string>
