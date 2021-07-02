@@ -41,8 +41,6 @@
     <string name="save_to_folder">In benutzerdefiniertem Ordner speichern</string>
     <string name="select_folder">Ordner auswählen</string>
     <string name="theme_settings">Design</string>
-    <string name="login_settings">Betrifft nur angemeldete Benutzer:</string>
-    <string name="anonymous_settings">Betrifft nur anonyme Benutzer:</string>
     <string name="select_language">Sprache</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nBeitrag</item>
@@ -70,7 +68,6 @@
     <string name="be_patient">Sei etwas geduldig!</string>
     <string name="view_story_post">Beitrag anzeigen</string>
     <string name="view_post">Beitrag anzeigen</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">Abstimmung</string>
     <string name="votef_story_poll">Abstimmung erfolgreich!</string>
     <string name="voted_story_poll">Du hast bereits abgestimmt!</string>
@@ -111,10 +108,7 @@
     <string name="saved">Gespeichert</string>
     <string name="tagged">Markiert</string>
     <string name="dm_person">Nachricht</string>
-    <string name="like_without_count">Gefällt mir</string>
-    <string name="unlike_without_count">Gefällt mir nicht mehr</string>
     <string name="bookmark">Lesezeichen</string>
-    <string name="unbookmark">Lesezeichen entfernen</string>
     <string name="follow">Folgen</string>
     <string name="unfollow">Nicht mehr folgen</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorit</string>
@@ -142,7 +136,6 @@
     <string name="dialog_export_failed">Export fehlgeschlagen!</string>
     <string name="refresh">Aktualisieren</string>
     <string name="get_cookies">Cookies abrufen</string>
-    <string name="desktop_2fa">Desktop Modus</string>
     <string name="time_settings_title_custom">Eigenes Format verwenden</string>
     <string name="time_settings_title_separator">Trennzeichen</string>
     <string name="time_settings_title_time_format">Zeiformat</string>
@@ -202,6 +195,7 @@
     <string name="direct_download_desc">Lade Posts direkt auf das Handy herunter!</string>
     <string name="direct_download_loading">Beiträgen abrufen</string>
     <string name="downloader_complete">Download abgeschlossen</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Beitrag wird heruntergeladen…</string>
     <string name="downloader_downloading_media">Medien herunterladen</string>
     <string name="downloader_downloading_pfp">Profilbild wird heruntergeladen</string>
@@ -209,14 +203,8 @@
     <string name="downloader_error_creating_folder">Fehler beim Erstellen des Ordners!</string>
     <string name="downloader_error_download_file">Fehler beim Dateidownload</string>
     <string name="downloader_too_many">Du kannst nur 100 Beiträge gleichzeitig herunterladen. Sei nicht zu gierig!</string>
-    <string name="comment_viewer_copy_comment">Kommentar kopieren</string>
-    <string name="comment_viewer_see_likers">Kommentar-Liker ansehen</string>
-    <string name="comment_viewer_reply_comment">Auf Kommentar antworten</string>
-    <string name="comment_viewer_like_comment">Kommentar gefällt mir</string>
-    <string name="comment_viewer_unlike_comment">Kommentar gefällt mir nicht mehr</string>
     <string name="comment_viewer_translate_comment">Kommentar übersetzen</string>
     <string name="comment_viewer_delete_comment">Kommentar löschen</string>
-    <string name="comment_send_empty_comment">Keine leeren Kommentare!</string>
     <string name="comment_view_mention_user_search">Möchtest du nach dem Benutzernamen suchen?</string>
     <string name="comment_view_mention_hash_search">Möchtest du nach dem Hashtag suchen?</string>
     <string name="followers_type_followers">Abonnenten</string>
