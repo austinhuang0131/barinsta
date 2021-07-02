@@ -41,8 +41,6 @@
     <string name="save_to_folder">保存至自定义文件夹</string>
     <string name="select_folder">选择文件夹</string>
     <string name="theme_settings">主题</string>
-    <string name="login_settings">仅影响登录用户：</string>
-    <string name="anonymous_settings">仅影响匿名用户：</string>
     <string name="select_language">语言</string>
     <plurals name="main_posts_count">
         <item quantity="other">%s\n帖子</item>
@@ -67,7 +65,6 @@
     <string name="be_patient">请耐心等待！</string>
     <string name="view_story_post">查看帖子</string>
     <string name="view_post">查看帖子</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">投票</string>
     <string name="votef_story_poll">投票成功！</string>
     <string name="voted_story_poll">您已投票过了！</string>
@@ -107,10 +104,7 @@
     <string name="saved">已保存</string>
     <string name="tagged">已标记</string>
     <string name="dm_person">消息</string>
-    <string name="like_without_count">赞</string>
-    <string name="unlike_without_count">取消点赞</string>
     <string name="bookmark">加入收藏</string>
-    <string name="unbookmark">解除收藏</string>
     <string name="follow">关注</string>
     <string name="unfollow">脱粉</string>
     <string name="favorite_short" comment="Adjective, not verb">加入收藏</string>
@@ -138,7 +132,6 @@
     <string name="dialog_export_failed">导出失败！</string>
     <string name="refresh">刷新</string>
     <string name="get_cookies">获取 cookies</string>
-    <string name="desktop_2fa">桌面版</string>
     <string name="time_settings_title_custom">使用自定义格式</string>
     <string name="time_settings_title_separator">分界</string>
     <string name="time_settings_title_time_format">时间格式</string>
@@ -198,6 +191,7 @@
     <string name="direct_download_desc">直接下载至手机!</string>
     <string name="direct_download_loading">读取帖子</string>
     <string name="downloader_complete">下载完成</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">帖子下载中…</string>
     <string name="downloader_downloading_media">媒体下载中</string>
     <string name="downloader_downloading_pfp">大头贴下载中</string>
@@ -205,14 +199,8 @@
     <string name="downloader_error_creating_folder">创建文件夹时出错!</string>
     <string name="downloader_error_download_file">下载文件时出错</string>
     <string name="downloader_too_many">您一次只能下载100个帖子。切勿贪得无厌！</string>
-    <string name="comment_viewer_copy_comment">复制评论</string>
-    <string name="comment_viewer_see_likers">查看评论赞</string>
-    <string name="comment_viewer_reply_comment">回复评论</string>
-    <string name="comment_viewer_like_comment">赞评论</string>
-    <string name="comment_viewer_unlike_comment">取消赞</string>
     <string name="comment_viewer_translate_comment">翻译评论</string>
     <string name="comment_viewer_delete_comment">删除评论</string>
-    <string name="comment_send_empty_comment">评论要写字的！</string>
     <string name="comment_view_mention_user_search">要搜索用户名吗?</string>
     <string name="comment_view_mention_hash_search">要搜索标签吗?</string>
     <string name="followers_type_followers">粉丝</string>
