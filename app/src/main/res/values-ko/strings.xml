@@ -41,8 +41,6 @@
     <string name="save_to_folder">Save to custom folder</string>
     <string name="select_folder">폴더 선택</string>
     <string name="theme_settings">테마</string>
-    <string name="login_settings">Only affects logged-in users:</string>
-    <string name="anonymous_settings">Only affects anonymous users:</string>
     <string name="select_language">언어</string>
     <plurals name="main_posts_count">
         <item quantity="other">%s\n게시물</item>
@@ -67,7 +65,6 @@
     <string name="be_patient">기다려주세요.</string>
     <string name="view_story_post">게시물 보기</string>
     <string name="view_post">게시물 보기</string>
-    <string name="spotify">Spotify</string>
     <string name="vote_story_poll">투표</string>
     <string name="votef_story_poll">투표 성공!</string>
     <string name="voted_story_poll">이미 투표하셨습니다</string>
@@ -107,10 +104,7 @@
     <string name="saved">저장됨</string>
     <string name="tagged">태그됨</string>
     <string name="dm_person">메시지</string>
-    <string name="like_without_count">좋아요</string>
-    <string name="unlike_without_count">좋아요 취소</string>
     <string name="bookmark">북마크 하기</string>
-    <string name="unbookmark">북마크에서 제거</string>
     <string name="follow">팔로우</string>
     <string name="unfollow">팔로우 취소</string>
     <string name="favorite_short" comment="Adjective, not verb">즐겨찾기</string>
@@ -138,7 +132,6 @@
     <string name="dialog_export_failed">Failed to export!</string>
     <string name="refresh">새로고침</string>
     <string name="get_cookies">Get cookies</string>
-    <string name="desktop_2fa">Desktop Mode</string>
     <string name="time_settings_title_custom">Use custom format</string>
     <string name="time_settings_title_separator">Separator</string>
     <string name="time_settings_title_time_format">시간 형식</string>
@@ -198,6 +191,7 @@
     <string name="direct_download_desc">Downloads posts directly to the phone!</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="downloader_complete">Download completed</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Downloading media</string>
     <string name="downloader_downloading_pfp">Downloading profile picture</string>
@@ -205,14 +199,8 @@
     <string name="downloader_error_creating_folder">Error creating folder!</string>
     <string name="downloader_error_download_file">Error downloading file</string>
     <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
-    <string name="comment_viewer_copy_comment">댓글 복사</string>
-    <string name="comment_viewer_see_likers">좋아요 보기</string>
-    <string name="comment_viewer_reply_comment">답글 달기</string>
-    <string name="comment_viewer_like_comment">댓글 좋아요</string>
-    <string name="comment_viewer_unlike_comment">댓글 좋아요 삭제</string>
     <string name="comment_viewer_translate_comment">댓글 번역</string>
     <string name="comment_viewer_delete_comment">댓글 삭제</string>
-    <string name="comment_send_empty_comment">빈 댓글이 안 됍니다.</string>
     <string name="comment_view_mention_user_search">Do you want to search the username?</string>
     <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
     <string name="followers_type_followers">팔로워</string>
