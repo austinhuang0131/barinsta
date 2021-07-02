@@ -5,8 +5,6 @@
     <string name="action_dms">Direct Messages</string>
     <string name="action_settings">Settings</string>
     <string name="action_download">Download</string>
-    <string name="action_github" translatable="false">GitHub</string>
-    <string name="action_fdroid" translatable="false">F-Droid</string>
     <string name="action_search">Search username…</string>
     <string name="action_compare">Compare</string>
     <string name="clipboard_error">Error copying text</string>
@@ -44,8 +42,6 @@
     <string name="save_to_folder">Save to custom folder</string>
     <string name="select_folder">Select folder</string>
     <string name="theme_settings">Theme</string>
-    <string name="login_settings">Only affects logged-in users:</string>
-    <string name="anonymous_settings">Only affects anonymous users:</string>
     <string name="select_language">Language</string>
     <plurals name="main_posts_count">
         <item quantity="one">%s\nPost</item>
@@ -73,7 +69,7 @@
     <string name="be_patient">Be patient!</string>
     <string name="view_story_post">View Post</string>
     <string name="view_post">View Post</string>
-    <string name="spotify">Spotify</string>
+    <string name="spotify" translatable="false">Spotify</string>
     <string name="vote_story_poll">Vote</string>
     <string name="votef_story_poll">Vote successful!</string>
     <string name="voted_story_poll">You have already voted!</string>
@@ -114,10 +110,7 @@
     <string name="saved">Saved</string>
     <string name="tagged">Tagged</string>
     <string name="dm_person">Message</string>
-    <string name="like_without_count">Like</string>
-    <string name="unlike_without_count">Unlike</string>
     <string name="bookmark">Bookmark</string>
-    <string name="unbookmark">Unbookmark</string>
     <string name="follow">Follow</string>
     <string name="unfollow">Unfollow</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorite</string>
@@ -145,7 +138,6 @@
     <string name="dialog_export_failed">Failed to export!</string>
     <string name="refresh">Refresh</string>
     <string name="get_cookies">Get cookies</string>
-    <string name="desktop_2fa">Desktop Mode</string>
     <string name="time_settings_title_custom">Use custom format</string>
     <string name="time_settings_title_separator">Separator</string>
     <string name="time_settings_title_time_format">Time Format</string>
@@ -205,6 +197,7 @@
     <string name="direct_download_desc">Downloads posts directly to the phone!</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="downloader_complete">Download completed</string>
+    <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Downloading media</string>
     <string name="downloader_downloading_pfp">Downloading profile picture</string>
@@ -212,14 +205,8 @@
     <string name="downloader_error_creating_folder">Error creating folder!</string>
     <string name="downloader_error_download_file">Error downloading file</string>
     <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
-    <string name="comment_viewer_copy_comment">Copy comment</string>
-    <string name="comment_viewer_see_likers">View comment likers</string>
-    <string name="comment_viewer_reply_comment">Reply to comment</string>
-    <string name="comment_viewer_like_comment">Like comment</string>
-    <string name="comment_viewer_unlike_comment">Unlike comment</string>
     <string name="comment_viewer_translate_comment">Translate comment</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_send_empty_comment">No empty comments!</string>
     <string name="comment_view_mention_user_search">Do you want to search the username?</string>
     <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
     <string name="followers_type_followers">Followers</string>
