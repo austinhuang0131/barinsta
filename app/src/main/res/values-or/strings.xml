@@ -9,7 +9,7 @@
     <string name="clipboard_error">ଲେଖା କପି କରିବାରେ ତ୍ରୁଟି</string>
     <string name="clipboard_copied">କ୍ଲିପବୋର୍ଡରେ କପି କରାଗଲା!</string>
     <string name="report">ରିପୋର୍ଟ କରନ୍ତୁ</string>
-    <string name="set_password">Protect file with password</string>
+    <string name="set_password">ପାସୱାର୍ଡ ଦ୍ବାରା ଫାଇଲକୁ ସୁରକ୍ଷିତ କରନ୍ତୁ</string>
     <string name="password_no_max">ପାସୱାର୍ଡ</string>
     <string name="ok">ଠିକ୍ ଅଛି</string>
     <string name="yes">ହଁ</string>
