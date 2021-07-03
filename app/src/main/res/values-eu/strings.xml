@@ -462,11 +462,11 @@
     <string name="added_keywords">Added keyword: %s to filter list</string>
     <string name="removed_keywords">Removed keyword: %s from filter list</string>
     <string name="marked_as_seen">Ikusita gisa markatuta</string>
-    <string name="delete_unsuccessful">Delete unsuccessful</string>
+    <string name="delete_unsuccessful">Ez da ongi deskargatu</string>
     <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
     <string name="error">Errorea</string>
     <string name="account_logged_out">This account has been logged out.</string>
-    <string name="login_required">Login required!</string>
+    <string name="login_required">Saioa hastea beharrezkoa da!</string>
     <string name="inactive_user">Erabiltzailea ez dago aktibo!</string>
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
@@ -496,8 +496,8 @@
     <string name="clear">Garbitu</string>
     <string name="no_external_map_app">Ez da mapa-aplikaziorik aurkitu!</string>
     <string name="click_to_show_full">Click to show full like count</string>
-    <string name="no_profile_pic_found">No profile pic found!</string>
-    <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
+    <string name="no_profile_pic_found">Irudirik ez da aurkitu!</string>
+    <string name="swipe_up_confirmation">Ziur zaude esteka hau ireki nahi duzula?</string>
     <string name="sending">Bidaltzen...</string>
     <string name="share_via_dm">Partekatu MZ bidez</string>
     <string name="share_link">Partekatu esteka…</string>
