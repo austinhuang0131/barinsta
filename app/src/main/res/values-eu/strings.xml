@@ -195,7 +195,7 @@
     <string name="direct_download_desc">Bidalketak telefonora zuzenean deskargatzen ditu</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="downloader_complete">Deskarga burutu da</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Deskargatzeko prestatzen…</string>
     <string name="downloader_downloading_post">Bidalketa deskargatzen…</string>
     <string name="downloader_downloading_media">Multimedia deskargatzen</string>
     <string name="downloader_downloading_pfp">Profil-irudia deskargatzen</string>
