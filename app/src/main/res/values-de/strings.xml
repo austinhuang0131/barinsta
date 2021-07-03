@@ -19,7 +19,7 @@
     <string name="title_favorites">Favoriten</string>
     <string name="title_discover">Entdecken</string>
     <string name="title_comments">Kommentare</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">Antworten</string>
     <string name="title_notifications">Aktivität</string>
     <string name="update_check">Beim Start auf Updates prüfen</string>
     <string name="flag_secure">Bildschirmfotos &amp; App-Vorschau verhindern</string>
@@ -87,7 +87,7 @@
     <string name="story_mentions">Erwähnungen</string>
     <string name="priv_acc">Dieser Account ist privat</string>
     <string name="priv_acc_confirm">Du wirst nicht mehr auf Beiträge zugreifen können, wenn du entfolgst! Bist du sicher?</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">Bist du sicher?</string>
     <string name="no_acc">Du kannst dich unten rechts über Mehr -&gt; anmelden, oder öffentliche Konten ohne Anmeldung ansehen!</string>
     <string name="empty_acc">Dieses Konto hat keine Beiträge</string>
     <string name="empty_list">Keine derartigen Posts!</string>
@@ -195,7 +195,7 @@
     <string name="direct_download_desc">Lade Posts direkt auf das Handy herunter!</string>
     <string name="direct_download_loading">Beiträgen abrufen</string>
     <string name="downloader_complete">Download abgeschlossen</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Download wird vorbereitet…</string>
     <string name="downloader_downloading_post">Beitrag wird heruntergeladen…</string>
     <string name="downloader_downloading_media">Medien herunterladen</string>
     <string name="downloader_downloading_pfp">Profilbild wird heruntergeladen</string>
@@ -488,7 +488,7 @@
     <string name="dir_select_folder_not_exist">Der zuvor ausgewählte Ordner existiert nicht mehr:</string>
     <string name="dir_select_message2">Wähle das Verzeichnis erneut aus oder wähle ein neues Verzeichnis, indem du unten auf die Schaltfläche klickst.</string>
     <string name="select_a_folder">Kein Ordner ausgewählt!</string>
-    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
+    <string name="dir_select_no_download_folder">Bitte wähle ein Verzeichnis aus deinem Speicher, nicht eine Kategorie in der Seitenleiste.\n(%s)</string>
     <string name="dir_select_success_message">Erfolg! Bitte warten. App wird gestartet…</string>
     <string name="barinsta_folder">Barinsta-Ordner</string>
     <string name="top">Anfang</string>
