@@ -100,20 +100,20 @@
     <string name="saved_create_collection">ନୂତନ ସଂଗ୍ରହ ସୃଷ୍ଟି କରନ୍ତୁ</string>
     <string name="edit_collection">ସଂଗ୍ରହଟିର ନାମ ବଦଳାନ୍ତୁ</string>
     <string name="delete_collection">ସଂଗ୍ରହ ହଟାନ୍ତୁ</string>
-    <string name="delete_collection_confirm">Are you sure you want to delete this collection?</string>
-    <string name="delete_collection_note">All contained media will remain in other collections.</string>
-    <string name="add_to_collection">Add to collection...</string>
-    <string name="remove_from_collection">Remove from collection</string>
+    <string name="delete_collection_confirm">କଣ ଆପଣ ଏହି ସଂଗ୍ରହକୁ ବିଲୋପ କରିବାକୁ ନିଶ୍ଚିତ?</string>
+    <string name="delete_collection_note">ଏହା ଧାରଣ କରିଥିବା ସମସ୍ତ ମିଡିଆ ଅନ୍ୟ ସଂଗ୍ରହରେ ରହିବ |</string>
+    <string name="add_to_collection">ସଂଗ୍ରହରେ ଯୋଡ଼ନ୍ତୁ...</string>
+    <string name="remove_from_collection">ସଂଗ୍ରହରୁ କାଢନ୍ତୁ</string>
     <string name="liked">ପସନ୍ଦ କରିଛନ୍ତି</string>
     <string name="saved">ସଞ୍ଚୟ ହେଲା</string>
     <string name="tagged">ଟ୍ୟାଗ୍ କରିଛନ୍ତି</string>
     <string name="dm_person">ସନ୍ଦେଶ</string>
-    <string name="bookmark">Bookmark</string>
+    <string name="bookmark">ବୁକମାର୍କ କରନ୍ତୁ</string>
     <string name="follow">Follow</string>
-    <string name="unfollow">Unfollow</string>
-    <string name="favorite_short" comment="Adjective, not verb">Favorite</string>
-    <string name="block">Block</string>
-    <string name="unblock">Unblock</string>
+    <string name="unfollow">ଅନୁସରଣ କରନ୍ତୁ ନାହିଁ</string>
+    <string name="favorite_short" comment="Adjective, not verb">ପସନ୍ଦିତ</string>
+    <string name="block">ଅବରୋଧ କରନ୍ତୁ |</string>
+    <string name="unblock">ଅବରୋଧ ହଟାନ୍ତୁ</string>
     <string name="restrict">Restrict</string>
     <string name="unrestrict">Unrestrict</string>
     <string name="mute_stories">Mute stories</string>
