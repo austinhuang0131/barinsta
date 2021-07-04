@@ -35,7 +35,7 @@
         <item>हल्का</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>(\"स्टोरी_की_छटाई\")</item>
+        <item>सिस्टम निर्धारित (नए से पुराने)</item>
         <item>नए से पुराना</item>
         <item>पुराने से नया</item>
     </string-array>
