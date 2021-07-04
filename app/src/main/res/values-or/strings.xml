@@ -33,10 +33,10 @@
     <string name="autoplay_stories_setting">Autoplay video stories</string>
     <string name="activity_setting">କାର୍ଯ୍ୟକଳାପ ସୂଚନା ଦେଖାନ୍ତୁ</string>
     <string name="story_sort_setting">କାହାଣୀଗୁଡିକ ଶ୍ରେଣୀବଦ୍ଧ କରନ୍ତୁ</string>
-    <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
-    <string name="error_loading_profile_loggedin">Error loading profile! Is the username valid? Or did they block you?</string>
-    <string name="error_loading_hashtag">Error loading hashtag! Is the name valid?</string>
-    <string name="error_loading_location">Error loading location! Is the URL valid?</string>
+    <string name="error_loading_profile">ପ୍ରୋଫାଇଲ୍ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି! ଉପଯୋଗକର୍ତ୍ତା ନାମ ସଠିକ କି? ଯଦି ଠିକ ଅଛି, ତେବେ ଆପଣ instagram ଦ୍ବାରା ସୀମିତ ହୋଇପାରନ୍ତି |</string>
+    <string name="error_loading_profile_loggedin">ପ୍ରୋଫାଇଲ୍ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି! ଉପଯୋଗକର୍ତ୍ତା ନାମ ସଠିକ କି? କିମ୍ବା ସେମାନେ ତୁମକୁ ଅବରୋଧ କରିଛନ୍ତି କି?</string>
+    <string name="error_loading_hashtag">ହ୍ୟାସଟ୍ୟାଗ୍ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି! ନାମ ଠିକ୍ ତ?</string>
+    <string name="error_loading_location">ସ୍ଥାନ ଲୋଡ୍ କରିବାରେ ତ୍ରୁଟି! ଲିଙ୍କ୍ ଠିକ୍ ତ?</string>
     <string name="error_creating_folders">ଡ଼ାଉନଲୋଡ଼ ଫୋଲଡ଼ର ସୃଷ୍ଟି କରିବାରେ ତ୍ରୁଟି ପରିଲକ୍ଷିତ ହେଉଛି।</string>
     <string name="save_to_folder">ନିଜେ ସ୍ଥିର କରିଥିବା ଫୋଲଡର ରେ ରଖ।</string>
     <string name="select_folder">ଫୋଲ୍‌ଡର୍‌ ଚୟନ କରନ୍ତୁ</string>
