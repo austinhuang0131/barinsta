@@ -43,12 +43,12 @@
     <string name="theme_settings">ଥିମ</string>
     <string name="select_language">ଭାଷା</string>
     <plurals name="main_posts_count">
-        <item quantity="one">%s\nPost</item>
-        <item quantity="other">%s\nPosts</item>
+        <item quantity="one">%s\n ପୋଷ୍ଟ</item>
+        <item quantity="other">%s\nପୋଷ୍ଟସ</item>
     </plurals>
     <plurals name="main_posts_count_inline">
-        <item quantity="one">%s Post</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="one">%s ପୋଷ୍ଟ</item>
+        <item quantity="other">%s ପୋଷ୍ଟସ</item>
     </plurals>
     <plurals name="main_posts_followers">
         <item quantity="one">%s\nFollower</item>
@@ -56,10 +56,10 @@
     </plurals>
     <string name="main_posts_following">%s\nଅନୁସରଣ କରୁଛନ୍ତି</string>
     <string name="post_viewer_autoplay_video">ଭିଡ଼ିଓ ସ୍ୱତଃ ଚାଲୁ କର</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">ପ୍ରଚ୍ଛଦପଟରେ ଭିଡିଓ ଜାରି ରଖନ୍ତୁ |</string>
+    <string name="post_viewer_background_play_summary">ଆପ୍ ଫୋକସ୍ ବାହାରେ ଥିବାବେଳେ ଭିଡିଓଗୁଡିକୁ pause କରନ୍ତୁ ନାହିଁ |</string>
     <string name="post_viewer_muted_autoplay">ସର୍ବଦା ଭିଡ଼ିଓକୁ ଶବ୍ଦହୀନ ରଖ</string>
-    <string name="post_viewer_show_captions">Always show post captions</string>
+    <string name="post_viewer_show_captions">ସର୍ବଦା ପୋଷ୍ଟ କ୍ୟାପସନ୍ ଦେଖାନ୍ତୁ |</string>
     <string name="post_viewer_download_dialog_title">ଡାଉନଲୋଡ଼ କରିବା ପାଇଁ ଚୟନ କରନ୍ତୁ</string>
     <string name="post_viewer_download_current">ସମ୍ପ୍ରତି</string>
     <string name="post_viewer_download_album">ସମସ୍ତ ଆଲବମ</string>
@@ -87,7 +87,7 @@
     <string name="story_mentions">ଉଲ୍ଲେଖଗୁ‌‍‌‌‌‌‌‌‌‌‌‌‌ଡିକ</string>
     <string name="priv_acc">ଏହି ଏକାଉଣ୍ଟ ଗୁପ୍ତ ଅଟେ</string>
     <string name="priv_acc_confirm">ଆପଣ ଅନୁସରଣ ନ କଲେ ପୋଷ୍ଟଗୁଡିକୁ ପ୍ରବେଶ କରିବାକୁ ସମର୍ଥ ହେବେ ନାହିଁ! ଆପଣ ନିଶ୍ଚିତ କି?</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">ଆପଣ ନିଶ୍ଚିତ ତ?</string>
     <string name="no_acc">ଆପଣ ନିମ୍ନ - ଡାହାଣ କୋଣରେ ଅଧିକ -&gt; ଆକାଉଣ୍ଟ୍ ମାଧ୍ୟମରେ ଲଗ୍ ଇନ୍ କରିପାରିବେ କିମ୍ବା ଆପଣ ଲଗ୍ଇନ୍ ବିନା ସର୍ବସାଧାରଣ ଆକାଉଣ୍ଟ୍ ଦେଖିପାରିବେ |!</string>
     <string name="empty_acc">ଏହି ଆକାଉଣ୍ଟରେ କୌଣସି ପୋଷ୍ଟ ନାହିଁ |</string>
     <string name="empty_list">ଏପରି କୌଣସି ପୋଷ୍ଟ ନାହିଁ!</string>
@@ -97,9 +97,9 @@
     <string name="remove_all_acc">ସମସ୍ତ ଏକାଉଣ୍ଟ ହଟାନ୍ତୁ</string>
     <string name="remove_all_acc_warning">ଏହା ଆପରୁ ସମସ୍ତ ଯୋଡା ଯାଇଥିବା ଖାତାଗୁଡ଼ିକୁ ଅପସାରଣ କରିବ! \n କେବଳ ଗୋଟିଏ ଖାତା ଅପସାରଣ କରିବା ପାଇଁ ଆକାଉଣ୍ଟ୍ ସୁଇଚର୍ ରୁ ଆକାଉଣ୍ଟକୁ ଲମ୍ବା ଟ୍ୟାପ୍ କରନ୍ତୁ |\nଆପଣ ସମସ୍ତ ଯୋଡା ଯାଇଥିବା ଖାତାଗୁଡ଼ିକୁ ଅପସାରଣ କରିବାକୁ ନିଶ୍ଚିତ ତ?</string>
     <string name="time_settings">ଦିନାଙ୍କ ସ୍ୱରୂପ</string>
-    <string name="saved_create_collection">Create new collection</string>
-    <string name="edit_collection">Edit collection name</string>
-    <string name="delete_collection">Delete collection</string>
+    <string name="saved_create_collection">ନୂତନ ସଂଗ୍ରହ ସୃଷ୍ଟି କରନ୍ତୁ</string>
+    <string name="edit_collection">ସଂଗ୍ରହଟିର ନାମ ବଦଳାନ୍ତୁ</string>
+    <string name="delete_collection">ସଂଗ୍ରହ ହଟାନ୍ତୁ</string>
     <string name="delete_collection_confirm">Are you sure you want to delete this collection?</string>
     <string name="delete_collection_note">All contained media will remain in other collections.</string>
     <string name="add_to_collection">Add to collection...</string>
