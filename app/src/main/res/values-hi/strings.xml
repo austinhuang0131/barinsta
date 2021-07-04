@@ -19,7 +19,7 @@
     <string name="title_favorites">पसंदीदा</string>
     <string name="title_discover">खोजिए</string>
     <string name="title_comments">टिप्पणियाँ</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">जवाब</string>
     <string name="title_notifications">कार्यकलाप</string>
     <string name="update_check">खुलने पर अपडेट के लिए जाँच करें</string>
     <string name="flag_secure">स्क्रीनशॉट को ब्लॉक करें &amp; ऐप प्रीव्यू</string>
@@ -30,7 +30,7 @@
     <string name="hide_muted_reels_setting">फ़ीड से म्यूट की गई स्टोरीस छिपाएं</string>
     <string name="dm_mark_as_seen_setting">तुम देखने के बाद सीधा संदेश को \"दिखागया\" लिखा जाएगा</string>
     <string name="dm_mark_as_seen_setting_summary">अलग सदस्य जानेंगे कि तुम देखे हो</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">व्हिडिओ स्टोरी ऑटो प्ले करे</string>
     <string name="activity_setting">क्रियाकलाप सूचनाएँ दिखायें</string>
     <string name="story_sort_setting">फ़ीड स्टोरीज क्रमबद्ध करें</string>
     <string name="error_loading_profile">प्रोफ़ाइल लोड करने में एरर! क्या यूजरनाम मान्य है? यदि हां, तो आप सीमित हो सकते हैं.</string>
@@ -88,7 +88,7 @@
     <string name="priv_acc">यह एकाउॅट निजी है</string>
     <string name="priv_acc_confirm">अनफलो चे बाद आप पोस्ट तक पहुंच नहिं पाओगे!
 आप निश्चित हैं?</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">क्या आप सुनिश्चित हैं?</string>
     <string name="no_acc">आप लग इन और तरिकें के साथ कर सकते हो -&gt; दक्षिण के निचे कोने में एकाउॅट पर या आप सार्बजनीन एकाउॅट को बिना लग इन के देख सकते हो!</string>
     <string name="empty_acc">इसी एकाउॅट में कोई पोस्ट नहीं है।</string>
     <string name="empty_list">एसे कोई पोस्ट नहीं है!</string>
@@ -160,11 +160,11 @@
     <string name="dms_inbox_shared_profile">%s ने @%s. द्वारा एक प्रोफ़ाइल शेयर की</string>
     <string name="dms_inbox_shared_location">%s ने एक स्थान शेयर किया: %s</string>
     <string name="dms_inbox_shared_highlight">%s ने @%s. द्वारा एक कहानी हाइलाइट शेयर की</string>
-    <string name="dms_inbox_shared_story">%s shared a story by @%s</string>
-    <string name="dms_inbox_shared_voice">%s sent a voice message</string>
-    <string name="dms_inbox_shared_clip">%s shared a clip by @%s</string>
-    <string name="dms_inbox_shared_igtv">%s shared an IGTV video by @%s</string>
-    <string name="dms_inbox_replied_story_outgoing">You replied to their story: %s</string>
+    <string name="dms_inbox_shared_story">%s ने @%s. द्वारा एक स्टोरी शेयर की</string>
+    <string name="dms_inbox_shared_voice">%s ने व्हॉईस मेसेज भेजा</string>
+    <string name="dms_inbox_shared_clip">%s ने @%s द्वारा एक क्लिप भेजी</string>
+    <string name="dms_inbox_shared_igtv">%s ने @%s द्वारा एक IGTV व्हिडिओ भेजा</string>
+    <string name="dms_inbox_replied_story_outgoing">आपने %s की स्टोरी को रिप्लाय किया</string>
     <string name="dms_inbox_replied_story_incoming">%s replied to your story: %s</string>
     <string name="dms_inbox_reacted_story_outgoing">You reacted to their story: %s</string>
     <string name="dms_inbox_reacted_story_incoming">%s reacted to your story: %s</string>
