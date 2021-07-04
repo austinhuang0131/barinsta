@@ -31,19 +31,19 @@
     <string-array name="theme_presets">
         <item>सिस्टम के अनुसार</item>
         <item>बैटरी स्तर के अनुसार</item>
-        <item>गहरा</item>
+        <item>डार्क</item>
         <item>हल्का</item>
     </string-array>
     <string-array name="story_sorts">
         <item>(\"स्टोरी_की_छटाई\")</item>
-        <item>From newest to oldest</item>
-        <item>From oldest to newest</item>
+        <item>नए से पुराना</item>
+        <item>पुराने से नया</item>
     </string-array>
     <string-array name="separator_presets">
         <item>कुछ नहीं</item>
         <item>\@</item>
         <item>पर</item>
-        <item>पर</item>
+        <item>चालू</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
