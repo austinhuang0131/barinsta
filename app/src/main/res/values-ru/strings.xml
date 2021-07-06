@@ -74,7 +74,7 @@
     <string name="be_patient">Будьте терпеливы!</string>
     <string name="view_story_post">Посмотреть публикацию</string>
     <string name="view_post">Посмотреть публикацию</string>
-    <string name="vote_story_poll">Голосовать</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Голосование успешно!</string>
     <string name="voted_story_poll">Вы уже проголосовали!</string>
     <string name="respond_story">Отреагировать</string>
@@ -93,6 +93,7 @@
     <string name="story_slider">Ползунок</string>
     <string name="story_quizzed">Вы уже ответили!</string>
     <string name="story_mentions">Упоминания</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Это частная учётная запись</string>
     <string name="priv_acc_confirm">Вы не сможете получить доступ к публикациям после отписки! Вы уверены?</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -110,7 +111,7 @@
     <string name="delete_collection">Удалить коллекцию</string>
     <string name="delete_collection_confirm">Вы действительно хотите удалить эту коллекцию?</string>
     <string name="delete_collection_note">Всё медиа содержимое сохранится в других коллекциях.</string>
-    <string name="add_to_collection">Добавить в коллекцию...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Удалить из коллекции</string>
     <string name="liked">Понравилось</string>
     <string name="saved">Сохранено</string>
@@ -189,9 +190,9 @@
     <string name="dms_inbox_raven_media_screenshot">Сделан снимок экрана</string>
     <string name="dms_inbox_raven_media_cant_deliver">Не удаётся доставить</string>
     <string name="dms_inbox_error_null_count">Количество непрочитанных сообщений неизвестно!</string>
-    <string name="dms_thread_message_hint">Сообщение...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Нажмите и удерживайте, чтобы записать звук</string>
-    <string name="dms_thread_updating">Обновление...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Покинуть чат</string>
     <string name="dms_action_leave_question">Покинуть эту беседу?</string>
     <string name="dms_action_kick">Выгнать</string>
@@ -328,7 +329,7 @@
     <string name="comment">Комментировать</string>
     <string name="layout">Формат</string>
     <string name="feed_stories">Истории ленты новостей</string>
-    <string name="opening_post">Открытие публикации...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Поделиться</string>
     <string name="layout_style">Внешний вид</string>
     <string name="column_count">Количество столбцов</string>
@@ -516,7 +517,7 @@
     <string name="click_to_show_full">Нажмите, чтобы показать полное число лайков</string>
     <string name="no_profile_pic_found">Картинка профиля не найдена!</string>
     <string name="swipe_up_confirmation">Вы действительно хотите открыть эту ссылку?</string>
-    <string name="sending">Отправляю...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Поделиться в ЛС</string>
     <string name="share_link">Поделиться ссылкой…</string>
     <string name="slide_to_cancel">Сдвиньте для отмены</string>
