@@ -65,7 +65,7 @@
     <string name="be_patient">耐心一點！</string>
     <string name="view_story_post">查看文章</string>
     <string name="view_post">查看文章</string>
-    <string name="vote_story_poll">投票</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">投票成功！</string>
     <string name="voted_story_poll">您已經投過票了！</string>
     <string name="respond_story">回覆</string>
@@ -81,6 +81,7 @@
     <string name="story_slider">滑桿</string>
     <string name="story_quizzed">您已經回答了！</string>
     <string name="story_mentions">提及</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">此帳戶為私人帳戶</string>
     <string name="priv_acc_confirm">取消關注後，您將無法閱讀人家的貼文！你確定嗎？</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -98,7 +99,7 @@
     <string name="delete_collection">刪除收藏</string>
     <string name="delete_collection_confirm">確定刪除此收藏？</string>
     <string name="delete_collection_note">所有包含的多媒體將會保留於其他收藏夾中。</string>
-    <string name="add_to_collection">新增至收藏...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">從收藏中移除</string>
     <string name="liked">已按讚</string>
     <string name="saved">已儲存</string>
@@ -177,9 +178,9 @@
     <string name="dms_inbox_raven_media_screenshot">已截圖</string>
     <string name="dms_inbox_raven_media_cant_deliver">無法傳送</string>
     <string name="dms_inbox_error_null_count">未讀計數錯誤！</string>
-    <string name="dms_thread_message_hint">撰寫訊息...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">長按即可錄製語音訊息</string>
-    <string name="dms_thread_updating">更新中...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">離開聊天</string>
     <string name="dms_action_leave_question">離開此聊天室？</string>
     <string name="dms_action_kick">踢除</string>
@@ -316,7 +317,7 @@
     <string name="comment">評論</string>
     <string name="layout">佈局</string>
     <string name="feed_stories">限時動態</string>
-    <string name="opening_post">開啟貼文中…</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">分享</string>
     <string name="layout_style">佈局樣式</string>
     <string name="column_count">欄位數量</string>
@@ -489,7 +490,7 @@
     <string name="click_to_show_full">點選以顯示完整的按讚數量</string>
     <string name="no_profile_pic_found">找不到大頭貼照</string>
     <string name="swipe_up_confirmation">您確定要打開此連結嗎？</string>
-    <string name="sending">傳送中…</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">透過私訊分享</string>
     <string name="share_link">分享連結</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
