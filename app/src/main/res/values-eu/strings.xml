@@ -68,7 +68,7 @@
     <string name="be_patient">Itxaron</string>
     <string name="view_story_post">Ikusi bidalketa</string>
     <string name="view_post">Ikusi bidalketa</string>
-    <string name="vote_story_poll">Bozkatu</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Bozka ongi bidali da!</string>
     <string name="voted_story_poll">Jada bozkatu duzu!</string>
     <string name="respond_story">Erantzun</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Irristatze-barra</string>
     <string name="story_quizzed">Dagoeneko erantzun duzu!</string>
     <string name="story_mentions">Aipamenak</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Kontu hau pribatua da</string>
     <string name="priv_acc_confirm">Ezingo dituzu bidalketak ikusi jarraitzeari utzi ondoren. Ziur zaude?</string>
     <string name="are_you_sure">Ziur zaude?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Ezabatu bilduma</string>
     <string name="delete_collection_confirm">Ziur zaude bilduma hau ezabatu nahi duzula?</string>
     <string name="delete_collection_note">All contained media will remain in other collections.</string>
-    <string name="add_to_collection">Gehitu bildumara...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Kendu bildumatik</string>
     <string name="liked">Atsegiteak</string>
     <string name="saved">Gordeta</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Pantaila-argazkia aterata</string>
     <string name="dms_inbox_raven_media_cant_deliver">Ez da iritsi</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Mezua...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Sakatu eta mantendu audioa grabatzeko</string>
-    <string name="dms_thread_updating">Eguneratzen...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Utzi txata</string>
     <string name="dms_action_leave_question">Utzi txat hau?</string>
     <string name="dms_action_kick">Bota</string>
@@ -320,7 +321,7 @@
     <string name="comment">Iruzkina</string>
     <string name="layout">Antolamendua</string>
     <string name="feed_stories">Istorioen jarioa</string>
-    <string name="opening_post">Bidalketa irekitzen...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Partekatu</string>
     <string name="layout_style">Diseinua</string>
     <string name="column_count">Zutabe kopurua</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">Irudirik ez da aurkitu!</string>
     <string name="swipe_up_confirmation">Ziur zaude esteka hau ireki nahi duzula?</string>
-    <string name="sending">Bidaltzen...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Partekatu MZ bidez</string>
     <string name="share_link">Partekatu esteka…</string>
     <string name="slide_to_cancel">Irristatu uzteko</string>
