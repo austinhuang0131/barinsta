@@ -68,7 +68,7 @@
     <string name="be_patient">Sigues pacient!</string>
     <string name="view_story_post">Mostrar l\'entrada</string>
     <string name="view_post">Mostrar l\'entrada</string>
-    <string name="vote_story_poll">Votar</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Has votat amb èxit!</string>
     <string name="voted_story_poll">Ja has votat!</string>
     <string name="respond_story">Contestar</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Desplaçador</string>
     <string name="story_quizzed">Ja has contestat!</string>
     <string name="story_mentions">Mencions</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Aquest compte és privat</string>
     <string name="priv_acc_confirm">Després de deixar de seguir, no podràs accedir a les publicacions. Estàs segur?</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Suprimeix la col·lecció</string>
     <string name="delete_collection_confirm">Estàs segur de voler suprimir aquesta col·lecció?</string>
     <string name="delete_collection_note">Tots els mitjans continguts romandran en altres col·leccions.</string>
-    <string name="add_to_collection">Afegir a la coŀlecció...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Eliminar de la coŀlecció</string>
     <string name="liked">M\'agrada</string>
     <string name="saved">Desat</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Captura de pantalla feta</string>
     <string name="dms_inbox_raven_media_cant_deliver">No es pot lliurar</string>
     <string name="dms_inbox_error_null_count">La resposta de recompte no vista és nul·la!</string>
-    <string name="dms_thread_message_hint">Missatge...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Premeu i mantingueu premut per enregistrar l\'àudio</string>
-    <string name="dms_thread_updating">S\'està actualitzant...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Deixar el xat</string>
     <string name="dms_action_leave_question">Vols sortir d\'aquest xat?</string>
     <string name="dms_action_kick">Expulsar</string>
@@ -320,7 +321,7 @@
     <string name="comment">Comentar</string>
     <string name="layout">Disposició</string>
     <string name="feed_stories">Fil d\'històries</string>
-    <string name="opening_post">Obrint publicació...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Compartir</string>
     <string name="layout_style">Estil de disposició</string>
     <string name="column_count">Nombre de columnes</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Feu clic per mostrar el recompte complet de m\'agrada</string>
     <string name="no_profile_pic_found">No s\'ha trobat cap imatge de perfil!</string>
     <string name="swipe_up_confirmation">Esteu segur que voleu obrir aquest enllaç?</string>
-    <string name="sending">Enviant...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Comparteix via MD</string>
     <string name="share_link">Comparteix l\'enllaç...</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
