@@ -68,7 +68,7 @@
     <string name="be_patient">ଧୈର୍ଯ୍ୟ ରଖନ୍ତୁ!</string>
     <string name="view_story_post">ପୋଷ୍ଟ ଦେଖନ୍ତୁ</string>
     <string name="view_post">ପୋଷ୍ଟ ଦେଖନ୍ତୁ</string>
-    <string name="vote_story_poll">ମତଦାନ କରନ୍ତୁ |</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">ମତଦାନ ସଫଳ!</string>
     <string name="voted_story_poll">ଆପଣ ଭୋଟ୍‌ ଦେଇସାରିଛନ୍ତି!</string>
     <string name="respond_story">ଜବାବ ଦେବା</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">ସ୍ଲାଇଡର୍</string>
     <string name="story_quizzed">ଆପଣ ଉତ୍ତର ଦେଇସାରିଛନ୍ତି!</string>
     <string name="story_mentions">ଉଲ୍ଲେଖଗୁ‌‍‌‌‌‌‌‌‌‌‌‌‌ଡିକ</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">ଏହି ଏକାଉଣ୍ଟ ଗୁପ୍ତ ଅଟେ</string>
     <string name="priv_acc_confirm">ଆପଣ ଅନୁସରଣ ନ କଲେ ପୋଷ୍ଟଗୁଡିକୁ ପ୍ରବେଶ କରିବାକୁ ସମର୍ଥ ହେବେ ନାହିଁ! ଆପଣ ନିଶ୍ଚିତ କି?</string>
     <string name="are_you_sure">ଆପଣ ନିଶ୍ଚିତ ତ?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">ସଂଗ୍ରହ ହଟାନ୍ତୁ</string>
     <string name="delete_collection_confirm">କଣ ଆପଣ ଏହି ସଂଗ୍ରହକୁ ବିଲୋପ କରିବାକୁ ନିଶ୍ଚିତ?</string>
     <string name="delete_collection_note">ଏହା ଧାରଣ କରିଥିବା ସମସ୍ତ ମିଡିଆ ଅନ୍ୟ ସଂଗ୍ରହରେ ରହିବ |</string>
-    <string name="add_to_collection">ସଂଗ୍ରହରେ ଯୋଡ଼ନ୍ତୁ...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">ସଂଗ୍ରହରୁ କାଢନ୍ତୁ</string>
     <string name="liked">ପସନ୍ଦ କରିଛନ୍ତି</string>
     <string name="saved">ସଞ୍ଚୟ ହେଲା</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Message...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Press and hold to record audio</string>
-    <string name="dms_thread_updating">Updating...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Leave chat</string>
     <string name="dms_action_leave_question">Leave this chat?</string>
     <string name="dms_action_kick">Kick</string>
@@ -320,7 +321,7 @@
     <string name="comment">Comment</string>
     <string name="layout">Layout</string>
     <string name="feed_stories">Feed stories</string>
-    <string name="opening_post">Opening post...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Share</string>
     <string name="layout_style">Layout style</string>
     <string name="column_count">Column count</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">No profile pic found!</string>
     <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Share via DM</string>
     <string name="share_link">Share link…</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
