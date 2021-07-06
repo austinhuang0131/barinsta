@@ -68,7 +68,7 @@
     <string name="be_patient">Tenha paciência!</string>
     <string name="view_story_post">Ver Publicação</string>
     <string name="view_post">Ver Publicação</string>
-    <string name="story_poll">Poll</string>
+    <string name="story_poll">Enquete</string>
     <string name="votef_story_poll">Voto enviado!</string>
     <string name="voted_story_poll">Você já votou!</string>
     <string name="respond_story">Responder</string>
@@ -85,7 +85,7 @@
     <string name="story_slider">Deslizante</string>
     <string name="story_quizzed">Você já respondeu!</string>
     <string name="story_mentions">Menções</string>
-    <string name="story_question">Question</string>
+    <string name="story_question">Pergunta</string>
     <string name="priv_acc">Esta conta é privada</string>
     <string name="priv_acc_confirm">Você não será capaz de acessar as publicações após deixar de seguir! Tem certeza?</string>
     <string name="are_you_sure">Tem certeza?</string>
@@ -103,7 +103,7 @@
     <string name="delete_collection">Excluir coleção</string>
     <string name="delete_collection_confirm">Tem certeza que quer excluir essa coleção?</string>
     <string name="delete_collection_note">Toda a mídia contida permanecerá em outras coleções.</string>
-    <string name="add_to_collection">Add to collection…</string>
+    <string name="add_to_collection">Adicionar à coleção…</string>
     <string name="remove_from_collection">Remover da coleção</string>
     <string name="liked">Curtiu</string>
     <string name="saved">Salvo</string>
@@ -182,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Capturado</string>
     <string name="dms_inbox_raven_media_cant_deliver">Não pode ser entregue</string>
     <string name="dms_inbox_error_null_count">Resposta do contador de não lidas é nula!</string>
-    <string name="dms_thread_message_hint">Message…</string>
+    <string name="dms_thread_message_hint">Mensagem…</string>
     <string name="dms_thread_audio_hint">Aperte e segure para gravar um áudio</string>
-    <string name="dms_thread_updating">Updating…</string>
+    <string name="dms_thread_updating">Atualizando…</string>
     <string name="dms_action_leave">Sair da conversa</string>
     <string name="dms_action_leave_question">Sair deste chat?</string>
     <string name="dms_action_kick">Expulsar</string>
@@ -321,7 +321,7 @@
     <string name="comment">Comentar</string>
     <string name="layout">Visualização</string>
     <string name="feed_stories">Feed de stories</string>
-    <string name="opening_post">Opening post…</string>
+    <string name="opening_post">Abrindo publicação…</string>
     <string name="share">Compartilhar</string>
     <string name="layout_style">Estilo do layout</string>
     <string name="column_count">Número de colunas</string>
@@ -499,7 +499,7 @@
     <string name="click_to_show_full">Clique para mostrar a contagem completa de curtidas</string>
     <string name="no_profile_pic_found">Nenhuma foto de perfil encontrada!</string>
     <string name="swipe_up_confirmation">Tem certeza que quer abrir este link?</string>
-    <string name="sending">Sending…</string>
+    <string name="sending">Enviando…</string>
     <string name="share_via_dm">Compartilhar via DM</string>
     <string name="share_link">Compartilhar link…</string>
     <string name="slide_to_cancel">Deslize para Cancelar</string>
