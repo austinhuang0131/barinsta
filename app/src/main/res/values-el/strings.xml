@@ -68,7 +68,7 @@
     <string name="be_patient">Κάντε υπομονή!</string>
     <string name="view_story_post">Προβολή Δημοσίευσης</string>
     <string name="view_post">Προβολή Δημοσίευσης</string>
-    <string name="vote_story_poll">Ψηφίστε</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Η ψήφος ήταν επιτυχής!</string>
     <string name="voted_story_poll">Έχετε ήδη ψηφίσει!</string>
     <string name="respond_story">Απάντηση</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Slider</string>
     <string name="story_quizzed">Έχετε ήδη απαντήσει!</string>
     <string name="story_mentions">Αναφορές</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Ιδιωτικός λογαριασμός</string>
     <string name="priv_acc_confirm">Δε θα έχετε πρόσβαση στις δημοσιεύσεις μετά την άρση ακολούθησης! Είστε βέβαιος;</string>
     <string name="are_you_sure">Είστε σίγουρος;</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Διαγραφή συλλογής</string>
     <string name="delete_collection_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή τη συλλογή;</string>
     <string name="delete_collection_note">Όλα τα πολυμέσα που περιέχονται θα παραμείνουν σε άλλες συλλογές.</string>
-    <string name="add_to_collection">Προσθήκη στη συλλογή...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Αφαίρεση από τη συλλογή</string>
     <string name="liked">Μ\'αρέσουν</string>
     <string name="saved">Αποθηκευμένα</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Λήφθηκε στιγμιότυπο οθόνης</string>
     <string name="dms_inbox_raven_media_cant_deliver">Αδυναμία παράδοσης</string>
     <string name="dms_inbox_error_null_count">Η απόκριση καταμέτρησης μη προβληθέντων είναι άκυρη!</string>
-    <string name="dms_thread_message_hint">Μήνυμα...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Πατήστε παρατεταμένα για εγγραφή ήχου</string>
-    <string name="dms_thread_updating">Ενημέρωση...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Αποχώρηση από τη συνομιλία</string>
     <string name="dms_action_leave_question">Αποχώρηση από αυτήν τη συνομιλία;</string>
     <string name="dms_action_kick">Διώξιμο</string>
@@ -320,7 +321,7 @@
     <string name="comment">Σχόλιο</string>
     <string name="layout">Διάταξη</string>
     <string name="feed_stories">Ροή ιστοριών</string>
-    <string name="opening_post">Άνοιγμα δημοσίευσης...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Κοινοποίηση</string>
     <string name="layout_style">Τρόπος διάταξης</string>
     <string name="column_count">Πλήθος στηλών</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Σε πόσους ακριβώς αρέσει</string>
     <string name="no_profile_pic_found">Δε βρέθηκε εικόνα προφίλ!</string>
     <string name="swipe_up_confirmation">Είστε βέβαιος για το άνοιγμα αυτού του συνδέσμου;</string>
-    <string name="sending">Αποστέλλεται...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Κοινοποίηση μέσω μηνύματος</string>
     <string name="share_link">Κοινοποίηση συνδέσμου…</string>
     <string name="slide_to_cancel">Σύρετε για ακύρωση</string>
