@@ -65,7 +65,7 @@
     <string name="be_patient">请耐心等待！</string>
     <string name="view_story_post">查看帖子</string>
     <string name="view_post">查看帖子</string>
-    <string name="story_poll">Poll</string>
+    <string name="story_poll">投票</string>
     <string name="votef_story_poll">投票成功！</string>
     <string name="voted_story_poll">您已投票过了！</string>
     <string name="respond_story">回复</string>
@@ -81,7 +81,7 @@
     <string name="story_slider">滑块</string>
     <string name="story_quizzed">您已回答过了！</string>
     <string name="story_mentions">提及</string>
-    <string name="story_question">Question</string>
+    <string name="story_question">问题</string>
     <string name="priv_acc">私密账户</string>
     <string name="priv_acc_confirm">取消关注后，您将无法访问帖子！您确定吗？</string>
     <string name="are_you_sure">您确定吗？</string>
