@@ -74,7 +74,7 @@
     <string name="be_patient">Buďte trpěliví!</string>
     <string name="view_story_post">Zobrazit příspěvek</string>
     <string name="view_post">Zobrazit příspěvek</string>
-    <string name="vote_story_poll">Hlasovat</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Hlasování úspěšné!</string>
     <string name="voted_story_poll">Již jste hlasovali!</string>
     <string name="respond_story">Odpovědět</string>
@@ -93,6 +93,7 @@
     <string name="story_slider">Posuvník</string>
     <string name="story_quizzed">Už jste odpověděli!</string>
     <string name="story_mentions">Zmínky</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Tento účet je soukromý</string>
     <string name="priv_acc_confirm">Po zrušení sledování nebudete mít přístup k příspěvkům! Jste si jisti?</string>
     <string name="are_you_sure">Určitě to chcete udělat?</string>
@@ -110,7 +111,7 @@
     <string name="delete_collection">Odstranit sbírku</string>
     <string name="delete_collection_confirm">Opravdu chcete tuto sbírku odstranit?</string>
     <string name="delete_collection_note">Všechna uložená média zůstanou v jiných sbírkách.</string>
-    <string name="add_to_collection">Přidat do sbírky...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Odebrat ze sbírky</string>
     <string name="liked">Líbí se</string>
     <string name="saved">Uložené</string>
@@ -189,9 +190,9 @@
     <string name="dms_inbox_raven_media_screenshot">Udělán snímek obrazovky</string>
     <string name="dms_inbox_raven_media_cant_deliver">Nelze doručit</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Zpráva...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Stiskněte a podržte pro nahrávání</string>
-    <string name="dms_thread_updating">Aktualizace...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Opustit chat</string>
     <string name="dms_action_leave_question">Chcete opustit tento chat?</string>
     <string name="dms_action_kick">Vyhodit</string>
@@ -328,7 +329,7 @@
     <string name="comment">Komentovat</string>
     <string name="layout">Rozložení</string>
     <string name="feed_stories">Kanál příběhů</string>
-    <string name="opening_post">Otevírání příspěvku...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Sdílet</string>
     <string name="layout_style">Styl rozložení</string>
     <string name="column_count">Počet sloupců</string>
@@ -516,7 +517,7 @@
     <string name="click_to_show_full">Klepnutím zobrazíte přesný počet \"to se mi líbí\"</string>
     <string name="no_profile_pic_found">Nebyl nalezen žádný obrázek profilu!</string>
     <string name="swipe_up_confirmation">Opravdu chcete otevřít tento odkaz?</string>
-    <string name="sending">Odesílání...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Sdílet do zprávy</string>
     <string name="share_link">Sdílet odkaz…</string>
     <string name="slide_to_cancel">Posunutím zrušíte</string>
