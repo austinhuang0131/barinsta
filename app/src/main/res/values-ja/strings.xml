@@ -65,7 +65,7 @@
     <string name="be_patient">お待ちください</string>
     <string name="view_story_post">投稿を表示</string>
     <string name="view_post">投稿を表示</string>
-    <string name="vote_story_poll">投票</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">投票しました！</string>
     <string name="voted_story_poll">すでに投票済みです！</string>
     <string name="respond_story">返信する</string>
@@ -81,6 +81,7 @@
     <string name="story_slider">スライダー</string>
     <string name="story_quizzed">すでに回答済みです！</string>
     <string name="story_mentions">メンション</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">このアカウントは非公開です</string>
     <string name="priv_acc_confirm">フォローを解除すると、投稿にアクセスできなくなります。よろしいですか？</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -98,7 +99,7 @@
     <string name="delete_collection">コレクションを削除する</string>
     <string name="delete_collection_confirm">このコレクションを削除してもよろしいですか？</string>
     <string name="delete_collection_note">含まれるすべてのメディアは他のコレクションに残ります。</string>
-    <string name="add_to_collection">コレクションに追加する</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">コレクションから削除する</string>
     <string name="liked">いいね！</string>
     <string name="saved">保存</string>
@@ -177,9 +178,9 @@
     <string name="dms_inbox_raven_media_screenshot">スクリーンショット撮影済み</string>
     <string name="dms_inbox_raven_media_cant_deliver">配信できません</string>
     <string name="dms_inbox_error_null_count">未読の返信はありません！</string>
-    <string name="dms_thread_message_hint">メッセージ...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">録音するには長押ししてください</string>
-    <string name="dms_thread_updating">更新中...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">チャットから退出する</string>
     <string name="dms_action_leave_question">チャットを終了しますか?</string>
     <string name="dms_action_kick">キックする</string>
@@ -316,7 +317,7 @@
     <string name="comment">コメント</string>
     <string name="layout">レイアウト</string>
     <string name="feed_stories">フィードのストーリーズ</string>
-    <string name="opening_post">投稿を開いています...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">共有</string>
     <string name="layout_style">レイアウトスタイル</string>
     <string name="column_count">列数</string>
@@ -489,7 +490,7 @@
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">プロフィール写真が見つかりません！</string>
     <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Share via DM</string>
     <string name="share_link">Share link…</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
