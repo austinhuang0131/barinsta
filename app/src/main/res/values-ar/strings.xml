@@ -80,7 +80,7 @@
     <string name="be_patient">كن صبورا!</string>
     <string name="view_story_post">عرض المنشور</string>
     <string name="view_post">عرض المشاركة</string>
-    <string name="vote_story_poll">صوت</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">تم التصويت بنجاح!</string>
     <string name="voted_story_poll">لقد قمت بالتصويت بالفعل!</string>
     <string name="respond_story">رد</string>
@@ -101,6 +101,7 @@
     <string name="story_slider">شريط منزلق</string>
     <string name="story_quizzed">لقد قمت بالرد مسبقا!</string>
     <string name="story_mentions">الإشارات</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">هذا الحساب خاص</string>
     <string name="priv_acc_confirm">لن تتمكن من الوصول إلى المشاركات بعد إلغاء المتابعة! هل أنت متأكد؟</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -118,7 +119,7 @@
     <string name="delete_collection">حذف المجموعة</string>
     <string name="delete_collection_confirm">هل أنت متأكد من أنك تريد حذف هذه المجموعة؟</string>
     <string name="delete_collection_note">وستظل جميع الوسائط المحتوية في مجموعات أخرى.</string>
-    <string name="add_to_collection">إضافة إلى المجموعة...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">إزالة من المجموعة</string>
     <string name="liked">أعجبني</string>
     <string name="saved">تم الحفظ</string>
@@ -197,9 +198,9 @@
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Message...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Press and hold to record audio</string>
-    <string name="dms_thread_updating">Updating...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Leave chat</string>
     <string name="dms_action_leave_question">Leave this chat?</string>
     <string name="dms_action_kick">Kick</string>
@@ -336,7 +337,7 @@
     <string name="comment">Comment</string>
     <string name="layout">Layout</string>
     <string name="feed_stories">Feed stories</string>
-    <string name="opening_post">Opening post...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Share</string>
     <string name="layout_style">Layout style</string>
     <string name="column_count">Column count</string>
@@ -534,7 +535,7 @@
     <string name="click_to_show_full">انقر لعرض العدد الكلي للأعجابات</string>
     <string name="no_profile_pic_found">لم يتم العثور على صورة الملف الشخصي!</string>
     <string name="swipe_up_confirmation">هل أنت متأكد من أنك تريد فتح هذا الرابط؟</string>
-    <string name="sending">جار الإرسال...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">مشاركة عبر DM</string>
     <string name="share_link">مشاركة الرابط…</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
