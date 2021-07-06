@@ -57,7 +57,7 @@
     <!--    <item>@navigation/more_nav_graph</item>-->
     <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
-        <item>secs</item>
-        <item>mins</item>
+        <item>dtk</item>
+        <item>mnt</item>
     </string-array>
 </resources>
