@@ -68,7 +68,7 @@
     <string name="be_patient">Sabırlı ol!</string>
     <string name="view_story_post">Gönderiyi Gör</string>
     <string name="view_post">Gönderiyi Gör</string>
-    <string name="vote_story_poll">Oyla</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Oylama başarılı!</string>
     <string name="voted_story_poll">Zaten oy verdiniz!</string>
     <string name="respond_story">Yanıt ver</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Kaydırıcı</string>
     <string name="story_quizzed">Zaten cevapladınız!</string>
     <string name="story_mentions">Etiketlenenler</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Bu Hesap Gizlidir</string>
     <string name="priv_acc_confirm">Takipten çıkarsan gönderilere erişemeyeceksin! Emin misin?</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Koleksiyonu sil</string>
     <string name="delete_collection_confirm">Bu koleksiyonu silmek istediğinden emin misin?</string>
     <string name="delete_collection_note">İçerilen tüm medya diğer koleksiyonlarda kalacak.</string>
-    <string name="add_to_collection">Koleksiyon ekle...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Koleksiyondan kaldır</string>
     <string name="liked">Beğenilenler</string>
     <string name="saved">Kaydedilenler</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Ekran görüntüsü alındı</string>
     <string name="dms_inbox_raven_media_cant_deliver">İletilemiyor</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Mesaj...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Ses kaydetmek için dokun ve basılı tut</string>
-    <string name="dms_thread_updating">Güncelleniyor...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Sohbetten ayrıl</string>
     <string name="dms_action_leave_question">Bu sohbetten ayrıl?</string>
     <string name="dms_action_kick">Dışarıya At</string>
@@ -320,7 +321,7 @@
     <string name="comment">Yorum yap</string>
     <string name="layout">Yerleşim</string>
     <string name="feed_stories">Hikaye akışı</string>
-    <string name="opening_post">Gönderi açılıyor...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Paylaş</string>
     <string name="layout_style">Yerleşim biçimi</string>
     <string name="column_count">Sütun sayısı</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">No profile pic found!</string>
     <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Share via DM</string>
     <string name="share_link">Share link…</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
