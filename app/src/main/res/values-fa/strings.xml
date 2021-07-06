@@ -31,6 +31,8 @@
     <string name="dm_mark_as_seen_setting">نشان کردن پیام خصوصی بعنوان دیده شده بعد از دیدن</string>
     <string name="dm_mark_as_seen_setting_summary">کاربران دیگر خواهند فهمید شما این را دیده اید</string>
     <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="story_list_setting">Display story list by default</string>
+    <string name="story_list_setting_summary">For viewing stories</string>
     <string name="activity_setting">روشن کردن آگهداد فعالیت ها</string>
     <string name="story_sort_setting">مرتب کردن خوراک‌خوان داستان‌ها</string>
     <string name="error_loading_profile">خطای بارگذاری نمایه! آیا نام کاربری درست است؟ اگر بله، ممکن است که محدود شده باشید.</string>
