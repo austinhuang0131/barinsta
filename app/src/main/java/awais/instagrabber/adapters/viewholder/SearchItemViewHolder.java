@@ -45,7 +45,7 @@ public class SearchItemViewHolder extends RecyclerView.ViewHolder {
             case HASHTAG:
                 final Hashtag hashtag = searchItem.getHashtag();
                 title = "#" + hashtag.getName();
-                subtitle = hashtag.getSubtitle();
+                subtitle = hashtag.getSearchResultSubtitle();
                 picUrl = "res:/" + R.drawable.ic_hashtag;
                 break;
             case LOCATION:

@@ -308,9 +308,9 @@ class DirectMessageSettingsFragment : Fragment(), ConfirmDialogFragmentCallback 
             { _: Int, user: User? ->
                 val options = viewModel.createUserOptions(user)
                 if (options.isEmpty()) return@DirectUsersAdapter true
-                val fragment = MultiOptionDialogFragment.newInstance(-1, options)
+                val fragment = MultiOptionDialogFragment.newInstance(0, -1, options)
                 fragment.setSingleCallback(object : MultiOptionDialogSingleCallback<String?> {
-                    override fun onSelect(action: String?) {
+                    override fun onSelect(requestCode: Int, action: String?) {
                         if (action == null) return
                         val resourceLiveData = viewModel.doAction(user, action)
                         if (resourceLiveData != null) {
@@ -318,7 +318,7 @@ class DirectMessageSettingsFragment : Fragment(), ConfirmDialogFragmentCallback 
                         }
                     }
 
-                    override fun onCancel() {}
+                    override fun onCancel(requestCode: Int) {}
                 })
                 val fragmentManager = childFragmentManager
                 fragment.show(fragmentManager, "actions")

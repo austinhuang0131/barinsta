@@ -1,5 +1,7 @@
 package awais.instagrabber.adapters;
 
+import java.util.List;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,20 +12,21 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import awais.instagrabber.databinding.ItemStoryBinding;
-import awais.instagrabber.models.StoryModel;
+import awais.instagrabber.repositories.responses.stories.StoryMedia;
+import awais.instagrabber.utils.ResponseBodyUtils;
 
-public final class StoriesAdapter extends ListAdapter<StoryModel, StoriesAdapter.StoryViewHolder> {
+public final class StoriesAdapter extends ListAdapter<StoryMedia, StoriesAdapter.StoryViewHolder> {
     private final OnItemClickListener onItemClickListener;
 
-    private static final DiffUtil.ItemCallback<StoryModel> diffCallback = new DiffUtil.ItemCallback<StoryModel>() {
+    private static final DiffUtil.ItemCallback<StoryMedia> diffCallback = new DiffUtil.ItemCallback<StoryMedia>() {
         @Override
-        public boolean areItemsTheSame(@NonNull final StoryModel oldItem, @NonNull final StoryModel newItem) {
-            return oldItem.getStoryMediaId().equals(newItem.getStoryMediaId());
+        public boolean areItemsTheSame(@NonNull final StoryMedia oldItem, @NonNull final StoryMedia newItem) {
+            return oldItem.getId().equals(newItem.getId());
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull final StoryModel oldItem, @NonNull final StoryModel newItem) {
-            return oldItem.getStoryMediaId().equals(newItem.getStoryMediaId());
+        public boolean areContentsTheSame(@NonNull final StoryMedia oldItem, @NonNull final StoryMedia newItem) {
+            return oldItem.getId().equals(newItem.getId());
         }
     };
 
@@ -42,8 +45,8 @@ public final class StoriesAdapter extends ListAdapter<StoryModel, StoriesAdapter
 
     @Override
     public void onBindViewHolder(@NonNull final StoryViewHolder holder, final int position) {
-        final StoryModel storyModel = getItem(position);
-        holder.bind(storyModel, position, onItemClickListener);
+        final StoryMedia storyMedia = getItem(position);
+        holder.bind(storyMedia, position, onItemClickListener);
     }
 
     public final static class StoryViewHolder extends RecyclerView.ViewHolder {
@@ -54,7 +57,7 @@ public final class StoriesAdapter extends ListAdapter<StoryModel, StoriesAdapter
             this.binding = binding;
         }
 
-        public void bind(final StoryModel model,
+        public void bind(final StoryMedia model,
                          final int position,
                          final OnItemClickListener clickListener) {
             if (model == null) return;
@@ -67,14 +70,21 @@ public final class StoriesAdapter extends ListAdapter<StoryModel, StoriesAdapter
             });
 
             binding.selectedView.setVisibility(model.isCurrentSlide() ? View.VISIBLE : View.GONE);
-            binding.icon.setImageURI(model.getStoryUrl());
-            // Glide.with(itemView).load(model.getStoryUrl())
-            //      .apply(new RequestOptions().override(width, height))
-            //      .into(holder.icon);
+            binding.icon.setImageURI(ResponseBodyUtils.getThumbUrl(model));
+        }
+    }
+
+    public void paginate(final int newIndex) {
+        final List<StoryMedia> list = getCurrentList();
+        for (int i = 0; i < list.size(); i++) {
+            final StoryMedia item = list.get(i);
+            if (!item.isCurrentSlide() && i != newIndex) continue;
+            item.setCurrentSlide(i == newIndex);
+            notifyItemChanged(i, item);
         }
     }
 
     public interface OnItemClickListener {
-        void onItemClick(StoryModel storyModel, int position);
+        void onItemClick(StoryMedia storyModel, int position);
     }
 }

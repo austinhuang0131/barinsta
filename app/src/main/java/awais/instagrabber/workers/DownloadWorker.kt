@@ -131,7 +131,7 @@ class DownloadWorker(context: Context, workerParams: WorkerParameters) : Corouti
             var totalRead = 0f
             try {
                 BufferedInputStream(urlConnection.getInputStream()).use { bis ->
-                    contentResolver.openOutputStream(outFile.uri).use { fos ->
+                    contentResolver.openOutputStream(outFile!!.uri).use { fos ->
                         val buffer = ByteArray(0x2000)
                         var count: Int
                         while (bis.read(buffer, 0, 0x2000).also { count = it } != -1) {
@@ -146,11 +146,11 @@ class DownloadWorker(context: Context, workerParams: WorkerParameters) : Corouti
                     }
                 }
             } catch (e: Exception) {
-                Log.e(TAG, "Error while writing data from url: " + url + " to file: " + outFile.name, e)
+                Log.e(TAG, "Error while writing data from url: " + url + " to file: " + outFile!!.name, e)
             }
             if (isJpg) {
                 try {
-                    contentResolver.openInputStream(outFile.uri).use { fis ->
+                    contentResolver.openInputStream(outFile!!.uri).use { fis ->
                         contentResolver.openOutputStream(filePath.uri).use { fos ->
                             val jpegIptcRewriter = JpegIptcRewriter()
                             jpegIptcRewriter.removeIPTC(fis, fos)
@@ -158,10 +158,10 @@ class DownloadWorker(context: Context, workerParams: WorkerParameters) : Corouti
                     }
                 } catch (e: Exception) {
                     Log.e(TAG, "Error while removing iptc: url: " + url
-                               + ", tempFile: " + outFile.name
+                               + ", tempFile: " + outFile!!.name
                                + ", finalFile: " + filePath.name, e)
                 }
-                val deleted = outFile.delete()
+                val deleted = outFile!!.delete()
                 if (!deleted) {
                     Log.w(TAG, "download: tempFile not deleted!")
                 }
@@ -393,9 +393,10 @@ class DownloadWorker(context: Context, workerParams: WorkerParameters) : Corouti
 
         class Builder {
             private var urlToFilePathMap: MutableMap<String, String> = mutableMapOf()
-            fun setUrlToFilePathMap(urlToFilePathMap: MutableMap<String, DocumentFile>): Builder {
+            fun setUrlToFilePathMap(urlToFilePathMap: Map<String, DocumentFile?>): Builder {
                 this.urlToFilePathMap = urlToFilePathMap
-                    .mapValues { it.value.uri.toString() }
+                    .filter{ it.value != null }
+                    .mapValues { it.value!!.uri.toString() }
                     .toMutableMap()
                 return this
             }

@@ -111,8 +111,10 @@ class MainActivity : BaseLanguageActivity(), FragmentManager.OnBackStackChangedL
 
     override fun onCreate(savedInstanceState: Bundle?) {
         try {
-            DownloadUtils.init(this,
-                Utils.settingsHelper.getString(PreferenceKeys.PREF_BARINSTA_DIR_URI))
+            DownloadUtils.init(
+                this,
+                Utils.settingsHelper.getString(PreferenceKeys.PREF_BARINSTA_DIR_URI)
+            )
         } catch (e: ReselectDocumentTreeException) {
             super.onCreate(savedInstanceState)
             val intent = Intent(this, DirectorySelectActivity::class.java)
@@ -324,6 +326,7 @@ class MainActivity : BaseLanguageActivity(), FragmentManager.OnBackStackChangedL
         // } catch (e: Exception) {
         //     Log.e(TAG, "onDestroy: ", e)
         // }
+        DownloadUtils.destroy()
         instance = null
     }
 
@@ -358,21 +361,27 @@ class MainActivity : BaseLanguageActivity(), FragmentManager.OnBackStackChangedL
     private fun createNotificationChannels() {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.O) return
         val notificationManager = NotificationManagerCompat.from(applicationContext)
-        notificationManager.createNotificationChannel(NotificationChannel(
-            Constants.DOWNLOAD_CHANNEL_ID,
-            Constants.DOWNLOAD_CHANNEL_NAME,
-            NotificationManager.IMPORTANCE_DEFAULT
-        ))
-        notificationManager.createNotificationChannel(NotificationChannel(
-            Constants.ACTIVITY_CHANNEL_ID,
-            Constants.ACTIVITY_CHANNEL_NAME,
-            NotificationManager.IMPORTANCE_DEFAULT
-        ))
-        notificationManager.createNotificationChannel(NotificationChannel(
-            Constants.DM_UNREAD_CHANNEL_ID,
-            Constants.DM_UNREAD_CHANNEL_NAME,
-            NotificationManager.IMPORTANCE_DEFAULT
-        ))
+        notificationManager.createNotificationChannel(
+            NotificationChannel(
+                Constants.DOWNLOAD_CHANNEL_ID,
+                Constants.DOWNLOAD_CHANNEL_NAME,
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+        )
+        notificationManager.createNotificationChannel(
+            NotificationChannel(
+                Constants.ACTIVITY_CHANNEL_ID,
+                Constants.ACTIVITY_CHANNEL_NAME,
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+        )
+        notificationManager.createNotificationChannel(
+            NotificationChannel(
+                Constants.DM_UNREAD_CHANNEL_ID,
+                Constants.DM_UNREAD_CHANNEL_NAME,
+                NotificationManager.IMPORTANCE_DEFAULT
+            )
+        )
         val silentNotificationChannel = NotificationChannel(
             Constants.SILENT_NOTIFICATIONS_CHANNEL_ID,
             Constants.SILENT_NOTIFICATIONS_CHANNEL_NAME,
@@ -404,7 +413,8 @@ class MainActivity : BaseLanguageActivity(), FragmentManager.OnBackStackChangedL
             supportFragmentManager,
             R.id.main_nav_host,
             intent,
-            firstFragmentGraphIndex)
+            firstFragmentGraphIndex
+        )
         navControllerLiveData.observe(this, { navController: NavController? -> setupNavigation(binding.toolbar, navController) })
         currentNavControllerLiveData = navControllerLiveData
     }
@@ -432,27 +442,33 @@ class MainActivity : BaseLanguageActivity(), FragmentManager.OnBackStackChangedL
 
     private fun setupAnonBottomNav(): List<Tab> {
         val selectedItemId = binding.bottomNavView.selectedItemId
-        val favoriteTab = Tab(R.drawable.ic_star_24,
+        val favoriteTab = Tab(
+            R.drawable.ic_star_24,
             getString(R.string.title_favorites),
             false,
             "favorites_nav_graph",
             R.navigation.favorites_nav_graph,
             R.id.favorites_nav_graph,
-            R.id.favoritesFragment)
-        val profileTab = Tab(R.drawable.ic_person_24,
+            R.id.favoritesFragment
+        )
+        val profileTab = Tab(
+            R.drawable.ic_person_24,
             getString(R.string.profile),
             false,
             "profile_nav_graph",
             R.navigation.profile_nav_graph,
             R.id.profile_nav_graph,
-            R.id.profileFragment)
-        val moreTab = Tab(R.drawable.ic_more_horiz_24,
+            R.id.profileFragment
+        )
+        val moreTab = Tab(
+            R.drawable.ic_more_horiz_24,
             getString(R.string.more),
             false,
             "more_nav_graph",
             R.navigation.more_nav_graph,
             R.id.more_nav_graph,
-            R.id.morePreferencesFragment)
+            R.id.morePreferencesFragment
+        )
         val menu = binding.bottomNavView.menu
         menu.clear()
         menu.add(0, favoriteTab.navigationRootId, 0, favoriteTab.title).setIcon(favoriteTab.iconResId)
@@ -489,9 +505,15 @@ class MainActivity : BaseLanguageActivity(), FragmentManager.OnBackStackChangedL
             if (destination.id == R.id.directMessagesThreadFragment && arguments != null) {
                 // Set the thread title earlier for better ux
                 val title = arguments.getString("title")
-                val actionBar = supportActionBar
-                if (actionBar != null && !isEmpty(title)) {
-                    actionBar.title = title
+                if (!title.isNullOrBlank()) {
+                    supportActionBar?.title = title
+                }
+            }
+            if (destination.id == R.id.profileFragment && arguments != null) {
+                // Set the title to username
+                val username = arguments.getString("username")
+                if (!username.isNullOrBlank()) {
+                    supportActionBar?.title = username.substringAfter("@")
                 }
             }
             // below is a hack to check if we are at the end of the current stack, to setup the search view
@@ -764,7 +786,8 @@ class MainActivity : BaseLanguageActivity(), FragmentManager.OnBackStackChangedL
             "com.google.android.gms.fonts",
             "com.google.android.gms",
             "Noto Color Emoji Compat",
-            R.array.com_google_android_gms_fonts_certs)
+            R.array.com_google_android_gms_fonts_certs
+        )
         val config: EmojiCompat.Config = FontRequestEmojiCompatConfig(applicationContext, fontRequest)
         config.setReplaceAll(true) // .setUseEmojiAsDefaultStyle(true)
             .registerInitCallback(object : InitCallback() {

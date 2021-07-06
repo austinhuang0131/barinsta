@@ -156,6 +156,13 @@ public class RamboTextViewV2 extends AutoLinkTextView {
         onEmailClickListeners.clear();
     }
 
+    public void clearAllAutoLinkListeners() {
+        clearOnMentionClickListeners();
+        clearOnHashtagClickListeners();
+        clearOnURLClickListeners();
+        clearOnEmailClickListeners();
+    }
+
     public interface OnMentionClickListener {
         void onMentionClick(final AutoLinkItem autoLinkItem);
     }

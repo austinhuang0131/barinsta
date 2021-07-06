@@ -122,7 +122,6 @@ public final class CommentViewHolder extends RecyclerView.ViewHolder {
     }
 
     private void setLikes(@NonNull final Comment comment, final boolean isReply) {
-        // final String likesString = itemView.getResources().getQuantityString(R.plurals.likes_count, likes, likes);
         binding.likes.setText(String.valueOf(comment.getCommentLikeCount()));
         binding.likes.setOnLongClickListener(v -> {
             if (commentCallback == null) return false;
@@ -150,7 +149,6 @@ public final class CommentViewHolder extends RecyclerView.ViewHolder {
         final int replies = comment.getChildCommentCount();
         binding.replies.setVisibility(View.VISIBLE);
         final String text = isReply ? "" : String.valueOf(replies);
-        // final String string = itemView.getResources().getQuantityString(R.plurals.replies_count, replies, replies);
         binding.replies.setText(text);
         binding.replies.setOnClickListener(v -> {
             if (commentCallback == null) return;

@@ -50,7 +50,7 @@ public class DirectItemRavenMediaViewHolder extends DirectItemViewHolder {
         setPreview(visualMedia, messageDirection);
         final boolean expired = TextUtils.isEmpty(media.getId());
         if (expired) return;
-        itemView.setOnClickListener(v -> openMedia(media));
+        itemView.setOnClickListener(v -> openMedia(media, -1));
         /*final boolean isExpired = visualMedia == null || (mediaModel = visualMedia.getMedia()) == null ||
                 TextUtils.isEmpty(mediaModel.getThumbUrl()) && mediaModel.getPk() < 1;
 
@@ -117,7 +117,7 @@ public class DirectItemRavenMediaViewHolder extends DirectItemViewHolder {
         final Media media = visualMedia.getMedia();
         final RavenMediaViewMode viewMode = visualMedia.getViewMode();
         if (viewMode != RavenMediaViewMode.PERMANENT) {
-            final MediaItemType mediaType = media.getMediaType();
+            final MediaItemType mediaType = media.getType();
             final boolean expired = TextUtils.isEmpty(media.getId());
             final int info;
             switch (mediaType) {
@@ -166,7 +166,7 @@ public class DirectItemRavenMediaViewHolder extends DirectItemViewHolder {
                                              .setRoundingParams(roundingParams)
                                              .setActualImageScaleType(ScalingUtils.ScaleType.CENTER_CROP)
                                              .build());
-        final MediaItemType modelMediaType = media.getMediaType();
+        final MediaItemType modelMediaType = media.getType();
         binding.typeIcon.setVisibility(modelMediaType == MediaItemType.MEDIA_TYPE_VIDEO || modelMediaType == MediaItemType.MEDIA_TYPE_SLIDER
                                        ? View.VISIBLE
                                        : View.GONE);

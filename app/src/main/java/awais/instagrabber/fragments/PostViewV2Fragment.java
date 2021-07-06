@@ -2,7 +2,6 @@ package awais.instagrabber.fragments;
 
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.graphics.Rect;
@@ -93,8 +92,8 @@ import awais.instagrabber.models.enums.MediaItemType;
 import awais.instagrabber.repositories.responses.Caption;
 import awais.instagrabber.repositories.responses.Location;
 import awais.instagrabber.repositories.responses.Media;
-import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.repositories.responses.MediaCandidate;
+import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.repositories.responses.directmessages.RankedRecipient;
 import awais.instagrabber.utils.DownloadUtils;
 import awais.instagrabber.utils.NullSafePair;
@@ -117,7 +116,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
     private DialogPostViewBinding binding;
     private Context context;
     private boolean detailsVisible = true;
-    private boolean video;
+//    private boolean video;
     private VideoPlayerViewHelper videoPlayerViewHelper;
     private SliderItemsAdapter sliderItemsAdapter;
     private int sliderPosition = -1;
@@ -152,7 +151,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
             if (context != null) {
                 Toast.makeText(context, R.string.sending, Toast.LENGTH_SHORT).show();
             }
-            viewModel.shareDm((RankedRecipient) result);
+            viewModel.shareDm((RankedRecipient) result, sliderPosition);
         } else if ((result instanceof Set)) {
             try {
                 // Log.d(TAG, "result: " + result);
@@ -161,7 +160,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                     Toast.makeText(context, R.string.sending, Toast.LENGTH_SHORT).show();
                 }
                 //noinspection unchecked
-                viewModel.shareDm((Set<RankedRecipient>) result);
+                viewModel.shareDm((Set<RankedRecipient>) result, sliderPosition);
             } catch (Exception e) {
                 Log.e(TAG, "share: ", e);
             }
@@ -187,9 +186,6 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
     public void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         viewModel = new ViewModelProvider(this).get(PostViewV2ViewModel.class);
-        final MainActivity activity = (MainActivity) getActivity();
-        if (activity == null) return;
-        controller = new WindowInsetsControllerCompat(activity.getWindow(), activity.getRootView());
     }
 
     @Nullable
@@ -199,6 +195,9 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                              @Nullable final Bundle savedInstanceState) {
         binding = DialogPostViewBinding.inflate(inflater, container, false);
         bottom = LayoutPostViewBottomBinding.bind(binding.getRoot());
+        final MainActivity activity = (MainActivity) getActivity();
+        if (activity == null) return null;
+        controller = new WindowInsetsControllerCompat(activity.getWindow(), activity.getRootView());
         return binding.getRoot();
     }
 
@@ -220,8 +219,8 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         // wasPaused = true;
         if (settingsHelper.getBoolean(PreferenceKeys.PLAY_IN_BACKGROUND)) return;
         final Media media = viewModel.getMedia();
-        if (media.getMediaType() == null) return;
-        switch (media.getMediaType()) {
+        if (media.getType() == null) return;
+        switch (media.getType()) {
             case MEDIA_TYPE_VIDEO:
                 if (videoPlayerViewHelper != null) {
                     videoPlayerViewHelper.pause();
@@ -253,8 +252,8 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         super.onDestroyView();
         showSystemUI();
         final Media media = viewModel.getMedia();
-        if (media.getMediaType() == null) return;
-        switch (media.getMediaType()) {
+        if (media.getType() == null) return;
+        switch (media.getType()) {
             case MEDIA_TYPE_VIDEO:
                 if (videoPlayerViewHelper != null) {
                     videoPlayerViewHelper.releasePlayer();
@@ -272,7 +271,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
     public void onSaveInstanceState(@NonNull final Bundle outState) {
         super.onSaveInstanceState(outState);
         final Media media = viewModel.getMedia();
-        if (media.getMediaType() == MediaItemType.MEDIA_TYPE_SLIDER) {
+        if (media.getType() == MediaItemType.MEDIA_TYPE_SLIDER) {
             outState.putInt(ARG_SLIDER_POSITION, sliderPosition);
         }
     }
@@ -294,7 +293,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
             return;
         }
         final Media media = (Media) feedModelSerializable;
-        if (media.getMediaType() == MediaItemType.MEDIA_TYPE_SLIDER) {
+        if (media.getType() == MediaItemType.MEDIA_TYPE_SLIDER && sliderPosition == -1) {
             sliderPosition = arguments.getInt(ARG_SLIDER_POSITION, 0);
         }
         viewModel.setMedia(media);
@@ -447,7 +446,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
 
     private void setupDownload() {
         bottom.download.setOnClickListener(v -> {
-            DownloadUtils.showDownloadDialog(context, viewModel.getMedia(), sliderPosition);
+            DownloadUtils.showDownloadDialog(context, viewModel.getMedia(), sliderPosition, bottom.download);
         });
         TooltipCompat.setTooltipText(bottom.download, getString(R.string.action_download));
     }
@@ -745,12 +744,6 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
             final Media media = viewModel.getMedia();
             final User profileModel = media.getUser();
             if (profileModel == null) return;
-            final boolean isPrivate = profileModel.isPrivate();
-            if (isPrivate) {
-                final Context context = getContext();
-                if (context == null) return;
-//                Toast.makeText(context, R.string.share_private_post, Toast.LENGTH_LONG).show();
-            }
             if (viewModel.isLoggedIn()) {
                 final Context context = getContext();
                 if (context == null) return;
@@ -777,7 +770,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                         }
                         return true;
                     } else if (itemId == R.id.share) {
-                        shareLink(media, isPrivate);
+                        shareLink(media, profileModel.isPrivate());
                         return true;
                     }
                     return false;
@@ -785,7 +778,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                 popupMenu.show();
                 return;
             }
-            shareLink(media, isPrivate);
+            shareLink(media, false);
         });
     }
 
@@ -903,7 +896,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
 
         final boolean hasVideo = media.getCarouselMedia()
                                       .stream()
-                                      .anyMatch(postChild -> postChild.getMediaType() == MediaItemType.MEDIA_TYPE_VIDEO);
+                                      .anyMatch(postChild -> postChild.getType() == MediaItemType.MEDIA_TYPE_VIDEO);
         if (hasVideo) {
             final View child = sliderParent.getChildAt(0);
             if (child instanceof RecyclerView) {
@@ -919,7 +912,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
             @Override
             public void onItemClicked(final int position, final Media media, final View view) {
                 if (media == null
-                        || media.getMediaType() != MediaItemType.MEDIA_TYPE_IMAGE
+                        || media.getType() != MediaItemType.MEDIA_TYPE_IMAGE
                         || !(view instanceof ZoomableDraweeView)) {
                     return;
                 }
@@ -1003,30 +996,13 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                 final String text = (position + 1) + "/" + size;
                 binding.mediaCounter.setText(text);
                 final Media childMedia = media.getCarouselMedia().get(position);
-                // final View view = binding.sliderParent.getChildAt(0);
-                // if (prevPosition != -1) {
-                // if (view instanceof RecyclerView) {
-                // final RecyclerView.ViewHolder viewHolder = ((RecyclerView) view).findViewHolderForAdapterPosition(prevPosition);
-                // if (viewHolder instanceof SliderVideoViewHolder) {
-                //     ((SliderVideoViewHolder) viewHolder).removeCallbacks();
-                // }
-                // }
-                // }
-                video = false;
-                if (childMedia.getMediaType() == MediaItemType.MEDIA_TYPE_VIDEO) {
-                    // if (view instanceof RecyclerView) {
-                    // final RecyclerView.ViewHolder viewHolder = ((RecyclerView) view).findViewHolderForAdapterPosition(position);
-                    // if (viewHolder instanceof SliderVideoViewHolder) {
-                    //     ((SliderVideoViewHolder) viewHolder).resetPlayerTimeline();
-                    // }
-                    // }
-                    // enablePlayerControls(true);
-                    video = true;
-                    viewModel.setViewCount(childMedia.getViewCount());
-                    return;
-                }
-                viewModel.setViewCount(null);
-                // enablePlayerControls(false);
+//                video = false;
+//                if (childMedia.getType() == MediaItemType.MEDIA_TYPE_VIDEO) {
+//                    video = true;
+//                    viewModel.setViewCount(childMedia.getViewCount());
+//                    return;
+//                }
+//                viewModel.setViewCount(null);
             }
 
             private void pausePlayerAtPosition(final int position, final RecyclerView view) {
@@ -1039,6 +1015,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         final String text = "1/" + carouselMedia.size();
         binding.mediaCounter.setText(text);
         sliderItemsAdapter.submitList(media.getCarouselMedia());
+        sliderParent.setCurrentItem(sliderPosition);
     }
 
     private void pauseSliderPlayer() {
@@ -1064,7 +1041,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
     }
 
     private void setupVideo() {
-        video = true;
+//        video = true;
         final Media media = viewModel.getMedia();
         binding.mediaCounter.setVisibility(View.GONE);
         final Context context = getContext();
@@ -1402,14 +1379,15 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                 bottom.like.setVisibility(View.VISIBLE);
                 bottom.save.setVisibility(View.VISIBLE);
             }
-            if (video) {
+            // if (video) {
+            if (media.getType() == MediaItemType.MEDIA_TYPE_VIDEO) {
                 // binding.playerControlsToggle.setVisibility(View.VISIBLE);
                 bottom.viewsCount.setVisibility(View.VISIBLE);
             }
             // if (wasControlsVisible) {
             //     showPlayerControls();
             // }
-            if (media.getMediaType() == MediaItemType.MEDIA_TYPE_SLIDER) {
+            if (media.getType() == MediaItemType.MEDIA_TYPE_SLIDER) {
                 binding.mediaCounter.setVisibility(View.VISIBLE);
             }
             detailsVisible = true;

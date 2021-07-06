@@ -6,8 +6,8 @@ import awais.instagrabber.repositories.responses.Location
 import awais.instagrabber.repositories.responses.User
 
 data class SliderSticker(
-    val sliderId: Long?,
-    val question: String?,
+    val sliderId: Long,
+    val question: String,
     val emoji: String?,
     val viewerCanVote: Boolean?,
     val viewerVote: Double?,

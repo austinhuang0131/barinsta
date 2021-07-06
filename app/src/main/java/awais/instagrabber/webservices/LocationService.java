@@ -53,7 +53,7 @@ public class LocationService {
                 }
                 final PostsFetchResponse postsFetchResponse = new PostsFetchResponse(
                         body.getItems(),
-                        body.isMoreAvailable(),
+                        body.getMoreAvailable(),
                         body.getNextMaxId()
                 );
                 callback.onSuccess(postsFetchResponse);

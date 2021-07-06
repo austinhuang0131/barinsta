@@ -9,19 +9,19 @@ import androidx.recyclerview.widget.ListAdapter;
 
 import awais.instagrabber.adapters.viewholder.StoryListViewHolder;
 import awais.instagrabber.databinding.ItemNotificationBinding;
-import awais.instagrabber.models.HighlightModel;
+import awais.instagrabber.repositories.responses.stories.Story;
 
-public final class HighlightStoriesListAdapter extends ListAdapter<HighlightModel, StoryListViewHolder> {
+public final class HighlightStoriesListAdapter extends ListAdapter<Story, StoryListViewHolder> {
     private final OnHighlightStoryClickListener listener;
 
-    private static final DiffUtil.ItemCallback<HighlightModel> diffCallback = new DiffUtil.ItemCallback<HighlightModel>() {
+    private static final DiffUtil.ItemCallback<Story> diffCallback = new DiffUtil.ItemCallback<Story>() {
         @Override
-        public boolean areItemsTheSame(@NonNull final HighlightModel oldItem, @NonNull final HighlightModel newItem) {
+        public boolean areItemsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
             return oldItem.getId().equals(newItem.getId());
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull final HighlightModel oldItem, @NonNull final HighlightModel newItem) {
+        public boolean areContentsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
             return oldItem.getId().equals(newItem.getId());
         }
     };
@@ -41,12 +41,12 @@ public final class HighlightStoriesListAdapter extends ListAdapter<HighlightMode
 
     @Override
     public void onBindViewHolder(@NonNull final StoryListViewHolder holder, final int position) {
-        final HighlightModel model = getItem(position);
+        final Story model = getItem(position);
         holder.bind(model, position, listener);
     }
 
     public interface OnHighlightStoryClickListener {
-        void onHighlightClick(final HighlightModel model, final int position);
+        void onHighlightClick(final Story model, final int position);
 
         void onProfileClick(final String username);
     }

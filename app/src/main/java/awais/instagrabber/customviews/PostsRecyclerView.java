@@ -268,7 +268,7 @@ public class PostsRecyclerView extends RecyclerView {
 
     private List<String> getDisplayUrl(final Media feedModel) {
         List<String> urls = Collections.emptyList();
-        switch (feedModel.getMediaType()) {
+        switch (feedModel.getType()) {
             case MEDIA_TYPE_IMAGE:
             case MEDIA_TYPE_VIDEO:
                 urls = Collections.singletonList(ResponseBodyUtils.getImageUrl(feedModel));

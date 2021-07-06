@@ -76,7 +76,7 @@ public class LocationFragment extends Fragment implements SwipeRefreshLayout.OnR
     private FragmentLocationBinding binding;
     private MotionLayout root;
     private boolean shouldRefresh = true;
-    private boolean hasStories = false;
+//    private boolean hasStories = false;
     private boolean opening = false;
     private long locationId;
     private Location locationModel;
@@ -139,10 +139,10 @@ public class LocationFragment extends Fragment implements SwipeRefreshLayout.OnR
         }
 
         @Override
-        public void onDownloadClick(final Media feedModel, final int childPosition) {
+        public void onDownloadClick(final Media feedModel, final int childPosition, final View popupLocation) {
             final Context context = getContext();
             if (context == null) return;
-            DownloadUtils.showDownloadDialog(context, feedModel, childPosition);
+            DownloadUtils.showDownloadDialog(context, feedModel, childPosition, popupLocation);
         }
 
         @Override
@@ -305,7 +305,7 @@ public class LocationFragment extends Fragment implements SwipeRefreshLayout.OnR
     @Override
     public void onRefresh() {
         binding.posts.refresh();
-        fetchStories();
+//        fetchStories();
     }
 
     @Override
@@ -386,7 +386,7 @@ public class LocationFragment extends Fragment implements SwipeRefreshLayout.OnR
         }
         setTitle();
         setupPosts();
-        fetchStories();
+//        fetchStories();
         final long locationId = locationModel.getPk();
         // binding.swipeRefreshLayout.setRefreshing(true);
         locationDetailsBinding.mainLocationImage.setImageURI("res:/" + R.drawable.ic_location);
@@ -531,14 +531,14 @@ public class LocationFragment extends Fragment implements SwipeRefreshLayout.OnR
                     );
                 }), Dispatchers.getIO())
         ));
-        locationDetailsBinding.mainLocationImage.setOnClickListener(v -> {
-            if (hasStories) {
-                // show stories
-                final NavDirections action = LocationFragmentDirections
-                        .actionLocationFragmentToStoryViewerFragment(StoryViewerOptions.forLocation(locationId, locationModel.getName()));
-                NavHostFragment.findNavController(this).navigate(action);
-            }
-        });
+//        locationDetailsBinding.mainLocationImage.setOnClickListener(v -> {
+//            if (hasStories) {
+//                // show stories
+//                final NavDirections action = LocationFragmentDirections
+//                        .actionLocationFragmentToStoryViewerFragment(StoryViewerOptions.forLocation(locationId, locationModel.getName()));
+//                NavHostFragment.findNavController(this).navigate(action);
+//            }
+//        });
     }
 
     private void showSnackbar(final String message) {
@@ -549,26 +549,26 @@ public class LocationFragment extends Fragment implements SwipeRefreshLayout.OnR
                 .show();
     }
 
-    private void fetchStories() {
-        if (isLoggedIn) {
-            storiesFetching = true;
-            storiesRepository.getUserStory(
-                    StoryViewerOptions.forLocation(locationId, locationModel.getName()),
-                    CoroutineUtilsKt.getContinuation((storyModels, throwable) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
-                        if (throwable != null) {
-                            Log.e(TAG, "Error", throwable);
-                            storiesFetching = false;
-                            return;
-                        }
-                        if (storyModels != null && !storyModels.isEmpty()) {
-                            locationDetailsBinding.mainLocationImage.setStoriesBorder(1);
-                            hasStories = true;
-                        }
-                        storiesFetching = false;
-                    }), Dispatchers.getIO())
-            );
-        }
-    }
+//    private void fetchStories() {
+//        if (isLoggedIn) {
+//            storiesFetching = true;
+//            storiesRepository.getStories(
+//                    StoryViewerOptions.forLocation(locationId, locationModel.getName()),
+//                    CoroutineUtilsKt.getContinuation((storyModels, throwable) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
+//                        if (throwable != null) {
+//                            Log.e(TAG, "Error", throwable);
+//                            storiesFetching = false;
+//                            return;
+//                        }
+//                        if (storyModels != null && !storyModels.isEmpty()) {
+//                            locationDetailsBinding.mainLocationImage.setStoriesBorder(1);
+//                            hasStories = true;
+//                        }
+//                        storiesFetching = false;
+//                    }), Dispatchers.getIO())
+//            );
+//        }
+//    }
 
     private void setTitle() {
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();

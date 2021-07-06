@@ -68,7 +68,7 @@ public final class SliderItemsAdapter extends ListAdapter<Media, SliderItemViewH
     @Override
     public int getItemViewType(final int position) {
         final Media media = getItem(position);
-        return media.getMediaType().getId();
+        return media.getType().getId();
     }
 
     // @NonNull

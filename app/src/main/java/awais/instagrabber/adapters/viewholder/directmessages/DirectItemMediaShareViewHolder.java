@@ -65,19 +65,29 @@ public class DirectItemMediaShareViewHolder extends DirectItemViewHolder {
         if (media == null) return;
         itemView.post(() -> {
             setupUser(media);
-            setupTitle(media);
             setupCaption(media);
         });
+        final int index;
+        final Media toDisplay;
+        final MediaItemType mediaType = media.getType();
+        switch (mediaType) {
+            case MEDIA_TYPE_SLIDER:
+                toDisplay = media.getCarouselMedia().stream()
+                        .filter(m -> media.getCarouselShareChildMediaId() != null &&
+                                media.getCarouselShareChildMediaId().equals(m.getId()))
+                        .findAny()
+                        .orElse(media.getCarouselMedia().get(0));
+                index = media.getCarouselMedia().indexOf(toDisplay);
+                break;
+            default:
+                toDisplay = media;
+                index = 0;
+        }
         itemView.post(() -> {
-            final MediaItemType mediaType = media.getMediaType();
             setupTypeIndicator(mediaType);
-            if (mediaType == MediaItemType.MEDIA_TYPE_SLIDER) {
-                setupPreview(media.getCarouselMedia().get(0), messageDirection);
-                return;
-            }
-            setupPreview(media, messageDirection);
+            setupPreview(toDisplay, messageDirection);
         });
-        itemView.setOnClickListener(v -> openMedia(media));
+        itemView.setOnClickListener(v -> openMedia(media, index));
     }
 
     private void setupTypeIndicator(final MediaItemType mediaType) {
@@ -126,16 +136,6 @@ public class DirectItemMediaShareViewHolder extends DirectItemViewHolder {
             binding.caption.setMaxLines(2);
         } else {
             binding.caption.setVisibility(View.GONE);
-        }
-    }
-
-    private void setupTitle(@NonNull final Media media) {
-        final String title = media.getTitle();
-        if (!TextUtils.isEmpty(title)) {
-            binding.title.setVisibility(View.VISIBLE);
-            binding.title.setText(title);
-        } else {
-            binding.title.setVisibility(View.GONE);
         }
     }
 

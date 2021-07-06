@@ -42,7 +42,7 @@ public class StoryViewerOptions implements Serializable {
     }
 
     public static StoryViewerOptions forUser(final long id, final String name) {
-        return new StoryViewerOptions(id, name,Type.USER);
+        return new StoryViewerOptions(id, name, Type.USER);
     }
 
     public static StoryViewerOptions forHighlight(final String highlight) {

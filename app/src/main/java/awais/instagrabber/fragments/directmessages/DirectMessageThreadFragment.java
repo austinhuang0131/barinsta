@@ -8,7 +8,6 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.drawable.Animatable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -32,7 +31,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.view.menu.ActionMenuItemView;
-import androidx.core.content.ContextCompat;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsAnimationCompat;
 import androidx.core.view.WindowInsetsAnimationControlListenerCompat;
@@ -97,7 +95,6 @@ import awais.instagrabber.customviews.helpers.TranslateDeferringInsetsAnimationC
 import awais.instagrabber.databinding.FragmentDirectMessagesThreadBinding;
 import awais.instagrabber.dialogs.DirectItemReactionDialogFragment;
 import awais.instagrabber.dialogs.GifPickerBottomDialogFragment;
-import awais.instagrabber.dialogs.MediaPickerBottomDialogFragment;
 import awais.instagrabber.fragments.PostViewV2Fragment;
 import awais.instagrabber.fragments.UserSearchFragment;
 import awais.instagrabber.fragments.UserSearchFragmentDirections;
@@ -130,6 +127,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     private static final String TAG = DirectMessageThreadFragment.class.getSimpleName();
     private static final int AUDIO_RECORD_PERM_REQUEST_CODE = 1000;
     private static final int CAMERA_REQUEST_CODE = 200;
+    private static final int FILE_PICKER_REQUEST_CODE = 500;
     private static final String TRANSLATION_Y = "translationY";
 
     private DirectItemsAdapter itemsAdapter;
@@ -221,7 +219,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         }
 
         @Override
-        public void onMediaClick(final Media media) {
+        public void onMediaClick(final Media media, final int index) {
             if (media.isReelMedia()) {
                 final String pk = media.getPk();
                 try {
@@ -240,6 +238,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
             final NavController navController = NavHostFragment.findNavController(DirectMessageThreadFragment.this);
             final Bundle bundle = new Bundle();
             bundle.putSerializable(PostViewV2Fragment.ARG_MEDIA, media);
+            bundle.putInt(PostViewV2Fragment.ARG_SLIDER_POSITION, index);
             try {
                 navController.navigate(R.id.action_global_post_view, bundle);
             } catch (Exception e) {
@@ -474,6 +473,24 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == FILE_PICKER_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+            if (data == null || data.getData() == null) {
+                Log.w(TAG, "data is null!");
+                return;
+            }
+            final Context context = getContext();
+            if (context == null) {
+                Log.w(TAG, "conetxt is null!");
+                return;
+            }
+            final Uri uri = data.getData();
+            final String mimeType = Utils.getMimeType(uri, context.getContentResolver());
+            if (mimeType.startsWith("image")) {
+                navigateToImageEditFragment(uri);
+                return;
+            }
+            handleSentMessage(viewModel.sendUri(uri));
+        }
         if (requestCode == CAMERA_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             if (data == null || data.getData() == null) {
                 Log.w(TAG, "data is null!");
@@ -904,7 +921,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
 
     @NonNull
     private String getMediaPreviewTextString(final Media media) {
-        final MediaItemType mediaType = media.getMediaType();
+        final MediaItemType mediaType = media.getType();
         switch (mediaType) {
             case MEDIA_TYPE_IMAGE:
                 return getString(R.string.photo);
@@ -1109,17 +1126,15 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         setupInsetsCallback();
         setupEmojiPicker();
         binding.gallery.setOnClickListener(v -> {
-            final MediaPickerBottomDialogFragment mediaPicker = MediaPickerBottomDialogFragment.newInstance();
-            mediaPicker.setOnSelectListener(entry -> {
-                mediaPicker.dismiss();
-                if (!isAdded()) return;
-                if (!entry.isVideo) {
-                    navigateToImageEditFragment(entry.path);
-                    return;
-                }
-                handleSentMessage(viewModel.sendUri(entry));
+            final Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
+            intent.setType("*/*");
+            intent.addCategory(Intent.CATEGORY_OPENABLE);
+            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{
+                    "image/*",
+                    "video/mp4"
             });
-            mediaPicker.show(getChildFragmentManager(), "MediaPicker");
+            startActivityForResult(intent, FILE_PICKER_REQUEST_CODE);
         });
         binding.gif.setOnClickListener(v -> {
             final GifPickerBottomDialogFragment gifPicker = GifPickerBottomDialogFragment.newInstance();

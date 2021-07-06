@@ -1,6 +1,5 @@
 package awais.instagrabber.viewmodels
 
-import android.R.attr
 import android.app.Application
 import android.content.ContentResolver
 import android.net.Uri
@@ -23,7 +22,6 @@ import awais.instagrabber.utils.MediaUtils.OnInfoLoadListener
 import awais.instagrabber.utils.MediaUtils.VideoInfo
 import awais.instagrabber.utils.VoiceRecorder.VoiceRecorderCallback
 import awais.instagrabber.utils.VoiceRecorder.VoiceRecordingResult
-import java.util.*
 
 
 class DirectThreadViewModel(
@@ -36,7 +34,7 @@ class DirectThreadViewModel(
 
     // private static final String ERROR_INVALID_THREAD = "Invalid thread";
     private val contentResolver: ContentResolver = application.contentResolver
-    private val recordingsDir: DocumentFile? = DownloadUtils.getRecordingsDir()
+    private val recordingsDir: DocumentFile? = DownloadUtils.recordingsDir
     private var voiceRecorder: VoiceRecorder? = null
     private lateinit var threadManager: ThreadManager
 
@@ -74,10 +72,6 @@ class DirectThreadViewModel(
 
     fun sendText(text: String): LiveData<Resource<Any?>> {
         return threadManager.sendText(text, viewModelScope)
-    }
-
-    fun sendUri(entry: MediaController.MediaEntry): LiveData<Resource<Any?>> {
-        return threadManager.sendUri(entry, viewModelScope)
     }
 
     fun sendUri(uri: Uri): LiveData<Resource<Any?>> {

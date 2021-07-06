@@ -63,7 +63,7 @@ public class ProfileService {
                 }
                 callback.onSuccess(new PostsFetchResponse(
                         body.getItems(),
-                        body.isMoreAvailable(),
+                        body.getMoreAvailable(),
                         body.getNextMaxId()
                 ));
             }
@@ -204,7 +204,7 @@ public class ProfileService {
                 }
                 callback.onSuccess(new PostsFetchResponse(
                         userFeedResponse.getItems(),
-                        userFeedResponse.isMoreAvailable(),
+                        userFeedResponse.getMoreAvailable(),
                         userFeedResponse.getNextMaxId()
                 ));
             }
@@ -237,7 +237,7 @@ public class ProfileService {
                 }
                 callback.onSuccess(new PostsFetchResponse(
                         userFeedResponse.getItems(),
-                        userFeedResponse.isMoreAvailable(),
+                        userFeedResponse.getMoreAvailable(),
                         userFeedResponse.getNextMaxId()
                 ));
             }

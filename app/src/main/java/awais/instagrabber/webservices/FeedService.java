@@ -119,13 +119,13 @@ public class FeedService {
                     nextMaxId = group.getNextMaxId();
                     final List<Media> feedItems = group.getFeedItems();
                     for (final Media feedItem : feedItems) {
-                        if (feedItem == null || feedItem.isInjected() || feedItem.getMediaType() == null) continue;
+                        if (feedItem == null || feedItem.isInjected() || feedItem.getType() == null) continue;
                         allPosts.add(feedItem);
                     }
                 }
                 continue;
             }
-            if (media == null || media.isInjected() || media.getMediaType() == null) continue;
+            if (media == null || media.isInjected() || media.getType() == null) continue;
             allPosts.add(media);
         }
         return new PostsFetchResponse(allPosts, moreAvailable, nextMaxId);

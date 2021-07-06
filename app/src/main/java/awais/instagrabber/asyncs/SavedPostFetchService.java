@@ -40,7 +40,7 @@ public class SavedPostFetchService implements PostFetcher.PostFetchService {
             public void onSuccess(final PostsFetchResponse result) {
                 if (result == null) return;
                 nextMaxId = result.getNextCursor();
-                moreAvailable = result.hasNextPage();
+                moreAvailable = result.getHasNextPage();
                 if (fetchListener != null) {
                     fetchListener.onResult(result.getFeedModels());
                 }

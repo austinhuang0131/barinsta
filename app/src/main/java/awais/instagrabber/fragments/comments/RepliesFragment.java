@@ -174,7 +174,7 @@ public class RepliesFragment extends Fragment {
     }
 
     private void setupToolbar() {
-        binding.toolbar.setTitle("Replies");
+        binding.toolbar.setTitle(R.string.title_replies);
         binding.toolbar.setNavigationIcon(R.drawable.ic_round_arrow_back_24);
         binding.toolbar.setNavigationOnClickListener(v -> {
             final FragmentManager fragmentManager = getParentFragmentManager();
@@ -187,7 +187,16 @@ public class RepliesFragment extends Fragment {
         if (context == null) return;
         commentsAdapter = new CommentsAdapter(currentUserId,
                                               true,
-                                              Helper.getCommentCallback(context, getViewLifecycleOwner(), getNavController(), viewModel, null));
+                                              Helper.getCommentCallback(context,
+                                                      getViewLifecycleOwner(),
+                                                      getNavController(),
+                                                      viewModel,
+                                                      (comment, focusInput) -> {
+                                                           viewModel.setReplyTo(comment);
+                                                           binding.commentText.setText(String.format("@%s ", comment.getUser().getUsername()));
+                                                           if (focusInput) Utils.showKeyboard(binding.commentText);
+                                                           return null;
+                                                      }));
         binding.comments.setAdapter(commentsAdapter);
         final Resource<List<Comment>> listResource = viewModel.getReplyList().getValue();
         commentsAdapter.submitList(listResource != null ? listResource.data : Collections.emptyList());

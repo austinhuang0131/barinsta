@@ -7,7 +7,7 @@ class StoryReplyBroadcastOptions(
     threadIdsOrUserIds: ThreadIdsOrUserIds,
     val text: String,
     val mediaId: String,
-    val reelId: String // or user id, usually same
+    val reelId: String
 ) : BroadcastOptions(clientContext, threadIdsOrUserIds, BroadcastItemType.REELSHARE) {
     override val formMap: Map<String, String>
         get() = mapOf(

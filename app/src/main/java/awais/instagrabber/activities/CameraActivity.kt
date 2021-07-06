@@ -52,7 +52,7 @@ class CameraActivity : BaseLanguageActivity() {
         setContentView(binding.root)
         Utils.transparentStatusBar(this, true, false)
         displayManager = getSystemService(DISPLAY_SERVICE) as DisplayManager
-        outputDirectory = DownloadUtils.getCameraDir()
+        outputDirectory = DownloadUtils.cameraDir
         cameraExecutor = Executors.newSingleThreadExecutor()
         displayManager.registerDisplayListener(displayListener, null)
         binding.viewFinder.post {

@@ -38,9 +38,9 @@ import awais.instagrabber.adapters.HighlightStoriesListAdapter.OnHighlightStoryC
 import awais.instagrabber.customviews.helpers.RecyclerLazyLoader;
 import awais.instagrabber.databinding.FragmentStoryListViewerBinding;
 import awais.instagrabber.fragments.settings.MorePreferencesFragmentDirections;
-import awais.instagrabber.models.FeedStoryModel;
-import awais.instagrabber.models.HighlightModel;
 import awais.instagrabber.repositories.requests.StoryViewerOptions;
+import awais.instagrabber.repositories.responses.stories.ArchiveResponse;
+import awais.instagrabber.repositories.responses.stories.Story;
 import awais.instagrabber.utils.AppExecutors;
 import awais.instagrabber.utils.CoroutineUtilsKt;
 import awais.instagrabber.utils.TextUtils;
@@ -48,7 +48,6 @@ import awais.instagrabber.viewmodels.ArchivesViewModel;
 import awais.instagrabber.viewmodels.FeedStoriesViewModel;
 import awais.instagrabber.webservices.ServiceCallback;
 import awais.instagrabber.webservices.StoriesRepository;
-import awais.instagrabber.webservices.StoriesRepository.ArchiveFetchResponse;
 import kotlinx.coroutines.Dispatchers;
 
 public final class StoryListViewerFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
@@ -69,12 +68,12 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
 
     private final OnFeedStoryClickListener clickListener = new OnFeedStoryClickListener() {
         @Override
-        public void onFeedStoryClick(final FeedStoryModel model) {
+        public void onFeedStoryClick(final Story model) {
             if (model == null) return;
-            final List<FeedStoryModel> feedStoryModels = feedStoriesViewModel.getList().getValue();
+            final List<Story> feedStoryModels = feedStoriesViewModel.getList().getValue();
             if (feedStoryModels == null) return;
             final int position = Iterables.indexOf(feedStoryModels, feedStoryModel -> feedStoryModel != null
-                    && Objects.equals(feedStoryModel.getStoryMediaId(), model.getStoryMediaId()));
+                    && Objects.equals(feedStoryModel.getId(), model.getId()));
             final NavDirections action = StoryListViewerFragmentDirections
                     .actionStoryListFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStoryPosition(position));
             NavHostFragment.findNavController(StoryListViewerFragment.this).navigate(action);
@@ -88,7 +87,7 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
 
     private final OnHighlightStoryClickListener archiveClickListener = new OnHighlightStoryClickListener() {
         @Override
-        public void onHighlightClick(final HighlightModel model, final int position) {
+        public void onHighlightClick(final Story model, final int position) {
             if (model == null) return;
             final NavDirections action = StoryListViewerFragmentDirections
                     .actionStoryListFragmentToStoryViewerFragment(StoryViewerOptions.forStoryArchive(position));
@@ -101,9 +100,9 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
         }
     };
 
-    private final ServiceCallback<ArchiveFetchResponse> cb = new ServiceCallback<ArchiveFetchResponse>() {
+    private final ServiceCallback<ArchiveResponse> cb = new ServiceCallback<ArchiveResponse>() {
         @Override
-        public void onSuccess(final ArchiveFetchResponse result) {
+        public void onSuccess(final ArchiveResponse result) {
             binding.swipeRefreshLayout.setRefreshing(false);
             if (result == null) {
                 try {
@@ -111,10 +110,10 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
                     Toast.makeText(context, R.string.empty_list, Toast.LENGTH_SHORT).show();
                 } catch (Exception ignored) {}
             } else {
-                endCursor = result.getNextCursor();
-                final List<HighlightModel> models = archivesViewModel.getList().getValue();
-                final List<HighlightModel> modelsCopy = models == null ? new ArrayList<>() : new ArrayList<>(models);
-                modelsCopy.addAll(result.getResult());
+                endCursor = result.getMaxId();
+                final List<Story> models = archivesViewModel.getList().getValue();
+                final List<Story> modelsCopy = models == null ? new ArrayList<>() : new ArrayList<>(models);
+                modelsCopy.addAll(result.getItems());
                 archivesViewModel.getList().postValue(modelsCopy);
             }
         }
@@ -135,7 +134,11 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
         fragmentActivity = (AppCompatActivity) requireActivity();
         context = getContext();
         if (context == null) return;
-        setHasOptionsMenu(true);
+        final Bundle args = getArguments();
+        if (args == null) return;
+        final StoryListViewerFragmentArgs fragmentArgs = StoryListViewerFragmentArgs.fromBundle(args);
+        type = fragmentArgs.getType();
+        setHasOptionsMenu(type.equals("feed"));
         storiesRepository = StoriesRepository.Companion.getInstance();
     }
 
@@ -196,9 +199,6 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
 
     private void init() {
         final Context context = getContext();
-        if (getArguments() == null) return;
-        final StoryListViewerFragmentArgs fragmentArgs = StoryListViewerFragmentArgs.fromBundle(getArguments());
-        type = fragmentArgs.getType();
         binding.swipeRefreshLayout.setOnRefreshListener(this);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(context);
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();
@@ -236,7 +236,7 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
         binding.swipeRefreshLayout.setRefreshing(true);
         if (type.equals("feed") && firstRefresh) {
             binding.swipeRefreshLayout.setRefreshing(false);
-            final List<FeedStoryModel> value = feedStoriesViewModel.getList().getValue();
+            final List<Story> value = feedStoriesViewModel.getList().getValue();
             if (value != null) {
                 adapter.submitList(value);
             }
@@ -250,9 +250,9 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
                             return;
                         }
                         //noinspection unchecked
-                        feedStoriesViewModel.getList().postValue((List<FeedStoryModel>) feedStoryModels);
+                        feedStoriesViewModel.getList().postValue((List<Story>) feedStoryModels);
                         //noinspection unchecked
-                        adapter.submitList((List<FeedStoryModel>) feedStoryModels);
+                        adapter.submitList((List<Story>) feedStoryModels);
                         binding.swipeRefreshLayout.setRefreshing(false);
                     }), Dispatchers.getIO())
             );

@@ -7,11 +7,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import awais.instagrabber.R
 import awais.instagrabber.managers.DirectMessagesManager
-import awais.instagrabber.models.enums.BroadcastItemType
 import awais.instagrabber.models.Resource
 import awais.instagrabber.models.Resource.Companion.error
 import awais.instagrabber.models.Resource.Companion.loading
 import awais.instagrabber.models.Resource.Companion.success
+import awais.instagrabber.models.enums.BroadcastItemType
 import awais.instagrabber.models.enums.MediaItemType
 import awais.instagrabber.repositories.responses.Caption
 import awais.instagrabber.repositories.responses.Location
@@ -60,8 +60,8 @@ class PostViewV2ViewModel : ViewModel() {
         date.postValue(media.date)
         likeCount.postValue(media.likeCount)
         commentCount.postValue(media.commentCount)
-        viewCount.postValue(if (media.mediaType == MediaItemType.MEDIA_TYPE_VIDEO) media.viewCount else null)
-        type.postValue(media.mediaType)
+        viewCount.postValue(if (media.type == MediaItemType.MEDIA_TYPE_VIDEO) media.viewCount else null)
+        type.postValue(media.type)
         liked.postValue(media.hasLiked)
         saved.postValue(media.hasViewerSaved)
         initOptions()
@@ -280,9 +280,9 @@ class PostViewV2ViewModel : ViewModel() {
         }
         viewModelScope.launch(Dispatchers.IO) {
             try {
-                val result = mediaRepository.translate(pk, "1")
+                val result = mediaRepository.translate(pk, "1") ?: return@launch
                 if (result.isBlank()) {
-                    data.postValue(error("", null))
+                    // data.postValue(error("", null))
                     return@launch
                 }
                 data.postValue(success(result))
@@ -310,7 +310,7 @@ class PostViewV2ViewModel : ViewModel() {
             return data
         }
         val mediaId = media.id
-        val mediaType = media.mediaType
+        val mediaType = media.type
         if (mediaId == null || mediaType == null) {
             data.postValue(error("media id or type is null", null))
             return data
@@ -331,19 +331,21 @@ class PostViewV2ViewModel : ViewModel() {
         return data
     }
 
-    fun shareDm(result: RankedRecipient) {
+    fun shareDm(result: RankedRecipient, child: Int) {
         if (messageManager == null) {
             messageManager = DirectMessagesManager
         }
         val mediaId = media.id ?: return
-        messageManager?.sendMedia(result, mediaId, BroadcastItemType.MEDIA_SHARE, viewModelScope)
+        val childId = if (child == -1) null else media.carouselMedia?.get(child)?.id
+        messageManager?.sendMedia(result, mediaId, childId, BroadcastItemType.MEDIA_SHARE, viewModelScope)
     }
 
-    fun shareDm(recipients: Set<RankedRecipient>) {
+    fun shareDm(recipients: Set<RankedRecipient>, child: Int) {
         if (messageManager == null) {
             messageManager = DirectMessagesManager
         }
         val mediaId = media.id ?: return
-        messageManager?.sendMedia(recipients, mediaId, BroadcastItemType.MEDIA_SHARE, viewModelScope)
+        val childId = if (child == -1) null else media.carouselMedia?.get(child)?.id
+        messageManager?.sendMedia(recipients, mediaId, childId, BroadcastItemType.MEDIA_SHARE, viewModelScope)
     }
 }

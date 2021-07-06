@@ -9,20 +9,20 @@ import androidx.recyclerview.widget.ListAdapter;
 
 import awais.instagrabber.adapters.viewholder.HighlightViewHolder;
 import awais.instagrabber.databinding.ItemHighlightBinding;
-import awais.instagrabber.models.HighlightModel;
+import awais.instagrabber.repositories.responses.stories.Story;
 
-public final class HighlightsAdapter extends ListAdapter<HighlightModel, HighlightViewHolder> {
+public final class HighlightsAdapter extends ListAdapter<Story, HighlightViewHolder> {
 
     private final OnHighlightClickListener clickListener;
 
-    private static final DiffUtil.ItemCallback<HighlightModel> diffCallback = new DiffUtil.ItemCallback<HighlightModel>() {
+    private static final DiffUtil.ItemCallback<Story> diffCallback = new DiffUtil.ItemCallback<Story>() {
         @Override
-        public boolean areItemsTheSame(@NonNull final HighlightModel oldItem, @NonNull final HighlightModel newItem) {
+        public boolean areItemsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
             return oldItem.getId().equals(newItem.getId());
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull final HighlightModel oldItem, @NonNull final HighlightModel newItem) {
+        public boolean areContentsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
             return oldItem.getId().equals(newItem.getId());
         }
     };
@@ -42,7 +42,7 @@ public final class HighlightsAdapter extends ListAdapter<HighlightModel, Highlig
 
     @Override
     public void onBindViewHolder(@NonNull final HighlightViewHolder holder, final int position) {
-        final HighlightModel highlightModel = getItem(position);
+        final Story highlightModel = getItem(position);
         if (clickListener != null) {
             holder.itemView.setOnClickListener(v -> clickListener.onHighlightClick(highlightModel, position));
         }
@@ -50,6 +50,6 @@ public final class HighlightsAdapter extends ListAdapter<HighlightModel, Highlig
     }
 
     public interface OnHighlightClickListener {
-        void onHighlightClick(final HighlightModel model, final int position);
+        void onHighlightClick(final Story model, final int position);
     }
 }

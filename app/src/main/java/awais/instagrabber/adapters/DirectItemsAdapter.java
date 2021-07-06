@@ -171,7 +171,7 @@ public final class DirectItemsAdapter extends RecyclerView.Adapter<RecyclerView.
                 return new DirectItemVideoCallEventViewHolder(baseBinding, binding, currentUser, thread, callback);
             }
             case PLACEHOLDER: {
-                final LayoutDmTextBinding binding = LayoutDmTextBinding.inflate(layoutInflater, baseBinding.message, false);
+                final LayoutDmStoryShareBinding binding = LayoutDmStoryShareBinding.inflate(layoutInflater, baseBinding.message, false);
                 return new DirectItemPlaceholderViewHolder(baseBinding, binding, currentUser, thread, callback);
             }
             case ANIMATED_MEDIA: {
@@ -401,7 +401,7 @@ public final class DirectItemsAdapter extends RecyclerView.Adapter<RecyclerView.
 
         void onEmailClick(String email);
 
-        void onMediaClick(Media media);
+        void onMediaClick(Media media, int index);
 
         void onStoryClick(DirectItemStoryShare storyShare);
 

@@ -120,10 +120,10 @@ public class TopicPostsFragment extends Fragment implements SwipeRefreshLayout.O
         }
 
         @Override
-        public void onDownloadClick(final Media feedModel, final int childPosition) {
+        public void onDownloadClick(final Media feedModel, final int childPosition, final View popupLocation) {
             final Context context = getContext();
             if (context == null) return;
-            DownloadUtils.showDownloadDialog(context, feedModel, childPosition);
+            DownloadUtils.showDownloadDialog(context, feedModel, childPosition, popupLocation);
         }
 
         @Override

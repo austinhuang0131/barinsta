@@ -59,11 +59,15 @@ public class FeedSliderViewHolder extends FeedItemViewHolder {
                 final String text = (position + 1) + "/" + sliderItemLen;
                 binding.mediaCounter.setText(text);
                 setDimensions(binding.mediaList, sliderItems.get(position));
-                binding.itemFeedBottom.btnDownload.setOnClickListener(v -> feedItemCallback.onDownloadClick(feedModel, position));
+                binding.itemFeedBottom.btnDownload.setOnClickListener(v ->
+                        feedItemCallback.onDownloadClick(feedModel, position, binding.itemFeedBottom.btnDownload)
+                );
             }
         });
         setDimensions(binding.mediaList, sliderItems.get(0));
-        binding.itemFeedBottom.btnDownload.setOnClickListener(v -> feedItemCallback.onDownloadClick(feedModel, 0));
+        binding.itemFeedBottom.btnDownload.setOnClickListener(v ->
+                feedItemCallback.onDownloadClick(feedModel, 0, binding.itemFeedBottom.btnDownload)
+        );
         adapter.submitList(sliderItems);
     }
 

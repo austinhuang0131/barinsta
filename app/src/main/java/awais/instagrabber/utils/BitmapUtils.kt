@@ -193,9 +193,9 @@ object BitmapUtils {
     }
 
     @Throws(IOException::class)
-    fun convertToJpegAndSaveToFile(contentResolver: ContentResolver, bitmap: Bitmap, file: DocumentFile?): DocumentFile {
+    fun convertToJpegAndSaveToFile(contentResolver: ContentResolver, bitmap: Bitmap, file: DocumentFile?): DocumentFile? {
         val tempFile = file ?: DownloadUtils.getTempFile(null, "jpg")
-        contentResolver.openOutputStream(tempFile.uri).use { output ->
+        contentResolver.openOutputStream(tempFile!!.uri).use { output ->
             val compressResult = bitmap.compress(Bitmap.CompressFormat.JPEG, 100, output)
             if (!compressResult) {
                 throw RuntimeException("Compression failed!")

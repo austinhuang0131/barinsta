@@ -14,6 +14,6 @@ data class StorySticker(
     val pollSticker: PollSticker?, // story_polls
     val questionSticker: QuestionSticker?, // story_questions
     val quizSticker: QuizSticker?, // story_quizs
-    val links: StoryCta?, // story_cta, requires link_text from the story
+    val links: List<StoryCta?>?, // story_cta, requires link_text from the story
     val sliderSticker: SliderSticker? // story_sliders
 ) : Serializable

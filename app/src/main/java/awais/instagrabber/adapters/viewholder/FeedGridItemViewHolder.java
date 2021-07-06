@@ -1,5 +1,6 @@
 package awais.instagrabber.adapters.viewholder;
 
+import android.content.Context;
 import android.content.res.ColorStateList;
 import android.net.Uri;
 import android.view.View;
@@ -70,7 +71,7 @@ public class FeedGridItemViewHolder extends RecyclerView.ViewHolder {
         setUserDetails(media, layoutPreferences);
         String thumbnailUrl = null;
         final int typeIconRes;
-        final MediaItemType mediaType = media.getMediaType();
+        final MediaItemType mediaType = media.getType();
         if (mediaType == null) return;
         switch (mediaType) {
             case MEDIA_TYPE_IMAGE:
@@ -107,13 +108,17 @@ public class FeedGridItemViewHolder extends RecyclerView.ViewHolder {
             binding.typeIcon.setImageResource(typeIconRes);
         }
         binding.downloaded.setVisibility(View.GONE);
+        final Context context = itemView.getContext();
+        if (context == null) {
+            return;
+        }
         AppExecutors.INSTANCE.getTasksThread().execute(() -> {
-            final List<Boolean> checkList = DownloadUtils.checkDownloaded(media);
+            final List<Boolean> checkList = DownloadUtils.checkDownloaded(media, context);
             if (checkList.isEmpty()) {
                 return;
             }
             AppExecutors.INSTANCE.getMainThread().execute(() -> {
-                switch (media.getMediaType()) {
+                switch (media.getType()) {
                     case MEDIA_TYPE_IMAGE:
                     case MEDIA_TYPE_VIDEO:
                         binding.downloaded.setVisibility(checkList.get(0) ? View.VISIBLE : View.GONE);

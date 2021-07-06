@@ -5,12 +5,12 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.List;
 
-import awais.instagrabber.models.HighlightModel;
+import awais.instagrabber.repositories.responses.stories.Story;
 
 public class ArchivesViewModel extends ViewModel {
-    private MutableLiveData<List<HighlightModel>> list;
+    private MutableLiveData<List<Story>> list;
 
-    public MutableLiveData<List<HighlightModel>> getList() {
+    public MutableLiveData<List<Story>> getList() {
         if (list == null) {
             list = new MutableLiveData<>();
         }

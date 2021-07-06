@@ -36,8 +36,8 @@ object MediaUploader {
         contentResolver: ContentResolver,
         bitmap: Bitmap,
     ): MediaUploadResponse = withContext(Dispatchers.IO) {
-        val file: DocumentFile = BitmapUtils.convertToJpegAndSaveToFile(contentResolver, bitmap, null)
-        val byteLength: Long = file.length()
+        val file: DocumentFile? = BitmapUtils.convertToJpegAndSaveToFile(contentResolver, bitmap, null)
+        val byteLength: Long = file!!.length()
         val options = createUploadPhotoOptions(byteLength)
         val headers = getUploadPhotoHeaders(options)
         val url = HOST + "/rupload_igphoto/" + options.name + "/"

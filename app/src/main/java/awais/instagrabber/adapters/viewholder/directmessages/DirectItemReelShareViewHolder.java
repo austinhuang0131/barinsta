@@ -52,7 +52,7 @@ public class DirectItemReelShareViewHolder extends DirectItemViewHolder {
         if (media == null) return;
         final User user = media.getUser();
         if (user == null) return;
-        final boolean expired = media.getMediaType() == null;
+        final boolean expired = media.getType() == null;
         if (expired) {
             binding.preview.setVisibility(View.GONE);
             binding.typeIcon.setVisibility(View.GONE);
@@ -76,7 +76,7 @@ public class DirectItemReelShareViewHolder extends DirectItemViewHolder {
         }
         if (!expired) {
             setPreview(media);
-            itemView.setOnClickListener(v -> openMedia(media));
+            itemView.setOnClickListener(v -> openMedia(media, -1));
         }
     }
 
@@ -159,7 +159,7 @@ public class DirectItemReelShareViewHolder extends DirectItemViewHolder {
     }
 
     private void setPreview(final Media media) {
-        final MediaItemType mediaType = media.getMediaType();
+        final MediaItemType mediaType = media.getType();
         if (mediaType == null) return;
         binding.typeIcon.setVisibility(mediaType == MediaItemType.MEDIA_TYPE_VIDEO || mediaType == MediaItemType.MEDIA_TYPE_SLIDER
                                        ? View.VISIBLE : View.GONE);

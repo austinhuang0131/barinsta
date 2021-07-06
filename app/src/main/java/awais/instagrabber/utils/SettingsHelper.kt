@@ -5,26 +5,26 @@ import android.content.SharedPreferences
 import android.os.Build
 import androidx.annotation.StringDef
 import androidx.appcompat.app.AppCompatDelegate
+import awais.instagrabber.fragments.settings.PreferenceKeys
 import java.util.*
 
-import awais.instagrabber.fragments.settings.PreferenceKeys
-
 class SettingsHelper(context: Context) {
-    private val sharedPreferences: SharedPreferences?
+    private val sharedPreferences: SharedPreferences? = context.getSharedPreferences(Constants.SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
+
     fun getString(@StringSettings key: String): String {
         val stringDefault = getStringDefault(key)
-        return if (sharedPreferences != null) sharedPreferences.getString(
+        return sharedPreferences?.getString(
             key,
             stringDefault
-        )!! else stringDefault
+        ) ?: stringDefault
     }
 
-    fun getStringSet(@StringSetSettings key: String?): Set<String>? {
+    fun getStringSet(@StringSetSettings key: String?): Set<String> {
         val stringSetDefault: Set<String> = HashSet()
-        return if (sharedPreferences != null) sharedPreferences.getStringSet(
+        return sharedPreferences?.getStringSet(
             key,
             stringSetDefault
-        ) else stringSetDefault
+        ) ?: stringSetDefault
     }
 
     fun getInteger(@IntegerSettings key: String): Int {
@@ -49,15 +49,16 @@ class SettingsHelper(context: Context) {
     fun getThemeCode(fromHelper: Boolean): Int {
         var themeCode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
         if (!fromHelper && sharedPreferences != null) {
-            themeCode = sharedPreferences.getString(PreferenceKeys.APP_THEME, themeCode.toString())!!.toInt()
+            themeCode = sharedPreferences.getString(PreferenceKeys.APP_THEME, themeCode.toString())?.toInt() ?: 0
             when (themeCode) {
                 1 -> themeCode = AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY
                 3 -> themeCode = AppCompatDelegate.MODE_NIGHT_NO
                 0 -> themeCode = AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
             }
         }
-        if (themeCode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM && Build.VERSION.SDK_INT < 29) themeCode =
-            AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY
+        if (themeCode == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM && Build.VERSION.SDK_INT < 29) {
+            themeCode = AppCompatDelegate.MODE_NIGHT_AUTO_BATTERY
+        }
         return themeCode
     }
 
@@ -78,7 +79,7 @@ class SettingsHelper(context: Context) {
     }
 
     fun hasPreference(key: String?): Boolean {
-        return sharedPreferences != null && sharedPreferences.contains(key)
+        return sharedPreferences?.contains(key) ?: false
     }
 
     @StringDef(
@@ -149,8 +150,4 @@ class SettingsHelper(context: Context) {
     @StringDef(PreferenceKeys.KEYWORD_FILTERS)
     annotation class StringSetSettings
 
-    init {
-        sharedPreferences =
-            context.getSharedPreferences(Constants.SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
-    }
 }

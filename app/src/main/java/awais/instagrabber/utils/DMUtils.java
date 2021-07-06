@@ -109,7 +109,7 @@ public final class DMUtils {
                             .getString(R.string.dms_inbox_shared_location, username != null ? username : "", item.getLocation().getName());
                     break;
                 case MEDIA: {
-                    final MediaItemType mediaType = item.getMedia().getMediaType();
+                    final MediaItemType mediaType = item.getMedia().getType();
                     subtitle = getMediaSpecificSubtitle(username, resources, mediaType);
                     break;
                 }
@@ -304,7 +304,7 @@ public final class DMUtils {
             }
             return subtitle;
         }
-        final MediaItemType mediaType = visualMedia.getMedia().getMediaType();
+        final MediaItemType mediaType = visualMedia.getMedia().getType();
         subtitle = getMediaSpecificSubtitle(username, resources, mediaType);
         return subtitle;
     }

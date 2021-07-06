@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="?attr/colorSurface"
-    app:layoutDescription="@xml/header_list_scene">
+    app:layoutDescription="@xml/header_list_scene"
+    tools:layoutDescription="@xml/profile_fragment_no_acc_layout">
 
     <include
         android:id="@+id/header"

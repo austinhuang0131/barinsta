@@ -28,7 +28,7 @@ object RetrofitFactory {
             addInterceptor(AddCookiesInterceptor())
             addInterceptor(igErrorsInterceptor)
             if (BuildConfig.DEBUG) {
-                // addInterceptor(new LoggingInterceptor());
+                // addInterceptor(LoggingInterceptor())
             }
         }
         val gson = GsonBuilder().apply {

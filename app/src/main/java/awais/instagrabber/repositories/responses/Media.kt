@@ -1,10 +1,10 @@
 package awais.instagrabber.repositories.responses
 
 import awais.instagrabber.models.enums.MediaItemType
+import awais.instagrabber.models.enums.MediaItemType.Companion.valueOf
 import awais.instagrabber.repositories.responses.feed.EndOfFeedDemarcator
 import awais.instagrabber.utils.TextUtils
 import java.io.Serializable
-import java.util.*
 
 data class Media(
     val pk: String? = null,
@@ -16,7 +16,7 @@ data class Media(
     val imageVersions2: ImageVersions2? = null,
     val originalWidth: Int = 0,
     val originalHeight: Int = 0,
-    val mediaType: MediaItemType? = null,
+    val mediaType: Int = 0,
     val commentLikesEnabled: Boolean = false,
     val commentsDisabled: Boolean = false,
     val nextMaxId: Long = -1,
@@ -38,7 +38,8 @@ data class Media(
     var isSidecarChild: Boolean = false,
     var hasViewerSaved: Boolean = false,
     private val injected: Map<String, Any>? = null,
-    val endOfFeedDemarcator: EndOfFeedDemarcator? = null
+    val endOfFeedDemarcator: EndOfFeedDemarcator? = null,
+    val carouselShareChildMediaId: String? = null // which specific child should dm show first
 ) : Serializable {
     private var dateString: String? = null
 
@@ -57,6 +58,9 @@ data class Media(
             dateString = TextUtils.epochSecondToString(takenAt)
             return dateString ?: ""
         }
+
+    val type: MediaItemType?
+        get() = valueOf(mediaType)
 
     fun setPostCaption(caption: String?) {
         var caption1: Caption? = this.caption

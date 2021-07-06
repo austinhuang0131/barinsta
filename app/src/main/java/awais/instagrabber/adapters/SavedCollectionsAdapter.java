@@ -8,6 +8,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 
+import java.util.Objects;
+
 import awais.instagrabber.adapters.viewholder.TopicClusterViewHolder;
 import awais.instagrabber.databinding.ItemDiscoverTopicBinding;
 import awais.instagrabber.repositories.responses.saved.SavedCollection;
@@ -23,10 +25,10 @@ public class SavedCollectionsAdapter extends ListAdapter<SavedCollection, TopicC
         public boolean areContentsTheSame(@NonNull final SavedCollection oldItem, @NonNull final SavedCollection newItem) {
             if (oldItem.getCoverMediaList() != null && newItem.getCoverMediaList() != null
                 && oldItem.getCoverMediaList().size() == newItem.getCoverMediaList().size()) {
-                return oldItem.getCoverMediaList().get(0).getId().equals(newItem.getCoverMediaList().get(0).getId());
+                return Objects.equals(oldItem.getCoverMediaList().get(0).getId(), newItem.getCoverMediaList().get(0).getId());
             }
             else if (oldItem.getCoverMedia() != null && newItem.getCoverMedia() != null) {
-                return oldItem.getCoverMedia().getId().equals(newItem.getCoverMedia().getId());
+                return Objects.equals(oldItem.getCoverMedia().getId(), newItem.getCoverMedia().getId());
             }
             return false;
         }

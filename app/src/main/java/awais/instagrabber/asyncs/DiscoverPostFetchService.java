@@ -33,7 +33,7 @@ public class DiscoverPostFetchService implements PostFetcher.PostFetchService {
                     onFailure(new RuntimeException("result is null"));
                     return;
                 }
-                moreAvailable = result.isMoreAvailable();
+                moreAvailable = result.getMoreAvailable();
                 topicalExploreRequest.setMaxId(result.getNextMaxId());
                 final List<WrappedMedia> items = result.getItems();
                 final List<Media> posts;

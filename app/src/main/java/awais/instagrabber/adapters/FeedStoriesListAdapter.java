@@ -15,22 +15,22 @@ import java.util.stream.Collectors;
 
 import awais.instagrabber.adapters.viewholder.StoryListViewHolder;
 import awais.instagrabber.databinding.ItemNotificationBinding;
-import awais.instagrabber.models.FeedStoryModel;
+import awais.instagrabber.repositories.responses.stories.Story;
 import awais.instagrabber.utils.TextUtils;
 
-public final class FeedStoriesListAdapter extends ListAdapter<FeedStoryModel, StoryListViewHolder> implements Filterable {
+public final class FeedStoriesListAdapter extends ListAdapter<Story, StoryListViewHolder> implements Filterable {
     private final OnFeedStoryClickListener listener;
-    private List<FeedStoryModel> list;
+    private List<Story> list;
 
     private final Filter filter = new Filter() {
         @NonNull
         @Override
         protected FilterResults performFiltering(final CharSequence filter) {
             final String query = TextUtils.isEmpty(filter) ? null : filter.toString().toLowerCase();
-            List<FeedStoryModel> filteredList = list;
+            List<Story> filteredList = list;
             if (list != null && query != null) {
                 filteredList = list.stream()
-                                   .filter(feedStoryModel -> feedStoryModel.getProfileModel()
+                                   .filter(feedStoryModel -> feedStoryModel.getUser()
                                                                            .getUsername()
                                                                            .toLowerCase()
                                                                            .contains(query))
@@ -45,19 +45,19 @@ public final class FeedStoriesListAdapter extends ListAdapter<FeedStoryModel, St
         @Override
         protected void publishResults(final CharSequence constraint, final FilterResults results) {
             //noinspection unchecked
-            submitList((List<FeedStoryModel>) results.values, true);
+            submitList((List<Story>) results.values, true);
         }
     };
 
-    private static final DiffUtil.ItemCallback<FeedStoryModel> diffCallback = new DiffUtil.ItemCallback<FeedStoryModel>() {
+    private static final DiffUtil.ItemCallback<Story> diffCallback = new DiffUtil.ItemCallback<Story>() {
         @Override
-        public boolean areItemsTheSame(@NonNull final FeedStoryModel oldItem, @NonNull final FeedStoryModel newItem) {
-            return oldItem.getStoryMediaId().equals(newItem.getStoryMediaId());
+        public boolean areItemsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId());
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull final FeedStoryModel oldItem, @NonNull final FeedStoryModel newItem) {
-            return oldItem.getStoryMediaId().equals(newItem.getStoryMediaId()) && oldItem.isFullyRead() == newItem.isFullyRead();
+        public boolean areContentsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId()) && oldItem.getSeen() == newItem.getSeen();
         }
     };
 
@@ -71,7 +71,7 @@ public final class FeedStoriesListAdapter extends ListAdapter<FeedStoryModel, St
         return filter;
     }
 
-    private void submitList(@Nullable final List<FeedStoryModel> list, final boolean isFiltered) {
+    private void submitList(@Nullable final List<Story> list, final boolean isFiltered) {
         if (!isFiltered) {
             this.list = list;
         }
@@ -79,7 +79,7 @@ public final class FeedStoriesListAdapter extends ListAdapter<FeedStoryModel, St
     }
 
     @Override
-    public void submitList(final List<FeedStoryModel> list) {
+    public void submitList(final List<Story> list) {
         submitList(list, false);
     }
 
@@ -93,12 +93,12 @@ public final class FeedStoriesListAdapter extends ListAdapter<FeedStoryModel, St
 
     @Override
     public void onBindViewHolder(@NonNull final StoryListViewHolder holder, final int position) {
-        final FeedStoryModel model = getItem(position);
+        final Story model = getItem(position);
         holder.bind(model, listener);
     }
 
     public interface OnFeedStoryClickListener {
-        void onFeedStoryClick(final FeedStoryModel model);
+        void onFeedStoryClick(final Story model);
 
         void onProfileClick(final String username);
     }

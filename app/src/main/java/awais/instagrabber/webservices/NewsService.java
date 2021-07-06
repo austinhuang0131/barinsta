@@ -137,7 +137,7 @@ public class NewsService {
                                             u.isVerified()
                                     ),
                                     9999,
-                                    u.getProfilePicId() // placeholder
+                                    String.valueOf(u.getPk()) // placeholder
                             );
                         })
                         .collect(Collectors.toList());

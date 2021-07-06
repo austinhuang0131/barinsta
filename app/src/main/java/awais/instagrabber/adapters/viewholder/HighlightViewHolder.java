@@ -3,7 +3,7 @@ package awais.instagrabber.adapters.viewholder;
 import androidx.recyclerview.widget.RecyclerView;
 
 import awais.instagrabber.databinding.ItemHighlightBinding;
-import awais.instagrabber.models.HighlightModel;
+import awais.instagrabber.repositories.responses.stories.Story;
 
 public final class HighlightViewHolder extends RecyclerView.ViewHolder {
 
@@ -14,10 +14,10 @@ public final class HighlightViewHolder extends RecyclerView.ViewHolder {
         this.binding = binding;
     }
 
-    public void bind(final HighlightModel model) {
+    public void bind(final Story model) {
         if (model == null) return;
         binding.title.setText(model.getTitle());
-        binding.icon.setImageURI(model.getThumbnailUrl());
+        binding.icon.setImageURI(model.getCoverMedia().getCroppedImageVersion().getUrl());
         // binding.getRoot().setOnClickListener(v -> {
         //     if (listener == null) return;
         //     listener.onFeedStoryClick(model, position);

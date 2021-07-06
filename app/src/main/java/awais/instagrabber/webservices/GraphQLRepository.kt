@@ -12,7 +12,7 @@ import org.json.JSONObject
 import java.util.*
 
 
-class GraphQLRepository(private val service: GraphQLService) {
+open class GraphQLRepository(private val service: GraphQLService) {
 
     // TODO convert string response to a response class
     private suspend fun fetch(
@@ -176,7 +176,7 @@ class GraphQLRepository(private val service: GraphQLService) {
     }
 
     // TODO convert string response to a response class
-    suspend fun fetchUser(
+    open suspend fun fetchUser(
         username: String,
     ): User {
         val response = service.getUser(username)

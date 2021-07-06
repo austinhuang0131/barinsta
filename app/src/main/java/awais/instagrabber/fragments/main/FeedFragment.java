@@ -1,7 +1,6 @@
 package awais.instagrabber.fragments.main;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -12,7 +11,6 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
 import androidx.activity.OnBackPressedDispatcher;
@@ -43,10 +41,10 @@ import awais.instagrabber.customviews.PrimaryActionModeCallback;
 import awais.instagrabber.databinding.FragmentFeedBinding;
 import awais.instagrabber.dialogs.PostsLayoutPreferencesDialogFragment;
 import awais.instagrabber.fragments.PostViewV2Fragment;
-import awais.instagrabber.models.FeedStoryModel;
 import awais.instagrabber.models.PostsLayoutPreferences;
 import awais.instagrabber.repositories.requests.StoryViewerOptions;
 import awais.instagrabber.repositories.responses.Media;
+import awais.instagrabber.repositories.responses.stories.Story;
 import awais.instagrabber.utils.AppExecutors;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CoroutineUtilsKt;
@@ -76,7 +74,7 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
     private final FeedStoriesAdapter feedStoriesAdapter = new FeedStoriesAdapter(
             new FeedStoriesAdapter.OnFeedStoryClickListener() {
                 @Override
-                public void onFeedStoryClick(FeedStoryModel model, int position) {
+                public void onFeedStoryClick(Story model, int position) {
                     final NavController navController = NavHostFragment.findNavController(FeedFragment.this);
                     if (isSafeToNavigate(navController)) {
                         final NavDirections action = FeedFragmentDirections
@@ -86,8 +84,8 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                 }
 
                 @Override
-                public void onFeedStoryLongClick(FeedStoryModel model, int position) {
-                    navigateToProfile("@" + model.getProfileModel().getUsername());
+                public void onFeedStoryLongClick(Story model, int position) {
+                    navigateToProfile("@" + model.getUser().getUsername());
                 }
             }
     );
@@ -118,10 +116,10 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
         }
 
         @Override
-        public void onDownloadClick(final Media feedModel, final int childPosition) {
+        public void onDownloadClick(final Media feedModel, final int childPosition, final View popupLocation) {
             final Context context = getContext();
             if (context == null) return;
-            DownloadUtils.showDownloadDialog(context, feedModel, childPosition);
+            DownloadUtils.showDownloadDialog(context, feedModel, childPosition, popupLocation);
         }
 
         @Override
@@ -399,9 +397,9 @@ public class FeedFragment extends Fragment implements SwipeRefreshLayout.OnRefre
                     }
                     storiesFetching = false;
                     //noinspection unchecked
-                    feedStoriesViewModel.getList().postValue((List<FeedStoryModel>) feedStoryModels);
+                    feedStoriesViewModel.getList().postValue((List<Story>) feedStoryModels);
                     //noinspection unchecked
-                    feedStoriesAdapter.submitList((List<FeedStoryModel>) feedStoryModels);
+                    feedStoriesAdapter.submitList((List<Story>) feedStoryModels);
                     if (storyListMenu != null) storyListMenu.setVisible(true);
                     updateSwipeRefreshState();
                 }), Dispatchers.getIO())

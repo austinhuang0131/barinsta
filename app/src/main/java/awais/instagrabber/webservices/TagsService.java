@@ -122,7 +122,7 @@ public class TagsService {
                 }
                 callback.onSuccess(new PostsFetchResponse(
                         body.getItems(),
-                        body.isMoreAvailable(),
+                        body.getMoreAvailable(),
                         body.getNextMaxId()
                 ));
             }

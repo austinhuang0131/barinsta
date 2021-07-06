@@ -59,7 +59,7 @@ public class ImageEditViewModel extends AndroidViewModel {
     public ImageEditViewModel(final Application application) {
         super(application);
         sessionId = LocalDateTime.now().format(SIMPLE_DATE_FORMAT);
-        outputDir = DownloadUtils.getImageEditDir(sessionId);
+        outputDir = DownloadUtils.getImageEditDir(sessionId, application);
         destinationFile = outputDir.createFile(MIME_TYPE, RESULT + ".jpg");
         destinationUri = destinationFile.getUri();
         cropDestinationUri = outputDir.createFile(MIME_TYPE, CROP + ".jpg").getUri();

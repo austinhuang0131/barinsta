@@ -31,7 +31,7 @@ import awais.instagrabber.utils.CoroutineUtilsKt;
 import awais.instagrabber.utils.Debouncer;
 import awais.instagrabber.utils.RankedRecipientsCache;
 import awais.instagrabber.utils.TextUtils;
-import awais.instagrabber.webservices.DirectMessagesService;
+import awais.instagrabber.webservices.DirectMessagesRepository;
 import awais.instagrabber.webservices.UserRepository;
 import kotlinx.coroutines.Dispatchers;
 import okhttp3.ResponseBody;
@@ -59,7 +59,7 @@ public class UserSearchViewModel extends ViewModel {
     private final Debouncer<String> searchDebouncer;
     private final Set<RankedRecipient> selectedRecipients = new HashSet<>();
     private final UserRepository userRepository;
-    private final DirectMessagesService directMessagesService;
+    private final DirectMessagesRepository directMessagesRepository;
     private final RankedRecipientsCache rankedRecipientsCache;
 
     public UserSearchViewModel() {
@@ -71,7 +71,7 @@ public class UserSearchViewModel extends ViewModel {
             throw new IllegalArgumentException("User is not logged in!");
         }
         userRepository = UserRepository.Companion.getInstance();
-        directMessagesService = DirectMessagesService.INSTANCE;
+        directMessagesRepository = DirectMessagesRepository.Companion.getInstance();
         rankedRecipientsCache = RankedRecipientsCache.INSTANCE;
         if ((rankedRecipientsCache.isFailed() || rankedRecipientsCache.isExpired()) && !rankedRecipientsCache.isUpdateInitiated()) {
             updateRankedRecipientCache();
@@ -94,7 +94,7 @@ public class UserSearchViewModel extends ViewModel {
 
     private void updateRankedRecipientCache() {
         rankedRecipientsCache.setUpdateInitiated(true);
-        directMessagesService.rankedRecipients(
+        directMessagesRepository.rankedRecipients(
                 null,
                 null,
                 null,
@@ -191,7 +191,7 @@ public class UserSearchViewModel extends ViewModel {
     }
 
     private void rankedRecipientSearch() {
-        directMessagesService.rankedRecipients(
+        directMessagesRepository.rankedRecipients(
                 searchMode.getName(),
                 showGroups,
                 currentQuery,

@@ -171,7 +171,7 @@ public final class FeedAdapterV2 extends ListAdapter<Media, RecyclerView.ViewHol
 
     @Override
     public int getItemViewType(final int position) {
-        return getItem(position).getMediaType().getId();
+        return getItem(position).getType().getId();
     }
 
     public void setLayoutPreferences(@NonNull final PostsLayoutPreferences layoutPreferences) {
@@ -226,7 +226,7 @@ public final class FeedAdapterV2 extends ListAdapter<Media, RecyclerView.ViewHol
 
         void onCommentsClick(final Media feedModel);
 
-        void onDownloadClick(final Media feedModel, final int childPosition);
+        void onDownloadClick(final Media feedModel, final int childPosition, final View popupLocation);
 
         void onEmailClick(final String emailId);
 

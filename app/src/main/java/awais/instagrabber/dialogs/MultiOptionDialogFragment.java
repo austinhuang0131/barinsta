@@ -10,6 +10,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.common.primitives.Booleans;
@@ -36,18 +38,21 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
     private List<Option<?>> options;
 
     @NonNull
-    public static <E extends Serializable> MultiOptionDialogFragment<E> newInstance(@StringRes final int title,
+    public static <E extends Serializable> MultiOptionDialogFragment<E> newInstance(final int requestCode,
+                                                                                    @StringRes final int title,
                                                                                     @NonNull final ArrayList<Option<E>> options) {
-        return newInstance(title, 0, 0, options, Type.SINGLE);
+        return newInstance(requestCode, title, 0, 0, options, Type.SINGLE);
     }
 
     @NonNull
-    public static <E extends Serializable> MultiOptionDialogFragment<E> newInstance(@StringRes final int title,
+    public static <E extends Serializable> MultiOptionDialogFragment<E> newInstance(final int requestCode,
+                                                                                    @StringRes final int title,
                                                                                     @StringRes final int positiveButtonText,
                                                                                     @StringRes final int negativeButtonText,
                                                                                     @NonNull final ArrayList<Option<E>> options,
                                                                                     @NonNull final Type type) {
         Bundle args = new Bundle();
+        args.putInt("requestCode", requestCode);
         args.putInt("title", title);
         args.putInt("positiveButtonText", positiveButtonText);
         args.putInt("negativeButtonText", negativeButtonText);
@@ -58,10 +63,28 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
         return fragment;
     }
 
+    @SuppressWarnings({"rawtypes", "unchecked"})
     @Override
     public void onAttach(@NonNull final Context context) {
         super.onAttach(context);
         this.context = context;
+        final Fragment parentFragment = getParentFragment();
+        if (parentFragment != null) {
+            if (parentFragment instanceof MultiOptionDialogCallback) {
+                callback = (MultiOptionDialogCallback) parentFragment;
+            }
+            if (parentFragment instanceof MultiOptionDialogSingleCallback) {
+                singleCallback = (MultiOptionDialogSingleCallback) parentFragment;
+            }
+            return;
+        }
+        final FragmentActivity fragmentActivity = getActivity();
+        if (fragmentActivity instanceof MultiOptionDialogCallback) {
+            callback = (MultiOptionDialogCallback) fragmentActivity;
+        }
+        if (fragmentActivity instanceof MultiOptionDialogSingleCallback) {
+            singleCallback = (MultiOptionDialogSingleCallback) fragmentActivity;
+        }
     }
 
     @NonNull
@@ -69,12 +92,15 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
     public Dialog onCreateDialog(Bundle savedInstanceState) {
         final Bundle arguments = getArguments();
         int title = 0;
+        int rc = 0;
         if (arguments != null) {
+            rc = arguments.getInt("requestCode");
             title = arguments.getInt("title");
             type = (Type) arguments.getSerializable("type");
         }
+        final int requestCode = rc;
         final MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-        if (title > 0) {
+        if (title != 0) {
             builder.setTitle(title);
         }
         try {
@@ -89,11 +115,11 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
         if (negativeButtonText > 0) {
             builder.setNegativeButton(negativeButtonText, (dialog, which) -> {
                 if (callback != null) {
-                    callback.onCancel();
+                    callback.onCancel(requestCode);
                     return;
                 }
                 if (singleCallback != null) {
-                    singleCallback.onCancel();
+                    singleCallback.onCancel(requestCode);
                 }
             });
         }
@@ -113,7 +139,7 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
                             final Option<T> option = (Option<T>) options.get(position);
                             selected.add(option.value);
                         }
-                        callback.onMultipleSelect(selected);
+                        callback.onMultipleSelect(requestCode, selected);
                     } catch (Exception e) {
                         Log.e(TAG, "onCreateDialog: ", e);
                     }
@@ -133,7 +159,7 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
                     try {
                         final Option<?> option = options.get(which);
                         //noinspection unchecked
-                        callback.onCheckChange((T) option.value, isChecked);
+                        callback.onCheckChange(requestCode, (T) option.value, isChecked);
                     } catch (Exception e) {
                         Log.e(TAG, "onCreateDialog: ", e);
                     }
@@ -157,7 +183,7 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
                         try {
                             final Option<?> option = options.get(which);
                             //noinspection unchecked
-                            callback.onCheckChange((T) option.value, true);
+                            callback.onCheckChange(requestCode, (T) option.value, true);
                         } catch (Exception e) {
                             Log.e(TAG, "onCreateDialog: ", e);
                         }
@@ -168,7 +194,7 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
                         try {
                             final Option<?> option = options.get(which);
                             //noinspection unchecked
-                            singleCallback.onSelect((T) option.value);
+                            singleCallback.onSelect(requestCode, (T) option.value);
                         } catch (Exception e) {
                             Log.e(TAG, "onCreateDialog: ", e);
                         }
@@ -190,19 +216,19 @@ public class MultiOptionDialogFragment<T extends Serializable> extends DialogFra
     }
 
     public interface MultiOptionDialogCallback<T> {
-        void onSelect(T result);
+        void onSelect(int requestCode, T result);
 
-        void onMultipleSelect(List<T> result);
+        void onMultipleSelect(int requestCode, List<T> result);
 
-        void onCheckChange(T item, boolean isChecked);
+        void onCheckChange(int requestCode, T item, boolean isChecked);
 
-        void onCancel();
+        void onCancel(int requestCode);
     }
 
     public interface MultiOptionDialogSingleCallback<T> {
-        void onSelect(T result);
+        void onSelect(int requestCode, T result);
 
-        void onCancel();
+        void onCancel(int requestCode);
     }
 
     public static class Option<T extends Serializable> {

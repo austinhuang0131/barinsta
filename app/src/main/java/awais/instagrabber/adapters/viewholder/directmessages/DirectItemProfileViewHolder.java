@@ -47,13 +47,6 @@ public class DirectItemProfileViewHolder extends DirectItemViewHolder {
                 binding.preview5,
                 binding.preview6
         );
-        final Resources resources = itemView.getResources();
-        binding.preview4.setHierarchy(new GenericDraweeHierarchyBuilder(resources)
-                                              .setRoundingParams(RoundingParams.fromCornersRadii(0, 0, 0, dmRadius))
-                                              .build());
-        binding.preview6.setHierarchy(new GenericDraweeHierarchyBuilder(resources)
-                                              .setRoundingParams(RoundingParams.fromCornersRadii(0, 0, dmRadius, 0))
-                                              .build());
     }
 
     @Override
@@ -73,14 +66,29 @@ public class DirectItemProfileViewHolder extends DirectItemViewHolder {
             previewView.setImageURI((String) null);
         }
         final List<Media> previewMedias = item.getPreviewMedias();
-        if (previewMedias.size() <= 0) {
+        if (previewMedias == null || previewMedias.size() <= 0) {
             binding.firstRow.setVisibility(View.GONE);
             binding.secondRow.setVisibility(View.GONE);
             return;
         }
+        final Resources resources = itemView.getResources();
         if (previewMedias.size() <= 3) {
             binding.firstRow.setVisibility(View.VISIBLE);
             binding.secondRow.setVisibility(View.GONE);
+            binding.preview1.setHierarchy(new GenericDraweeHierarchyBuilder(resources)
+                    .setRoundingParams(RoundingParams.fromCornersRadii(0, 0, 0, dmRadius))
+                    .build());
+            binding.preview3.setHierarchy(new GenericDraweeHierarchyBuilder(resources)
+                    .setRoundingParams(RoundingParams.fromCornersRadii(0, 0, dmRadius, 0))
+                    .build());
+        }
+        if (previewMedias.size() > 3) {
+            binding.preview4.setHierarchy(new GenericDraweeHierarchyBuilder(resources)
+                    .setRoundingParams(RoundingParams.fromCornersRadii(0, 0, 0, dmRadius))
+                    .build());
+            binding.preview6.setHierarchy(new GenericDraweeHierarchyBuilder(resources)
+                    .setRoundingParams(RoundingParams.fromCornersRadii(0, 0, dmRadius, 0))
+                    .build());
         }
         for (int i = 0; i < previewMedias.size(); i++) {
             final Media previewMedia = previewMedias.get(i);

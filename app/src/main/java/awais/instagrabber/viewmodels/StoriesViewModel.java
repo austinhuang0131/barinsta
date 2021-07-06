@@ -5,12 +5,12 @@ import androidx.lifecycle.ViewModel;
 
 import java.util.List;
 
-import awais.instagrabber.models.StoryModel;
+import awais.instagrabber.repositories.responses.stories.StoryMedia;
 
 public class StoriesViewModel extends ViewModel {
-    private MutableLiveData<List<StoryModel>> list;
+    private MutableLiveData<List<StoryMedia>> list;
 
-    public MutableLiveData<List<StoryModel>> getList() {
+    public MutableLiveData<List<StoryMedia>> getList() {
         if (list == null) {
             list = new MutableLiveData<>();
         }

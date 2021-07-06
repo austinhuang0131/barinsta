@@ -13,7 +13,7 @@ import awais.instagrabber.repositories.responses.User
 import awais.instagrabber.repositories.responses.directmessages.*
 import awais.instagrabber.utils.*
 import awais.instagrabber.utils.extensions.TAG
-import awais.instagrabber.webservices.DirectMessagesService
+import awais.instagrabber.webservices.DirectMessagesRepository
 import com.google.common.cache.CacheBuilder
 import com.google.common.cache.CacheLoader
 import com.google.common.collect.ImmutableList
@@ -25,8 +25,7 @@ import java.util.*
 import java.util.concurrent.TimeUnit
 
 class InboxManager(private val pending: Boolean) {
-    // private val fetchInboxControlledRunner: ControlledRunner<Resource<DirectInbox>> = ControlledRunner()
-    // private val fetchPendingInboxControlledRunner: ControlledRunner<Resource<DirectInbox>> = ControlledRunner()
+    private val directMessagesRepository by lazy { DirectMessagesRepository.getInstance() }
     private val inbox = MutableLiveData<Resource<DirectInbox?>>(success(null))
     private val unseenCount = MutableLiveData<Resource<Int?>>()
     private val pendingRequestsTotal = MutableLiveData(0)
@@ -58,9 +57,9 @@ class InboxManager(private val pending: Boolean) {
         scope.launch(Dispatchers.IO) {
             try {
                 val inboxValue = if (pending) {
-                    DirectMessagesService.fetchPendingInbox(cursor, seqId)
+                    directMessagesRepository.fetchPendingInbox(cursor, seqId)
                 } else {
-                    DirectMessagesService.fetchInbox(cursor, seqId)
+                    directMessagesRepository.fetchInbox(cursor, seqId)
                 }
                 parseInboxResponse(inboxValue)
             } catch (e: Exception) {
@@ -77,7 +76,7 @@ class InboxManager(private val pending: Boolean) {
         unseenCount.postValue(loading(currentUnseenCount))
         scope.launch(Dispatchers.IO) {
             try {
-                val directBadgeCount = DirectMessagesService.fetchUnseenCount()
+                val directBadgeCount = directMessagesRepository.fetchUnseenCount()
                 unseenCount.postValue(success(directBadgeCount.badgeCount))
             } catch (e: Exception) {
                 Log.e(TAG, "Failed fetching unseen count", e)
@@ -253,7 +252,7 @@ class InboxManager(private val pending: Boolean) {
             try {
                 val clone = currentDirectInbox.clone() as DirectInbox
                 clone.threads = threadsCopy
-                inbox.setValue(success(clone))
+                inbox.postValue(success(clone))
             } catch (e: CloneNotSupportedException) {
                 Log.e(TAG, "setThread: ", e)
             }

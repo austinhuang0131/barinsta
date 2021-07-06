@@ -6,6 +6,6 @@ import awais.instagrabber.repositories.responses.Location
 import awais.instagrabber.repositories.responses.User
 
 data class Tally(
-    val text: String?,
-    val count: Int?
+    val text: String,
+    val count: Int
 ) : Serializable

@@ -46,8 +46,10 @@ public abstract class FeedItemViewHolder extends RecyclerView.ViewHolder {
         bottomBinding.tvPostDate.setText(media.getDate());
         setupComments(media);
         setupCaption(media);
-        if (media.getMediaType() != MediaItemType.MEDIA_TYPE_SLIDER) {
-            bottomBinding.btnDownload.setOnClickListener(v -> feedItemCallback.onDownloadClick(media, -1));
+        if (media.getType() != MediaItemType.MEDIA_TYPE_SLIDER) {
+            bottomBinding.btnDownload.setOnClickListener(v ->
+                    feedItemCallback.onDownloadClick(media, -1, null)
+            );
         }
         bindItem(media);
     }

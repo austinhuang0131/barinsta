@@ -82,7 +82,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
     private FragmentHashtagBinding binding;
     private MotionLayout root;
     private boolean shouldRefresh = true;
-    private boolean hasStories = false;
+//    private boolean hasStories = false;
     private boolean opening = false;
     private String hashtag;
     private Hashtag hashtagModel = null;
@@ -145,10 +145,10 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         }
 
         @Override
-        public void onDownloadClick(final Media feedModel, final int childPosition) {
+        public void onDownloadClick(final Media feedModel, final int childPosition, final View popupLocation) {
             final Context context = getContext();
             if (context == null) return;
-            DownloadUtils.showDownloadDialog(context, feedModel, childPosition);
+            DownloadUtils.showDownloadDialog(context, feedModel, childPosition, popupLocation);
         }
 
         @Override
@@ -309,7 +309,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
     @Override
     public void onRefresh() {
         binding.posts.refresh();
-        fetchStories();
+//        fetchStories();
     }
 
     @Override
@@ -385,7 +385,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         }
         setTitle();
         setupPosts();
-        fetchStories();
+//        fetchStories();
         if (isLoggedIn) {
             hashtagDetailsBinding.btnFollowTag.setVisibility(View.VISIBLE);
             hashtagDetailsBinding.btnFollowTag.setText(hashtagModel.getFollowing() == FollowingType.FOLLOWING
@@ -522,19 +522,19 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         final SpannableStringBuilder span = new SpannableStringBuilder(getResources().getQuantityString(R.plurals.main_posts_count_inline,
                                                                                                         hashtagModel.getMediaCount() > 2000000000L
                                                                                                         ? 2000000000
-                                                                                                        : hashtagModel.getMediaCount().intValue(),
+                                                                                                        : Long.valueOf(hashtagModel.getMediaCount()).intValue(),
                                                                                                         postCount));
         span.setSpan(new RelativeSizeSpan(1.2f), 0, postCount.length(), 0);
         span.setSpan(new StyleSpan(Typeface.BOLD), 0, postCount.length(), 0);
         hashtagDetailsBinding.mainTagPostCount.setText(span);
         hashtagDetailsBinding.mainTagPostCount.setVisibility(View.VISIBLE);
-        hashtagDetailsBinding.mainHashtagImage.setOnClickListener(v -> {
-            if (!hasStories) return;
-            // show stories
-            final NavDirections action = HashTagFragmentDirections
-                    .actionHashtagFragmentToStoryViewerFragment(StoryViewerOptions.forHashtag(hashtagModel.getName()));
-            NavHostFragment.findNavController(this).navigate(action);
-        });
+//        hashtagDetailsBinding.mainHashtagImage.setOnClickListener(v -> {
+//            if (!hasStories) return;
+//            // show stories
+//            final NavDirections action = HashTagFragmentDirections
+//                    .actionHashtagFragmentToStoryViewerFragment(StoryViewerOptions.forHashtag(hashtagModel.getName()));
+//            NavHostFragment.findNavController(this).navigate(action);
+//        });
     }
 
     private void showSnackbar(final String message) {
@@ -545,27 +545,27 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
                 .show();
     }
 
-    private void fetchStories() {
-        if (!isLoggedIn) return;
-        storiesFetching = true;
-        storiesRepository.getUserStory(
-                StoryViewerOptions.forHashtag(hashtagModel.getName()),
-                CoroutineUtilsKt.getContinuation((storyModels, throwable) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
-                    if (throwable != null) {
-                        Log.e(TAG, "Error", throwable);
-                        storiesFetching = false;
-                        return;
-                    }
-                    if (storyModels != null && !storyModels.isEmpty()) {
-                        hashtagDetailsBinding.mainHashtagImage.setStoriesBorder(1);
-                        hasStories = true;
-                    } else {
-                        hasStories = false;
-                    }
-                    storiesFetching = false;
-                }), Dispatchers.getIO())
-        );
-    }
+//    private void fetchStories() {
+//        if (!isLoggedIn) return;
+//        storiesFetching = true;
+//        storiesRepository.getStories(
+//                StoryViewerOptions.forHashtag(hashtagModel.getName()),
+//                CoroutineUtilsKt.getContinuation((storyModels, throwable) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
+//                    if (throwable != null) {
+//                        Log.e(TAG, "Error", throwable);
+//                        storiesFetching = false;
+//                        return;
+//                    }
+//                    if (storyModels != null && !storyModels.isEmpty()) {
+//                        hashtagDetailsBinding.mainHashtagImage.setStoriesBorder(1);
+//                        hasStories = true;
+//                    } else {
+//                        hasStories = false;
+//                    }
+//                    storiesFetching = false;
+//                }), Dispatchers.getIO())
+//        );
+//    }
 
     private void setTitle() {
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();

@@ -54,7 +54,7 @@ public class CommentsViewerViewModel extends ViewModel {
     private String postId;
     private String rootCursor;
     private boolean rootHasNext = true;
-    private Comment repliesParent;
+    private Comment repliesParent, replyTo;
     private String repliesCursor;
     private boolean repliesHasNext = true;
     private final CommentService commentService;
@@ -151,6 +151,11 @@ public class CommentsViewerViewModel extends ViewModel {
     @Nullable
     public Comment getRepliesParent() {
         return repliesParent;
+    }
+
+    @Nullable
+    public void setReplyTo(final Comment replyTo) {
+        this.replyTo = replyTo;
     }
 
     public LiveData<Resource<List<Comment>>> getRootList() {
@@ -297,6 +302,7 @@ public class CommentsViewerViewModel extends ViewModel {
         if (comment == null) return;
         if (repliesParent == null || !Objects.equals(repliesParent.getPk(), comment.getPk())) {
             repliesParent = comment;
+            replyTo = comment;
             prevReplies = null;
             prevRepliesCursor = null;
             prevRepliesHasNext = true;
@@ -368,8 +374,8 @@ public class CommentsViewerViewModel extends ViewModel {
                                               final boolean isReply) {
         final MutableLiveData<Resource<Object>> data = new MutableLiveData<>(Resource.loading(null));
         String replyToId = null;
-        if (isReply && repliesParent != null) {
-            replyToId = repliesParent.getPk();
+        if (isReply && replyTo != null) {
+            replyToId = replyTo.getPk();
         }
         if (isReply && replyToId == null) {
             data.postValue(Resource.error(null, null));
@@ -399,10 +405,9 @@ public class CommentsViewerViewModel extends ViewModel {
         final List<Comment> list = getPrevList(isReply ? replyList : rootList);
         final ImmutableList.Builder<Comment> builder = ImmutableList.builder();
         if (isReply) {
-            // in a reply list the first comment is the parent comment
-            builder.add(list.get(0))
-                   .add(comment)
-                   .addAll(list.subList(1, list.size()));
+            // replies are added to the bottom of the list to preserve chronological order
+            builder.addAll(list)
+                   .add(comment);
         } else {
             builder.add(comment)
                    .addAll(list);

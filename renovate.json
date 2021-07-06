@@ -2,6 +2,6 @@
   "extends": [
     "config:base"
   ],
-  "prConcurrentLimit": 5,
-  "prHourlyLimit": 1
+  "prConcurrentLimit": 10,
+  "prHourlyLimit": 5
 }

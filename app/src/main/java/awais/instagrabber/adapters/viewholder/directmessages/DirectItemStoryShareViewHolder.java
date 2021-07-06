@@ -66,7 +66,7 @@ public class DirectItemStoryShareViewHolder extends DirectItemViewHolder {
     }
 
     private void setupPreview(final MessageDirection messageDirection, final Media storyShareMedia) {
-        final MediaItemType mediaType = storyShareMedia.getMediaType();
+        final MediaItemType mediaType = storyShareMedia.getType();
         binding.typeIcon.setVisibility(mediaType == MediaItemType.MEDIA_TYPE_VIDEO ? View.VISIBLE : View.GONE);
         final RoundingParams roundingParams = messageDirection == MessageDirection.INCOMING
                                               ? RoundingParams.fromCornersRadii(dmRadiusSmall, dmRadius, dmRadius, dmRadius)

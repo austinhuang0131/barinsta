@@ -39,7 +39,7 @@ public class FeedPostFetchService implements PostFetcher.PostFetchService {
                     return;
                 } else if (result == null) return;
                 nextCursor = result.getNextCursor();
-                hasNextPage = result.hasNextPage();
+                hasNextPage = result.getHasNextPage();
 
                 final List<Media> mediaResults = result.getFeedModels();
                 feedModels.addAll(mediaResults);

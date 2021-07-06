@@ -266,7 +266,7 @@ public abstract class DirectItemViewHolder extends RecyclerView.ViewHolder imple
                 break;
             case MEDIA_SHARE:
                 Media mediaShare = replied.getMediaShare();
-                if (mediaShare.getMediaType() == MediaItemType.MEDIA_TYPE_SLIDER) {
+                if (mediaShare.getType() == MediaItemType.MEDIA_TYPE_SLIDER) {
                     mediaShare = mediaShare.getCarouselMedia().get(0);
                 }
                 url = ResponseBodyUtils.getThumbUrl(mediaShare);
@@ -501,8 +501,8 @@ public abstract class DirectItemViewHolder extends RecyclerView.ViewHolder imple
         callback.onURLClick(url);
     }
 
-    protected void openMedia(final Media media) {
-        callback.onMediaClick(media);
+    protected void openMedia(final Media media, final int index) {
+        callback.onMediaClick(media, index);
     }
 
     protected void openStory(final DirectItemStoryShare storyShare) {

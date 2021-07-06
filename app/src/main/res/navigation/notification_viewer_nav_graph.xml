@@ -93,7 +93,6 @@
     <fragment
         android:id="@+id/storyViewerFragment"
         android:name="awais.instagrabber.fragments.StoryViewerFragment"
-        android:label="StoryViewerFragment"
         tools:layout="@layout/fragment_story_viewer">
         <argument
             android:name="options"

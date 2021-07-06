@@ -28,7 +28,7 @@ public class FeedItemCallbackAdapter implements FeedAdapterV2.FeedItemCallback {
     public void onCommentsClick(final Media media) {}
 
     @Override
-    public void onDownloadClick(final Media media, final int childPosition) {}
+    public void onDownloadClick(final Media media, final int childPosition, final View popupLocation) {}
 
     @Override
     public void onEmailClick(final String emailId) {}

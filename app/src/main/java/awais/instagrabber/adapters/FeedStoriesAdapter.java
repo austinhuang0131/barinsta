@@ -9,20 +9,20 @@ import androidx.recyclerview.widget.ListAdapter;
 
 import awais.instagrabber.adapters.viewholder.FeedStoryViewHolder;
 import awais.instagrabber.databinding.ItemHighlightBinding;
-import awais.instagrabber.models.FeedStoryModel;
+import awais.instagrabber.repositories.responses.stories.Story;
 
-public final class FeedStoriesAdapter extends ListAdapter<FeedStoryModel, FeedStoryViewHolder> {
+public final class FeedStoriesAdapter extends ListAdapter<Story, FeedStoryViewHolder> {
     private final OnFeedStoryClickListener listener;
 
-    private static final DiffUtil.ItemCallback<FeedStoryModel> diffCallback = new DiffUtil.ItemCallback<FeedStoryModel>() {
+    private static final DiffUtil.ItemCallback<Story> diffCallback = new DiffUtil.ItemCallback<Story>() {
         @Override
-        public boolean areItemsTheSame(@NonNull final FeedStoryModel oldItem, @NonNull final FeedStoryModel newItem) {
-            return oldItem.getStoryMediaId().equals(newItem.getStoryMediaId());
+        public boolean areItemsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId());
         }
 
         @Override
-        public boolean areContentsTheSame(@NonNull final FeedStoryModel oldItem, @NonNull final FeedStoryModel newItem) {
-            return oldItem.getStoryMediaId().equals(newItem.getStoryMediaId()) && oldItem.isFullyRead() == newItem.isFullyRead();
+        public boolean areContentsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId()) && oldItem.getSeen() == newItem.getSeen();
         }
     };
 
@@ -41,13 +41,13 @@ public final class FeedStoriesAdapter extends ListAdapter<FeedStoryModel, FeedSt
 
     @Override
     public void onBindViewHolder(@NonNull final FeedStoryViewHolder holder, final int position) {
-        final FeedStoryModel model = getItem(position);
+        final Story model = getItem(position);
         holder.bind(model, position, listener);
     }
 
     public interface OnFeedStoryClickListener {
-        void onFeedStoryClick(FeedStoryModel model, int position);
+        void onFeedStoryClick(Story model, int position);
 
-        void onFeedStoryLongClick(FeedStoryModel model, int position);
+        void onFeedStoryLongClick(Story model, int position);
     }
 }

@@ -110,14 +110,17 @@ class MediaRepository(private val service: MediaService) {
     suspend fun translate(
         id: String,
         type: String,  // 1 caption 2 comment 3 bio
-    ): String {
+    ): String? {
         val form = mapOf(
             "id" to id,
             "type" to type,
         )
         val response = service.translate(form)
         val jsonObject = JSONObject(response)
-        return jsonObject.optString("translation")
+        if (!jsonObject.has("translation") || jsonObject.isNull("translation")) {
+            return null
+        }
+        return jsonObject.getString("translation")
     }
 
     suspend fun uploadFinish(
@@ -132,7 +135,7 @@ class MediaRepository(private val service: MediaService) {
                 videoOptions.clips = listOf(Clip(videoOptions.length, options.sourceType))
             }
         }
-        val timezoneOffset = DateUtils.getTimezoneOffset().toString()
+        val timezoneOffset = DateUtils.timezoneOffset.toString()
         val form = mutableMapOf<String, Any>(
             "timezone_offset" to timezoneOffset,
             "_csrftoken" to csrfToken,

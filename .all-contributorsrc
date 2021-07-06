@@ -61,20 +61,37 @@
       ]
     },
     {
-      "login": "vojta-horanek",
-      "name": "Vojtěch Hořánek",
-      "avatar_url": "https://avatars.githubusercontent.com/u/12630566?v=4",
-      "profile": "https://vojtechh.eu/",
-      "contributions": [
-        "code",
-        "translation"
-      ]
-    },
-    {
       "login": "MeLlamoPablo",
       "name": "Pablo Rodríguez",
       "avatar_url": "https://avatars.githubusercontent.com/u/11708035?v=4",
       "profile": "https://github.com/MeLlamoPablo",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tcely",
+      "name": "tcely",
+      "avatar_url": "https://avatars.githubusercontent.com/u/138864?v=4",
+      "profile": "https://github.com/tcely",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Vonter",
+      "name": "Vonter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/25414711?v=4",
+      "profile": "https://github.com/Vonter",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "raniapl",
+      "name": "Rania Pilioura",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56370534?v=4",
+      "profile": "https://github.com/raniapl",
       "contributions": [
         "code"
       ]
@@ -90,19 +107,29 @@
       ]
     },
     {
-      "login": "The-EDev",
-      "name": "Farook Al-Sammarraie",
-      "avatar_url": "https://avatars.githubusercontent.com/u/60552923?v=4",
-      "profile": "https://github.com/The-EDev",
+      "login": "Zopieux",
+      "name": "Alexandre Macabies",
+      "avatar_url": "https://avatars.githubusercontent.com/u/81353?v=4",
+      "profile": "https://github.com/Zopieux",
       "contributions": [
         "code"
       ]
     },
     {
-      "login": "Zopieux",
-      "name": "Alexandre Macabies",
-      "avatar_url": "https://avatars.githubusercontent.com/u/81353?v=4",
-      "profile": "https://github.com/Zopieux",
+      "login": "vojta-horanek",
+      "name": "Vojtěch Hořánek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12630566?v=4",
+      "profile": "https://vojtechh.eu/",
+      "contributions": [
+        "code",
+        "translation"
+      ]
+    },
+    {
+      "login": "The-EDev",
+      "name": "Farook Al-Sammarraie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60552923?v=4",
+      "profile": "https://github.com/The-EDev",
       "contributions": [
         "code"
       ]
@@ -133,6 +160,17 @@
       "profile": "http://kevinthomas.dev",
       "contributions": [
         "financial"
+      ]
+    },
+    {
+      "login": "Martin5001",
+      "name": "Martin Krejčí",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35201200?v=4",
+      "profile": "https://github.com/Martin5001",
+      "contributions": [
+        "bug",
+        "ideas",
+        "translation"
       ]
     },
     {
@@ -267,6 +305,15 @@
       ]
     },
     {
+      "login": "Lego8486",
+      "name": "Ten_Lego",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/47414485",
+      "profile": "https://github.com/Lego8486",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
       "login": "MoaufmKlo",
       "name": "MoaufmKlo",
       "avatar_url": "https://avatars1.githubusercontent.com/u/45636897",
@@ -339,6 +386,15 @@
       ]
     },
     {
+      "login": "rex07",
+      "name": "Rex_sa",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13156001?v=4",
+      "profile": "https://github.com/rex07",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
       "login": "rikishi0071",
       "name": "rikishi0071",
       "avatar_url": "https://avatars3.githubusercontent.com/u/18183855?v=4",
@@ -375,10 +431,10 @@
       ]
     },
     {
-      "login": "Lego8486",
-      "name": "Ten_Lego",
-      "avatar_url": "https://avatars1.githubusercontent.com/u/47414485",
-      "profile": "https://github.com/Lego8486",
+      "login": "Umeaboy",
+      "name": "Kristoffer Grundström",
+      "avatar_url": "https://avatars.githubusercontent.com/u/714473?v=4",
+      "profile": "https://github.com/Umeaboy",
       "contributions": [
         "translation"
       ]
@@ -415,6 +471,15 @@
       "name": "ZDVokoun",
       "avatar_url": "https://avatars.githubusercontent.com/u/76393152?v=4",
       "profile": "https://github.com/ZDVokoun",
+      "contributions": [
+        "translation"
+      ]
+    },
+    {
+      "login": "2hot2exist",
+      "name": "2hot2exist",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84233003?v=4",
+      "profile": "https://github.com/2hot2exist",
       "contributions": [
         "translation"
       ]

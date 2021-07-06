@@ -52,7 +52,7 @@ fun createImageOrVideo(
         imageVersions2 = imageVersions2,
         originalWidth = width,
         originalHeight = height,
-        mediaType = if (isVideo) MediaItemType.MEDIA_TYPE_VIDEO else MediaItemType.MEDIA_TYPE_IMAGE,
+        mediaType = if (isVideo) MediaItemType.MEDIA_TYPE_VIDEO.id else MediaItemType.MEDIA_TYPE_IMAGE.id,
         videoVersions = videoVersions,
     )
     return DirectItem(
@@ -82,7 +82,7 @@ fun createVoice(
     )
     val media = Media(
         id = UUID.randomUUID().toString(),
-        mediaType = MediaItemType.MEDIA_TYPE_VOICE,
+        mediaType = MediaItemType.MEDIA_TYPE_VOICE.id,
         audio = audio,
     )
     val voiceMedia = DirectItemVoiceMedia(

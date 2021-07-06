@@ -9,8 +9,10 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
+import awais.instagrabber.db.repositories.AccountRepository;
 import awais.instagrabber.models.Resource;
 import awais.instagrabber.repositories.responses.User;
+import awais.instagrabber.utils.AppExecutors;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.CoroutineUtilsKt;
@@ -26,6 +28,8 @@ public class AppStateViewModel extends AndroidViewModel {
     private final String cookie;
     private final MutableLiveData<Resource<User>> currentUser = new MutableLiveData<>(Resource.loading(null));
 
+    private AccountRepository accountRepository;
+
     private UserRepository userRepository;
 
     public AppStateViewModel(@NonNull final Application application) {
@@ -38,7 +42,7 @@ public class AppStateViewModel extends AndroidViewModel {
             return;
         }
         userRepository = UserRepository.Companion.getInstance();
-        // final AccountRepository accountRepository = AccountRepository.getInstance(AccountDataSource.getInstance(application));
+        accountRepository = AccountRepository.Companion.getInstance(application);
         fetchProfileDetails();
     }
 
@@ -61,13 +65,26 @@ public class AppStateViewModel extends AndroidViewModel {
         userRepository.getUserInfo(uid, CoroutineUtilsKt.getContinuation((user, throwable) -> {
             if (throwable != null) {
                 Log.e(TAG, "onFailure: ", throwable);
-                final User backup = currentUser.getValue().data != null ?
-                                        currentUser.getValue().data :
-                                        new User(uid);
+                final Resource<User> userResource = currentUser.getValue();
+                final User backup = userResource != null && userResource.data != null ? userResource.data : new User(uid);
                 currentUser.postValue(Resource.error(throwable.getMessage(), backup));
                 return;
             }
             currentUser.postValue(Resource.success(user));
+            if (accountRepository != null && user != null) {
+                accountRepository.insertOrUpdateAccount(
+                        user.getPk(),
+                        user.getUsername(),
+                        cookie,
+                        user.getFullName() != null ? user.getFullName() : "",
+                        user.getProfilePicUrl(),
+                        CoroutineUtilsKt.getContinuation((account, throwable1) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
+                            if (throwable1 != null) {
+                                Log.e(TAG, "updateAccountInfo: ", throwable1);
+                            }
+                        }), Dispatchers.getIO())
+                );
+            }
         }, Dispatchers.getIO()));
     }
 }

@@ -23,7 +23,6 @@ import java.nio.charset.StandardCharsets;
 import awais.instagrabber.R;
 import awais.instagrabber.dialogs.ConfirmDialogFragment;
 import awais.instagrabber.utils.AppExecutors;
-import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.DownloadUtils;
 import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
@@ -111,7 +110,7 @@ public class DownloadsPreferencesFragment extends BasePreferencesFragment {
                             R.string.error,
                             "com.android.externalstorage.documents".equals(data.getData().getAuthority())
                                 ? "Please report this error to the developers:\n\n" + sw.toString()
-                                : getString(R.string.dir_select_no_download_folder),
+                                : getString(R.string.dir_select_no_download_folder, data.getData().getAuthority()),
                             R.string.ok,
                             0,
                             0

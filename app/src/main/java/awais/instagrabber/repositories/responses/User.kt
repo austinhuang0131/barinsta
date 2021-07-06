@@ -27,7 +27,7 @@ data class User @JvmOverloads constructor(
     val externalUrl: String? = null,
     val usertagsCount: Long = 0,
     val publicEmail: String? = null,
-    val hdProfilePicUrlInfo: HdProfilePicUrlInfo? = null,
+    val hdProfilePicUrlInfo: ImageUrl? = null,
     val profileContext: String? = null, // "also followed by" your friends
     val profileContextLinksWithUserIds: List<UserProfileContextLink>? = null, // ^
     val socialContext: String? = null, // AYML

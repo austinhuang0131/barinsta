@@ -7,6 +7,10 @@ import awais.instagrabber.db.entities.Favorite
 import awais.instagrabber.models.enums.FavoriteType
 import awais.instagrabber.repositories.*
 import awais.instagrabber.repositories.responses.*
+import awais.instagrabber.repositories.responses.directmessages.*
+import awais.instagrabber.repositories.responses.stories.ArchiveResponse
+import awais.instagrabber.repositories.responses.stories.ReelsTrayResponse
+import awais.instagrabber.repositories.responses.stories.StoryStickerResponse
 
 open class UserServiceAdapter : UserService {
     override suspend fun getUserInfo(uid: Long): WrappedUser {
@@ -17,9 +21,7 @@ open class UserServiceAdapter : UserService {
         TODO("Not yet implemented")
     }
 
-    override suspend fun getUserFriendship(uid: Long): FriendshipStatus {
-        TODO("Not yet implemented")
-    }
+    override suspend fun getUserFriendship(uid: Long): FriendshipStatus = FriendshipStatus()
 
     override suspend fun search(timezoneOffset: Float, query: String): UserSearchResponse {
         TODO("Not yet implemented")
@@ -49,15 +51,15 @@ open class StoriesServiceAdapter : StoriesService {
         TODO("Not yet implemented")
     }
 
-    override suspend fun getFeedStories(): String {
+    override suspend fun getFeedStories(): ReelsTrayResponse? {
         TODO("Not yet implemented")
     }
 
-    override suspend fun fetchHighlights(uid: Long): String {
+    override suspend fun fetchHighlights(uid: Long): ReelsTrayResponse? {
         TODO("Not yet implemented")
     }
 
-    override suspend fun fetchArchive(queryParams: Map<String, String>): String {
+    override suspend fun fetchArchive(queryParams: Map<String, String>): ArchiveResponse? {
         TODO("Not yet implemented")
     }
 
@@ -156,28 +158,131 @@ open class AccountDaoAdapter : AccountDao {
     }
 }
 
-open class FavoriteDaoAdapter: FavoriteDao {
-    override suspend fun getAllFavorites(): List<Favorite> {
+open class FavoriteDaoAdapter : FavoriteDao {
+    override suspend fun getAllFavorites(): List<Favorite> = emptyList()
+
+    override suspend fun findFavoriteByQueryAndType(query: String, type: FavoriteType): Favorite? = null
+
+    override suspend fun insertFavorites(vararg favorites: Favorite) {}
+
+    override suspend fun updateFavorites(vararg favorites: Favorite) {}
+
+    override suspend fun deleteFavorites(vararg favorites: Favorite) {}
+
+    override suspend fun deleteAllFavorites() {}
+}
+
+open class DirectMessagesServiceAdapter: DirectMessagesService {
+    override suspend fun fetchInbox(queryMap: Map<String, String>): DirectInboxResponse {
         TODO("Not yet implemented")
     }
 
-    override suspend fun findFavoriteByQueryAndType(query: String, type: FavoriteType): Favorite? {
+    override suspend fun fetchPendingInbox(queryMap: Map<String, String>): DirectInboxResponse {
         TODO("Not yet implemented")
     }
 
-    override suspend fun insertFavorites(vararg favorites: Favorite) {
+    override suspend fun fetchThread(threadId: String, queryMap: Map<String, String>): DirectThreadFeedResponse {
         TODO("Not yet implemented")
     }
 
-    override suspend fun updateFavorites(vararg favorites: Favorite) {
+    override suspend fun fetchUnseenCount(): DirectBadgeCount {
         TODO("Not yet implemented")
     }
 
-    override suspend fun deleteFavorites(vararg favorites: Favorite) {
+    override suspend fun broadcast(item: String, signedForm: Map<String, String>): DirectThreadBroadcastResponse {
         TODO("Not yet implemented")
     }
 
-    override suspend fun deleteAllFavorites() {
+    override suspend fun addUsers(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
         TODO("Not yet implemented")
     }
+
+    override suspend fun removeUsers(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun updateTitle(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun addAdmins(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun removeAdmins(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun deleteItem(threadId: String, itemId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun rankedRecipients(queryMap: Map<String, String>): RankedRecipientsResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun forward(form: Map<String, String>): DirectThreadBroadcastResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun createThread(signedForm: Map<String, String>): DirectThread {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun mute(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun unmute(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun muteMentions(threadId: String, form: Map<String, String?>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun unmuteMentions(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun participantRequests(threadId: String, pageSize: Int, cursor: String?): DirectThreadParticipantRequestsResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun approveParticipantRequests(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun declineParticipantRequests(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun approvalRequired(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun approvalNotRequired(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun leave(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun end(threadId: String, form: Map<String, String>): DirectThreadDetailsChangeResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun approveRequest(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun declineRequest(threadId: String, form: Map<String, String>): String {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun markItemSeen(threadId: String, itemId: String, form: Map<String, String>): DirectItemSeenResponse {
+        TODO("Not yet implemented")
+    }
+
 }

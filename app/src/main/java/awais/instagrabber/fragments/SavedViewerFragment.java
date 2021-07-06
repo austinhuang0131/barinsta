@@ -109,10 +109,10 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
         }
 
         @Override
-        public void onDownloadClick(final Media feedModel, final int childPosition) {
+        public void onDownloadClick(final Media feedModel, final int childPosition, final View popupLocation) {
             final Context context = getContext();
             if (context == null) return;
-            DownloadUtils.showDownloadDialog(context, feedModel, childPosition);
+            DownloadUtils.showDownloadDialog(context, feedModel, childPosition, popupLocation);
         }
 
         @Override
