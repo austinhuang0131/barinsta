@@ -68,7 +68,7 @@
     <string name="be_patient">Sii paziente!</string>
     <string name="view_story_post">Visualizza Post</string>
     <string name="view_post">Visualizza Post</string>
-    <string name="vote_story_poll">Vota</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Votazione riuscita!</string>
     <string name="voted_story_poll">Hai già votato!</string>
     <string name="respond_story">Rispondi</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Scorrimento</string>
     <string name="story_quizzed">Hai già risposto!</string>
     <string name="story_mentions">Menzioni</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Questo Profilo è Privato</string>
     <string name="priv_acc_confirm">Non potrai accederei ai post dopo aver smesso di seguire! Sei sicuro?</string>
     <string name="are_you_sure">Sei sicuro?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Elimina raccolta</string>
     <string name="delete_collection_confirm">Sei sicuro di voler eliminare questa raccolta?</string>
     <string name="delete_collection_note">Tutti i media contenuti rimarranno in altre raccolte.</string>
-    <string name="add_to_collection">Aggiungi alla raccolta...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Rimuovi dalla raccolta</string>
     <string name="liked">Piaciuti</string>
     <string name="saved">Salvati</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Catturato</string>
     <string name="dms_inbox_raven_media_cant_deliver">Impossibile consegnare</string>
     <string name="dms_inbox_error_null_count">Il responso del conteggio non visto è nullo!</string>
-    <string name="dms_thread_message_hint">Messaggio...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Tieni premuto per registrare l\'audio</string>
-    <string name="dms_thread_updating">In aggiornamento...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Lascia chat</string>
     <string name="dms_action_leave_question">Lasciare questa chat?</string>
     <string name="dms_action_kick">Espelli</string>
@@ -320,7 +321,7 @@
     <string name="comment">Commento</string>
     <string name="layout">Disposizione</string>
     <string name="feed_stories">Feed storie</string>
-    <string name="opening_post">Aprendo il post...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Condividi</string>
     <string name="layout_style">Stile disposizione</string>
     <string name="column_count">Conteggio colonne</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Clicca per mostrare il conteggio completo</string>
     <string name="no_profile_pic_found">Nessuna foto profilo trovata!</string>
     <string name="swipe_up_confirmation">Sei sicuro di voler aprire questo link?</string>
-    <string name="sending">Invio in corso...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Condividi tramite DM</string>
     <string name="share_link">Condivisione link…</string>
     <string name="slide_to_cancel">Trascinare per cancellare</string>
