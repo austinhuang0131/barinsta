@@ -19,18 +19,18 @@
     <string name="title_favorites">Favorit</string>
     <string name="title_discover">Temukan</string>
     <string name="title_comments">Komentar</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">Balasan</string>
     <string name="title_notifications">Aktivitas</string>
     <string name="update_check">Cek pembaruan saat memulai</string>
-    <string name="flag_secure">Block screenshots &amp; app preview</string>
+    <string name="flag_secure">Blokir tangkapan layar &amp; pratinjau aplikasi</string>
     <string name="download_user_folder">Unduh kiriman ke folder nama pengguna</string>
-    <string name="download_prepend_username">Prepend Username to Filename</string>
+    <string name="download_prepend_username">Tambahkan nama pengguna sebelum nama berkas</string>
     <string name="mark_as_seen_setting">Tandai cerita dibaca setelah melihat</string>
     <string name="mark_as_seen_setting_summary">Pembuat cerita akan tahu Anda melihatnya</string>
-    <string name="hide_muted_reels_setting">Hide muted stories from feed</string>
+    <string name="hide_muted_reels_setting">Sembunyikan cerita yang dibisukan</string>
     <string name="dm_mark_as_seen_setting">Tandai DM dibaca setelah melihat</string>
     <string name="dm_mark_as_seen_setting_summary">Peserta lain akan tahu Anda melihatnya</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Putar otomatis video cerita</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
     <string name="story_sort_setting">Urutan umpan cerita</string>
     <string name="error_loading_profile">Galat memuat profil! Apakah nama penggunanya valid? Jika iya, maka kemungkinan akses Anda sedang dibatasi.</string>
@@ -53,8 +53,8 @@
     </plurals>
     <string name="main_posts_following">%s\ndiikuti</string>
     <string name="post_viewer_autoplay_video">Otomatis putar video</string>
-    <string name="post_viewer_background_play">Continue videos in background</string>
-    <string name="post_viewer_background_play_summary">Do not pause videos when the app is out of focus</string>
+    <string name="post_viewer_background_play">Putar video di latar belakang</string>
+    <string name="post_viewer_background_play_summary">Jangan hentikan video saat aplikasi tidak dalam fokus</string>
     <string name="post_viewer_muted_autoplay">Selalu bisukan video</string>
     <string name="post_viewer_show_captions">Selalu tampilkan keterangan kiriman</string>
     <string name="post_viewer_download_dialog_title">Pilih apa yang akan diunduh</string>
@@ -65,7 +65,7 @@
     <string name="be_patient">Mohon bersabar!</string>
     <string name="view_story_post">Lihat Kiriman</string>
     <string name="view_post">Lihat Kiriman</string>
-    <string name="story_poll">Poll</string>
+    <string name="story_poll">Jajak Pendapat</string>
     <string name="votef_story_poll">Berhasil memilih!</string>
     <string name="voted_story_poll">Anda sudah memilih!</string>
     <string name="respond_story">Tanggapi</string>
@@ -81,10 +81,10 @@
     <string name="story_slider">Slider</string>
     <string name="story_quizzed">Anda sudah menjawab!</string>
     <string name="story_mentions">Sebutan</string>
-    <string name="story_question">Question</string>
+    <string name="story_question">Pertanyaan</string>
     <string name="priv_acc">Akun Ini Bersifat Pribadi</string>
     <string name="priv_acc_confirm">Anda tidak akan dapat mengakses kiriman setelah berhenti mengikuti! Anda yakin?</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">Anda yakin?</string>
     <string name="no_acc">Anda bisa masuk melalui Lebih-&gt; Akun di pojok kanan bawah. Atau anda dapat melihat akun publik tanpa masuk!</string>
     <string name="empty_acc">Akun ini tidak memiliki kiriman</string>
     <string name="empty_list">Kiriman tidak ditemukan!</string>
@@ -99,7 +99,7 @@
     <string name="delete_collection">Hapus koleksi</string>
     <string name="delete_collection_confirm">Apakah Anda yakin Anda ingin menghapus koleksi ini?</string>
     <string name="delete_collection_note">Seluruh media akan tetap berada dalam koleksi-koleksi lain.</string>
-    <string name="add_to_collection">Add to collection…</string>
+    <string name="add_to_collection">Tambah ke koleksi...</string>
     <string name="remove_from_collection">Hapus dari koleksi</string>
     <string name="liked">Disuka</string>
     <string name="saved">Tersimpan</string>
@@ -113,11 +113,11 @@
     <string name="unblock">Batalkan Blokir</string>
     <string name="restrict">Batasi</string>
     <string name="unrestrict">Hilangkan Batasan</string>
-    <string name="mute_stories">Mute stories</string>
-    <string name="mute_posts">Mute posts</string>
-    <string name="unmute_stories">Unmute stories</string>
-    <string name="unmute_posts">Unmute posts</string>
-    <string name="remove_follower">Remove follower</string>
+    <string name="mute_stories">Bisukan cerita</string>
+    <string name="mute_posts">Bisukan kiriman</string>
+    <string name="unmute_stories">Batal bisukan cerita</string>
+    <string name="unmute_posts">Batal bisukan kiriman</string>
+    <string name="remove_follower">Hapus pengikut</string>
     <string name="bio_copy">Salin bio</string>
     <string name="bio_translate">Terjemahkan bio</string>
     <string name="status_mutual">Mutual</string>
@@ -146,13 +146,13 @@
     <string name="view_pfp">Lihat foto profil</string>
     <string name="dms_inbox_raven_message_unknown">Jenis pesan tidak didukung</string>
     <string name="dms_inbox_unsend">Batalkan pengiriman pesan</string>
-    <string name="dms_inbox_giphy">View on GIPHY</string>
+    <string name="dms_inbox_giphy">Lihat di GIPHY</string>
     <string name="dms_inbox_shared_post">%s berbagi kiriman @%s</string>
     <string name="dms_inbox_shared_image">%s membagikan sebuah gambar</string>
     <string name="dms_inbox_shared_video">%s membagikan sebuah video</string>
     <string name="dms_inbox_shared_message">%s mengirimkan sebuah pesan</string>
     <string name="dms_inbox_shared_gif">%s membagikan sebuah gif</string>
-    <string name="dms_inbox_shared_sticker">%s shared a sticker</string>
+    <string name="dms_inbox_shared_sticker">%s membagikan stiker</string>
     <string name="dms_inbox_shared_profile">%s membagikan profil @%s</string>
     <string name="dms_inbox_shared_location">%s membagikan lokasi: %s</string>
     <string name="dms_inbox_shared_highlight">%s membagikan sebuah cerita sorotan @%s</string>
@@ -177,22 +177,22 @@
     <string name="dms_inbox_raven_media_suggested">Telah disarankan</string>
     <string name="dms_inbox_raven_media_screenshot">Layar tertangkap</string>
     <string name="dms_inbox_raven_media_cant_deliver">Tidak dapat mengirim</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
+    <string name="dms_inbox_error_null_count">Jumlah respons tidak terlihat adalah nul!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Tekan dan tahan untuk merekam</string>
-    <string name="dms_thread_updating">Updating…</string>
+    <string name="dms_thread_updating">Memperbarui…</string>
     <string name="dms_action_leave">Tinggalkan obrolan</string>
     <string name="dms_action_leave_question">Tinggalkan obrolan ini?</string>
     <string name="dms_action_kick">Keluarkan</string>
     <string name="dms_left_users">Pengguna tersisa</string>
-    <string name="dms_ERROR_INVALID_USER">Invalid user</string>
-    <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
-    <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
+    <string name="dms_ERROR_INVALID_USER">Pengguna tidak valid</string>
+    <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram tidak mengizinkan pengunggahan video lebih dari 60 detik untuk DM.</string>
+    <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram tidak mengizinkan pengunggahan video lebih dari 60 detik.</string>
     <string name="direct_download">Langsung unduh</string>
     <string name="direct_download_desc">Langsung unduh kiriman ke ponsel!</string>
     <string name="direct_download_loading">Mendapatkan kiriman…</string>
     <string name="downloader_complete">Unduhan selesai</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Mempersiapkan unduhan…</string>
     <string name="downloader_downloading_post">Mengunduh kiriman…</string>
     <string name="downloader_downloading_media">Mengunduh media</string>
     <string name="downloader_downloading_pfp">Mengunduh foto profil</string>
@@ -201,7 +201,7 @@
     <string name="downloader_error_download_file">Galat mengunduh berkas</string>
     <string name="downloader_too_many">Anda hanya dapat mengunduh 100 kiriman saat bersamaan. Jangan serakah-serakah!</string>
     <string name="comment_viewer_translate_comment">Terjemahkan komentar</string>
-    <string name="comment_viewer_delete_comment">Delete comment</string>
+    <string name="comment_viewer_delete_comment">Hapus komentar</string>
     <string name="comment_view_mention_user_search">Apakah anda ingin mencari nama pengguna ini?</string>
     <string name="comment_view_mention_hash_search">Apakah anda ingin mencari tagar ini?</string>
     <string name="followers_type_followers">Pengikut</string>
@@ -221,7 +221,7 @@
     <string name="request_approve">Terima permintaan</string>
     <string name="request_reject">Tolak permintaan</string>
     <string name="share_public_post">Bagikan kiriman publik ini ke…</string>
-    <string name="share_private_post">This is a private post! Share to those who can view it.</string>
+    <string name="share_private_post">Kiriman pribadi! Bagikan kepada orang yang bisa melihatnya.</string>
     <string name="discover_empty">Entah bagaimana kategori ini kosong…</string>
     <string name="update_available">Ada pembaruan! (%s)</string>
     <string name="update_notice">Kiat: Jika anda mengunduh InstaGrabber dari F-Droid, perbarui dari situ. Juga berlaku jika diunduh lewat GitHub.</string>
@@ -239,8 +239,8 @@
     <string name="activity_count_commentlikes">%d suka komentar</string>
     <string name="activity_count_usertags">%d sebutan pengguna</string>
     <string name="activity_count_likes">%d suka</string>
-    <string name="activity_count_poy">%d photos of you</string>
-    <string name="activity_count_requests">%d follow requests</string>
+    <string name="activity_count_poy">%d foto untukmu</string>
+    <string name="activity_count_requests">%d permintaan pengikut</string>
     <string name="activity_notloggedin">Anda keluar sebelum mengklik pemberitahuan ini?!</string>
     <string name="feed">Umpan</string>
     <string name="profile">Profil</string>
@@ -253,7 +253,7 @@
     <string name="skip_update_checkbox">Jangan tampilkan lagi sampai pembaruan berikutnya</string>
     <string name="version">Versi</string>
     <string name="pref_start_screen">Layar mulai</string>
-    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
+    <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Tampilkan papan ketik pada pencarian</string>
     <string name="pref_category_general">Umum</string>
     <string name="pref_category_theme">Tema</string>
     <string name="pref_category_downloads">Unduhan</string>
@@ -276,7 +276,7 @@
     <string name="dark_theme_settings">Tema gelap</string>
     <string name="light_barinsta_theme" comment="Yes, this one is Barista (the theme), you can also substitute it with other coffee-related words">Barista</string>
     <string name="dark_material_dark_theme">Material Dark</string>
-    <string name="added_to_favs">Added to Favorites!</string>
+    <string name="added_to_favs">Ditambahkan ke Kesukaan!</string>
     <string name="add_to_favorites">Add to Favorites</string>
     <string name="accounts">Akun</string>
     <string name="hashtags">Tagar</string>
