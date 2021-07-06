@@ -65,7 +65,7 @@
     <string name="be_patient">Hãy kiên nhẫn!</string>
     <string name="view_story_post">Xem Bài đăng</string>
     <string name="view_post">Xem Bài đăng</string>
-    <string name="vote_story_poll">Bình chọn</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Bình chọn thành công!</string>
     <string name="voted_story_poll">Bạn đã bình chọn rồi!</string>
     <string name="respond_story">Trả lời</string>
@@ -81,6 +81,7 @@
     <string name="story_slider">Thanh trượt</string>
     <string name="story_quizzed">Bạn đã trả lời rồi!</string>
     <string name="story_mentions">Đề cập</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Tài khoản này là riêng tư</string>
     <string name="priv_acc_confirm">Bạn sẽ không thể truy cập vào bài đăng sau khi bỏ theo dõi? Bạn chắc chứ?</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -98,7 +99,7 @@
     <string name="delete_collection">Xoá bộ sưu tập</string>
     <string name="delete_collection_confirm">Bạn có chắc muốn xoá bộ sưu tập này chứ?</string>
     <string name="delete_collection_note">Tất cả những phương tiện đã lưu sẽ được giữ lại trong bộ sưu tập khác.</string>
-    <string name="add_to_collection">Thêm vào bộ sưu tập...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Xoá khỏi bộ sưu tập</string>
     <string name="liked">Đã thích</string>
     <string name="saved">Đã lưu</string>
@@ -177,9 +178,9 @@
     <string name="dms_inbox_raven_media_screenshot">Đã chụp màn hình</string>
     <string name="dms_inbox_raven_media_cant_deliver">Không thể gửi</string>
     <string name="dms_inbox_error_null_count">Đánh đấu chưa xem không có giá trị!</string>
-    <string name="dms_thread_message_hint">Tin nhắn...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Chạm và giữ để ghi âm</string>
-    <string name="dms_thread_updating">Đang cập nhật...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Rời khỏi trò chuyện</string>
     <string name="dms_action_leave_question">Rời khỏi nhóm này?</string>
     <string name="dms_action_kick">Đá</string>
@@ -316,7 +317,7 @@
     <string name="comment">Bình luận</string>
     <string name="layout">Giao diện</string>
     <string name="feed_stories">Story trên bảng tin</string>
-    <string name="opening_post">Đang mở bài đăng...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Chia sẻ</string>
     <string name="layout_style">Phong cach giao diện</string>
     <string name="column_count">Số cột</string>
@@ -489,7 +490,7 @@
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">No profile pic found!</string>
     <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Share via DM</string>
     <string name="share_link">Share link…</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
