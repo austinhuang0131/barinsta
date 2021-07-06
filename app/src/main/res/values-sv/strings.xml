@@ -68,7 +68,7 @@
     <string name="be_patient">Håll dig lugn!</string>
     <string name="view_story_post">Visa inlägg</string>
     <string name="view_post">Visa inlägg</string>
-    <string name="vote_story_poll">Rösta</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Röstningen lyckades!</string>
     <string name="voted_story_poll">Du har redan röstat!</string>
     <string name="respond_story">Svara</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Slider</string>
     <string name="story_quizzed">Du har redan svarat!</string>
     <string name="story_mentions">Omnämnanden</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Det här kontot är Privat</string>
     <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Ta bort samling</string>
     <string name="delete_collection_confirm">Är du säker på att du vill ta bort den här samlingen?</string>
     <string name="delete_collection_note">All contained media will remain in other collections.</string>
-    <string name="add_to_collection">Lägg till i samlingen...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Ta bort från samling</string>
     <string name="liked">Gillade</string>
     <string name="saved">Sparade</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Kan inte leverera</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Meddelande...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Tryck och håll in för att spela in ljud</string>
-    <string name="dms_thread_updating">Uppdaterar...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Lämna chatt</string>
     <string name="dms_action_leave_question">Lämna den här chatten?</string>
     <string name="dms_action_kick">Sparka</string>
@@ -320,7 +321,7 @@
     <string name="comment">Kommentera</string>
     <string name="layout">Layout</string>
     <string name="feed_stories">Feed stories</string>
-    <string name="opening_post">Öppnar inlägget...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Dela</string>
     <string name="layout_style">Layout style</string>
     <string name="column_count">Column count</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Click to show full like count</string>
     <string name="no_profile_pic_found">No profile pic found!</string>
     <string name="swipe_up_confirmation">Are you sure you want to open this link?</string>
-    <string name="sending">Sending...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Share via DM</string>
     <string name="share_link">Share link…</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
