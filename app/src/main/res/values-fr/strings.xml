@@ -68,7 +68,7 @@
     <string name="be_patient">Soyez patient(e)!</string>
     <string name="view_story_post">Aperçu</string>
     <string name="view_post">Aperçu</string>
-    <string name="vote_story_poll">Vote</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Vote réussi !</string>
     <string name="voted_story_poll">Vous avez déjà voté !</string>
     <string name="respond_story">Répondre</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Curseur</string>
     <string name="story_quizzed">Vous avez déjà répondu !</string>
     <string name="story_mentions">Mentions</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Compte privé</string>
     <string name="priv_acc_confirm">Vous ne pourrez plus accéder aux messages après avoir été désabonné! Êtes-vous sûr(e) ?</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Supprimer la collection</string>
     <string name="delete_collection_confirm">Êtes vous sûr·e de vouloir supprimer cette collection ?</string>
     <string name="delete_collection_note">Tous les médias contenus resteront dans d\'autres collections.</string>
-    <string name="add_to_collection">Ajouter à la collection...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Retirer de la collection</string>
     <string name="liked">Aimé</string>
     <string name="saved">Sauvegardé</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Capture d\'écran effectuée</string>
     <string name="dms_inbox_raven_media_cant_deliver">Impossible de livrer</string>
     <string name="dms_inbox_error_null_count">La réponse du comptage invisible est nulle !</string>
-    <string name="dms_thread_message_hint">Message...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Appuyer de manière prolongée pour enregistrer un audio</string>
-    <string name="dms_thread_updating">Mise à jour en cours...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Quitter la conversation</string>
     <string name="dms_action_leave_question">Quitter cette conversation ?</string>
     <string name="dms_action_kick">Éjecter</string>
@@ -320,7 +321,7 @@
     <string name="comment">Commentaire</string>
     <string name="layout">Disposition</string>
     <string name="feed_stories">Flux de stories</string>
-    <string name="opening_post">Entrain d\'ouvrir la publication...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Partager</string>
     <string name="layout_style">Style du modèle</string>
     <string name="column_count">Nombre de colonnes</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Cliquez pour voir le compte complet de j\'aimes</string>
     <string name="no_profile_pic_found">Aucune photo de profil trouvée !</string>
     <string name="swipe_up_confirmation">Êtes-vous sûr de vouloir ouvrir ce lien ?</string>
-    <string name="sending">En cours d\'envoi...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Partager via MP</string>
     <string name="share_link">Partager le lien…</string>
     <string name="slide_to_cancel">Glisser pour annuler</string>
