@@ -68,7 +68,7 @@
     <string name="be_patient">Биди трпелив!</string>
     <string name="view_story_post">Прегледај Објава</string>
     <string name="view_post">Погледни Објава</string>
-    <string name="vote_story_poll">Гласај</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Гласањето беше успешно!</string>
     <string name="voted_story_poll">Вие веќе гласавте!</string>
     <string name="respond_story">Одговори</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Лизгач</string>
     <string name="story_quizzed">Вие веќе одговоривте!</string>
     <string name="story_mentions">Спомнувања</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Корисникот има приватен профил</string>
     <string name="priv_acc_confirm">Наме да можете да гледате објави и приказни од овој корисник ако го Одследите! Дали сте сигурни?</string>
     <string name="are_you_sure">Дали сте сигурни?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Избриши колекција</string>
     <string name="delete_collection_confirm">Дали сте сигурни дека сакате да ја избришите оваа колекција?</string>
     <string name="delete_collection_note">Сите медиуми ќе останат во други колекции.</string>
-    <string name="add_to_collection">Додади во колекција...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Одстрани од колекција</string>
     <string name="liked">Лајкнато</string>
     <string name="saved">Зачувано</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Скриншотнато</string>
     <string name="dms_inbox_raven_media_cant_deliver">Неможе да се прати</string>
     <string name="dms_inbox_error_null_count">Одговорот беше null!</string>
-    <string name="dms_thread_message_hint">Одговори...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Притисни и задржи за да снимиш аудио порака</string>
-    <string name="dms_thread_updating">Се ажурира...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Напушти чат</string>
     <string name="dms_action_leave_question">Дали сакате да го напуштите чатот?</string>
     <string name="dms_action_kick">Кикни</string>
@@ -320,7 +321,7 @@
     <string name="comment">Коментирај</string>
     <string name="layout">Изглед</string>
     <string name="feed_stories">Приказни</string>
-    <string name="opening_post">Отварање на Објава...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Сподели</string>
     <string name="layout_style">Стил на изглед</string>
     <string name="column_count">Број на колони</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Прилажи прецизен број на допаѓања</string>
     <string name="no_profile_pic_found">Слика на профил не беше пронајдена!</string>
     <string name="swipe_up_confirmation">Дали сте сигурни дека сакате да го отворите овој линк?</string>
-    <string name="sending">Се испраќа...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Сподели преку ДП</string>
     <string name="share_link">Сподели линк…</string>
     <string name="slide_to_cancel">Повлечете за да Откажите</string>
