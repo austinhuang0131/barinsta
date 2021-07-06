@@ -68,7 +68,7 @@
     <string name="be_patient">Wees geduldig!</string>
     <string name="view_story_post">Bekijk Bericht</string>
     <string name="view_post">Bekijk Bericht</string>
-    <string name="vote_story_poll">Stem</string>
+    <string name="story_poll">Poll</string>
     <string name="votef_story_poll">Stem succesvol!</string>
     <string name="voted_story_poll">Je hebt al gestemd!</string>
     <string name="respond_story">Reageer</string>
@@ -85,6 +85,7 @@
     <string name="story_slider">Schuifregelaar</string>
     <string name="story_quizzed">Je hebt al geantwoord!</string>
     <string name="story_mentions">Vermeldingen</string>
+    <string name="story_question">Question</string>
     <string name="priv_acc">Dit Account is Privé</string>
     <string name="priv_acc_confirm">Je zal geen toegang meer hebben tot berichten na het ontvolgen! Weet je het zeker?</string>
     <string name="are_you_sure">Are you sure?</string>
@@ -102,7 +103,7 @@
     <string name="delete_collection">Verwijder collectie</string>
     <string name="delete_collection_confirm">Weet u zeker dat u deze collectie wilt verwijderen?</string>
     <string name="delete_collection_note">Alle opgenomen media blijven in andere collecties.</string>
-    <string name="add_to_collection">Aan collectie toevoegen...</string>
+    <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Uit collectie verwijderen</string>
     <string name="liked">Leuk gevonden</string>
     <string name="saved">Opgeslagen</string>
@@ -181,9 +182,9 @@
     <string name="dms_inbox_raven_media_screenshot">Screenshot genomen</string>
     <string name="dms_inbox_raven_media_cant_deliver">Kan niet afleveren</string>
     <string name="dms_inbox_error_null_count">Ongeziene graaf reactie is nul!</string>
-    <string name="dms_thread_message_hint">Bericht...</string>
+    <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Ingedrukt houden om audio op te nemen</string>
-    <string name="dms_thread_updating">Bijwerken...</string>
+    <string name="dms_thread_updating">Updating…</string>
     <string name="dms_action_leave">Verlaat chat</string>
     <string name="dms_action_leave_question">Deze chat verlaten?</string>
     <string name="dms_action_kick">Kick</string>
@@ -320,7 +321,7 @@
     <string name="comment">Reageeer</string>
     <string name="layout">Lay-out</string>
     <string name="feed_stories">Feed verhalen</string>
-    <string name="opening_post">Bericht openen...</string>
+    <string name="opening_post">Opening post…</string>
     <string name="share">Delen</string>
     <string name="layout_style">Lay-out stijl</string>
     <string name="column_count">Aantal kolommen</string>
@@ -498,7 +499,7 @@
     <string name="click_to_show_full">Klik om volledige like count te tonen</string>
     <string name="no_profile_pic_found">Geen profielfoto gevonden!</string>
     <string name="swipe_up_confirmation">Ben je zeker dat je deze link wilt openen?</string>
-    <string name="sending">Aan het verzenden...</string>
+    <string name="sending">Sending…</string>
     <string name="share_via_dm">Delen via DM</string>
     <string name="share_link">Link delen…</string>
     <string name="slide_to_cancel">Schuif om te annuleren</string>
