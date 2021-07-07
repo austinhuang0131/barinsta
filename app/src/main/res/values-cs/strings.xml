@@ -31,8 +31,8 @@
     <string name="dm_mark_as_seen_setting">Označovat zprávy po zobrazení jako zobrazené</string>
     <string name="dm_mark_as_seen_setting_summary">Ostatní členové uvidí, že jste si ji je zobrazili</string>
     <string name="autoplay_stories_setting">Automaticky přehrát video příběhy</string>
-    <string name="story_list_setting">Display story list by default</string>
-    <string name="story_list_setting_summary">For viewing stories</string>
+    <string name="story_list_setting">Zobrazovat seznam příběhů automaticky</string>
+    <string name="story_list_setting_summary">Při prohlížení příběhů</string>
     <string name="activity_setting">Povolit oznámení o aktivitě</string>
     <string name="story_sort_setting">Řazení kanálu příběhů</string>
     <string name="error_loading_profile">Chyba při načítání profilu! Je uživatelské jméno platné? Pokud ano, jste možná omezeni Instagramem.</string>
