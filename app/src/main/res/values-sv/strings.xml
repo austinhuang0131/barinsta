@@ -474,7 +474,7 @@
     <string name="crash_report_subject">Kraschrapport för Barinsta</string>
     <string name="crash_report_title">Välj en e-postapplikation för att skicka kraschloggar</string>
     <string name="not_found">Hittades inte!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Hoppa över den här uppdateringen</string>
     <string name="on_latest_version">Du har redan den senaste versionen</string>
     <string name="tab_order">Screen order</string>
