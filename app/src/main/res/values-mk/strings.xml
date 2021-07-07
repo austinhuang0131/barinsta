@@ -474,7 +474,7 @@
     <string name="crash_report_subject"> Пријави Грешка </string>
     <string name="crash_report_title">Одберете еmail апликација за праќање на грешки</string>
     <string name="not_found">Не беше пронајдено!</string>
-    <string name="rate_limit">Вашата IP адреса е ограничена од Instagram. Пробајте после еден час повторно. &lt;a href=\"https://redd.it/msxlko\"&gt; Повеќе тука:&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Прескокни го ова ажурирање</string>
     <string name="on_latest_version">Веќе ја користите најновата верзија</string>
     <string name="tab_order">Подредување</string>
