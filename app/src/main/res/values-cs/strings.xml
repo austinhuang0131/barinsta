@@ -492,7 +492,7 @@
     <string name="crash_report_subject">Hlášení o pádu Barinsta</string>
     <string name="crash_report_title">Vyberte aplikaci e-mailu pro odeslání protokolů o selhání</string>
     <string name="not_found">Nenalezeno!</string>
-    <string name="rate_limit">Vaše IP adresa byla omezena Instagramem. Počkejte hodinu a zkuste to znovu. &lt;a href=\"https://redd.it/msxlko\"&gt;Zjistit více.&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Přeskočit tuto aktualizaci</string>
     <string name="on_latest_version">Již máte nejnovější verzi</string>
     <string name="tab_order">Pořadí obrazovek</string>
