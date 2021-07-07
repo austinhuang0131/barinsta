@@ -465,7 +465,7 @@
     <string name="crash_report_subject">Barinstaクラッシュレポート</string>
     <string name="crash_report_title">クラッシュログを送信するメールアプリを選択してください</string>
     <string name="not_found">見つかりません！</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. Wait for an hour and try again. &lt;a href=\"https://redd.it/msxlko\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">このアップデートをスキップ</string>
     <string name="on_latest_version">すでに最新バージョンをご利用中です</string>
     <string name="tab_order">Screen order</string>
