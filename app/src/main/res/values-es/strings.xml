@@ -474,7 +474,7 @@
     <string name="crash_report_subject">Informe de fallos de Barinsta</string>
     <string name="crash_report_title">Seleccione una aplicación de correo electrónico para enviar registros de errores</string>
     <string name="not_found">¡No encontrado!</string>
-    <string name="rate_limit">Tu IP ha sido limitada por Instagram. Espera una hora e inténtalo de nuevo. &lt;a href=\"https://redd.it/msxlko\"&gt;Más información.&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Omitir esta actualización</string>
     <string name="on_latest_version">Ya tienes la última versión</string>
     <string name="tab_order">Orden de pantalla</string>
