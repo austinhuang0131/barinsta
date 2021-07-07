@@ -70,7 +70,7 @@
     <string name="be_patient">Sei etwas geduldig!</string>
     <string name="view_story_post">Beitrag anzeigen</string>
     <string name="view_post">Beitrag anzeigen</string>
-    <string name="story_poll">Poll</string>
+    <string name="story_poll">Umfrage</string>
     <string name="votef_story_poll">Abstimmung erfolgreich!</string>
     <string name="voted_story_poll">Du hast bereits abgestimmt!</string>
     <string name="respond_story">Antworten</string>
@@ -105,7 +105,7 @@
     <string name="delete_collection">Sammlung löschen</string>
     <string name="delete_collection_confirm">Bist du sicher, dass du diese Sammlung löschen möchtest?</string>
     <string name="delete_collection_note">Alle enthaltenen Medien werden in anderen Sammlungen verbleiben.</string>
-    <string name="add_to_collection">Add to collection…</string>
+    <string name="add_to_collection">Zur Sammlung hinzufügen…</string>
     <string name="remove_from_collection">Aus Sammlung entfernen</string>
     <string name="liked">Gefällt mir</string>
     <string name="saved">Gespeichert</string>
@@ -501,7 +501,7 @@
     <string name="click_to_show_full">Klicken, um die gesamte Anzahl der Likes anzuzeigen</string>
     <string name="no_profile_pic_found">Kein Profilbild gefunden!</string>
     <string name="swipe_up_confirmation">Bist du sicher, dass du diesen Link öffnen möchtest?</string>
-    <string name="sending">Sending…</string>
+    <string name="sending">Sende…</string>
     <string name="share_via_dm">Über PN teilen</string>
     <string name="share_link">Link teilen…</string>
     <string name="slide_to_cancel">Zum Abbrechen wischen</string>
