@@ -492,7 +492,7 @@
     <string name="crash_report_subject">Barinsta Crash Report</string>
     <string name="crash_report_title">Выберите приложение для отправки логов ошибки</string>
     <string name="not_found">Не найдено!</string>
-    <string name="rate_limit">Ваш IP-адрес был ограничен Instagram. Повторите попытку через час. &lt;a href=\"https://redd.it/msxlko\"&gt;Узнать больше.&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Пропустить это обновление</string>
     <string name="on_latest_version">Вы уже используете последнюю версию</string>
     <string name="tab_order">Порядок экрана</string>
