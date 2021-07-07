@@ -76,7 +76,7 @@
     <string name="be_patient">Bądź cierpliwy!</string>
     <string name="view_story_post">Zobacz post</string>
     <string name="view_post">Zobacz post</string>
-    <string name="story_poll">Poll</string>
+    <string name="story_poll">Ankieta</string>
     <string name="votef_story_poll">Zagłosowano pomyślnie!</string>
     <string name="voted_story_poll">Już głosowałeś!</string>
     <string name="respond_story">Odpowiedz</string>
@@ -95,7 +95,7 @@
     <string name="story_slider">Suwak</string>
     <string name="story_quizzed">Już odpowiedziałeś!</string>
     <string name="story_mentions">Wzmianki</string>
-    <string name="story_question">Question</string>
+    <string name="story_question">Pytanie</string>
     <string name="priv_acc">To konto jest prywatne</string>
     <string name="priv_acc_confirm">Nie będziesz mieć dostępu do postów po anulowaniu obserwowania! Jesteś pewny?</string>
     <string name="are_you_sure">Jesteś pewien?</string>
@@ -113,7 +113,7 @@
     <string name="delete_collection">Usunąć kolekcję</string>
     <string name="delete_collection_confirm">Czy na pewno chcesz usunąć tę kolekcję?</string>
     <string name="delete_collection_note">Wszystkie media pozostaną w innych kolekcjach.</string>
-    <string name="add_to_collection">Add to collection…</string>
+    <string name="add_to_collection">Dodać do kolekcji…</string>
     <string name="remove_from_collection">Usuń z kolekcji</string>
     <string name="liked">Polubione</string>
     <string name="saved">Zapisane</string>
@@ -192,9 +192,9 @@
     <string name="dms_inbox_raven_media_screenshot">Dokonano zrzutu ekranu</string>
     <string name="dms_inbox_raven_media_cant_deliver">Nie dostarczono</string>
     <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
-    <string name="dms_thread_message_hint">Message…</string>
+    <string name="dms_thread_message_hint">Komunikat…</string>
     <string name="dms_thread_audio_hint">Naciśnij i przytrzymaj, aby nagrać dźwięk</string>
-    <string name="dms_thread_updating">Updating…</string>
+    <string name="dms_thread_updating">Aktualizowanie…</string>
     <string name="dms_action_leave">Opuść czat</string>
     <string name="dms_action_leave_question">Opuścić ten czat?</string>
     <string name="dms_action_kick">Wyrzuć</string>
@@ -331,7 +331,7 @@
     <string name="comment">Komentarz</string>
     <string name="layout">Układ</string>
     <string name="feed_stories">Relacje</string>
-    <string name="opening_post">Opening post…</string>
+    <string name="opening_post">Otwieranie wpisu…</string>
     <string name="share">Udostępnij</string>
     <string name="layout_style">Styl układu</string>
     <string name="column_count">Liczba kolumn</string>
@@ -519,7 +519,7 @@
     <string name="click_to_show_full">Kliknij, aby wyświetlić pełną liczbę polubień</string>
     <string name="no_profile_pic_found">Nie znaleziono zdjęcia profilowego!</string>
     <string name="swipe_up_confirmation">Czy na pewno chcesz otworzyć ten link?</string>
-    <string name="sending">Sending…</string>
+    <string name="sending">Wysyłanie…</string>
     <string name="share_via_dm">Udostępnij przez PW</string>
     <string name="share_link">Udostępnij link…</string>
     <string name="slide_to_cancel">Przesuń, by anulować</string>
