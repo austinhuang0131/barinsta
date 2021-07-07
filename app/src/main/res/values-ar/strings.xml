@@ -510,7 +510,7 @@
     <string name="crash_report_subject">تقرير انهيار Barinsta</string>
     <string name="crash_report_title">حدد تطبيق البريد الإلكتروني لإرسال سجلات الأعطال</string>
     <string name="not_found">غير موجود!</string>
-    <string name="rate_limit">تم منع عنوان IP الخاص بك بواسطة إنستاجرام. انتظر لمدة ساعة وحاول مرة أخرى. &lt;a href=\"https://redd.it/msxlko\"&gt;اعرف المزيد&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">تخطى هذا التحديث</string>
     <string name="on_latest_version">أنت بالفعل في الإصدار الأخير</string>
     <string name="tab_order">ترتيب الشاشة</string>
