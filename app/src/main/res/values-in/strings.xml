@@ -465,7 +465,7 @@
     <string name="crash_report_subject">Laporan Kerusakan Barinsta</string>
     <string name="crash_report_title">Pilih aplikasi surel untuk mengirim catatan kerusakan</string>
     <string name="not_found">Tidak ditermukan!</string>
-    <string name="rate_limit">IP Anda telah dibatasi oleh Instagram. Tunggu satu jam lalu coba lagi. &lt;a href=\"https://redd.it/msxlko\"&gt;Pelajari lebih lanjut.&lt;/a&gt;</string>
+    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Lewatkan pembaruan</string>
     <string name="on_latest_version">Anda berada pada versi terbaru</string>
     <string name="tab_order">Urutan layar</string>
