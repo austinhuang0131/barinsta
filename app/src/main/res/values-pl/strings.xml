@@ -492,7 +492,7 @@
     <string name="crash_report_subject">Raport awarii Barinsta</string>
     <string name="crash_report_title">Wybierz aplikację e-mail do wysyłania dzienników awarii</string>
     <string name="not_found">Nie znaleziono!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Twój adres IP został ograniczony przez Instagrama. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Dowiedz się więcej.&lt;/a&gt;</string>
     <string name="skip_update">Pomiń tę aktualizację</string>
     <string name="on_latest_version">Posiadasz aktualną wersję</string>
     <string name="tab_order">Kolejność na ekranie</string>
