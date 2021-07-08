@@ -474,7 +474,7 @@
     <string name="crash_report_subject">Αναφορά Κατάρρευσης Barinsta</string>
     <string name="crash_report_title">Επιλέξτε μια εφαρμογή ηλ. ταχυδρομείου για αποστολή αρχείων καταγραφής κατάρρευσης</string>
     <string name="not_found">Δε βρέθηκε!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Η διεύθυνση IP σας έχει περιοριστεί από το Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Μάθετε περισσότερα.&lt;/a&gt;</string>
     <string name="skip_update">Παράλειψη της ενημέρωσης</string>
     <string name="on_latest_version">Η εφαρμογή είναι ήδη στην τελευταία έκδοση</string>
     <string name="tab_order">Σειρά της οθόνης</string>
