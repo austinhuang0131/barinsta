@@ -32,7 +32,7 @@
         <item>सिस्टम के अनुसार</item>
         <item>बैटरी स्तर के अनुसार</item>
         <item>डार्क</item>
-        <item>हल्का</item>
+        <item>लाईट</item>
     </string-array>
     <string-array name="story_sorts">
         <item>सिस्टम निर्धारित (नए से पुराने)</item>
@@ -57,7 +57,7 @@
     <!--    <item>@navigation/more_nav_graph</item>-->
     <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
-        <item>सेकंड</item>
+        <item>सेकंद</item>
         <item>मिनट</item>
     </string-array>
 </resources>
