@@ -19,7 +19,7 @@
     <string name="title_favorites">收藏</string>
     <string name="title_discover">探索</string>
     <string name="title_comments">評論</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">回覆</string>
     <string name="title_notifications">動態</string>
     <string name="update_check">啟動時檢查更新</string>
     <string name="flag_secure">阻擋截圖及應用程式預覽</string>
@@ -67,7 +67,7 @@
     <string name="be_patient">耐心一點！</string>
     <string name="view_story_post">查看文章</string>
     <string name="view_post">查看文章</string>
-    <string name="story_poll">Poll</string>
+    <string name="story_poll">投票</string>
     <string name="votef_story_poll">投票成功！</string>
     <string name="voted_story_poll">您已經投過票了！</string>
     <string name="respond_story">回覆</string>
@@ -83,10 +83,10 @@
     <string name="story_slider">滑桿</string>
     <string name="story_quizzed">您已經回答了！</string>
     <string name="story_mentions">提及</string>
-    <string name="story_question">Question</string>
+    <string name="story_question">問題</string>
     <string name="priv_acc">此帳戶為私人帳戶</string>
     <string name="priv_acc_confirm">取消關注後，您將無法閱讀人家的貼文！你確定嗎？</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">您確定嗎?</string>
     <string name="no_acc">您可以透過右下角的 「更多」 -&gt; 「新增帳號」 來登入您的帳號，或者以匿名的身分查看公共帳戶！</string>
     <string name="empty_acc">此帳戶尚未張貼任何文章</string>
     <string name="empty_list">找不到此貼文！</string>
@@ -101,7 +101,7 @@
     <string name="delete_collection">刪除收藏</string>
     <string name="delete_collection_confirm">確定刪除此收藏？</string>
     <string name="delete_collection_note">所有包含的多媒體將會保留於其他收藏夾中。</string>
-    <string name="add_to_collection">Add to collection…</string>
+    <string name="add_to_collection">新增至收藏集…</string>
     <string name="remove_from_collection">從收藏中移除</string>
     <string name="liked">已按讚</string>
     <string name="saved">已儲存</string>
@@ -180,9 +180,9 @@
     <string name="dms_inbox_raven_media_screenshot">已截圖</string>
     <string name="dms_inbox_raven_media_cant_deliver">無法傳送</string>
     <string name="dms_inbox_error_null_count">未讀計數錯誤！</string>
-    <string name="dms_thread_message_hint">Message…</string>
+    <string name="dms_thread_message_hint">撰寫訊息…</string>
     <string name="dms_thread_audio_hint">長按即可錄製語音訊息</string>
-    <string name="dms_thread_updating">Updating…</string>
+    <string name="dms_thread_updating">更新中…</string>
     <string name="dms_action_leave">離開聊天</string>
     <string name="dms_action_leave_question">離開此聊天室？</string>
     <string name="dms_action_kick">踢除</string>
@@ -194,7 +194,7 @@
     <string name="direct_download_desc">將貼文直接下載到手機中！</string>
     <string name="direct_download_loading">獲取文章中</string>
     <string name="downloader_complete">下載完成</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">正在准備下載…</string>
     <string name="downloader_downloading_post">下載貼文中…</string>
     <string name="downloader_downloading_media">下載媒體中</string>
     <string name="downloader_downloading_pfp">下載個人圖片中</string>
@@ -286,11 +286,11 @@
     <string name="unknown">未知</string>
     <string name="removed_from_favs">已從收藏中移除!</string>
     <string name="backup_and_restore">備份與還原</string>
-    <string name="auto_backup">Auto Backup</string>
+    <string name="auto_backup">自動備份</string>
     <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
     <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
-    <string name="auto_backup_setting">Enable Auto Backup</string>
-    <string name="manual_backup">Manual Backup</string>
+    <string name="auto_backup_setting">啟用自動備份</string>
+    <string name="manual_backup">手動備份</string>
     <string name="backup_summary">備份 Barinsta 的設定、登入資料、及收藏中的內容至純文字或加密後的檔案，以便日後還原。</string>
     <string name="backup_warning">如果您選擇備份登入相關資訊，請將此檔案視為密碼看待，並妥善保存！</string>
     <string name="create_backup">建立備份檔</string>
@@ -319,7 +319,7 @@
     <string name="comment">評論</string>
     <string name="layout">佈局</string>
     <string name="feed_stories">限時動態</string>
-    <string name="opening_post">Opening post…</string>
+    <string name="opening_post">開啟貼文中…</string>
     <string name="share">分享</string>
     <string name="layout_style">佈局樣式</string>
     <string name="column_count">欄位數量</string>
@@ -474,17 +474,17 @@
     <string name="dm_remove_warning">若您如此儲存，所有私訊功能將在下次啟動後被關閉</string>
     <string name="copy_caption">複製說明</string>
     <string name="copy_reply">複製回覆</string>
-    <string name="restore">Restore</string>
+    <string name="restore">還原</string>
     <string name="backup">Backup</string>
     <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
     <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
     <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
     <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
     <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
-    <string name="select_a_folder">No folder selected!</string>
+    <string name="select_a_folder">未選取任何資料夾</string>
     <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
     <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
-    <string name="barinsta_folder">Barinsta folder</string>
+    <string name="barinsta_folder">Barinsta 資料夾</string>
     <string name="top">熱門</string>
     <string name="recent">最近</string>
     <string name="clear">清空</string>
@@ -492,8 +492,8 @@
     <string name="click_to_show_full">點選以顯示完整的按讚數量</string>
     <string name="no_profile_pic_found">找不到大頭貼照</string>
     <string name="swipe_up_confirmation">您確定要打開此連結嗎？</string>
-    <string name="sending">Sending…</string>
+    <string name="sending">正在發送…</string>
     <string name="share_via_dm">透過私訊分享</string>
     <string name="share_link">分享連結</string>
-    <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="slide_to_cancel">滑動取消發送</string>
 </resources>
