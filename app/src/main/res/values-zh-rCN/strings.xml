@@ -465,7 +465,7 @@
     <string name="crash_report_subject">Barinsta 崩溃报告</string>
     <string name="crash_report_title">选择一个电子邮件应用来发送崩溃日志</string>
     <string name="not_found">未找到所要的内容！</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">您的 IP 已被 Instagram 设限。 &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;了解更多&lt;/a&gt;</string>
     <string name="skip_update">跳过本次更新</string>
     <string name="on_latest_version">您现在安装的是最新版本</string>
     <string name="tab_order">页面顺序</string>
