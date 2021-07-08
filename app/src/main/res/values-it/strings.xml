@@ -31,8 +31,8 @@
     <string name="dm_mark_as_seen_setting">Segna il DM come visto dopo la visualizzazione</string>
     <string name="dm_mark_as_seen_setting_summary">Altri membri sapranno che lo hai visualizzato</string>
     <string name="autoplay_stories_setting">Riproduci automaticamente le storie video</string>
-    <string name="story_list_setting">Display story list by default</string>
-    <string name="story_list_setting_summary">For viewing stories</string>
+    <string name="story_list_setting">Mostra di default l\'elenco delle storie</string>
+    <string name="story_list_setting_summary">Per visualizzare le storie</string>
     <string name="activity_setting">Abilita notifiche attività</string>
     <string name="story_sort_setting">Ordinamento storie feed</string>
     <string name="error_loading_profile">Errore nel caricamento del profilo! Il nome utente è valido? Se sì, potresti essere considerato limitato.</string>
@@ -474,7 +474,7 @@
     <string name="crash_report_subject">Rapporto sugli errori di Barinsta</string>
     <string name="crash_report_title">Selezionare un\'applicazione di posta elettronica per inviare i registri di errori</string>
     <string name="not_found">Non trovato!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">L\'intervallo del tuo IP è stato limitato da Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Scopri di più.&lt;/a&gt;</string>
     <string name="skip_update">Salta questo aggiornamento</string>
     <string name="on_latest_version">Hai già l\'ultima versione</string>
     <string name="tab_order">Ordine schermata</string>
