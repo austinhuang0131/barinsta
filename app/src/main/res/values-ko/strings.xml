@@ -235,7 +235,9 @@
     <string name="action_ayml">프로필 추천</string>
     <string name="select_picture">사진 선택</string>
     <string name="uploading">업로드 중…</string>
-    <string name="activity_count_prefix">You have:</string>
+    <plurals name="activity_count_total">
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d follows</string>
     <string name="activity_count_comments">%d comments</string>
     <string name="activity_count_commentlikes">%d comment likes</string>
