@@ -255,7 +255,14 @@
     <string name="action_ayml">Suggested users</string>
     <string name="select_picture">Select Picture</string>
     <string name="uploading">Uploading…</string>
-    <string name="activity_count_prefix">You have:</string>
+    <plurals name="activity_count_total">
+        <item quantity="zero">You have %d notifications</item>
+        <item quantity="one">You have %d notification</item>
+        <item quantity="two">You have %d notifications</item>
+        <item quantity="few">You have %d notifications</item>
+        <item quantity="many">You have %d notifications</item>
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d follows</string>
     <string name="activity_count_comments">%d comments</string>
     <string name="activity_count_commentlikes">%d comment likes</string>
