@@ -235,7 +235,9 @@
     <string name="action_ayml">おすすめのユーザー</string>
     <string name="select_picture">画像を選択</string>
     <string name="uploading">アップロード中…</string>
-    <string name="activity_count_prefix">あなたのステータス:</string>
+    <plurals name="activity_count_total">
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d 人のフォロワー</string>
     <string name="activity_count_comments">%d コメント</string>
     <string name="activity_count_commentlikes">%d 個のコメントへのいいね！</string>
