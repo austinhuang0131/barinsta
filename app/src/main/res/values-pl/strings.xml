@@ -247,7 +247,12 @@
     <string name="action_ayml">Proponowani użytkownicy</string>
     <string name="select_picture">Wybierz obraz</string>
     <string name="uploading">Przesyłanie…</string>
-    <string name="activity_count_prefix">Masz:</string>
+    <plurals name="activity_count_total">
+        <item quantity="one">You have %d notification</item>
+        <item quantity="few">You have %d notifications</item>
+        <item quantity="many">You have %d notifications</item>
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d obserwujących</string>
     <string name="activity_count_comments">%d komentarzy</string>
     <string name="activity_count_commentlikes">%d polubionych komentarzy</string>
