@@ -247,7 +247,12 @@
     <string name="action_ayml">Предлагаемые пользователи</string>
     <string name="select_picture">Выберите изображение</string>
     <string name="uploading">Загрузка…</string>
-    <string name="activity_count_prefix">У вас есть:</string>
+    <plurals name="activity_count_total">
+        <item quantity="one">You have %d notification</item>
+        <item quantity="few">You have %d notifications</item>
+        <item quantity="many">You have %d notifications</item>
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d подписано</string>
     <string name="activity_count_comments">%d комментариев</string>
     <string name="activity_count_commentlikes">%d симпатий к комментарию</string>
