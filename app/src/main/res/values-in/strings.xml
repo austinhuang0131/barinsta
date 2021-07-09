@@ -235,7 +235,9 @@
     <string name="action_ayml">Pengguna yang disarankan</string>
     <string name="select_picture">Pilih Gambar</string>
     <string name="uploading">Mengunggah…</string>
-    <string name="activity_count_prefix">Anda memiliki:</string>
+    <plurals name="activity_count_total">
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d mengikuti</string>
     <string name="activity_count_comments">%d komentar</string>
     <string name="activity_count_commentlikes">%d suka komentar</string>
