@@ -247,7 +247,12 @@
     <string name="action_ayml">Navrhovaní uživatelé</string>
     <string name="select_picture">Vybrat obrázek</string>
     <string name="uploading">Nahrávání…</string>
-    <string name="activity_count_prefix">Máte:</string>
+    <plurals name="activity_count_total">
+        <item quantity="one">You have %d notification</item>
+        <item quantity="few">You have %d notifications</item>
+        <item quantity="many">You have %d notifications</item>
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d sleduje</string>
     <string name="activity_count_comments">%d komentářů</string>
     <string name="activity_count_commentlikes">%d lajků komentáře</string>
