@@ -235,7 +235,9 @@
     <string name="action_ayml">推薦用戶</string>
     <string name="select_picture">選擇圖片</string>
     <string name="uploading">上傳中…</string>
-    <string name="activity_count_prefix">您有</string>
+    <plurals name="activity_count_total">
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d 個追蹤者</string>
     <string name="activity_count_comments">%d 個評論</string>
     <string name="activity_count_commentlikes">%d 個評論的讚</string>
