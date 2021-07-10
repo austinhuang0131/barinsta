@@ -91,61 +91,23 @@
         <item>HH:mm:ss</item>
         <item>H:mm:ss</item>
     </string-array>
-    <array name="main_nav_graph_root_ids">
+
+    <array name="logged_in_nav_root_ids">
         <item>@id/direct_messages_nav_graph</item>
         <item>@id/feed_nav_graph</item>
         <item>@id/profile_nav_graph</item>
         <item>@id/discover_nav_graph</item>
         <item>@id/more_nav_graph</item>
-        <!-- New graphs should go below -->
         <item>@id/favorites_nav_graph</item>
         <item>@id/notification_viewer_nav_graph</item>
     </array>
-    <!-- Nav graphs should correspond 1-to-1 with the above nav graph ids -->
-    <array name="main_nav_graphs">
-        <item>@navigation/direct_messages_nav_graph</item>
-        <item>@navigation/feed_nav_graph</item>
-        <item>@navigation/profile_nav_graph</item>
-        <item>@navigation/discover_nav_graph</item>
-        <item>@navigation/more_nav_graph</item>
-        <item>@navigation/favorites_nav_graph</item>
-        <item>@navigation/notification_viewer_nav_graph</item>
+
+    <array name="anon_nav_root_ids">
+        <item>@id/favorites_nav_graph</item>
+        <item>@id/profile_nav_graph</item>
+        <item>@id/more_nav_graph</item>
     </array>
-    <!-- Titles should correspond 1-to-1 with the above nav graphs -->
-    <string-array name="main_nav_titles" translatable="false">
-        <item>@string/title_dm</item>
-        <item>@string/feed</item>
-        <item>@string/profile</item>
-        <item>@string/title_discover</item>
-        <item>@string/more</item>
-        <item>@string/title_favorites</item>
-        <item>@string/title_notifications</item>
-    </string-array>
-    <!-- Drawable should correspond 1-to-1 with the above titles -->
-    <array name="main_nav_drawables" translatable="false">
-        <item>@drawable/ic_message_24</item>
-        <item>@drawable/ic_home_24</item>
-        <item>@drawable/ic_person_24</item>
-        <item>@drawable/ic_explore_24</item>
-        <item>@drawable/ic_more_horiz_24</item>
-        <item>@drawable/ic_star_24</item>
-        <item>@drawable/ic_not_liked</item>
-    </array>
-    <!-- fragmentIds should correspond 1-to-1 with the above drawabled -->
-    <!-- these are the start destination of the corresponding nav graphs -->
-    <array name="main_nav_start_dest_frag_ids" translatable="false">
-        <item>@id/directMessagesInboxFragment</item>
-        <item>@id/feedFragment</item>
-        <item>@id/profileFragment</item>
-        <item>@id/discoverFragment</item>
-        <item>@id/morePreferencesFragment</item>
-        <item>@id/favoritesFragment</item>
-        <item>@id/notificationsViewer</item>
-    </array>
-    <!--<array name="logged_out_main_nav_graphs">-->
-    <!--    <item>@navigation/profile_nav_graph</item>-->
-    <!--    <item>@navigation/more_nav_graph</item>-->
-    <!--</array>-->
+
     <string-array name="light_themes" translatable="false">
         <item>@string/light_white_theme</item>
         <item>@string/light_barinsta_theme</item>
