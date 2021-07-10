@@ -236,7 +236,7 @@
     <string name="select_picture">选择图片</string>
     <string name="uploading">上传中...</string>
     <plurals name="activity_count_total">
-        <item quantity="other">You have %d notifications</item>
+        <item quantity="other">您有 %d 条通知</item>
     </plurals>
     <string name="activity_count_relationship">%d 位新粉丝</string>
     <string name="activity_count_comments">%d 个评论回复</string>
