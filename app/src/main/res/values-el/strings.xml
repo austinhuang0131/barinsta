@@ -508,7 +508,7 @@
     <string name="share_via_dm">Κοινοποίηση μέσω μηνύματος</string>
     <string name="share_link">Κοινοποίηση συνδέσμου…</string>
     <string name="slide_to_cancel">Σύρετε για ακύρωση</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="disable_screen_transitions">Απενεργοποίηση μεταβάσεων οθόνης</string>
+    <string name="invalid_format">Μη έγκυρη μορφή</string>
+    <string name="no_directory_picker_activity">Δεν βρέθηκε δραστηριότητα για επιλογή καταλόγου</string>
 </resources>
