@@ -249,7 +249,7 @@
     <string name="activity_count_commentlikes">%d टिप्पणीयाँ पसन्दीत</string>
     <string name="activity_count_usertags">%d युजरटॅग</string>
     <string name="activity_count_likes">%d लाईक्स</string>
-    <string name="activity_count_poy">%d आपके फोटोज्</string>
+    <string name="activity_count_poy">आपकी %d तस्वीरें</string>
     <string name="activity_count_requests">%d फॉलो रिक्वेस्ट</string>
     <string name="activity_notloggedin">इस अधिसूचना पर क्लिक करने से पहले आपने लॉग आउट किया?!</string>
     <string name="feed">फ़ीड</string>
