@@ -240,8 +240,8 @@
     <string name="select_picture">Selecionar imagem</string>
     <string name="uploading">Enviando…</string>
     <plurals name="activity_count_total">
-        <item quantity="one">You have %d notification</item>
-        <item quantity="other">You have %d notifications</item>
+        <item quantity="one">Você tem %d notificação</item>
+        <item quantity="other">Você tem %d notificações</item>
     </plurals>
     <string name="activity_count_relationship">%d seguidores</string>
     <string name="activity_count_comments">%d comentários</string>
