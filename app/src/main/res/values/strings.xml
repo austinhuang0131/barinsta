@@ -242,7 +242,10 @@
     <string name="liability" translatable="false">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</string>
     <string name="select_picture">Select Picture</string>
     <string name="uploading">Uploading…</string>
-    <string name="activity_count_prefix">You have:</string>
+    <plurals name="activity_count_total">
+        <item quantity="one">You have %d notification</item>
+        <item quantity="other">You have %d notifications</item>
+    </plurals>
     <string name="activity_count_relationship">%d follows</string>
     <string name="activity_count_comments">%d comments</string>
     <string name="activity_count_commentlikes">%d comment likes</string>
