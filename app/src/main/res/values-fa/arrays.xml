@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>پیـشـگزیده سامانه</item>
+        <item>پیش فرض سیستم</item>
         <item translatable="false">English</item>
         <item translatable="false">Français</item>
         <item translatable="false">Español</item>
@@ -29,15 +29,15 @@
         <item translatable="false">العربية</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>خودکار / پیرو سامانه</item>
+        <item>خودکار / پیروی از سیستم</item>
         <item>خودکار / پیرو باتری</item>
-        <item>تیره</item>
+        <item>تاریک</item>
         <item>روشن</item>
     </string-array>
     <string-array name="story_sorts">
         <item>پیش‌فرض اینستاگرام (خوانده نشده سپس خوانده شده)</item>
-        <item>از نو به کهنـترین</item>
-        <item>از کهنـترین به نو</item>
+        <item>از جدیدترین به قدیمی ترین</item>
+        <item>از قدیمی ترین به جدید ترین</item>
     </string-array>
     <string-array name="separator_presets">
         <item>هیچکدام</item>
