@@ -498,4 +498,7 @@
     <string name="share_via_dm">透過私訊分享</string>
     <string name="share_link">分享連結</string>
     <string name="slide_to_cancel">滑動取消發送</string>
+    <string name="disable_screen_transitions">Disable screen transitions</string>
+    <string name="invalid_format">Invalid format</string>
+    <string name="no_directory_picker_activity">No activity found to select directory</string>
 </resources>
