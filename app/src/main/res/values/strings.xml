@@ -520,4 +520,7 @@
     <string name="share_via_dm">Share via DM</string>
     <string name="share_link">Share link…</string>
     <string name="slide_to_cancel">Slide to Cancel</string>
+    <string name="disable_screen_transitions">Disable screen transitions</string>
+    <string name="invalid_format">Invalid format</string>
+    <string name="no_directory_picker_activity">No activity found to select directory</string>
 </resources>
