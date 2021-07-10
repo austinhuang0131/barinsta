@@ -20,7 +20,7 @@
     <string name="title_discover">खोजिए</string>
     <string name="title_comments">टिप्पणियाँ</string>
     <string name="title_replies">जवाब</string>
-    <string name="title_notifications">कार्यकलाप</string>
+    <string name="title_notifications">गतिविधि</string>
     <string name="update_check">खुलने पर अपडेट के लिए जाँच करें</string>
     <string name="flag_secure">स्क्रीनशॉट को ब्लॉक करें &amp; ऐप प्रीव्यू</string>
     <string name="download_user_folder">पोस्ट को ब्यबहारकारी के नाम पर किये फोल्डरस में रखें</string>
@@ -33,7 +33,7 @@
     <string name="autoplay_stories_setting">व्हिडिओ स्टोरी ऑटो प्ले करे</string>
     <string name="story_list_setting">डिफॉल्ट स्टोरी लिस्ट</string>
     <string name="story_list_setting_summary">स्टोरी लिस्ट देखने के लिए</string>
-    <string name="activity_setting">क्रियाकलाप सूचनाएँ दिखायें</string>
+    <string name="activity_setting">गतिविधि सूचनाएँ दिखायें</string>
     <string name="story_sort_setting">फ़ीड स्टोरीज क्रमबद्ध करें</string>
     <string name="error_loading_profile">प्रोफ़ाइल लोड करने में एरर! क्या यूजरनाम मान्य है? यदि हां, तो आप सीमित हो सकते हैं.</string>
     <string name="error_loading_profile_loggedin">प्रोफ़ाइल लोड करने में एरर! क्या यूजरनाम मान्य है? या उन्होंने आपको ब्लॉक किया है?</string>
@@ -242,7 +242,7 @@
     <string name="uploading">अपलोड हो रहा है...</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
-        <item quantity="other">You have %d notifications</item>
+        <item quantity="other">आपके पास %d सूचनाएं हैं</item>
     </plurals>
     <string name="activity_count_relationship">%d अनुगामी</string>
     <string name="activity_count_comments">%d टिप्पणियाँ</string>
@@ -302,7 +302,7 @@
     <string name="manual_backup">Manual Backup</string>
     <string name="backup_summary">Backup Barinsta app settings, account login data, and/or favorites to a plain text or encrypted backup file for later restoration.</string>
     <string name="backup_warning">If you\'re backing up account login data, treat the file as confidential and keep it somewhere safe!</string>
-    <string name="create_backup">Create new backup file</string>
+    <string name="create_backup">नया बैकअप बनाएँ</string>
     <string name="restore_backup">Restore from existing backup file</string>
     <string name="file_chosen_label">File:</string>
     <string name="enter_password">पासवर्ड दर्ज करें</string>
@@ -310,7 +310,7 @@
     <string name="apply">लागू करें</string>
     <string name="save">सेव करें</string>
     <string name="caption">कैप्शन</string>
-    <string name="edit_caption">Edit caption</string>
+    <string name="edit_caption">कैप्शन का संपादन करें</string>
     <string name="translate_caption">Translate caption</string>
     <string name="player_timeline_desc">Video player timeline</string>
     <string name="liking">Liking…</string>
@@ -323,13 +323,13 @@
     <string name="save_unsuccessful">Save unsuccessful</string>
     <string name="save_remove_unsuccessful">Remove unsuccessful</string>
     <string name="downloading">डाउनलोड हो रहा है...</string>
-    <string name="downloader_downloading_child">Download item %1$d of %2$d</string>
+    <string name="downloader_downloading_child">%2$d में से %1$d डाउनलोड हो रहा है</string>
     <string name="delete">हटाएँ</string>
-    <string name="comment">Comment</string>
+    <string name="comment">टिप्पणी करें</string>
     <string name="layout">Layout</string>
     <string name="feed_stories">Feed stories</string>
-    <string name="opening_post">Opening post…</string>
-    <string name="share">Share</string>
+    <string name="opening_post">पोस्ट खुल रहा है</string>
+    <string name="share">सांझा करें</string>
     <string name="layout_style">Layout style</string>
     <string name="column_count">Column count</string>
     <string name="two">2</string>
@@ -435,10 +435,10 @@
     <string name="video">Video</string>
     <string name="voice_message">Voice message</string>
     <string name="post">Post</string>
-    <string name="approval_required_for_new_members">Approval required to join</string>
+    <string name="approval_required_for_new_members">जुड़ने के लिए स्वीकृति आवश्यक है</string>
     <string name="requests">Requests</string>
-    <string name="admins_only">Admins only</string>
-    <string name="added_by">Added by %s</string>
+    <string name="admins_only">केवल एडमिन</string>
+    <string name="added_by">%s के द्वारा जोड़ा गया</string>
     <string name="admin_approval_required">Admin approval required</string>
     <string name="admin_approval_required_description">An admin approval will be required to add new members to the group</string>
     <string name="dms_action_end">End chat</string>
@@ -452,15 +452,15 @@
     <string name="no_pending_requests">No pending requests</string>
     <string name="checking_for_new_messages">Checking for new messages</string>
     <string name="pref_category_stories">Stories</string>
-    <string name="pref_category_dm">DM</string>
-    <string name="pref_category_notifications">Notifications</string>
+    <string name="pref_category_dm">संदेश</string>
+    <string name="pref_category_notifications">सूचनाएं</string>
     <string name="pref_category_post">Post</string>
-    <string name="enable_dm_notifications">Enable DM notifications</string>
+    <string name="enable_dm_notifications">DM सूचनाएं दिखायें</string>
     <string name="enable_dm_auto_refesh">Auto refresh messages</string>
     <string name="auto_refresh_every">Auto refresh every</string>
-    <string name="secs">secs</string>
-    <string name="mins">mins</string>
-    <string name="search_giphy">Search GIPHY</string>
+    <string name="secs">सेकंड</string>
+    <string name="mins">मिनट</string>
+    <string name="search_giphy">GIPHY खोजें</string>
     <string name="generic_null_response">Response is null!</string>
     <string name="generic_not_ok_response">Response status is not ok!</string>
     <string name="generic_failed_request">Request failed!</string>
@@ -470,7 +470,7 @@
     <string name="added_keywords">Added keyword: %s to filter list</string>
     <string name="removed_keywords">Removed keyword: %s from filter list</string>
     <string name="marked_as_seen">Marked as seen</string>
-    <string name="delete_unsuccessful">Delete unsuccessful</string>
+    <string name="delete_unsuccessful">हटाने का कार्य विफल रहा</string>
     <string name="throttle_error">Throttled by Instagram because of too many API requests. Wait for some time before retrying.</string>
     <string name="error">एरर</string>
     <string name="account_logged_out">यह अकाउंट लॉग आउट हुआ</string>
@@ -478,7 +478,7 @@
     <string name="inactive_user">उपयोगकर्ता निष्क्रिय है</string>
     <string name="crash_report_subject">Barinsta क्रैश रिपोर्ट</string>
     <string name="crash_report_title">Select an email app to send crash logs</string>
-    <string name="not_found">Not found!</string>
+    <string name="not_found">नहीं मिला!</string>
     <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
     <string name="skip_update">Skip this update</string>
     <string name="on_latest_version">You\'re already on the latest version</string>
@@ -486,8 +486,8 @@
     <string name="other_tabs">Other tabs</string>
     <string name="tab_order_start_next_launch">The tab order will be reflected on next launch</string>
     <string name="dm_remove_warning">If saved, all DM related features will be disabled on next launch</string>
-    <string name="copy_caption">Copy caption</string>
-    <string name="copy_reply">Copy reply</string>
+    <string name="copy_caption">कैप्शन कॉपी करें</string>
+    <string name="copy_reply">जवाब कॉपी करें</string>
     <string name="restore">Restore</string>
     <string name="backup">Backup</string>
     <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
