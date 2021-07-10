@@ -32,10 +32,10 @@
         <item>सिस्टम के अनुसार</item>
         <item>बैटरी स्तर के अनुसार</item>
         <item>डार्क</item>
-        <item>लाईट</item>
+        <item>हल्का</item>
     </string-array>
     <string-array name="story_sorts">
-        <item>सिस्टम निर्धारित (नए से पुराने)</item>
+        <item>इंस्टाग्राम निर्धारित (पहले अपठित)</item>
         <item>नए से पुराना</item>
         <item>पुराने से नया</item>
     </string-array>
@@ -43,7 +43,7 @@
         <item>कुछ नहीं</item>
         <item>\@</item>
         <item>पर</item>
-        <item>चालू</item>
+        <item>ऑन</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
@@ -57,7 +57,7 @@
     <!--    <item>@navigation/more_nav_graph</item>-->
     <!--</array>-->
     <string-array name="dm_auto_refresh_freq_units">
-        <item>सेकंद</item>
+        <item>सेकंड</item>
         <item>मिनट</item>
     </string-array>
 </resources>
