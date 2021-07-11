@@ -34,6 +34,6 @@ public class GroupViewHolder extends RecyclerView.ViewHolder implements View.OnC
     }
 
     public void toggle(final boolean expand) {
-        arrow.setImageResource(expand ? R.drawable.collapse : R.drawable.expand);
+        arrow.setImageResource(expand ? R.drawable.ic_keyboard_arrow_up_24 : R.drawable.ic_keyboard_arrow_down_24);
     }
 }

@@ -13,20 +13,20 @@
         app:showAsAction="always" />
 
     <item
+        android:id="@+id/action_notif"
+        android:icon="@drawable/ic_notif"
+        android:title="@string/action_notif"
+        android:titleCondensed="@string/action_notif"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+
+    <item
         android:id="@+id/action_about"
         android:icon="@android:drawable/ic_menu_info_details"
         android:title="@string/action_about"
         android:titleCondensed="@string/action_about"
         android:visible="false"
         app:showAsAction="ifRoom" />
-
-    <item
-        android:id="@+id/action_quickaccess"
-        android:icon="@android:drawable/ic_menu_compass"
-        android:title="@string/action_quickaccess"
-        android:titleCondensed="@string/action_quickaccess"
-        android:visible="false"
-        app:showAsAction="always" />
 
     <item
         android:id="@+id/action_settings"
@@ -47,7 +47,7 @@
     <item
         android:id="@+id/action_search"
         android:actionLayout="@layout/layout_searchview"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/ic_search_24"
         android:title="@string/action_search"
         android:titleCondensed="@string/action_search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"

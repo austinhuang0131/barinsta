@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/layout"
+        android:title="@string/layout"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/chaining"
+        android:title="@string/action_ayml"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/block"
+        android:title="@string/block"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/restrict"
+        android:title="@string/restrict"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/remove_follower"
+        android:title="@string/remove_follower"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/mute_stories"
+        android:title="@string/mute_stories"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/mute_posts"
+        android:title="@string/mute_posts"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/share_link"
+        android:title="@string/share_link"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/share_dm"
+        android:title="@string/share_via_dm"
+        android:visible="false"
+        app:showAsAction="never" />
+</menu>

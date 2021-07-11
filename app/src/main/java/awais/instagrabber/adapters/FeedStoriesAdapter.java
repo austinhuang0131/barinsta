@@ -1,57 +1,53 @@
 package awais.instagrabber.adapters;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 
-import com.bumptech.glide.Glide;
+import awais.instagrabber.adapters.viewholder.FeedStoryViewHolder;
+import awais.instagrabber.databinding.ItemHighlightBinding;
+import awais.instagrabber.repositories.responses.stories.Story;
 
-import awais.instagrabber.R;
-import awais.instagrabber.adapters.viewholder.HighlightViewHolder;
-import awais.instagrabber.models.FeedStoryModel;
-import awais.instagrabber.models.ProfileModel;
+public final class FeedStoriesAdapter extends ListAdapter<Story, FeedStoryViewHolder> {
+    private final OnFeedStoryClickListener listener;
 
-public final class FeedStoriesAdapter extends RecyclerView.Adapter<HighlightViewHolder> {
-    private final View.OnClickListener clickListener;
-    private LayoutInflater layoutInflater;
-    private FeedStoryModel[] feedStoryModels;
+    private static final DiffUtil.ItemCallback<Story> diffCallback = new DiffUtil.ItemCallback<Story>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId());
+        }
 
-    public FeedStoriesAdapter(final FeedStoryModel[] feedStoryModels, final View.OnClickListener clickListener) {
-        this.feedStoryModels = feedStoryModels;
-        this.clickListener = clickListener;
+        @Override
+        public boolean areContentsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId()) && oldItem.getSeen() == newItem.getSeen();
+        }
+    };
+
+    public FeedStoriesAdapter(final OnFeedStoryClickListener listener) {
+        super(diffCallback);
+        this.listener = listener;
     }
 
     @NonNull
     @Override
-    public HighlightViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
-        if (layoutInflater == null) layoutInflater = LayoutInflater.from(parent.getContext());
-        return new HighlightViewHolder(layoutInflater.inflate(R.layout.item_highlight, parent, false));
+    public FeedStoryViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
+        final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        final ItemHighlightBinding binding = ItemHighlightBinding.inflate(layoutInflater, parent, false);
+        return new FeedStoryViewHolder(binding);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull final HighlightViewHolder holder, final int position) {
-        final FeedStoryModel feedStoryModel = feedStoryModels[position];
-        if (feedStoryModel != null) {
-            holder.itemView.setTag(feedStoryModel);
-            holder.itemView.setOnClickListener(clickListener);
-
-            final ProfileModel profileModel = feedStoryModel.getProfileModel();
-
-            holder.title.setText(profileModel.getUsername());
-            Glide.with(layoutInflater.getContext()).load(profileModel.getSdProfilePic()).into(holder.icon);
-        }
+    public void onBindViewHolder(@NonNull final FeedStoryViewHolder holder, final int position) {
+        final Story model = getItem(position);
+        holder.bind(model, position, listener);
     }
 
-    public void setData(final FeedStoryModel[] feedStoryModels) {
-        this.feedStoryModels = feedStoryModels;
-        notifyDataSetChanged();
-    }
+    public interface OnFeedStoryClickListener {
+        void onFeedStoryClick(Story model, int position);
 
-    @Override
-    public int getItemCount() {
-        return feedStoryModels == null ? 0 : feedStoryModels.length;
+        void onFeedStoryLongClick(Story model, int position);
     }
 }

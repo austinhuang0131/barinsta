@@ -4,7 +4,6 @@
 
 
     <dimen name="profile_picture_size">70dp</dimen>
-    <dimen name="feed_profile_size">40dp</dimen>
     <dimen name="slider_item_size">65dp</dimen>
     <dimen name="highlight_size">48dp</dimen>
 

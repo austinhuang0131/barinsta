@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enable_sentry">Sentry 활성화</string>
+    <string name="sentry_summary">Sentry는 Sentry.io에 오류를 비동기적으로 보내는 오류 처리기입니다</string>
+    <string name="sentry_start_next_launch">Sentry는 다음 출시에 시작됩니다</string>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="enable_sentry">Включить Sentry</string>
+    <string name="sentry_summary">Sentry - это обработчик событий, который асинхронно отправляет сообщения об ошибках/поломках на Sentry.io</string>
+    <string name="sentry_start_next_launch">Sentry включится при следующем запуске приложения</string>
+</resources>

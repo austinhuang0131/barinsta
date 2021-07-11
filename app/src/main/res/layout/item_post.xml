@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:foreground="?android:selectableItemBackground"
-    tools:viewBindingIgnore="true">
+    android:foreground="?android:selectableItemBackground">
 
-    <awais.instagrabber.customviews.FixedImageView
+    <com.facebook.drawee.view.SimpleDraweeView
         android:id="@+id/postImage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:scaleType="fitCenter" />
+        app:actualImageScaleType="centerCrop"
+        app:viewAspectRatio="1"
+        tools:background="@mipmap/ic_launcher" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/isDownloaded"
@@ -21,7 +21,9 @@
         android:layout_gravity="start|top"
         android:layout_margin="8dp"
         android:visibility="gone"
-        app:srcCompat="@drawable/downloaded" />
+        app:srcCompat="@drawable/ic_cloud_download_24"
+        app:tint="@color/green_400"
+        tools:visibility="gone" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/typeIcon"
@@ -29,27 +31,31 @@
         android:layout_height="24dp"
         android:layout_gravity="end|top"
         android:layout_margin="8dp"
-        app:srcCompat="@drawable/video" />
+        app:srcCompat="@drawable/ic_video_24"
+        tools:visibility="visible" />
 
-    <ProgressBar
-        android:id="@+id/progressView"
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        android:layout_gravity="center"
-        android:visibility="gone" />
+    <!--<ProgressBar-->
+    <!--    android:id="@+id/progressView"-->
+    <!--    android:layout_width="45dp"-->
+    <!--    android:layout_height="45dp"-->
+    <!--    android:layout_gravity="center"-->
+    <!--    android:visibility="gone" />-->
 
     <FrameLayout
         android:id="@+id/selectedView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#8A000000"
-        android:visibility="gone">
+        android:visibility="gone"
+        tools:visibility="visible">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:layout_width="28dp"
             android:layout_height="28dp"
             android:layout_gravity="end|top"
             android:layout_margin="8dp"
-            app:srcCompat="@drawable/check" />
+            app:srcCompat="@drawable/ic_check_24"
+            app:tint="@color/blue_300"
+            tools:visibility="visible" />
     </FrameLayout>
 </FrameLayout>

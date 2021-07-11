@@ -28,7 +28,7 @@ public class GridAutofitLayoutManager extends GridLayoutManager {
             final int totalSpace = getOrientation() == VERTICAL ? width - getPaddingRight() - getPaddingLeft()
                     : height - getPaddingTop() - getPaddingBottom();
 
-            setSpanCount(Math.max(1, totalSpace / mColumnWidth));
+            setSpanCount(Math.max(1, Math.min(totalSpace / mColumnWidth, 3)));
 
             mColumnWidthChanged = false;
         }

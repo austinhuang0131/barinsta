@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="reply" type="id" />
+    <item name="unsend" type="id" />
+    <item name="forward" type="id" />
+    <item name="detail" type="id" />
+    <item name="copy" type="id" />
+    <item name="share_dm" type="id" />
+    <item name="download_current" type="id" />
+    <item name="download_all" type="id" />
+    <!-- story stickers -->
+    <item name="mentions" type="id" />
+    <item name="spotify" type="id" />
+    <item name="poll" type="id" />
+    <item name="question" type="id" />
+    <item name="quiz" type="id" />
+    <item name="slider" type="id" />
+    <item name="viewStoryPost" type="id" />
+    <item name="swipeUp" type="id" />
+</resources>

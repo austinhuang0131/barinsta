@@ -6,14 +6,4 @@
     android:layout_height="?actionBarSize"
     android:background="@null"
     app:title="@string/app_name">
-
-    <ProgressBar
-        android:id="@+id/progress_circular"
-        android:layout_width="?actionBarSize"
-        android:layout_height="?actionBarSize"
-        android:indeterminate="true"
-        android:indeterminateBehavior="cycle"
-        android:indeterminateOnly="true"
-        android:padding="8dp"
-        android:visibility="gone" />
 </androidx.appcompat.widget.Toolbar>

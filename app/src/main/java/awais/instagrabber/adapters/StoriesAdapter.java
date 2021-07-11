@@ -1,84 +1,90 @@
 package awais.instagrabber.adapters;
 
-import android.content.Context;
-import android.content.res.Resources;
+import java.util.List;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.bumptech.glide.request.RequestOptions;
+import awais.instagrabber.databinding.ItemStoryBinding;
+import awais.instagrabber.repositories.responses.stories.StoryMedia;
+import awais.instagrabber.utils.ResponseBodyUtils;
 
-import awais.instagrabber.R;
-import awais.instagrabber.models.StoryModel;
+public final class StoriesAdapter extends ListAdapter<StoryMedia, StoriesAdapter.StoryViewHolder> {
+    private final OnItemClickListener onItemClickListener;
 
-public final class StoriesAdapter extends RecyclerView.Adapter<StoriesAdapter.StoryViewHolder> {
-    private final View.OnClickListener clickListener;
-    private LayoutInflater layoutInflater;
-    private StoryModel[] storyModels;
-    private Resources resources;
-    private int width, height;
+    private static final DiffUtil.ItemCallback<StoryMedia> diffCallback = new DiffUtil.ItemCallback<StoryMedia>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull final StoryMedia oldItem, @NonNull final StoryMedia newItem) {
+            return oldItem.getId().equals(newItem.getId());
+        }
 
-    public StoriesAdapter(final StoryModel[] storyModels, final View.OnClickListener clickListener) {
-        this.storyModels = storyModels;
-        this.clickListener = clickListener;
+        @Override
+        public boolean areContentsTheSame(@NonNull final StoryMedia oldItem, @NonNull final StoryMedia newItem) {
+            return oldItem.getId().equals(newItem.getId());
+        }
+    };
+
+    public StoriesAdapter(final OnItemClickListener onItemClickListener) {
+        super(diffCallback);
+        this.onItemClickListener = onItemClickListener;
     }
 
     @NonNull
     @Override
     public StoryViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
-        final Context context = parent.getContext();
-        if (layoutInflater == null) layoutInflater = LayoutInflater.from(context);
-        if (resources == null) resources = context.getResources();
-
-        height = Math.round(resources.getDimension(R.dimen.story_item_height));
-        width = Math.round(resources.getDimension(R.dimen.story_item_width));
-
-        return new StoryViewHolder(layoutInflater.inflate(R.layout.item_story, parent, false));
+        final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        final ItemStoryBinding binding = ItemStoryBinding.inflate(layoutInflater, parent, false);
+        return new StoryViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final StoryViewHolder holder, final int position) {
-        final StoryModel storyModel = storyModels[position];
-        if (storyModel != null) {
-            storyModel.setPosition(position);
-
-            holder.itemView.setTag(storyModel);
-            holder.itemView.setOnClickListener(clickListener);
-
-            holder.selectedView.setVisibility(storyModel.isCurrentSlide() ? View.VISIBLE : View.GONE);
-
-            Glide.with(holder.itemView).load(storyModel.getStoryUrl())
-                    .apply(new RequestOptions().override(width, height))
-                    .into(holder.icon);
-        }
-    }
-
-    public void setData(final StoryModel[] storyModels) {
-        this.storyModels = storyModels;
-        notifyDataSetChanged();
-    }
-
-    public StoryModel getItemAt(final int position) {
-        return storyModels == null ? null : storyModels[position];
-    }
-
-    @Override
-    public int getItemCount() {
-        return storyModels == null ? 0 : storyModels.length;
+        final StoryMedia storyMedia = getItem(position);
+        holder.bind(storyMedia, position, onItemClickListener);
     }
 
     public final static class StoryViewHolder extends RecyclerView.ViewHolder {
-        public final ImageView icon, selectedView;
+        private final ItemStoryBinding binding;
 
-        public StoryViewHolder(@NonNull final View itemView) {
-            super(itemView);
-            selectedView = itemView.findViewById(R.id.selectedView);
-            icon = itemView.findViewById(R.id.icon);
+        public StoryViewHolder(final ItemStoryBinding binding) {
+            super(binding.getRoot());
+            this.binding = binding;
         }
+
+        public void bind(final StoryMedia model,
+                         final int position,
+                         final OnItemClickListener clickListener) {
+            if (model == null) return;
+            model.setPosition(position);
+
+            itemView.setTag(model);
+            itemView.setOnClickListener(v -> {
+                if (clickListener == null) return;
+                clickListener.onItemClick(model, position);
+            });
+
+            binding.selectedView.setVisibility(model.isCurrentSlide() ? View.VISIBLE : View.GONE);
+            binding.icon.setImageURI(ResponseBodyUtils.getThumbUrl(model));
+        }
+    }
+
+    public void paginate(final int newIndex) {
+        final List<StoryMedia> list = getCurrentList();
+        for (int i = 0; i < list.size(); i++) {
+            final StoryMedia item = list.get(i);
+            if (!item.isCurrentSlide() && i != newIndex) continue;
+            item.setCurrentSlide(i == newIndex);
+            notifyItemChanged(i, item);
+        }
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(StoryMedia storyModel, int position);
     }
 }

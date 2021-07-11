@@ -1,39 +1,33 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: App crashing? You seeing a confusing error message? Report them here!
 title: "[BUG]"
 labels: bug
 assignees: ''
-
 ---
 
+<!-- Frequent reporters can ignore this template as long as it's clear and concise. -->
+
+- [ ] My app is *at least* at the current release version. I understand that any versions before that is not supported.
+- [ ] I have read [the FAQ](https://barinsta.austinhuang.me/en/latest/faq.html).
+
 <!--
-First, describe the bug here. Don't stress too much, but do include the key points.
+Describe the bug here. Don't stress too much, but do include the key points.
 -->
 
 ## Steps
 
 <!--
-DETAILED Steps to reproduce the behaviour. If you do not describe this part clearly, I may ignore the issue.
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+1. ...
+2. ...
+3. See error...
 -->
-
-### Expected Behaviour
-
-## Screenshots
-
-<!-- if applicable -->
 
 ## Environment
 
  - Device: 
  - Android version:
- - App version:
-<!-- Long press Instagrabber => App info => Advanced => Version number is at the bottom -->
 
 ## Additional info
 
-<!-- If you have log (and it's working), upload it here. -->
+<!-- If you have a crash dump, paste it here. -->

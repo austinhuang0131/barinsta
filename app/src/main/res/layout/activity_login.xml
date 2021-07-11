@@ -22,7 +22,7 @@
             android:id="@+id/cookies"
             style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/get_cookies" />
 
@@ -30,15 +30,8 @@
             android:id="@+id/refresh"
             style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
             android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="@string/refresh" />
-
-        <androidx.appcompat.widget.AppCompatCheckBox
-            android:id="@+id/desktop_mode"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:text="@string/desktop_2fa" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 </LinearLayout>

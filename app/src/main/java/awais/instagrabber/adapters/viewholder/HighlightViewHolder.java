@@ -1,21 +1,31 @@
 package awais.instagrabber.adapters.viewholder;
 
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import awais.instagrabber.R;
+import awais.instagrabber.databinding.ItemHighlightBinding;
+import awais.instagrabber.repositories.responses.stories.Story;
 
 public final class HighlightViewHolder extends RecyclerView.ViewHolder {
-    public final ImageView icon;
-    public final TextView title;
 
-    public HighlightViewHolder(@NonNull final View itemView) {
-        super(itemView);
-        icon = itemView.findViewById(R.id.icon);
-        title = itemView.findViewById(R.id.title);
+    private final ItemHighlightBinding binding;
+
+    public HighlightViewHolder(final ItemHighlightBinding binding) {
+        super(binding.getRoot());
+        this.binding = binding;
+    }
+
+    public void bind(final Story model) {
+        if (model == null) return;
+        binding.title.setText(model.getTitle());
+        binding.icon.setImageURI(model.getCoverMedia().getCroppedImageVersion().getUrl());
+        // binding.getRoot().setOnClickListener(v -> {
+        //     if (listener == null) return;
+        //     listener.onFeedStoryClick(model, position);
+        // });
+        // final ProfileModel profileModel = model.getProfileModel();
+        // binding.title.setText(profileModel.getUsername());
+        // binding.title.setAlpha(model.getFullyRead() ? 0.5F : 1.0F);
+        // binding.icon.setImageURI(profileModel.getSdProfilePic());
+        // binding.icon.setAlpha(model.getFullyRead() ? 0.5F : 1.0F);
     }
 }

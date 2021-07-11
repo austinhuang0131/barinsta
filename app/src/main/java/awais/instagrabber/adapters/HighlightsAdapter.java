@@ -1,53 +1,55 @@
 package awais.instagrabber.adapters;
 
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.DiffUtil;
+import androidx.recyclerview.widget.ListAdapter;
 
-import com.bumptech.glide.Glide;
-
-import awais.instagrabber.R;
 import awais.instagrabber.adapters.viewholder.HighlightViewHolder;
-import awais.instagrabber.models.HighlightModel;
+import awais.instagrabber.databinding.ItemHighlightBinding;
+import awais.instagrabber.repositories.responses.stories.Story;
 
-public final class HighlightsAdapter extends RecyclerView.Adapter<HighlightViewHolder> {
-    private final View.OnClickListener clickListener;
-    private LayoutInflater layoutInflater;
-    private HighlightModel[] highlightModels;
+public final class HighlightsAdapter extends ListAdapter<Story, HighlightViewHolder> {
 
-    public HighlightsAdapter(final HighlightModel[] highlightModels, final View.OnClickListener clickListener) {
-        this.highlightModels = highlightModels;
+    private final OnHighlightClickListener clickListener;
+
+    private static final DiffUtil.ItemCallback<Story> diffCallback = new DiffUtil.ItemCallback<Story>() {
+        @Override
+        public boolean areItemsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId());
+        }
+
+        @Override
+        public boolean areContentsTheSame(@NonNull final Story oldItem, @NonNull final Story newItem) {
+            return oldItem.getId().equals(newItem.getId());
+        }
+    };
+
+    public HighlightsAdapter(final OnHighlightClickListener clickListener) {
+        super(diffCallback);
         this.clickListener = clickListener;
     }
 
     @NonNull
     @Override
     public HighlightViewHolder onCreateViewHolder(@NonNull final ViewGroup parent, final int viewType) {
-        if (layoutInflater == null) layoutInflater = LayoutInflater.from(parent.getContext());
-        return new HighlightViewHolder(layoutInflater.inflate(R.layout.item_highlight, parent, false));
+        final LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
+        final ItemHighlightBinding binding = ItemHighlightBinding.inflate(layoutInflater, parent, false);
+        return new HighlightViewHolder(binding);
     }
 
     @Override
     public void onBindViewHolder(@NonNull final HighlightViewHolder holder, final int position) {
-        final HighlightModel highlightModel = highlightModels[position];
-        if (highlightModel != null) {
-            holder.itemView.setTag(highlightModel);
-            holder.itemView.setOnClickListener(clickListener);
-            holder.title.setText(highlightModel.getTitle());
-            Glide.with(holder.itemView).load(highlightModel.getThumbnailUrl()).into(holder.icon);
+        final Story highlightModel = getItem(position);
+        if (clickListener != null) {
+            holder.itemView.setOnClickListener(v -> clickListener.onHighlightClick(highlightModel, position));
         }
+        holder.bind(highlightModel);
     }
 
-    public void setData(final HighlightModel[] highlightModels) {
-        this.highlightModels = highlightModels;
-        notifyDataSetChanged();
-    }
-
-    @Override
-    public int getItemCount() {
-        return highlightModels == null ? 0 : highlightModels.length;
+    public interface OnHighlightClickListener {
+        void onHighlightClick(final Story model, final int position);
     }
 }

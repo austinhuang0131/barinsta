@@ -2,18 +2,42 @@
 <resources>
     <string-array name="languages">
         <item>Bawaan Sistem</item>
-        <item>Inggris</item>
-        <item>Prancis [Terima kasih @kernoeb (Telegram)]</item>
-        <item>Spanyol [Terima kasih @sguinetti (GitLab)]</item>
-        <item>Tiongkok Sederhana</item>
-        <item>Bahasa Indonesia [Terima kasih @Galang23 (GitLab)]</item>
-        <item>Italia [Terima kasih @RAR_Ramar (Telegram)]</item>
+        <item translatable="false">English</item>
+        <item translatable="false">Français</item>
+        <item translatable="false">Español</item>
+        <item translatable="false">简体中文</item>
+        <item translatable="false">Bahasa Indonesia</item>
+        <item translatable="false">Italiano</item>
+        <item translatable="false">Deutsch</item>
+        <item translatable="false">Polski</item>
+        <item translatable="false">Türkçe</item>
+        <item translatable="false">Português (Brasil)</item>
+        <item translatable="false">پارسی</item>
+        <item translatable="false">Македонски</item>
+        <item translatable="false">Tiếng Việt</item>
+        <item translatable="false">繁體中文</item>
+        <item translatable="false">Català</item>
+        <item translatable="false">Русский</item>
+        <item translatable="false">हिन्दी</item>
+        <item translatable="false">Nederlands</item>
+        <item translatable="false">Slovenčina</item>
+        <item translatable="false">日本語</item>
+        <item translatable="false">Ελληνικά</item>
+        <item translatable="false">Euskara</item>
+        <item translatable="false">Svenska</item>
+        <item translatable="false">한국어</item>
+        <item translatable="false">العربية</item>
     </string-array>
     <string-array name="theme_presets">
         <item>Otomatis / Ikuti Sistem</item>
         <item>Otomatis / Ikuti Baterai</item>
         <item>Gelap</item>
         <item>Terang</item>
+    </string-array>
+    <string-array name="story_sorts">
+        <item>Bawaan Instagram (Belum terbaca lalu terbaca)</item>
+        <item>Terbaru ke terlama</item>
+        <item>Terlama ke terbaru</item>
     </string-array>
     <string-array name="separator_presets">
         <item>Tidak ada</item>
@@ -23,53 +47,8 @@
         <item>tanggal</item>
         <item>-</item>
     </string-array>
-    <string-array name="profile_fetch_modes">
-        <item>Instadp</item>
-        <item>Insta-Stalker</item>
-        <item>Instafullsize</item>
-    </string-array>
-    <string-array name="date_presets">
-        <item>dd-MM-yyyy</item>
-        <item>dd/MM/yyyy</item>
-        <item>dd.MM.yyyy</item>
-        <item>dd-MM-yy</item>
-        <item>dd/MM/yy</item>
-        <item>dd.MM.yy</item>
-        <item>dd-MMM-yyyy</item>
-        <item>dd/MMM/yyyy</item>
-        <item>dd.MMM.yyyy</item>
-        <item>dd-MMM-yy</item>
-        <item>dd/MMM/yy</item>
-        <item>dd.MMM.yy</item>
-        <item>MM-dd-yyyy</item>
-        <item>MM/dd/yyyy</item>
-        <item>MM.dd.yyyy</item>
-        <item>yyyy-MM-dd</item>
-        <item>yyyy/MM/dd</item>
-        <item>yyyy.MM.dd</item>
-        <item>MM-dd-yy</item>
-        <item>MM/dd/yy</item>
-        <item>MM.dd.yy</item>
-        <item>yy-MM-dd</item>
-        <item>yy/MM/dd</item>
-        <item>yy.MM.dd</item>
-        <item>MMM-dd-yyyy</item>
-        <item>MMM/dd/yyyy</item>
-        <item>MMM.dd.yyyy</item>
-        <item>yyyy-MMM-dd</item>
-        <item>yyyy/MMM/dd</item>
-        <item>yyyy.MMM.dd</item>
-        <item>MMM-dd-yy</item>
-        <item>MMM/dd/yy</item>
-        <item>MMM.dd.yy</item>
-        <item>yy-MMM-dd</item>
-        <item>yy/MMM/dd</item>
-        <item>yy.MMM.dd</item>
-    </string-array>
-    <string-array name="time_presets">
-        <item>hh:mm:ss a</item>
-        <item>h:mm:ss a</item>
-        <item>HH:mm:ss</item>
-        <item>H:mm:ss</item>
+    <string-array name="dm_auto_refresh_freq_units">
+        <item>dtk</item>
+        <item>mnt</item>
     </string-array>
 </resources>

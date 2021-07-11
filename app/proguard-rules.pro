@@ -19,3 +19,11 @@
 # If you keep the line number information, uncomment this to
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
+
+#noinspection ShrinkerUnresolvedReference
+#-keep class !com.google.android.exoplayer2.**, ** { *; }
+
+-dontobfuscate
+
+# prevent shrinking retrofit response entities
+-keep class awais.instagrabber.repositories.responses.** { *; }

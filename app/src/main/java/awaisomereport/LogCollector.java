@@ -1,4 +1,4 @@
-package awaisomereport;
+/*package awaisomereport;
 
 import android.app.Application;
 import android.os.Build;
@@ -25,7 +25,7 @@ public final class LogCollector {
 
     public LogCollector(@NonNull final Application app) {
         logDir = new File(Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ? app.getDataDir() : app.getFilesDir(),
-                "ur_mom_gay_logs");
+                "crashlogs");
 
         if (logDir.exists()) deleteRecursive(logDir);
 
@@ -104,10 +104,15 @@ public final class LogCollector {
         ////////////////////////
         ASYNC_DOWNLOADER("async-download.txt"),
         ASYNC_MAIN_POSTS_FETCHER("async-main-posts-fetcher.txt"),
+        ASYNC_DISCOVER_TOPICS_FETCHER("async-discover-topics-fetcher.txt"),
         ASYNC_POST_FETCHER("async-single-post-fetcher.txt"),
         ASYNC_FEED_FETCHER("async-feed-fetcher.txt"),
+        ASYNC_HASHTAG_FETCHER("async-hashtag-fetcher.txt"),
+        ASYNC_LOCATION_FETCHER("async-location-fetcher.txt"),
+        ASYNC_NOTIFICATION_FETCHER("async-notification-fetcher.txt"),
         ASYNC_PROFILE_FETCHER("async-profile-fetcher.txt"),
         ASYNC_PROFILE_PICTURE_FETCHER("async-pfp-fetcher.txt"),
+        ASYNC_SAVED_FETCHER("async-saved-fetcher.txt"),
         ASYNC_STORY_STATUS_FETCHER("async-story-status-fetcher.txt"),
         ASYNC_DISCOVER_FETCHER("async-discover-fetcher.txt"),
         ASYNC_COMMENTS_FETCHER("async-comments-fetcher.txt"),
@@ -135,4 +140,4 @@ public final class LogCollector {
         //noinspection ResultOfMethodCallIgnored
         fileOrDirectory.delete();
     }
-}
+}*/

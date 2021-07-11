@@ -1,1 +1,0 @@
-A simple yet advanced viewer/downloader app for Instagram (+login support).

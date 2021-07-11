@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/story_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/buttons_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.exoplayer2.ui.PlayerView
+            android:id="@+id/playerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            app:auto_show="true"
+            app:controller_layout_id="@layout/layout_controls"
+            app:repeat_toggle_modes="none" />
+
+        <awais.instagrabber.customviews.drawee.ZoomableDraweeView
+            android:id="@+id/imageViewer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" />
+
+        <ProgressBar
+            android:id="@+id/progressView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/storiesList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toTopOf="@id/buttons_barrier"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:id="@+id/buttons_barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierAllowsGoneWidgets="true"
+        app:barrierDirection="bottom"
+        app:layout_constraintTop_toBottomOf="@id/story_container"
+        app:layout_constraintBottom_toTopOf="@id/btnBackward"
+        app:constraint_referenced_ids="story_container" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBackward"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="visible"
+        app:icon="@drawable/exo_ic_skip_previous"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/ic_read_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnShare"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttons_barrier"
+        app:rippleColor="@color/grey_300" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnShare"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="visible"
+        app:icon="?attr/actionModeShareDrawable"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/ic_read_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/stickers"
+        app:layout_constraintStart_toEndOf="@id/btnBackward"
+        app:layout_constraintTop_toBottomOf="@id/buttons_barrier"
+        app:rippleColor="@color/grey_300" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/stickers"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="visible"
+        app:icon="@drawable/ic_story_sticker"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/ic_read_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/list_toggle"
+        app:layout_constraintStart_toEndOf="@id/btnShare"
+        app:layout_constraintTop_toBottomOf="@id/buttons_barrier"
+        app:rippleColor="@color/grey_300" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/list_toggle"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="visible"
+        app:icon="@drawable/ic_story_viewer_list"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/ic_read_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnDownload"
+        app:layout_constraintStart_toEndOf="@id/stickers"
+        app:layout_constraintTop_toBottomOf="@id/buttons_barrier"
+        app:rippleColor="@color/grey_300" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDownload"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="visible"
+        app:icon="@drawable/ic_download"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/ic_read_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnReply"
+        app:layout_constraintStart_toEndOf="@id/list_toggle"
+        app:layout_constraintTop_toBottomOf="@id/buttons_barrier"
+        app:rippleColor="@color/grey_300" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReply"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="visible"
+        app:icon="@drawable/ic_round_send_24"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/ic_read_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnForward"
+        app:layout_constraintStart_toEndOf="@id/btnDownload"
+        app:layout_constraintTop_toBottomOf="@id/buttons_barrier"
+        app:rippleColor="@color/grey_300" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnForward"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:enabled="false"
+        android:visibility="visible"
+        app:icon="@drawable/exo_ic_skip_next"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="24dp"
+        app:iconTint="@color/ic_read_button_tint"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnReply"
+        app:layout_constraintTop_toBottomOf="@id/buttons_barrier"
+        app:rippleColor="@color/grey_300" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,9 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.CompoundButton;
 
@@ -13,44 +16,53 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.GregorianCalendar;
+import java.time.format.DateTimeFormatter;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 import awais.instagrabber.databinding.DialogTimeSettingsBinding;
-import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.LocaleUtils;
-import awais.instagrabber.utils.Utils;
-
-import static awais.instagrabber.utils.Utils.settingsHelper;
+import awais.instagrabber.utils.TextUtils;
 
 public final class TimeSettingsDialog extends DialogFragment implements AdapterView.OnItemSelectedListener, CompoundButton.OnCheckedChangeListener,
         View.OnClickListener, TextWatcher {
     private DialogTimeSettingsBinding timeSettingsBinding;
-    private final Date magicDate;
-    private SimpleDateFormat currentFormat;
+    private final LocalDateTime magicDate;
+    private DateTimeFormatter currentFormat;
     private String selectedFormat;
+    private final boolean customDateTimeFormatEnabled;
+    private final String customDateTimeFormat;
+    private final String dateTimeSelection;
+    private final boolean swapDateTimeEnabled;
+    private final OnConfirmListener onConfirmListener;
 
-    public TimeSettingsDialog() {
-        super();
-        final Calendar instance = GregorianCalendar.getInstance();
-        instance.set(2020, 5, 22, 8, 17, 13);
-        magicDate = instance.getTime();
+    public TimeSettingsDialog(final boolean customDateTimeFormatEnabled,
+                              final String customDateTimeFormat,
+                              final String dateTimeSelection,
+                              final boolean swapDateTimeEnabled,
+                              final OnConfirmListener onConfirmListener) {
+        this.customDateTimeFormatEnabled = customDateTimeFormatEnabled;
+        this.customDateTimeFormat = customDateTimeFormat;
+        this.dateTimeSelection = dateTimeSelection;
+        this.swapDateTimeEnabled = swapDateTimeEnabled;
+        this.onConfirmListener = onConfirmListener;
+        magicDate = LocalDateTime.ofInstant(
+                Instant.now(),
+                ZoneId.systemDefault()
+        );
     }
 
-    @NonNull
     @Override
-    public Dialog onCreateDialog(@Nullable final Bundle savedInstanceState) {
-        final Dialog dialog = super.onCreateDialog(savedInstanceState);
-        timeSettingsBinding = DialogTimeSettingsBinding.inflate(LayoutInflater.from(getContext()));
+    public View onCreateView(@NonNull final LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
+        timeSettingsBinding = DialogTimeSettingsBinding.inflate(inflater, container, false);
 
         timeSettingsBinding.cbCustomFormat.setOnCheckedChangeListener(this);
+        timeSettingsBinding.cbCustomFormat.setChecked(customDateTimeFormatEnabled);
+        timeSettingsBinding.cbSwapTimeDate.setChecked(swapDateTimeEnabled);
+        timeSettingsBinding.etCustomFormat.setText(customDateTimeFormat);
 
-        timeSettingsBinding.cbCustomFormat.setChecked(settingsHelper.getBoolean(Constants.CUSTOM_DATE_TIME_FORMAT_ENABLED));
-        timeSettingsBinding.etCustomFormat.setText(settingsHelper.getString(Constants.CUSTOM_DATE_TIME_FORMAT));
-
-        final String[] dateTimeFormat = settingsHelper.getString(Constants.DATE_TIME_SELECTION).split(";"); // output = time;separator;date
+        final String[] dateTimeFormat = dateTimeSelection.split(";"); // output = time;separator;date
         timeSettingsBinding.spTimeFormat.setSelection(Integer.parseInt(dateTimeFormat[0]));
         timeSettingsBinding.spSeparator.setSelection(Integer.parseInt(dateTimeFormat[1]));
         timeSettingsBinding.spDateFormat.setSelection(Integer.parseInt(dateTimeFormat[2]));
@@ -67,41 +79,31 @@ public final class TimeSettingsDialog extends DialogFragment implements AdapterV
         timeSettingsBinding.btnConfirm.setOnClickListener(this);
         timeSettingsBinding.btnInfo.setOnClickListener(this);
 
-        dialog.setContentView(timeSettingsBinding.getRoot());
-        return dialog;
+        return timeSettingsBinding.getRoot();
     }
 
     private void refreshTimeFormat() {
-        if (timeSettingsBinding.cbCustomFormat.isChecked()) {
-            timeSettingsBinding.btnConfirm.setEnabled(false);
-            checkCustomTimeFormat();
-        } else {
+        if (timeSettingsBinding.cbCustomFormat.isChecked())
+            selectedFormat = timeSettingsBinding.etCustomFormat.getText().toString();
+        else {
             final String sepStr = String.valueOf(timeSettingsBinding.spSeparator.getSelectedItem());
             final String timeStr = String.valueOf(timeSettingsBinding.spTimeFormat.getSelectedItem());
             final String dateStr = String.valueOf(timeSettingsBinding.spDateFormat.getSelectedItem());
 
-            final boolean isSwapTime = !timeSettingsBinding.cbSwapTimeDate.isChecked();
+            final boolean isSwapTime = timeSettingsBinding.cbSwapTimeDate.isChecked();
+            final boolean isBlankSeparator = timeSettingsBinding.spSeparator.getSelectedItemPosition() <= 0;
 
-            selectedFormat = (isSwapTime ? timeStr : dateStr)
-                    + (Utils.isEmpty(sepStr) || timeSettingsBinding.spSeparator.getSelectedItemPosition() == 0 ? " " : " '" + sepStr + "' ")
-                    + (isSwapTime ? dateStr : timeStr);
-
-            timeSettingsBinding.btnConfirm.setEnabled(true);
-            timeSettingsBinding.timePreview.setText((currentFormat = new SimpleDateFormat(selectedFormat, LocaleUtils.getCurrentLocale())).format(magicDate));
+            selectedFormat = (isSwapTime ? dateStr : timeStr)
+                    + (isBlankSeparator ? " " : " '" + sepStr + "' ")
+                    + (isSwapTime ? timeStr : dateStr);
         }
-    }
 
-    private void checkCustomTimeFormat() {
+        timeSettingsBinding.btnConfirm.setEnabled(true);
         try {
-            //noinspection ConstantConditions
-            final String string = timeSettingsBinding.etCustomFormat.getText().toString();
-            if (Utils.isEmpty(string)) throw new NullPointerException();
-
-            final String format = (currentFormat = new SimpleDateFormat(string, LocaleUtils.getCurrentLocale())).format(magicDate);
-            timeSettingsBinding.timePreview.setText(format);
-
-            timeSettingsBinding.btnConfirm.setEnabled(true);
-        } catch (final Exception e) {
+            currentFormat = DateTimeFormatter.ofPattern(selectedFormat, LocaleUtils.getCurrentLocale());
+            timeSettingsBinding.timePreview.setText(magicDate.format(currentFormat));
+        }
+        catch (Exception e) {
             timeSettingsBinding.btnConfirm.setEnabled(false);
             timeSettingsBinding.timePreview.setText(null);
         }
@@ -115,6 +117,8 @@ public final class TimeSettingsDialog extends DialogFragment implements AdapterV
     @Override
     public void onCheckedChanged(final CompoundButton buttonView, final boolean isChecked) {
         if (buttonView == timeSettingsBinding.cbCustomFormat) {
+            final View parent = (View) timeSettingsBinding.etCustomFormat.getParent();
+            parent.setVisibility(isChecked ? View.VISIBLE : View.GONE);
             timeSettingsBinding.etCustomFormat.setEnabled(isChecked);
             timeSettingsBinding.btnInfo.setEnabled(isChecked);
 
@@ -128,38 +132,36 @@ public final class TimeSettingsDialog extends DialogFragment implements AdapterV
 
     @Override
     public void onTextChanged(final CharSequence s, final int start, final int before, final int count) {
-        checkCustomTimeFormat();
+        refreshTimeFormat();
     }
 
     @Override
     public void onClick(final View v) {
         if (v == timeSettingsBinding.btnConfirm) {
-            final String formatSelection;
-
-            final boolean isCustomFormat = timeSettingsBinding.cbCustomFormat.isChecked();
-
-            if (isCustomFormat) {
-                //noinspection ConstantConditions
-                formatSelection = timeSettingsBinding.etCustomFormat.getText().toString();
-                settingsHelper.putString(Constants.CUSTOM_DATE_TIME_FORMAT, formatSelection);
-            } else {
-                formatSelection = timeSettingsBinding.spTimeFormat.getSelectedItemPosition() + ";"
-                        + timeSettingsBinding.spSeparator.getSelectedItemPosition() + ';'
-                        + timeSettingsBinding.spDateFormat.getSelectedItemPosition(); // time;separator;date
-
-                settingsHelper.putString(Constants.DATE_TIME_FORMAT, selectedFormat);
-                settingsHelper.putString(Constants.DATE_TIME_SELECTION, formatSelection);
+            if (onConfirmListener != null) {
+                onConfirmListener.onConfirm(
+                        timeSettingsBinding.cbCustomFormat.isChecked(),
+                        timeSettingsBinding.spTimeFormat.getSelectedItemPosition(),
+                        timeSettingsBinding.spSeparator.getSelectedItemPosition(),
+                        timeSettingsBinding.spDateFormat.getSelectedItemPosition(),
+                        selectedFormat,
+                        timeSettingsBinding.cbSwapTimeDate.isChecked());
             }
-
-            settingsHelper.putBoolean(Constants.CUSTOM_DATE_TIME_FORMAT_ENABLED, isCustomFormat);
-
-            Utils.datetimeParser = (SimpleDateFormat) currentFormat.clone();
             dismiss();
         } else if (v == timeSettingsBinding.btnInfo) {
             timeSettingsBinding.customPanel.setVisibility(timeSettingsBinding.customPanel
                     .getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
 
         }
+    }
+
+    public interface OnConfirmListener {
+        void onConfirm(boolean isCustomFormat,
+                       int spTimeFormatSelectedItemPosition,
+                       int spSeparatorSelectedItemPosition,
+                       int spDateFormatSelectedItemPosition,
+                       final String selectedFormat,
+                       final boolean swapDateTime);
     }
 
     @Override
@@ -170,4 +172,17 @@ public final class TimeSettingsDialog extends DialogFragment implements AdapterV
 
     @Override
     public void afterTextChanged(final Editable s) { }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        final Dialog dialog = getDialog();
+        if (dialog == null) return;
+        final Window window = dialog.getWindow();
+        if (window == null) return;
+        final WindowManager.LayoutParams params = window.getAttributes();
+        params.width = ViewGroup.LayoutParams.MATCH_PARENT;
+        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
+        window.setAttributes(params);
+    }
 }

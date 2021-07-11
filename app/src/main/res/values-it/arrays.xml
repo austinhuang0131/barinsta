@@ -1,75 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="languages">
-        <item>Predifinito da sistema</item>
-        <item>Inglese</item>
-        <item>Francese [Grazie a @kernoeb (Telegram)]</item>
-        <item>Spagnolo [Grazie a @sguinetti (GitLab)]</item>
-        <item>Cinese Semplificato</item>
-        <item>Indonesiano [Grazie a @Galang23 (GitLab)]</item>
-        <item>Italiano [Grazie a @RAR_Ramar (Telegram)]</item>
+        <item>Predefinito di Sistema</item>
+        <item translatable="false">English</item>
+        <item translatable="false">Français</item>
+        <item translatable="false">Español</item>
+        <item translatable="false">简体中文</item>
+        <item translatable="false">Bahasa Indonesia</item>
+        <item translatable="false">Italiano</item>
+        <item translatable="false">Deutsch</item>
+        <item translatable="false">Polski</item>
+        <item translatable="false">Türkçe</item>
+        <item translatable="false">Português (Brasil)</item>
+        <item translatable="false">پارسی</item>
+        <item translatable="false">Македонски</item>
+        <item translatable="false">Tiếng Việt</item>
+        <item translatable="false">繁體中文</item>
+        <item translatable="false">Català</item>
+        <item translatable="false">Русский</item>
+        <item translatable="false">हिन्दी</item>
+        <item translatable="false">Nederlands</item>
+        <item translatable="false">Slovenčina</item>
+        <item translatable="false">日本語</item>
+        <item translatable="false">Ελληνικά</item>
+        <item translatable="false">Euskara</item>
+        <item translatable="false">Svenska</item>
+        <item translatable="false">한국어</item>
+        <item translatable="false">العربية</item>
     </string-array>
     <string-array name="theme_presets">
-        <item>Automatico / In base al sistema</item>
-        <item>Automatico / In base alla batteria</item>
+        <item>Automatico / Basato sul Sistema</item>
+        <item>Automatico / Basato sulla Batteria</item>
         <item>Scuro</item>
         <item>Chiaro</item>
     </string-array>
+    <string-array name="story_sorts">
+        <item>Instagram predefinito (non letto quindi leggi)</item>
+        <item>Dal più recente al più vecchio</item>
+        <item>Dal più vecchio al più recente</item>
+    </string-array>
     <string-array name="separator_presets">
-        <item>Niente</item>
+        <item>Nessuno</item>
         <item>\@</item>
         <item>a</item>
-        <item>del</item>
+        <item>il</item>
         <item>\|</item>
         <item>-</item>
     </string-array>
-    <string-array name="profile_fetch_modes">
-        <item>Instadp</item>
-        <item>Insta-Stalker</item>
-        <item>Instafullsize</item>
-    </string-array>
-    <string-array name="date_presets">
-        <item>dd-MM-yyyy</item>
-        <item>dd/MM/yyyy</item>
-        <item>dd.MM.yyyy</item>
-        <item>dd-MM-yy</item>
-        <item>dd/MM/yy</item>
-        <item>dd.MM.yy</item>
-        <item>dd-MMM-yyyy</item>
-        <item>dd/MMM/yyyy</item>
-        <item>dd.MMM.yyyy</item>
-        <item>dd-MMM-yy</item>
-        <item>dd/MMM/yy</item>
-        <item>dd.MMM.yy</item>
-        <item>MM-dd-yyyy</item>
-        <item>MM/dd/yyyy</item>
-        <item>MM.dd.yyyy</item>
-        <item>yyyy-MM-dd</item>
-        <item>yyyy/MM/dd</item>
-        <item>yyyy.MM.dd</item>
-        <item>MM-dd-yy</item>
-        <item>MM/dd/yy</item>
-        <item>MM.dd.yy</item>
-        <item>yy-MM-dd</item>
-        <item>yy/MM/dd</item>
-        <item>yy.MM.dd</item>
-        <item>MMM-dd-yyyy</item>
-        <item>MMM/dd/yyyy</item>
-        <item>MMM.dd.yyyy</item>
-        <item>yyyy-MMM-dd</item>
-        <item>yyyy/MMM/dd</item>
-        <item>yyyy.MMM.dd</item>
-        <item>MMM-dd-yy</item>
-        <item>MMM/dd/yy</item>
-        <item>MMM.dd.yy</item>
-        <item>yy-MMM-dd</item>
-        <item>yy/MMM/dd</item>
-        <item>yy.MMM.dd</item>
-    </string-array>
-    <string-array name="time_presets">
-        <item>hh:mm:ss a</item>
-        <item>h:mm:ss a</item>
-        <item>HH:mm:ss</item>
-        <item>H:mm:ss</item>
+    <string-array name="dm_auto_refresh_freq_units">
+        <item>secondi</item>
+        <item>minuti</item>
     </string-array>
 </resources>

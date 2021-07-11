@@ -5,7 +5,7 @@
     <item
         android:id="@+id/action_search"
         android:actionLayout="@layout/layout_searchview"
-        android:icon="@android:drawable/ic_menu_search"
+        android:icon="@drawable/ic_search_24"
         android:title="@string/action_search"
         android:titleCondensed="@string/action_search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
@@ -13,7 +13,7 @@
 
     <item
         android:id="@+id/action_compare"
-        android:icon="@android:drawable/ic_menu_view"
+        android:icon="@drawable/ic_outline_views_24"
         android:title="@string/action_compare"
         android:titleCondensed="@string/action_compare"
         app:showAsAction="ifRoom" />

@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="4dp"
-    android:paddingLeft="4dp"
-    android:paddingTop="12dp"
-    android:paddingEnd="4dp"
-    android:paddingRight="4dp">
+    android:padding="16dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,9 +22,8 @@
                 android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="0dp"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
                     android:text="@string/time_settings_title_custom" />
 
                 <CheckBox
@@ -40,7 +36,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="gone">
 
                 <androidx.appcompat.widget.AppCompatEditText
                     android:id="@+id/etCustomFormat"
@@ -55,7 +52,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="start"
-                    android:src="@android:drawable/ic_menu_info_details" />
+                    app:srcCompat="@drawable/ic_outline_info_24" />
             </LinearLayout>
 
             <FrameLayout
@@ -73,68 +70,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.84"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/time_settings_title_time_format" />
-
-                <androidx.appcompat.widget.AppCompatSpinner
-                    android:id="@+id/spTimeFormat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/time_presets" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/time_settings_title_separator" />
-
-                <androidx.appcompat.widget.AppCompatSpinner
-                    android:id="@+id/spSeparator"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/separator_presets" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/time_settings_title_date_format" />
-
-                <androidx.appcompat.widget.AppCompatSpinner
-                    android:id="@+id/spDateFormat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:entries="@array/date_presets" />
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:baselineAligned="false"
             android:orientation="vertical">
 
             <LinearLayout
@@ -145,17 +80,74 @@
                 <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="bottom"
                     android:layout_weight="1"
-                    android:text="@string/time_settings_title_preview" />
+                    android:text="@string/time_settings_title_time_format" />
 
-                <CheckBox
-                    android:id="@+id/cbSwapTimeDate"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:text="@string/time_settings_swap_time" />
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spTimeFormat"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:entries="@array/time_presets" />
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/time_settings_title_separator" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spSeparator"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:entries="@array/separator_presets" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/time_settings_title_date_format" />
+
+                <androidx.appcompat.widget.AppCompatSpinner
+                    android:id="@+id/spDateFormat"
+                    android:layout_width="0dp"
+                    android:layout_height="36dp"
+                    android:layout_weight="1"
+                    android:entries="@array/date_presets" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/cbSwapTimeDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/time_settings_swap_time" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:baselineAligned="false"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/time_settings_title_preview" />
 
             <TextView
                 android:id="@+id/timePreview"

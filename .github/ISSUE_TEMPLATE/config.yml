@@ -1,0 +1,11 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Community Chatrooms
+    url: https://barinsta.austinhuang.me/en/latest/chat.html
+    about: Chat with developers and users alike!
+  - name: /r/Barinsta
+    url: https://reddit.com/r/barinsta
+    about: Start a discussion on our subreddit!
+  - name: Repository Discussions
+    url: https://github.com/austinhuang0131/barinsta/discussions
+    about: Start a discussion in this repo!
