@@ -498,7 +498,7 @@
     <string name="share_via_dm">分享至私信</string>
     <string name="share_link">分享链接…</string>
     <string name="slide_to_cancel">滑动以取消</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="disable_screen_transitions">禁用屏幕过渡动画</string>
+    <string name="invalid_format">格式无效</string>
+    <string name="no_directory_picker_activity">未找到可以选择目录的程序</string>
 </resources>
