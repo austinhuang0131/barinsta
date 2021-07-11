@@ -510,5 +510,5 @@
     <string name="slide_to_cancel">Σύρετε για ακύρωση</string>
     <string name="disable_screen_transitions">Απενεργοποίηση μεταβάσεων οθόνης</string>
     <string name="invalid_format">Μη έγκυρη μορφή</string>
-    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="no_directory_picker_activity">Η Barinsta δεν μπορεί να εκκινήσει τον διαχειριστή αρχείων του Android. Παρακαλώ βεβαιωθείτε ότι είναι εγκατεστημένο και ενεργοποιημένο στη συσκευή σας.</string>
 </resources>
