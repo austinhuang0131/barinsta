@@ -510,5 +510,5 @@
     <string name="slide_to_cancel">Desliza para cancelar</string>
     <string name="disable_screen_transitions">Desactivar transiciones de pantalla</string>
     <string name="invalid_format">Formato no válido</string>
-    <string name="no_directory_picker_activity">No se encontró ninguna actividad para seleccionar el directorio</string>
+    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
 </resources>
