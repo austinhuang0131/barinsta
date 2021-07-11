@@ -21,7 +21,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import awais.instagrabber.R;
-import awais.instagrabber.fragments.UserSearchFragment;
+import awais.instagrabber.fragments.UserSearchMode;
 import awais.instagrabber.models.Resource;
 import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.repositories.responses.directmessages.RankedRecipient;
@@ -49,7 +49,7 @@ public class UserSearchViewModel extends ViewModel {
     private Call<?> searchRequest;
     private long[] hideUserIds;
     private String[] hideThreadIds;
-    private UserSearchFragment.SearchMode searchMode;
+    private UserSearchMode searchMode;
     private boolean showGroups;
     private boolean waitingForCache;
     private boolean showCachedResults;
@@ -192,7 +192,7 @@ public class UserSearchViewModel extends ViewModel {
 
     private void rankedRecipientSearch() {
         directMessagesRepository.rankedRecipients(
-                searchMode.getName(),
+                searchMode.getMode(),
                 showGroups,
                 currentQuery,
                 CoroutineUtilsKt.getContinuation((response, throwable) -> {
@@ -290,7 +290,7 @@ public class UserSearchViewModel extends ViewModel {
         return showAction;
     }
 
-    public void setSearchMode(final UserSearchFragment.SearchMode searchMode) {
+    public void setSearchMode(final UserSearchMode searchMode) {
         this.searchMode = searchMode;
     }
 

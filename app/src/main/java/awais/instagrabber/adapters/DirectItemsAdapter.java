@@ -139,7 +139,7 @@ public final class DirectItemsAdapter extends RecyclerView.Adapter<RecyclerView.
             return new HeaderViewHolder(LayoutDmHeaderBinding.inflate(layoutInflater, parent, false));
         }
         final LayoutDmBaseBinding baseBinding = LayoutDmBaseBinding.inflate(layoutInflater, parent, false);
-        final DirectItemType directItemType = DirectItemType.Companion.getId(type);
+        final DirectItemType directItemType = DirectItemType.Companion.getTypeFromId(type);
         final DirectItemViewHolder itemViewHolder = getItemViewHolder(layoutInflater, baseBinding, directItemType);
         itemViewHolder.setLongClickListener(longClickListener);
         return itemViewHolder;

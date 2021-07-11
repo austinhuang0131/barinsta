@@ -25,7 +25,7 @@ fun showUpdateDialog(
     mainThread.execute {
         MaterialAlertDialogBuilder(context).apply {
             setTitle(context.getString(R.string.update_available, version))
-            setNeutralButton(R.string.skip_update) { dialog: DialogInterface, which: Int ->
+            setNeutralButton(R.string.skip_update) { dialog: DialogInterface, _: Int ->
                 Utils.settingsHelper.putString(Constants.SKIPPED_VERSION, version)
                 dialog.dismiss()
             }

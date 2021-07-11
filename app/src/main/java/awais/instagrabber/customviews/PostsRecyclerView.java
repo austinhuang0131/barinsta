@@ -3,12 +3,11 @@ package awais.instagrabber.customviews;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.View;
-import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.lifecycle.LifecycleOwner;
+import androidx.lifecycle.LiveData;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 import androidx.recyclerview.widget.LinearSmoothScroller;
@@ -27,23 +26,17 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
-import java.util.function.Function;
 
 import awais.instagrabber.adapters.FeedAdapterV2;
 import awais.instagrabber.customviews.helpers.GridSpacingItemDecoration;
 import awais.instagrabber.customviews.helpers.PostFetcher;
 import awais.instagrabber.customviews.helpers.RecyclerLazyLoaderAtEdge;
-import awais.instagrabber.fragments.settings.PreferenceKeys;
-import awais.instagrabber.interfaces.FetchListener;
 import awais.instagrabber.models.PostsLayoutPreferences;
 import awais.instagrabber.repositories.responses.Media;
-import awais.instagrabber.utils.KeywordsFilterUtils;
 import awais.instagrabber.utils.ResponseBodyUtils;
 import awais.instagrabber.utils.Utils;
 import awais.instagrabber.viewmodels.MediaViewModel;
 import awais.instagrabber.workers.DownloadWorker;
-
-import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public class PostsRecyclerView extends RecyclerView {
     private static final String TAG = "PostsRecyclerView";
@@ -52,7 +45,6 @@ public class PostsRecyclerView extends RecyclerView {
     private PostsLayoutPreferences layoutPreferences;
     private PostFetcher.PostFetchService postFetchService;
     private Transition transition;
-    private PostFetcher postFetcher;
     private ViewModelStoreOwner viewModelStoreOwner;
     private FeedAdapterV2 feedAdapter;
     private LifecycleOwner lifeCycleOwner;
@@ -63,39 +55,8 @@ public class PostsRecyclerView extends RecyclerView {
     private FeedAdapterV2.FeedItemCallback feedItemCallback;
     private boolean shouldScrollToTop;
     private FeedAdapterV2.SelectionModeCallback selectionModeCallback;
-    private Function<ViewGroup, View> headerViewCreator;
-    private Function<View, Void> headerBinder;
-    private boolean refresh = true;
 
     private final List<FetchStatusChangeListener> fetchStatusChangeListeners = new ArrayList<>();
-
-    private final FetchListener<List<Media>> fetchListener = new FetchListener<List<Media>>() {
-        @Override
-        public void onResult(final List<Media> result) {
-            if (refresh) {
-                refresh = false;
-                mediaViewModel.getList().postValue(result);
-                shouldScrollToTop = true;
-                dispatchFetchStatus();
-                return;
-            }
-            final List<Media> models = mediaViewModel.getList().getValue();
-            final List<Media> modelsCopy = models == null ? new ArrayList<>() : new ArrayList<>(models);
-            if (settingsHelper.getBoolean(PreferenceKeys.TOGGLE_KEYWORD_FILTER)) {
-                final ArrayList<String> items = new ArrayList<>(settingsHelper.getStringSet(PreferenceKeys.KEYWORD_FILTERS));
-                modelsCopy.addAll(new KeywordsFilterUtils(items).filter(result));
-            } else {
-                modelsCopy.addAll(result);
-            }
-            mediaViewModel.getList().postValue(modelsCopy);
-            dispatchFetchStatus();
-        }
-
-        @Override
-        public void onFailure(final Throwable t) {
-            Log.e(TAG, "onFailure: ", t);
-        }
-    };
 
     private final RecyclerView.SmoothScroller smoothScroller = new LinearSmoothScroller(getContext()) {
         @Override
@@ -199,18 +160,22 @@ public class PostsRecyclerView extends RecyclerView {
 
     private void initSelf() {
         try {
-            mediaViewModel = new ViewModelProvider(viewModelStoreOwner).get(MediaViewModel.class);
+            mediaViewModel = new ViewModelProvider(
+                    viewModelStoreOwner,
+                    new MediaViewModel.ViewModelFactory(postFetchService)
+            ).get(MediaViewModel.class);
         } catch (Exception e) {
             Log.e(TAG, "initSelf: ", e);
         }
         if (mediaViewModel == null) return;
-        mediaViewModel.getList().observe(lifeCycleOwner, list -> feedAdapter.submitList(list, () -> {
-            // postDelayed(this::fetchMoreIfPossible, 1000);
+        final LiveData<List<Media>> mediaListLiveData = mediaViewModel.getList();
+        mediaListLiveData.observe(lifeCycleOwner, list -> feedAdapter.submitList(list, () -> {
+            dispatchFetchStatus();
+            postDelayed(this::fetchMoreIfPossible, 1000);
             if (!shouldScrollToTop) return;
             shouldScrollToTop = false;
             post(() -> smoothScrollToPosition(0));
         }));
-        postFetcher = new PostFetcher(postFetchService, fetchListener);
         if (layoutPreferences.getHasGap()) {
             addItemDecoration(gridSpacingItemDecoration);
         }
@@ -218,18 +183,20 @@ public class PostsRecyclerView extends RecyclerView {
         setNestedScrollingEnabled(true);
         setItemAnimator(null);
         lazyLoader = new RecyclerLazyLoaderAtEdge(layoutManager, (page) -> {
-            if (postFetcher.hasMore()) {
-                postFetcher.fetch();
+            if (mediaViewModel.hasMore()) {
+                mediaViewModel.fetch();
                 dispatchFetchStatus();
             }
         });
         addOnScrollListener(lazyLoader);
-        postFetcher.fetch();
-        dispatchFetchStatus();
+        if (mediaListLiveData.getValue() == null || mediaListLiveData.getValue().isEmpty()) {
+            mediaViewModel.fetch();
+            dispatchFetchStatus();
+        }
     }
 
     private void fetchMoreIfPossible() {
-        if (!postFetcher.hasMore()) return;
+        if (!mediaViewModel.hasMore()) return;
         if (feedAdapter.getItemCount() == 0) return;
         final LayoutManager layoutManager = getLayoutManager();
         if (!(layoutManager instanceof StaggeredGridLayoutManager)) return;
@@ -238,7 +205,7 @@ public class PostsRecyclerView extends RecyclerView {
         if (allNoPosition) return;
         final boolean match = Arrays.stream(itemPositions).anyMatch(position -> position == feedAdapter.getItemCount() - 1);
         if (!match) return;
-        postFetcher.fetch();
+        mediaViewModel.fetch();
         dispatchFetchStatus();
     }
 
@@ -268,6 +235,7 @@ public class PostsRecyclerView extends RecyclerView {
 
     private List<String> getDisplayUrl(final Media feedModel) {
         List<String> urls = Collections.emptyList();
+        if (feedModel == null || feedModel.getType() == null) return urls;
         switch (feedModel.getType()) {
             case MEDIA_TYPE_IMAGE:
             case MEDIA_TYPE_VIDEO:
@@ -320,20 +288,18 @@ public class PostsRecyclerView extends RecyclerView {
     }
 
     public void refresh() {
-        refresh = true;
+        shouldScrollToTop = true;
         if (lazyLoader != null) {
             lazyLoader.resetState();
         }
-        if (postFetcher != null) {
-            // mediaViewModel.getList().postValue(Collections.emptyList());
-            postFetcher.reset();
-            postFetcher.fetch();
+        if (mediaViewModel != null) {
+            mediaViewModel.refresh();
         }
         dispatchFetchStatus();
     }
 
     public boolean isFetching() {
-        return postFetcher != null && postFetcher.isFetching();
+        return mediaViewModel != null && mediaViewModel.isFetching();
     }
 
     public PostsRecyclerView addFetchStatusChangeListener(final FetchStatusChangeListener fetchStatusChangeListener) {
@@ -369,6 +335,7 @@ public class PostsRecyclerView extends RecyclerView {
     protected void onDetachedFromWindow() {
         super.onDetachedFromWindow();
         lifeCycleOwner = null;
+        initCalled = false;
     }
 
     @Override

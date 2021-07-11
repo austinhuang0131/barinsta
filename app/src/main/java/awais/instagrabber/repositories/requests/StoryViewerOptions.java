@@ -45,8 +45,8 @@ public class StoryViewerOptions implements Serializable {
         return new StoryViewerOptions(id, name, Type.USER);
     }
 
-    public static StoryViewerOptions forHighlight(final String highlight) {
-        return new StoryViewerOptions(highlight, Type.HIGHLIGHT);
+    public static StoryViewerOptions forHighlight(final long id, final String highlight) {
+        return new StoryViewerOptions(id, highlight, Type.HIGHLIGHT);
     }
 
     public static StoryViewerOptions forStory(final long mediaId, final String username) {

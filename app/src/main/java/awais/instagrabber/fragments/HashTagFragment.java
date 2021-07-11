@@ -2,7 +2,6 @@ package awais.instagrabber.fragments;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,13 +23,10 @@ import androidx.activity.OnBackPressedDispatcher;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
-import androidx.constraintlayout.motion.widget.MotionLayout;
-import androidx.constraintlayout.motion.widget.MotionScene;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.google.android.material.snackbar.BaseTransientBottomBar;
@@ -53,7 +49,6 @@ import awais.instagrabber.dialogs.PostsLayoutPreferencesDialogFragment;
 import awais.instagrabber.models.PostsLayoutPreferences;
 import awais.instagrabber.models.enums.FavoriteType;
 import awais.instagrabber.models.enums.FollowingType;
-import awais.instagrabber.repositories.requests.StoryViewerOptions;
 import awais.instagrabber.repositories.responses.Hashtag;
 import awais.instagrabber.repositories.responses.Location;
 import awais.instagrabber.repositories.responses.Media;
@@ -67,7 +62,6 @@ import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
 import awais.instagrabber.webservices.GraphQLRepository;
 import awais.instagrabber.webservices.ServiceCallback;
-import awais.instagrabber.webservices.StoriesRepository;
 import awais.instagrabber.webservices.TagsService;
 import kotlinx.coroutines.Dispatchers;
 
@@ -76,22 +70,19 @@ import static awais.instagrabber.utils.Utils.settingsHelper;
 public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private static final String TAG = "HashTagFragment";
 
-    public static final String ARG_HASHTAG = "hashtag";
-
     private MainActivity fragmentActivity;
     private FragmentHashtagBinding binding;
-    private MotionLayout root;
+    private CoordinatorLayout root;
     private boolean shouldRefresh = true;
-//    private boolean hasStories = false;
     private boolean opening = false;
     private String hashtag;
     private Hashtag hashtagModel = null;
     private ActionMode actionMode;
-    private StoriesRepository storiesRepository;
+    //    private StoriesRepository storiesRepository;
     private boolean isLoggedIn;
     private TagsService tagsService;
     private GraphQLRepository graphQLRepository;
-    private boolean storiesFetching;
+    //    private boolean storiesFetching;
     private Set<Media> selectedFeedModels;
     private PostsLayoutPreferences layoutPreferences = Utils.getPostsLayoutPreferences(Constants.PREF_HASHTAG_POSTS_LAYOUT);
     private LayoutHashtagDetailsBinding hashtagDetailsBinding;
@@ -125,23 +116,29 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
             });
     private final FeedAdapterV2.FeedItemCallback feedItemCallback = new FeedAdapterV2.FeedItemCallback() {
         @Override
-        public void onPostClick(final Media feedModel, final View profilePicView, final View mainPostImage) {
-            openPostDialog(feedModel, profilePicView, mainPostImage, -1);
+        public void onPostClick(final Media feedModel) {
+            openPostDialog(feedModel, -1);
         }
 
         @Override
         public void onSliderClick(final Media feedModel, final int position) {
-            openPostDialog(feedModel, null, null, position);
+            openPostDialog(feedModel, position);
         }
 
         @Override
         public void onCommentsClick(final Media feedModel) {
-            final NavDirections commentsAction = HashTagFragmentDirections.actionGlobalCommentsViewerFragment(
-                    feedModel.getCode(),
-                    feedModel.getCode(),
-                    feedModel.getUser().getPk()
-            );
-            NavHostFragment.findNavController(HashTagFragment.this).navigate(commentsAction);
+            final User user = feedModel.getUser();
+            if (user == null) return;
+            try {
+                final NavDirections commentsAction = HashTagFragmentDirections.actionToComments(
+                        feedModel.getCode(),
+                        feedModel.getCode(),
+                        user.getPk()
+                );
+                NavHostFragment.findNavController(HashTagFragment.this).navigate(commentsAction);
+            } catch (Exception e) {
+                Log.e(TAG, "onCommentsClick: ", e);
+            }
         }
 
         @Override
@@ -153,16 +150,24 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
         @Override
         public void onHashtagClick(final String hashtag) {
-            final NavDirections action = HashTagFragmentDirections.actionGlobalHashTagFragment(hashtag);
-            NavHostFragment.findNavController(HashTagFragment.this).navigate(action);
+            try {
+                final NavDirections action = HashTagFragmentDirections.actionToHashtag(hashtag);
+                NavHostFragment.findNavController(HashTagFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onHashtagClick: ", e);
+            }
         }
 
         @Override
         public void onLocationClick(final Media media) {
             final Location location = media.getLocation();
             if (location == null) return;
-            final NavDirections action = HashTagFragmentDirections.actionGlobalLocationFragment(location.getPk());
-            NavHostFragment.findNavController(HashTagFragment.this).navigate(action);
+            try {
+                final NavDirections action = HashTagFragmentDirections.actionToLocation(location.getPk());
+                NavHostFragment.findNavController(HashTagFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onLocationClick: ", e);
+            }
         }
 
         @Override
@@ -171,13 +176,17 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         }
 
         @Override
-        public void onNameClick(final Media feedModel, final View profilePicView) {
-            navigateToProfile("@" + feedModel.getUser().getUsername());
+        public void onNameClick(final Media feedModel) {
+            final User user = feedModel.getUser();
+            if (user == null) return;
+            navigateToProfile("@" + user.getUsername());
         }
 
         @Override
-        public void onProfilePicClick(final Media feedModel, final View profilePicView) {
-            navigateToProfile("@" + feedModel.getUser().getUsername());
+        public void onProfilePicClick(final Media feedModel) {
+            final User user = feedModel.getUser();
+            if (user == null) return;
+            navigateToProfile("@" + user.getUsername());
         }
 
         @Override
@@ -190,34 +199,30 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
             Utils.openEmailAddress(getContext(), emailId);
         }
 
-        private void openPostDialog(@NonNull final Media feedModel,
-                                    final View profilePicView,
-                                    final View mainPostImage,
-                                    final int position) {
+        private void openPostDialog(@NonNull final Media feedModel, final int position) {
             if (opening) return;
             final User user = feedModel.getUser();
             if (user == null) return;
             if (TextUtils.isEmpty(user.getUsername())) {
                 // this only happens for anons
                 opening = true;
-                graphQLRepository.fetchPost(feedModel.getCode(), CoroutineUtilsKt.getContinuation((media, throwable) -> {
+                final String code = feedModel.getCode();
+                if (code == null) return;
+                graphQLRepository.fetchPost(code, CoroutineUtilsKt.getContinuation((media, throwable) -> {
                     opening = false;
                     if (throwable != null) {
                         Log.e(TAG, "Error", throwable);
                         return;
                     }
                     if (media == null) return;
-                    AppExecutors.INSTANCE.getMainThread().execute(() -> openPostDialog(media, profilePicView, mainPostImage, position));
+                    AppExecutors.INSTANCE.getMainThread().execute(() -> openPostDialog(media, position));
                 }, Dispatchers.getIO()));
                 return;
             }
             opening = true;
-            final NavController navController = NavHostFragment.findNavController(HashTagFragment.this);
-            final Bundle bundle = new Bundle();
-            bundle.putSerializable(PostViewV2Fragment.ARG_MEDIA, feedModel);
-            bundle.putInt(PostViewV2Fragment.ARG_SLIDER_POSITION, position);
             try {
-                navController.navigate(R.id.action_global_post_view, bundle);
+                final NavDirections action = HashTagFragmentDirections.actionToPost(feedModel, position);
+                NavHostFragment.findNavController(HashTagFragment.this).navigate(action);
             } catch (Exception e) {
                 Log.e(TAG, "openPostDialog: ", e);
             }
@@ -280,7 +285,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         final String cookie = settingsHelper.getString(Constants.COOKIE);
         isLoggedIn = !TextUtils.isEmpty(cookie) && CookieUtils.getUserIdFromCookie(cookie) > 0;
         tagsService = isLoggedIn ? TagsService.getInstance() : null;
-        storiesRepository = isLoggedIn ? StoriesRepository.Companion.getInstance() : null;
+        //        storiesRepository = isLoggedIn ? StoriesRepository.Companion.getInstance() : null;
         graphQLRepository = isLoggedIn ? null : GraphQLRepository.Companion.getInstance();
         setHasOptionsMenu(true);
     }
@@ -300,6 +305,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
 
     @Override
     public void onViewCreated(@NonNull final View view, @Nullable final Bundle savedInstanceState) {
+        fragmentActivity.setToolbar(binding.toolbar, this);
         if (!shouldRefresh) return;
         binding.swipeRefreshLayout.setOnRefreshListener(this);
         init();
@@ -309,7 +315,7 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
     @Override
     public void onRefresh() {
         binding.posts.refresh();
-//        fetchStories();
+        //        fetchStories();
     }
 
     @Override
@@ -330,6 +336,12 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        fragmentActivity.resetToolbar(this);
     }
 
     private void init() {
@@ -361,18 +373,17 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
                      .setFeedItemCallback(feedItemCallback)
                      .setSelectionModeCallback(selectionModeCallback)
                      .init();
-        binding.swipeRefreshLayout.setRefreshing(true);
-        binding.posts.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(@NonNull final RecyclerView recyclerView, final int dx, final int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                final boolean canScrollVertically = recyclerView.canScrollVertically(-1);
-                final MotionScene.Transition transition = root.getTransition(R.id.transition);
-                if (transition != null) {
-                    transition.setEnable(!canScrollVertically);
-                }
-            }
-        });
+        // binding.posts.addOnScrollListener(new RecyclerView.OnScrollListener() {
+        //     @Override
+        //     public void onScrolled(@NonNull final RecyclerView recyclerView, final int dx, final int dy) {
+        //         super.onScrolled(recyclerView, dx, dy);
+        //         final boolean canScrollVertically = recyclerView.canScrollVertically(-1);
+        //         final MotionScene.Transition transition = root.getTransition(R.id.transition);
+        //         if (transition != null) {
+        //             transition.setEnable(!canScrollVertically);
+        //         }
+        //     }
+        // });
     }
 
     private void setHashtagDetails() {
@@ -385,7 +396,6 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         }
         setTitle();
         setupPosts();
-//        fetchStories();
         if (isLoggedIn) {
             hashtagDetailsBinding.btnFollowTag.setVisibility(View.VISIBLE);
             hashtagDetailsBinding.btnFollowTag.setText(hashtagModel.getFollowing() == FollowingType.FOLLOWING
@@ -519,22 +529,23 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
         );
         hashtagDetailsBinding.mainHashtagImage.setImageURI("res:/" + R.drawable.ic_hashtag);
         final String postCount = String.valueOf(hashtagModel.getMediaCount());
-        final SpannableStringBuilder span = new SpannableStringBuilder(getResources().getQuantityString(R.plurals.main_posts_count_inline,
-                                                                                                        hashtagModel.getMediaCount() > 2000000000L
-                                                                                                        ? 2000000000
-                                                                                                        : Long.valueOf(hashtagModel.getMediaCount()).intValue(),
-                                                                                                        postCount));
+        final SpannableStringBuilder span = new SpannableStringBuilder(getResources().getQuantityString(
+                R.plurals.main_posts_count_inline,
+                hashtagModel.getMediaCount() > 2000000000L ? 2000000000
+                                                           : Long.valueOf(hashtagModel.getMediaCount()).intValue(),
+                postCount)
+        );
         span.setSpan(new RelativeSizeSpan(1.2f), 0, postCount.length(), 0);
         span.setSpan(new StyleSpan(Typeface.BOLD), 0, postCount.length(), 0);
         hashtagDetailsBinding.mainTagPostCount.setText(span);
         hashtagDetailsBinding.mainTagPostCount.setVisibility(View.VISIBLE);
-//        hashtagDetailsBinding.mainHashtagImage.setOnClickListener(v -> {
-//            if (!hasStories) return;
-//            // show stories
-//            final NavDirections action = HashTagFragmentDirections
-//                    .actionHashtagFragmentToStoryViewerFragment(StoryViewerOptions.forHashtag(hashtagModel.getName()));
-//            NavHostFragment.findNavController(this).navigate(action);
-//        });
+        //        hashtagDetailsBinding.mainHashtagImage.setOnClickListener(v -> {
+        //            if (!hasStories) return;
+        //            // show stories
+        //            final NavDirections action = HashTagFragmentDirections
+        //                    .actionHashtagFragmentToStoryViewerFragment(StoryViewerOptions.forHashtag(hashtagModel.getName()));
+        //            NavHostFragment.findNavController(this).navigate(action);
+        //        });
     }
 
     private void showSnackbar(final String message) {
@@ -545,47 +556,26 @@ public class HashTagFragment extends Fragment implements SwipeRefreshLayout.OnRe
                 .show();
     }
 
-//    private void fetchStories() {
-//        if (!isLoggedIn) return;
-//        storiesFetching = true;
-//        storiesRepository.getStories(
-//                StoryViewerOptions.forHashtag(hashtagModel.getName()),
-//                CoroutineUtilsKt.getContinuation((storyModels, throwable) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
-//                    if (throwable != null) {
-//                        Log.e(TAG, "Error", throwable);
-//                        storiesFetching = false;
-//                        return;
-//                    }
-//                    if (storyModels != null && !storyModels.isEmpty()) {
-//                        hashtagDetailsBinding.mainHashtagImage.setStoriesBorder(1);
-//                        hasStories = true;
-//                    } else {
-//                        hasStories = false;
-//                    }
-//                    storiesFetching = false;
-//                }), Dispatchers.getIO())
-//        );
-//    }
-
     private void setTitle() {
         final ActionBar actionBar = fragmentActivity.getSupportActionBar();
         if (actionBar != null) {
-            // Log.d(TAG, "setting title: " + hashtag);
             actionBar.setTitle('#' + hashtag);
-            // final Handler handler = new Handler();
-            // handler.postDelayed(() -> , 1000);
         }
     }
 
     private void updateSwipeRefreshState() {
-        binding.swipeRefreshLayout.setRefreshing(binding.posts.isFetching() || storiesFetching);
+        AppExecutors.INSTANCE.getMainThread().execute(() ->
+                                                              binding.swipeRefreshLayout.setRefreshing(binding.posts.isFetching())
+        );
     }
 
     private void navigateToProfile(final String username) {
-        final NavController navController = NavHostFragment.findNavController(this);
-        final Bundle bundle = new Bundle();
-        bundle.putString("username", username);
-        navController.navigate(R.id.action_global_profileFragment, bundle);
+        try {
+            final NavDirections action = HashTagFragmentDirections.actionToProfile().setUsername(username);
+            NavHostFragment.findNavController(this).navigate(action);
+        } catch (Exception e) {
+            Log.e(TAG, "navigateToProfile: ", e);
+        }
     }
 
     private void showPostsLayoutPreferences() {

@@ -7,11 +7,9 @@ import android.os.Handler
 import android.os.Looper
 import android.util.Log
 import android.view.*
-import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
-import androidx.lifecycle.Observer
-import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
 import awais.instagrabber.R
@@ -33,18 +31,16 @@ class DirectMessageInboxFragment : Fragment(), OnRefreshListener {
     private val viewModel: DirectInboxViewModel by activityViewModels()
 
     private lateinit var fragmentActivity: MainActivity
-    private lateinit var root: CoordinatorLayout
     private lateinit var binding: FragmentDirectMessagesInboxBinding
-    private lateinit var inboxAdapter: DirectMessageInboxAdapter
     private lateinit var lazyLoader: RecyclerLazyLoaderAtEdge
 
-    private var shouldRefresh = true
     private var scrollToTop = false
     private var navigating = false
-    private var threadsObserver: Observer<List<DirectThread?>>? = null
+
     private var pendingRequestsMenuItem: MenuItem? = null
     private var pendingRequestTotalBadgeDrawable: BadgeDrawable? = null
     private var isPendingRequestTotalBadgeAttached = false
+    private var inboxAdapter: DirectMessageInboxAdapter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,17 +53,11 @@ class DirectMessageInboxFragment : Fragment(), OnRefreshListener {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        if (this::root.isInitialized) {
-            shouldRefresh = false
-            return root
-        }
         binding = FragmentDirectMessagesInboxBinding.inflate(inflater, container, false)
-        root = binding.root
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        if (!shouldRefresh) return
         init()
     }
 
@@ -90,11 +80,6 @@ class DirectMessageInboxFragment : Fragment(), OnRefreshListener {
         }
     }
 
-    override fun onResume() {
-        super.onResume()
-        setupObservers()
-    }
-
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.dm_inbox_menu, menu)
         pendingRequestsMenuItem = menu.findItem(R.id.pending_requests)
@@ -103,9 +88,9 @@ class DirectMessageInboxFragment : Fragment(), OnRefreshListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.pending_requests) {
-            val directions = DirectMessageInboxFragmentDirections.actionInboxToPendingInbox()
             try {
-                NavHostFragment.findNavController(this).navigate(directions)
+                val directions = DirectMessageInboxFragmentDirections.actionToPendingInbox()
+                findNavController().navigate(directions)
             } catch (e: Exception) {
                 Log.e(TAG, "onOptionsItemSelected: ", e)
             }
@@ -119,23 +104,14 @@ class DirectMessageInboxFragment : Fragment(), OnRefreshListener {
         init()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        removeViewModelObservers()
-        viewModel.onDestroy()
-    }
-
     private fun setupObservers() {
-        removeViewModelObservers()
-        threadsObserver = Observer { list: List<DirectThread?> ->
-            if (!this::inboxAdapter.isInitialized) return@Observer
-            inboxAdapter.submitList(list) {
+        viewModel.threads.observe(viewLifecycleOwner, { list: List<DirectThread?> ->
+            inboxAdapter?.submitList(list) {
                 if (!scrollToTop) return@submitList
                 binding.inboxList.post { binding.inboxList.smoothScrollToPosition(0) }
                 scrollToTop = false
             }
-        }
-        threadsObserver?.let { viewModel.threads.observe(fragmentActivity, it) }
+        })
         viewModel.inbox.observe(viewLifecycleOwner, { inboxResource: Resource<DirectInbox?>? ->
             if (inboxResource == null) return@observe
             when (inboxResource.status) {
@@ -191,11 +167,6 @@ class DirectMessageInboxFragment : Fragment(), OnRefreshListener {
         }
     }
 
-    private fun removeViewModelObservers() {
-        threadsObserver?.let { viewModel.threads.removeObserver(it) }
-        // no need to explicitly remove observers whose lifecycle owner is getViewLifecycleOwner
-    }
-
     private fun init() {
         val context = context ?: return
         setupObservers()
@@ -210,18 +181,20 @@ class DirectMessageInboxFragment : Fragment(), OnRefreshListener {
             if (navigating || threadId.isNullOrBlank() || threadTitle.isNullOrBlank()) return@DirectMessageInboxAdapter
             navigating = true
             if (isAdded) {
-                val directions = DirectMessageInboxFragmentDirections.actionInboxToThread(threadId, threadTitle)
                 try {
-                    NavHostFragment.findNavController(this).navigate(directions)
+                    val directions = DirectMessageInboxFragmentDirections.actionToThread(threadId, threadTitle)
+                    findNavController().navigate(directions)
                 } catch (e: Exception) {
                     Log.e(TAG, "init: ", e)
                 }
             }
             navigating = false
+        }.also {
+            it.setHasStableIds(true)
         }
-        inboxAdapter.setHasStableIds(true)
         binding.inboxList.adapter = inboxAdapter
-        lazyLoader = RecyclerLazyLoaderAtEdge(layoutManager) { viewModel.fetchInbox() }
-        lazyLoader.let { binding.inboxList.addOnScrollListener(it) }
+        lazyLoader = RecyclerLazyLoaderAtEdge(layoutManager) { viewModel.fetchInbox() }.also {
+            binding.inboxList.addOnScrollListener(it)
+        }
     }
 }

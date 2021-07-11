@@ -8,7 +8,6 @@ import android.content.ContentResolver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.res.Resources;
-import android.content.res.TypedArray;
 import android.graphics.Color;
 import android.graphics.Point;
 import android.graphics.Rect;
@@ -46,8 +45,6 @@ import androidx.vectordrawable.graphics.drawable.AnimatedVectorDrawableCompat;
 import com.google.android.exoplayer2.database.ExoDatabaseProvider;
 import com.google.android.exoplayer2.upstream.cache.LeastRecentlyUsedCacheEvictor;
 import com.google.android.exoplayer2.upstream.cache.SimpleCache;
-import com.google.common.collect.ImmutableList;
-import com.google.common.collect.Ordering;
 
 import org.json.JSONObject;
 
@@ -55,21 +52,14 @@ import java.io.File;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 import awais.instagrabber.R;
-import awais.instagrabber.fragments.settings.PreferenceKeys;
 import awais.instagrabber.models.PostsLayoutPreferences;
-import awais.instagrabber.models.Tab;
 import awais.instagrabber.models.enums.FavoriteType;
-
-import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_BARINSTA_DIR_URI;
 
 public final class Utils {
     private static final String TAG = "Utils";
@@ -85,7 +75,6 @@ public final class Utils {
     private static int statusBarHeight;
     private static int actionBarHeight;
     public static String cacheDir;
-    public static String tabOrderString;
     private static int defaultStatusBarColor;
     private static Object[] volumes;
 
@@ -419,115 +408,6 @@ public final class Utils {
         } else {
             Collections.rotate(list.subList(targetIndex, sourceIndex + 1), 1);
         }
-    }
-
-    private static final List<Integer> NON_REMOVABLE_NAV_ROOT_IDS = ImmutableList.of(R.id.profile_nav_graph, R.id.more_nav_graph);
-
-    @NonNull
-    public static Pair<List<Tab>, List<Tab>> getNavTabList(@NonNull final Context context) {
-        final Resources resources = context.getResources();
-        final String[] titleArray = resources.getStringArray(R.array.main_nav_titles);
-
-        TypedArray typedArray = resources.obtainTypedArray(R.array.main_nav_graphs);
-        int length = typedArray.length();
-        final String[] navGraphNames = new String[length];
-        final int[] navigationResIds = new int[length];
-        for (int i = 0; i < length; i++) {
-            final int resourceId = typedArray.getResourceId(i, 0);
-            if (resourceId == 0) continue;
-            navigationResIds[i] = resourceId;
-            navGraphNames[i] = resources.getResourceEntryName(resourceId);
-        }
-        typedArray.recycle();
-
-        typedArray = resources.obtainTypedArray(R.array.main_nav_graph_root_ids);
-        length = typedArray.length();
-        final int[] navRootIds = new int[length];
-        for (int i = 0; i < length; i++) {
-            final int resourceId = typedArray.getResourceId(i, 0);
-            if (resourceId == 0) continue;
-            navRootIds[i] = resourceId;
-        }
-        typedArray.recycle();
-
-        typedArray = resources.obtainTypedArray(R.array.main_nav_drawables);
-        length = typedArray.length();
-        final int[] iconIds = new int[length];
-        for (int i = 0; i < length; i++) {
-            final int resourceId = typedArray.getResourceId(i, 0);
-            if (resourceId == 0) continue;
-            iconIds[i] = resourceId;
-        }
-        typedArray.recycle();
-
-        typedArray = resources.obtainTypedArray(R.array.main_nav_start_dest_frag_ids);
-        length = typedArray.length();
-        final int[] startDestFragIds = new int[length];
-        for (int i = 0; i < length; i++) {
-            final int resourceId = typedArray.getResourceId(i, 0);
-            if (resourceId == 0) continue;
-            startDestFragIds[i] = resourceId;
-        }
-        typedArray.recycle();
-
-        final List<String> currentOrderGraphNames = getCurrentOrderOfGraphNamesFromPref(navGraphNames);
-
-        if (titleArray.length != iconIds.length || titleArray.length != navGraphNames.length) {
-            throw new RuntimeException(String.format("Array lengths don't match!: titleArray%s, navGraphNames: %s, iconIds: %s",
-                                                     Arrays.toString(titleArray), Arrays.toString(navGraphNames), Arrays.toString(iconIds)));
-        }
-        final List<Tab> tabs = new ArrayList<>();
-        final List<Tab> otherTabs = new ArrayList<>(); // Will contain tabs not in current list
-        for (int i = 0; i < length; i++) {
-            final String navGraphName = navGraphNames[i];
-            final int navRootId = navRootIds[i];
-            final Tab tab = new Tab(iconIds[i],
-                                    titleArray[i],
-                                    !NON_REMOVABLE_NAV_ROOT_IDS.contains(navRootId),
-                                    navGraphName,
-                                    navigationResIds[i],
-                                    navRootId,
-                                    startDestFragIds[i]);
-            if (!currentOrderGraphNames.contains(navGraphName)) {
-                otherTabs.add(tab);
-                continue;
-            }
-            tabs.add(tab);
-        }
-        Collections.sort(tabs, Ordering.explicit(currentOrderGraphNames).onResultOf(tab -> {
-            if (tab == null) return null;
-            return tab.getGraphName();
-        }));
-        return new Pair<>(tabs, otherTabs);
-    }
-
-    @NonNull
-    private static List<String> getCurrentOrderOfGraphNamesFromPref(@NonNull final String[] navGraphNames) {
-        tabOrderString = settingsHelper.getString(PreferenceKeys.PREF_TAB_ORDER);
-        final List<String> navGraphNameList = Arrays.asList(navGraphNames);
-        if (TextUtils.isEmpty(tabOrderString)) {
-            // Use top 5 entries for default list
-            final List<String> top5navGraphNames = navGraphNameList.subList(0, 5);
-            final String newOrderString = android.text.TextUtils.join(",", top5navGraphNames);
-            Utils.settingsHelper.putString(PreferenceKeys.PREF_TAB_ORDER, newOrderString);
-            tabOrderString = newOrderString;
-            return top5navGraphNames;
-        }
-        // Make sure that the list from preference does not contain any invalid values
-        final List<String> orderGraphNames = Arrays.stream(tabOrderString.split(","))
-                                                   .filter(s -> !TextUtils.isEmpty(s))
-                                                   .filter(navGraphNameList::contains)
-                                                   .collect(Collectors.toList());
-        if (orderGraphNames.isEmpty()) {
-            // Use top 5 entries for default list
-            return navGraphNameList.subList(0, 5);
-        }
-        return orderGraphNames;
-    }
-
-    public static boolean isNavRootInCurrentTabs(final String navRootString) {
-        if (navRootString == null || tabOrderString == null) return false;
-        return tabOrderString.contains(navRootString);
     }
 
     // public static void scanDocumentFile(@NonNull final Context context,

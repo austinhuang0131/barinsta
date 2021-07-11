@@ -74,7 +74,7 @@ open class StoriesRepository(private val service: StoriesService) {
                 response.reels?.get(options.name)
             }
             StoryViewerOptions.Type.USER -> {
-                val response = service.getUserStories(options.id.toString())
+                val response = service.getUserStories(options.id)
                 response.reel
             }
             // should not reach beyond this point

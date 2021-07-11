@@ -37,7 +37,6 @@ import awais.instagrabber.adapters.HighlightStoriesListAdapter;
 import awais.instagrabber.adapters.HighlightStoriesListAdapter.OnHighlightStoryClickListener;
 import awais.instagrabber.customviews.helpers.RecyclerLazyLoader;
 import awais.instagrabber.databinding.FragmentStoryListViewerBinding;
-import awais.instagrabber.fragments.settings.MorePreferencesFragmentDirections;
 import awais.instagrabber.repositories.requests.StoryViewerOptions;
 import awais.instagrabber.repositories.responses.stories.ArchiveResponse;
 import awais.instagrabber.repositories.responses.stories.Story;
@@ -74,9 +73,12 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
             if (feedStoryModels == null) return;
             final int position = Iterables.indexOf(feedStoryModels, feedStoryModel -> feedStoryModel != null
                     && Objects.equals(feedStoryModel.getId(), model.getId()));
-            final NavDirections action = StoryListViewerFragmentDirections
-                    .actionStoryListFragmentToStoryViewerFragment(StoryViewerOptions.forFeedStoryPosition(position));
-            NavHostFragment.findNavController(StoryListViewerFragment.this).navigate(action);
+            try {
+                final NavDirections action = StoryListViewerFragmentDirections.actionToStory(StoryViewerOptions.forFeedStoryPosition(position));
+                NavHostFragment.findNavController(StoryListViewerFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onFeedStoryClick: ", e);
+            }
         }
 
         @Override
@@ -89,9 +91,12 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
         @Override
         public void onHighlightClick(final Story model, final int position) {
             if (model == null) return;
-            final NavDirections action = StoryListViewerFragmentDirections
-                    .actionStoryListFragmentToStoryViewerFragment(StoryViewerOptions.forStoryArchive(position));
-            NavHostFragment.findNavController(StoryListViewerFragment.this).navigate(action);
+            try {
+                final NavDirections action = StoryListViewerFragmentDirections.actionToStory(StoryViewerOptions.forStoryArchive(position));
+                NavHostFragment.findNavController(StoryListViewerFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onHighlightClick: ", e);
+            }
         }
 
         @Override
@@ -271,8 +276,11 @@ public final class StoryListViewerFragment extends Fragment implements SwipeRefr
     }
 
     private void openProfile(final String username) {
-        final NavDirections action = MorePreferencesFragmentDirections
-                .actionGlobalProfileFragment("@" + username);
-        NavHostFragment.findNavController(this).navigate(action);
+        try {
+            final NavDirections action = StoryListViewerFragmentDirections.actionToProfile().setUsername(username);
+            NavHostFragment.findNavController(this).navigate(action);
+        } catch (Exception e) {
+            Log.e(TAG, "openProfile: ", e);
+        }
     }
 }

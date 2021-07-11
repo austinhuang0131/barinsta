@@ -90,4 +90,5 @@ object Constants {
     const val DM_THREAD_ACTION_EXTRA_THREAD_TITLE = "thread_title"
     const val X_IG_APP_ID = "936619743392459"
     const val EXTRA_INITIAL_URI = "initial_uri"
+    const val defaultDateTimeFormat = "hh:mm:ss a 'on' dd-MM-yyyy"
 }

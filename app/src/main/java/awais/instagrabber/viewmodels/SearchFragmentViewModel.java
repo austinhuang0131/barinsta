@@ -242,7 +242,7 @@ public class SearchFragmentViewModel extends AppStateViewModel {
             @Override
             public void onFailure(@NonNull final Throwable t) {
                 if (!TextUtils.isEmpty(tempQuery)) return;
-                topResults.postValue(Resource.success(Collections.emptyList()));
+                liveData.postValue(Resource.success(Collections.emptyList()));
                 Log.e(TAG, "onFailure: ", t);
             }
         }, AppExecutors.INSTANCE.getMainThread());

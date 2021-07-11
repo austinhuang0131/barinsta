@@ -1,5 +1,7 @@
 package awais.instagrabber.fragments.settings;
 
+import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -79,9 +81,17 @@ public class DownloadsPreferencesFragment extends BasePreferencesFragment {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && initialUri != null) {
             intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, initialUri);
         }
-        startActivityForResult(intent, SELECT_DIR_REQUEST_CODE);
+        try {
+            startActivityForResult(intent, SELECT_DIR_REQUEST_CODE);
+        } catch (ActivityNotFoundException e) {
+            Log.e(TAG, "openDirectoryChooser: ", e);
+            showErrorDialog(getString(R.string.no_directory_picker_activity));
+        } catch (Exception e) {
+            Log.e(TAG, "openDirectoryChooser: ", e);
+        }
     }
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     public void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent data) {
         if (requestCode != SELECT_DIR_REQUEST_CODE) return;
@@ -94,7 +104,7 @@ public class DownloadsPreferencesFragment extends BasePreferencesFragment {
                 Utils.setupSelectedDir(context, data);
                 String path;
                 try {
-                    path = URLDecoder.decode(data.getData().toString(), StandardCharsets.UTF_8.toString());
+                    path = URLDecoder.decode(data.getData().toString(), StandardCharsets.UTF_8.name());
                 } catch (UnsupportedEncodingException e) {
                     path = data.getData().toString();
                 }
@@ -105,22 +115,26 @@ public class DownloadsPreferencesFragment extends BasePreferencesFragment {
                 try (final StringWriter sw = new StringWriter();
                      final PrintWriter pw = new PrintWriter(sw)) {
                     e.printStackTrace(pw);
-                    final ConfirmDialogFragment dialogFragment = ConfirmDialogFragment.newInstance(
-                            123,
-                            R.string.error,
-                            "com.android.externalstorage.documents".equals(data.getData().getAuthority())
-                                ? "Please report this error to the developers:\n\n" + sw.toString()
-                                : getString(R.string.dir_select_no_download_folder, data.getData().getAuthority()),
-                            R.string.ok,
-                            0,
-                            0
-                    );
-                    dialogFragment.show(getChildFragmentManager(), ConfirmDialogFragment.class.getSimpleName());
+                    showErrorDialog("com.android.externalstorage.documents".equals(data.getData().getAuthority())
+                                    ? "Please report this error to the developers:\n\n" + sw.toString()
+                                    : getString(R.string.dir_select_no_download_folder, data.getData().getAuthority()));
                 } catch (IOException ioException) {
                     Log.e(TAG, "onActivityResult: ", ioException);
                 }
             }
         }, 500);
+    }
+
+    private void showErrorDialog(final String message) {
+        final ConfirmDialogFragment dialogFragment = ConfirmDialogFragment.newInstance(
+                123,
+                R.string.error,
+                message,
+                R.string.ok,
+                0,
+                0
+        );
+        dialogFragment.show(getChildFragmentManager(), ConfirmDialogFragment.class.getSimpleName());
     }
 
     private Preference getPrependUsernameToFilenamePreference(@NonNull final Context context) {

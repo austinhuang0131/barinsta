@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import awais.instagrabber.R
@@ -48,17 +48,17 @@ class FavoritesFragment : Fragment() {
 
     override fun onPause() {
         super.onPause()
-        adapter.setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy.PREVENT)
+        adapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT
     }
 
     override fun onResume() {
         super.onResume()
         if (!this::adapter.isInitialized) return
         // refresh list every time in onViewStateRestored since it is cheaper than implementing pull down to refresh
-        favoritesViewModel.list.observe(viewLifecycleOwner, {
-            list: List<Favorite?>? -> adapter.submitList(list, Runnable {
-                adapter.setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy.ALLOW)
-            })
+        favoritesViewModel.list.observe(viewLifecycleOwner, { list: List<Favorite?>? ->
+            adapter.submitList(list) {
+                adapter.stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.ALLOW
+            }
         })
     }
 
@@ -66,32 +66,31 @@ class FavoritesFragment : Fragment() {
         adapter = FavoritesAdapter({ model: Favorite ->
             when (model.type) {
                 FavoriteType.USER -> {
-                    val username = model.query
-                    // Log.d(TAG, "username: " + username);
-                    val navController = NavHostFragment.findNavController(this)
-                    val bundle = Bundle()
-                    bundle.putString("username", "@$username")
-                    navController.navigate(R.id.action_global_profileFragment, bundle)
+                    try {
+                        val username = model.query ?: return@FavoritesAdapter
+                        val actionToProfile = FavoritesFragmentDirections.actionToProfile().apply { this.username = username }
+                        findNavController().navigate(actionToProfile)
+                    } catch (e: Exception) {
+                        Log.e(TAG, "init: ", e)
+                    }
                 }
                 FavoriteType.LOCATION -> {
-                    val locationId = model.query ?: return@FavoritesAdapter
-                    // Log.d(TAG, "locationId: " + locationId);
-                    val navController = NavHostFragment.findNavController(this)
-                    val bundle = Bundle()
                     try {
-                        bundle.putLong("locationId", locationId.toLong())
-                        navController.navigate(R.id.action_global_locationFragment, bundle)
+                        val locationId = model.query ?: return@FavoritesAdapter
+                        val actionToLocation = FavoritesFragmentDirections.actionToLocation(locationId.toLong())
+                        findNavController().navigate(actionToLocation)
                     } catch (e: Exception) {
                         Log.e(TAG, "init: ", e)
                     }
                 }
                 FavoriteType.HASHTAG -> {
-                    val hashtag = model.query
-                    // Log.d(TAG, "hashtag: " + hashtag);
-                    val navController = NavHostFragment.findNavController(this)
-                    val bundle = Bundle()
-                    bundle.putString("hashtag", "#$hashtag")
-                    navController.navigate(R.id.action_global_hashTagFragment, bundle)
+                    try {
+                        val hashtag = model.query ?: return@FavoritesAdapter
+                        val actionToHashtag = FavoritesFragmentDirections.actionToHashtag(hashtag)
+                        findNavController().navigate(actionToHashtag)
+                    } catch (e: Exception) {
+                        Log.e(TAG, "init: ", e)
+                    }
                 }
                 else -> {
                 }

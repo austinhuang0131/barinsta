@@ -23,8 +23,8 @@
             android:id="@+id/label_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="4dp"
             android:gravity="right"
             android:text="@string/layout_style"
@@ -74,14 +74,14 @@
             android:id="@+id/label_col_count"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="4dp"
             android:gravity="right"
             android:text="@string/column_count"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/col_count_toggle"
             app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/col_count_toggle" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
@@ -116,8 +116,8 @@
             android:id="@+id/label_show_names_toggle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="4dp"
             android:gravity="right"
             android:text="@string/show_names"
@@ -142,14 +142,14 @@
             android:id="@+id/label_show_avatar_toggle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="4dp"
             android:gravity="right"
             android:text="@string/show_avatars"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/show_avatar_toggle"
             app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/show_avatar_toggle" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -168,14 +168,14 @@
             android:id="@+id/label_avatar_size"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="4dp"
             android:gravity="right"
             android:text="@string/avatar_size"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/avatar_size_toggle"
             app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/avatar_size_toggle" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
@@ -217,14 +217,14 @@
             android:id="@+id/label_corners"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="4dp"
             android:gravity="right"
             android:text="@string/corners"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/corners_toggle"
             app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/corners_toggle" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
@@ -259,14 +259,14 @@
             android:id="@+id/label_gap"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
             android:layout_marginTop="4dp"
+            android:layout_marginRight="6dp"
             android:layout_marginBottom="4dp"
             android:gravity="right"
             android:text="@string/show_grid_gap"
-            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="@id/show_gap_toggle"
             app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@id/show_gap_toggle" />
 
         <com.google.android.material.switchmaterial.SwitchMaterial
@@ -274,35 +274,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:checked="true"
-            app:layout_constraintBottom_toTopOf="@id/disable_animation_toggle"
+            app:layout_constraintBottom_toTopOf="@id/show_gap_toggle"
             app:layout_constraintStart_toEndOf="@id/guideline"
             app:layout_constraintTop_toBottomOf="@id/corners_toggle"
-            app:showText="false"
-            app:switchPadding="0dp"
-            app:thumbTextPadding="0dp" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/label_disable_animation"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="6dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginBottom="4dp"
-            android:gravity="right"
-           android:text="@string/disable_animation"
-            android:layout_gravity="right"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="@id/disable_animation_toggle"
-            app:layout_constraintEnd_toStartOf="@id/guideline"
-            app:layout_constraintTop_toTopOf="@id/disable_animation_toggle" />
-
-        <com.google.android.material.switchmaterial.SwitchMaterial
-            android:id="@+id/disable_animation_toggle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="false"
-            app:layout_constraintStart_toEndOf="@id/guideline"
-            app:layout_constraintTop_toBottomOf="@id/show_gap_toggle"
             app:showText="false"
             app:switchPadding="0dp"
             app:thumbTextPadding="0dp" />

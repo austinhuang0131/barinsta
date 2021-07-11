@@ -1,7 +1,6 @@
 package awais.instagrabber.fragments;
 
 import android.content.Context;
-import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -20,7 +19,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -38,7 +36,10 @@ import awais.instagrabber.dialogs.PostsLayoutPreferencesDialogFragment;
 import awais.instagrabber.fragments.main.ProfileFragmentDirections;
 import awais.instagrabber.models.PostsLayoutPreferences;
 import awais.instagrabber.models.enums.PostItemType;
+import awais.instagrabber.repositories.responses.Location;
 import awais.instagrabber.repositories.responses.Media;
+import awais.instagrabber.repositories.responses.User;
+import awais.instagrabber.utils.AppExecutors;
 import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.DownloadUtils;
@@ -89,23 +90,29 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
             });
     private final FeedAdapterV2.FeedItemCallback feedItemCallback = new FeedAdapterV2.FeedItemCallback() {
         @Override
-        public void onPostClick(final Media feedModel, final View profilePicView, final View mainPostImage) {
-            openPostDialog(feedModel, profilePicView, mainPostImage, -1);
+        public void onPostClick(final Media feedModel) {
+            openPostDialog(feedModel, -1);
         }
 
         @Override
         public void onSliderClick(final Media feedModel, final int position) {
-            openPostDialog(feedModel, null, null, position);
+            openPostDialog(feedModel, position);
         }
 
         @Override
         public void onCommentsClick(final Media feedModel) {
-            final NavDirections commentsAction = ProfileFragmentDirections.actionGlobalCommentsViewerFragment(
-                    feedModel.getCode(),
-                    feedModel.getPk(),
-                    feedModel.getUser().getPk()
-            );
-            NavHostFragment.findNavController(SavedViewerFragment.this).navigate(commentsAction);
+            final User user = feedModel.getUser();
+            if (user == null) return;
+            try {
+                final NavDirections commentsAction = ProfileFragmentDirections.actionToComments(
+                        feedModel.getCode(),
+                        feedModel.getPk(),
+                        user.getPk()
+                );
+                NavHostFragment.findNavController(SavedViewerFragment.this).navigate(commentsAction);
+            } catch (Exception e) {
+                Log.e(TAG, "onCommentsClick: ", e);
+            }
         }
 
         @Override
@@ -117,14 +124,24 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
 
         @Override
         public void onHashtagClick(final String hashtag) {
-            final NavDirections action = ProfileFragmentDirections.actionGlobalHashTagFragment(hashtag);
-            NavHostFragment.findNavController(SavedViewerFragment.this).navigate(action);
+            try {
+                final NavDirections action = ProfileFragmentDirections.actionToHashtag(hashtag);
+                NavHostFragment.findNavController(SavedViewerFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onHashtagClick: ", e);
+            }
         }
 
         @Override
         public void onLocationClick(final Media feedModel) {
-            final NavDirections action = ProfileFragmentDirections.actionGlobalLocationFragment(feedModel.getLocation().getPk());
-            NavHostFragment.findNavController(SavedViewerFragment.this).navigate(action);
+            final Location location = feedModel.getLocation();
+            if (location == null) return;
+            try {
+                final NavDirections action = ProfileFragmentDirections.actionToLocation(location.getPk());
+                NavHostFragment.findNavController(SavedViewerFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onLocationClick: ", e);
+            }
         }
 
         @Override
@@ -133,13 +150,15 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
         }
 
         @Override
-        public void onNameClick(final Media feedModel, final View profilePicView) {
+        public void onNameClick(final Media feedModel) {
             navigateToProfile("@" + feedModel.getUser().getUsername());
         }
 
         @Override
-        public void onProfilePicClick(final Media feedModel, final View profilePicView) {
-            navigateToProfile("@" + feedModel.getUser().getUsername());
+        public void onProfilePicClick(final Media feedModel) {
+            final User user = feedModel.getUser();
+            if (user == null) return;
+            navigateToProfile("@" + user.getUsername());
         }
 
         @Override
@@ -152,16 +171,10 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
             Utils.openEmailAddress(getContext(), emailId);
         }
 
-        private void openPostDialog(final Media feedModel,
-                                    final View profilePicView,
-                                    final View mainPostImage,
-                                    final int position) {
-            final NavController navController = NavHostFragment.findNavController(SavedViewerFragment.this);
-            final Bundle bundle = new Bundle();
-            bundle.putSerializable(PostViewV2Fragment.ARG_MEDIA, feedModel);
-            bundle.putInt(PostViewV2Fragment.ARG_SLIDER_POSITION, position);
+        private void openPostDialog(final Media feedModel, final int position) {
             try {
-                navController.navigate(R.id.action_global_post_view, bundle);
+                final NavDirections action = SavedViewerFragmentDirections.actionToPost(feedModel, position);
+                NavHostFragment.findNavController(SavedViewerFragment.this).navigate(action);
             } catch (Exception e) {
                 Log.e(TAG, "openPostDialog: ", e);
             }
@@ -313,14 +326,18 @@ public final class SavedViewerFragment extends Fragment implements SwipeRefreshL
     }
 
     private void updateSwipeRefreshState() {
-        binding.swipeRefreshLayout.setRefreshing(binding.posts.isFetching());
+        AppExecutors.INSTANCE.getMainThread().execute(() ->
+                binding.swipeRefreshLayout.setRefreshing(binding.posts.isFetching())
+        );
     }
 
     private void navigateToProfile(final String username) {
-        final NavController navController = NavHostFragment.findNavController(this);
-        final Bundle bundle = new Bundle();
-        bundle.putString("username", username);
-        navController.navigate(R.id.action_global_profileFragment, bundle);
+        try {
+            final NavDirections action = SavedViewerFragmentDirections.actionToProfile().setUsername(username);
+            NavHostFragment.findNavController(this).navigate(action);
+        } catch (Exception e) {
+            Log.e(TAG, "navigateToProfile: ", e);
+        }
     }
 
     private void showPostsLayoutPreferences() {

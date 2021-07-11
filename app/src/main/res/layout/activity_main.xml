@@ -60,9 +60,11 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_nav_host"
+        android:name="awais.instagrabber.customviews.BarinstaNavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:clipToPadding="false"
+        app:defaultNavHost="true"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
     <!--app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"-->
@@ -71,5 +73,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        app:labelVisibilityMode="auto" />
+        app:labelVisibilityMode="auto"
+        tools:menu="@menu/bottom_nav_menu" />
 </awais.instagrabber.customviews.InsetsNotifyingCoordinatorLayout>

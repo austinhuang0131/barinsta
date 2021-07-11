@@ -12,12 +12,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import awais.instagrabber.R;
 import awais.instagrabber.adapters.viewholder.FollowsViewHolder;
 import awais.instagrabber.databinding.ItemFollowBinding;
 import awais.instagrabber.interfaces.OnGroupClickListener;
-import awais.instagrabber.models.FollowModel;
+import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.utils.TextUtils;
 import thoughtbot.expandableadapter.ExpandableGroup;
 import thoughtbot.expandableadapter.ExpandableList;
@@ -27,28 +28,33 @@ import thoughtbot.expandableadapter.GroupViewHolder;
 // thanks to ThoughtBot's ExpandableRecyclerViewAdapter
 //   https://github.com/thoughtbot/expandable-recycler-view
 public final class FollowAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> implements OnGroupClickListener, Filterable {
+    private final View.OnClickListener onClickListener;
+    private final ExpandableList expandableListOriginal;
+    private final boolean hasManyGroups;
+    private ExpandableList expandableList;
+
     private final Filter filter = new Filter() {
         @Nullable
         @Override
         protected FilterResults performFiltering(final CharSequence filter) {
-            if (expandableList.groups != null) {
-                final boolean isFilterEmpty = TextUtils.isEmpty(filter);
-                final String query = isFilterEmpty ? null : filter.toString().toLowerCase();
-
-                for (int x = 0; x < expandableList.groups.size(); ++x) {
-                    final ExpandableGroup expandableGroup = expandableList.groups.get(x);
-                    final List<FollowModel> items = expandableGroup.getItems(false);
-                    final int itemCount = expandableGroup.getItemCount(false);
-
-                    for (int i = 0; i < itemCount; ++i) {
-                        final FollowModel followModel = items.get(i);
-
-                        if (isFilterEmpty) followModel.setShown(true);
-                        else followModel.setShown(hasKey(query, followModel.getUsername(), followModel.getFullName()));
-                    }
+            final List<User> filteredItems = new ArrayList<User>();
+            if (expandableListOriginal.groups == null || TextUtils.isEmpty(filter)) return null;
+            final String query = filter.toString().toLowerCase();
+            final ArrayList<ExpandableGroup> groups = new ArrayList<ExpandableGroup>();
+            for (int x = 0; x < expandableListOriginal.groups.size(); ++x) {
+                final ExpandableGroup expandableGroup = expandableListOriginal.groups.get(x);
+                final String title = expandableGroup.getTitle();
+                final List<User> items = expandableGroup.getItems();
+                if (items != null) {
+                    final List<User> toReturn = items.stream()
+                            .filter(u -> hasKey(query, u.getUsername(), u.getFullName()))
+                            .collect(Collectors.toList());
+                    groups.add(new ExpandableGroup(title, toReturn));
                 }
             }
-            return null;
+            final FilterResults filterResults = new FilterResults();
+            filterResults.values = new ExpandableList(groups, expandableList.expandedGroupIndexes);
+            return filterResults;
         }
 
         private boolean hasKey(final String key, final String username, final String name) {
@@ -60,15 +66,20 @@ public final class FollowAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         @Override
         protected void publishResults(final CharSequence constraint, final FilterResults results) {
+            if (results == null) {
+                expandableList = expandableListOriginal;
+            }
+            else {
+                final ExpandableList filteredList = (ExpandableList) results.values;
+                expandableList = filteredList;
+            }
             notifyDataSetChanged();
         }
     };
-    private final View.OnClickListener onClickListener;
-    private final ExpandableList expandableList;
-    private final boolean hasManyGroups;
 
     public FollowAdapter(final View.OnClickListener onClickListener, @NonNull final ArrayList<ExpandableGroup> groups) {
-        this.expandableList = new ExpandableList(groups);
+        this.expandableListOriginal = new ExpandableList(groups);
+        expandableList = this.expandableListOriginal;
         this.onClickListener = onClickListener;
         this.hasManyGroups = groups.size() > 1;
     }
@@ -104,7 +115,7 @@ public final class FollowAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
             gvh.toggle(isGroupExpanded(group));
             return;
         }
-        final FollowModel model = group.getItems(true).get(hasManyGroups ? listPos.childPos : position);
+        final User model = group.getItems().get(hasManyGroups ? listPos.childPos : position);
         ((FollowsViewHolder) holder).bind(model, onClickListener);
     }
 
@@ -124,7 +135,7 @@ public final class FollowAdapter extends RecyclerView.Adapter<RecyclerView.ViewH
 
         final int groupPos = listPosition.groupPos;
         final int positionStart = expandableList.getFlattenedGroupIndex(listPosition) + 1;
-        final int positionEnd = expandableList.groups.get(groupPos).getItemCount(true);
+        final int positionEnd = expandableList.groups.get(groupPos).getItemCount();
 
         final boolean isExpanded = expandableList.expandedGroupIndexes[groupPos];
         expandableList.expandedGroupIndexes[groupPos] = !isExpanded;

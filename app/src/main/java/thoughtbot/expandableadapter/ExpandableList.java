@@ -1,6 +1,7 @@
 package thoughtbot.expandableadapter;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 
 import java.util.ArrayList;
 
@@ -13,6 +14,13 @@ public final class ExpandableList {
         this.groups = groups;
         this.groupsSize = groups.size();
         this.expandedGroupIndexes = new boolean[groupsSize];
+    }
+
+    public ExpandableList(@NonNull final ArrayList<ExpandableGroup> groups,
+                          @Nullable final boolean[] expandedGroupIndexes) {
+        this.groups = groups;
+        this.groupsSize = groups.size();
+        this.expandedGroupIndexes = expandedGroupIndexes;
     }
 
     public int getVisibleItemCount() {
@@ -36,7 +44,7 @@ public final class ExpandableList {
     }
 
     private int numberOfVisibleItemsInGroup(final int group) {
-        return expandedGroupIndexes[group] ? groups.get(group).getItemCount(true) + 1 : 1;
+        return expandedGroupIndexes[group] ? groups.get(group).getItemCount() + 1 : 1;
     }
 
     public int getFlattenedGroupIndex(@NonNull final ExpandableListPosition listPosition) {

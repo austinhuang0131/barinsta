@@ -1,15 +1,14 @@
 package thoughtbot.expandableadapter;
 
-import java.util.ArrayList;
 import java.util.List;
 
-import awais.instagrabber.models.FollowModel;
+import awais.instagrabber.repositories.responses.User;
 
 public class ExpandableGroup {
     private final String title;
-    private final List<FollowModel> items;
+    private final List<User> items;
 
-    public ExpandableGroup(final String title, final List<FollowModel> items) {
+    public ExpandableGroup(final String title, final List<User> items) {
         this.title = title;
         this.items = items;
     }
@@ -18,22 +17,13 @@ public class ExpandableGroup {
         return title;
     }
 
-    public List<FollowModel> getItems(final boolean filtered) {
-        if (!filtered) return items;
-        final ArrayList<FollowModel> followModels = new ArrayList<>();
-        for (final FollowModel followModel : items) if (followModel.isShown()) followModels.add(followModel);
-        return followModels;
+    public List<User> getItems() {
+        return items;
     }
 
-    public int getItemCount(final boolean filtered) {
+    public int getItemCount() {
         if (items != null) {
-            final int size = items.size();
-            if (filtered) {
-                int finalSize = 0;
-                for (int i = 0; i < size; ++i) if (items.get(i).isShown()) ++finalSize;
-                return finalSize;
-            }
-            return size;
+            return items.size();
         }
         return 0;
     }

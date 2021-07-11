@@ -15,7 +15,6 @@ import awais.instagrabber.repositories.requests.StoryViewerOptions
 import awais.instagrabber.repositories.responses.FriendshipStatus
 import awais.instagrabber.repositories.responses.User
 import awais.instagrabber.repositories.responses.stories.Story
-import awais.instagrabber.repositories.responses.stories.StoryMedia
 import awais.instagrabber.webservices.*
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.json.JSONException
@@ -320,13 +319,13 @@ internal class ProfileFragmentViewModelTest {
                 "username" to testPublicUser.username
             )
         )
-        val testUserStories = listOf(StoryMedia())
+        val testUserStories = Story()
         val testUserHighlights = listOf(Story())
         val userRepository = object : UserRepository(UserServiceAdapter()) {
             override suspend fun getUsernameInfo(username: String): User = testPublicUser
         }
         val storiesRepository = object : StoriesRepository(StoriesServiceAdapter()) {
-            override suspend fun getStories(options: StoryViewerOptions): List<StoryMedia> = testUserStories
+            override suspend fun getStories(options: StoryViewerOptions): Story = testUserStories
             override suspend fun fetchHighlights(profileId: Long): List<Story> = testUserHighlights
         }
         val viewModel = ProfileFragmentViewModel(

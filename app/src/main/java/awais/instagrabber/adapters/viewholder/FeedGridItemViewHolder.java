@@ -49,7 +49,7 @@ public class FeedGridItemViewHolder extends RecyclerView.ViewHolder {
                      final boolean selected) {
         itemView.setOnClickListener(v -> {
             if (!selectionModeActive && feedItemCallback != null) {
-                feedItemCallback.onPostClick(media, binding.profilePic, binding.postImage);
+                feedItemCallback.onPostClick(media);
                 return;
             }
             if (selectionModeActive && adapterSelectionCallback != null) {

@@ -37,7 +37,9 @@ class SettingsHelper(context: Context) {
     }
 
     private fun getStringDefault(@StringSettings key: String): String {
-        if (PreferenceKeys.DATE_TIME_FORMAT == key) return "hh:mm:ss a 'on' dd-MM-yyyy"
+        if (PreferenceKeys.DATE_TIME_FORMAT == key) {
+            return Constants.defaultDateTimeFormat
+        }
         return if (PreferenceKeys.DATE_TIME_SELECTION == key) "0;3;0" else ""
     }
 
@@ -119,7 +121,7 @@ class SettingsHelper(context: Context) {
         PreferenceKeys.DOWNLOAD_PREPEND_USER_NAME,
         PreferenceKeys.AUTOPLAY_VIDEOS_STORIES,
         PreferenceKeys.MUTED_VIDEOS,
-        PreferenceKeys.SHOW_CAPTIONS,
+//        PreferenceKeys.SHOW_CAPTIONS,
         PreferenceKeys.CUSTOM_DATE_TIME_FORMAT_ENABLED,
         PreferenceKeys.MARK_AS_SEEN,
         PreferenceKeys.DM_MARK_AS_SEEN,
@@ -135,6 +137,7 @@ class SettingsHelper(context: Context) {
         PreferenceKeys.PLAY_IN_BACKGROUND,
         PreferenceKeys.PREF_SHOWN_COUNT_TOOLTIP,
         PreferenceKeys.PREF_SEARCH_FOCUS_KEYBOARD,
+        PreferenceKeys.PREF_STORY_SHOW_LIST,
         PreferenceKeys.PREF_AUTO_BACKUP_ENABLED
     )
     annotation class BooleanSettings

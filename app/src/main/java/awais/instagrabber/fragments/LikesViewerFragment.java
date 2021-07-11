@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -19,7 +20,6 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 
 import java.util.List;
 
-import awais.instagrabber.R;
 import awais.instagrabber.adapters.LikesAdapter;
 import awais.instagrabber.customviews.helpers.RecyclerLazyLoader;
 import awais.instagrabber.databinding.FragmentLikesBinding;
@@ -55,9 +55,12 @@ public final class LikesViewerFragment extends BottomSheetDialogFragment impleme
                 final Object tag = v.getTag();
                 if (tag instanceof User) {
                     User model = (User) tag;
-                    final Bundle bundle = new Bundle();
-                    bundle.putString("username", "@" + model.getUsername());
-                    NavHostFragment.findNavController(LikesViewerFragment.this).navigate(R.id.action_global_profileFragment, bundle);
+                    try {
+                        final NavDirections action = LikesViewerFragmentDirections.actionToProfile().setUsername(model.getUsername());
+                        NavHostFragment.findNavController(LikesViewerFragment.this).navigate(action);
+                    } catch (Exception e) {
+                        Log.e(TAG, "onSuccess: ", e);
+                    }
                 }
             });
             binding.rvLikes.setAdapter(likesAdapter);
@@ -84,9 +87,12 @@ public final class LikesViewerFragment extends BottomSheetDialogFragment impleme
                 final Object tag = v.getTag();
                 if (tag instanceof User) {
                     User model = (User) tag;
-                    final Bundle bundle = new Bundle();
-                    bundle.putString("username", "@" + model.getUsername());
-                    NavHostFragment.findNavController(LikesViewerFragment.this).navigate(R.id.action_global_profileFragment, bundle);
+                    try {
+                        final NavDirections action = LikesViewerFragmentDirections.actionToProfile().setUsername(model.getUsername());
+                        NavHostFragment.findNavController(LikesViewerFragment.this).navigate(action);
+                    } catch (Exception e) {
+                        Log.e(TAG, "onSuccess: ", e);
+                    }
                 }
             });
             binding.rvLikes.setAdapter(likesAdapter);

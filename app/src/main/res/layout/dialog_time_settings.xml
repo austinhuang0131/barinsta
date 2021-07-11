@@ -33,27 +33,29 @@
                     android:gravity="center" />
             </LinearLayout>
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/custom_format_field"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:visibility="gone">
+                android:visibility="gone"
+                app:counterEnabled="false"
+                app:counterMaxLength="50"
+                app:endIconDrawable="@drawable/ic_outline_info_24"
+                app:endIconMode="custom"
+                app:hintEnabled="false"
+                tools:visibility="visible">
 
-                <androidx.appcompat.widget.AppCompatEditText
-                    android:id="@+id/etCustomFormat"
-                    android:layout_width="0dp"
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/custom_format_edit_text"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:enabled="false" />
+                    android:autofillHints="no"
+                    android:inputType="text"
+                    android:maxLength="50"
+                    android:padding="16dp"
+                    tools:text="test" />
 
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnInfo"
-                    style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    app:srcCompat="@drawable/ic_outline_info_24" />
-            </LinearLayout>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <FrameLayout
                 android:id="@+id/customPanel"

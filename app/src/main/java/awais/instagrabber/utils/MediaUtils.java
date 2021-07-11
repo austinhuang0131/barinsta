@@ -15,48 +15,23 @@ import java.io.FileDescriptor;
 
 public final class MediaUtils {
     private static final String TAG = MediaUtils.class.getSimpleName();
-    private static final String[] PROJECTION_VIDEO = {
-            MediaStore.Video.Media.DURATION,
-            MediaStore.Video.Media.WIDTH,
-            MediaStore.Video.Media.HEIGHT,
-            MediaStore.Video.Media.SIZE
-    };
-    private static final String[] PROJECTION_AUDIO = {
-            MediaStore.Audio.Media.DURATION,
-            MediaStore.Audio.Media.SIZE
-    };
 
     public static void getVideoInfo(@NonNull final ContentResolver contentResolver,
                                     @NonNull final Uri uri,
                                     @NonNull final OnInfoLoadListener<VideoInfo> listener) {
-        AppExecutors.INSTANCE.getTasksThread().submit(() -> {
-            try (Cursor cursor = MediaStore.Video.query(contentResolver, uri, PROJECTION_VIDEO)) {
-                if (cursor == null) {
-                    listener.onLoad(null);
-                    return;
-                }
-                int durationColumn = cursor.getColumnIndex(MediaStore.Video.Media.DURATION);
-                int widthColumn = cursor.getColumnIndex(MediaStore.Video.Media.WIDTH);
-                int heightColumn = cursor.getColumnIndex(MediaStore.Video.Media.HEIGHT);
-                int sizeColumn = cursor.getColumnIndex(MediaStore.Video.Media.SIZE);
-                if (cursor.moveToNext()) {
-                    listener.onLoad(new VideoInfo(
-                            cursor.getLong(durationColumn),
-                            cursor.getInt(widthColumn),
-                            cursor.getInt(heightColumn),
-                            cursor.getLong(sizeColumn)
-                    ));
-                }
-            } catch (Exception e) {
-                Log.e(TAG, "getVideoInfo: ", e);
-                listener.onFailure(e);
-            }
-        });
+        getInfo(contentResolver, uri, listener, true);
     }
 
     public static void getVoiceInfo(@NonNull final ContentResolver contentResolver,
                                     @NonNull final Uri uri,
                                     @NonNull final OnInfoLoadListener<VideoInfo> listener) {
+        getInfo(contentResolver, uri, listener, false);
+    }
+
+    private static void getInfo(@NonNull final ContentResolver contentResolver,
+                                @NonNull final Uri uri,
+                                @NonNull final OnInfoLoadListener<VideoInfo> listener,
+                                @NonNull final Boolean isVideo) {
         AppExecutors.INSTANCE.getTasksThread().submit(() -> {
             try (ParcelFileDescriptor parcelFileDescriptor = contentResolver.openFileDescriptor(uri, "r")) {
                 if (parcelFileDescriptor == null) {
@@ -68,6 +43,23 @@ public final class MediaUtils {
                 mediaMetadataRetriever.setDataSource(fileDescriptor);
                 String duration = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_DURATION);
                 if (TextUtils.isEmpty(duration)) duration = "0";
+                if (isVideo) {
+                    String width = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_WIDTH);
+                    if (TextUtils.isEmpty(width)) width = "1";
+                    String height = mediaMetadataRetriever.extractMetadata(MediaMetadataRetriever.METADATA_KEY_VIDEO_HEIGHT);
+                    if (TextUtils.isEmpty(height)) height = "1";
+                    final Cursor cursor = contentResolver.query(uri, new String[]{MediaStore.Video.Media.SIZE}, null, null, null);
+                    cursor.moveToFirst();
+                    final long fileSize = cursor.getLong(0);
+                    cursor.close();
+                    listener.onLoad(new VideoInfo(
+                            Long.parseLong(duration),
+                            Integer.valueOf(width),
+                            Integer.valueOf(height),
+                            fileSize
+                    ));
+                    return;
+                }
                 listener.onLoad(new VideoInfo(
                         Long.parseLong(duration),
                         0,
@@ -75,7 +67,7 @@ public final class MediaUtils {
                         0
                 ));
             } catch (Exception e) {
-                Log.e(TAG, "getVoiceInfo: ", e);
+                Log.e(TAG, "getInfo: ", e);
                 listener.onFailure(e);
             }
         });

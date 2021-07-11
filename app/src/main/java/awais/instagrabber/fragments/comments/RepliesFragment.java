@@ -83,8 +83,13 @@ public class RepliesFragment extends Fragment {
 
     @Override
     public Animation onCreateAnimation(int transit, boolean enter, int nextAnim) {
-        if (!enter || nextAnim == 0) {
-            return super.onCreateAnimation(transit, enter, nextAnim);
+        if (!enter) {
+            return super.onCreateAnimation(transit, false, nextAnim);
+        }
+        if (nextAnim == 0) {
+            setupList();
+            setupObservers();
+            return super.onCreateAnimation(transit, true, nextAnim);
         }
         final Animation animation = AnimationUtils.loadAnimation(getContext(), nextAnim);
         animation.setAnimationListener(new Animation.AnimationListener() {
@@ -185,18 +190,22 @@ public class RepliesFragment extends Fragment {
     private void setupAdapter(final long currentUserId) {
         final Context context = getContext();
         if (context == null) return;
-        commentsAdapter = new CommentsAdapter(currentUserId,
-                                              true,
-                                              Helper.getCommentCallback(context,
-                                                      getViewLifecycleOwner(),
-                                                      getNavController(),
-                                                      viewModel,
-                                                      (comment, focusInput) -> {
-                                                           viewModel.setReplyTo(comment);
-                                                           binding.commentText.setText(String.format("@%s ", comment.getUser().getUsername()));
-                                                           if (focusInput) Utils.showKeyboard(binding.commentText);
-                                                           return null;
-                                                      }));
+        commentsAdapter = new CommentsAdapter(
+                currentUserId,
+                true,
+                Helper.getCommentCallback(
+                        context,
+                        getViewLifecycleOwner(),
+                        getNavController(),
+                        viewModel,
+                        (comment, focusInput) -> {
+                            viewModel.setReplyTo(comment);
+                            binding.commentText.setText(String.format("@%s ", comment.getUser().getUsername()));
+                            if (focusInput) Utils.showKeyboard(binding.commentText);
+                            return null;
+                        }
+                )
+        );
         binding.comments.setAdapter(commentsAdapter);
         final Resource<List<Comment>> listResource = viewModel.getReplyList().getValue();
         commentsAdapter.submitList(listResource != null ? listResource.data : Collections.emptyList());

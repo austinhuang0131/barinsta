@@ -13,7 +13,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.FragmentNavigator;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -26,7 +26,6 @@ import awais.instagrabber.activities.MainActivity;
 import awais.instagrabber.adapters.DiscoverTopicsAdapter;
 import awais.instagrabber.customviews.helpers.GridSpacingItemDecoration;
 import awais.instagrabber.databinding.FragmentDiscoverBinding;
-import awais.instagrabber.fragments.PostViewV2Fragment;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.discover.TopicCluster;
 import awais.instagrabber.repositories.responses.discover.TopicalExploreFeedResponse;
@@ -98,11 +97,14 @@ public class DiscoverFragment extends Fragment implements SwipeRefreshLayout.OnR
         binding.topicsRecyclerView.addItemDecoration(new GridSpacingItemDecoration(Utils.convertDpToPx(2)));
         final DiscoverTopicsAdapter.OnTopicClickListener otcl = new DiscoverTopicsAdapter.OnTopicClickListener() {
             public void onTopicClick(final TopicCluster topicCluster, final View cover, final int titleColor, final int backgroundColor) {
-                final FragmentNavigator.Extras.Builder builder = new FragmentNavigator.Extras.Builder()
-                        .addSharedElement(cover, "cover-" + topicCluster.getId());
-                final DiscoverFragmentDirections.ActionDiscoverFragmentToTopicPostsFragment action = DiscoverFragmentDirections
-                        .actionDiscoverFragmentToTopicPostsFragment(topicCluster, titleColor, backgroundColor);
-                NavHostFragment.findNavController(DiscoverFragment.this).navigate(action, builder.build());
+                try {
+                    final FragmentNavigator.Extras.Builder builder = new FragmentNavigator.Extras.Builder()
+                            .addSharedElement(cover, "cover-" + topicCluster.getId());
+                    final NavDirections action = DiscoverFragmentDirections.actionToTopicPosts(topicCluster, titleColor, backgroundColor);
+                    NavHostFragment.findNavController(DiscoverFragment.this).navigate(action, builder.build());
+                } catch (Exception e) {
+                    Log.e(TAG, "onTopicClick: ", e);
+                }
             }
 
             public void onTopicLongClick(final Media coverMedia) {
@@ -123,11 +125,9 @@ public class DiscoverFragment extends Fragment implements SwipeRefreshLayout.OnR
                                 } catch (Throwable ignored) {}
                                 return;
                             }
-                            final NavController navController = NavHostFragment.findNavController(DiscoverFragment.this);
-                            final Bundle bundle = new Bundle();
-                            bundle.putSerializable(PostViewV2Fragment.ARG_MEDIA, media);
                             try {
-                                navController.navigate(R.id.action_global_post_view, bundle);
+                                final NavDirections action = DiscoverFragmentDirections.actionToPost(media, 0);
+                                NavHostFragment.findNavController(DiscoverFragment.this).navigate(action);
                                 alertDialog.dismiss();
                             } catch (Exception e) {
                                 Log.e(TAG, "onTopicLongClick: ", e);
@@ -148,11 +148,13 @@ public class DiscoverFragment extends Fragment implements SwipeRefreshLayout.OnR
             public void onSuccess(final TopicalExploreFeedResponse result) {
                 if (result == null) return;
                 final List<TopicCluster> clusters = result.getClusters();
+                if (clusters == null || result.getItems() == null) return;
                 binding.swipeRefreshLayout.setRefreshing(false);
                 if (clusters.size() == 1 && result.getItems().size() > 0) {
                     final TopicCluster cluster = clusters.get(0);
-                    if (cluster.getCoverMedia() == null)
+                    if (cluster.getCoverMedia() == null) {
                         cluster.setCoverMedia(result.getItems().get(0).getMedia());
+                    }
                     topicClusterViewModel.getList().postValue(Collections.singletonList(cluster));
                     return;
                 }

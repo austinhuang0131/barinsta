@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:layout_height="wrap_content">
 
-    <include
-        android:id="@+id/item_feed_top"
-        layout="@layout/item_feed_top" />
+    <include layout="@layout/item_feed_top" />
 
     <awais.instagrabber.customviews.drawee.ZoomableDraweeView
         android:id="@+id/imageViewer"
@@ -17,9 +15,9 @@
         android:clickable="true"
         android:focusable="true"
         app:actualImageScaleType="fitCenter"
-        app:viewAspectRatio="1" />
+        app:viewAspectRatio="1"
+        app:layout_constraintTop_toBottomOf="@id/top_barrier"
+        app:layout_constraintBottom_toTopOf="@id/buttons_top_barrier"/>
 
-    <include
-        android:id="@+id/item_feed_bottom"
-        layout="@layout/item_feed_bottom" />
-</LinearLayout>
+    <include layout="@layout/layout_post_view_bottom" />
+</androidx.constraintlayout.widget.ConstraintLayout>

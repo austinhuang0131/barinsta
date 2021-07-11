@@ -8,6 +8,9 @@
     <item name="share_dm" type="id" />
     <item name="download_current" type="id" />
     <item name="download_all" type="id" />
+
+    <item name="root_nav_graph" type="id" />
+
     <!-- story stickers -->
     <item name="mentions" type="id" />
     <item name="spotify" type="id" />

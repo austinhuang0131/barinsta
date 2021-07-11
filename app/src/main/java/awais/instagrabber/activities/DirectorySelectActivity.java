@@ -1,5 +1,7 @@
 package awais.instagrabber.activities;
 
+import android.annotation.SuppressLint;
+import android.content.ActivityNotFoundException;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
@@ -66,9 +68,17 @@ public class DirectorySelectActivity extends BaseLanguageActivity {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O && initialUri != null) {
             intent.putExtra(DocumentsContract.EXTRA_INITIAL_URI, initialUri);
         }
-        startActivityForResult(intent, SELECT_DIR_REQUEST_CODE);
+        try {
+            startActivityForResult(intent, SELECT_DIR_REQUEST_CODE);
+        } catch (ActivityNotFoundException e) {
+            Log.e(TAG, "openDirectoryChooser: ", e);
+            showErrorDialog(getString(R.string.no_directory_picker_activity));
+        } catch (Exception e) {
+            Log.e(TAG, "openDirectoryChooser: ", e);
+        }
     }
 
+    @SuppressLint("StringFormatInvalid")
     @Override
     protected void onActivityResult(final int requestCode, final int resultCode, @Nullable final Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

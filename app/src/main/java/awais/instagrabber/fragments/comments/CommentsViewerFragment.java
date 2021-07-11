@@ -15,6 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
@@ -34,9 +35,11 @@ import awais.instagrabber.R;
 import awais.instagrabber.adapters.CommentsAdapter;
 import awais.instagrabber.customviews.helpers.RecyclerLazyLoader;
 import awais.instagrabber.databinding.FragmentCommentsBinding;
+import awais.instagrabber.fragments.settings.PreferenceKeys;
 import awais.instagrabber.models.Comment;
 import awais.instagrabber.models.Resource;
 import awais.instagrabber.utils.TextUtils;
+import awais.instagrabber.utils.Utils;
 import awais.instagrabber.viewmodels.AppStateViewModel;
 import awais.instagrabber.viewmodels.CommentsViewerViewModel;
 
@@ -78,7 +81,7 @@ public final class CommentsViewerFragment extends BottomSheetDialogFragment {
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable final Bundle savedInstanceState) {
-        return new BottomSheetDialog(getContext(), getTheme()) {
+        return new BottomSheetDialog(requireContext(), getTheme()) {
             @Override
             public void onBackPressed() {
                 if (showingReplies) {
@@ -205,12 +208,15 @@ public final class CommentsViewerFragment extends BottomSheetDialogFragment {
                 viewModel,
                 (comment, focusInput) -> {
                     if (comment == null) return null;
-                    final RepliesFragment repliesFragment = RepliesFragment.newInstance(comment, focusInput == null ? false : focusInput);
-                    getChildFragmentManager().beginTransaction()
-                                             .setCustomAnimations(R.anim.slide_left, R.anim.slide_right, 0, R.anim.slide_right)
-                                             .add(R.id.replies_container_view, repliesFragment)
-                                             .addToBackStack(RepliesFragment.TAG)
-                                             .commit();
+                    final boolean disableTransition = Utils.settingsHelper.getBoolean(PreferenceKeys.PREF_DISABLE_SCREEN_TRANSITIONS);
+                    final RepliesFragment repliesFragment = RepliesFragment.newInstance(comment, focusInput != null && focusInput);
+                    final FragmentTransaction transaction = getChildFragmentManager().beginTransaction();
+                    if (!disableTransition) {
+                        transaction.setCustomAnimations(R.anim.slide_left, R.anim.slide_right, 0, R.anim.slide_right);
+                    }
+                    transaction.add(R.id.replies_container_view, repliesFragment)
+                               .addToBackStack(RepliesFragment.TAG)
+                               .commit();
                     showingReplies = true;
                     return null;
                 }));

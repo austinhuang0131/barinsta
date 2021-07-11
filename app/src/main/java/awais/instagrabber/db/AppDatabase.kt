@@ -132,7 +132,9 @@ abstract class AppDatabase : RoomDatabase() {
                 db.execSQL("ALTER TABLE " + Favorite.TABLE_NAME + "_backup RENAME TO " + Favorite.TABLE_NAME)
             }
         }
-        private val MIGRATION_4_5: Migration = object : Migration(4, 5) {
+
+        @JvmField
+        val MIGRATION_4_5: Migration = object : Migration(4, 5) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("CREATE TABLE IF NOT EXISTS `dm_last_notified` (" +
                                  "`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +
@@ -142,7 +144,9 @@ abstract class AppDatabase : RoomDatabase() {
                 database.execSQL("CREATE UNIQUE INDEX IF NOT EXISTS `index_dm_last_notified_thread_id` ON `dm_last_notified` (`thread_id`)")
             }
         }
-        private val MIGRATION_5_6: Migration = object : Migration(5, 6) {
+
+        @JvmField
+        val MIGRATION_5_6: Migration = object : Migration(5, 6) {
             override fun migrate(database: SupportSQLiteDatabase) {
                 database.execSQL("CREATE TABLE IF NOT EXISTS `recent_searches` (" +
                                  "`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, " +

@@ -1,9 +1,9 @@
 package awais.instagrabber.repositories.responses.notification
 
-class NotificationCounts(val commentLikesCount: Int,
-                         val userTagsCount: Int,
-                         val likesCount: Int,
-                         val commentsCount: Int,
-                         val relationshipsCount: Int,
-                         val pOYCount: Int,
-                         val requestsCount: Int)
+class NotificationCounts(val commentLikes: Int,
+                         val usertags: Int,
+                         val likes: Int,
+                         val comments: Int,
+                         val relationships: Int,
+                         val photosOfYou: Int,
+                         val requests: Int)

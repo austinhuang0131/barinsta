@@ -35,6 +35,7 @@ import awais.instagrabber.utils.Constants;
 import awais.instagrabber.utils.CookieUtils;
 import awais.instagrabber.utils.CoroutineUtilsKt;
 import awais.instagrabber.utils.FlavorTown;
+import awais.instagrabber.utils.NavigationHelperKt;
 import awais.instagrabber.utils.ProcessPhoenix;
 import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
@@ -174,14 +175,18 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
             boolean showActivity = true;
             boolean showExplore = false;
             if (activity != null) {
-                showActivity = !Utils.isNavRootInCurrentTabs("notification_viewer_nav_graph");
-                showExplore = !Utils.isNavRootInCurrentTabs("discover_nav_graph");
+                showActivity = !NavigationHelperKt.isNavRootInCurrentTabs("notification_viewer_nav_graph");
+                showExplore = !NavigationHelperKt.isNavRootInCurrentTabs("discover_nav_graph");
             }
             if (showActivity) {
                 screen.addPreference(getPreference(R.string.action_notif, R.drawable.ic_not_liked, preference -> {
                     if (isSafeToNavigate(navController)) {
-                        final NavDirections navDirections = MorePreferencesFragmentDirections.actionGlobalNotificationsViewerFragment("notif");
-                        navController.navigate(navDirections);
+                        try {
+                            final NavDirections navDirections = MorePreferencesFragmentDirections.actionToNotifications().setType("notif");
+                            navController.navigate(navDirections);
+                        } catch (Exception e) {
+                            Log.e(TAG, "setupPreferenceScreen: ", e);
+                        }
                     }
                     return true;
                 }));
@@ -189,7 +194,12 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
             if (showExplore) {
                 screen.addPreference(getPreference(R.string.title_discover, R.drawable.ic_explore_24, preference -> {
                     if (isSafeToNavigate(navController)) {
-                        navController.navigate(R.id.discover_nav_graph);
+                        try {
+                            final NavDirections navDirections = MorePreferencesFragmentDirections.actionToDiscover();
+                            navController.navigate(navDirections);
+                        } catch (Exception e) {
+                            Log.e(TAG, "setupPreferenceScreen: ", e);
+                        }
                     }
                     return true;
                 }));
@@ -197,15 +207,23 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
 
             screen.addPreference(getPreference(R.string.action_ayml, R.drawable.ic_suggested_users, preference -> {
                 if (isSafeToNavigate(navController)) {
-                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionGlobalNotificationsViewerFragment("ayml");
-                    navController.navigate(navDirections);
+                    try {
+                        final NavDirections navDirections = MorePreferencesFragmentDirections.actionToNotifications().setType("ayml");
+                        navController.navigate(navDirections);
+                    } catch (Exception e) {
+                        Log.e(TAG, "setupPreferenceScreen: ", e);
+                    }
                 }
                 return true;
             }));
             screen.addPreference(getPreference(R.string.action_archive, R.drawable.ic_archive, preference -> {
                 if (isSafeToNavigate(navController)) {
-                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionGlobalStoryListViewerFragment("archive");
-                    navController.navigate(navDirections);
+                    try {
+                        final NavDirections navDirections = MorePreferencesFragmentDirections.actionToStoryList("archive");
+                        navController.navigate(navDirections);
+                    } catch (Exception e) {
+                        Log.e(TAG, "setupPreferenceScreen: ", e);
+                    }
                 }
                 return true;
             }));
@@ -214,13 +232,17 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
         // Check if favorites has been added as a tab. And if so, do not add in this list
         boolean showFavorites = true;
         if (activity != null) {
-            showFavorites = !Utils.isNavRootInCurrentTabs("favorites_nav_graph");
+            showFavorites = !NavigationHelperKt.isNavRootInCurrentTabs("favorites_nav_graph");
         }
         if (showFavorites) {
             screen.addPreference(getPreference(R.string.title_favorites, R.drawable.ic_star_24, preference -> {
                 if (isSafeToNavigate(navController)) {
-                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToFavoritesFragment();
-                    navController.navigate(navDirections);
+                    try {
+                        final NavDirections navDirections = MorePreferencesFragmentDirections.actionToFavorites();
+                        navController.navigate(navDirections);
+                    } catch (Exception e) {
+                        Log.e(TAG, "setupPreferenceScreen: ", e);
+                    }
                 }
                 return true;
             }));
@@ -229,36 +251,50 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
         screen.addPreference(getDivider(context));
         screen.addPreference(getPreference(R.string.action_settings, R.drawable.ic_outline_settings_24, preference -> {
             if (isSafeToNavigate(navController)) {
-                final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToSettingsPreferencesFragment();
-                navController.navigate(navDirections);
+                try {
+                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionToSettings();
+                    navController.navigate(navDirections);
+                } catch (Exception e) {
+                    Log.e(TAG, "setupPreferenceScreen: ", e);
+                }
             }
             return true;
         }));
         screen.addPreference(getPreference(R.string.backup_and_restore, R.drawable.ic_settings_backup_restore_24, preference -> {
             if (isSafeToNavigate(navController)) {
-                final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToBackupPreferencesFragment();
-                navController.navigate(navDirections);
+                try {
+                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionToBackup();
+                    navController.navigate(navDirections);
+                } catch (Exception e) {
+                    Log.e(TAG, "setupPreferenceScreen: ", e);
+                }
             }
             return true;
         }));
         screen.addPreference(getPreference(R.string.action_about, R.drawable.ic_outline_info_24, preference1 -> {
             if (isSafeToNavigate(navController)) {
-                final NavDirections navDirections = MorePreferencesFragmentDirections.actionMorePreferencesFragmentToAboutFragment();
-                navController.navigate(navDirections);
+                try {
+                    final NavDirections navDirections = MorePreferencesFragmentDirections.actionToAbout();
+                    navController.navigate(navDirections);
+                } catch (Exception e) {
+                    Log.e(TAG, "setupPreferenceScreen: ", e);
+                }
             }
             return true;
         }));
 
         screen.addPreference(getDivider(context));
-        screen.addPreference(getPreference(R.string.version,
-                                           BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")",
-                                           -1,
-                                           preference -> {
-                                               if (BuildConfig.isPre) return true;
-                                               if (activity == null) return false;
-                                               FlavorTown.updateCheck(activity, true);
-                                               return true;
-                                           }));
+        screen.addPreference(getPreference(
+                R.string.version,
+                BuildConfig.VERSION_NAME + " (" + BuildConfig.VERSION_CODE + ")",
+                -1,
+                preference -> {
+                    if (BuildConfig.isPre) return true;
+                    if (activity == null) return false;
+                    FlavorTown.updateCheck(activity, true);
+                    return true;
+                })
+        );
         screen.addPreference(getDivider(context));
 
         final Preference reminderPreference = getPreference(R.string.reminder, R.string.reminder_summary, R.drawable.ic_warning, null);
@@ -285,32 +321,33 @@ public class MorePreferencesFragment extends BasePreferencesFragment {
             // adds cookies to database for quick access
             final long uid = CookieUtils.getUserIdFromCookie(cookie);
             final UserRepository userRepository = UserRepository.Companion.getInstance();
-            userRepository.getUserInfo(uid, CoroutineUtilsKt.getContinuation((user, throwable) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
-                if (throwable != null) {
-                    Log.e(TAG, "Error fetching user info", throwable);
-                    return;
-                }
-                if (user != null) {
-                    accountRepository.insertOrUpdateAccount(
-                            uid,
-                            user.getUsername(),
-                            cookie,
-                            user.getFullName(),
-                            user.getProfilePicUrl(),
-                            CoroutineUtilsKt.getContinuation((account, throwable1) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
-                                if (throwable1 != null) {
-                                    Log.e(TAG, "onActivityResult: ", throwable1);
-                                    return;
-                                }
-                                AppExecutors.INSTANCE.getMainThread().execute(() -> {
-                                    final Context context = getContext();
-                                    if (context == null) return;
-                                    ProcessPhoenix.triggerRebirth(context);
-                                }, 200);
-                            }), Dispatchers.getIO())
-                    );
-                }
-            }), Dispatchers.getIO()));
+            userRepository
+                    .getUserInfo(uid, CoroutineUtilsKt.getContinuation((user, throwable) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
+                        if (throwable != null) {
+                            Log.e(TAG, "Error fetching user info", throwable);
+                            return;
+                        }
+                        if (user != null) {
+                            accountRepository.insertOrUpdateAccount(
+                                    uid,
+                                    user.getUsername(),
+                                    cookie,
+                                    user.getFullName(),
+                                    user.getProfilePicUrl(),
+                                    CoroutineUtilsKt.getContinuation((account, throwable1) -> AppExecutors.INSTANCE.getMainThread().execute(() -> {
+                                        if (throwable1 != null) {
+                                            Log.e(TAG, "onActivityResult: ", throwable1);
+                                            return;
+                                        }
+                                        AppExecutors.INSTANCE.getMainThread().execute(() -> {
+                                            final Context context = getContext();
+                                            if (context == null) return;
+                                            ProcessPhoenix.triggerRebirth(context);
+                                        }, 200);
+                                    }), Dispatchers.getIO())
+                            );
+                        }
+                    }), Dispatchers.getIO()));
         }
     }
 

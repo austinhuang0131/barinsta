@@ -8,16 +8,16 @@ import java.util.*
 
 // taken from my app TESV Console Codes
 object LocaleUtils {
-    private var defaultLocale: Locale? = null
+    private lateinit var defaultLocale: Locale
 
     @JvmStatic
-    var currentLocale: Locale? = null
+    lateinit var currentLocale: Locale
         private set
 
     @JvmStatic
     fun setLocale(baseContext: Context) {
         var baseContext1 = baseContext
-        if (defaultLocale == null) defaultLocale = Locale.getDefault()
+        defaultLocale = Locale.getDefault()
         if (baseContext1 is ContextThemeWrapper) baseContext1 = baseContext1.baseContext
         if (Utils.settingsHelper == null) Utils.settingsHelper = SettingsHelper(baseContext1)
         val appLanguageSettings = Utils.settingsHelper.getString(PreferenceKeys.APP_LANGUAGE)
@@ -30,7 +30,7 @@ object LocaleUtils {
             }
             else -> Locale(lang)
         }
-        currentLocale?.let {
+        currentLocale.let {
             Locale.setDefault(it)
             val res = baseContext1.resources
             val config = res.configuration
@@ -43,7 +43,7 @@ object LocaleUtils {
 
     @JvmStatic
     fun updateConfig(wrapper: ContextThemeWrapper) {
-        if (currentLocale == null) return
+        if (!this::currentLocale.isInitialized) return
         val configuration = Configuration()
         // configuration.locale = currentLocale
         configuration.setLocale(currentLocale)

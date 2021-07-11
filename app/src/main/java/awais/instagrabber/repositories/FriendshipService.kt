@@ -1,6 +1,7 @@
 package awais.instagrabber.repositories
 
 import awais.instagrabber.repositories.responses.FriendshipChangeResponse
+import awais.instagrabber.repositories.responses.FriendshipListFetchResponse
 import awais.instagrabber.repositories.responses.FriendshipRestrictResponse
 import retrofit2.http.*
 
@@ -25,7 +26,7 @@ interface FriendshipService {
         @Path("userId") userId: Long,
         @Path("type") type: String,  // following or followers
         @QueryMap(encoded = true) queryParams: Map<String, String>,
-    ): String
+    ): FriendshipListFetchResponse
 
     @FormUrlEncoded
     @POST("/api/v1/friendships/{action}/")

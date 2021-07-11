@@ -20,7 +20,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationManagerCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
 import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -49,8 +48,6 @@ import awais.instagrabber.webservices.MediaRepository;
 import awais.instagrabber.webservices.NewsService;
 import awais.instagrabber.webservices.ServiceCallback;
 import kotlinx.coroutines.Dispatchers;
-
-import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public final class NotificationsViewerFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener {
     private static final String TAG = "NotificationsViewer";
@@ -98,10 +95,14 @@ public final class NotificationsViewerFragment extends Fragment implements Swipe
             if (model.getType() == NotificationType.RESPONDED_STORY) {
                 final StoryViewerOptions options = StoryViewerOptions.forStory(
                         mediaId,
-                        model.getArgs().getUsername());
-                final Bundle bundle = new Bundle();
-                bundle.putSerializable("options", options);
-                NavHostFragment.findNavController(NotificationsViewerFragment.this).navigate(R.id.action_notifications_to_story, bundle);
+                        model.getArgs().getUsername()
+                );
+                try {
+                    final NavDirections action = NotificationsViewerFragmentDirections.actionToStory(options);
+                    NavHostFragment.findNavController(NotificationsViewerFragment.this).navigate(action);
+                } catch (Exception e) {
+                    Log.e(TAG, "onPreviewClick: ", e);
+                }
             } else {
                 final AlertDialog alertDialog = new AlertDialog.Builder(context)
                         .setCancelable(false)
@@ -116,14 +117,13 @@ public final class NotificationsViewerFragment extends Fragment implements Swipe
                                 Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                                 return;
                             }
-                            final NavController navController = NavHostFragment.findNavController(NotificationsViewerFragment.this);
-                            final Bundle bundle = new Bundle();
-                            bundle.putSerializable(PostViewV2Fragment.ARG_MEDIA, media);
                             try {
-                                navController.navigate(R.id.action_global_post_view, bundle);
-                                alertDialog.dismiss();
+                                final NavDirections action = NotificationsViewerFragmentDirections.actionToPost(media, 0);
+                                NavHostFragment.findNavController(NotificationsViewerFragment.this).navigate(action);
                             } catch (Exception e) {
                                 Log.e(TAG, "onSuccess: ", e);
+                            } finally {
+                                alertDialog.dismiss();
                             }
                         }), Dispatchers.getIO())
                 );
@@ -257,7 +257,7 @@ public final class NotificationsViewerFragment extends Fragment implements Swipe
         type = fragmentArgs.getType();
         targetId = fragmentArgs.getTargetId();
         final Context context = getContext();
-        CookieUtils.setupCookies(settingsHelper.getString(Constants.COOKIE));
+        CookieUtils.setupCookies(Utils.settingsHelper.getString(Constants.COOKIE));
         binding.swipeRefreshLayout.setOnRefreshListener(this);
         notificationViewModel = new ViewModelProvider(this).get(NotificationViewModel.class);
         final NotificationsAdapter adapter = new NotificationsAdapter(clickListener);
@@ -288,7 +288,11 @@ public final class NotificationsViewerFragment extends Fragment implements Swipe
     }
 
     private void openProfile(final String username) {
-        final NavDirections action = NotificationsViewerFragmentDirections.actionGlobalProfileFragment("@" + username);
-        NavHostFragment.findNavController(this).navigate(action);
+        try {
+            final NavDirections action = NotificationsViewerFragmentDirections.actionToProfile().setUsername(username);
+            NavHostFragment.findNavController(this).navigate(action);
+        } catch (Exception e) {
+            Log.e(TAG, "openProfile: ", e);
+        }
     }
 }

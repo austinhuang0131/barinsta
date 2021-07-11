@@ -100,7 +100,7 @@
         android:layout_height="48dp"
         android:enabled="false"
         android:visibility="visible"
-        app:icon="@drawable/ic_story_sticker"
+        app:icon="@drawable/ic_sticker_curved_outlines"
         app:iconGravity="textStart"
         app:iconPadding="0dp"
         app:iconSize="24dp"

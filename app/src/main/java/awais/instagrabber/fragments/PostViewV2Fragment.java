@@ -40,6 +40,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavBackStackEntry;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.transition.TransitionManager;
@@ -70,7 +71,6 @@ import java.util.List;
 import java.util.Set;
 
 import awais.instagrabber.R;
-import awais.instagrabber.UserSearchNavGraphDirections;
 import awais.instagrabber.activities.MainActivity;
 import awais.instagrabber.adapters.SliderCallbackAdapter;
 import awais.instagrabber.adapters.SliderItemsAdapter;
@@ -103,9 +103,7 @@ import awais.instagrabber.utils.TextUtils;
 import awais.instagrabber.utils.Utils;
 import awais.instagrabber.viewmodels.PostViewV2ViewModel;
 
-import static awais.instagrabber.fragments.HashTagFragment.ARG_HASHTAG;
 import static awais.instagrabber.fragments.settings.PreferenceKeys.PREF_SHOWN_COUNT_TOOLTIP;
-import static awais.instagrabber.utils.Utils.settingsHelper;
 
 public class PostViewV2Fragment extends Fragment implements EditTextDialogFragment.EditTextDialogFragmentCallback {
     private static final String TAG = "PostViewV2Fragment";
@@ -217,7 +215,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
     public void onPause() {
         super.onPause();
         // wasPaused = true;
-        if (settingsHelper.getBoolean(PreferenceKeys.PLAY_IN_BACKGROUND)) return;
+        if (Utils.settingsHelper.getBoolean(PreferenceKeys.PLAY_IN_BACKGROUND)) return;
         final Media media = viewModel.getMedia();
         if (media.getType() == null) return;
         switch (media.getType()) {
@@ -333,7 +331,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         viewModel.getLikeCount().observe(getViewLifecycleOwner(), count -> {
             bottom.likesCount.setNumber(getSafeCount(count));
             binding.getRoot().postDelayed(() -> bottom.likesCount.setAnimateChanges(true), 1000);
-            if (count > 1000 && !settingsHelper.getBoolean(PREF_SHOWN_COUNT_TOOLTIP)) {
+            if (count > 1000 && !Utils.settingsHelper.getBoolean(PREF_SHOWN_COUNT_TOOLTIP)) {
                 binding.getRoot().postDelayed(this::showCountTooltip, 1000);
             }
         });
@@ -392,7 +390,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                 .setDismissWhenOverlayClicked(false)
                 .build();
         balloon.showAlignBottom(bottom.likesCount);
-        settingsHelper.putBoolean(PREF_SHOWN_COUNT_TOOLTIP, true);
+        Utils.settingsHelper.putBoolean(PREF_SHOWN_COUNT_TOOLTIP, true);
         balloon.setOnBalloonOutsideTouchListener((view, motionEvent) -> {
             if (rect.contains((int) motionEvent.getRawX(), (int) motionEvent.getRawY())) {
                 bottom.likesCount.setShowAbbreviation(false);
@@ -431,12 +429,9 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
             if (user == null) return;
             final NavController navController = getNavController();
             if (navController == null) return;
-            final Bundle bundle = new Bundle();
-            bundle.putString("shortCode", media.getCode());
-            bundle.putString("postId", media.getPk());
-            bundle.putLong("postUserId", user.getPk());
             try {
-                navController.navigate(R.id.action_global_commentsViewerFragment, bundle);
+                final NavDirections action = PostViewV2FragmentDirections.actionToComments(media.getCode(), media.getPk(), user.getPk());
+                navController.navigate(action);
             } catch (Exception e) {
                 Log.e(TAG, "setupComment: ", e);
             }
@@ -445,9 +440,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
     }
 
     private void setupDownload() {
-        bottom.download.setOnClickListener(v -> {
-            DownloadUtils.showDownloadDialog(context, viewModel.getMedia(), sliderPosition, bottom.download);
-        });
+        bottom.download.setOnClickListener(v -> DownloadUtils.showDownloadDialog(context, viewModel.getMedia(), sliderPosition, bottom.download));
         TooltipCompat.setTooltipText(bottom.download, getString(R.string.action_download));
     }
 
@@ -470,10 +463,12 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         bottom.like.setOnLongClickListener(v -> {
             final NavController navController = getNavController();
             if (navController != null && viewModel.isLoggedIn()) {
-                final Bundle bundle = new Bundle();
-                bundle.putString("postId", viewModel.getMedia().getPk());
-                bundle.putBoolean("isComment", false);
-                navController.navigate(R.id.action_global_likesViewerFragment, bundle);
+                try {
+                    final NavDirections action = PostViewV2FragmentDirections.actionToLikes(viewModel.getMedia().getPk(), false);
+                    navController.navigate(action);
+                } catch (Exception e) {
+                    Log.e(TAG, "setupLike: ", e);
+                }
                 return true;
             }
             return true;
@@ -543,11 +538,14 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
             handleSaveUnsaveResourceLiveData(viewModel.toggleSave());
         });
         bottom.save.setOnLongClickListener(v -> {
-            final NavController navController = NavHostFragment.findNavController(this);
-            final Bundle bundle = new Bundle();
-            bundle.putBoolean("isSaving", true);
-            navController.navigate(R.id.action_global_savedCollectionsFragment, bundle);
-            return true;
+            try {
+                final NavDirections action = PostViewV2FragmentDirections.actionToSavedCollections().setIsSaving(true);
+                NavHostFragment.findNavController(this).navigate(action);
+                return true;
+            } catch (Exception e) {
+                Log.e(TAG, "setupSave: ", e);
+            }
+            return false;
         });
     }
 
@@ -668,11 +666,13 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         }
         final String postCaption = caption.getText();
         bottom.caption.addOnHashtagListener(autoLinkItem -> {
-            final NavController navController = NavHostFragment.findNavController(this);
-            final Bundle bundle = new Bundle();
-            final String originalText = autoLinkItem.getOriginalText().trim();
-            bundle.putString(ARG_HASHTAG, originalText);
-            navController.navigate(R.id.action_global_hashTagFragment, bundle);
+            try {
+                final String originalText = autoLinkItem.getOriginalText().trim();
+                final NavDirections action = PostViewV2FragmentDirections.actionToHashtag(originalText);
+                NavHostFragment.findNavController(this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "setupCaption: ", e);
+            }
         });
         bottom.caption.addOnMentionClickListener(autoLinkItem -> {
             final String originalText = autoLinkItem.getOriginalText().trim();
@@ -701,7 +701,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                 case ERROR:
                     bottom.translate.setEnabled(true);
                     String message = resource.message;
-                    if (TextUtils.isEmpty(resource.message)) {
+                    if (TextUtils.isEmpty(message)) {
                         message = getString(R.string.downloader_unknown_error);
                     }
                     final Snackbar snackbar = Snackbar.make(binding.getRoot(), message, Snackbar.LENGTH_INDEFINITE);
@@ -725,11 +725,14 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         binding.location.setText(locationName);
         binding.location.setVisibility(View.VISIBLE);
         binding.location.setOnClickListener(v -> {
-            final NavController navController = getNavController();
-            if (navController == null) return;
-            final Bundle bundle = new Bundle();
-            bundle.putLong("locationId", location.getPk());
-            navController.navigate(R.id.action_global_locationFragment, bundle);
+            try {
+                final NavController navController = getNavController();
+                if (navController == null) return;
+                final NavDirections action = PostViewV2FragmentDirections.actionToLocation(location.getPk());
+                navController.navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "setupLocation: ", e);
+            }
         });
     }
 
@@ -755,13 +758,14 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
                 popupMenu.setOnMenuItemClickListener(item -> {
                     final int itemId = item.getItemId();
                     if (itemId == R.id.share_dm) {
-                        final UserSearchNavGraphDirections.ActionGlobalUserSearch actionGlobalUserSearch = UserSearchFragmentDirections
-                                .actionGlobalUserSearch()
+                        if (profileModel.isPrivate()) Toast.makeText(context, R.string.share_private_post, Toast.LENGTH_SHORT).show();
+                        final PostViewV2FragmentDirections.ActionToUserSearch actionGlobalUserSearch = PostViewV2FragmentDirections
+                                .actionToUserSearch()
                                 .setTitle(getString(R.string.share))
                                 .setActionLabel(getString(R.string.send))
                                 .setShowGroups(true)
                                 .setMultiple(true)
-                                .setSearchMode(UserSearchFragment.SearchMode.RAVEN);
+                                .setSearchMode(UserSearchMode.RAVEN);
                         final NavController navController = NavHostFragment.findNavController(PostViewV2Fragment.this);
                         try {
                             navController.navigate(actionGlobalUserSearch);
@@ -1070,7 +1074,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         //     gestureDetector.onTouchEvent(event);
         //     return true;
         // });
-        final float vol = settingsHelper.getBoolean(PreferenceKeys.MUTED_VIDEOS) ? 0f : 1f;
+        final float vol = Utils.settingsHelper.getBoolean(PreferenceKeys.MUTED_VIDEOS) ? 0f : 1f;
         final VideoPlayerViewHelper.VideoPlayerCallback videoPlayerCallback = new VideoPlayerCallbackAdapter() {
             @Override
             public void onThumbnailLoaded() {
@@ -1407,9 +1411,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         final CollapsingToolbarLayout appbarLayout = activity.getCollapsingToolbarView();
         appbarLayout.setVisibility(View.GONE);
         final Toolbar toolbar = activity.getToolbar();
-        if (toolbar != null) {
-            toolbar.setVisibility(View.GONE);
-        }
+        toolbar.setVisibility(View.GONE);
         binding.getRoot().setPadding(binding.getRoot().getPaddingLeft(),
                                      binding.getRoot().getPaddingTop(),
                                      binding.getRoot().getPaddingRight(),
@@ -1432,9 +1434,7 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
         final CollapsingToolbarLayout appbarLayout = activity.getCollapsingToolbarView();
         appbarLayout.setVisibility(View.VISIBLE);
         final Toolbar toolbar = activity.getToolbar();
-        if (toolbar != null) {
-            toolbar.setVisibility(View.VISIBLE);
-        }
+        toolbar.setVisibility(View.VISIBLE);
         final Context context = getContext();
         if (context == null) return;
         binding.getRoot().setPadding(binding.getRoot().getPaddingLeft(),
@@ -1449,9 +1449,8 @@ public class PostViewV2Fragment extends Fragment implements EditTextDialogFragme
     private void navigateToProfile(final String username) {
         final NavController navController = getNavController();
         if (navController == null) return;
-        final Bundle bundle = new Bundle();
-        bundle.putString("username", username);
-        navController.navigate(R.id.action_global_profileFragment, bundle);
+        final NavDirections actionToProfile = PostViewV2FragmentDirections.actionToProfile().setUsername(username);
+        navController.navigate(actionToProfile);
     }
 
     @Nullable

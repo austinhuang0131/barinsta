@@ -13,13 +13,14 @@ import android.view.*
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.constraintlayout.motion.widget.MotionLayout
+import androidx.appcompat.widget.TooltipCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener
@@ -40,10 +41,7 @@ import awais.instagrabber.dialogs.MultiOptionDialogFragment.MultiOptionDialogSin
 import awais.instagrabber.dialogs.MultiOptionDialogFragment.Option
 import awais.instagrabber.dialogs.PostsLayoutPreferencesDialogFragment
 import awais.instagrabber.dialogs.ProfilePicDialogFragment
-import awais.instagrabber.fragments.HashTagFragment.ARG_HASHTAG
-import awais.instagrabber.fragments.PostViewV2Fragment
-import awais.instagrabber.fragments.UserSearchFragment
-import awais.instagrabber.fragments.UserSearchFragmentDirections
+import awais.instagrabber.fragments.UserSearchMode
 import awais.instagrabber.managers.DirectMessagesManager
 import awais.instagrabber.models.Resource
 import awais.instagrabber.models.enums.PostItemType
@@ -63,6 +61,7 @@ import awais.instagrabber.viewmodels.ProfileFragmentViewModel.ProfileEvent.*
 import awais.instagrabber.viewmodels.ProfileFragmentViewModelFactory
 import awais.instagrabber.webservices.*
 
+
 class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCallback, MultiOptionDialogSingleCallback<String> {
     private var backStackSavedStateResultLiveData: MutableLiveData<Any?>? = null
     private var shareDmMenuItem: MenuItem? = null
@@ -77,36 +76,50 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     private var selectedMedia: List<Media>? = null
     private var actionMode: ActionMode? = null
     private var disableDm: Boolean = false
-    private var shouldRefresh: Boolean = true
+
+    // private var shouldRefresh: Boolean = true
     private var highlightsAdapter: HighlightsAdapter? = null
     private var layoutPreferences = Utils.getPostsLayoutPreferences(Constants.PREF_PROFILE_POSTS_LAYOUT)
 
     private lateinit var mainActivity: MainActivity
-    private lateinit var root: MotionLayout
+
+    // private lateinit var root: MotionLayout
     private lateinit var binding: FragmentProfileBinding
     private lateinit var appStateViewModel: AppStateViewModel
     private lateinit var viewModel: ProfileFragmentViewModel
+
+    private val userRepository by lazy { UserRepository.getInstance() }
+    private val friendshipRepository by lazy { FriendshipRepository.getInstance() }
+    private val storiesRepository by lazy { StoriesRepository.getInstance() }
+    private val mediaRepository by lazy { MediaRepository.getInstance() }
+    private val graphQLRepository by lazy { GraphQLRepository.getInstance() }
+    private val favoriteRepository by lazy { FavoriteRepository.getInstance(requireContext()) }
+    private val directMessagesRepository by lazy { DirectMessagesRepository.getInstance() }
 
     private val confirmDialogFragmentRequestCode = 100
     private val ppOptsDialogRequestCode = 101
     private val bioDialogRequestCode = 102
     private val translationDialogRequestCode = 103
     private val feedItemCallback: FeedAdapterV2.FeedItemCallback = object : FeedAdapterV2.FeedItemCallback {
-        override fun onPostClick(media: Media?, profilePicView: View?, mainPostImage: View?) {
-            openPostDialog(media ?: return, -1)
+        override fun onPostClick(media: Media) {
+            openPostDialog(media, -1)
         }
 
-        override fun onProfilePicClick(media: Media?, profilePicView: View?) {
-            navigateToProfile(media?.user?.username)
+        override fun onProfilePicClick(media: Media) {
+            navigateToProfile(media.user?.username)
         }
 
-        override fun onNameClick(media: Media?, profilePicView: View?) {
-            navigateToProfile(media?.user?.username)
+        override fun onNameClick(media: Media) {
+            navigateToProfile(media.user?.username)
         }
 
         override fun onLocationClick(media: Media?) {
-            val action = FeedFragmentDirections.actionGlobalLocationFragment(media?.location?.pk ?: return)
-            NavHostFragment.findNavController(this@ProfileFragment).navigate(action)
+            try {
+                val action = ProfileFragmentDirections.actionToLocation(media?.location?.pk ?: return)
+                findNavController().navigate(action)
+            } catch (e: Exception) {
+                Log.e(TAG, "onLocationClick: ", e)
+            }
         }
 
         override fun onMentionClick(mention: String?) {
@@ -114,17 +127,25 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
         }
 
         override fun onHashtagClick(hashtag: String?) {
-            val action = FeedFragmentDirections.actionGlobalHashTagFragment(hashtag ?: return)
-            NavHostFragment.findNavController(this@ProfileFragment).navigate(action)
+            try {
+                val action = ProfileFragmentDirections.actionToHashtag(hashtag ?: return)
+                findNavController().navigate(action)
+            } catch (e: Exception) {
+                Log.e(TAG, "onHashtagClick: ", e)
+            }
         }
 
         override fun onCommentsClick(media: Media?) {
-            val commentsAction = ProfileFragmentDirections.actionGlobalCommentsViewerFragment(
-                media?.code ?: return,
-                media.pk ?: return,
-                media.user?.pk ?: return
-            )
-            NavHostFragment.findNavController(this@ProfileFragment).navigate(commentsAction)
+            try {
+                val commentsAction = ProfileFragmentDirections.actionToComments(
+                    media?.code ?: return,
+                    media.pk ?: return,
+                    media.user?.pk ?: return
+                )
+                findNavController().navigate(commentsAction)
+            } catch (e: Exception) {
+                Log.e(TAG, "onCommentsClick: ", e)
+            }
         }
 
         override fun onDownloadClick(media: Media?, childPosition: Int, popupLocation: View) {
@@ -216,24 +237,24 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     }
     private val onFollowersClickListener = View.OnClickListener {
         try {
-            val action = ProfileFragmentDirections.actionProfileFragmentToFollowViewerFragment(
+            val action = ProfileFragmentDirections.actionToFollowViewer(
                 viewModel.profile.value?.data?.pk ?: return@OnClickListener,
                 true,
                 viewModel.profile.value?.data?.username ?: return@OnClickListener
             )
-            NavHostFragment.findNavController(this).navigate(action)
+            findNavController().navigate(action)
         } catch (e: Exception) {
             Log.e(TAG, "onFollowersClickListener: ", e)
         }
     }
     private val onFollowingClickListener = View.OnClickListener {
         try {
-            val action = ProfileFragmentDirections.actionProfileFragmentToFollowViewerFragment(
+            val action = ProfileFragmentDirections.actionToFollowViewer(
                 viewModel.profile.value?.data?.pk ?: return@OnClickListener,
                 false,
                 viewModel.profile.value?.data?.username ?: return@OnClickListener
             )
-            NavHostFragment.findNavController(this).navigate(action)
+            findNavController().navigate(action)
         } catch (e: Exception) {
             Log.e(TAG, "onFollowersClickListener: ", e)
         }
@@ -243,9 +264,8 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     }
     private val onHashtagClickListener = OnHashtagClickListener {
         try {
-            val bundle = Bundle()
-            bundle.putString(ARG_HASHTAG, it.originalText.trimAll())
-            NavHostFragment.findNavController(this).navigate(R.id.action_global_hashTagFragment, bundle)
+            val actionToHashtag = ProfileFragmentDirections.actionToHashtag(it.originalText.trimAll())
+            findNavController().navigate(actionToHashtag)
         } catch (e: Exception) {
             Log.e(TAG, "onHashtagClickListener: ", e)
         }
@@ -280,13 +300,9 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     }
 
     private fun openPostDialog(media: Media, position: Int) {
-        val bundle = Bundle().apply {
-            putSerializable(PostViewV2Fragment.ARG_MEDIA, media)
-            putInt(PostViewV2Fragment.ARG_SLIDER_POSITION, position)
-        }
         try {
-            val navController = NavHostFragment.findNavController(this)
-            navController.navigate(R.id.action_global_post_view, bundle)
+            val actionToPost = ProfileFragmentDirections.actionToPost(media, position)
+            findNavController().navigate(actionToPost)
         } catch (e: Exception) {
             Log.e(TAG, "openPostDialog: ", e)
         }
@@ -306,13 +322,13 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
             ProfileFragmentViewModelFactory(
                 csrfToken,
                 deviceUuid,
-                UserRepository.getInstance(),
-                FriendshipRepository.getInstance(),
-                StoriesRepository.getInstance(),
-                MediaRepository.getInstance(),
-                GraphQLRepository.getInstance(),
-                FavoriteRepository.getInstance(requireContext()),
-                DirectMessagesRepository.getInstance(),
+                userRepository,
+                friendshipRepository,
+                storiesRepository,
+                mediaRepository,
+                graphQLRepository,
+                favoriteRepository,
+                directMessagesRepository,
                 if (isLoggedIn) DirectMessagesManager else null,
                 this,
                 arguments
@@ -322,23 +338,12 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        if (this::root.isInitialized) {
-            shouldRefresh = false
-            return root
-        }
-        appStateViewModel.currentUserLiveData.observe(viewLifecycleOwner, viewModel::setCurrentUser)
         binding = FragmentProfileBinding.inflate(inflater, container, false)
-        root = binding.root
-        return root
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        if (!shouldRefresh) {
-            setupObservers()
-            return
-        }
         init()
-        shouldRefresh = false
     }
 
     override fun onRefresh() {
@@ -386,17 +391,22 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
         }
     }
 
+    override fun onDestroyView() {
+        mainActivity.resetToolbar(this)
+        super.onDestroyView()
+        setupPostsDone = false
+    }
+
     private fun shareProfileViaDm() {
-        val actionGlobalUserSearch = UserSearchFragmentDirections.actionGlobalUserSearch().apply {
-            setTitle(getString(R.string.share))
-            setActionLabel(getString(R.string.send))
-            showGroups = true
-            multiple = true
-            setSearchMode(UserSearchFragment.SearchMode.RAVEN)
-        }
         try {
-            val navController = NavHostFragment.findNavController(this@ProfileFragment)
-            navController.navigate(actionGlobalUserSearch)
+            val actionToUserSearch = ProfileFragmentDirections.actionToUserSearch().apply {
+                title = getString(R.string.share)
+                actionLabel = getString(R.string.send)
+                showGroups = true
+                multiple = true
+                searchMode = UserSearchMode.RAVEN
+            }
+            findNavController().navigate(actionToUserSearch)
         } catch (e: Exception) {
             Log.e(TAG, "shareProfileViaDm: ", e)
         }
@@ -413,26 +423,31 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     private fun navigateToChaining() {
         viewModel.currentUser.value?.data ?: return
         val profile = viewModel.profile.value?.data ?: return
-        val bundle = Bundle().apply {
-            putString("type", "chaining")
-            putLong("targetId", profile.pk)
-        }
         try {
-            NavHostFragment.findNavController(this).navigate(R.id.action_global_notificationsViewerFragment, bundle)
+            val actionToNotifications = ProfileFragmentDirections.actionToNotifications().apply {
+                type = "chaining"
+                targetId = profile.pk
+            }
+            findNavController().navigate(actionToNotifications)
         } catch (e: Exception) {
             Log.e(TAG, "navigateToChaining: ", e)
         }
     }
 
     private fun init() {
+        mainActivity.setToolbar(binding.toolbar, this)
         binding.swipeRefreshLayout.setOnRefreshListener(this)
-        disableDm = !Utils.isNavRootInCurrentTabs("direct_messages_nav_graph")
+        disableDm = !isNavRootInCurrentTabs("direct_messages_nav_graph")
         setupHighlights()
         setupObservers()
     }
 
     private fun setupObservers() {
-        viewModel.isLoggedIn.observe(viewLifecycleOwner) {} // observe so that `isLoggedIn.value` is correct
+        appStateViewModel.currentUserLiveData.observe(viewLifecycleOwner, viewModel::setCurrentUser)
+        viewModel.isLoggedIn.observe(viewLifecycleOwner) {
+            // observe so that `isLoggedIn.value` is correct
+            Log.d(TAG, "setupObservers: $it")
+        }
         viewModel.currentUserProfileActionLiveData.observe(viewLifecycleOwner) {
             val (currentUserResource, profileResource) = it
             if (currentUserResource.status == Resource.Status.ERROR || profileResource.status == Resource.Status.ERROR) {
@@ -457,7 +472,6 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
                 context?.let { ctx -> Toast.makeText(ctx, R.string.error_loading_profile, Toast.LENGTH_LONG).show() }
                 return@observe
             }
-            root.loadLayoutDescription(R.xml.header_list_scene)
             setupFavChip(profile, currentUser)
             setupFavButton(currentUser, profile)
             setupSavedButton(currentUser, profile)
@@ -530,6 +544,8 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     private fun showPrivateAccountMessage() {
         binding.header.mainFollowers.isClickable = false
         binding.header.mainFollowing.isClickable = false
+        binding.privatePage.visibility = VISIBLE
+        binding.privatePage.layoutParams.height = ViewGroup.LayoutParams.WRAP_CONTENT
         binding.privatePage1.setImageResource(R.drawable.lock)
         binding.privatePage2.setText(R.string.priv_acc)
         binding.privatePage.visibility = VISIBLE
@@ -537,7 +553,6 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
         binding.privatePage2.visibility = VISIBLE
         binding.postsRecyclerView.visibility = GONE
         binding.swipeRefreshLayout.isRefreshing = false
-        root.getTransition(R.id.transition)?.setEnable(false)
     }
 
     private fun setupProfileContext(contextPair: Pair<String?, List<UserProfileContextLink>?>) {
@@ -666,6 +681,9 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
         }
         binding.header.mainPostCount.visibility = View.VISIBLE
         binding.header.mainPostCount.text = getCountSpan(R.plurals.main_posts_count, abbreviate(count, null), count)
+        if (count >= 1000) {
+            TooltipCompat.setTooltipText(binding.header.mainPostCount, count.toString(10))
+        }
     }
 
     private fun setupFollowing(count: Long?) {
@@ -682,6 +700,9 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
             return
         }
         binding.header.mainFollowing.setOnClickListener(onFollowingClickListener)
+        if (count >= 1000) {
+            TooltipCompat.setTooltipText(binding.header.mainFollowing, count.toString(10))
+        }
     }
 
     private fun setupFollowers(count: Long?) {
@@ -696,6 +717,9 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
             return
         }
         binding.header.mainFollowers.setOnClickListener(onFollowersClickListener)
+        if (count >= 1000) {
+            TooltipCompat.setTooltipText(binding.header.mainFollowers, count.toString(10))
+        }
     }
 
     private fun setupDMButton(currentUser: User?, profile: User?) {
@@ -717,14 +741,14 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
         }
         binding.header.btnLiked.setOnClickListener {
             try {
-                val action = ProfileFragmentDirections.actionProfileFragmentToSavedViewerFragment(
+                val action = ProfileFragmentDirections.actionToSaved(
                     viewModel.profile.value?.data?.username ?: return@setOnClickListener,
                     viewModel.profile.value?.data?.pk ?: return@setOnClickListener,
                     PostItemType.LIKED
                 )
-                NavHostFragment.findNavController(this).navigate(action)
+                findNavController().navigate(action)
             } catch (e: Exception) {
-                Log.e(TAG, "setupTaggedButton: ", e)
+                Log.e(TAG, "setupLikedButton: ", e)
             }
         }
     }
@@ -738,12 +762,12 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
         }
         binding.header.btnTagged.setOnClickListener {
             try {
-                val action = ProfileFragmentDirections.actionProfileFragmentToSavedViewerFragment(
+                val action = ProfileFragmentDirections.actionToSaved(
                     viewModel.profile.value?.data?.username ?: return@setOnClickListener,
                     viewModel.profile.value?.data?.pk ?: return@setOnClickListener,
                     PostItemType.TAGGED
                 )
-                NavHostFragment.findNavController(this).navigate(action)
+                findNavController().navigate(action)
             } catch (e: Exception) {
                 Log.e(TAG, "setupTaggedButton: ", e)
             }
@@ -759,8 +783,8 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
         }
         binding.header.btnSaved.setOnClickListener {
             try {
-                val action = ProfileFragmentDirections.actionGlobalSavedCollectionsFragment(false)
-                NavHostFragment.findNavController(this).navigate(action)
+                val action = ProfileFragmentDirections.actionToSavedCollections().apply { isSaving = false }
+                findNavController().navigate(action)
             } catch (e: Exception) {
                 Log.e(TAG, "setupSavedButton: ", e)
             }
@@ -841,9 +865,11 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     }
 
     private fun showDefaultMessage() {
-        root.loadLayoutDescription(R.xml.profile_fragment_no_acc_layout)
-        binding.privatePage1.visibility = View.VISIBLE
-        binding.privatePage2.visibility = View.VISIBLE
+        binding.header.root.visibility = GONE
+        binding.swipeRefreshLayout.visibility = GONE
+        binding.privatePage.visibility = VISIBLE
+        binding.privatePage1.visibility = VISIBLE
+        binding.privatePage2.visibility = VISIBLE
         binding.privatePage1.setImageResource(R.drawable.ic_outline_info_24)
         binding.privatePage2.setText(R.string.no_acc)
     }
@@ -851,9 +877,8 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
     private fun setupHighlights() {
         val context = context ?: return
         highlightsAdapter = HighlightsAdapter { model, position ->
-            val options = StoryViewerOptions.forHighlight(model.title)
-            options.currentFeedStoryIndex = position
-            val action = ProfileFragmentDirections.actionProfileFragmentToStoryViewerFragment(options)
+            val options = StoryViewerOptions.forHighlight(model.user!!.pk, "").apply { currentFeedStoryIndex = position }
+            val action = ProfileFragmentDirections.actionToStory(options)
             NavHostFragment.findNavController(this).navigate(action)
         }
         binding.header.highlightsList.layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
@@ -865,26 +890,31 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
             .setLifeCycleOwner(this)
             .setPostFetchService(ProfilePostFetchService(profile, currentUser != null))
             .setLayoutPreferences(layoutPreferences)
-            .addFetchStatusChangeListener { binding.swipeRefreshLayout.isRefreshing = it }
+            .addFetchStatusChangeListener {
+                AppExecutors.mainThread.execute {
+                    binding.swipeRefreshLayout.isRefreshing = it
+                }
+            }
             .setFeedItemCallback(feedItemCallback)
             .setSelectionModeCallback(selectionModeCallback)
             .init()
-        binding.postsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
-            override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
-                super.onScrolled(recyclerView, dx, dy)
-                val canScrollVertically = recyclerView.canScrollVertically(-1)
-                root.getTransition(R.id.transition)?.setEnable(!canScrollVertically)
-            }
-        })
+        // binding.postsRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
+        //     override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
+        //         super.onScrolled(recyclerView, dx, dy)
+        //         val canScrollVertically = recyclerView.canScrollVertically(-1)
+        //         if (!canScrollVertically) {
+        //             (binding.collapsingToolbarLayout.layoutParams as AppBarLayout.LayoutParams).scrollFlags = 0
+        //         }
+        //     }
+        // })
         setupPostsDone = true
     }
 
     private fun navigateToProfile(username: String?) {
         try {
-            val bundle = Bundle()
-            bundle.putString("username", username ?: return)
-            val navController = NavHostFragment.findNavController(this)
-            navController.navigate(R.id.action_global_profileFragment, bundle)
+            val username1 = username ?: return
+            val actionToProfile = ProfileFragmentDirections.actionToProfile().apply { this.username = username1 }
+            findNavController().navigate(actionToProfile)
         } catch (e: Exception) {
             Log.e(TAG, "navigateToProfile: ", e)
         }
@@ -937,13 +967,13 @@ class ProfileFragment : Fragment(), OnRefreshListener, ConfirmDialogFragmentCall
             "profile_pic" -> showProfilePicDialog()
             "show_stories" -> {
                 try {
-                    val action = ProfileFragmentDirections.actionProfileFragmentToStoryViewerFragment(
+                    val action = ProfileFragmentDirections.actionToStory(
                         StoryViewerOptions.forUser(
                             viewModel.profile.value?.data?.pk ?: return,
-                            viewModel.profile.value?.data?.fullName ?: return,
+                            viewModel.profile.value?.data?.username ?: return,
                         )
                     )
-                    NavHostFragment.findNavController(this).navigate(action)
+                    findNavController().navigate(action)
                 } catch (e: Exception) {
                     Log.e(TAG, "omPpOptionSelect: ", e)
                 }

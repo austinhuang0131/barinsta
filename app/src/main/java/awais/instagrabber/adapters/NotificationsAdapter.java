@@ -24,12 +24,12 @@ public final class NotificationsAdapter extends ListAdapter<Notification, Notifi
     private static final DiffUtil.ItemCallback<Notification> DIFF_CALLBACK = new DiffUtil.ItemCallback<Notification>() {
         @Override
         public boolean areItemsTheSame(final Notification oldItem, final Notification newItem) {
-            return oldItem != null && newItem != null && oldItem.getPk().equals(newItem.getPk());
+            return oldItem.getPk().equals(newItem.getPk());
         }
 
         @Override
         public boolean areContentsTheSame(@NonNull final Notification oldItem, @NonNull final Notification newItem) {
-            return oldItem.getPk().equals(newItem.getPk());
+            return oldItem.getPk().equals(newItem.getPk()) && oldItem.getType() == newItem.getType();
         }
     };
 

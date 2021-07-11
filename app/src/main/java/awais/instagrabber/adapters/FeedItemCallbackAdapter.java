@@ -7,13 +7,13 @@ import awais.instagrabber.repositories.responses.Media;
 
 public class FeedItemCallbackAdapter implements FeedAdapterV2.FeedItemCallback {
     @Override
-    public void onPostClick(final Media media, final View profilePicView, final View mainPostImage) {}
+    public void onPostClick(final Media media) {}
 
     @Override
-    public void onProfilePicClick(final Media media, final View profilePicView) {}
+    public void onProfilePicClick(final Media media) {}
 
     @Override
-    public void onNameClick(final Media media, final View profilePicView) {}
+    public void onNameClick(final Media media) {}
 
     @Override
     public void onLocationClick(final Media media) {}

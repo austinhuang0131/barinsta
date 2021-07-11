@@ -178,51 +178,59 @@ open class GraphQLRepository(private val service: GraphQLService) {
     // TODO convert string response to a response class
     open suspend fun fetchUser(
         username: String,
-    ): User {
+    ): User? {
         val response = service.getUser(username)
-        val body = JSONObject(response
-            .split("<script type=\"text/javascript\">window._sharedData = ").get(1)
-            .split("</script>").get(0)
-            .trim().replace(Regex("\\};$"), "}"))
-        val userJson = body
-            .getJSONObject("entry_data")
-            .getJSONArray("ProfilePage")
-            .getJSONObject(0)
-            .getJSONObject("graphql")
-            .getJSONObject(Constants.EXTRAS_USER)
-        val isPrivate = userJson.getBoolean("is_private")
-        val id = userJson.optLong(Constants.EXTRAS_ID, 0)
-        val timelineMedia = userJson.getJSONObject("edge_owner_to_timeline_media")
-        // if (timelineMedia.has("edges")) {
-        //     final JSONArray edges = timelineMedia.getJSONArray("edges");
-        // }
-        var url: String? = userJson.optString("external_url")
-        if (url.isNullOrBlank()) url = null
-        return User(
-            id,
-            username,
-            userJson.getString("full_name"),
-            isPrivate,
-            userJson.getString("profile_pic_url_hd"),
-            userJson.getBoolean("is_verified"),
-            friendshipStatus = FriendshipStatus(
-                userJson.optBoolean("followed_by_viewer"),
-                userJson.optBoolean("follows_viewer"),
-                userJson.optBoolean("blocked_by_viewer"),
-                false,
+        try {
+            val body = JSONObject(
+                response
+                    .split("<script type=\"text/javascript\">window._sharedData = ").get(1)
+                    .split("</script>").get(0)
+                    .trim().replace(Regex("\\};$"), "}")
+            )
+            val userJson = body
+                .getJSONObject("entry_data")
+                .getJSONArray("ProfilePage")
+                .getJSONObject(0)
+                .getJSONObject("graphql")
+                .getJSONObject(Constants.EXTRAS_USER)
+            val isPrivate = userJson.getBoolean("is_private")
+            val id = userJson.optLong(Constants.EXTRAS_ID, 0)
+            val timelineMedia = userJson.getJSONObject("edge_owner_to_timeline_media")
+            // if (timelineMedia.has("edges")) {
+            //     final JSONArray edges = timelineMedia.getJSONArray("edges");
+            // }
+            var url: String? = userJson.optString("external_url")
+            if (url.isNullOrBlank()) url = null
+            return User(
+                id,
+                username,
+                userJson.getString("full_name"),
                 isPrivate,
-                userJson.optBoolean("has_requested_viewer"),
-                userJson.optBoolean("requested_by_viewer"),
-                false,
-                userJson.optBoolean("restricted_by_viewer"),
-                false
-            ),
-            mediaCount = timelineMedia.getLong("count"),
-            followerCount = userJson.getJSONObject("edge_followed_by").getLong("count"),
-            followingCount = userJson.getJSONObject("edge_follow").getLong("count"),
-            biography = userJson.getString("biography"),
-            externalUrl = url,
-        )
+                userJson.getString("profile_pic_url_hd"),
+                userJson.getBoolean("is_verified"),
+                friendshipStatus = FriendshipStatus(
+                    userJson.optBoolean("followed_by_viewer"),
+                    userJson.optBoolean("follows_viewer"),
+                    userJson.optBoolean("blocked_by_viewer"),
+                    false,
+                    isPrivate,
+                    userJson.optBoolean("has_requested_viewer"),
+                    userJson.optBoolean("requested_by_viewer"),
+                    false,
+                    userJson.optBoolean("restricted_by_viewer"),
+                    false
+                ),
+                mediaCount = timelineMedia.getLong("count"),
+                followerCount = userJson.getJSONObject("edge_followed_by").getLong("count"),
+                followingCount = userJson.getJSONObject("edge_follow").getLong("count"),
+                biography = userJson.getString("biography"),
+                externalUrl = url,
+            )
+        }
+        catch (e: Exception) {
+            Log.e(TAG, "fetchUser failed", e)
+            return null
+        }
     }
 
     // TODO convert string response to a response class

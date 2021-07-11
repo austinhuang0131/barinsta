@@ -18,7 +18,6 @@ public class PostPreferencesFragment extends BasePreferencesFragment {
         // generalCategory.addPreference(getAutoPlayVideosPreference(context));
         screen.addPreference(getBackgroundPlayPreference(context));
         screen.addPreference(getAlwaysMuteVideosPreference(context));
-        screen.addPreference(getShowCaptionPreference(context));
         screen.addPreference(getToggleKeywordFilterPreference(context));
         screen.addPreference(getEditKeywordFilterPreference(context));
     }
@@ -44,15 +43,6 @@ public class PostPreferencesFragment extends BasePreferencesFragment {
         final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
         preference.setKey(PreferenceKeys.MUTED_VIDEOS);
         preference.setTitle(R.string.post_viewer_muted_autoplay);
-        preference.setIconSpaceReserved(false);
-        return preference;
-    }
-
-    private Preference getShowCaptionPreference(@NonNull final Context context) {
-        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
-        preference.setKey(PreferenceKeys.SHOW_CAPTIONS);
-        preference.setDefaultValue(true);
-        preference.setTitle(R.string.post_viewer_show_captions);
         preference.setIconSpaceReserved(false);
         return preference;
     }

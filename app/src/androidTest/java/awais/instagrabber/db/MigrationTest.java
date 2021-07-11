@@ -27,7 +27,6 @@ public class MigrationTest {
 
     public MigrationTest() {
         final String canonicalName = AppDatabase.class.getCanonicalName();
-        assert canonicalName != null;
         helper = new MigrationTestHelper(InstrumentationRegistry.getInstrumentation(),
                                          canonicalName,
                                          new FrameworkSQLiteOpenHelperFactory());

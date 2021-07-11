@@ -13,6 +13,7 @@ import awais.instagrabber.adapters.FeedAdapterV2;
 import awais.instagrabber.adapters.SliderCallbackAdapter;
 import awais.instagrabber.adapters.SliderItemsAdapter;
 import awais.instagrabber.databinding.ItemFeedSliderBinding;
+import awais.instagrabber.databinding.LayoutPostViewBottomBinding;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.utils.NumberUtils;
 import awais.instagrabber.utils.Utils;
@@ -23,14 +24,16 @@ public class FeedSliderViewHolder extends FeedItemViewHolder {
 
     private final ItemFeedSliderBinding binding;
     private final FeedAdapterV2.FeedItemCallback feedItemCallback;
+    private final LayoutPostViewBottomBinding bottom;
 
     public FeedSliderViewHolder(@NonNull final ItemFeedSliderBinding binding,
                                 final FeedAdapterV2.FeedItemCallback feedItemCallback) {
-        super(binding.getRoot(), binding.itemFeedTop, binding.itemFeedBottom, feedItemCallback);
+        super(binding.getRoot(), feedItemCallback);
         this.binding = binding;
         this.feedItemCallback = feedItemCallback;
-        binding.itemFeedBottom.btnViews.setVisibility(View.GONE);
-        // binding.itemFeedBottom.btnMute.setVisibility(View.GONE);
+        bottom = LayoutPostViewBottomBinding.bind(binding.getRoot());
+        bottom.viewsCount.setVisibility(View.GONE);
+        // bottom.btnMute.setVisibility(View.GONE);
         final ViewGroup.LayoutParams layoutParams = binding.mediaList.getLayoutParams();
         layoutParams.height = Utils.displayMetrics.widthPixels + 1;
         binding.mediaList.setLayoutParams(layoutParams);
@@ -59,14 +62,14 @@ public class FeedSliderViewHolder extends FeedItemViewHolder {
                 final String text = (position + 1) + "/" + sliderItemLen;
                 binding.mediaCounter.setText(text);
                 setDimensions(binding.mediaList, sliderItems.get(position));
-                binding.itemFeedBottom.btnDownload.setOnClickListener(v ->
-                        feedItemCallback.onDownloadClick(feedModel, position, binding.itemFeedBottom.btnDownload)
+                bottom.download.setOnClickListener(v ->
+                        feedItemCallback.onDownloadClick(feedModel, position, bottom.download)
                 );
             }
         });
         setDimensions(binding.mediaList, sliderItems.get(0));
-        binding.itemFeedBottom.btnDownload.setOnClickListener(v ->
-                feedItemCallback.onDownloadClick(feedModel, 0, binding.itemFeedBottom.btnDownload)
+        bottom.download.setOnClickListener(v ->
+                feedItemCallback.onDownloadClick(feedModel, 0, bottom.download)
         );
         adapter.submitList(sliderItems);
     }

@@ -42,8 +42,7 @@ class InstaGrabberApplication : Application() {
 
     private fun setupCrashReporter() {
         if (BuildConfig.DEBUG) return
-        CrashReporter.get(this).start()
-        // logCollector = new LogCollector(this);
+        CrashReporter.getInstance(this).start()
     }
 
     private fun setupCloseGuard() {

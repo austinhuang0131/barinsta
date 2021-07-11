@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation>
+
+    <!--android:id="@+id/root"-->
+    <!--app:startDestination="@id/profile_nav_graph"-->
+
+    <!--<include app:graph="@navigation/dm_nav_graph" />-->
+    <!--<include app:graph="@navigation/feed_nav_graph" />-->
+    <!--<include app:graph="@navigation/profile_nav_graph" />-->
+    <!--<include app:graph="@navigation/discover_nav_graph" />-->
+    <!--<include app:graph="@navigation/more_nav_graph" />-->
+</navigation>

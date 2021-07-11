@@ -65,9 +65,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.function.Function;
 
-import awais.instagrabber.ProfileNavGraphDirections;
 import awais.instagrabber.R;
-import awais.instagrabber.UserSearchNavGraphDirections;
 import awais.instagrabber.activities.CameraActivity;
 import awais.instagrabber.activities.MainActivity;
 import awais.instagrabber.adapters.DirectItemsAdapter;
@@ -95,9 +93,7 @@ import awais.instagrabber.customviews.helpers.TranslateDeferringInsetsAnimationC
 import awais.instagrabber.databinding.FragmentDirectMessagesThreadBinding;
 import awais.instagrabber.dialogs.DirectItemReactionDialogFragment;
 import awais.instagrabber.dialogs.GifPickerBottomDialogFragment;
-import awais.instagrabber.fragments.PostViewV2Fragment;
-import awais.instagrabber.fragments.UserSearchFragment;
-import awais.instagrabber.fragments.UserSearchFragmentDirections;
+import awais.instagrabber.fragments.UserSearchMode;
 import awais.instagrabber.fragments.settings.PreferenceKeys;
 import awais.instagrabber.models.Resource;
 import awais.instagrabber.models.enums.DirectItemType;
@@ -107,6 +103,9 @@ import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.repositories.responses.User;
 import awais.instagrabber.repositories.responses.directmessages.DirectItem;
 import awais.instagrabber.repositories.responses.directmessages.DirectItemEmojiReaction;
+import awais.instagrabber.repositories.responses.directmessages.DirectItemLink;
+import awais.instagrabber.repositories.responses.directmessages.DirectItemReactions;
+import awais.instagrabber.repositories.responses.directmessages.DirectItemReelShare;
 import awais.instagrabber.repositories.responses.directmessages.DirectItemStoryShare;
 import awais.instagrabber.repositories.responses.directmessages.DirectItemVisualMedia;
 import awais.instagrabber.repositories.responses.directmessages.DirectThread;
@@ -136,7 +135,6 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     private InsetsAnimationLinearLayout root;
     private boolean shouldRefresh = true;
     private List<DirectItemOrHeader> itemOrHeaders;
-    private List<User> users;
     private FragmentDirectMessagesThreadBinding binding;
     private Tooltip tooltip;
     private float initialSendX;
@@ -163,13 +161,13 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     private LiveData<List<User>> usersLiveData;
     private boolean autoMarkAsSeen = false;
     private MenuItem markAsSeenMenuItem;
-    private Media tempMedia;
     private DirectItem addReactionItem;
     private TranslateDeferringInsetsAnimationCallback inputHolderAnimationCallback;
     private TranslateDeferringInsetsAnimationCallback chatsAnimationCallback;
     private EmojiPickerInsetsAnimationCallback emojiPickerAnimationCallback;
     private boolean hasKbOpenedOnce;
     private boolean wasToggled;
+    private SwipeAndRestoreItemTouchHelperCallback touchHelperCallback;
 
     private final AppExecutors appExecutors = AppExecutors.INSTANCE;
     private final Animatable2Compat.AnimationCallback micToSendAnimationCallback = new Animatable2Compat.AnimationCallback() {
@@ -189,8 +187,12 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     private final DirectItemCallback directItemCallback = new DirectItemCallback() {
         @Override
         public void onHashtagClick(final String hashtag) {
-            final NavDirections action = DirectMessageThreadFragmentDirections.actionGlobalHashTagFragment(hashtag);
-            NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(action);
+            try {
+                final NavDirections action = DirectMessageThreadFragmentDirections.actionToHashtag(hashtag);
+                NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onHashtagClick: ", e);
+            }
         }
 
         @Override
@@ -200,8 +202,12 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
 
         @Override
         public void onLocationClick(final long locationId) {
-            final NavDirections action = DirectMessageThreadFragmentDirections.actionGlobalLocationFragment(locationId);
-            NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(action);
+            try {
+                final NavDirections action = DirectMessageThreadFragmentDirections.actionToLocation(locationId);
+                NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(action);
+            } catch (Exception e) {
+                Log.e(TAG, "onLocationClick: ", e);
+            }
         }
 
         @Override
@@ -221,26 +227,23 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         @Override
         public void onMediaClick(final Media media, final int index) {
             if (media.isReelMedia()) {
-                final String pk = media.getPk();
                 try {
+                    final String pk = media.getPk();
+                    if (pk == null) return;
                     final long mediaId = Long.parseLong(pk);
                     final User user = media.getUser();
                     if (user == null) return;
                     final String username = user.getUsername();
-                    final NavDirections action = DirectMessageThreadFragmentDirections
-                            .actionThreadToStory(StoryViewerOptions.forStory(mediaId, username));
+                    final NavDirections action = DirectMessageThreadFragmentDirections.actionToStory(StoryViewerOptions.forStory(mediaId, username));
                     NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(action);
-                } catch (NumberFormatException e) {
+                } catch (Exception e) {
                     Log.e(TAG, "onMediaClick (story): ", e);
                 }
                 return;
             }
-            final NavController navController = NavHostFragment.findNavController(DirectMessageThreadFragment.this);
-            final Bundle bundle = new Bundle();
-            bundle.putSerializable(PostViewV2Fragment.ARG_MEDIA, media);
-            bundle.putInt(PostViewV2Fragment.ARG_SLIDER_POSITION, index);
             try {
-                navController.navigate(R.id.action_global_post_view, bundle);
+                final NavDirections actionToPost = DirectMessageThreadFragmentDirections.actionToPost(media, index);
+                NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(actionToPost);
             } catch (Exception e) {
                 Log.e(TAG, "openPostDialog: ", e);
             }
@@ -248,16 +251,18 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
 
         @Override
         public void onStoryClick(final DirectItemStoryShare storyShare) {
-            final String pk = storyShare.getReelId();
             try {
+                final String pk = storyShare.getReelId();
+                if (pk == null) return;
                 final long mediaId = Long.parseLong(pk);
-                final User user = storyShare.getMedia().getUser();
+                final Media media = storyShare.getMedia();
+                if (media == null) return;
+                final User user = media.getUser();
                 if (user == null) return;
                 final String username = user.getUsername();
-                final NavDirections action = DirectMessageThreadFragmentDirections
-                        .actionThreadToStory(StoryViewerOptions.forUser(mediaId, username));
+                final NavDirections action = DirectMessageThreadFragmentDirections.actionToStory(StoryViewerOptions.forUser(mediaId, username));
                 NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(action);
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
                 Log.e(TAG, "onStoryClick: ", e);
             }
         }
@@ -266,9 +271,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         public void onReaction(final DirectItem item, final Emoji emoji) {
             if (item == null || emoji == null) return;
             final LiveData<Resource<Object>> resourceLiveData = viewModel.sendReaction(item, emoji);
-            if (resourceLiveData != null) {
-                resourceLiveData.observe(getViewLifecycleOwner(), directItemResource -> handleSentMessage(resourceLiveData));
-            }
+            resourceLiveData.observe(getViewLifecycleOwner(), directItemResource -> handleSentMessage(resourceLiveData));
         }
 
         @Override
@@ -284,15 +287,14 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
             }
             if (itemId == R.id.forward) {
                 itemToForward = item;
-                final UserSearchNavGraphDirections.ActionGlobalUserSearch actionGlobalUserSearch = UserSearchFragmentDirections
-                        .actionGlobalUserSearch()
+                final NavDirections actionGlobalUserSearch = DirectMessageThreadFragmentDirections
+                        .actionToUserSearch()
                         .setTitle(getString(R.string.forward))
                         .setActionLabel(getString(R.string.send))
                         .setShowGroups(true)
                         .setMultiple(true)
-                        .setSearchMode(UserSearchFragment.SearchMode.RAVEN);
-                final NavController navController = NavHostFragment.findNavController(DirectMessageThreadFragment.this);
-                navController.navigate(actionGlobalUserSearch);
+                        .setSearchMode(UserSearchMode.RAVEN);
+                NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(actionGlobalUserSearch);
             }
             if (itemId == R.id.download) {
                 downloadItem(item);
@@ -418,10 +420,10 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     public boolean onOptionsItemSelected(@NonNull final MenuItem item) {
         final int itemId = item.getItemId();
         if (itemId == R.id.info) {
-            final DirectMessageThreadFragmentDirections.ActionThreadToSettings directions = DirectMessageThreadFragmentDirections
-                    .actionThreadToSettings(viewModel.getThreadId(), null);
             final Boolean pending = viewModel.isPending().getValue();
-            directions.setPending(pending != null && pending);
+            final NavDirections directions = DirectMessageThreadFragmentDirections
+                    .actionToSettings(viewModel.getThreadId(), null)
+                    .setPending(pending != null && pending);
             NavHostFragment.findNavController(this).navigate(directions);
             return true;
         }
@@ -485,7 +487,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
             }
             final Uri uri = data.getData();
             final String mimeType = Utils.getMimeType(uri, context.getContentResolver());
-            if (mimeType.startsWith("image")) {
+            if (mimeType != null && mimeType.startsWith("image")) {
                 navigateToImageEditFragment(uri);
                 return;
             }
@@ -584,7 +586,6 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         if (getArguments() == null) return;
         actionBar = fragmentActivity.getSupportActionBar();
         setupList();
-        root.post(this::setupInput);
     }
 
     private void setupList() {
@@ -612,20 +613,6 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
             }
         });
         binding.chats.addItemDecoration(headerItemDecoration);
-        final SwipeAndRestoreItemTouchHelperCallback touchHelperCallback = new SwipeAndRestoreItemTouchHelperCallback(
-                context,
-                (adapterPosition, viewHolder) -> {
-                    if (itemsAdapter == null) return;
-                    final DirectItemOrHeader directItemOrHeader = itemsAdapter.getList().get(adapterPosition);
-                    if (directItemOrHeader.isHeader()) return;
-                    viewModel.setReplyToItem(directItemOrHeader.item);
-                }
-        );
-        final Integer inputMode = viewModel.getInputMode().getValue();
-        if (inputMode != null && inputMode != 1) {
-            itemTouchHelper = new ItemTouchHelper(touchHelperCallback);
-            itemTouchHelper.attachToRecyclerView(binding.chats);
-        }
     }
 
     private void setObservers() {
@@ -653,8 +640,12 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         inputModeLiveData = viewModel.getInputMode();
         inputModeLiveData.observe(getViewLifecycleOwner(), inputMode -> {
             final Boolean isPending = viewModel.isPending().getValue();
-            if (isPending != null && isPending) return;
-            if (inputMode == null || inputMode == 0) return;
+            if (isPending != null && isPending || inputMode == null) return;
+            setupInput(inputMode);
+            if (inputMode == 0) {
+                setupTouchHelper();
+                return;
+            }
             if (inputMode == 1) {
                 hideInput();
             }
@@ -752,6 +743,22 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
             final User user = users.get(0);
             binding.acceptPendingRequestQuestion.setText(getString(R.string.accept_request_from_user, user.getUsername(), user.getFullName()));
         });
+    }
+
+    private void setupTouchHelper() {
+        final Context context = getContext();
+        if (context == null) return;
+        touchHelperCallback = new SwipeAndRestoreItemTouchHelperCallback(
+                context,
+                (adapterPosition, viewHolder) -> {
+                    if (itemsAdapter == null) return;
+                    final DirectItemOrHeader directItemOrHeader = itemsAdapter.getList().get(adapterPosition);
+                    if (directItemOrHeader.isHeader()) return;
+                    viewModel.setReplyToItem(directItemOrHeader.item);
+                }
+        );
+        itemTouchHelper = new ItemTouchHelper(touchHelperCallback);
+        itemTouchHelper.attachToRecyclerView(binding.chats);
     }
 
     private void removeObservers() {
@@ -894,19 +901,26 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         binding.gallery.setVisibility(View.GONE);
     }
 
-    private String getDirectItemPreviewText(final DirectItem item) {
-        switch (item.getItemType()) {
+    private String getDirectItemPreviewText(@NonNull final DirectItem item) {
+        final DirectItemType itemType = item.getItemType();
+        if (itemType == null) return "";
+        switch (itemType) {
             case TEXT:
                 return item.getText();
             case LINK:
-                return item.getLink().getText();
+                final DirectItemLink link = item.getLink();
+                if (link == null) return "";
+                return link.getText();
             case MEDIA: {
                 final Media media = item.getMedia();
+                if (media == null) return "";
                 return getMediaPreviewTextString(media);
             }
             case RAVEN_MEDIA: {
                 final DirectItemVisualMedia visualMedia = item.getVisualMedia();
+                if (visualMedia == null) return "";
                 final Media media = visualMedia.getMedia();
+                if (media == null) return "";
                 return getMediaPreviewTextString(media);
             }
             case VOICE_MEDIA:
@@ -914,14 +928,17 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
             case MEDIA_SHARE:
                 return getString(R.string.post);
             case REEL_SHARE:
-                return item.getReelShare().getText();
+                final DirectItemReelShare reelShare = item.getReelShare();
+                if (reelShare == null) return "";
+                return reelShare.getText();
         }
         return "";
     }
 
     @NonNull
-    private String getMediaPreviewTextString(final Media media) {
+    private String getMediaPreviewTextString(@NonNull final Media media) {
         final MediaItemType mediaType = media.getType();
+        if (mediaType == null) return "";
         switch (mediaType) {
             case MEDIA_TYPE_IMAGE:
                 return getString(R.string.photo);
@@ -932,8 +949,11 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         }
     }
 
-    private String getDirectItemPreviewImageUrl(final DirectItem item) {
-        switch (item.getItemType()) {
+    @Nullable
+    private String getDirectItemPreviewImageUrl(@NonNull final DirectItem item) {
+        final DirectItemType itemType = item.getItemType();
+        if (itemType == null) return null;
+        switch (itemType) {
             case TEXT:
             case LINK:
             case VOICE_MEDIA:
@@ -945,6 +965,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
             }
             case RAVEN_MEDIA: {
                 final DirectItemVisualMedia visualMedia = item.getVisualMedia();
+                if (visualMedia == null) return null;
                 final Media media = visualMedia.getMedia();
                 return ResponseBodyUtils.getThumbUrl(media);
             }
@@ -1009,7 +1030,6 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         itemsAdapter.setStateRestorationPolicy(RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY);
         binding.chats.setAdapter(itemsAdapter);
         registerDataObserver();
-        users = thread.getUsers();
         final List<DirectItem> items = viewModel.getItems().getValue();
         if (items != null && itemsAdapter.getItems() != items) {
             submitItemsToAdapter(items);
@@ -1032,8 +1052,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         });
     }
 
-    private void setupInput() {
-        final Integer inputMode = viewModel.getInputMode().getValue();
+    private void setupInput(@Nullable final Integer inputMode) {
         if (inputMode != null && inputMode == 1) return;
         final Context context = getContext();
         if (context == null) return;
@@ -1234,9 +1253,12 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     }
 
     private void navigateToImageEditFragment(final Uri uri) {
-        final NavDirections navDirections = DirectMessageThreadFragmentDirections.actionThreadToImageEdit(uri);
-        final NavController navController = NavHostFragment.findNavController(this);
-        navController.navigate(navDirections);
+        try {
+            final NavDirections navDirections = DirectMessageThreadFragmentDirections.actionToImageEdit(uri);
+            NavHostFragment.findNavController(this).navigate(navDirections);
+        } catch (Exception e) {
+            Log.e(TAG, "navigateToImageEditFragment: ", e);
+        }
     }
 
     private void handleSentMessage(final LiveData<Resource<Object>> resourceLiveData) {
@@ -1403,10 +1425,13 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         final Context context = getContext();
         if (context == null) return;
         final DirectItemType itemType = item.getItemType();
+        if (itemType == null) return;
         //noinspection SwitchStatementWithTooFewBranches
         switch (itemType) {
             case VOICE_MEDIA:
                 downloadItem(context, item.getVoiceMedia() == null ? null : item.getVoiceMedia().getMedia());
+                break;
+            default:
                 break;
         }
     }
@@ -1419,15 +1444,6 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         }
         DownloadUtils.download(context, media);
         Toast.makeText(context, R.string.downloader_downloading_media, Toast.LENGTH_SHORT).show();
-    }
-
-    @Nullable
-    private User getUser(final long userId) {
-        for (final User user : users) {
-            if (userId != user.getPk()) continue;
-            return user;
-        }
-        return null;
     }
 
     // Sets the translationY of views to height with animation
@@ -1476,17 +1492,22 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         final LiveData<List<User>> leftUsers = viewModel.getLeftUsers();
         final ArrayList<User> allUsers = new ArrayList<>();
         allUsers.add(viewModel.getCurrentUser());
-        if (users != null && users.getValue() != null) {
+        if (users.getValue() != null) {
             allUsers.addAll(users.getValue());
         }
-        if (leftUsers != null && leftUsers.getValue() != null) {
+        if (leftUsers.getValue() != null) {
             allUsers.addAll(leftUsers.getValue());
         }
-        reactionDialogFragment = DirectItemReactionDialogFragment
-                .newInstance(viewModel.getViewerId(),
-                             allUsers,
-                             item.getItemId(),
-                             item.getReactions());
+        final String itemId = item.getItemId();
+        if (itemId == null) return;
+        final DirectItemReactions reactions = item.getReactions();
+        if (reactions == null) return;
+        reactionDialogFragment = DirectItemReactionDialogFragment.newInstance(
+                viewModel.getViewerId(),
+                allUsers,
+                itemId,
+                reactions
+        );
         reactionDialogFragment.show(getChildFragmentManager(), "reactions_dialog");
     }
 
@@ -1498,9 +1519,7 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
         if (itemId == null || reaction == null) return;
         if (reaction.getSenderId() == viewModel.getViewerId()) {
             final LiveData<Resource<Object>> resourceLiveData = viewModel.sendDeleteReaction(itemId);
-            if (resourceLiveData != null) {
-                resourceLiveData.observe(getViewLifecycleOwner(), directItemResource -> handleSentMessage(resourceLiveData));
-            }
+            resourceLiveData.observe(getViewLifecycleOwner(), directItemResource -> handleSentMessage(resourceLiveData));
             return;
         }
         // navigate to user
@@ -1510,17 +1529,18 @@ public class DirectMessageThreadFragment extends Fragment implements DirectReact
     }
 
     private void navigateToUser(@NonNull final String username) {
-        final ProfileNavGraphDirections.ActionGlobalProfileFragment direction = ProfileNavGraphDirections
-                .actionGlobalProfileFragment("@" + username);
-        NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(direction);
+        try {
+            final NavDirections direction = DirectMessageThreadFragmentDirections.actionToProfile().setUsername(username);
+            NavHostFragment.findNavController(DirectMessageThreadFragment.this).navigate(direction);
+        } catch (Exception e) {
+            Log.e(TAG, "navigateToUser: ", e);
+        }
     }
 
     @Override
     public void onClick(final View view, final Emoji emoji) {
         if (addReactionItem == null || emoji == null) return;
         final LiveData<Resource<Object>> resourceLiveData = viewModel.sendReaction(addReactionItem, emoji);
-        if (resourceLiveData != null) {
-            resourceLiveData.observe(getViewLifecycleOwner(), directItemResource -> handleSentMessage(resourceLiveData));
-        }
+        resourceLiveData.observe(getViewLifecycleOwner(), directItemResource -> handleSentMessage(resourceLiveData));
     }
 }

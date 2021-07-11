@@ -19,6 +19,7 @@ public class StoriesPreferencesFragment extends BasePreferencesFragment {
         screen.addPreference(getHideMutedReelsPreference(context));
         screen.addPreference(getMarkStoriesSeenPreference(context));
         screen.addPreference(getAutoPlayPreference(context));
+        screen.addPreference(getStoryListPreference(context));
     }
 
     private Preference getStorySortPreference(@NonNull final Context context) {
@@ -59,6 +60,15 @@ public class StoriesPreferencesFragment extends BasePreferencesFragment {
         final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
         preference.setKey(PreferenceKeys.AUTOPLAY_VIDEOS_STORIES);
         preference.setTitle(R.string.autoplay_stories_setting);
+        preference.setIconSpaceReserved(false);
+        return preference;
+    }
+
+    private Preference getStoryListPreference(@NonNull final Context context) {
+        final SwitchPreferenceCompat preference = new SwitchPreferenceCompat(context);
+        preference.setKey(PreferenceKeys.PREF_STORY_SHOW_LIST);
+        preference.setTitle(R.string.story_list_setting);
+        preference.setSummary(R.string.story_list_setting_summary);
         preference.setIconSpaceReserved(false);
         return preference;
     }

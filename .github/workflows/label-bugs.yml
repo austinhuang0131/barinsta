@@ -20,4 +20,4 @@ jobs:
         uses: GongT/cancel-previous-workflows@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DELETE: true
+          DELETE: 'yes'

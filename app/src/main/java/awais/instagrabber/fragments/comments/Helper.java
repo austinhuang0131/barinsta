@@ -1,7 +1,7 @@
 package awais.instagrabber.fragments.comments;
 
 import android.content.Context;
-import android.os.Bundle;
+import android.graphics.drawable.Drawable;
 import android.text.Editable;
 import android.util.Log;
 import android.view.View;
@@ -45,7 +45,10 @@ public final class Helper {
                                  @NonNull final RecyclerView.OnScrollListener lazyLoader) {
         list.setLayoutManager(layoutManager);
         final DividerItemDecoration itemDecoration = new DividerItemDecoration(context, LinearLayoutManager.VERTICAL);
-        itemDecoration.setDrawable(ContextCompat.getDrawable(context, R.drawable.pref_list_divider_material));
+        final Drawable drawable = ContextCompat.getDrawable(context, R.drawable.pref_list_divider_material);
+        if (drawable != null) {
+            itemDecoration.setDrawable(drawable);
+        }
         list.addItemDecoration(itemDecoration);
         list.addOnScrollListener(lazyLoader);
     }
@@ -68,8 +71,7 @@ public final class Helper {
             public void onHashtagClick(final String hashtag) {
                 try {
                     if (navController == null) return;
-                    final NavDirections action = CommentsViewerFragmentDirections.actionGlobalHashTagFragment(hashtag);
-                    navController.navigate(action);
+                    navController.navigate(CommentsViewerFragmentDirections.actionToHashtag(hashtag));
                 } catch (Exception e) {
                     Log.e(TAG, "onHashtagClick: ", e);
                 }
@@ -123,12 +125,10 @@ public final class Helper {
 
             @Override
             public void onViewLikes(final Comment comment) {
-                if (navController == null) return;
                 try {
-                    final Bundle bundle = new Bundle();
-                    bundle.putString("postId", comment.getPk());
-                    bundle.putBoolean("isComment", true);
-                    navController.navigate(R.id.action_global_likesViewerFragment, bundle);
+                    if (navController == null) return;
+                    final NavDirections actionToLikes = CommentsViewerFragmentDirections.actionToLikes(comment.getPk(), true);
+                    navController.navigate(actionToLikes);
                 } catch (Exception e) {
                     Log.e(TAG, "onViewLikes: ", e);
                 }
@@ -144,10 +144,7 @@ public final class Helper {
                             Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show();
                             return;
                         }
-                        String username = "";
-                        if (comment.getUser() != null) {
-                            username = comment.getUser().getUsername();
-                        }
+                        final String username = comment.getUser().getUsername();
                         new MaterialAlertDialogBuilder(context)
                                 .setTitle(username)
                                 .setMessage(result)
@@ -192,9 +189,9 @@ public final class Helper {
 
     private static void openProfile(final NavController navController,
                                     @NonNull final String username) {
-        if (navController == null) return;
         try {
-            final NavDirections action = CommentsViewerFragmentDirections.actionGlobalProfileFragment(username);
+            if (navController == null) return;
+            final NavDirections action = CommentsViewerFragmentDirections.actionToProfile().setUsername(username);
             navController.navigate(action);
         } catch (Exception e) {
             Log.e(TAG, "openProfile: ", e);

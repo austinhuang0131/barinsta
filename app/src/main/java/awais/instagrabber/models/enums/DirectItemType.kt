@@ -64,8 +64,8 @@ enum class DirectItemType(val id: Int) : Serializable {
         private val map: MutableMap<Int, DirectItemType> = mutableMapOf()
 
         @JvmStatic
-        fun getId(id: Int): DirectItemType? {
-            return map[id]
+        fun getTypeFromId(id: Int): DirectItemType {
+            return map[id] ?: UNKNOWN
         }
 
         fun getName(directItemType: DirectItemType): String? {

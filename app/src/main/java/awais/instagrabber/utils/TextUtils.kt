@@ -11,11 +11,11 @@ import java.util.*
 import kotlin.math.absoluteValue
 
 object TextUtils {
-    lateinit var datetimeParser: DateTimeFormatter
+    var dateTimeFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern(Constants.defaultDateTimeFormat)
 
     @JvmStatic
     fun isEmpty(charSequence: CharSequence?): Boolean {
-        if (charSequence == null || charSequence.length < 1) return true
+        if (charSequence.isNullOrBlank()) return true
         if (charSequence is String) {
             var str = charSequence
             if ("" == str || "null" == str || str.isEmpty()) return true
@@ -78,7 +78,8 @@ object TextUtils {
 
     @JvmStatic
     fun setFormatter(datetimeParser: DateTimeFormatter) {
-        this.datetimeParser = datetimeParser
+        if (!DateUtils.checkFormatterValid(datetimeParser)) return
+        this.dateTimeFormatter = datetimeParser
     }
 
     @JvmStatic
@@ -86,11 +87,11 @@ object TextUtils {
         return LocalDateTime.ofInstant(
             Instant.ofEpochSecond(epochSecond),
             ZoneId.systemDefault()
-        ).format(datetimeParser)
+        ).format(dateTimeFormatter)
     }
 
     @JvmStatic
     fun nowToString(): String {
-        return LocalDateTime.now().format(datetimeParser)
+        return LocalDateTime.now().format(dateTimeFormatter)
     }
 }

@@ -11,6 +11,8 @@ object PreferenceKeys {
     const val PREF_SHOWN_COUNT_TOOLTIP = "shown_count_tooltip"
     const val PREF_SEARCH_FOCUS_KEYBOARD = "search_focus_keyboard"
     const val PREF_AUTO_BACKUP_ENABLED = "auto_backup_enabled"
+    const val PREF_DISABLE_SCREEN_TRANSITIONS = "disable_screen_transitions"
+    const val PREF_STORY_SHOW_LIST = "story_show_list"
 
     // string prefs
     const val FOLDER_PATH = "custom_path"
@@ -32,7 +34,7 @@ object PreferenceKeys {
     const val PLAY_IN_BACKGROUND = "play_in_background"
     const val AUTOPLAY_VIDEOS_STORIES = "autoplay_videos"
     const val MUTED_VIDEOS = "muted_videos"
-    const val SHOW_CAPTIONS = "show_captions"
+//    const val SHOW_CAPTIONS = "show_captions"
     const val CUSTOM_DATE_TIME_FORMAT_ENABLED = "data_time_custom_enabled"
     const val SWAP_DATE_TIME_FORMAT_ENABLED = "swap_date_time_enabled"
     const val MARK_AS_SEEN = "mark_as_seen"

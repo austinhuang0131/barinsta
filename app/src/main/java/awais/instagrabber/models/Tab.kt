@@ -10,12 +10,6 @@ data class Tab(
     val isRemovable: Boolean,
 
     /**
-     * This is name part of the navigation resource
-     * eg: @navigation/ **graphName**
-     */
-    val graphName: String,
-
-    /**
      * This is the actual resource id of the navigation resource (R.navigation.graphName = navigationResId)
      */
     @param:NavigationRes val navigationResId: Int,

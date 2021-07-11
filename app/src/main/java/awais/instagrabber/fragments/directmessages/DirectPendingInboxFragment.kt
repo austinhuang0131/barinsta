@@ -134,7 +134,7 @@ class DirectPendingInboxFragment : Fragment(), OnRefreshListener {
             val threadTitle = thread.threadTitle ?: return@DirectMessageInboxAdapter
             navigating = true
             if (isAdded) {
-                val directions = DirectPendingInboxFragmentDirections.actionPendingInboxToThread(threadId, threadTitle)
+                val directions = DirectPendingInboxFragmentDirections.actionToThread(threadId, threadTitle)
                 directions.pending = true
                 NavHostFragment.findNavController(this).navigate(directions)
             }

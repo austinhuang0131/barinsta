@@ -208,15 +208,11 @@ public final class FeedAdapterV2 extends ListAdapter<Media, RecyclerView.ViewHol
     // }
 
     public interface FeedItemCallback {
-        void onPostClick(final Media feedModel,
-                         final View profilePicView,
-                         final View mainPostImage);
+        void onPostClick(final Media feedModel);
 
-        void onProfilePicClick(final Media feedModel,
-                               final View profilePicView);
+        void onProfilePicClick(final Media feedModel);
 
-        void onNameClick(final Media feedModel,
-                         final View profilePicView);
+        void onNameClick(final Media feedModel);
 
         void onLocationClick(final Media feedModel);
 

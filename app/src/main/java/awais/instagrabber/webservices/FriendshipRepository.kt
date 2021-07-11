@@ -1,15 +1,11 @@
 package awais.instagrabber.webservices
 
-import awais.instagrabber.models.FollowModel
 import awais.instagrabber.repositories.FriendshipService
 import awais.instagrabber.repositories.responses.FriendshipChangeResponse
 import awais.instagrabber.repositories.responses.FriendshipListFetchResponse
 import awais.instagrabber.repositories.responses.FriendshipRestrictResponse
 import awais.instagrabber.utils.Utils
 import awais.instagrabber.webservices.RetrofitFactory.retrofit
-import org.json.JSONArray
-import org.json.JSONException
-import org.json.JSONObject
 
 class FriendshipRepository(private val service: FriendshipService) {
 
@@ -113,43 +109,12 @@ class FriendshipRepository(private val service: FriendshipService) {
         follower: Boolean,
         targetUserId: Long,
         maxId: String?,
+        query: String?
     ): FriendshipListFetchResponse {
-        val queryMap = if (maxId != null) mapOf("max_id" to maxId) else emptyMap()
-        val response = service.getList(targetUserId, if (follower) "followers" else "following", queryMap)
-        return parseListResponse(response)
-    }
-
-    @Throws(JSONException::class)
-    private fun parseListResponse(body: String): FriendshipListFetchResponse {
-        val root = JSONObject(body)
-        val nextMaxId = root.optString("next_max_id")
-        val status = root.optString("status")
-        val itemsJson = root.optJSONArray("users")
-        val items = parseItems(itemsJson)
-        return FriendshipListFetchResponse(
-            nextMaxId,
-            status,
-            items
-        )
-    }
-
-    @Throws(JSONException::class)
-    private fun parseItems(items: JSONArray?): List<FollowModel> {
-        if (items == null) {
-            return emptyList()
-        }
-        val followModels = mutableListOf<FollowModel>()
-        for (i in 0 until items.length()) {
-            val itemJson = items.optJSONObject(i) ?: continue
-            val followModel = FollowModel(
-                itemJson.getString("pk"),
-                itemJson.getString("username"),
-                itemJson.optString("full_name"),
-                itemJson.getString("profile_pic_url")
-            )
-            followModels.add(followModel)
-        }
-        return followModels
+        val queryMap: MutableMap<String, String> = mutableMapOf()
+        if (!maxId.isNullOrEmpty()) queryMap.set("max_id", maxId)
+        if (!query.isNullOrEmpty()) queryMap.set("query", query)
+        return service.getList(targetUserId, if (follower) "followers" else "following", queryMap.toMap())
     }
 
     companion object {

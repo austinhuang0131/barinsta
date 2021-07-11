@@ -11,7 +11,7 @@ data class Story(
     val latestReelMedia: Long? = null, // = timestamp
     val mediaCount: Int? = null,
     // for stories and highlights
-    var seen: Long? = null,
+    val seen: Long? = null,
     val user: User? = null,
     // for stories
     val muted: Boolean? = null,

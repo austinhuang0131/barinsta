@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@id/direct_messages_nav_graph"
+        android:icon="@drawable/ic_message_24"
+        android:contentDescription="@string/title_dm"
+        android:title="@string/title_dm" />
+    <item
+        android:id="@id/feed_nav_graph"
+        android:icon="@drawable/ic_home_24"
+        android:contentDescription="@string/feed"
+        android:title="@string/feed" />
+    <item
+        android:id="@id/profile_nav_graph"
+        android:icon="@drawable/ic_person_24"
+        android:contentDescription="@string/profile"
+        android:title="@string/profile" />
+    <item
+        android:id="@id/discover_nav_graph"
+        android:icon="@drawable/ic_explore_24"
+        android:contentDescription="@string/title_discover"
+        android:title="@string/title_discover" />
+    <item
+        android:id="@id/more_nav_graph"
+        android:icon="@drawable/ic_more_horiz_24"
+        android:contentDescription="@string/more"
+        android:title="@string/more" />
+</menu>

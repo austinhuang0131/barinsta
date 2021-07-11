@@ -21,6 +21,7 @@ import androidx.lifecycle.SavedStateHandle;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavBackStackEntry;
 import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.FragmentNavigator;
 import androidx.navigation.fragment.NavHostFragment;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -153,8 +154,8 @@ public class SavedCollectionsFragment extends Fragment implements SwipeRefreshLa
                 try {
                     final FragmentNavigator.Extras.Builder builder = new FragmentNavigator.Extras.Builder()
                             .addSharedElement(cover, "collection-" + topicCluster.getCollectionId());
-                    final SavedCollectionsFragmentDirections.ActionSavedCollectionsFragmentToCollectionPostsFragment action = SavedCollectionsFragmentDirections
-                            .actionSavedCollectionsFragmentToCollectionPostsFragment(topicCluster, titleColor, backgroundColor);
+                    final NavDirections action = SavedCollectionsFragmentDirections
+                            .actionToCollectionPosts(topicCluster, titleColor, backgroundColor);
                     navController.navigate(action, builder.build());
                 } catch (Exception e) {
                     Log.e(TAG, "setupTopics: ", e);

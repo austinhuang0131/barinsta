@@ -19,7 +19,7 @@ import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.navigation.NavController;
+import androidx.navigation.NavDirections;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.google.android.material.snackbar.Snackbar;
@@ -125,7 +125,9 @@ public class SearchFragment extends Fragment implements SearchCategoryFragment.O
             mainActivity.showSearchView();
         }
         if (settingsHelper.getBoolean(PREF_SEARCH_FOCUS_KEYBOARD)) {
-            searchInput.requestFocus();
+            if (searchInput != null) {
+                searchInput.requestFocus();
+            }
             final InputMethodManager imm = (InputMethodManager) requireContext().getSystemService(Context.INPUT_METHOD_SERVICE);
             if (imm != null) imm.showSoftInput(searchInput, InputMethodManager.SHOW_IMPLICIT);
         }
@@ -205,24 +207,21 @@ public class SearchFragment extends Fragment implements SearchCategoryFragment.O
             if (!searchItem.isFavorite()) {
                 viewModel.saveToRecentSearches(searchItem); // insert or update recent
             }
-            final NavController navController = NavHostFragment.findNavController(this);
-            final Bundle bundle = new Bundle();
+            final NavDirections action;
             switch (type) {
                 case USER:
-                    bundle.putString("username", searchItem.getUser().getUsername());
-                    navController.navigate(R.id.action_global_profileFragment, bundle);
+                    action = SearchFragmentDirections.actionToProfile().setUsername(searchItem.getUser().getUsername());
                     break;
                 case HASHTAG:
-                    bundle.putString("hashtag", searchItem.getHashtag().getName());
-                    navController.navigate(R.id.action_global_hashTagFragment, bundle);
+                    action = SearchFragmentDirections.actionToHashtag(searchItem.getHashtag().getName());
                     break;
                 case LOCATION:
-                    bundle.putLong("locationId", searchItem.getPlace().getLocation().getPk());
-                    navController.navigate(R.id.action_global_locationFragment, bundle);
+                    action = SearchFragmentDirections.actionToLocation(searchItem.getPlace().getLocation().getPk());
                     break;
                 default:
-                    break;
+                    return;
             }
+            NavHostFragment.findNavController(this).navigate(action);
         } catch (Exception e) {
             Log.e(TAG, "onSearchItemClick: ", e);
         }
@@ -239,6 +238,7 @@ public class SearchFragment extends Fragment implements SearchCategoryFragment.O
                 switch (resource.status) {
                     case SUCCESS:
                         viewModel.search("", type);
+                        viewModel.search("", FavoriteType.TOP);
                         liveData.removeObserver(this);
                         break;
                     case ERROR:

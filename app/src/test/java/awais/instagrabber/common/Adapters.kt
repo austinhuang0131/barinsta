@@ -8,9 +8,7 @@ import awais.instagrabber.models.enums.FavoriteType
 import awais.instagrabber.repositories.*
 import awais.instagrabber.repositories.responses.*
 import awais.instagrabber.repositories.responses.directmessages.*
-import awais.instagrabber.repositories.responses.stories.ArchiveResponse
-import awais.instagrabber.repositories.responses.stories.ReelsTrayResponse
-import awais.instagrabber.repositories.responses.stories.StoryStickerResponse
+import awais.instagrabber.repositories.responses.stories.*
 
 open class UserServiceAdapter : UserService {
     override suspend fun getUserInfo(uid: Long): WrappedUser {
@@ -47,7 +45,7 @@ open class FriendshipServiceAdapter : FriendshipService {
 }
 
 open class StoriesServiceAdapter : StoriesService {
-    override suspend fun fetch(mediaId: Long): String {
+    override suspend fun fetch(mediaId: Long): StoryMediaResponse {
         TODO("Not yet implemented")
     }
 
@@ -63,11 +61,19 @@ open class StoriesServiceAdapter : StoriesService {
         TODO("Not yet implemented")
     }
 
-    override suspend fun getUserStory(url: String): String {
+    override suspend fun getReelsMedia(id: String): ReelsMediaResponse {
         TODO("Not yet implemented")
     }
 
-    override suspend fun respondToSticker(storyId: String, stickerId: String, action: String, form: Map<String, String>): StoryStickerResponse {
+    override suspend fun getStories(type: String, id: String): ReelsResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun getUserStories(id: Long): ReelsResponse {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun respondToSticker(storyId: Long, stickerId: Long, action: String, form: Map<String, String>): StoryStickerResponse {
         TODO("Not yet implemented")
     }
 

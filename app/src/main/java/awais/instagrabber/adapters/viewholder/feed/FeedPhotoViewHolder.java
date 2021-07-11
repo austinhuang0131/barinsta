@@ -16,6 +16,7 @@ import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
 import awais.instagrabber.adapters.FeedAdapterV2;
 import awais.instagrabber.databinding.ItemFeedPhotoBinding;
+import awais.instagrabber.databinding.LayoutPostViewBottomBinding;
 import awais.instagrabber.repositories.responses.Media;
 import awais.instagrabber.utils.ResponseBodyUtils;
 import awais.instagrabber.utils.TextUtils;
@@ -28,10 +29,11 @@ public class FeedPhotoViewHolder extends FeedItemViewHolder {
 
     public FeedPhotoViewHolder(@NonNull final ItemFeedPhotoBinding binding,
                                final FeedAdapterV2.FeedItemCallback feedItemCallback) {
-        super(binding.getRoot(), binding.itemFeedTop, binding.itemFeedBottom, feedItemCallback);
+        super(binding.getRoot(), feedItemCallback);
         this.binding = binding;
         this.feedItemCallback = feedItemCallback;
-        binding.itemFeedBottom.btnViews.setVisibility(View.GONE);
+        final LayoutPostViewBottomBinding bottom = LayoutPostViewBottomBinding.bind(binding.getRoot());
+        bottom.viewsCount.setVisibility(View.GONE);
         // binding.itemFeedBottom.btnMute.setVisibility(View.GONE);
         binding.imageViewer.setAllowTouchInterceptionWhileZoomed(false);
         final GenericDraweeHierarchy hierarchy = new GenericDraweeHierarchyBuilder(itemView.getContext().getResources())
@@ -61,7 +63,7 @@ public class FeedPhotoViewHolder extends FeedItemViewHolder {
                 @Override
                 public boolean onSingleTapConfirmed(final MotionEvent e) {
                     if (feedItemCallback != null) {
-                        feedItemCallback.onPostClick(media, binding.itemFeedTop.ivProfilePic, binding.imageViewer);
+                        feedItemCallback.onPostClick(media);
                         return true;
                     }
                     return false;

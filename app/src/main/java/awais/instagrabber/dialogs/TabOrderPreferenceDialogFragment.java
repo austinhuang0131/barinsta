@@ -4,7 +4,6 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.os.Bundle;
-import android.util.Pair;
 import android.view.View;
 
 import androidx.annotation.NonNull;
@@ -28,7 +27,9 @@ import awais.instagrabber.adapters.TabsAdapter;
 import awais.instagrabber.adapters.viewholder.TabViewHolder;
 import awais.instagrabber.fragments.settings.PreferenceKeys;
 import awais.instagrabber.models.Tab;
+import awais.instagrabber.utils.NavigationHelperKt;
 import awais.instagrabber.utils.Utils;
+import kotlin.Pair;
 
 import static androidx.recyclerview.widget.ItemTouchHelper.ACTION_STATE_DRAG;
 import static androidx.recyclerview.widget.ItemTouchHelper.DOWN;
@@ -235,9 +236,10 @@ public class TabOrderPreferenceDialogFragment extends DialogFragment {
     }
 
     private void saveNewOrder() {
-        final String newOrderString = newOrderTabs.stream()
-                                                  .map(Tab::getGraphName)
-                                                  .collect(Collectors.joining(","));
+        final String newOrderString = newOrderTabs
+                .stream()
+                .map(tab -> NavigationHelperKt.getNavGraphNameForNavRootId(tab.getNavigationRootId()))
+                .collect(Collectors.joining(","));
         Utils.settingsHelper.putString(PreferenceKeys.PREF_TAB_ORDER, newOrderString);
     }
 
@@ -258,12 +260,12 @@ public class TabOrderPreferenceDialogFragment extends DialogFragment {
         itemTouchHelper.attachToRecyclerView(list);
         adapter = new TabsAdapter(tabAdapterCallback);
         list.setAdapter(adapter);
-        final Pair<List<Tab>, List<Tab>> navTabListPair = Utils.getNavTabList(context);
-        tabsInPref = navTabListPair.first;
+        final Pair<List<Tab>, List<Tab>> navTabListPair = NavigationHelperKt.getLoggedInNavTabs(context);
+        tabsInPref = navTabListPair.getFirst();
         // initially set newOrderTabs and newOtherTabs same as current tabs
-        newOrderTabs = navTabListPair.first;
-        newOtherTabs = navTabListPair.second;
-        adapter.submitList(navTabListPair.first, navTabListPair.second);
+        newOrderTabs = navTabListPair.getFirst();
+        newOtherTabs = navTabListPair.getSecond();
+        adapter.submitList(navTabListPair.getFirst(), navTabListPair.getSecond());
         return list;
     }
 

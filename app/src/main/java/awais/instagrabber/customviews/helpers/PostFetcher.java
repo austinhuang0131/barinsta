@@ -21,21 +21,20 @@ public class PostFetcher {
     }
 
     public void fetch() {
-        if (!fetching) {
-            fetching = true;
-            postFetchService.fetch(new FetchListener<List<Media>>() {
-                @Override
-                public void onResult(final List<Media> result) {
-                    fetching = false;
-                    fetchListener.onResult(result);
-                }
+        if (fetching) return;
+        fetching = true;
+        postFetchService.fetch(new FetchListener<List<Media>>() {
+            @Override
+            public void onResult(final List<Media> result) {
+                fetching = false;
+                fetchListener.onResult(result);
+            }
 
-                @Override
-                public void onFailure(final Throwable t) {
-                    Log.e(TAG, "onFailure: ", t);
-                }
-            });
-        }
+            @Override
+            public void onFailure(final Throwable t) {
+                Log.e(TAG, "onFailure: ", t);
+            }
+        });
     }
 
     public void reset() {

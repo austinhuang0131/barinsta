@@ -11,8 +11,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import awais.instagrabber.ProfileNavGraphDirections
 import awais.instagrabber.R
 import awais.instagrabber.activities.MainActivity
 import awais.instagrabber.adapters.DirectPendingUsersAdapter
@@ -25,13 +25,11 @@ import awais.instagrabber.dialogs.ConfirmDialogFragment
 import awais.instagrabber.dialogs.ConfirmDialogFragment.ConfirmDialogFragmentCallback
 import awais.instagrabber.dialogs.MultiOptionDialogFragment
 import awais.instagrabber.dialogs.MultiOptionDialogFragment.MultiOptionDialogSingleCallback
-import awais.instagrabber.fragments.UserSearchFragment
-import awais.instagrabber.fragments.UserSearchFragmentDirections
+import awais.instagrabber.fragments.UserSearchMode
 import awais.instagrabber.models.Resource
 import awais.instagrabber.repositories.responses.User
 import awais.instagrabber.repositories.responses.directmessages.DirectThreadParticipantRequestsResponse
 import awais.instagrabber.repositories.responses.directmessages.RankedRecipient
-import awais.instagrabber.utils.TextUtils.isEmpty
 import awais.instagrabber.utils.Utils
 import awais.instagrabber.utils.extensions.TAG
 import awais.instagrabber.viewmodels.AppStateViewModel
@@ -203,19 +201,22 @@ class DirectMessageSettingsFragment : Fragment(), ConfirmDialogFragmentCallback 
         }
         binding.addMembers.setOnClickListener {
             if (!isAdded) return@setOnClickListener
-            val navController = NavHostFragment.findNavController(this)
-            val currentDestination = navController.currentDestination ?: return@setOnClickListener
-            if (currentDestination.id != R.id.directMessagesSettingsFragment) return@setOnClickListener
-            val users = viewModel.getUsers().value
-            val currentUserIds: LongArray = users?.asSequence()?.map { obj: User -> obj.pk }?.sorted()?.toList()?.toLongArray() ?: LongArray(0)
-            val actionGlobalUserSearch = UserSearchFragmentDirections
-                .actionGlobalUserSearch()
-                .setTitle(getString(R.string.add_members))
-                .setActionLabel(getString(R.string.add))
-                .setHideUserIds(currentUserIds)
-                .setSearchMode(UserSearchFragment.SearchMode.RAVEN)
-                .setMultiple(true)
-            navController.navigate(actionGlobalUserSearch)
+            try {
+                val navController = findNavController()
+                if (navController.currentDestination?.id != R.id.directMessagesSettingsFragment) return@setOnClickListener
+                val users = viewModel.getUsers().value ?: return@setOnClickListener
+                val currentUserIds = users.asSequence().map(User::pk).sorted().toList().toLongArray()
+                val actionGlobalUserSearch = DirectMessageSettingsFragmentDirections.actionToUserSearch().apply {
+                    title = getString(R.string.add_members)
+                    actionLabel = getString(R.string.add)
+                    hideUserIds = currentUserIds
+                    searchMode = UserSearchMode.RAVEN
+                    multiple = true
+                }
+                navController.navigate(actionGlobalUserSearch)
+            } catch (e: Exception) {
+                Log.e(TAG, "setupSettings: ", e)
+            }
         }
         binding.muteMentionsLabel.setOnClickListener { binding.muteMentions.toggle() }
         binding.muteMentions.setOnCheckedChangeListener { buttonView: CompoundButton, isChecked: Boolean ->
@@ -300,10 +301,13 @@ class DirectMessageSettingsFragment : Fragment(), ConfirmDialogFragmentCallback 
                     Utils.openURL(context, "https://facebook.com/" + user.interopMessagingUserFbid)
                     return@DirectUsersAdapter
                 }
-                if (isEmpty(user.username)) return@DirectUsersAdapter
-                val directions = ProfileNavGraphDirections
-                    .actionGlobalProfileFragment("@" + user.username)
-                NavHostFragment.findNavController(this).navigate(directions)
+                if (user.username.isBlank()) return@DirectUsersAdapter
+                try {
+                    val directions = DirectMessageSettingsFragmentDirections.actionToProfile().apply { this.username = user.username }
+                    findNavController().navigate(directions)
+                } catch (e: Exception) {
+                    Log.e(TAG, "setupMembers: ", e)
+                }
             },
             { _: Int, user: User? ->
                 val options = viewModel.createUserOptions(user)
@@ -339,9 +343,12 @@ class DirectMessageSettingsFragment : Fragment(), ConfirmDialogFragmentCallback 
             binding.pendingMembers.layoutManager = LinearLayoutManager(context)
             pendingUsersAdapter = DirectPendingUsersAdapter(object : PendingUserCallback {
                 override fun onClick(position: Int, pendingUser: PendingUser) {
-                    val directions = ProfileNavGraphDirections
-                        .actionGlobalProfileFragment("@" + pendingUser.user.username)
-                    NavHostFragment.findNavController(this@DirectMessageSettingsFragment).navigate(directions)
+                    try {
+                        val directions = DirectMessageSettingsFragmentDirections.actionToProfile().apply { this.username = pendingUser.user.username }
+                        findNavController().navigate(directions)
+                    } catch (e: Exception) {
+                        Log.e(TAG, "onClick: ", e)
+                    }
                 }
 
                 override fun onApprove(position: Int, pendingUser: PendingUser) {
@@ -420,7 +427,7 @@ class DirectMessageSettingsFragment : Fragment(), ConfirmDialogFragmentCallback 
                 if (resource == null) return@observe
                 when (resource.status) {
                     Resource.Status.SUCCESS -> {
-                        val directions = DirectMessageSettingsFragmentDirections.actionSettingsToInbox()
+                        val directions = DirectMessageSettingsFragmentDirections.actionToInbox()
                         NavHostFragment.findNavController(this).navigate(directions)
                     }
                     Resource.Status.ERROR -> {

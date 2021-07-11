@@ -26,6 +26,7 @@ import awais.instagrabber.viewmodels.ProfileFragmentViewModel.ProfileEvent.*
 import awais.instagrabber.webservices.*
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
@@ -47,6 +48,8 @@ class ProfileFragmentViewModel(
     private val _isFavorite = MutableLiveData(false)
     private val profileAction = MutableLiveData(INIT)
     private val _eventLiveData = MutableLiveData<Event<ProfileEvent>?>()
+
+    private var previousUsername: String? = null
 
     enum class ProfileAction {
         INIT,
@@ -97,8 +100,9 @@ class ProfileFragmentViewModel(
     val profile: LiveData<Resource<User?>> = currentUserStateUsernameActionLiveData.switchMap {
         val (currentUserResource, stateUsernameResource, action) = it
         liveData<Resource<User?>>(context = viewModelScope.coroutineContext + ioDispatcher) {
+            if (action == INIT && previousUsername != null && stateUsernameResource.data == previousUsername) return@liveData
             if (currentUserResource.status == Resource.Status.LOADING || stateUsernameResource.status == Resource.Status.LOADING) {
-                emit(Resource.loading(null))
+                emit(Resource.loading(profileCopy.value?.data))
                 return@liveData
             }
             val currentUser = currentUserResource.data
@@ -110,6 +114,7 @@ class ProfileFragmentViewModel(
             try {
                 when (action) {
                     INIT, REFRESH -> {
+                        previousUsername = stateUsername
                         val fetchedUser = profileFetchControlledRunner.cancelPreviousThenRun { fetchUser(currentUser, stateUsername) }
                         emit(Resource.success(fetchedUser))
                         if (fetchedUser != null) {
@@ -217,7 +222,7 @@ class ProfileFragmentViewModel(
     private suspend fun fetchUser(
         currentUser: User?,
         stateUsername: String,
-    ): User {
+    ): User? {
         if (currentUser != null) {
             // logged in
             val tempUser = userRepository.getUsernameInfo(stateUsername)
@@ -376,6 +381,7 @@ class ProfileFragmentViewModel(
                     }
                     val threadId = thread.threadId ?: return@afterPrevious
                     _eventLiveData.postValue(Event(NavigateToThread(threadId, username)))
+                    delay(200) // Add delay so that the postValue in finally does not overwrite the NavigateToThread event
                 } catch (e: Exception) {
                     Log.e(TAG, "sendDm: ", e)
                 } finally {

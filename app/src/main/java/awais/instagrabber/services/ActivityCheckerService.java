@@ -54,10 +54,9 @@ public class ActivityCheckerService extends Service {
             public void onSuccess(final NotificationCounts result) {
                 try {
                     if (result == null) return;
-                    final String notification = getNotificationString(result);
+                    final List<String> notification = getNotificationString(result);
                     if (notification == null) return;
-                    final String notificationString = getString(R.string.activity_count_prefix) + " " + notification + ".";
-                    showNotification(notificationString);
+                    showNotification(notification);
                 } finally {
                     handler.postDelayed(runnable, DELAY_MILLIS);
                 }
@@ -88,42 +87,54 @@ public class ActivityCheckerService extends Service {
         handler.removeCallbacks(runnable);
     }
 
-    private String getNotificationString(final NotificationCounts result) {
+    private List<String> getNotificationString(final NotificationCounts result) {
+        final List<String> toReturn = new ArrayList<>(2);
         final List<String> list = new ArrayList<>();
-        if (result.getRelationshipsCount() != 0) {
-            list.add(getString(R.string.activity_count_relationship, result.getRelationshipsCount()));
+        int count = 0;
+        if (result.getRelationships() != 0) {
+            list.add(getString(R.string.activity_count_relationship, result.getRelationships()));
+            count += result.getRelationships();
         }
-        if (result.getRequestsCount() != 0) {
-            list.add(getString(R.string.activity_count_requests, result.getRequestsCount()));
+        if (result.getRequests() != 0) {
+            list.add(getString(R.string.activity_count_requests, result.getRequests()));
+            count += result.getRequests();
         }
-        if (result.getUserTagsCount() != 0) {
-            list.add(getString(R.string.activity_count_usertags, result.getUserTagsCount()));
+        if (result.getUsertags() != 0) {
+            list.add(getString(R.string.activity_count_usertags, result.getUsertags()));
+            count += result.getUsertags();
         }
-        if (result.getPOYCount() != 0) {
-            list.add(getString(R.string.activity_count_poy, result.getPOYCount()));
+        if (result.getPhotosOfYou() != 0) {
+            list.add(getString(R.string.activity_count_poy, result.getPhotosOfYou()));
+            count += result.getPhotosOfYou();
         }
-        if (result.getCommentsCount() != 0) {
-            list.add(getString(R.string.activity_count_comments, result.getCommentsCount()));
+        if (result.getComments() != 0) {
+            list.add(getString(R.string.activity_count_comments, result.getComments()));
+            count += result.getComments();
         }
-        if (result.getCommentLikesCount() != 0) {
-            list.add(getString(R.string.activity_count_commentlikes, result.getCommentLikesCount()));
+        if (result.getCommentLikes() != 0) {
+            list.add(getString(R.string.activity_count_commentlikes, result.getCommentLikes()));
+            count += result.getCommentLikes();
         }
-        if (result.getLikesCount() != 0) {
-            list.add(getString(R.string.activity_count_likes, result.getLikesCount()));
+        if (result.getLikes() != 0) {
+            list.add(getString(R.string.activity_count_likes, result.getLikes()));
+            count += result.getLikes();
         }
         if (list.isEmpty()) return null;
-        return TextUtils.join(", ", list);
+        toReturn.add(TextUtils.join(", ", list));
+        toReturn.add(getResources().getQuantityString(R.plurals.activity_count_total, count, count));
+        return toReturn;
     }
 
-    private void showNotification(final String notificationString) {
+    private void showNotification(final List<String> notificationString) {
         final Notification notification = new NotificationCompat.Builder(this, Constants.ACTIVITY_CHANNEL_ID)
                 .setCategory(NotificationCompat.CATEGORY_STATUS)
                 .setSmallIcon(R.drawable.ic_notif)
                 .setAutoCancel(true)
                 .setOnlyAlertOnce(true)
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-                .setContentTitle(getString(R.string.action_notif))
-                .setContentText(notificationString)
+                .setContentTitle(notificationString.get(1))
+                .setContentText(notificationString.get(0))
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(notificationString.get(0)))
                 .setContentIntent(getPendingIntent())
                 .build();
         notificationManager.notify(Constants.ACTIVITY_NOTIFICATION_ID, notification);

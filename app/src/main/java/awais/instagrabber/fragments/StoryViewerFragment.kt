@@ -38,13 +38,12 @@ import awais.instagrabber.models.enums.StoryPaginationType
 import awais.instagrabber.repositories.requests.StoryViewerOptions
 import awais.instagrabber.repositories.responses.directmessages.RankedRecipient
 import awais.instagrabber.repositories.responses.stories.*
-import awais.instagrabber.utils.*
 import awais.instagrabber.utils.DownloadUtils.download
-import awais.instagrabber.utils.TextUtils.epochSecondToString
+import awais.instagrabber.utils.ResponseBodyUtils
+import awais.instagrabber.utils.Utils
 import awais.instagrabber.utils.extensions.TAG
 import awais.instagrabber.viewmodels.ArchivesViewModel
 import awais.instagrabber.viewmodels.FeedStoriesViewModel
-import awais.instagrabber.viewmodels.HighlightsViewModel
 import awais.instagrabber.viewmodels.StoryFragmentViewModel
 import awais.instagrabber.webservices.MediaRepository
 import awais.instagrabber.webservices.StoriesRepository
@@ -68,26 +67,20 @@ import java.util.*
 class StoryViewerFragment : Fragment() {
     private val TAG = "StoryViewerFragment"
 
-    private val cookie = Utils.settingsHelper.getString(Constants.COOKIE)
     private var root: View? = null
     private var currentStoryUsername: String? = null
-    private var highlightTitle: String? = null
     private var storiesAdapter: StoriesAdapter? = null
     private var swipeEvent: SwipeEvent? = null
     private var gestureDetector: GestureDetectorCompat? = null
     private val storiesRepository: StoriesRepository? = null
     private val mediaRepository: MediaRepository? = null
-    private var live: Broadcast? = null
     private var menuProfile: MenuItem? = null
     private var profileVisible: Boolean = false
     private var player: SimpleExoPlayer? = null
 
     private var actionBarTitle: String? = null
     private var actionBarSubtitle: String? = null
-    private var fetching = false
-    private val sticking = false
     private var shouldRefresh = true
-    private var dmVisible = false
     private var currentFeedStoryIndex = 0
     private var sliderValue = 0.0
     private var options: StoryViewerOptions? = null
@@ -152,12 +145,7 @@ class StoryViewerFragment : Fragment() {
         menuProfile!!.isVisible = profileVisible
     }
 
-    override fun onPrepareOptionsMenu(menu: Menu) {
-        // hide menu items from activity
-    }
-
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val context = context ?: return false
         val itemId = item.itemId
         if (itemId == R.id.action_profile) {
             val username = storiesViewModel.getCurrentStory().value?.user?.username
@@ -197,26 +185,18 @@ class StoryViewerFragment : Fragment() {
     }
 
     private fun init() {
-        val args = arguments
-        if (args == null) return
+        val args = arguments ?: return
         val fragmentArgs = StoryViewerFragmentArgs.fromBundle(args)
         options = fragmentArgs.options
         currentFeedStoryIndex = options!!.currentFeedStoryIndex
         val type = options!!.type
         if (currentFeedStoryIndex >= 0) {
             listViewModel = when (type) {
-                StoryViewerOptions.Type.HIGHLIGHT -> ViewModelProvider(fragmentActivity).get(
-                    HighlightsViewModel::class.java
-                )
-                StoryViewerOptions.Type.STORY_ARCHIVE -> ViewModelProvider(fragmentActivity).get(
-                    ArchivesViewModel::class.java
-                )
-                StoryViewerOptions.Type.FEED_STORY_POSITION -> ViewModelProvider(fragmentActivity).get(
-                    FeedStoriesViewModel::class.java
-                )
-                else -> ViewModelProvider(fragmentActivity).get(
-                    FeedStoriesViewModel::class.java
-                )
+                StoryViewerOptions.Type.STORY_ARCHIVE ->
+                    ViewModelProvider(fragmentActivity).get(ArchivesViewModel::class.java)
+                StoryViewerOptions.Type.FEED_STORY_POSITION ->
+                    ViewModelProvider(fragmentActivity).get(FeedStoriesViewModel::class.java)
+                else -> null
             }
         }
         setupButtons()
@@ -228,18 +208,26 @@ class StoryViewerFragment : Fragment() {
         val context = context ?: return
         binding.storiesList.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
-        storiesAdapter = StoriesAdapter { model: StoryMedia?, position: Int ->
+        storiesAdapter = StoriesAdapter { _, position ->
             storiesViewModel.setMedia(position)
         }
         binding.storiesList.adapter = storiesAdapter
         storiesViewModel.getCurrentStory().observe(fragmentActivity, {
-            if (it?.items != null) {
+            if (it?.items != null && it.items.size > 1) {
                 val storyMedias = it.items.toMutableList()
                 val newItem = storyMedias.get(0)
                 newItem.isCurrentSlide = true
                 storyMedias.set(0, newItem)
                 storiesAdapter!!.submitList(storyMedias)
                 storiesViewModel.setMedia(0)
+                binding.listToggle.isEnabled = true
+                binding.storiesList.visibility = if (Utils.settingsHelper.getBoolean(PreferenceKeys.PREF_STORY_SHOW_LIST)) View.VISIBLE
+                else View.GONE
+            }
+            else {
+                if (it?.items != null) storiesViewModel.setMedia(0)
+                binding.listToggle.isEnabled = false
+                binding.storiesList.visibility = View.GONE
             }
         })
         storiesViewModel.getDate().observe(fragmentActivity, {
@@ -257,8 +245,6 @@ class StoryViewerFragment : Fragment() {
         storiesViewModel.getOptions().observe(fragmentActivity, {
             binding.stickers.isEnabled = it.first.size > 0
         })
-
-        resetView()
     }
 
     private fun setupButtons() {
@@ -268,55 +254,39 @@ class StoryViewerFragment : Fragment() {
         binding.btnShare.setOnClickListener({ _ -> shareStoryViaDm() })
         binding.btnReply.setOnClickListener({ _ -> createReplyDialog(null) })
         binding.stickers.setOnClickListener({ _ -> showStickerMenu() })
+        binding.listToggle.setOnClickListener({ _ ->
+            binding.storiesList.visibility = if (binding.storiesList.visibility == View.GONE) View.VISIBLE
+            else View.GONE
+        })
     }
 
     @SuppressLint("ClickableViewAccessibility")
     private fun setupListeners() {
-        val hasFeedStories: Boolean
-        var models: List<Story>? = null
         if (currentFeedStoryIndex >= 0) {
             val type = options!!.type
             when (type) {
                 StoryViewerOptions.Type.HIGHLIGHT -> {
-                    val highlightsViewModel = listViewModel as HighlightsViewModel?
-                    models = highlightsViewModel!!.list.value
+                    storiesViewModel.fetchHighlights(options!!.id)
+                    storiesViewModel.highlights.observe(fragmentActivity) {
+                        setupMultipage(it)
+                    }
                 }
                 StoryViewerOptions.Type.FEED_STORY_POSITION -> {
                     val feedStoriesViewModel = listViewModel as FeedStoriesViewModel?
-                    models = feedStoriesViewModel!!.list.value
+                    setupMultipage(feedStoriesViewModel!!.list.value)
                 }
                 StoryViewerOptions.Type.STORY_ARCHIVE -> {
                     val archivesViewModel = listViewModel as ArchivesViewModel?
-                    models = archivesViewModel!!.list.value
+                    setupMultipage(archivesViewModel!!.list.value)
+                }
+                StoryViewerOptions.Type.USER -> {
+                    resetView()
                 }
             }
         }
-        hasFeedStories = models != null && !models.isEmpty()
-
-        storiesViewModel.getPagination().observe(fragmentActivity, {
-            if (models != null) {
-                when (it) {
-                    StoryPaginationType.FORWARD -> {
-                        paginateStories(false, currentFeedStoryIndex == models.size - 2)
-                    }
-                    StoryPaginationType.BACKWARD -> {
-                        paginateStories(true, false)
-                    }
-                    StoryPaginationType.ERROR -> {
-                        Toast.makeText(
-                            context,
-                            R.string.downloader_unknown_error,
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                    StoryPaginationType.DO_NOTHING -> {
-                    } // do nothing
-                }
-            }
-        })
 
         val context = context ?: return
-        swipeEvent = label@ SwipeEvent { isRightSwipe: Boolean ->
+        swipeEvent = SwipeEvent { isRightSwipe: Boolean ->
             storiesViewModel.paginate(isRightSwipe)
         }
         gestureDetector = GestureDetectorCompat(context, SwipeGestureListener(swipeEvent))
@@ -343,44 +313,76 @@ class StoryViewerFragment : Fragment() {
                 return false
             }
         }
-        if (hasFeedStories) {
-            binding.btnBackward.isEnabled = currentFeedStoryIndex != 0
-            binding.btnForward.isEnabled = currentFeedStoryIndex != models!!.size - 1
-        }
         binding.imageViewer.setTapListener(simpleOnGestureListener)
+    }
 
-        // process stickers
+    private fun setupMultipage(models: List<Story>?) {
+        if (models == null) return
+        storiesViewModel.getPagination().observe(fragmentActivity, {
+            when (it) {
+                StoryPaginationType.FORWARD -> {
+                    if (currentFeedStoryIndex == models.size - 1)
+                        Toast.makeText(
+                            context,
+                            R.string.no_more_stories,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    else paginateStories(false, currentFeedStoryIndex == models.size - 2)
+                }
+                StoryPaginationType.BACKWARD -> {
+                    if (currentFeedStoryIndex == 0)
+                        Toast.makeText(
+                            context,
+                            R.string.no_more_stories,
+                            Toast.LENGTH_SHORT
+                        ).show()
+                    else paginateStories(true, false)
+                }
+                StoryPaginationType.ERROR -> {
+                    Toast.makeText(
+                        context,
+                        R.string.downloader_unknown_error,
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
+        })
+        if (!models.isEmpty()) {
+            binding.btnBackward.isEnabled = currentFeedStoryIndex != 0
+            binding.btnForward.isEnabled = currentFeedStoryIndex != models.size - 1
+            resetView()
+        }
     }
 
     private fun resetView() {
         val context = context ?: return
-        live = null
         if (menuProfile != null) menuProfile!!.isVisible = false
-        profileVisible = false
         binding.imageViewer.controller = null
         releasePlayer()
         val type = options!!.type
         var fetchOptions: StoryViewerOptions? = null
         when (type) {
             StoryViewerOptions.Type.HIGHLIGHT -> {
-                val highlightsViewModel = listViewModel as HighlightsViewModel?
-                val models = highlightsViewModel!!.list.value
+                val models = storiesViewModel.highlights.value
                 if (models == null || models.isEmpty() || currentFeedStoryIndex >= models.size || currentFeedStoryIndex < 0) {
-                    Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT)
-                        .show()
+                    Toast.makeText(context, R.string.downloader_unknown_error, Toast.LENGTH_SHORT).show()
                     return
                 }
-                val (id, _, _, _, _, _, _, _, _, title) = models[currentFeedStoryIndex]
-                fetchOptions = StoryViewerOptions.forHighlight(id)
+                fetchOptions = StoryViewerOptions.forHighlight(0L, models[currentFeedStoryIndex].id)
             }
             StoryViewerOptions.Type.FEED_STORY_POSITION -> {
                 val feedStoriesViewModel = listViewModel as FeedStoriesViewModel?
                 val models = feedStoriesViewModel!!.list.value
                 if (models == null || currentFeedStoryIndex >= models.size || currentFeedStoryIndex < 0) return
-                val (_, _, _, _, user, _, _, _, _, _, _, broadcast) = models[currentFeedStoryIndex]
-                currentStoryUsername = user!!.username
-                fetchOptions = StoryViewerOptions.forUser(user.pk, currentStoryUsername)
-                live = broadcast
+                val userStory = models[currentFeedStoryIndex]
+                currentStoryUsername = userStory.user!!.username
+                fetchOptions = StoryViewerOptions.forUser(userStory.user.pk, currentStoryUsername)
+                val live = userStory.broadcast
+                if (live != null) {
+                    storiesViewModel.setStory(userStory)
+                    refreshLive(live)
+                    return
+                }
             }
             StoryViewerOptions.Type.STORY_ARCHIVE -> {
                 val archivesViewModel = listViewModel as ArchivesViewModel?
@@ -403,28 +405,22 @@ class StoryViewerFragment : Fragment() {
             storiesViewModel.fetchSingleMedia(options!!.id)
             return
         }
-        if (live != null) {
-            refreshLive()
-            return
-        }
-        storiesViewModel.fetchStory(fetchOptions).observe(fragmentActivity, {
-            // toast error if necessary?
+        storiesViewModel.fetchStory(fetchOptions).observe(viewLifecycleOwner, {
+            if (it.status == Resource.Status.ERROR) {
+                Toast.makeText(context, "Error: " + it.message, Toast.LENGTH_SHORT).show()
+            }
         })
     }
 
     @Synchronized
-    private fun refreshLive() {
+    private fun refreshLive(live: Broadcast) {
+        binding.btnDownload.isEnabled = false
+        binding.stickers.isEnabled = false
+        binding.listToggle.isEnabled = false
+        binding.btnShare.isEnabled = false
+        binding.btnReply.isEnabled = false
         releasePlayer()
-        setupLive(live!!.dashPlaybackUrl ?: live!!.dashAbrPlaybackUrl ?: return)
-        val actionBar = fragmentActivity.supportActionBar
-        actionBarSubtitle = epochSecondToString(live!!.publishedTime!!)
-        if (actionBar != null) {
-            try {
-                actionBar.setSubtitle(actionBarSubtitle)
-            } catch (e: Exception) {
-                Log.e(TAG, "refreshLive: ", e)
-            }
-        }
+        setupLive(live.dashPlaybackUrl ?: live.dashAbrPlaybackUrl ?: return)
     }
 
     @Synchronized
@@ -435,19 +431,27 @@ class StoryViewerFragment : Fragment() {
 
         releasePlayer()
 
+        profileVisible = currentStory.user?.username != null
+        if (menuProfile != null) menuProfile!!.isVisible = profileVisible
+
         binding.btnDownload.isEnabled = false
         binding.btnShare.isEnabled = currentStory.canReshare
         binding.btnReply.isEnabled = currentStory.canReply
         if (itemType === MediaItemType.MEDIA_TYPE_VIDEO) setupVideo(url) else setupImage(url)
 
-//        if (Utils.settingsHelper.getBoolean(MARK_AS_SEEN)) storiesRepository!!.seen(
-//            csrfToken,
-//            userId,
-//            deviceId,
-//            currentStory!!.id!!,
-//            currentStory!!.takenAt,
-//            System.currentTimeMillis() / 1000
-//        )
+        if (options!!.type == StoryViewerOptions.Type.FEED_STORY_POSITION
+            && Utils.settingsHelper.getBoolean(PreferenceKeys.MARK_AS_SEEN)) {
+                val feedStoriesViewModel = listViewModel as FeedStoriesViewModel?
+                storiesViewModel.markAsSeen(currentStory).observe(viewLifecycleOwner) { m ->
+                    if (m.status == Resource.Status.SUCCESS && m.data != null) {
+                        val liveModels: MutableLiveData<List<Story>> = feedStoriesViewModel!!.list
+                        val models = liveModels.value
+                        val modelsCopy: MutableList<Story> = models!!.toMutableList()
+                        modelsCopy.set(currentFeedStoryIndex, m.data)
+                        liveModels.postValue(modelsCopy)
+                    }
+                }
+        }
     }
 
     private fun downloadStory() {
@@ -544,16 +548,12 @@ class StoryViewerFragment : Fragment() {
                 wasCanceled: Boolean
             ) {
                 binding.btnDownload.isEnabled = false
-                if (menuProfile != null) {
-                    profileVisible = false
-                    menuProfile!!.isVisible = false
-                }
                 binding.progressView.visibility = View.GONE
             }
         })
         player!!.setMediaSource(mediaSource)
         player!!.prepare()
-        binding.playerView.setOnClickListener { v: View? ->
+        binding.playerView.setOnClickListener { _ ->
             if (player != null) {
                 if (player!!.playbackState == Player.STATE_ENDED) player!!.seekTo(0)
                 player!!.playWhenReady =
@@ -638,20 +638,19 @@ class StoryViewerFragment : Fragment() {
             actionBar.title = null
             actionBar.subtitle = null
         }
-        when (data.second) {
+        val action = when (data.second) {
             FavoriteType.USER -> {
-                bundle.putString("username", data.first)
-                navController.navigate(R.id.action_global_profileFragment, bundle)
+                StoryViewerFragmentDirections.actionToProfile().apply { this.username = data.first!! }
             }
             FavoriteType.HASHTAG -> {
-                bundle.putString("hashtag", data.first)
-                navController.navigate(R.id.action_global_hashTagFragment, bundle)
+                StoryViewerFragmentDirections.actionToHashtag(data.first!!)
             }
             FavoriteType.LOCATION -> {
-                bundle.putLong("locationId", data.first!!.toLong())
-                navController.navigate(R.id.action_global_locationFragment, bundle)
+                StoryViewerFragmentDirections.actionToLocation(data.first!!.toLong())
             }
+            else -> null
         }
+        navController.navigate(action!!)
     }
 
     private fun releasePlayer() {
@@ -796,12 +795,19 @@ class StoryViewerFragment : Fragment() {
     }
 
     private fun shareStoryViaDm() {
-        val actionGlobalUserSearch = UserSearchFragmentDirections.actionGlobalUserSearch().apply {
+        val story = storiesViewModel.getCurrentStory().value ?: return
+        val context = context
+        if (story.user?.isPrivate == true && context != null) {
+            Toast.makeText(context, R.string.share_private_post, Toast.LENGTH_SHORT).show()
+        }
+        val actionBar = fragmentActivity.supportActionBar
+        if (actionBar != null) actionBar.subtitle = null
+        val actionGlobalUserSearch = StoryViewerFragmentDirections.actionToUserSearch().apply {
             title = getString(R.string.share)
-            setActionLabel(getString(R.string.send))
+            actionLabel = getString(R.string.send)
             showGroups = true
             multiple = true
-            setSearchMode(UserSearchFragment.SearchMode.RAVEN)
+            searchMode = UserSearchMode.RAVEN
         }
         try {
             val navController = NavHostFragment.findNavController(this@StoryViewerFragment)
@@ -868,7 +874,7 @@ class StoryViewerFragment : Fragment() {
                                 val bundle = Bundle()
                                 bundle.putSerializable(PostViewV2Fragment.ARG_MEDIA, it.data)
                                 try {
-                                    navController.navigate(R.id.action_global_post_view, bundle)
+                                    navController.navigate(StoryViewerFragmentDirections.actionToPost(it.data, 0))
                                 } catch (e: Exception) {
                                     Log.e(TAG, "openPostDialog: ", e)
                                 }
