@@ -508,7 +508,7 @@
     <string name="share_via_dm">Compartilhar via DM</string>
     <string name="share_link">Compartilhar link…</string>
     <string name="slide_to_cancel">Deslize para Cancelar</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="disable_screen_transitions">Desativar transições de tela</string>
+    <string name="invalid_format">Formato inválido</string>
+    <string name="no_directory_picker_activity">Nenhuma atividade encontrada para selecionar o diretório</string>
 </resources>
