@@ -528,7 +528,7 @@
     <string name="share_via_dm">Udostępnij przez PW</string>
     <string name="share_link">Udostępnij link…</string>
     <string name="slide_to_cancel">Przesuń, by anulować</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
+    <string name="disable_screen_transitions">Wyłącz przejścia ekranu</string>
+    <string name="invalid_format">Nieprawidłowy format</string>
     <string name="no_directory_picker_activity">No activity found to select directory</string>
 </resources>
