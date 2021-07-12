@@ -20,7 +20,7 @@
     <string name="title_discover">发现</string>
     <string name="title_comments">留言</string>
     <string name="title_replies">回复</string>
-    <string name="title_notifications">动态</string>
+    <string name="title_notifications">活动通知</string>
     <string name="update_check">启动时检查更新</string>
     <string name="flag_secure">屏蔽截图及应用预览</string>
     <string name="download_user_folder">下载帖子到用户名文件夹</string>
@@ -211,7 +211,7 @@
     <string name="updated">感谢阁下更新 Barinsta！</string>
     <string name="crash_title">应用崩溃了</string>
     <string name="crash_descr">糟糕.. 应用崩溃了，不过别担心，你可以向开发者发送错误报告来帮助他修复问题。(:</string>
-    <string name="action_notif">动态</string>
+    <string name="action_notif">通知</string>
     <string name="action_archive">快拍回忆</string>
     <string name="action_ayml">推荐用户</string>
     <plurals name="activity_count_total">
