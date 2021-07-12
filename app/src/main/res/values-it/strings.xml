@@ -67,7 +67,7 @@
     <string name="no_more_stories">Nessun\'altra storia!</string>
     <string name="view_post">Visualizza Post</string>
     <string name="story_poll">Sondaggio</string>
-    <string name="answered_story">Risposta riuscita!</string>
+    <string name="answered_story">Risposto con successo!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d risposta media %s</item>
         <item quantity="other">%d risposte medie %s</item>
@@ -95,7 +95,7 @@
     <string name="saved_create_collection">Crea nuova raccolta</string>
     <string name="edit_collection">Modifica nome della raccolta</string>
     <string name="delete_collection">Elimina raccolta</string>
-    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
+    <string name="delete_collection_note">Tutti i post contenuti nella raccolta cancellata rimarranno in altre raccolte.</string>
     <string name="add_to_collection">Aggiungi alla raccolta…</string>
     <string name="remove_from_collection">Rimuovi dalla raccolta</string>
     <string name="liked">Piaciuti</string>
@@ -316,7 +316,7 @@
     <string name="corners">Angoli</string>
     <string name="show_grid_gap">Mostra divario griglia</string>
     <string name="post_not_found">Post non trovato!</string>
-    <string name="no_external_app_url">No apps for opening URLs found</string>
+    <string name="no_external_app_url">Nessuna app trovata per aprire gli URL</string>
     <string name="gallery">Galleria</string>
     <string name="camera">Fotocamera</string>
     <string name="all_photos">Tutte Le Foto</string>
@@ -471,9 +471,9 @@
     <string name="share_via_dm">Condividi tramite DM</string>
     <string name="share_link">Condivisione link…</string>
     <string name="slide_to_cancel">Trascinare per cancellare</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
-    <string name="story_stickers">Stickers</string>
-    <string name="story_list">Story list</string>
+    <string name="disable_screen_transitions">Disabilita transizioni schermo</string>
+    <string name="invalid_format">Formato non valido</string>
+    <string name="no_directory_picker_activity">Barinsta non può avviare il file manager di Android. Assicurati che sia installato e abilitato sul tuo dispositivo.</string>
+    <string name="story_stickers">Adesivi</string>
+    <string name="story_list">Elenco storie</string>
 </resources>
