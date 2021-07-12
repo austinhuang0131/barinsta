@@ -36,11 +36,9 @@
     <string name="activity_setting">Включить уведомления об активности</string>
     <string name="story_sort_setting">Сортировка историй ленты</string>
     <string name="error_loading_profile">Ошибка при загрузке профиля! Верно ли имя пользователя? Если это так, то ваш запрос мог быть ограничен сервером.</string>
-    <string name="error_loading_profile_loggedin">Ошибка при загрузке профиля! Верно ли имя пользователя? Или он Вас заблокировал?</string>
     <string name="error_loading_hashtag">Ошибка загрузки хэштэга! Верно ли название?</string>
     <string name="error_loading_location">Ошибка загрузки локации! Верен ли URL?</string>
     <string name="error_creating_folders">Ошибка при создании каталога(ов) загрузки.</string>
-    <string name="save_to_folder">Сохранить в пользовательскую папку</string>
     <string name="select_folder">Выбрать папку</string>
     <string name="theme_settings">Тема</string>
     <string name="select_language">Язык</string>
@@ -73,14 +71,8 @@
     <string name="post_viewer_download_album">Целый альбом</string>
     <string name="show_stories">Показать истории</string>
     <string name="no_more_stories">Нет больше историй!</string>
-    <string name="be_patient">Будьте терпеливы!</string>
-    <string name="view_story_post">Посмотреть публикацию</string>
     <string name="view_post">Посмотреть публикацию</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Голосование успешно!</string>
-    <string name="voted_story_poll">Вы уже проголосовали!</string>
-    <string name="respond_story">Отреагировать</string>
-    <string name="answer_hint">Ответить…</string>
     <string name="answered_story">Ответ успешно представлен!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d ответ в среднем %s</item>
@@ -111,15 +103,13 @@
     <string name="saved_create_collection">Создать новую коллекцию</string>
     <string name="edit_collection">Изменить название коллекции</string>
     <string name="delete_collection">Удалить коллекцию</string>
-    <string name="delete_collection_confirm">Вы действительно хотите удалить эту коллекцию?</string>
-    <string name="delete_collection_note">Всё медиа содержимое сохранится в других коллекциях.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Удалить из коллекции</string>
     <string name="liked">Понравилось</string>
     <string name="saved">Сохранено</string>
     <string name="tagged">Отмечено</string>
     <string name="dm_person">Сообщение</string>
-    <string name="bookmark">Закладка</string>
     <string name="follow">Подписаться</string>
     <string name="unfollow">Отписаться</string>
     <string name="favorite_short" comment="Adjective, not verb">В избранное</string>
@@ -191,7 +181,6 @@
     <string name="dms_inbox_raven_media_suggested">Предложено</string>
     <string name="dms_inbox_raven_media_screenshot">Сделан снимок экрана</string>
     <string name="dms_inbox_raven_media_cant_deliver">Не удаётся доставить</string>
-    <string name="dms_inbox_error_null_count">Количество непрочитанных сообщений неизвестно!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Нажмите и удерживайте, чтобы записать звук</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -202,22 +191,16 @@
     <string name="dms_ERROR_INVALID_USER">Недействительный пользователь</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram не позволяет загружать видео длиннее 60 секунд для ЛС.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram не позволяет загружать звук длиннее 60 секунд.</string>
-    <string name="direct_download">Скачать напрямую</string>
-    <string name="direct_download_desc">Скачивает публикации прямо на телефон!</string>
     <string name="direct_download_loading">Получение публикации(ий)</string>
     <string name="downloader_complete">Скачивание завершено</string>
     <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Скачивание публикации…</string>
     <string name="downloader_downloading_media">Загрузка медиафайлов</string>
-    <string name="downloader_downloading_pfp">Загрузка изображения профиля</string>
     <string name="downloader_unknown_error">Произошла неизвестная ошибка!!!</string>
     <string name="downloader_error_creating_folder">Ошибка при создании папки!</string>
     <string name="downloader_error_download_file">Ошибка при скачивании файла</string>
-    <string name="downloader_too_many">Вы можете скачать только 100 сообщений за раз. Не будьте слишком жадным!</string>
     <string name="comment_viewer_translate_comment">Перевести комментарий</string>
     <string name="comment_viewer_delete_comment">Удалить комментарий</string>
-    <string name="comment_view_mention_user_search">Вы хотите найти имя пользователя?</string>
-    <string name="comment_view_mention_hash_search">Вы хотите найти хештэг?</string>
     <string name="followers_type_followers">Подписчики</string>
     <string name="followers_type_following">Подписки</string>
     <string name="followers_compare">Сравнение подписчиков &amp; подписок</string>
@@ -226,7 +209,6 @@
     <string name="followers_not_follower">%s не следует</string>
     <string name="login_error_loading_cookies">Ошибка при загрузке cookies</string>
     <string name="comment_hint">Написать новый комментарий…</string>
-    <string name="dm_hint">Написать новое сообщение…</string>
     <string name="liked_notif">Понравилась ваша публикация</string>
     <string name="comment_notif">Прокомментировал вашу публикацию:</string>
     <string name="follow_notif">Подписался на вас</string>
@@ -238,15 +220,12 @@
     <string name="share_private_post">Это личная запись! Делитесь с теми, кто может её видеть.</string>
     <string name="discover_empty">Эта категория каким-то образом пуста…</string>
     <string name="update_available">Доступно обновление! (%s)</string>
-    <string name="update_notice">Напоминание: Если вы скачали с F-Droid, вы должны обновлять с него! Это же относится и к GitHub.</string>
     <string name="updated">Благодарим Вас за обновление Barinsta!</string>
     <string name="crash_title">Приложение вылетело</string>
     <string name="crash_descr">Упс.. приложение вылетело, но не беспокойтесь, вы можете отправить отчёт об ошибке разработчику, чтобы помочь ему исправить эту проблему. (:</string>
     <string name="action_notif">Активность</string>
     <string name="action_archive">Архив истории</string>
     <string name="action_ayml">Предлагаемые пользователи</string>
-    <string name="select_picture">Выберите изображение</string>
-    <string name="uploading">Загрузка…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="few">You have %d notifications</item>
@@ -269,7 +248,6 @@
     <string name="logout_success">Успешный выход из системы!</string>
     <string name="dm_thread_info">Информация</string>
     <string name="mark_as_seen">Отметить как просмотренное</string>
-    <string name="skip_update_checkbox">Не показывать снова до следующего обновления</string>
     <string name="version">Версия</string>
     <string name="pref_start_screen">Начальный экран</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Показывать клавиатуру при поиске</string>
@@ -347,11 +325,8 @@
     <string name="avatar_size">Размер аватара</string>
     <string name="corners">Углы</string>
     <string name="show_grid_gap">Показать разрыв сетки</string>
-    <string name="disable_animation">Отключить анимацию</string>
-    <string name="follower_wait_to_load">Пожалуйста, дождитесь сначала выполнения текущей задачи!</string>
-    <string name="follower_start_compare">В зависимости от количества пользователей, загрузка может занять некоторое время. Пожалуйста, будьте терпеливы.</string>
     <string name="post_not_found">Публикация не найдена!</string>
-    <string name="no_external_app_url">Нет приложения, чтоб открыть ссылку</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Галерея</string>
     <string name="camera">Камера</string>
     <string name="all_photos">Все фото</string>
@@ -377,24 +352,6 @@
     <string name="reset">Сброс</string>
     <string name="crop">Кадрировать</string>
     <string name="normal">Исходный</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d нравится</item>
-        <item quantity="few">%d нравится</item>
-        <item quantity="many">%d понравилось</item>
-        <item quantity="other">%d понравилось</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d ответ</item>
-        <item quantity="few">%d ответа</item>
-        <item quantity="many">%d ответов</item>
-        <item quantity="other">%d ответы</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d комментарий</item>
-        <item quantity="few">%d комментария</item>
-        <item quantity="many">%d комментариев</item>
-        <item quantity="other">%d комментарии</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d просмотр</item>
         <item quantity="few">%d просмотра</item>
@@ -531,4 +488,6 @@
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
     <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
