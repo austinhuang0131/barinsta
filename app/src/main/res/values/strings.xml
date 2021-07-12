@@ -37,11 +37,9 @@
     <string name="activity_setting">Enable activity notifications</string>
     <string name="story_sort_setting">Feed stories sort</string>
     <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
-    <string name="error_loading_profile_loggedin">Error loading profile! Is the username valid? Or did they block you?</string>
     <string name="error_loading_hashtag">Error loading hashtag! Is the name valid?</string>
     <string name="error_loading_location">Error loading location! Is the URL valid?</string>
     <string name="error_creating_folders">Error creating Download folder(s).</string>
-    <string name="save_to_folder">Save to custom folder</string>
     <string name="select_folder">Select folder</string>
     <string name="theme_settings">Theme</string>
     <string name="select_language">Language</string>
@@ -68,14 +66,8 @@
     <string name="post_viewer_download_album">Whole Album</string>
     <string name="show_stories">Show stories</string>
     <string name="no_more_stories">No more stories!</string>
-    <string name="be_patient">Be patient!</string>
-    <string name="view_story_post">View Post</string>
     <string name="view_post">View Post</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Vote successful!</string>
-    <string name="voted_story_poll">You have already voted!</string>
-    <string name="respond_story">Respond</string>
-    <string name="answer_hint">Answer…</string>
     <string name="answered_story">Answer successful!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
@@ -104,15 +96,13 @@
     <string name="saved_create_collection">Create new collection</string>
     <string name="edit_collection">Edit collection name</string>
     <string name="delete_collection">Delete collection</string>
-    <string name="delete_collection_confirm">Are you sure you want to delete this collection?</string>
-    <string name="delete_collection_note">All contained media will remain in other collections.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Remove from collection</string>
     <string name="liked">Liked</string>
     <string name="saved">Saved</string>
     <string name="tagged">Tagged</string>
     <string name="dm_person">Message</string>
-    <string name="bookmark">Bookmark</string>
     <string name="follow">Follow</string>
     <string name="unfollow">Unfollow</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorite</string>
@@ -184,7 +174,6 @@
     <string name="dms_inbox_raven_media_suggested">Suggested</string>
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Cannot deliver</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Press and hold to record audio</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -195,22 +184,16 @@
     <string name="dms_ERROR_INVALID_USER">Invalid user</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
-    <string name="direct_download">Download directly</string>
-    <string name="direct_download_desc">Downloads posts directly to the phone!</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="downloader_complete">Download completed</string>
     <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Downloading post…</string>
     <string name="downloader_downloading_media">Downloading media</string>
-    <string name="downloader_downloading_pfp">Downloading profile picture</string>
     <string name="downloader_unknown_error">Unknown error occurred!!!</string>
     <string name="downloader_error_creating_folder">Error creating folder!</string>
     <string name="downloader_error_download_file">Error downloading file</string>
-    <string name="downloader_too_many">You can only download 100 posts at a time. Don\'t be too greedy!</string>
     <string name="comment_viewer_translate_comment">Translate comment</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_view_mention_user_search">Do you want to search the username?</string>
-    <string name="comment_view_mention_hash_search">Do you want to search the hashtag?</string>
     <string name="followers_type_followers">Followers</string>
     <string name="followers_type_following">Following</string>
     <string name="followers_compare">Comparing followers &amp; following</string>
@@ -219,7 +202,6 @@
     <string name="followers_not_follower">%s is not following</string>
     <string name="login_error_loading_cookies">Error loading cookies</string>
     <string name="comment_hint">Write a new comment…</string>
-    <string name="dm_hint">Write a new message…</string>
     <string name="liked_notif">Liked your post</string>
     <string name="comment_notif">Commented on your post:</string>
     <string name="follow_notif">Started following you</string>
@@ -231,7 +213,6 @@
     <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">This category is somehow empty…</string>
     <string name="update_available">An update is available! (%s)</string>
-    <string name="update_notice">Reminder: If you downloaded from F-Droid, you must update from it! Same applies for GitHub.</string>
     <string name="updated">Thank you for updating Barinsta!</string>
     <string name="crash_title">App crashed</string>
     <string name="crash_descr">Oops.. the app crashed, but don\'t worry you can send error report to the developer to help him fix the issue. (:</string>
@@ -240,8 +221,6 @@
     <string name="action_ayml">Suggested users</string>
     <string name="license" translatable="false">Copyright (C) 2019-2020 AWAiS\nCopyright (C) 2020-2021 Austin Huang &amp; Ammar Githam\nThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version. See https://www.gnu.org/licenses/.</string>
     <string name="liability" translatable="false">This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.</string>
-    <string name="select_picture">Select Picture</string>
-    <string name="uploading">Uploading…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="other">You have %d notifications</item>
@@ -262,7 +241,6 @@
     <string name="logout_success">Successfully logged out!</string>
     <string name="dm_thread_info">Info</string>
     <string name="mark_as_seen">Mark as seen</string>
-    <string name="skip_update_checkbox">Do not show again until next update</string>
     <string name="version">Version</string>
     <string name="pref_start_screen">Start screen</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
@@ -349,11 +327,8 @@
     <string name="avatar_size">Avatar size</string>
     <string name="corners">Corners</string>
     <string name="show_grid_gap">Show grid gap</string>
-    <string name="disable_animation">Disable animation</string>
-    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
     <string name="post_not_found">Post not found!</string>
-    <string name="no_external_app_url">No app found which opens urls</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="all_photos">All Photos</string>
@@ -379,18 +354,6 @@
     <string name="reset">Reset</string>
     <string name="crop">Crop</string>
     <string name="normal">Normal</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d like</item>
-        <item quantity="other">%d likes</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d view</item>
         <item quantity="other">%d views</item>
@@ -523,4 +486,6 @@
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
     <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
