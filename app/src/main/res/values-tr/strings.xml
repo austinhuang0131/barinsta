@@ -36,11 +36,9 @@
     <string name="activity_setting">Hareketler için bildirimleri aktifleştir</string>
     <string name="story_sort_setting">Hikaye akışını sınıflandır</string>
     <string name="error_loading_profile">Profil yükleme hatası! Kullanıcı adında hata var mı? Yoksa hesabınız sınırlandırılmış olabilir.</string>
-    <string name="error_loading_profile_loggedin">Profili yüklerken hata oluştu! Kullanıcı adı doğru mu? Ya da bu kişi seni engelledi mi?</string>
     <string name="error_loading_hashtag">Etiketi yüklerken hata oluştu! İsmi doğru mu?</string>
     <string name="error_loading_location">Profili yüklerken hata oluştu! URL doğru mu?</string>
     <string name="error_creating_folders">İndirilenler klasörü(leri) oluşturulamadı.</string>
-    <string name="save_to_folder">Şu klasöre kaydet:</string>
     <string name="select_folder">Klasörü seçin</string>
     <string name="theme_settings">Tema</string>
     <string name="select_language">Dil</string>
@@ -67,14 +65,8 @@
     <string name="post_viewer_download_album">Tüm Albüm</string>
     <string name="show_stories">Hikayeleri göster</string>
     <string name="no_more_stories">Tüm hikayeler bitti!</string>
-    <string name="be_patient">Sabırlı ol!</string>
-    <string name="view_story_post">Gönderiyi Gör</string>
     <string name="view_post">Gönderiyi Gör</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Oylama başarılı!</string>
-    <string name="voted_story_poll">Zaten oy verdiniz!</string>
-    <string name="respond_story">Yanıt ver</string>
-    <string name="answer_hint">Cevapla…</string>
     <string name="answered_story">Cevaplama başarılı!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d yanıt ortalaması %s</item>
@@ -103,15 +95,13 @@
     <string name="saved_create_collection">Yeni koleksiyon oluştur</string>
     <string name="edit_collection">Koleksiyon ismini düzenle</string>
     <string name="delete_collection">Koleksiyonu sil</string>
-    <string name="delete_collection_confirm">Bu koleksiyonu silmek istediğinden emin misin?</string>
-    <string name="delete_collection_note">İçerilen tüm medya diğer koleksiyonlarda kalacak.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Koleksiyondan kaldır</string>
     <string name="liked">Beğenilenler</string>
     <string name="saved">Kaydedilenler</string>
     <string name="tagged">Etiketlenilenler</string>
     <string name="dm_person">Mesaj</string>
-    <string name="bookmark">Yer İşareti Koy</string>
     <string name="follow">Takip Et</string>
     <string name="unfollow">Takipten Çık</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorilere Ekle</string>
@@ -183,7 +173,6 @@
     <string name="dms_inbox_raven_media_suggested">Önerilen</string>
     <string name="dms_inbox_raven_media_screenshot">Ekran görüntüsü alındı</string>
     <string name="dms_inbox_raven_media_cant_deliver">İletilemiyor</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Ses kaydetmek için dokun ve basılı tut</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -194,22 +183,16 @@
     <string name="dms_ERROR_INVALID_USER">Invalid user</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
-    <string name="direct_download">Direkt indir</string>
-    <string name="direct_download_desc">Gönderileri direkt telefona indir!</string>
     <string name="direct_download_loading">Gönderi(ler) getiriliyor</string>
     <string name="downloader_complete">İndirme tamamlandı</string>
     <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Gönderi indiriliyor…</string>
     <string name="downloader_downloading_media">Medya indiriliyor</string>
-    <string name="downloader_downloading_pfp">Profil fotoğrafı indiriliyor</string>
     <string name="downloader_unknown_error">Bilinmeyen bir hata oluştu!!!</string>
     <string name="downloader_error_creating_folder">Klasör oluşturma hatası!</string>
     <string name="downloader_error_download_file">Dosya indirme hatası</string>
-    <string name="downloader_too_many">Tek seferde en fazla 100 gönderi indirebilirsin, açgözlü olma!</string>
     <string name="comment_viewer_translate_comment">Yorumu çevir</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_view_mention_user_search">Kullanıcı adını aratmak istiyor musun?</string>
-    <string name="comment_view_mention_hash_search">Etiketi aratmak istiyor musun?</string>
     <string name="followers_type_followers">Takipçiler</string>
     <string name="followers_type_following">Takip Edilen</string>
     <string name="followers_compare">Takipçiler &amp; takip edilenler karşılaştırması</string>
@@ -218,7 +201,6 @@
     <string name="followers_not_follower">%s takip edilmeyen takipçi</string>
     <string name="login_error_loading_cookies">Çerezleri yükleme hatası</string>
     <string name="comment_hint">Yeni bir yorum yaz…</string>
-    <string name="dm_hint">Yeni bir mesaj yaz…</string>
     <string name="liked_notif">Gönderini beğendi</string>
     <string name="comment_notif">Gönderine yorum yaptı:</string>
     <string name="follow_notif">Seni takip etmeye başladı</string>
@@ -230,15 +212,12 @@
     <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Bu kategori nasıl oluyorsa boş…</string>
     <string name="update_available">Yeni bir güncelleme mevcut! (%s)</string>
-    <string name="update_notice">Hatırlatıcı: Eğer F-Droid kullanarak kurduysanız güncellemeyi oradan yapmalısınız. Aynısı GitHub için de geçerli.</string>
     <string name="updated">Barinsta\'yı güncellediğin için teşekkürler!</string>
     <string name="crash_title">Uygulama çöktü</string>
     <string name="crash_descr">Amanın.. uygulama çöktü, ama telaşlanma. Geliştiriciye hata raporu yollayarak sorunun çözülmesine yardımcı olabilirsin. (:</string>
     <string name="action_notif">Hareketler</string>
     <string name="action_archive">Hikaye arşivi</string>
     <string name="action_ayml">Önerilen kullanıcılar</string>
-    <string name="select_picture">Resim Seç</string>
-    <string name="uploading">Yükleniyor…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="other">You have %d notifications</item>
@@ -259,7 +238,6 @@
     <string name="logout_success">Başarıyla çıkış yapıldı!</string>
     <string name="dm_thread_info">Bilgi</string>
     <string name="mark_as_seen">Görüldü olarak işaretle</string>
-    <string name="skip_update_checkbox">Sonraki güncellemeye kadar gösterme</string>
     <string name="version">Sürüm</string>
     <string name="pref_start_screen">Başlangıç ekranı</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
@@ -337,11 +315,8 @@
     <string name="avatar_size">Avatar boyutu</string>
     <string name="corners">Köşeler</string>
     <string name="show_grid_gap">Izgara boşluklarını göster</string>
-    <string name="disable_animation">Animasyonları devre dışı bırak</string>
-    <string name="follower_wait_to_load">Lütfen önce aktif görevin tamamlanmasını bekle!</string>
-    <string name="follower_start_compare">Kullanıcı sayısına bağlı olarak bu süreç biraz uzun sürebilir. Lütfen sabırlı ol.</string>
     <string name="post_not_found">Gönderi bulunamadı!</string>
-    <string name="no_external_app_url">Linki açabilecek uygulama bulunamadı</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Galeri</string>
     <string name="camera">Kamera</string>
     <string name="all_photos">Tüm Fotoğraflar</string>
@@ -367,18 +342,6 @@
     <string name="reset">Sıfırla</string>
     <string name="crop">Kırp</string>
     <string name="normal">Normal</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d beğeni</item>
-        <item quantity="other">%d beğeni</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d yorum</item>
-        <item quantity="other">%d yorum</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d görüntüleme</item>
         <item quantity="other">%d görüntüleme</item>
@@ -510,5 +473,7 @@
     <string name="slide_to_cancel">Slide to Cancel</string>
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
