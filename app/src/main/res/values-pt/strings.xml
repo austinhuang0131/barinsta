@@ -95,7 +95,7 @@
     <string name="saved_create_collection">Criar nova coleção</string>
     <string name="edit_collection">Editar o nome da coleção</string>
     <string name="delete_collection">Excluir coleção</string>
-    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
+    <string name="delete_collection_note">Todas as publicações contidas na coleção excluída permanecerão em outras coleções.</string>
     <string name="add_to_collection">Adicionar à coleção…</string>
     <string name="remove_from_collection">Remover da coleção</string>
     <string name="liked">Curtiu</string>
@@ -316,7 +316,7 @@
     <string name="corners">Bordas</string>
     <string name="show_grid_gap">Separar grades</string>
     <string name="post_not_found">Publicação não encontrada!</string>
-    <string name="no_external_app_url">No apps for opening URLs found</string>
+    <string name="no_external_app_url">Nenhum aplicativo encontrado para abrir URLs</string>
     <string name="gallery">Galeria</string>
     <string name="camera">Câmera</string>
     <string name="all_photos">Todas as Fotos</string>
@@ -473,7 +473,7 @@
     <string name="slide_to_cancel">Deslize para Cancelar</string>
     <string name="disable_screen_transitions">Desativar transições de tela</string>
     <string name="invalid_format">Formato inválido</string>
-    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="no_directory_picker_activity">Barinsta não pode iniciar o gerenciador de arquivos do Android. Certifique-se de que ele esteja instalado e ativado em seu dispositivo.</string>
     <string name="story_stickers">Stickers</string>
-    <string name="story_list">Story list</string>
+    <string name="story_list">Lista de stories</string>
 </resources>
