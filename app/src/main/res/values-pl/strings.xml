@@ -36,11 +36,9 @@
     <string name="activity_setting">Włącz powiadomienia o aktywności</string>
     <string name="story_sort_setting">Sortowanie relacji</string>
     <string name="error_loading_profile">Błąd ładowania profilu! Czy nazwa użytkownika jest prawidłowa? Jeśli tak, możesz być ograniczony.</string>
-    <string name="error_loading_profile_loggedin">Wystąpił błąd podczas ładowania profilu! Czy nazwa użytkownika jest prawidłowa? Być może zostałeś zablokowany?</string>
     <string name="error_loading_hashtag">Błąd ładowania hashtaga! Czy nazwa jest prawidłowa?</string>
     <string name="error_loading_location">Błąd ładowania lokalizacji! Czy adres URL jest prawidłowy?</string>
     <string name="error_creating_folders">Błąd podczas tworzenia folderu(ów) pobierania.</string>
-    <string name="save_to_folder">Zapisz w folderze niestandardowym</string>
     <string name="select_folder">Wybierz folder</string>
     <string name="theme_settings">Motyw</string>
     <string name="select_language">Język</string>
@@ -73,14 +71,8 @@
     <string name="post_viewer_download_album">Cały album</string>
     <string name="show_stories">Pokazuj relacje</string>
     <string name="no_more_stories">Nie ma więcej relacji!</string>
-    <string name="be_patient">Bądź cierpliwy!</string>
-    <string name="view_story_post">Zobacz post</string>
     <string name="view_post">Zobacz post</string>
     <string name="story_poll">Ankieta</string>
-    <string name="votef_story_poll">Zagłosowano pomyślnie!</string>
-    <string name="voted_story_poll">Już głosowałeś!</string>
-    <string name="respond_story">Odpowiedz</string>
-    <string name="answer_hint">Odpowiedz…</string>
     <string name="answered_story">Odpowiedziano pomyślnie!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d odpowiedź średnio %s</item>
@@ -111,15 +103,13 @@
     <string name="saved_create_collection">Utwórz nową kolekcję</string>
     <string name="edit_collection">Wpisz nazwę kolekcji</string>
     <string name="delete_collection">Usunąć kolekcję</string>
-    <string name="delete_collection_confirm">Czy na pewno chcesz usunąć tę kolekcję?</string>
-    <string name="delete_collection_note">Wszystkie media pozostaną w innych kolekcjach.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Dodać do kolekcji…</string>
     <string name="remove_from_collection">Usuń z kolekcji</string>
     <string name="liked">Polubione</string>
     <string name="saved">Zapisane</string>
     <string name="tagged">Oznaczono</string>
     <string name="dm_person">Message</string>
-    <string name="bookmark">Zapisz</string>
     <string name="follow">Obserwuj</string>
     <string name="unfollow">Przestań obserwować</string>
     <string name="favorite_short" comment="Adjective, not verb">Ulubiony</string>
@@ -191,7 +181,6 @@
     <string name="dms_inbox_raven_media_suggested">Proponowane</string>
     <string name="dms_inbox_raven_media_screenshot">Dokonano zrzutu ekranu</string>
     <string name="dms_inbox_raven_media_cant_deliver">Nie dostarczono</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
     <string name="dms_thread_message_hint">Komunikat…</string>
     <string name="dms_thread_audio_hint">Naciśnij i przytrzymaj, aby nagrać dźwięk</string>
     <string name="dms_thread_updating">Aktualizowanie…</string>
@@ -202,22 +191,16 @@
     <string name="dms_ERROR_INVALID_USER">Nieprawidłowy użytkownik</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram nie pozwala na przesyłanie filmów dłuższych niż 60 sekund w wiadomości prywatnej.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram nie pozwala na przesyłanie dźwięku dłuższego niż 60 sekund.</string>
-    <string name="direct_download">Pobierz bezpośrednio</string>
-    <string name="direct_download_desc">Pobiera posty bezpośrednio na telefon!</string>
     <string name="direct_download_loading">Pobieranie post(ów)</string>
     <string name="downloader_complete">Pobieranie zakończone</string>
     <string name="downloader_preparing">Przygotowywanie do pobrania…</string>
     <string name="downloader_downloading_post">Pobieranie wpisu…</string>
     <string name="downloader_downloading_media">Pobieranie multimediów</string>
-    <string name="downloader_downloading_pfp">Pobieranie zdjęcia profilowego</string>
     <string name="downloader_unknown_error">Wystąpił nieznany błąd!!!</string>
     <string name="downloader_error_creating_folder">Błąd podczas tworzenia folderu!</string>
     <string name="downloader_error_download_file">Błąd podczas pobierania pliku</string>
-    <string name="downloader_too_many">Możesz pobrać tylko 100 postów jednocześnie. Nie bądź zbyt chciwy!</string>
     <string name="comment_viewer_translate_comment">Tłumacz komentarz</string>
     <string name="comment_viewer_delete_comment">Usuń komentarz</string>
-    <string name="comment_view_mention_user_search">Czy chcesz wyszukać przy pomocy nazwy użytkownika?</string>
-    <string name="comment_view_mention_hash_search">Czy chcesz wyszukać przy pomocy hashtag\'a?</string>
     <string name="followers_type_followers">Obserwujący</string>
     <string name="followers_type_following">Obserwuje</string>
     <string name="followers_compare">Porównywanie obserwujących &amp; obserwowanych</string>
@@ -226,7 +209,6 @@
     <string name="followers_not_follower">%s not following</string>
     <string name="login_error_loading_cookies">Błąd ładowania ciasteczek</string>
     <string name="comment_hint">Napisz nowy komentarz…</string>
-    <string name="dm_hint">Napisz nową wiadomość…</string>
     <string name="liked_notif">Polubiono twój post</string>
     <string name="comment_notif">Skomentowano Twój post:</string>
     <string name="follow_notif">Zaczął Cię obserwować</string>
@@ -238,15 +220,12 @@
     <string name="share_private_post">To jest prywatny post! Udostępnij wszystkim, którzy mogą go zobaczyć.</string>
     <string name="discover_empty">Ta kategoria jest jakoś pusta…</string>
     <string name="update_available">Aktualizacja jest dostępna! (%s)</string>
-    <string name="update_notice">Przypomnienie: Jeśli pobrałeś z F-Droid, musisz go zaktualizować! To samo dotyczy GitHub.</string>
     <string name="updated">Dziękujemy za aktualizację Barinsta!</string>
     <string name="crash_title">Aplikacja uległa awarii</string>
     <string name="crash_descr">Ups.. aplikacja uległa awarii, ale nie martw się, możesz wysłać raport o błędzie do dewelopera, aby pomóc mu rozwiązać ten problem (:</string>
     <string name="action_notif">Aktywność</string>
     <string name="action_archive">Archiwum relacji</string>
     <string name="action_ayml">Proponowani użytkownicy</string>
-    <string name="select_picture">Wybierz obraz</string>
-    <string name="uploading">Przesyłanie…</string>
     <plurals name="activity_count_total">
         <item quantity="one">Masz %d nowe powiadomienie</item>
         <item quantity="few">You have %d notifications</item>
@@ -269,7 +248,6 @@
     <string name="logout_success">Wylogowano pomyślnie!</string>
     <string name="dm_thread_info">Informacje</string>
     <string name="mark_as_seen">Oznacz jako przeczytane</string>
-    <string name="skip_update_checkbox">Nie pokazuj ponownie do następnej aktualizacji</string>
     <string name="version">Wersja</string>
     <string name="pref_start_screen">Ekran startowy</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Pokaż klawiaturę przy wyszukiwaniu</string>
@@ -347,11 +325,8 @@
     <string name="avatar_size">Wymiary awatara</string>
     <string name="corners">Narożniki</string>
     <string name="show_grid_gap">Pokaż widok siatki</string>
-    <string name="disable_animation">Wyłączenie animacji</string>
-    <string name="follower_wait_to_load">Poczekaj aż bieżące zadanie zostanie ukończone!</string>
-    <string name="follower_start_compare">W zależności od liczby użytkowników, może to chwilę potrwać. Prosimy o cierpliwość.</string>
     <string name="post_not_found">Nie znaleziono posta!</string>
-    <string name="no_external_app_url">Nie znaleziono aplikacji, która otwiera adresy URL</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Galeria</string>
     <string name="camera">Aparat</string>
     <string name="all_photos">Wszystkie zdjęcia</string>
@@ -377,24 +352,6 @@
     <string name="reset">Reset</string>
     <string name="crop">Wytnij</string>
     <string name="normal">Normalny</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d polubienie</item>
-        <item quantity="few">%d polubień</item>
-        <item quantity="many">%d polubień</item>
-        <item quantity="other">%d polubień</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d odpowiedź</item>
-        <item quantity="few">%d odpowiedzi</item>
-        <item quantity="many">%d odpowiedzi</item>
-        <item quantity="other">%d odpowiedzi</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d komentarz</item>
-        <item quantity="few">%d komentarzy</item>
-        <item quantity="many">%d komentarzy</item>
-        <item quantity="other">%d komentarzy</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d wyświetlenie</item>
         <item quantity="few">%d wyświetleń</item>
@@ -530,5 +487,7 @@
     <string name="slide_to_cancel">Przesuń, by anulować</string>
     <string name="disable_screen_transitions">Wyłącz przejścia ekranu</string>
     <string name="invalid_format">Nieprawidłowy format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
