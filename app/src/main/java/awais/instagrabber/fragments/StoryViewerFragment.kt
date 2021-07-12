@@ -15,6 +15,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.view.ContextThemeWrapper
 import androidx.appcompat.widget.PopupMenu
+import androidx.appcompat.widget.TooltipCompat
 import androidx.core.view.GestureDetectorCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.MutableLiveData
@@ -78,8 +79,6 @@ class StoryViewerFragment : Fragment() {
     private var profileVisible: Boolean = false
     private var player: SimpleExoPlayer? = null
 
-    private var actionBarTitle: String? = null
-    private var actionBarSubtitle: String? = null
     private var shouldRefresh = true
     private var currentFeedStoryIndex = 0
     private var sliderValue = 0.0
@@ -258,6 +257,12 @@ class StoryViewerFragment : Fragment() {
             binding.storiesList.visibility = if (binding.storiesList.visibility == View.GONE) View.VISIBLE
             else View.GONE
         })
+
+        TooltipCompat.setTooltipText(binding.btnDownload, getString(R.string.action_download))
+        TooltipCompat.setTooltipText(binding.btnShare, getString(R.string.share))
+        TooltipCompat.setTooltipText(binding.btnReply, getString(R.string.reply_story))
+        TooltipCompat.setTooltipText(binding.stickers, getString(R.string.story_stickers))
+        TooltipCompat.setTooltipText(binding.listToggle, getString(R.string.story_list))
     }
 
     @SuppressLint("ClickableViewAccessibility")
