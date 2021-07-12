@@ -36,11 +36,9 @@
     <string name="activity_setting">Activiteitmeldingen inschakelen</string>
     <string name="story_sort_setting">Feedverhalen sorteren</string>
     <string name="error_loading_profile">Fout bij het laden van profiel! Is de gebruikersnaam geldig? Zo ja, dan kan je geratelimiteerd zijn.</string>
-    <string name="error_loading_profile_loggedin">Fout bij het laden van profiel! Is de gebruikersnaam geldig? Of blokkeert ze u?</string>
     <string name="error_loading_hashtag">Fout bij het laden van hashtag! Is de naam geldig?</string>
     <string name="error_loading_location">Fout bij het laden van locatie! Is de URL geldig?</string>
     <string name="error_creating_folders">Fout bij maken download map(en).</string>
-    <string name="save_to_folder">Opslaan in aangepaste map</string>
     <string name="select_folder">Selecteer map</string>
     <string name="theme_settings">Thema</string>
     <string name="select_language">Taal</string>
@@ -67,14 +65,8 @@
     <string name="post_viewer_download_album">Volledige Album</string>
     <string name="show_stories">Toon verhalen</string>
     <string name="no_more_stories">Geen verhalen meer!</string>
-    <string name="be_patient">Wees geduldig!</string>
-    <string name="view_story_post">Bekijk Bericht</string>
     <string name="view_post">Bekijk Bericht</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Stem succesvol!</string>
-    <string name="voted_story_poll">Je hebt al gestemd!</string>
-    <string name="respond_story">Reageer</string>
-    <string name="answer_hint">Antwoord…</string>
     <string name="answered_story">Antwoord gelukt!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d reactie gemiddeld %s</item>
@@ -103,15 +95,13 @@
     <string name="saved_create_collection">Nieuwe collectie maken</string>
     <string name="edit_collection">Verander collectienaam</string>
     <string name="delete_collection">Verwijder collectie</string>
-    <string name="delete_collection_confirm">Weet u zeker dat u deze collectie wilt verwijderen?</string>
-    <string name="delete_collection_note">Alle opgenomen media blijven in andere collecties.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Uit collectie verwijderen</string>
     <string name="liked">Leuk gevonden</string>
     <string name="saved">Opgeslagen</string>
     <string name="tagged">Getagd</string>
     <string name="dm_person">Bericht</string>
-    <string name="bookmark">Toevoegen aan favorieten</string>
     <string name="follow">Volg</string>
     <string name="unfollow">Ontvolg</string>
     <string name="favorite_short" comment="Adjective, not verb">Toevoegen aan favorieten</string>
@@ -183,7 +173,6 @@
     <string name="dms_inbox_raven_media_suggested">Voorgesteld</string>
     <string name="dms_inbox_raven_media_screenshot">Screenshot genomen</string>
     <string name="dms_inbox_raven_media_cant_deliver">Kan niet afleveren</string>
-    <string name="dms_inbox_error_null_count">Ongeziene graaf reactie is nul!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Ingedrukt houden om audio op te nemen</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -194,22 +183,16 @@
     <string name="dms_ERROR_INVALID_USER">Ongeldige gebruikersnaam</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram staat niet toe dat video\'s langer dan 60 seconden worden geüpload voor DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram staat niet toe dat audio langer dan 60 seconden wordt geüpload.</string>
-    <string name="direct_download">Rechtstreeks downloaden</string>
-    <string name="direct_download_desc">Download rechtstreeks naar het apparaat!</string>
     <string name="direct_download_loading">Post(s) ophalen</string>
     <string name="downloader_complete">Download voltooid</string>
     <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Bericht downloaden…</string>
     <string name="downloader_downloading_media">Media downloaden</string>
-    <string name="downloader_downloading_pfp">Profielfoto downloaden</string>
     <string name="downloader_unknown_error">Er is een onbekende fout opgetreden!!!</string>
     <string name="downloader_error_creating_folder">Fout bij aanmaken map!</string>
     <string name="downloader_error_download_file">Fout bij downloaden bestand</string>
-    <string name="downloader_too_many">Je kunt slechts 100 berichten per keer downloaden. Wees niet te hebberig!</string>
     <string name="comment_viewer_translate_comment">Reactie vertalen</string>
     <string name="comment_viewer_delete_comment">Verwijder reactie</string>
-    <string name="comment_view_mention_user_search">Wil je de gebruikersnaam zoeken?</string>
-    <string name="comment_view_mention_hash_search">Wil je de hashtag zoeken?</string>
     <string name="followers_type_followers">Volgers</string>
     <string name="followers_type_following">Volgend</string>
     <string name="followers_compare">Vergelijk volgers &amp; volgend</string>
@@ -218,7 +201,6 @@
     <string name="followers_not_follower">%s is niet aan het volgen</string>
     <string name="login_error_loading_cookies">Fout bij laden van cookies</string>
     <string name="comment_hint">Schrijf een nieuwer reactie…</string>
-    <string name="dm_hint">Schrijf een nieuw bericht…</string>
     <string name="liked_notif">Vond je bericht leuk</string>
     <string name="comment_notif">Reageerde op je bericht:</string>
     <string name="follow_notif">Volgt je nu</string>
@@ -230,15 +212,12 @@
     <string name="share_private_post">Dit is een privé bericht! Deel dit met degenen die het kunnen bekijken.</string>
     <string name="discover_empty">Deze categorie is op de een of andere manier leeg…</string>
     <string name="update_available">Een update is beschikbaar(%s)</string>
-    <string name="update_notice">Herinnering: Als je via F-Droid hebt gedownload, moet je ook updaten via F-Droid! Hetzelfde geldt voor GitHub.</string>
     <string name="updated">Bedankt voor het bijwerken van Barinsta!</string>
     <string name="crash_title">App is gecrasht</string>
     <string name="crash_descr">Oeps.. de app is gecrasht, maar geen zorgen. Je kan een foutrapportage naar de ontwikkelaar sturen om hem te helpen met oplossen. (:</string>
     <string name="action_notif">Activiteit</string>
     <string name="action_archive">Verhaalarchief</string>
     <string name="action_ayml">Voorgestelde gebruikers</string>
-    <string name="select_picture">Selecteer Afbeelding</string>
-    <string name="uploading">Bezig met uploaden…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="other">You have %d notifications</item>
@@ -259,7 +238,6 @@
     <string name="logout_success">Je bent succesvol uitgelogd!</string>
     <string name="dm_thread_info">Informatie</string>
     <string name="mark_as_seen">Markeer als gelezen</string>
-    <string name="skip_update_checkbox">Niet meer weergeven tot de volgende update</string>
     <string name="version">Versie</string>
     <string name="pref_start_screen">Startscherm</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Toon toetsenbord bij zoeken</string>
@@ -337,11 +315,8 @@
     <string name="avatar_size">Avatar grootte</string>
     <string name="corners">Hoeken</string>
     <string name="show_grid_gap">Rasterruimte weergeven</string>
-    <string name="disable_animation">Animatie uitschakelen</string>
-    <string name="follower_wait_to_load">Wacht eerst tot de huidige taak voltooid is!</string>
-    <string name="follower_start_compare">Afhankelijk van het aantal gebruikers, kan het laden even duren. Gelieve geduldig te zijn.</string>
     <string name="post_not_found">Bericht niet gevonden!</string>
-    <string name="no_external_app_url">Geen app gevonden om URL\'s te openen</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Galerij</string>
     <string name="camera">Camera</string>
     <string name="all_photos">Alle Foto\'s</string>
@@ -367,18 +342,6 @@
     <string name="reset">Opnieuw</string>
     <string name="crop">Knip af</string>
     <string name="normal">Normaal</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d vind-ik-leuk</item>
-        <item quantity="other">%d vind-ik-leuks</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d antwoord</item>
-        <item quantity="other">%d antwoorden</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d opmerking</item>
-        <item quantity="other">%d opmerkingen</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d bekijken</item>
         <item quantity="other">%d bekeken</item>
@@ -510,5 +473,7 @@
     <string name="slide_to_cancel">Schuif om te annuleren</string>
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
