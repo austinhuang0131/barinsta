@@ -36,11 +36,9 @@
     <string name="activity_setting">啟用活動通知</string>
     <string name="story_sort_setting">動態貼文排序</string>
     <string name="error_loading_profile">加載用戶資料時出錯！請檢查輸入的用戶名是否無誤。如果無誤的話，您的 Instagram 功能可能已被暫時受限。</string>
-    <string name="error_loading_profile_loggedin">加載用戶資料時出錯！請檢查輸入的用戶名是否無誤。如果無誤的話，您可能已被對方封鎖。</string>
     <string name="error_loading_hashtag">載入 Hashtag 時出錯。請檢查此名稱是否有誤。</string>
     <string name="error_loading_location">載入此位置時出錯。請檢查該連結是否有誤。</string>
     <string name="error_creating_folders">建立下載資料夾時出錯！</string>
-    <string name="save_to_folder">儲存到自定義資料夾</string>
     <string name="select_folder">選擇資料夾</string>
     <string name="theme_settings">主題</string>
     <string name="select_language">語言</string>
@@ -64,14 +62,8 @@
     <string name="post_viewer_download_album">整個相簿</string>
     <string name="show_stories">顯示限時動態</string>
     <string name="no_more_stories">沒有限時動態了！</string>
-    <string name="be_patient">耐心一點！</string>
-    <string name="view_story_post">查看文章</string>
     <string name="view_post">查看文章</string>
     <string name="story_poll">投票</string>
-    <string name="votef_story_poll">投票成功！</string>
-    <string name="voted_story_poll">您已經投過票了！</string>
-    <string name="respond_story">回覆</string>
-    <string name="answer_hint">回答…</string>
     <string name="answered_story">回答成功！</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="other">%d 個回應，平均 %s</item>
@@ -99,15 +91,13 @@
     <string name="saved_create_collection">建立新的收藏</string>
     <string name="edit_collection">編輯收藏名稱</string>
     <string name="delete_collection">刪除收藏</string>
-    <string name="delete_collection_confirm">確定刪除此收藏？</string>
-    <string name="delete_collection_note">所有包含的多媒體將會保留於其他收藏夾中。</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">新增至收藏集…</string>
     <string name="remove_from_collection">從收藏中移除</string>
     <string name="liked">已按讚</string>
     <string name="saved">已儲存</string>
     <string name="tagged">已標記</string>
     <string name="dm_person">訊息</string>
-    <string name="bookmark">書籤</string>
     <string name="follow">追蹤</string>
     <string name="unfollow">取消追蹤</string>
     <string name="favorite_short" comment="Adjective, not verb">收藏</string>
@@ -179,7 +169,6 @@
     <string name="dms_inbox_raven_media_suggested">建議</string>
     <string name="dms_inbox_raven_media_screenshot">已截圖</string>
     <string name="dms_inbox_raven_media_cant_deliver">無法傳送</string>
-    <string name="dms_inbox_error_null_count">未讀計數錯誤！</string>
     <string name="dms_thread_message_hint">撰寫訊息…</string>
     <string name="dms_thread_audio_hint">長按即可錄製語音訊息</string>
     <string name="dms_thread_updating">更新中…</string>
@@ -190,22 +179,16 @@
     <string name="dms_ERROR_INVALID_USER">用戶無效</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram 不允許在私訊中上傳超過 60 秒的影片。</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram 不允許在私訊中上傳超過 60 秒的音訊。</string>
-    <string name="direct_download">直接下載</string>
-    <string name="direct_download_desc">將貼文直接下載到手機中！</string>
     <string name="direct_download_loading">獲取文章中</string>
     <string name="downloader_complete">下載完成</string>
     <string name="downloader_preparing">正在准備下載…</string>
     <string name="downloader_downloading_post">下載貼文中…</string>
     <string name="downloader_downloading_media">下載媒體中</string>
-    <string name="downloader_downloading_pfp">下載個人圖片中</string>
     <string name="downloader_unknown_error">發生未知錯誤！</string>
     <string name="downloader_error_creating_folder">建立資料夾時出錯！</string>
     <string name="downloader_error_download_file">下載檔案時出錯</string>
-    <string name="downloader_too_many">您一次只能下載100個文章。不要太貪心！</string>
     <string name="comment_viewer_translate_comment">翻譯評論</string>
     <string name="comment_viewer_delete_comment">刪除評論</string>
-    <string name="comment_view_mention_user_search">您要搜尋用戶名嗎？</string>
-    <string name="comment_view_mention_hash_search">您要搜尋主題標籤嗎？</string>
     <string name="followers_type_followers">追蹤者</string>
     <string name="followers_type_following">追蹤中</string>
     <string name="followers_compare">比較粉絲 &amp; 關注</string>
@@ -214,7 +197,6 @@
     <string name="followers_not_follower">%s 尚未追蹤</string>
     <string name="login_error_loading_cookies">載入 Cookie 時出錯</string>
     <string name="comment_hint">留言回應…</string>
-    <string name="dm_hint">撰寫訊息…</string>
     <string name="liked_notif">對您的貼文說讚</string>
     <string name="comment_notif">已回應你的貼文：</string>
     <string name="follow_notif">已開始追蹤您</string>
@@ -226,15 +208,12 @@
     <string name="share_private_post">這個是私人貼文！分享給可以查看的人。</string>
     <string name="discover_empty">這個類別是空的…</string>
     <string name="update_available">有可用的更新！ （%s）</string>
-    <string name="update_notice">提醒：如果您是從F-Droid 下載的，您必須透過其進行更新！ GitHub 也是如此。</string>
     <string name="updated">感謝您更新 Barinsta！</string>
     <string name="crash_title">程式出錯了</string>
     <string name="crash_descr">喔噢！程式當掉了！別擔心，您可以向開發人員發送錯誤報告以協助解決此問題！ (:</string>
     <string name="action_notif">動態</string>
     <string name="action_archive">動態回憶</string>
     <string name="action_ayml">推薦用戶</string>
-    <string name="select_picture">選擇圖片</string>
-    <string name="uploading">上傳中…</string>
     <plurals name="activity_count_total">
         <item quantity="other">您有 %d 個通知</item>
     </plurals>
@@ -254,7 +233,6 @@
     <string name="logout_success">已成功登出！</string>
     <string name="dm_thread_info">資訊</string>
     <string name="mark_as_seen">標記為已讀</string>
-    <string name="skip_update_checkbox">在下次更新之前不再顯示</string>
     <string name="version">版本</string>
     <string name="pref_start_screen">開始畫面</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">搜尋時顯示鍵盤</string>
@@ -332,11 +310,8 @@
     <string name="avatar_size">大頭貼大小</string>
     <string name="corners">邊角</string>
     <string name="show_grid_gap">網格間保留間距</string>
-    <string name="disable_animation">停用動畫</string>
-    <string name="follower_wait_to_load">請先等候目前的工作完成！</string>
-    <string name="follower_start_compare">根據用戶數量的不同，載入過程可能需要一段時間。請耐心等待。</string>
     <string name="post_not_found">貼文不存在！</string>
-    <string name="no_external_app_url">找不到能開啟此連結的應用程式</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">圖庫</string>
     <string name="camera">相機</string>
     <string name="all_photos">所有照片</string>
@@ -362,15 +337,6 @@
     <string name="reset">重置</string>
     <string name="crop">裁剪</string>
     <string name="normal">普通</string>
-    <plurals name="likes_count">
-        <item quantity="other">%d 個讚</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="other">%d 則回覆</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="other">%d 個評論</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="other">%d 次觀看</item>
     </plurals>
@@ -501,4 +467,6 @@
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
     <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
