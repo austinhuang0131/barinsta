@@ -36,11 +36,9 @@
     <string name="activity_setting">Kích hoạt thông báo hoạt động</string>
     <string name="story_sort_setting">Sắp xếp câu chuyện trên bảng tin</string>
     <string name="error_loading_profile">Tải hồ sơ thất bại! Tên người dùng có đúng chưa? Nếu đúng, có thể bạn đã bị giới hạn.</string>
-    <string name="error_loading_profile_loggedin">Họ có chặn bạn không?</string>
     <string name="error_loading_hashtag">Tải hashtag thất bại! Tên đã đúng chứ?</string>
     <string name="error_loading_location">Tải vị trí thất bại! URL đã đúng chưa?</string>
     <string name="error_creating_folders">Lỗi khi tạo thư mục Download.</string>
-    <string name="save_to_folder">Lưu vào thư mục tùy chọn</string>
     <string name="select_folder">Chọn thư mục</string>
     <string name="theme_settings">Giao diện</string>
     <string name="select_language">Ngôn ngữ</string>
@@ -64,14 +62,8 @@
     <string name="post_viewer_download_album">Cả album</string>
     <string name="show_stories">Hiện story</string>
     <string name="no_more_stories">Không còn story nào!</string>
-    <string name="be_patient">Hãy kiên nhẫn!</string>
-    <string name="view_story_post">Xem Bài đăng</string>
     <string name="view_post">Xem Bài đăng</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Bình chọn thành công!</string>
-    <string name="voted_story_poll">Bạn đã bình chọn rồi!</string>
-    <string name="respond_story">Trả lời</string>
-    <string name="answer_hint">Phản hồi…</string>
     <string name="answered_story">Trả lời thành công!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="other">%d Trung bình %s</item>
@@ -99,15 +91,13 @@
     <string name="saved_create_collection">Tạo bộ sưu tập mới</string>
     <string name="edit_collection">Chỉnh sửa tên bộ sưu tập</string>
     <string name="delete_collection">Xoá bộ sưu tập</string>
-    <string name="delete_collection_confirm">Bạn có chắc muốn xoá bộ sưu tập này chứ?</string>
-    <string name="delete_collection_note">Tất cả những phương tiện đã lưu sẽ được giữ lại trong bộ sưu tập khác.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Xoá khỏi bộ sưu tập</string>
     <string name="liked">Đã thích</string>
     <string name="saved">Đã lưu</string>
     <string name="tagged">Đã gắn thẻ</string>
     <string name="dm_person">Tin nhắn</string>
-    <string name="bookmark">Dấu trang</string>
     <string name="follow">Theo dõi</string>
     <string name="unfollow">Bỏ theo dõi</string>
     <string name="favorite_short" comment="Adjective, not verb">Yêu thích</string>
@@ -179,7 +169,6 @@
     <string name="dms_inbox_raven_media_suggested">Gợi ý</string>
     <string name="dms_inbox_raven_media_screenshot">Đã chụp màn hình</string>
     <string name="dms_inbox_raven_media_cant_deliver">Không thể gửi</string>
-    <string name="dms_inbox_error_null_count">Đánh đấu chưa xem không có giá trị!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Chạm và giữ để ghi âm</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -190,22 +179,16 @@
     <string name="dms_ERROR_INVALID_USER">Người dùng không hợp lệ</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram không cho phép đăng tải video trên 60 giây trong DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram không cho phép đăng tải ghi âm trên 60 giây.</string>
-    <string name="direct_download">Tải xuống trực tiếp</string>
-    <string name="direct_download_desc">Tải bài viết xuống trực tiếp về điện thoại!</string>
     <string name="direct_download_loading">Đang nạp bài viết</string>
     <string name="downloader_complete">Tải xuống hoàn tất</string>
     <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Đang tải xuống bài viết…</string>
     <string name="downloader_downloading_media">Đang tải xuống phương tiện</string>
-    <string name="downloader_downloading_pfp">Đang tải xuống ảnh đại diện</string>
     <string name="downloader_unknown_error">Đã xảy ra lỗi không xác định!!!</string>
     <string name="downloader_error_creating_folder">Lỗi khi tạo thư mục!</string>
     <string name="downloader_error_download_file">Lỗi khi tải xuống tệp</string>
-    <string name="downloader_too_many">Bạn chỉ có thể tải xuống 100 bài cùng một lúc. Đừng tham lam quá!</string>
     <string name="comment_viewer_translate_comment">Dịch bình luận</string>
     <string name="comment_viewer_delete_comment">Xóa bình luận</string>
-    <string name="comment_view_mention_user_search">Bạn có muốn tìm tên người dùng không?</string>
-    <string name="comment_view_mention_hash_search">Bạn có muốn tìm hashtag không?</string>
     <string name="followers_type_followers">Người theo dõi</string>
     <string name="followers_type_following">Đang theo dõi</string>
     <string name="followers_compare">So sánh người theo dõi &amp; đang theo dõi</string>
@@ -214,7 +197,6 @@
     <string name="followers_not_follower">%s không theo dõi</string>
     <string name="login_error_loading_cookies">Lỗi khi tải cookies</string>
     <string name="comment_hint">Viết bình luận mới…</string>
-    <string name="dm_hint">Viết tin nhắn mới…</string>
     <string name="liked_notif">Đã thích bài đăng của bạn</string>
     <string name="comment_notif">Đã bình luận về bài đăng của bạn:</string>
     <string name="follow_notif">Đã bắt đầu theo dõi bạn</string>
@@ -226,15 +208,12 @@
     <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Mục này đang bị bỏ trống…</string>
     <string name="update_available">Đã có bản cập nhật! (%s)</string>
-    <string name="update_notice">Nhắc nhở: Nếu bạn tải về từ F-Droid, bạn phải cập nhật từ nó! Điều tương tự cho GitHub.</string>
     <string name="updated">Cảm ơn bạn đã cập nhật Barinsta!</string>
     <string name="crash_title">Ứng dụng đã bị crash</string>
     <string name="crash_descr">Ối.. ứng dụng đã bị crash, nhưng đừng lo bạn có thể gửi báo cáo lỗi đến cho nhà phát triển để giúp anh ấy sửa vấn đề. (:</string>
     <string name="action_notif">Hoạt động</string>
     <string name="action_archive">Bảo lưu story</string>
     <string name="action_ayml">Người dùng được đề xuất</string>
-    <string name="select_picture">Chọn hình ảnh</string>
-    <string name="uploading">Đang tải lên…</string>
     <plurals name="activity_count_total">
         <item quantity="other">You have %d notifications</item>
     </plurals>
@@ -254,7 +233,6 @@
     <string name="logout_success">Đăng xuất thành công!</string>
     <string name="dm_thread_info">Thông tin</string>
     <string name="mark_as_seen">Đánh dấu là đã đọc</string>
-    <string name="skip_update_checkbox">Không hiện lại cho đến cập nhật tiếp theo</string>
     <string name="version">Phiên bản</string>
     <string name="pref_start_screen">Màn hình khởi động</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
@@ -332,11 +310,8 @@
     <string name="avatar_size">Kích thước avatar</string>
     <string name="corners">Góc</string>
     <string name="show_grid_gap">Hiển thị khoảng trống lưới</string>
-    <string name="disable_animation">Tắt hoạt ảnh</string>
-    <string name="follower_wait_to_load">Xin hãy đợi công việc hiện tại hoàn thành trước!</string>
-    <string name="follower_start_compare">Tùy thuộc vào trường hợp của người dùng, có thể sẽ mất một lúc để tải. Xin hãy kiên nhẫn.</string>
     <string name="post_not_found">Không tìm thấy bài viết!</string>
-    <string name="no_external_app_url">Không có app nào để mở link này</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Thư viện</string>
     <string name="camera">Máy ảnh</string>
     <string name="all_photos">Tất cả ảnh</string>
@@ -362,15 +337,6 @@
     <string name="reset">Đặt lại</string>
     <string name="crop">Cắt</string>
     <string name="normal">Bình thường</string>
-    <plurals name="likes_count">
-        <item quantity="other">%d thích</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="other">%d phản hồi</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="other">%d bình luận</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="other">%d lượt xem</item>
     </plurals>
@@ -501,4 +467,6 @@
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
     <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
