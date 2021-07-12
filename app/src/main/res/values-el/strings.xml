@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="action_about">Σχετικά με</string>
-    <string name="action_dms">Μηνύματα</string>
+    <string name="action_dms">Απευθείας Μηνύματα</string>
     <string name="action_settings">Ρυθμίσεις</string>
     <string name="action_download">Λήψη</string>
     <string name="action_search">Αναζήτηση ονόματος χρήστη…</string>
@@ -30,7 +30,7 @@
     <string name="hide_muted_reels_setting">Απόκρυψη ιστοριών που βρίσκονται σε σίγαση από τη ροή</string>
     <string name="dm_mark_as_seen_setting">Επισήμανση μηνυμάτων ως αναγνωσμένων μετά την προβολή</string>
     <string name="dm_mark_as_seen_setting_summary">Τα υπόλοιπα μέλη θα γνωρίζουν ότι προβλήθηκε</string>
-    <string name="autoplay_stories_setting">Αυτόματη αναπαραγωγή ιστοριών με βίντεο</string>
+    <string name="autoplay_stories_setting">Αυτόματη αναπαραγωγή βίντεο ιστοριών</string>
     <string name="story_list_setting">Εμφάνιση λίστας ιστοριών από προεπιλογή</string>
     <string name="story_list_setting_summary">Για την προβολή ιστοριών</string>
     <string name="activity_setting">Ενεργοποίηση ειδοποιήσεων δραστηριότητας</string>
@@ -473,7 +473,7 @@
     <string name="slide_to_cancel">Σύρετε για ακύρωση</string>
     <string name="disable_screen_transitions">Απενεργοποίηση μεταβάσεων οθόνης</string>
     <string name="invalid_format">Μη έγκυρη μορφή</string>
-    <string name="no_directory_picker_activity">Η Barinsta δεν μπορεί να εκκινήσει τον διαχειριστή αρχείων του Android. Παρακαλώ βεβαιωθείτε ότι είναι εγκατεστημένο και ενεργοποιημένο στη συσκευή σας.</string>
+    <string name="no_directory_picker_activity">Το Barinsta δεν μπορεί να εκκινήσει τον διαχειριστή αρχείων του Android. Παρακαλώ βεβαιωθείτε ότι είναι εγκατεστημένο και ενεργοποιημένο στη συσκευή σας.</string>
     <string name="story_stickers">Αυτοκόλλητα</string>
     <string name="story_list">Λίστα ιστοριών</string>
 </resources>
