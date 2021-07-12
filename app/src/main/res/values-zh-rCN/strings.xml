@@ -91,7 +91,7 @@
     <string name="saved_create_collection">创建新的收藏夹</string>
     <string name="edit_collection">编辑收藏夹名称</string>
     <string name="delete_collection">删除收藏夹</string>
-    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
+    <string name="delete_collection_note">将要删除的收藏夹中的帖子会在其它收藏夹中保留。</string>
     <string name="add_to_collection">添加到收藏集…</string>
     <string name="remove_from_collection">从收藏夹中移除</string>
     <string name="liked">已赞</string>
@@ -311,7 +311,7 @@
     <string name="corners">边角</string>
     <string name="show_grid_gap">显示网格间距</string>
     <string name="post_not_found">找不到该帖！</string>
-    <string name="no_external_app_url">No apps for opening URLs found</string>
+    <string name="no_external_app_url">未找到打开 URL 的应用</string>
     <string name="gallery">图库</string>
     <string name="camera">相机</string>
     <string name="all_photos">所有照片</string>
@@ -466,7 +466,7 @@
     <string name="slide_to_cancel">滑动以取消</string>
     <string name="disable_screen_transitions">禁用屏幕过渡动画</string>
     <string name="invalid_format">格式无效</string>
-    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
-    <string name="story_stickers">Stickers</string>
-    <string name="story_list">Story list</string>
+    <string name="no_directory_picker_activity">Barinsta 无法启动 Android 自带的文件管理器。请确保您已将其安装并启用。</string>
+    <string name="story_stickers">贴纸</string>
+    <string name="story_list">快拍列表</string>
 </resources>
