@@ -36,11 +36,9 @@
     <string name="activity_setting">روشن کردن آگهداد فعالیت ها</string>
     <string name="story_sort_setting">مرتب کردن خوراک‌خوان داستان‌ها</string>
     <string name="error_loading_profile">خطای بارگذاری نمایه! آیا نام کاربری درست است؟ اگر بله، ممکن است که محدود شده باشید.</string>
-    <string name="error_loading_profile_loggedin">خطای بارگذاری نمایه! آیا نام کاربری معتبر است؟ یا شما را مسدود کرده‌اند؟</string>
     <string name="error_loading_hashtag">خطای بارگذاری هشتگ! آیا نام معتبر است؟</string>
     <string name="error_loading_location">خطای بارگذاری مکان! URL معتبر است؟</string>
     <string name="error_creating_folders">خطا در ساخت پوشه(ها).</string>
-    <string name="save_to_folder">ذخیره در پوشه سفارشی</string>
     <string name="select_folder">انتخاب پوشه</string>
     <string name="theme_settings">پوسته</string>
     <string name="select_language">زبان</string>
@@ -67,14 +65,8 @@
     <string name="post_viewer_download_album">آلبوم کامل</string>
     <string name="show_stories">نمایش استوری ها</string>
     <string name="no_more_stories">استوری بیشتری نیست!</string>
-    <string name="be_patient">صبور باشید!</string>
-    <string name="view_story_post">دیدن فرسته</string>
     <string name="view_post">دیدن فرسته</string>
     <string name="story_poll">نظرسنجی</string>
-    <string name="votef_story_poll">رای با موفقیت بود!</string>
-    <string name="voted_story_poll">در حال حاظر شما رای داده اید!</string>
-    <string name="respond_story">پاسخ</string>
-    <string name="answer_hint">پاسخ…</string>
     <string name="answered_story">جواب درست است!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
@@ -104,15 +96,13 @@
     <string name="saved_create_collection">ایجاد مجموعه جدید</string>
     <string name="edit_collection">ویرایش نام مجموعه</string>
     <string name="delete_collection">حذف مجموعه</string>
-    <string name="delete_collection_confirm">آیا مطمئنید که می خواهید این مجموعه را حذف کنید؟</string>
-    <string name="delete_collection_note">تمام رسانه های موجود در مجموعه های دیگر باقی می مانند.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">افزودن به مجموعه…</string>
     <string name="remove_from_collection">برداشتن از مجموعه</string>
     <string name="liked">پسندیده شد</string>
     <string name="saved">ذخیره شد</string>
     <string name="tagged">تگ شده</string>
     <string name="dm_person">پیام</string>
-    <string name="bookmark">نشانک</string>
     <string name="follow">پی‌گرفتن</string>
     <string name="unfollow">پایان پی‌گرفتن</string>
     <string name="favorite_short" comment="Adjective, not verb">برگزیده‌</string>
@@ -184,7 +174,6 @@
     <string name="dms_inbox_raven_media_suggested">پیشنهاد شده</string>
     <string name="dms_inbox_raven_media_screenshot">اسکرین شات گرفته شده</string>
     <string name="dms_inbox_raven_media_cant_deliver">نمیتواند ارسال شود</string>
-    <string name="dms_inbox_error_null_count">تعداد پاسخ های مخفی نامشخص است!</string>
     <string name="dms_thread_message_hint">پیام…</string>
     <string name="dms_thread_audio_hint">برای ضبط صدا، بفشارید و نگه دارید</string>
     <string name="dms_thread_updating">در حال بروزرسانی…</string>
@@ -195,22 +184,16 @@
     <string name="dms_ERROR_INVALID_USER">کاربر نامعتبر</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">اینستاگرام اجاری بارگذاری فیلم‌های طولانی تر از ۶۰ ثانیه را در خصوصی نمی‌دهد.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">اینستاگرام اجازه بارگذاری صداهای طولانی تر از ۶۰ ثانیه را نمی دهد.</string>
-    <string name="direct_download">دانلود مستقیم</string>
-    <string name="direct_download_desc">دانلود مستقیم پست ها در موبایل!</string>
     <string name="direct_download_loading">آوردن پست (ها)</string>
     <string name="downloader_complete">دانلود کامل شده</string>
     <string name="downloader_preparing">آماده سازی برای بارگیری…</string>
     <string name="downloader_downloading_post">دریافت پیک…</string>
     <string name="downloader_downloading_media">دانلود رسانه ها</string>
-    <string name="downloader_downloading_pfp">دانلود عکس پروفایل</string>
     <string name="downloader_unknown_error">خطای ناشناخته رخ داده است!!!</string>
     <string name="downloader_error_creating_folder">خطا در ایجاد پوشه!</string>
     <string name="downloader_error_download_file">خطا در دانلود فایل</string>
-    <string name="downloader_too_many">شما فقط 100 پست در یک زمان میتوانید دانلود کنید. خیلی حریص نباشید!</string>
     <string name="comment_viewer_translate_comment">گرداندن دیدگاه</string>
     <string name="comment_viewer_delete_comment">حذف دیدگاه</string>
-    <string name="comment_view_mention_user_search">ایا میخواهید نام کاربری جستوجو کنید ؟</string>
-    <string name="comment_view_mention_hash_search">آیا میخواهید هشتگ جستوجو کنید؟</string>
     <string name="followers_type_followers">پیگیران</string>
     <string name="followers_type_following">پیگیری</string>
     <string name="followers_compare">مقایسه دنبال کنندگان &amp; زیر</string>
@@ -219,7 +202,6 @@
     <string name="followers_not_follower">%s دنبال نمی کنند</string>
     <string name="login_error_loading_cookies">خطای بالا آوردن کوکی ها</string>
     <string name="comment_hint">نوشتن یک دیدگاه نو…</string>
-    <string name="dm_hint">نوشتن یک پیام نو…</string>
     <string name="liked_notif">پیک شما را پسندید</string>
     <string name="comment_notif">کامنت رو پست شما گذاشته:</string>
     <string name="follow_notif">شروع به دنبال کردن شما کرده</string>
@@ -231,15 +213,12 @@
     <string name="share_private_post">این یک پست شخصی است! با کسانی که می توانند ببینند به اشتراک بگذارید.</string>
     <string name="discover_empty">این دسته به نوعی خالی است…</string>
     <string name="update_available">یک بروزرسانی آمده است! (%s)</string>
-    <string name="update_notice">یادآور: اگه شما از F-Droid دانلود کرده اید، شما باید از همانجا بروزرسانی کنید! برای GitHub هم همینطور.</string>
     <string name="updated">از شما بابت بروز رسانی Barinsta سپاسگزاریم!</string>
     <string name="crash_title">برنامه خراب شد</string>
     <string name="crash_descr">اوپسس.. برنامه خراب است، اما نگران نباشید شما میتوانید گزارش خطا را برای توسعه دهنده بفرستید برای کمک به او در درست کردن مشکل. (:</string>
     <string name="action_notif">فعالیت</string>
     <string name="action_archive">سابقه داستان‌ها</string>
     <string name="action_ayml">کاربران پیشنهادی</string>
-    <string name="select_picture">انتخاب تصویر</string>
-    <string name="uploading">درحال بارگذاری…</string>
     <plurals name="activity_count_total">
         <item quantity="one">شما %d اعلان دارید</item>
         <item quantity="other">You have %d notifications</item>
@@ -260,7 +239,6 @@
     <string name="logout_success">خروج با موفقیت!</string>
     <string name="dm_thread_info">ازدایش</string>
     <string name="mark_as_seen">نشان کردن به عنوان دیده شده</string>
-    <string name="skip_update_checkbox">دوباره نمایش نده تا بروزرسانی بعدی</string>
     <string name="version">نگارش</string>
     <string name="pref_start_screen">صفحه آغازین</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">نمایش صفحه کلید در جستجو</string>
@@ -338,11 +316,8 @@
     <string name="avatar_size">Avatar size</string>
     <string name="corners">Corners</string>
     <string name="show_grid_gap">Show grid gap</string>
-    <string name="disable_animation">Disable animation</string>
-    <string name="follower_wait_to_load">Please wait for the current task to complete first!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
     <string name="post_not_found">Post not found!</string>
-    <string name="no_external_app_url">No app found which opens urls</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Gallery</string>
     <string name="camera">فرتورانداز</string>
     <string name="all_photos">همۀ فرتورها</string>
@@ -368,18 +343,6 @@
     <string name="reset">Reset</string>
     <string name="crop">Crop</string>
     <string name="normal">Normal</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d پسند</item>
-        <item quantity="other">%d پسند</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d دیدگاه</item>
-        <item quantity="other">%d دیدگاه</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d view</item>
         <item quantity="other">%d views</item>
@@ -511,5 +474,7 @@
     <string name="slide_to_cancel">Slide to Cancel</string>
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
