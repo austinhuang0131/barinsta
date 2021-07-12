@@ -36,11 +36,9 @@
     <string name="activity_setting">Gaitu jarduera-jakinarazpenak</string>
     <string name="story_sort_setting">Istorioen jarioaren sailkapena</string>
     <string name="error_loading_profile">Error loading profile! Is the username valid? If so, you may be ratelimited.</string>
-    <string name="error_loading_profile_loggedin">Error loading profile! Is the username valid? Or did they block you?</string>
     <string name="error_loading_hashtag">Error loading hashtag! Is the name valid?</string>
     <string name="error_loading_location">Error loading location! Is the URL valid?</string>
     <string name="error_creating_folders">Errorea deskargen karpeta(k) sortzen.</string>
-    <string name="save_to_folder">Gorde pertsonalizatutako karpetan</string>
     <string name="select_folder">Hautatu karpeta</string>
     <string name="theme_settings">Gaia</string>
     <string name="select_language">Hizkuntza</string>
@@ -67,14 +65,8 @@
     <string name="post_viewer_download_album">Album osoa</string>
     <string name="show_stories">Erakutsi istorioak</string>
     <string name="no_more_stories">Istorio gehiagorik ez</string>
-    <string name="be_patient">Itxaron</string>
-    <string name="view_story_post">Ikusi bidalketa</string>
     <string name="view_post">Ikusi bidalketa</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Bozka ongi bidali da!</string>
-    <string name="voted_story_poll">Jada bozkatu duzu!</string>
-    <string name="respond_story">Erantzun</string>
-    <string name="answer_hint">Erantzun…</string>
     <string name="answered_story">Erantzuna ongi bidali da!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
@@ -103,15 +95,13 @@
     <string name="saved_create_collection">Bilduma berria sortu</string>
     <string name="edit_collection">Editatu bildumaren izena</string>
     <string name="delete_collection">Ezabatu bilduma</string>
-    <string name="delete_collection_confirm">Ziur zaude bilduma hau ezabatu nahi duzula?</string>
-    <string name="delete_collection_note">All contained media will remain in other collections.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Kendu bildumatik</string>
     <string name="liked">Atsegiteak</string>
     <string name="saved">Gordeta</string>
     <string name="tagged">Etiketatuta</string>
     <string name="dm_person">Mezua</string>
-    <string name="bookmark">Laster-marka</string>
     <string name="follow">Jarraitu</string>
     <string name="unfollow">Jarraitzeari utzi</string>
     <string name="favorite_short" comment="Adjective, not verb">Gogokoa</string>
@@ -183,7 +173,6 @@
     <string name="dms_inbox_raven_media_suggested">Iradokita</string>
     <string name="dms_inbox_raven_media_screenshot">Pantaila-argazkia aterata</string>
     <string name="dms_inbox_raven_media_cant_deliver">Ez da iritsi</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Sakatu eta mantendu audioa grabatzeko</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -194,22 +183,16 @@
     <string name="dms_ERROR_INVALID_USER">Erabiltzaile baliogabea</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram does not allow uploading videos longer than 60 secs for DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram does not allow uploading audio longer than 60 secs.</string>
-    <string name="direct_download">Deskargatu zuzenean</string>
-    <string name="direct_download_desc">Bidalketak telefonora zuzenean deskargatzen ditu</string>
     <string name="direct_download_loading">Fetching post(s)</string>
     <string name="downloader_complete">Deskarga burutu da</string>
     <string name="downloader_preparing">Deskargatzeko prestatzen…</string>
     <string name="downloader_downloading_post">Bidalketa deskargatzen…</string>
     <string name="downloader_downloading_media">Multimedia deskargatzen</string>
-    <string name="downloader_downloading_pfp">Profil-irudia deskargatzen</string>
     <string name="downloader_unknown_error">Errore ezezaguna gertatu da</string>
     <string name="downloader_error_creating_folder">Errorea karpeta sortzean!</string>
     <string name="downloader_error_download_file">Errorea fitxategia deskargatzean</string>
-    <string name="downloader_too_many">100 bidalketa deskargatu ditzakezu une berean. Ez izan gutiziatsu!</string>
     <string name="comment_viewer_translate_comment">Itzuli iruzkina</string>
     <string name="comment_viewer_delete_comment">Ezabatu iruzkina</string>
-    <string name="comment_view_mention_user_search">Erabiltzaile-izena bilatu nahi duzu?</string>
-    <string name="comment_view_mention_hash_search">Traol-hitza bilatu nahi duzu?</string>
     <string name="followers_type_followers">Jarraitzaileak</string>
     <string name="followers_type_following">Jarraituak</string>
     <string name="followers_compare">Jarraitzaileak eta jarraituak konparatzen</string>
@@ -218,7 +201,6 @@
     <string name="followers_not_follower">%s(e)k ez zaitu jarraitzen</string>
     <string name="login_error_loading_cookies">Errorea cookieak kargatzean</string>
     <string name="comment_hint">Idatzi iruzkin berria…</string>
-    <string name="dm_hint">Idatzi mezu berria…</string>
     <string name="liked_notif">Zure bidalketa atsegin du</string>
     <string name="comment_notif">Zure bidalketan iruzkindu du:</string>
     <string name="follow_notif">Zu jarraitzen hasi da</string>
@@ -230,15 +212,12 @@
     <string name="share_private_post">Bidalketa pribatua da. Partekatu ikus dezaketen horiekin.</string>
     <string name="discover_empty">Kategoria hau hutsik dago…</string>
     <string name="update_available">Eguneratze bat eskuragarri dago (%s)</string>
-    <string name="update_notice">F-Droidetik deskargatu baduzu, bertatik eguneratu behar duzu. GitHubekin ere hori egin behar da.</string>
     <string name="updated">Eskerrik asko Barinsta eguneratzeagatik!</string>
     <string name="crash_title">Aplikazioa kraskatu da</string>
     <string name="crash_descr">Hara! Aplikazioa kraskatu da, baina ez kezkatu, errore-txostena garatzaileari bidali diezaiokezu arazoa konpondu dezan.</string>
     <string name="action_notif">Jarduera</string>
     <string name="action_archive">Istorio-artxiboa</string>
     <string name="action_ayml">Iradokitutako erabiltzaileak</string>
-    <string name="select_picture">Hautatu irudia</string>
-    <string name="uploading">Igotzen…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="other">You have %d notifications</item>
@@ -259,7 +238,6 @@
     <string name="logout_success">Saioa ongi itxi da!</string>
     <string name="dm_thread_info">Informazioa</string>
     <string name="mark_as_seen">Markatu ikusita gisa</string>
-    <string name="skip_update_checkbox">Ez erakutsi hurrengo eguneratzera arte</string>
     <string name="version">Bertsioa</string>
     <string name="pref_start_screen">Hasierako pantaila</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Erakutsi teklatua bilaketan</string>
@@ -337,11 +315,8 @@
     <string name="avatar_size">Avatarraren tamaina</string>
     <string name="corners">Ertzak</string>
     <string name="show_grid_gap">Erakutsi sareta-tartea</string>
-    <string name="disable_animation">Desgaitu animazioa</string>
-    <string name="follower_wait_to_load">Itxaron uneko zeregina burutu arte!</string>
-    <string name="follower_start_compare">Erabiltzaile kopuruaren arabera, honek kargatzen tardatu dezake. Itxaron.</string>
     <string name="post_not_found">Bidalketa ez da aurkitu!</string>
-    <string name="no_external_app_url">URLak irekiko dituen aplikaziorik ez da aurkitu</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Galeria</string>
     <string name="camera">Kamera</string>
     <string name="all_photos">Argazki guztiak</string>
@@ -367,18 +342,6 @@
     <string name="reset">Berrezarri</string>
     <string name="crop">Ebaki</string>
     <string name="normal">Normala</string>
-    <plurals name="likes_count">
-        <item quantity="one">atsegite %d</item>
-        <item quantity="other">%d atsegite</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">Erantzun %d</item>
-        <item quantity="other">%d erantzun</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">Iruzkin %d</item>
-        <item quantity="other">%d iruzkin</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">Ikusaldi %d</item>
         <item quantity="other">%d ikusaldi</item>
@@ -510,5 +473,7 @@
     <string name="slide_to_cancel">Irristatu uzteko</string>
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
