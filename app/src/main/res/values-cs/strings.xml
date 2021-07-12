@@ -36,11 +36,9 @@
     <string name="activity_setting">Povolit oznámení o aktivitě</string>
     <string name="story_sort_setting">Řazení kanálu příběhů</string>
     <string name="error_loading_profile">Chyba při načítání profilu! Je uživatelské jméno platné? Pokud ano, jste možná omezeni Instagramem.</string>
-    <string name="error_loading_profile_loggedin">Chyba při načítání profilu! Je uživatelské jméno platné? Nebo vás zablokovali?</string>
     <string name="error_loading_hashtag">Chyba při načítání hashtagu! Je název platný?</string>
     <string name="error_loading_location">Chyba při načítání polohy! Je URL platná?</string>
     <string name="error_creating_folders">Chyba při vytváření složky(ek) stahování.</string>
-    <string name="save_to_folder">Uložit do vlastní složky</string>
     <string name="select_folder">Vybrat složku</string>
     <string name="theme_settings">Motiv</string>
     <string name="select_language">Jazyk</string>
@@ -73,14 +71,8 @@
     <string name="post_viewer_download_album">Celé album</string>
     <string name="show_stories">Zobrazit příběhy</string>
     <string name="no_more_stories">Žádné další příběhy!</string>
-    <string name="be_patient">Buďte trpěliví!</string>
-    <string name="view_story_post">Zobrazit příspěvek</string>
     <string name="view_post">Zobrazit příspěvek</string>
     <string name="story_poll">Hlasování</string>
-    <string name="votef_story_poll">Hlasování úspěšné!</string>
-    <string name="voted_story_poll">Již jste hlasovali!</string>
-    <string name="respond_story">Odpovědět</string>
-    <string name="answer_hint">Odpovědět…</string>
     <string name="answered_story">Odpověď úspěšně odeslána!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d odpověď, průměrně %s</item>
@@ -111,15 +103,13 @@
     <string name="saved_create_collection">Vytvořit sbírku</string>
     <string name="edit_collection">Upravit název sbírky</string>
     <string name="delete_collection">Odstranit sbírku</string>
-    <string name="delete_collection_confirm">Opravdu chcete tuto sbírku odstranit?</string>
-    <string name="delete_collection_note">Všechna uložená média zůstanou v jiných sbírkách.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Přidat do sbírky…</string>
     <string name="remove_from_collection">Odebrat ze sbírky</string>
     <string name="liked">Líbí se</string>
     <string name="saved">Uložené</string>
     <string name="tagged">Označení</string>
     <string name="dm_person">Zpráva</string>
-    <string name="bookmark">Přidat do záložek</string>
     <string name="follow">Sledovat</string>
     <string name="unfollow">Přestat sledovat</string>
     <string name="favorite_short" comment="Adjective, not verb">Oblíbené</string>
@@ -191,7 +181,6 @@
     <string name="dms_inbox_raven_media_suggested">Navrhované</string>
     <string name="dms_inbox_raven_media_screenshot">Udělán snímek obrazovky</string>
     <string name="dms_inbox_raven_media_cant_deliver">Nelze doručit</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
     <string name="dms_thread_message_hint">Zpráva…</string>
     <string name="dms_thread_audio_hint">Stiskněte a podržte pro nahrávání</string>
     <string name="dms_thread_updating">Aktualizace…</string>
@@ -202,22 +191,16 @@
     <string name="dms_ERROR_INVALID_USER">Neexistující uživatel</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram neumožňuje posílat ve zprávách videa delší než 60 sekund.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram neumožňuje posílat ve zprávách zvuk delší než 60 sekund.</string>
-    <string name="direct_download">Stáhnout přímo</string>
-    <string name="direct_download_desc">Stahuje příspěvky přímo do telefonu!</string>
     <string name="direct_download_loading">Načítání příspěvků</string>
     <string name="downloader_complete">Stahování bylo dokončeno</string>
     <string name="downloader_preparing">Připravuje se stahování…</string>
     <string name="downloader_downloading_post">Stahování příspěvku…</string>
     <string name="downloader_downloading_media">Stahování médií</string>
-    <string name="downloader_downloading_pfp">Stahování profilového obrázku</string>
     <string name="downloader_unknown_error">Vyskytla se neznámá chyba!</string>
     <string name="downloader_error_creating_folder">Chyba při vytváření složky!</string>
     <string name="downloader_error_download_file">Chyba při stahování souboru</string>
-    <string name="downloader_too_many">Můžete stahovat pouze 100 příspěvků najednou. Nebuďte příliš chamtiví!</string>
     <string name="comment_viewer_translate_comment">Přeložit komentář</string>
     <string name="comment_viewer_delete_comment">Odstranit komentář</string>
-    <string name="comment_view_mention_user_search">Chcete vyhledat uživatelské jméno?</string>
-    <string name="comment_view_mention_hash_search">Chcete vyhledat hashtag?</string>
     <string name="followers_type_followers">Sledující</string>
     <string name="followers_type_following">Sleduje</string>
     <string name="followers_compare">Porovnání sledujících a sledovaných</string>
@@ -226,7 +209,6 @@
     <string name="followers_not_follower">%s nesleduje</string>
     <string name="login_error_loading_cookies">Chyba při načítání souborů cookies</string>
     <string name="comment_hint">Napsat nový komentář…</string>
-    <string name="dm_hint">Napsat novou zprávu…</string>
     <string name="liked_notif">Váš příspěvek se líbí</string>
     <string name="comment_notif">Okomentoval(a) váš příspěvek:</string>
     <string name="follow_notif">Vás začal(a) sledovat</string>
@@ -238,15 +220,12 @@
     <string name="share_private_post">Toto je soukromý příspěvek! Sdílejte jej s těmi, kdo jej mohou vidět.</string>
     <string name="discover_empty">Tato kategorie je nějak prázdná…</string>
     <string name="update_available">Je k dispozici aktualizace! (%s)</string>
-    <string name="update_notice">Připomínka: Pokud jste aplikaci stáhli z F-Droidu, musíte ji z něj i aktualizovat! To stejné platí pro GitHub.</string>
     <string name="updated">Děkujeme, že jste aktualizovali Barinstu!</string>
     <string name="crash_title">Aplikace spadla</string>
     <string name="crash_descr">Oops.. aplikace se zhroutila, ale nebojte se, můžete poslat chybové hlášení vývojáři, abyste mu pomohli vyřešit tuto chybu. (:</string>
     <string name="action_notif">Aktivita</string>
     <string name="action_archive">Archiv příběhů</string>
     <string name="action_ayml">Navrhovaní uživatelé</string>
-    <string name="select_picture">Vybrat obrázek</string>
-    <string name="uploading">Nahrávání…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="few">You have %d notifications</item>
@@ -269,7 +248,6 @@
     <string name="logout_success">Odhlášení proběhlo úspěšně!</string>
     <string name="dm_thread_info">Informace</string>
     <string name="mark_as_seen">Označit jako přečtené</string>
-    <string name="skip_update_checkbox">Do další aktualizace znovu nezobrazovat</string>
     <string name="version">Verze</string>
     <string name="pref_start_screen">Úvodní obrazovka</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Při otevření vyhledávání zobrazit klávesnici</string>
@@ -347,11 +325,8 @@
     <string name="avatar_size">Velikost avataru</string>
     <string name="corners">Rohy</string>
     <string name="show_grid_gap">Zobrazit mezery v mřížce</string>
-    <string name="disable_animation">Zakázat animace</string>
-    <string name="follower_wait_to_load">Počkejte prosím nejdříve na dokončení aktuální úlohy!</string>
-    <string name="follower_start_compare">V závislosti na počtu uživatelů to může chvíli trvat. Buďte prosím trpěliví.</string>
     <string name="post_not_found">Příspěvek nebyl nalezen!</string>
-    <string name="no_external_app_url">Nebyla nalezena žádná aplikace, která by otevřela URL</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Galerie</string>
     <string name="camera">Fotoaparát</string>
     <string name="all_photos">Všechny fotografie</string>
@@ -377,24 +352,6 @@
     <string name="reset">Obnovit</string>
     <string name="crop">Oříznout</string>
     <string name="normal">Normální</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d se líbí</item>
-        <item quantity="few">%d se líbí</item>
-        <item quantity="many">%d se líbí</item>
-        <item quantity="other">%d se líbí</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d odpověď</item>
-        <item quantity="few">%d odpovědi</item>
-        <item quantity="many">%d odpovědí</item>
-        <item quantity="other">%d odpovědí</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d komentář</item>
-        <item quantity="few">%d komentáře</item>
-        <item quantity="many">%d komentářů</item>
-        <item quantity="other">%d komentářů</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d zobrazení</item>
         <item quantity="few">%d zobrazení</item>
@@ -530,5 +487,7 @@
     <string name="slide_to_cancel">Posunutím zrušíte</string>
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">No activity found to select directory</string>
+    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
