@@ -36,11 +36,9 @@
     <string name="activity_setting">Habilitar les notificacions d\'activitat</string>
     <string name="story_sort_setting">Ordre de les històries</string>
     <string name="error_loading_profile">S\'ha produït un error en carregar el perfil! El nom d\'usuari és vàlid? Si és així, és possible que se t\'hagi restringit.</string>
-    <string name="error_loading_profile_loggedin">S\'ha produït un error en carregar el perfil! El nom d\'usuari és vàlid? O t\'ha bloquejat?</string>
     <string name="error_loading_hashtag">S\'ha produït un error en carregar el hashtag! El nom és vàlid?</string>
     <string name="error_loading_location">S\'ha produït un error en carregar la ubicació! L\'URL és vàlid?</string>
     <string name="error_creating_folders">S\'ha produït un error en crear la(es) carpeta(es) de descàrrega.</string>
-    <string name="save_to_folder">Desa a una carpeta personalitzada</string>
     <string name="select_folder">Selecciona la carpeta</string>
     <string name="theme_settings">Tema</string>
     <string name="select_language">Llengua</string>
@@ -67,14 +65,8 @@
     <string name="post_viewer_download_album">Àlbum complet</string>
     <string name="show_stories">Mostra les històries</string>
     <string name="no_more_stories">Prou històries!</string>
-    <string name="be_patient">Sigues pacient!</string>
-    <string name="view_story_post">Mostrar l\'entrada</string>
     <string name="view_post">Mostrar l\'entrada</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Has votat amb èxit!</string>
-    <string name="voted_story_poll">Ja has votat!</string>
-    <string name="respond_story">Contestar</string>
-    <string name="answer_hint">Resposta…</string>
     <string name="answered_story">Has contestat amb èxit!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d mitjana de resposta %s</item>
@@ -103,15 +95,13 @@
     <string name="saved_create_collection">Crear una nova col·lecció</string>
     <string name="edit_collection">Editar el nom de la col·lecció</string>
     <string name="delete_collection">Suprimeix la col·lecció</string>
-    <string name="delete_collection_confirm">Estàs segur de voler suprimir aquesta col·lecció?</string>
-    <string name="delete_collection_note">Tots els mitjans continguts romandran en altres col·leccions.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Eliminar de la coŀlecció</string>
     <string name="liked">M\'agrada</string>
     <string name="saved">Desat</string>
     <string name="tagged">Etiquetat</string>
     <string name="dm_person">Missatge</string>
-    <string name="bookmark">Marcador</string>
     <string name="follow">Seguir</string>
     <string name="unfollow">Deixar de seguir</string>
     <string name="favorite_short" comment="Adjective, not verb">Preferit</string>
@@ -183,7 +173,6 @@
     <string name="dms_inbox_raven_media_suggested">Suggerit</string>
     <string name="dms_inbox_raven_media_screenshot">Captura de pantalla feta</string>
     <string name="dms_inbox_raven_media_cant_deliver">No es pot lliurar</string>
-    <string name="dms_inbox_error_null_count">La resposta de recompte no vista és nul·la!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Premeu i mantingueu premut per enregistrar l\'àudio</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -194,22 +183,16 @@
     <string name="dms_ERROR_INVALID_USER">Usuari/a invàlid</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram no permet pujar vídeos més de 60 segons per DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram no permet pujar àudio de més de 60 segons.</string>
-    <string name="direct_download">Baixar directament</string>
-    <string name="direct_download_desc">Descarregar publicacions directament al telèfon!</string>
     <string name="direct_download_loading">S\'estan recuperant les noves publicacions</string>
     <string name="downloader_complete">S\'ha completat la descàrrega</string>
     <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Descarregant publicació…</string>
     <string name="downloader_downloading_media">Descarregant multimèdia</string>
-    <string name="downloader_downloading_pfp">Descarregant la imatge de perfil</string>
     <string name="downloader_unknown_error">S\'ha produït un error desconegut!!!</string>
     <string name="downloader_error_creating_folder">S\'ha produït un error en crear la carpeta!</string>
     <string name="downloader_error_download_file">S\'ha produït un error en descarregar l\'arxiu</string>
-    <string name="downloader_too_many">Només pots descarregar 100 publicacions alhora. No siguis massa cobdiciós!</string>
     <string name="comment_viewer_translate_comment">Traduir comentari</string>
     <string name="comment_viewer_delete_comment">Esborrar comentari</string>
-    <string name="comment_view_mention_user_search">Vols cercar el nom d\'usuari?</string>
-    <string name="comment_view_mention_hash_search">Vols cercar l\'etiqueta?</string>
     <string name="followers_type_followers">Seguidors</string>
     <string name="followers_type_following">Seguits</string>
     <string name="followers_compare">Comparant seguidors &amp; seguint</string>
@@ -218,7 +201,6 @@
     <string name="followers_not_follower">%s no està seguint</string>
     <string name="login_error_loading_cookies">Error carregant els cookies</string>
     <string name="comment_hint">Escriure un comentari nou…</string>
-    <string name="dm_hint">Escriure un nou missatge…</string>
     <string name="liked_notif">Li ha agradat la teva publicació</string>
     <string name="comment_notif">Ha comentat en la teva publciació:</string>
     <string name="follow_notif">Ha començat a seguir-te</string>
@@ -230,15 +212,12 @@
     <string name="share_private_post">Aquesta és una publicació privada! Comparteix-la amb aquells que la puguin veure.</string>
     <string name="discover_empty">Aquesta categoria està buida d\'alguna manera…</string>
     <string name="update_available">Hi ha disponible una actualització! (%s)</string>
-    <string name="update_notice">Recordatori: Si has baixat l\'app des de F-Droid, l\'has d\'actualitzar des d\'allà! El mateix s\'aplica a GitHub.</string>
     <string name="updated">Gràcies per actualitzar Barinsta!</string>
     <string name="crash_title">L\'aplicació ha fallat</string>
     <string name="crash_descr">Vaja... L\'aplicació ha fallat, però no et preocupis, pots enviar un informe d\'error al desenvolupador per ajudar-lo a solucionar el problema. (:</string>
     <string name="action_notif">Activitat</string>
     <string name="action_archive">Arxiu de històries</string>
     <string name="action_ayml">Usuaris suggerits</string>
-    <string name="select_picture">Seleccionar imatge</string>
-    <string name="uploading">S\'està pujant…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="other">You have %d notifications</item>
@@ -259,7 +238,6 @@
     <string name="logout_success">S\'ha tancat la sessió correctament!</string>
     <string name="dm_thread_info">Informació</string>
     <string name="mark_as_seen">Marcar com a llegit</string>
-    <string name="skip_update_checkbox">No ho tornis a mostrar fins a la propera actualització</string>
     <string name="version">Versió</string>
     <string name="pref_start_screen">Pantalla d\'inici</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Mostra el teclat al cercar</string>
@@ -337,11 +315,8 @@
     <string name="avatar_size">Talla de l\'avatar</string>
     <string name="corners">Cantonades</string>
     <string name="show_grid_gap">Mostrar la separació de la graella</string>
-    <string name="disable_animation">Desactivar l\'animació</string>
-    <string name="follower_wait_to_load">Espera primer que la tasca actual s\'hagi completat!</string>
-    <string name="follower_start_compare">Depenent del nombre d\'usuaris, això pot trigar una estona a carregar-se. Si us plau, tingues paciència.</string>
     <string name="post_not_found">Publicació no trobada!</string>
-    <string name="no_external_app_url">No s\'ha trobat cap aplicació que obri l\'enllaç</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Galeria</string>
     <string name="camera">Càmera</string>
     <string name="all_photos">Totes les fotografies</string>
@@ -367,18 +342,6 @@
     <string name="reset">Restablir</string>
     <string name="crop">Escapçar</string>
     <string name="normal">Normal</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d m\'agrada</item>
-        <item quantity="other">%d m\'agrades</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d resposta</item>
-        <item quantity="other">%d respostes</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d comentari</item>
-        <item quantity="other">%d comentaris</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d vista</item>
         <item quantity="other">%d vistes</item>
@@ -511,4 +474,6 @@
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
     <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
