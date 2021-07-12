@@ -340,7 +340,7 @@
     <string name="clarendon">Clarendon</string>
     <string name="one977">۱۹۹۷</string>
     <string name="aden">Aden</string>
-    <string name="reset">Reset</string>
+    <string name="reset">بازنشانی</string>
     <string name="crop">برش</string>
     <string name="normal">معمولی</string>
     <plurals name="views_count">
@@ -351,8 +351,8 @@
         <item quantity="one">%s story</item>
         <item quantity="other">%s stories</item>
     </plurals>
-    <string name="details">Details</string>
-    <string name="title">Title</string>
+    <string name="details">جزئيات</string>
+    <string name="title">عنوان</string>
     <string name="members">Members</string>
     <string name="admin">تارگردان</string>
     <string name="inviter">Inviter</string>
@@ -360,7 +360,7 @@
     <string name="mute_mentions">Mute mentions</string>
     <string name="add_members">Add members</string>
     <string name="search">جستـجو</string>
-    <string name="done">Done</string>
+    <string name="done">انجام شد</string>
     <string name="dms_action_make_admin">Make Admin</string>
     <string name="dms_action_remove_admin">Remove as Admin</string>
     <string name="edit_unsuccessful">Edit was unsuccessful</string>
@@ -399,8 +399,8 @@
     <string name="post">فرسته</string>
     <string name="approval_required_for_new_members">Approval required to join</string>
     <string name="requests">درخواست ها</string>
-    <string name="admins_only">Admins only</string>
-    <string name="added_by">Added by %s</string>
+    <string name="admins_only">فقط مدیران</string>
+    <string name="added_by">اضافه شده توسط %s</string>
     <string name="admin_approval_required">Admin approval required</string>
     <string name="admin_approval_required_description">An admin approval will be required to add new members to the group</string>
     <string name="dms_action_end">End chat</string>
