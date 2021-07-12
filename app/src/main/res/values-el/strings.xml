@@ -36,11 +36,9 @@
     <string name="activity_setting">Ενεργοποίηση ειδοποιήσεων δραστηριότητας</string>
     <string name="story_sort_setting">Ταξινόμηση ροής ιστορίων</string>
     <string name="error_loading_profile">Σφάλμα κατά τη φόρτωση προφίλ! Είναι το όνομα χρήστη έγκυρο; Αν ναι, μπορεί να είστε περιορισμένος.</string>
-    <string name="error_loading_profile_loggedin">Σφάλμα κατά τη φόρτωση λογαριασμού! Είναι το όνομα χρήστη έγκυρο; Μήπως ο χρήστης σας έχει μπλοκάρει;</string>
     <string name="error_loading_hashtag">Σφάλμα κατά τη φόρτωση hashtag! Είναι το όνομα έγκυρο;</string>
     <string name="error_loading_location">Σφάλμα κατά την φόρτωση τοποθεσίας! Είναι η διεύθυνση έγκυρη;</string>
     <string name="error_creating_folders">Σφάλμα κατά τη δημιουργία φακέλου/-ων λήψης.</string>
-    <string name="save_to_folder">Αποθήκευση σε προσαρμοσμένο φάκελο</string>
     <string name="select_folder">Επιλογή φακέλου</string>
     <string name="theme_settings">Θέμα</string>
     <string name="select_language">Γλώσσα</string>
@@ -67,14 +65,8 @@
     <string name="post_viewer_download_album">Πλήρη συλλογή</string>
     <string name="show_stories">Εμφάνιση ιστοριών</string>
     <string name="no_more_stories">Δεν υπάρχουν άλλες ιστορίες!</string>
-    <string name="be_patient">Κάντε υπομονή!</string>
-    <string name="view_story_post">Προβολή Δημοσίευσης</string>
     <string name="view_post">Προβολή Δημοσίευσης</string>
     <string name="story_poll">Δημοσκόπηση</string>
-    <string name="votef_story_poll">Η ψήφος ήταν επιτυχής!</string>
-    <string name="voted_story_poll">Έχετε ήδη ψηφίσει!</string>
-    <string name="respond_story">Απάντηση</string>
-    <string name="answer_hint">Απάντηση…</string>
     <string name="answered_story">Η απάντηση ήταν επιτυχής!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d απόκριση κατά μέσο όρο%s</item>
@@ -103,15 +95,13 @@
     <string name="saved_create_collection">Δημιουργία νέας συλλογής</string>
     <string name="edit_collection">Επεξεργασία ονόματος συλλογής</string>
     <string name="delete_collection">Διαγραφή συλλογής</string>
-    <string name="delete_collection_confirm">Είστε βέβαιοι ότι θέλετε να διαγράψετε αυτή τη συλλογή;</string>
-    <string name="delete_collection_note">Όλα τα πολυμέσα που περιέχονται θα παραμείνουν σε άλλες συλλογές.</string>
+    <string name="delete_collection_note">Όλες οι δημοσιεύσεις που περιέχονται στη διαγραμμένη συλλογή θα παραμείνουν σε άλλες συλλογές.</string>
     <string name="add_to_collection">Προσθήκη στη συλλογή…</string>
     <string name="remove_from_collection">Αφαίρεση από τη συλλογή</string>
     <string name="liked">Μ\'αρέσουν</string>
     <string name="saved">Αποθηκευμένα</string>
     <string name="tagged">Ετικέτες</string>
     <string name="dm_person">Μήνυμα</string>
-    <string name="bookmark">Αποθήκευση σαν σελιδοδείκτης</string>
     <string name="follow">Ακολουθήστε</string>
     <string name="unfollow">Να μην ακολουθώ</string>
     <string name="favorite_short" comment="Adjective, not verb">Αγαπημένα</string>
@@ -183,7 +173,6 @@
     <string name="dms_inbox_raven_media_suggested">Προτεινόμενα</string>
     <string name="dms_inbox_raven_media_screenshot">Λήφθηκε στιγμιότυπο οθόνης</string>
     <string name="dms_inbox_raven_media_cant_deliver">Αδυναμία παράδοσης</string>
-    <string name="dms_inbox_error_null_count">Η απόκριση καταμέτρησης μη προβληθέντων είναι άκυρη!</string>
     <string name="dms_thread_message_hint">Μήνυμα…</string>
     <string name="dms_thread_audio_hint">Πατήστε παρατεταμένα για εγγραφή ήχου</string>
     <string name="dms_thread_updating">Ενημέρωση…</string>
@@ -194,22 +183,16 @@
     <string name="dms_ERROR_INVALID_USER">Μη έγκυρος χρήστης</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Το Instagram δεν επιτρέπει τη αναφόρτωση βίντεο άνω των 60 δευτ. ως μηνύματα.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Το Instagram δεν επιτρέπει τη αναφόρτωση αρχείων ήχου άνω των 60 δευτ.</string>
-    <string name="direct_download">Απευθείας λήψη</string>
-    <string name="direct_download_desc">Γίνεται λήψη των δημοσιεύσεων απευθείας στο τηλέφωνο!</string>
     <string name="direct_download_loading">Ανάκτηση δημοσίευσης/-εων</string>
     <string name="downloader_complete">Η λήψη ολοκληρώθηκε</string>
     <string name="downloader_preparing">Προετοιμασία για λήψη…</string>
     <string name="downloader_downloading_post">Γίνεται λήψη της δημοσίευσης…</string>
     <string name="downloader_downloading_media">Γίνεται λήψη πολυμέσων</string>
-    <string name="downloader_downloading_pfp">Γίνεται λήψη εικόνας προφίλ</string>
     <string name="downloader_unknown_error">Προέκυψε ένα άγνωστο σφάλμα!!!</string>
     <string name="downloader_error_creating_folder">Σφάλμα κατά τη δημιουργία φακέλου!</string>
     <string name="downloader_error_download_file">Σφάλμα λήψης αρχείου</string>
-    <string name="downloader_too_many">Μπορείτε να καταφορτώσετε μόνο 100 δημοσιεύσεις τη φορά. Μην είστε τόσο άπληστος!</string>
     <string name="comment_viewer_translate_comment">Μετάφραση σχολίου</string>
     <string name="comment_viewer_delete_comment">Διαγραφή σχολίου</string>
-    <string name="comment_view_mention_user_search">Θέλετε να αναζητήσετε το όνομα χρήστη;</string>
-    <string name="comment_view_mention_hash_search">Θέλετε να αναζητήσετε το hashtag;</string>
     <string name="followers_type_followers">Ακόλουθοι</string>
     <string name="followers_type_following">Ακολουθείτε</string>
     <string name="followers_compare">Σύγκριση ακολούθων</string>
@@ -218,7 +201,6 @@
     <string name="followers_not_follower">%s δεν ακολουθεί</string>
     <string name="login_error_loading_cookies">Σφάλμα κατά την φόρτωση των cookies</string>
     <string name="comment_hint">Σύνταξη νέου σχολίου…</string>
-    <string name="dm_hint">Σύνταξη νέου μηνύματος…</string>
     <string name="liked_notif">Δήλωσε ότι του αρέσει η δημοσίευσή σας</string>
     <string name="comment_notif">Σχολίασε στη δημοσίευση σας:</string>
     <string name="follow_notif">Ξεκίνησε να σας ακολουθεί</string>
@@ -230,15 +212,12 @@
     <string name="share_private_post">Ιδιωτική δημοσίευση! Κοινοποιήστε την σε όσους μπορούν να τη δουν.</string>
     <string name="discover_empty">Αυτή η κατηγορία είναι κατά κάποιον τρόπο κενή…</string>
     <string name="update_available">Υπάρχει διαθέσιμη ενημέρωση! (%s)</string>
-    <string name="update_notice">Υπενθύμιση: Εάν η εγκατάσταση έγινε από το F-Droid, από εκεί θα χρειαστεί να γίνουν κι οι ενημερώσεις! Το ίδιο ισχύει και για το GitHub.</string>
     <string name="updated">Ευχαριστούμε που ενημερώσατε το Barinsta!</string>
     <string name="crash_title">Η εφαρμογή κατέρρευσε</string>
     <string name="crash_descr">Ώπα.. Η εφαρμογή κατέρρευσε, αλλά μην ανησυχείτε. Μπορείτε να αναφέρετε το σφάλμα στον προγραμματιστή, για να τον βοηθήσετε να διορθώσει το πρόβλημα. (:</string>
     <string name="action_notif">Δραστηριότητα</string>
     <string name="action_archive">Αρχειοθήκη ιστοριών</string>
     <string name="action_ayml">Προτεινόμενοι χρήστες</string>
-    <string name="select_picture">Επιλογή εικόνας</string>
-    <string name="uploading">Μεταφόρτωση…</string>
     <plurals name="activity_count_total">
         <item quantity="one">Εχετε %d ειδοποίηση</item>
         <item quantity="other">Έχετε %d ειδοποιήσεις</item>
@@ -259,7 +238,6 @@
     <string name="logout_success">Η αποσύνδεση ήταν επιτυχής!</string>
     <string name="dm_thread_info">Πληροφορίες</string>
     <string name="mark_as_seen">Σήμανση ως αναγνωσμένο</string>
-    <string name="skip_update_checkbox">Να μην εμφανιστεί ξανά μέχρι την επόμενη ενημέρωση</string>
     <string name="version">Έκδοση</string>
     <string name="pref_start_screen">Οθόνη εκκίνησης</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Εμφάνιση πληκτρολογίου στην αναζήτηση</string>
@@ -337,11 +315,8 @@
     <string name="avatar_size">Μέγεθος εικόνας προφίλ</string>
     <string name="corners">Γωνίες</string>
     <string name="show_grid_gap">Εμφάνιση κενού πλέγματος</string>
-    <string name="disable_animation">Απενεργοποίηση κινουμ. σχεδίων</string>
-    <string name="follower_wait_to_load">Παρακαλούμε περιμένετε να ολοκληρωθεί πρώτα η τρέχουσα εργασία!</string>
-    <string name="follower_start_compare">Αναλόγως τις μετρήσεις χρηστών, ενδέχεται να καθυστερήσει η φόρτωση. Κάντε υπομονή.</string>
     <string name="post_not_found">Δε βρέθηκε η δημοσίευση!</string>
-    <string name="no_external_app_url">Δε βρέθηκε εφαρμογή ανοίγματος url</string>
+    <string name="no_external_app_url">Δεν βρέθηκαν εφαρμογές για άνοιγμα διευθύνσεων URL</string>
     <string name="gallery">Συλλογή</string>
     <string name="camera">Κάμερα</string>
     <string name="all_photos">Όλες οι φωτογραφίες</string>
@@ -367,18 +342,6 @@
     <string name="reset">Επαναφορά</string>
     <string name="crop">Περικοπή</string>
     <string name="normal">Κανονικό</string>
-    <plurals name="likes_count">
-        <item quantity="one">Αρέσει σε %d</item>
-        <item quantity="other">Αρέσει σε %d</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d απάντηση</item>
-        <item quantity="other">%d απαντήσεις</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d σχόλιο</item>
-        <item quantity="other">%d σχόλια</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d προβολή</item>
         <item quantity="other">%d προβολές</item>
@@ -510,5 +473,7 @@
     <string name="slide_to_cancel">Σύρετε για ακύρωση</string>
     <string name="disable_screen_transitions">Απενεργοποίηση μεταβάσεων οθόνης</string>
     <string name="invalid_format">Μη έγκυρη μορφή</string>
-    <string name="no_directory_picker_activity">Δεν βρέθηκε δραστηριότητα για επιλογή καταλόγου</string>
+    <string name="no_directory_picker_activity">Η Barinsta δεν μπορεί να εκκινήσει τον διαχειριστή αρχείων του Android. Παρακαλώ βεβαιωθείτε ότι είναι εγκατεστημένο και ενεργοποιημένο στη συσκευή σας.</string>
+    <string name="story_stickers">Αυτοκόλλητα</string>
+    <string name="story_list">Λίστα ιστοριών</string>
 </resources>
