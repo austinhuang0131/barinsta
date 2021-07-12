@@ -36,11 +36,9 @@
     <string name="activity_setting">Aktivera aktivitetsaviseringar</string>
     <string name="story_sort_setting">Sortering av historier i flödet</string>
     <string name="error_loading_profile">Fel uppstod när profilen laddades! Är användarnamnet giltigt? Om det är det så kan du vara data-begränsad.</string>
-    <string name="error_loading_profile_loggedin">Fel uppstod när profilen laddades! Är användarnamnet giltigt? Eller blockerade de dig?</string>
     <string name="error_loading_hashtag">Fel uppstod när hashtaggen laddades! Är namnet giltigt?</string>
     <string name="error_loading_location">Fel uppstod när platsen laddades! Är URL:en giltig?</string>
     <string name="error_creating_folders">Fel inträffade när mapp(arna) för nerladdning skapades.</string>
-    <string name="save_to_folder">Spara till en anpassad mapp</string>
     <string name="select_folder">Välj mapp</string>
     <string name="theme_settings">Tema</string>
     <string name="select_language">Språk</string>
@@ -67,14 +65,8 @@
     <string name="post_viewer_download_album">Hela albumet</string>
     <string name="show_stories">Visa historier</string>
     <string name="no_more_stories">Inga mer historier!</string>
-    <string name="be_patient">Håll dig lugn!</string>
-    <string name="view_story_post">Visa inlägg</string>
     <string name="view_post">Visa inlägg</string>
     <string name="story_poll">Poll</string>
-    <string name="votef_story_poll">Röstningen lyckades!</string>
-    <string name="voted_story_poll">Du har redan röstat!</string>
-    <string name="respond_story">Svara</string>
-    <string name="answer_hint">Svar…</string>
     <string name="answered_story">Answer successful!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
@@ -103,15 +95,13 @@
     <string name="saved_create_collection">Skapa ny samling</string>
     <string name="edit_collection">Redigera samlingens namn</string>
     <string name="delete_collection">Ta bort samling</string>
-    <string name="delete_collection_confirm">Är du säker på att du vill ta bort den här samlingen?</string>
-    <string name="delete_collection_note">All contained media will remain in other collections.</string>
+    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
     <string name="add_to_collection">Add to collection…</string>
     <string name="remove_from_collection">Ta bort från samling</string>
     <string name="liked">Gillade</string>
     <string name="saved">Sparade</string>
     <string name="tagged">Taggade</string>
     <string name="dm_person">Meddelande</string>
-    <string name="bookmark">Bokmärk</string>
     <string name="follow">Följ</string>
     <string name="unfollow">Sluta följa</string>
     <string name="favorite_short" comment="Adjective, not verb">Favorit</string>
@@ -183,7 +173,6 @@
     <string name="dms_inbox_raven_media_suggested">Suggested</string>
     <string name="dms_inbox_raven_media_screenshot">Screenshotted</string>
     <string name="dms_inbox_raven_media_cant_deliver">Kan inte leverera</string>
-    <string name="dms_inbox_error_null_count">Unseen count response is null!</string>
     <string name="dms_thread_message_hint">Message…</string>
     <string name="dms_thread_audio_hint">Tryck och håll in för att spela in ljud</string>
     <string name="dms_thread_updating">Updating…</string>
@@ -194,22 +183,16 @@
     <string name="dms_ERROR_INVALID_USER">Ogiltig användare</string>
     <string name="dms_ERROR_VIDEO_TOO_LONG">Instagram tillåter inte uppladdning av videor som är längre än 60 sekunder för DM.</string>
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram tillåter inte uppladdning av ljud som är längre än 60 sekunder.</string>
-    <string name="direct_download">Ladda ner direkt</string>
-    <string name="direct_download_desc">Laddar ner inläggen direkt till telefonen!</string>
     <string name="direct_download_loading">Hämtar inlägg(en)</string>
     <string name="downloader_complete">Nerladdningen är färdig</string>
     <string name="downloader_preparing">Preparing to download…</string>
     <string name="downloader_downloading_post">Laddar ner inlägg…</string>
     <string name="downloader_downloading_media">Laddar ner media</string>
-    <string name="downloader_downloading_pfp">Laddar ner profilbild</string>
     <string name="downloader_unknown_error">Okänt fel inträffade!!!</string>
     <string name="downloader_error_creating_folder">Error creating folder!</string>
     <string name="downloader_error_download_file">Error downloading file</string>
-    <string name="downloader_too_many">Du kan endast ladda ner 100 inlägg åt gången. Var inte för girig!</string>
     <string name="comment_viewer_translate_comment">Översätt kommentaren</string>
     <string name="comment_viewer_delete_comment">Delete comment</string>
-    <string name="comment_view_mention_user_search">Vill du söka på användarnamnet?</string>
-    <string name="comment_view_mention_hash_search">Vill du söka på hash-taggen?</string>
     <string name="followers_type_followers">Följare</string>
     <string name="followers_type_following">Följer</string>
     <string name="followers_compare">Jämför följare &amp; följer</string>
@@ -218,7 +201,6 @@
     <string name="followers_not_follower">%s följer inte</string>
     <string name="login_error_loading_cookies">Fel inträffade när kakorna laddades</string>
     <string name="comment_hint">Skriv en ny kommentar…</string>
-    <string name="dm_hint">Skriv ett nytt meddelande…</string>
     <string name="liked_notif">Gillade ditt inlägg</string>
     <string name="comment_notif">Kommenterade ditt inlägg:</string>
     <string name="follow_notif">Började att följa dig</string>
@@ -230,15 +212,12 @@
     <string name="share_private_post">This is a private post! Share to those who can view it.</string>
     <string name="discover_empty">Den här kategorin är på något sätt tom…</string>
     <string name="update_available">En uppdatering är tillgänglig! (%s)</string>
-    <string name="update_notice">Påminnelse: Om du har laddat ner från F-Droid så måste du uppdatera från det! Samma gäller från GitHub.</string>
     <string name="updated">Tack för att du uppdaterar Barinsta!</string>
     <string name="crash_title">Appen kraschade</string>
     <string name="crash_descr">Hoppsan.. appen kraschade, men oroa dig inte. Du kan skicka felrapport till utvecklaren för att hjälpa honom att lösa problemet. (:</string>
     <string name="action_notif">Aktivitet</string>
     <string name="action_archive">Story archive</string>
     <string name="action_ayml">Suggested users</string>
-    <string name="select_picture">Välj bild</string>
-    <string name="uploading">Laddar upp…</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
         <item quantity="other">You have %d notifications</item>
@@ -259,7 +238,6 @@
     <string name="logout_success">Utloggningen lyckades!</string>
     <string name="dm_thread_info">Info</string>
     <string name="mark_as_seen">Markera som sedd</string>
-    <string name="skip_update_checkbox">Do not show again until next update</string>
     <string name="version">Version</string>
     <string name="pref_start_screen">Startskärm</string>
     <string name="pref_search_focus_keyboard" comment="basically bring up the keyboard immediately when someone does search">Show keyboard on search</string>
@@ -337,11 +315,8 @@
     <string name="avatar_size">Avatarens storlek</string>
     <string name="corners">Hörnen</string>
     <string name="show_grid_gap">Show grid gap</string>
-    <string name="disable_animation">Stäng av animering</string>
-    <string name="follower_wait_to_load">Vänligen vänta på att den nuvarande uppgiften blir klar först!</string>
-    <string name="follower_start_compare">Depending on user counts, this can take a while to load. Please be patient.</string>
     <string name="post_not_found">Inlägget hittades inte!</string>
-    <string name="no_external_app_url">Ingen app som öppnar webbadresser hittades</string>
+    <string name="no_external_app_url">No apps for opening URLs found</string>
     <string name="gallery">Gallery</string>
     <string name="camera">Camera</string>
     <string name="all_photos">All Photos</string>
@@ -367,18 +342,6 @@
     <string name="reset">Återställ</string>
     <string name="crop">Beskär</string>
     <string name="normal">Normal</string>
-    <plurals name="likes_count">
-        <item quantity="one">%d like</item>
-        <item quantity="other">%d likes</item>
-    </plurals>
-    <plurals name="replies_count">
-        <item quantity="one">%d reply</item>
-        <item quantity="other">%d replies</item>
-    </plurals>
-    <plurals name="comments_count">
-        <item quantity="one">%d comment</item>
-        <item quantity="other">%d comments</item>
-    </plurals>
     <plurals name="views_count">
         <item quantity="one">%d view</item>
         <item quantity="other">%d views</item>
@@ -511,4 +474,6 @@
     <string name="disable_screen_transitions">Disable screen transitions</string>
     <string name="invalid_format">Invalid format</string>
     <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="story_stickers">Stickers</string>
+    <string name="story_list">Story list</string>
 </resources>
