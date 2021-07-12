@@ -95,7 +95,7 @@
     <string name="saved_create_collection">Δημιουργία νέας συλλογής</string>
     <string name="edit_collection">Επεξεργασία ονόματος συλλογής</string>
     <string name="delete_collection">Διαγραφή συλλογής</string>
-    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
+    <string name="delete_collection_note">Όλες οι δημοσιεύσεις που περιέχονται στη διαγραμμένη συλλογή θα παραμείνουν σε άλλες συλλογές.</string>
     <string name="add_to_collection">Προσθήκη στη συλλογή…</string>
     <string name="remove_from_collection">Αφαίρεση από τη συλλογή</string>
     <string name="liked">Μ\'αρέσουν</string>
@@ -316,7 +316,7 @@
     <string name="corners">Γωνίες</string>
     <string name="show_grid_gap">Εμφάνιση κενού πλέγματος</string>
     <string name="post_not_found">Δε βρέθηκε η δημοσίευση!</string>
-    <string name="no_external_app_url">No apps for opening URLs found</string>
+    <string name="no_external_app_url">Δεν βρέθηκαν εφαρμογές για άνοιγμα διευθύνσεων URL</string>
     <string name="gallery">Συλλογή</string>
     <string name="camera">Κάμερα</string>
     <string name="all_photos">Όλες οι φωτογραφίες</string>
@@ -474,6 +474,6 @@
     <string name="disable_screen_transitions">Απενεργοποίηση μεταβάσεων οθόνης</string>
     <string name="invalid_format">Μη έγκυρη μορφή</string>
     <string name="no_directory_picker_activity">Η Barinsta δεν μπορεί να εκκινήσει τον διαχειριστή αρχείων του Android. Παρακαλώ βεβαιωθείτε ότι είναι εγκατεστημένο και ενεργοποιημένο στη συσκευή σας.</string>
-    <string name="story_stickers">Stickers</string>
-    <string name="story_list">Story list</string>
+    <string name="story_stickers">Αυτοκόλλητα</string>
+    <string name="story_list">Λίστα ιστοριών</string>
 </resources>
