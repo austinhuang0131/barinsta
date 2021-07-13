@@ -35,8 +35,8 @@
     <string name="story_list_setting_summary">Untuk melihat cerita</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
     <string name="story_sort_setting">Urutan umpan cerita</string>
-    <string name="error_loading_profile">Galat memuat profil! Apakah nama penggunanya valid? Jika iya, maka kemungkinan akses Anda sedang dibatasi.</string>
-    <string name="error_loading_hashtag">Galat memuat tagar! Apakah namanya valid?</string>
+    <string name="error_loading_profile">Gagal memuat profil! Apakah nama penggunanya valid? Jika iya, maka kemungkinan akses Anda sedang dibatasi.</string>
+    <string name="error_loading_hashtag">Gagal memuat tagar! Apakah namanya valid?</string>
     <string name="error_loading_location">Galat memuat lokasi! Apakah URL-nya valid?</string>
     <string name="error_creating_folders">Galat saat membuat folder unduhan.</string>
     <string name="select_folder">Pilih folder</string>
