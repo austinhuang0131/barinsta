@@ -31,7 +31,7 @@
     <string name="dm_mark_as_seen_setting">Tandai DM dibaca setelah melihat</string>
     <string name="dm_mark_as_seen_setting_summary">Peserta lain akan tahu Anda melihatnya</string>
     <string name="autoplay_stories_setting">Putar otomatis video cerita</string>
-    <string name="story_list_setting">Display story list by default</string>
+    <string name="story_list_setting">Tampilkan daftar cerita secara default</string>
     <string name="story_list_setting_summary">Untuk melihat cerita</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
     <string name="story_sort_setting">Urutan umpan cerita</string>
@@ -91,7 +91,7 @@
     <string name="saved_create_collection">Buat koleksi baru</string>
     <string name="edit_collection">Sunting nama koleksi</string>
     <string name="delete_collection">Hapus koleksi</string>
-    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
+    <string name="delete_collection_note">Semua postingan yang ada di koleksi yang dihapus akan tetap ada di koleksi lain.</string>
     <string name="add_to_collection">Tambah ke koleksi...</string>
     <string name="remove_from_collection">Hapus dari koleksi</string>
     <string name="liked">Disuka</string>
@@ -215,7 +215,7 @@
     <string name="action_archive">Arsip cerita</string>
     <string name="action_ayml">Pengguna yang disarankan</string>
     <plurals name="activity_count_total">
-        <item quantity="other">You have %d notifications</item>
+        <item quantity="other">Anda memiliki %d notifikasi</item>
     </plurals>
     <string name="activity_count_relationship">%d mengikuti</string>
     <string name="activity_count_comments">%d komentar</string>
@@ -433,7 +433,7 @@
     <string name="crash_report_subject">Laporan Kerusakan Barinsta</string>
     <string name="crash_report_title">Pilih aplikasi surel untuk mengirim catatan kerusakan</string>
     <string name="not_found">Tidak ditermukan!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">IP Anda telah dibatasi oleh Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Pelajari lebih lanjut.&lt;/a&gt;</string>
     <string name="skip_update">Lewatkan pembaruan</string>
     <string name="on_latest_version">Anda berada pada versi terbaru</string>
     <string name="tab_order">Urutan layar</string>
@@ -466,7 +466,7 @@
     <string name="slide_to_cancel">Geser untuk membatalkan</string>
     <string name="disable_screen_transitions">Nonaktifkan transisi layar</string>
     <string name="invalid_format">Format yang tidak sah</string>
-    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="no_directory_picker_activity">Barinsta tidak dapat meluncurkan pengelola file Android. Pastikan itu diinstal dan diaktifkan di perangkat Anda.</string>
     <string name="story_stickers">Stiker</string>
     <string name="story_list">Daftar Cerita</string>
 </resources>
