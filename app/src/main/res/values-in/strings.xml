@@ -32,7 +32,7 @@
     <string name="dm_mark_as_seen_setting_summary">Peserta lain akan tahu Anda melihatnya</string>
     <string name="autoplay_stories_setting">Putar otomatis video cerita</string>
     <string name="story_list_setting">Display story list by default</string>
-    <string name="story_list_setting_summary">For viewing stories</string>
+    <string name="story_list_setting_summary">Untuk melihat cerita</string>
     <string name="activity_setting">Nyalakan pemberitahuan aktivitas</string>
     <string name="story_sort_setting">Urutan umpan cerita</string>
     <string name="error_loading_profile">Galat memuat profil! Apakah nama penggunanya valid? Jika iya, maka kemungkinan akses Anda sedang dibatasi.</string>
@@ -311,7 +311,7 @@
     <string name="corners">Sudut</string>
     <string name="show_grid_gap">Tampilkan batas kisi</string>
     <string name="post_not_found">Kiriman tidak ditemukan!</string>
-    <string name="no_external_app_url">No apps for opening URLs found</string>
+    <string name="no_external_app_url">Tidak ditemukan aplikasi untuk membuka URL</string>
     <string name="gallery">Galeri</string>
     <string name="camera">Kamera</string>
     <string name="all_photos">Semua Foto</string>
@@ -464,9 +464,9 @@
     <string name="share_via_dm">Bagikan lewat Pesan Langsung</string>
     <string name="share_link">Bagikan tautan…</string>
     <string name="slide_to_cancel">Geser untuk membatalkan</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
+    <string name="disable_screen_transitions">Nonaktifkan transisi layar</string>
+    <string name="invalid_format">Format yang tidak sah</string>
     <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
-    <string name="story_stickers">Stickers</string>
-    <string name="story_list">Story list</string>
+    <string name="story_stickers">Stiker</string>
+    <string name="story_list">Daftar Cerita</string>
 </resources>
