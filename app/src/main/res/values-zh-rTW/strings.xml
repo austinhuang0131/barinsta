@@ -31,8 +31,8 @@
     <string name="dm_mark_as_seen_setting">檢視完訊息後標記為已讀</string>
     <string name="dm_mark_as_seen_setting_summary">其他成員會知道您查看了此訊息</string>
     <string name="autoplay_stories_setting">自動播放限時動態</string>
-    <string name="story_list_setting">Display story list by default</string>
-    <string name="story_list_setting_summary">For viewing stories</string>
+    <string name="story_list_setting">預設顯示現實動態列表</string>
+    <string name="story_list_setting_summary">查看現實動態時的下方列表</string>
     <string name="activity_setting">啟用活動通知</string>
     <string name="story_sort_setting">動態貼文排序</string>
     <string name="error_loading_profile">加載用戶資料時出錯！請檢查輸入的用戶名是否無誤。如果無誤的話，您的 Instagram 功能可能已被暫時受限。</string>
@@ -91,7 +91,7 @@
     <string name="saved_create_collection">建立新的收藏</string>
     <string name="edit_collection">編輯收藏名稱</string>
     <string name="delete_collection">刪除收藏</string>
-    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
+    <string name="delete_collection_note">將要刪除的收藏夾中的貼文會在其它收藏夾中保留。</string>
     <string name="add_to_collection">新增至收藏集…</string>
     <string name="remove_from_collection">從收藏中移除</string>
     <string name="liked">已按讚</string>
@@ -267,8 +267,8 @@
     <string name="removed_from_favs">已從收藏中移除!</string>
     <string name="backup_and_restore">備份與還原</string>
     <string name="auto_backup">自動備份</string>
-    <string name="auto_backup_summary">Starting from Android 6, Android\'s Auto Backup feature will upload all app settings, account login data, and favorites onto your Google Drive, which can be restored by reinstalling the app after uninstallation.</string>
-    <string name="auto_backup_warning">This preference has no effect if Google Play Services is not present, or if Auto Backup is disabled from your device settings. Disabling here does not erase existing backups.</string>
+    <string name="auto_backup_summary">從 Android 6 開始，系統的自動備份功能會將所有應用程式的設定、登入設定及收藏夾上傳到您的 Google 雲端硬碟中，以供卸載後重新安裝時恢復。</string>
+    <string name="auto_backup_warning">若您的裝置尚未安裝 Google Play 服務，或您已在系統設定中關閉自動備份，本選項將不會有任何效果。關閉本選項不會移除現有的備份。</string>
     <string name="auto_backup_setting">啟用自動備份</string>
     <string name="manual_backup">手動備份</string>
     <string name="backup_summary">備份 Barinsta 的設定、登入資料、及收藏中的內容至純文字或加密後的檔案，以便日後還原。</string>
@@ -311,7 +311,7 @@
     <string name="corners">邊角</string>
     <string name="show_grid_gap">網格間保留間距</string>
     <string name="post_not_found">貼文不存在！</string>
-    <string name="no_external_app_url">No apps for opening URLs found</string>
+    <string name="no_external_app_url">沒有找到打開此 URL 的應用程序</string>
     <string name="gallery">圖庫</string>
     <string name="camera">相機</string>
     <string name="all_photos">所有照片</string>
@@ -433,7 +433,7 @@
     <string name="crash_report_subject">Barinsta 錯誤報告</string>
     <string name="crash_report_title">選擇任一電子郵件應用程式回傳錯誤報告</string>
     <string name="not_found">未找到所要的內容！</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">您的 IP 已被 Instagram 設限。 &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;了解更多&lt;/a&gt;</string>
     <string name="skip_update">跳過此更新</string>
     <string name="on_latest_version">已經是最新版本</string>
     <string name="tab_order">頁面順序</string>
@@ -444,14 +444,14 @@
     <string name="copy_reply">複製回覆</string>
     <string name="restore">還原</string>
     <string name="backup">備份</string>
-    <string name="dir_select_default_message">Select a folder where Barinsta can store downloads and temporary files.\n\nYou can change this later in More &gt; Settings &gt; Downloads.</string>
-    <string name="dir_select_reselect_message">Android has changed the way apps can access files and directories on storage. Currently Barinsta does not have permission to access the following folder:</string>
-    <string name="dir_select_permission_revoked_message">Permissions for the previously selected folder were revoked by the system:</string>
-    <string name="dir_select_folder_not_exist">The previously selected folder does not exist now:</string>
-    <string name="dir_select_message2">Re-select the directory or select a new directory by clicking the button below.</string>
+    <string name="dir_select_default_message">請選擇一個 Barinsta 可以存儲媒體及臨時檔案的資料夾。 \n\n您可以稍後在更多 &gt; 設定 &gt; 下載中更改此資料夾。</string>
+    <string name="dir_select_reselect_message">Android 已經更改應用存取設備中檔案和資料夾的方式。目前 Barinsta 沒有權限存取以下資料夾：</string>
+    <string name="dir_select_permission_revoked_message">先前所選的資料夾的存取權限已被系統撤銷：</string>
+    <string name="dir_select_folder_not_exist">先前所選的資料夾已不存在：</string>
+    <string name="dir_select_message2">請點擊下面的按鈕，來重新選擇該目錄或選擇一個新目錄。</string>
     <string name="select_a_folder">未選取任何資料夾</string>
-    <string name="dir_select_no_download_folder">Please choose a directory from your storage, not a category on the sidebar.\n(%s)</string>
-    <string name="dir_select_success_message">Success! Please wait. Starting app…</string>
+    <string name="dir_select_no_download_folder">請選擇您裝置中的資料夾，而非側邊欄上的類別。 \n(%s)</string>
+    <string name="dir_select_success_message">成功！ 請稍後，啟動應用程式中…</string>
     <string name="barinsta_folder">Barinsta 資料夾</string>
     <string name="top">熱門</string>
     <string name="recent">最近</string>
@@ -464,9 +464,9 @@
     <string name="share_via_dm">透過私訊分享</string>
     <string name="share_link">分享連結</string>
     <string name="slide_to_cancel">滑動取消發送</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
+    <string name="disable_screen_transitions">禁用螢幕轉場效果</string>
+    <string name="invalid_format">無效格式</string>
+    <string name="no_directory_picker_activity">Barinsta 無法啟動 Android 的檔案管理員。請確保您已將其安裝並啟用。</string>
     <string name="story_stickers">貼圖</string>
     <string name="story_list">限時動態列表</string>
 </resources>
