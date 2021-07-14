@@ -440,7 +440,7 @@
     <string name="crash_report_subject"> Пријави Грешка </string>
     <string name="crash_report_title">Одберете еmail апликација за праќање на грешки</string>
     <string name="not_found">Не беше пронајдено!</string>
-    <string name="rate_limit">Your IP has been rate limited by Instagram. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt;Learn more.&lt;/a&gt;</string>
+    <string name="rate_limit">Вашата IP адреса беше ограничена за пристап од Инстаграм. &lt;a href=\"https://barinsta.austinhuang.me/en/latest/faq.html#ratelimits\"&gt; Прочитај повеќе. &lt;/a&gt;</string>
     <string name="skip_update">Прескокни го ова ажурирање</string>
     <string name="on_latest_version">Веќе ја користите најновата верзија</string>
     <string name="tab_order">Подредување</string>
@@ -467,13 +467,13 @@
     <string name="click_to_show_full">Прилажи прецизен број на допаѓања</string>
     <string name="no_profile_pic_found">Слика на профил не беше пронајдена!</string>
     <string name="swipe_up_confirmation">Дали сте сигурни дека сакате да го отворите овој линк?</string>
-    <string name="sending">Sending…</string>
+    <string name="sending">Се праќа…</string>
     <string name="share_via_dm">Сподели преку ДП</string>
     <string name="share_link">Сподели линк…</string>
     <string name="slide_to_cancel">Повлечете за да Откажите</string>
-    <string name="disable_screen_transitions">Disable screen transitions</string>
-    <string name="invalid_format">Invalid format</string>
-    <string name="no_directory_picker_activity">Barinsta cannot launch Android\'s file manager. Please make sure it is installed and enabled on your device.</string>
-    <string name="story_stickers">Stickers</string>
-    <string name="story_list">Story list</string>
+    <string name="disable_screen_transitions">Деактивирај транзиции</string>
+    <string name="invalid_format">Невалиден формат</string>
+    <string name="no_directory_picker_activity">Barinsta не може да пристапи до Андроид менаџерот за фолдери. Ве молиме проверете дали имате менаџер за податоци на вашиот уред.</string>
+    <string name="story_stickers">Стикери</string>
+    <string name="story_list">Листа на Приказни</string>
 </resources>
