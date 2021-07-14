@@ -31,8 +31,8 @@
     <string name="dm_mark_as_seen_setting">檢視完訊息後標記為已讀</string>
     <string name="dm_mark_as_seen_setting_summary">其他成員會知道您查看了此訊息</string>
     <string name="autoplay_stories_setting">自動播放限時動態</string>
-    <string name="story_list_setting">預設顯示現實動態列表</string>
-    <string name="story_list_setting_summary">查看現實動態時的下方列表</string>
+    <string name="story_list_setting">預設顯示限時動態列表</string>
+    <string name="story_list_setting_summary">查看限時動態時的下方列表</string>
     <string name="activity_setting">啟用活動通知</string>
     <string name="story_sort_setting">動態貼文排序</string>
     <string name="error_loading_profile">加載用戶資料時出錯！請檢查輸入的用戶名是否無誤。如果無誤的話，您的 Instagram 功能可能已被暫時受限。</string>
@@ -181,7 +181,7 @@
     <string name="dms_ERROR_AUDIO_TOO_LONG">Instagram 不允許在私訊中上傳超過 60 秒的音訊。</string>
     <string name="direct_download_loading">獲取文章中</string>
     <string name="downloader_complete">下載完成</string>
-    <string name="downloader_preparing">正在准備下載…</string>
+    <string name="downloader_preparing">準備下載中…</string>
     <string name="downloader_downloading_post">下載貼文中…</string>
     <string name="downloader_downloading_media">下載媒體中</string>
     <string name="downloader_unknown_error">發生未知錯誤！</string>
@@ -391,7 +391,7 @@
     <string name="post">貼文</string>
     <string name="approval_required_for_new_members">需批准才能加入</string>
     <string name="requests">請求</string>
-    <string name="admins_only">限管理員可用</string>
+    <string name="admins_only">僅限管理員</string>
     <string name="added_by">由 %s 加入</string>
     <string name="admin_approval_required">需要管理員批准</string>
     <string name="admin_approval_required_description">添加新成員至此群組需管理員批准</string>
