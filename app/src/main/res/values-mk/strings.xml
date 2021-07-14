@@ -31,8 +31,8 @@
     <string name="dm_mark_as_seen_setting">Означи порака како видена</string>
     <string name="dm_mark_as_seen_setting_summary">Другите членови ќе знаат дека сте ја виделе содржината на пораката</string>
     <string name="autoplay_stories_setting">Автоматски гледај видео приказни</string>
-    <string name="story_list_setting">Display story list by default</string>
-    <string name="story_list_setting_summary">For viewing stories</string>
+    <string name="story_list_setting">Прикажи листа на приказни</string>
+    <string name="story_list_setting_summary">За гледање приказни</string>
     <string name="activity_setting">Овозможи нотификации</string>
     <string name="story_sort_setting">Сортирање на објави</string>
     <string name="error_loading_profile">Грешка при вчитување на профилот! Проверете дали корисничкото име е валидно?</string>
@@ -66,7 +66,7 @@
     <string name="show_stories">Прикажи приказни</string>
     <string name="no_more_stories">Нема повеќе приказни!</string>
     <string name="view_post">Погледни Објава</string>
-    <string name="story_poll">Poll</string>
+    <string name="story_poll">Анкета</string>
     <string name="answered_story">Одговарњето беше успешно!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d одговор со просек  %s</item>
@@ -79,7 +79,7 @@
     <string name="story_slider">Лизгач</string>
     <string name="story_quizzed">Вие веќе одговоривте!</string>
     <string name="story_mentions">Спомнувања</string>
-    <string name="story_question">Question</string>
+    <string name="story_question">Прашање</string>
     <string name="priv_acc">Корисникот има приватен профил</string>
     <string name="priv_acc_confirm">Наме да можете да гледате објави и приказни од овој корисник ако го Одследите! Дали сте сигурни?</string>
     <string name="are_you_sure">Дали сте сигурни?</string>
@@ -95,8 +95,8 @@
     <string name="saved_create_collection">Креирај нова колекција</string>
     <string name="edit_collection">Уреди го името на колекцијата</string>
     <string name="delete_collection">Избриши колекција</string>
-    <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
-    <string name="add_to_collection">Add to collection…</string>
+    <string name="delete_collection_note">Сите објави избришани од збирката ќе останат во други колекции.</string>
+    <string name="add_to_collection">Додади во збирка…</string>
     <string name="remove_from_collection">Одстрани од колекција</string>
     <string name="liked">Лајкнато</string>
     <string name="saved">Зачувано</string>
@@ -173,9 +173,9 @@
     <string name="dms_inbox_raven_media_suggested">Предложено</string>
     <string name="dms_inbox_raven_media_screenshot">Скриншотнато</string>
     <string name="dms_inbox_raven_media_cant_deliver">Неможе да се прати</string>
-    <string name="dms_thread_message_hint">Message…</string>
+    <string name="dms_thread_message_hint">Порака…</string>
     <string name="dms_thread_audio_hint">Притисни и задржи за да снимиш аудио порака</string>
-    <string name="dms_thread_updating">Updating…</string>
+    <string name="dms_thread_updating">Се ажурира…</string>
     <string name="dms_action_leave">Напушти чат</string>
     <string name="dms_action_leave_question">Дали сакате да го напуштите чатот?</string>
     <string name="dms_action_kick">Кикни</string>
@@ -185,7 +185,7 @@
     <string name="dms_ERROR_AUDIO_TOO_LONG">Инстаграм не дозволува аудио пораки подолги од 60 секунди.</string>
     <string name="direct_download_loading">Се превземаат објава(ви)</string>
     <string name="downloader_complete">Преземањето е завршено</string>
-    <string name="downloader_preparing">Preparing to download…</string>
+    <string name="downloader_preparing">Подготовка за симнување…</string>
     <string name="downloader_downloading_post">Превземање на Објава…</string>
     <string name="downloader_downloading_media">Се превзема медиум</string>
     <string name="downloader_unknown_error">Непозната Фатална Грешка!!!</string>
@@ -220,7 +220,7 @@
     <string name="action_ayml">Препорачани кориснчки сметки</string>
     <plurals name="activity_count_total">
         <item quantity="one">You have %d notification</item>
-        <item quantity="other">You have %d notifications</item>
+        <item quantity="other">Имаш %d нотификации</item>
     </plurals>
     <string name="activity_count_relationship">%d следачи</string>
     <string name="activity_count_comments">%d коментари</string>
@@ -304,7 +304,7 @@
     <string name="comment">Коментирај</string>
     <string name="layout">Изглед</string>
     <string name="feed_stories">Приказни</string>
-    <string name="opening_post">Opening post…</string>
+    <string name="opening_post">Објавата се отвара…</string>
     <string name="share">Сподели</string>
     <string name="layout_style">Стил на изглед</string>
     <string name="column_count">Број на колони</string>
@@ -316,7 +316,7 @@
     <string name="corners">Ќошеви</string>
     <string name="show_grid_gap">Прикажи растојание меѓу слики</string>
     <string name="post_not_found">Објавата не беше пронајдена!</string>
-    <string name="no_external_app_url">No apps for opening URLs found</string>
+    <string name="no_external_app_url">Не постои апликација која може да ги отвори URL адресите</string>
     <string name="gallery">Галерија</string>
     <string name="camera">Камера</string>
     <string name="all_photos">Сите слики</string>
