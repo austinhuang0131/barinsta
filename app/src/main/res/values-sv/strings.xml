@@ -19,7 +19,7 @@
     <string name="title_favorites">Favoriter</string>
     <string name="title_discover">Upptäck</string>
     <string name="title_comments">Kommentarer</string>
-    <string name="title_replies">Replies</string>
+    <string name="title_replies">Svar</string>
     <string name="title_notifications">Aktivitet</string>
     <string name="update_check">Sök efter uppdatering vid uppstart</string>
     <string name="flag_secure">Blockera skärmdumpar &amp; förhandsgranskning av appen</string>
@@ -30,7 +30,7 @@
     <string name="hide_muted_reels_setting">Göm historier utan ljud från flödet</string>
     <string name="dm_mark_as_seen_setting">Markera DM som sedd efter visning</string>
     <string name="dm_mark_as_seen_setting_summary">Andra medlemmar kommer att veta att du har sett den</string>
-    <string name="autoplay_stories_setting">Autoplay video stories</string>
+    <string name="autoplay_stories_setting">Spela upp videoberättelser automatiskt</string>
     <string name="story_list_setting">Display story list by default</string>
     <string name="story_list_setting_summary">For viewing stories</string>
     <string name="activity_setting">Aktivera aktivitetsaviseringar</string>
@@ -48,11 +48,11 @@
     </plurals>
     <plurals name="main_posts_count_inline">
         <item quantity="one">%s Post</item>
-        <item quantity="other">%s Posts</item>
+        <item quantity="other">%s Inlägg</item>
     </plurals>
     <plurals name="main_posts_followers">
         <item quantity="one">%s\nFollower</item>
-        <item quantity="other">%s\nFollowers</item>
+        <item quantity="other">%s\nFöljare</item>
     </plurals>
     <string name="main_posts_following">%s\nFöljer</string>
     <string name="post_viewer_autoplay_video">Spela upp videor automatiskt</string>
@@ -67,7 +67,7 @@
     <string name="no_more_stories">Inga mer historier!</string>
     <string name="view_post">Visa inlägg</string>
     <string name="story_poll">Poll</string>
-    <string name="answered_story">Answer successful!</string>
+    <string name="answered_story">Svaret lyckades!</string>
     <plurals name="slider_info" comment="For slider stickers in stories, eg. 3 responses averaging 17.38%">
         <item quantity="one">%d response averaging %s</item>
         <item quantity="other">%d responses averaging %s</item>
@@ -79,10 +79,10 @@
     <string name="story_slider">Slider</string>
     <string name="story_quizzed">Du har redan svarat!</string>
     <string name="story_mentions">Omnämnanden</string>
-    <string name="story_question">Question</string>
+    <string name="story_question">Fråga</string>
     <string name="priv_acc">Det här kontot är Privat</string>
     <string name="priv_acc_confirm">You won\'t be able to access posts after unfollowing! Are you sure?</string>
-    <string name="are_you_sure">Are you sure?</string>
+    <string name="are_you_sure">Är du säker?</string>
     <string name="no_acc">You can log in via More -&gt; Account on the bottom-right corner or you can view public accounts without login!</string>
     <string name="empty_acc">Det här kontot har inga inlägg</string>
     <string name="empty_list">Inga sådana inlägg!</string>
@@ -96,7 +96,7 @@
     <string name="edit_collection">Redigera samlingens namn</string>
     <string name="delete_collection">Ta bort samling</string>
     <string name="delete_collection_note">All posts contained in the deleted collection will remain in other collections.</string>
-    <string name="add_to_collection">Add to collection…</string>
+    <string name="add_to_collection">Lägg till i samling…</string>
     <string name="remove_from_collection">Ta bort från samling</string>
     <string name="liked">Gillade</string>
     <string name="saved">Sparade</string>
